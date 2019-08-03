@@ -3,16 +3,16 @@ const child_process = require('child_process')
 const commands = [
 	
 	// Build it.
-	"npm run build",
+	'npm run build',
 	
 	// Commit it.
-	"cd src/.vuepress/dist",
-	"git init",
-	"git add -A",
+	'cd src/.vuepress/dist',
+	'git init',
+	'git add -A',
 	'git commit -m "New deploy."',
 	
 	// Push it.
-	"git push -f https://github.com/PeppeL-G/course-material.git master:gh-pages",
+	//'git push -f https://github.com/PeppeL-G/course-material.git master:gh-pages',
 	
 ]
 
