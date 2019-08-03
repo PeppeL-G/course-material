@@ -12,7 +12,7 @@ module.exports = {
 	},
 	plugins: [['@vuepress/last-updated', {
 		transformer(timestamp, lang){
-			return moment(timestamp).format('YYYY-MM-DD hh:mm:ss')
+			return moment(timestamp).format('YYYY-MM-DD HH:mm:ss')
 		}
 	}]],
 }
