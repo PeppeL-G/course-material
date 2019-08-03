@@ -12,13 +12,10 @@ const commands = [
 	'git commit -m "New deploy."',
 	
 	// Push it.
-	//'git push -f https://github.com/PeppeL-G/course-material.git master:gh-pages',
+	'git push -f https://github.com/PeppeL-G/course-material.git master:gh-pages',
 	
 ]
 
 // Execute all commands.
-for(const command of commands){
-	console.log("Executing: "+command)
-	const output = child_process.execSync(command)
-	console.log(output.toString('utf8'))
-}
+const output = child_process.execSync(commands.join(' && '))
+console.log(output.toString('utf8'))
