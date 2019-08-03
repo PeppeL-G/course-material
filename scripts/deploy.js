@@ -20,5 +20,5 @@ const commands = [
 for(const command of commands){
 	console.log("Executing: "+command)
 	const output = child_process.execSync(command)
-	console.log(output)
+	console.log(output.toString('utf8'))
 }
