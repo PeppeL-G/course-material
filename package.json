@@ -1,0 +1,24 @@
+{
+  "name": "course-material",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev src --no-clear-screen",
+    "build": "vuepress build src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeppeL-G/course-material.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PeppeL-G/course-material/issues"
+  },
+  "homepage": "https://github.com/PeppeL-G/course-material#readme",
+  "dependencies": {
+    "vuepress": "^1.0.3"
+  }
+}
