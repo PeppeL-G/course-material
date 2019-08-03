@@ -1,4 +1,5 @@
 module.exports = {
+	base: "/course-material/",
 	title: "Peter's Course Material",
 	themeConfig: {
 		docsDir: "src",
