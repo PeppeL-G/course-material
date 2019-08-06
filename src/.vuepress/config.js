@@ -9,6 +9,23 @@ module.exports = {
 		editLinks: true,
 		editLinkText: 'Improve this page!',
 		lastUpdated: "Last Updated",
+		nav: [{
+			text: "Courses",
+			items: [{
+				text: "Client-Server Communication",
+				link: "/courses/client-server-communication/",
+			}],
+		}],
+		sidebarDepth: 2,
+		sidebar: {
+			"/courses/client-server-communication/": [
+				"",
+				"laboratory-work",
+			],
+			"/": [
+				"",
+			]
+		},
 	},
 	plugins: [['@vuepress/last-updated', {
 		transformer(timestamp, lang){
