@@ -5,7 +5,7 @@ const rootPath = "http://localhost:8000"
 
 let accessToken = null
 
-async function sendRequest(uri, method, body=null, contentType="application/json"){
+async function sendRequest(method, uri, body=null, contentType="application/json"){
 	
 	let bodyToSend = ""
 	
@@ -29,7 +29,7 @@ async function sendRequest(uri, method, body=null, contentType="application/json
 			
 			case "application/x-www-form-urlencoded":
 				const data = new URLSearchParams()
-				for(const key of body){
+				for(const key of Object.keys(body)){
 					data.append(key, body[key])
 				}
 				bodyToSend = data.toString()
@@ -44,13 +44,20 @@ async function sendRequest(uri, method, body=null, contentType="application/json
 	
 	try{
 		
-		return await fetch(rootPath+uri, {
+		const requestInit = {
 			method,
 			headers,
-			body: bodyToSend
-		})
+			credentials: "omit"
+		}
+		
+		if(bodyToSend != ""){
+			requestInit.body = bodyToSend
+		}
+		
+		return await fetch(rootPath+uri, requestInit)
 		
 	}catch(error){
+		debugger
 		throw ["networkError"] 
 	}
 	
@@ -190,7 +197,7 @@ module.exports.signIn = async function(username, password, callback){
 	let response
 	
 	try{
-		response = await sendRequest("POST", "/token", bodyToSend, "application/x-www-form-urlencoded")
+		response = await sendRequest("POST", "/tokens", bodyToSend, "application/x-www-form-urlencoded")
 	}catch(errors){
 		callback(errors)
 		return
@@ -342,7 +349,7 @@ module.exports.getActivityById = async function(id, callback){
 			break
 		
 		case 404:
-			activity = null
+			errors = ["notFound"]
 			break
 		
 		case 500:
@@ -354,7 +361,7 @@ module.exports.getActivityById = async function(id, callback){
 		
 	}
 	
-	callback(errors, account)
+	callback(errors, activity)
 	
 }
 
@@ -363,7 +370,7 @@ module.exports.createActivity = async function(activity, callback){
 	let response
 	
 	try{
-		response = await sendRequest("POST", "/activities", account)
+		response = await sendRequest("POST", "/activities", activity)
 	}catch(errors){
 		callback(errors)
 		return
