@@ -802,6 +802,7 @@ const client = require('./activity-finder-client')
 const updatedActivity = {
   id: 33,
   title: "Play Ice Hockey",
+  accountId: 5,
   description: "CHANGE: we play ice hockey instead, 5 teams :)",
   startTime: 1577199600000,
   endTime: 1577203200000,
