@@ -730,7 +730,7 @@ Add a "page" that displays one activity with a specific id. To fetch an activity
 const client = require('./activity-finder-client')
 
 
-client.getActivityById(5, (errors, account) => {
+client.getActivityById(5, (errors, activity) => {
   // errors = array with error codes (empty if everything went OK).
   // activity = object with info about the activity if everything went OK.
   if(errors.length == 0){
