@@ -773,9 +773,8 @@ To tell the backend to delete an activity with a specific id, call the SDK funct
 ```js
 const client = require('./activity-finder-client')
 
-client.deleteActivityById(33, (errors, activityExisted) => {
+client.deleteActivityById(33, (errors) => {
   // errors = array with error codes (empty if everything went OK).
-  // activityExisted = boolean indicating if an activity with the given id existed or not.
   if(errors.length == 0){
     // activityExisted = true or false
   }else{
