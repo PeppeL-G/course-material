@@ -751,7 +751,7 @@ Add a "page" that displays all activities created by the signed in user. To fetc
 ```js
 const client = require('./activity-finder-client')
 
-client.getActivitiesByAccountId(3, (errors, activity) => {
+client.getActivitiesByAccountId(3, (errors, activities) => {
   // errors = array with error codes (empty if everything went OK).
   // activities = array with all activities if everything went OK.
   if(errors.length == 0){
