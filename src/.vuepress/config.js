@@ -2,7 +2,6 @@ const moment = require('moment')
 
 module.exports = {
 	base: "/course-material/",
-	title: "Course Material",
 	themeConfig: {
 		docsDir: "src",
 		repo: "https://github.com/PeppeL-G/course-material",
