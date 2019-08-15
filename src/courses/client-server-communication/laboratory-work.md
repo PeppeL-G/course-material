@@ -422,7 +422,7 @@ Create a new page that have three buttons functioning as counters (each button c
 * The second button should start on 45, and clicking it should increment it by 5.
 * The third button should start on 33, and clicking it should increment it by 10.
 
-Instead of implementing three separate timers, create a Vue component in the `/src/components/` folder representing a single counter, and then use three instances of it on your counters "page". Since the timers should function differently (different start values and different increment steps) you can't hard code that in the counter component. Instead, the one using the counter component should be able to specify this through props, e.g. (`<Counter start-value="33" inc-steps="10"/>`).
+Instead of implementing three separate counters, create a Vue component in the `/src/components/` folder representing a single counter, and then use three instances of it on your counters "page". Since the timers should function differently (different start values and different increment steps) you can't hard code that in the counter component. Instead, the one using the counter component should be able to specify this through props, e.g. (`<Counter start-value="33" inc-steps="10"/>`).
 
 Read more about [props in Vue's docs](https://vuejs.org/v2/guide/components-props.html).
 
