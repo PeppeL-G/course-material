@@ -1,6 +1,7 @@
 ---
-navbarTitli: Web Development Fundamentals
+navbarTitle: Web Development Fundamentals
 ---
+
 # Time Plan
 The <span style="background-color: aqua; display: inline-block; padding: 0 8px; font-weight: bold;">Project Work</span> column indicates what you are expected to work on each day. 
 
