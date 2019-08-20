@@ -13,13 +13,35 @@ module.exports = {
 			items: [{
 				text: "Client-Server Communication",
 				link: "/courses/client-server-communication/",
+			}, {
+				text: "Git",
+				link: "/courses/git/",
+			}, {
+				text: "Web Development Fundamentals",
+				link: "/courses/web-development-fundamentals/",
 			}],
 		}],
 		sidebarDepth: 2,
 		sidebar: {
 			"/courses/client-server-communication/": [
 				"",
+				"study-guide",
 				"laboratory-work",
+				"project-instructions",
+				"project-grading-guidelines",
+				"time-plan"
+			],
+			"/courses/git/": [
+				"",
+			],
+			"/courses/web-development-fundamentals/": [
+				"",
+				"course-syllabus",
+				"study-guide",
+				"exercises",
+				"project-instructions",
+				"project-grading-guidelines",
+				"time-plan"
 			],
 			"/": [
 				"",

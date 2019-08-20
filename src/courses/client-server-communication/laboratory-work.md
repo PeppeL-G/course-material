@@ -14,7 +14,7 @@ __If you work on your own private computer__, you need to download and install a
 The required software is:
 
 * [Node.js](https://nodejs.org/)
-    1. Use the Current version
+    1. Use the Current version.
     2. In the installation process, make sure the following features are installed (they are checked by default, so simply don't uncheck them!):
         * Node.js runtime
         * npm package manager

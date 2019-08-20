@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/PeppeL-G/course-material#readme",
   "dependencies": {
+    "mermaid": "^8.2.3",
     "moment": "^2.24.0",
     "vuepress": "^1.0.3"
   }

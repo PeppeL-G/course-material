@@ -8,20 +8,11 @@
 	</span>
 </template>
 
-<script>
-
-export default {
-	beforeCreate(){
-		
-	}
-}
-
-</script>
-
 <style lang="stylus">
 .site-name
 	font-size 1.3rem
 	font-weight 600
 	color $textColor
 	position relative
+	white-space: nowrap
 </style>
