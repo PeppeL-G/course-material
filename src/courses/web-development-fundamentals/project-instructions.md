@@ -29,7 +29,7 @@ Implement the website using technologies taught in this course. Avoid using clie
 * Bad client-side JavaScript code will lower your grade.
 * Your entire website must still work for users who have JavaScript disabled in their web browser (use client-side JavaScript only to enhance the browsing experience for the users who have JavaScript enabled in their web browsers).
 
-In addition to implementing the website, you should also write a report describing the implementation of the website. The file [project-report-template.docx](/web-development-fundamentals/project-report-template.docx) contains a template with further instructions on this. Your report will be a living document throughout the course (meaning that you will write it as the course run and continuously improve it). 
+In addition to implementing the website, you should also write a report describing the implementation of the website. The file [project-report-template.docx](/course-material/web-development-fundamentals/project-report-template.docx) contains a template with further instructions on this. Your report will be a living document throughout the course (meaning that you will write it as the course run and continuously improve it). 
 
 The page [Project Grading Guidelines](./project-grading-guidelines) contains guidelines for how your work will be graded. You are strongly recommended to read through it every now and then.
 
@@ -83,7 +83,7 @@ Your first task is to specify:
 * The functionality of the website (which different type of resources it consists of and what you/anyone can do with them).
 * What the graphical user interface (GUI) should look like.
 
-Your decisions should be described in the project report, so in this part of the project work, you will not do any programming, but only work on your report. A good way to describe the functionalities is by sketching what the GUI will look like in the end. Then the reader can easily see all the functionality just by looking at pictures. An example of that is shown in [project-report-template.docx](/web-development-fundamentals/project-report-template.docx).
+Your decisions should be described in the project report, so in this part of the project work, you will not do any programming, but only work on your report. A good way to describe the functionalities is by sketching what the GUI will look like in the end. Then the reader can easily see all the functionality just by looking at pictures. An example of that is shown in [project-report-template.docx](/course-material/web-development-fundamentals/project-report-template.docx).
 
 Designing a website with a user-friendly GUI is no simple task. Therefore, designers have created CSS frameworks that makes it easy for people who are not good at design to create GUIs that are user-friendly. These frameworks primarily consist of components one can use to implement the GUI (such as one component representing a form, another one representing a menu, a third one representing an article, etc.). Since you have to use a CSS framework in your project work, you are recommended to now select which CSS framework you are going to use, and then design your website using the available components in that framework.
 
