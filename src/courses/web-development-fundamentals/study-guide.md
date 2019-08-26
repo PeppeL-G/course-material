@@ -31,6 +31,22 @@ navbarTitle: Web Development Fundamentals
         email: "",
         phone: "",
         website: "https://redcapesit.se/author/linus/"
+    }, {
+        name: "Filip Andersson",
+        photo: "/web-development-fundamentals/filip-andersson.jpeg",
+        roles: ["Lab assistant"],
+        description: "Former bachelor student that studied the program Software Engineering and Mobile Platforms here at JTH. Now master student studying the program AI Engineering.",
+        email: "anfi1622@student.ju.se",
+        phone: "",
+        website: ""
+    }, {
+        name: "Simon Arvidsson",
+        photo: "/web-development-fundamentals/simon-arvidsson.jpeg",
+        roles: ["Lab assistant"],
+        description: "Former bachelor student that studied the program Software Engineering and Mobile Platforms here at JTH. Now master student studying the program AI Engineering.",
+        email: "arsi1632@student.ju.se",
+        phone: "",
+        website: ""
     }]'
 />
 
