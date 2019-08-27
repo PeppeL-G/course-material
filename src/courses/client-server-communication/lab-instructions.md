@@ -256,10 +256,10 @@ Change the layout (change the code in `/src/App.vue`) to contain at least:
 * The main content
 * A footer
 
-Design your layout however you want. It's not that important that it's beautiful, the most important thing is that you learn how this component works and should be used. See the rest of the sub-chapters in Part 1 to see which link you need to have in the navigation menu (or the header/footer).
+Design your layout however you want. It's not that important that it's beautiful, the most important thing is that you learn how this component works and should be used. See the rest of the sub-chapters in Part 1 to see which links you need to have in the navigation menu (or the header/footer).
 
 ::: tip Be smart/lazy
-Feel free to use CSS frameworks such as Bootstrap to design your application. Most CSS framework are distributed as npm packages, so often you can just run `npm install ...` to download the source files for the framework and then load them into your application by importing the required CSS and JS files from the npm package you downloaded, but loading them from a Content Delivery Network by adding `<link>` and `<script>` elements in `/public/index.html` works as well.
+Feel free to use a CSS framework such as Bootstrap to design your application. Most CSS frameworks are distributed as npm packages, so often you can just run `npm install ...` to download the source files for the framework and then load them into your application by importing the required CSS and JS files from the npm package you downloaded, but loading them from a Content Delivery Network by adding `<link>` and `<script>` elements in `/public/index.html` works as well.
 :::
 
 ### Home & About (static)
