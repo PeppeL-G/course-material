@@ -49,7 +49,7 @@ The <span style="background-color: lime; display: inline-block; padding: 0 8px; 
 		{},
 		// 39
 		{p: "Part 4"},
-		{l: "Tutorial 5: ???", s: "Group 1", p: "Part 4"},
+		{l: "Tutorial 5: Security", s: "Group 1", p: "Part 4"},
 		{p: "Part 4"},
 		{s: "Group 2", p: "Part 4"},
 		{p: "Part 5"},
@@ -57,7 +57,7 @@ The <span style="background-color: lime; display: inline-block; padding: 0 8px; 
 		{i: "Deadline Submit Project Report for Feedback"},
 		// 40
 		{p: "Part 5"},
-		{l: "Tutorial 6: ???", s: "Group 1", p: "Part 5"},
+		{l: "Tutorial 6: Repetition", s: "Group 1", p: "Part 5"},
 		{p: "Part 6"},
 		{s: "Group 2", p: "Part 6"},
 		{p: "Part 6"},
