@@ -91,17 +91,20 @@ The intended learning outcomes of the course are found in [the course syllabus](
 <ILOsActivitiesMapping description="
 
 Display knowledge of the HTTP protocol.
+-Laboratory work
 -Project work
 -Written examination
 +Recorded lecture: Internet
 +Recorded lecture: Web Applications & HTTP
 
 Display knowledge of the REST architectural style.
+-Laboratory work
 -Project work
 -Written examination
 +Recorded lecture: REST API Basics
 
 Demonstrate comprehension of architectures consisting of multiple systems communicating through APIs.
+-Laboratory work
 -Project work
 -Written examination
 +Recorded lecture: REST API Basics
@@ -136,6 +139,7 @@ Demonstrate skills of implementing SDKs for APIs.
 +Recorded lecture: JWT
 
 Demonstrate skills of implementing SPAs using front-end frameworks.
+-Laboratory work
 -Project work
 +Recorded lecture: Vue
 
