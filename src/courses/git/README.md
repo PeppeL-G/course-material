@@ -16,9 +16,9 @@ Here is a list of the resources used in this mini course. They will be introduce
 
 ## Lectures
 There is a progression in the lectures, so you are recommended to take them in order.
-1. [Git Basics](/lectures/git-basics)<br>
+1. [Git Basics](../../lectures/git-basics)<br>
    Introduces you to what Git is and teaches you how to create and use a local Git repository that exists only on your own computer.
-2. [Git Branches](/lectures/git-branches)<br>
+2. [Git Branches](../../lectures/git-branches)<br>
    Explains what branches are and how you can create and work with them in a local Git repository that exists only on your own computer.
-3. [Git Synching](/lectures/git-synching)<br>
+3. [Git Synching](../../lectures/git-synching)<br>
    Explains how you can share your work with others by synching commits in your local Git repository with repositories that exist on other computers.
