@@ -1,7 +1,7 @@
 ---
 navbarTitle: Client-Server Communication
 ---
-# Laboratory Work
+# Lab Instructions
 This page contains instructions for the examination test *Laboratory Work*. It consists of two parts, and both of them need to be completed and presented orally to a teacher at a lab session before you pass the examination test.
 
 ## Installing Required Software
@@ -43,11 +43,12 @@ The goal with this part of the laboratory work is to teach you how to use Vue to
 The Single-Page Application you should create will consist of different pages, each containing a useful tool of some kind such as a simple calculator, a clock, a counter, etc.
 
 ### Pre-requisites
-Before you start working on this part you are expected to view the following recorded lectures:
+Before you start working on this part you are expected to view the following lectures:
 
-* XXX
-* YYY
-* ZZZ
+* [Using Shells](../../lectures/using-shells/)
+* [Vue](../../lectures/vue/)
+
+The tutorial about Vue will also help you learn the basics.
 
 ### Creating a new Vue application
 Start by using the Vue CLI program to create a new folder containing the initial source files for the Vue application you should create:

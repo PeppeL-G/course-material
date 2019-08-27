@@ -4,9 +4,21 @@ navbarTitle: HTTP and Web Applications
 ---
 
 # HTTP and Web Applications
-The web is built on a protocol called *HyperText Transfer Protocol* (HTTP). To build proper web applications, it is essential to understand how this protocol works. [The HTTP specification](https://tools.ietf.org/html/rfc2616) explains it all, but since it is a specification, it can be quite hard to read, so let me give you a quick introduction to HTTP before you read the details in the HTTP specification.
+The web is built on a protocol called *HyperText Transfer Protocol* (HTTP). To build proper web applications, it is essential to understand how this protocol works. [The HTTP specification](https://tools.ietf.org/html/rfc2616) explains it all, but since it is a specification it can be quite hard to read, so let me give you a quick introduction to HTTP before you read the details in the HTTP specification.
 
-## Clients and Servers
+<iframe width="560" height="314" src="https://www.youtube.com/embed/kuTKFoU5v7k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Recommended reading
+* [Introduction to HTTP](https://launchschool.com/books/http) by Launch School
+    * Up to (including) the chapter HTTP --> Processing Responses
+* [HTTP/1.1 specification](https://tools.ietf.org/html/rfc2616)
+    * Don't read and learn everything by heart, but just enough so you get comfortable looking up things (methods, status codes, etc.) in it.
+
+<!--
+
+WORK IN PROGRESS HERE, DON'T BOTHER ABOUT IT ^^'
+
+Clients and Servers
 The HTTP protocol is built on a *client-server* architecture. That means that some computers on the web acts as *servers*, and all other computers acts as *clients*. When you browse the web through a web browser, you act as a client. 
 
 A client can send an HTTP request to a server, asking the server to do something for it. When a server receives the HTTP request, it should carry out the request, and then send back an HTTP response to the client. This is visualized in XXX below. Having a server on it own is useless; servers exist to serve clients (that's why we call them servers).
@@ -17,7 +29,7 @@ For example, when you click on a link in your web browser, your web browser send
 
 In general, any computer can act as a client or a server. It is also possible for a computer to be both a client and a server at the same time. For example, when you (acting as a client) send an HTTP request to a server, that server might in turn send an HTTP request to another server to handle your request. The server you sent your request to then acts as both a server and a client at the same time. This is for example used when you login with your Google account on a website that doesn't belong to Google. Then the website you send your request to sends its own requests to Google to check which Google account that belongs to you (this example is a bit simplified; in practise it is a bit more complicated than this).
 
-## Resources and URIs
+Resources and URIs
 Servers in HTTP are expected to contain resources. It is up to each server to decide what type of resources it should contain, but some resources commonly found on websites includes:
 
 - Images (PNG files, JPEG files, ...)
@@ -60,7 +72,7 @@ The [URI specification](https://tools.ietf.org/html/rfc3986) specifies the forma
 URIs usually identifies a single resource or a collection of multiple resources. It is quite common that the beginning of a URI identifies a collection of resources, and the end of the URI identifies a specific resource within that collection. For example, the URI `/accounts` could identify the collection of all accounts on a website, and the URI `/accounts/Alice` identifies the specific account with the username *Alice*. We can also see this pattern in the example before with URIs on Wikipedia.
 
 
-## Requests
+Requests
 So, a client can send an HTTP request to a server to request the server to do something for it. The HTTP specification have specified the structure of these HTTP requests, so it is very important that clients send HTTP requests using the structure specified in the HTTP specification. If they don't, servers will not understand the requests, because servers expect to only receive HTTP requests using the structure specified in the HTTP specification.
 
 So, let's go through the structure of an HTTP request.
@@ -78,4 +90,6 @@ The first part on the header line is called the *method*. It is also known as th
 
 The third part on the header line, `HTTP/1.1`, indicates which version of HTTP the client is using, so the server can use the same version.
 
-## Responses
+Responses
+
+-->

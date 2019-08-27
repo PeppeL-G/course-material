@@ -297,6 +297,7 @@ Date:   Wed Apr 24 11:21:50 2019 +0200
 <Tab title="Linux">
 
 ```bash
+# TODO
 ```
 
 </Tab>
@@ -310,6 +311,8 @@ To view a specific version of the project, you simply tell Git *Show me the file
 You can't use the command `git reset XXX` if you have made changes to the source files you haven't committed yet (because then those changes would be lost).
 :::
 
+<!-- TODO
+
 ::: tip Example (continuation of previous example)
 <Tabs remember-selected-key="selected-os">
 <Tab title="Windows PowerShell">
@@ -322,11 +325,14 @@ You can't use the command `git reset XXX` if you have made changes to the source
 <Tab title="Linux">
 
 ```bash
+# TODO
 ```
 
 </Tab>
 </Tabs>
 :::
+
+-->
 
 ### The HEAD pointer
 In Git, each repository also contains a pointer called HEAD. It points to the branch you are currently working on, but since we avoid introducing branches in this lecture, you can for now see it as that the HEAD pointer points to the last commit you've created/the commit you are currently working on. That's how Git knows which the "previous commit" should be when you create a new commit: it simply uses the commit the HEAD pointer points to as the previous commit, and then when you create a new commit it changes the HEAD pointer to point to the newly created commit.

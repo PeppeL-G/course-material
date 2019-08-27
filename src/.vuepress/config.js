@@ -8,6 +8,7 @@ module.exports = {
 		editLinks: true,
 		editLinkText: 'Improve this page!',
 		lastUpdated: "Last Updated",
+		activeHeaderLinks: false,
 		nav: [{
 			text: "Courses",
 			items: [{
@@ -25,8 +26,9 @@ module.exports = {
 		sidebar: {
 			"/courses/client-server-communication/": [
 				"",
+				"course-syllabus",
 				"study-guide",
-				"laboratory-work",
+				"lab-instructions",
 				"project-instructions",
 				"project-grading-guidelines",
 				"time-plan"

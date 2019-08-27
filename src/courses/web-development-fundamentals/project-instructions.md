@@ -69,12 +69,12 @@ The following software tools are not required (use whichever tools you want), bu
 Before you start working on this part, you are recommended to:
 
 * View the following videos:
-    * Internet
-    * Web Applications and HTTP
-    * Character Encodings
-    * Using Shells
-    * The mini-course in Git
-        * You don't have to use Git in this course, but you are strongly recommended to make it a habit to use it for all your programming related tasks (you will use it a lot as a professional programmer, and you will have very good use of it in other courses, so the sooner you learn it, the better).
+    * [Internet Basics](../../lectures/internet-basics/)
+    * [HTTP and Web Applications](../../lectures/http-and-web-applications/)
+    * [Character Encodings](../../lectures/character-encodings/)
+    * [Using Shells](../../lectures/using-shells/)
+* Take [the mini-course in Git](../git/).
+    * You don't have to use Git in this course, but you are strongly recommended to make it a habit to use it for all your programming related tasks (you will use it a lot as a professional programmer, and you will have very good use of it in other courses, so the sooner you learn it, the better).
 
 ---
 
@@ -105,20 +105,20 @@ Feel free to show your report to one of the teachers at the lab sessions to get 
 Before you start working on this part, you are recommended to:
 
 * View the following videos:
-    * HTML
-    * CSS
-    * CSS Frameworks and Spectre.css
-    * Node.js
-    * Web Applications in Node.js
-    * JavaScript
-    * npm
-    * Express Basics
-    * Handlebars
-    * Web Applications in Express
+    * [HTML](../../lectures/html/)
+    * [CSS](../../lectures/css/)
+    * [HTML & CSS Frameworks](../../lectures/html-and-css-frameworks/)
+    * [JavaScript Basics](../../lectures/javascript-basics/)
+    * [Node.js](../../lectures/node-js/)
+    * [Web Applications in Node.js](../../lectures/web-applications-in-node-js/)
+    * [npm](../../lectures/npm/)
+    * [Express Basics](../../lectures/express-basics/)
+    * [Handlebars](../../lectures/handlebars/)
+    * [Web Applications in Express](../../lectures/web-applications-in-express/)
 * Complete the following optional exercises:
-    * Exercise 1: HTML
-    * Exercise 2: CSS
-    * Exercise 3: JS
+    * [Exercise 1: HTML](./exercises.html#exercise-1-html)
+    * [Exercise 2: CSS](./exercises.html#exercise-2-css)
+    * [Exercise 3: JS](./exercises.html#exercise-3-js)
 
 ---
 
