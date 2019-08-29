@@ -538,7 +538,7 @@ The reason is because we want the other Vue components to be able to change `use
 Add a "page" that displays all accounts that exists. To fetch all accounts from the backend, you can call the SDK function `getAllAccounts()`:
 
 ```js
-const client = require('./activity-finder-client')
+const client = require('../activity-finder-client')
 
 client.getAllAccounts((errors, accounts) => {
   // errors = array with error codes (empty if everything went OK).
@@ -568,7 +568,7 @@ Add a "page" that displays one account with a specific id. On the previous page,
 To fetch an account with a specific id from the backend, you can call the SDK function `getAccountById()`:
 
 ```js
-const client = require('./activity-finder-client')
+const client = require('../activity-finder-client')
 
 
 client.getAccountById(37, (errors, account) => {
@@ -592,7 +592,7 @@ Add a "page" where the user can sign up (create a new account).
 To tell the backend to create a new account, call the SDK function `createAccount()`:
 
 ```js
-const client = require('./activity-finder-client')
+const client = require('../activity-finder-client')
 
 const account = {
   username: "Greta",
@@ -622,7 +622,7 @@ client.createAccount(account, (errors, id) => {
 Add a "page" where the user can sign in. To tell the backend to sign in, call the SDK function `signIn()`:
 
 ```js
-const client = require('./activity-finder-client')
+const client = require('../activity-finder-client')
 
 client.signIn("Greta", "rrrrrr", (errors, account) => {
   // errors = array with error codes (empty if everything went OK).
@@ -647,7 +647,7 @@ Remember, when the user has successfully signed in, change `user.isSignedIn` in 
 Add a "page" where the user can sign out. To tell the backend to sign out, call the SDK function `signOut()`:
 
 ```js
-const client = require('./activity-finder-client')
+const client = require('../activity-finder-client')
 
 client.signOut(() => {
   // The SDK has now forgot which account you previously signed in to.
@@ -662,7 +662,7 @@ Remember, when the user has successfully signed in, change `user.isSignedIn` in 
 Add a "page" where signed in users can create new activities. To tell the backend to create a new activity, call the SDK function `createActivity()`:
 
 ```js
-const client = require('./activity-finder-client')
+const client = require('../activity-finder-client')
 
 const activity = {
   accountId: 28, // The id of the account creating the activity.
@@ -711,7 +711,7 @@ You can use `<input type="number">` to let the user enter values for `latitude` 
 Add a "page" that displays all activities. To fetch all activities from the backend, you can call the SDK function `getAllActivities()`:
 
 ```js
-const client = require('./activity-finder-client')
+const client = require('../activity-finder-client')
 
 client.getAllActivities((errors, activities) => {
   // errors = array with error codes (empty if everything went OK).
@@ -731,7 +731,7 @@ client.getAllActivities((errors, activities) => {
 Add a "page" that displays one activity with a specific id. To fetch an activity with a specific id from the backend, call the SDK function `getActivityById()`:
 
 ```js
-const client = require('./activity-finder-client')
+const client = require('../activity-finder-client')
 
 
 client.getActivityById(5, (errors, activity) => {
@@ -753,7 +753,7 @@ client.getActivityById(5, (errors, activity) => {
 Add a "page" that displays all activities created by the signed in user. To fetch all activities belonging to a specific user, call the SDK function `getActivitiesByAccountId()`:
 
 ```js
-const client = require('./activity-finder-client')
+const client = require('../activity-finder-client')
 
 client.getActivitiesByAccountId(3, (errors, activities) => {
   // errors = array with error codes (empty if everything went OK).
@@ -775,7 +775,7 @@ Somehow signed in users should be able to delete activities they have created. I
 To tell the backend to delete an activity with a specific id, call the SDK function `deleteActivityById()`:
 
 ```js
-const client = require('./activity-finder-client')
+const client = require('../activity-finder-client')
 
 client.deleteActivityById(33, (errors) => {
   // errors = array with error codes (empty if everything went OK).
@@ -800,7 +800,7 @@ Somehow signed in users should be able to update activities they have created. I
 To tell the backend to update an activity with a specific id, call the SDK function `updateActivityById()`:
 
 ```js
-const client = require('./activity-finder-client')
+const client = require('../activity-finder-client')
 
 const updatedActivity = {
   id: 33,
