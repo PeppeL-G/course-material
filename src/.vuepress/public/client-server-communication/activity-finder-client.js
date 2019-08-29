@@ -126,7 +126,7 @@ module.exports.getAccountById = async function(id, callback){
 			break
 		
 		case 404:
-			account = null
+			errors = ["notFound"]
 			break
 		
 		case 500:
