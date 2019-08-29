@@ -1,6 +1,7 @@
 // Install dependency by running: npm install jwt-decode
 const jwtDecode = require('jwt-decode')
 
+const networkDelayInMs = 2000
 const rootPath = "http://localhost:8000"
 
 let accessToken = null
@@ -8,7 +9,6 @@ let accessToken = null
 async function sendRequest(method, uri, body=null, contentType="application/json"){
 	
 	let bodyToSend = ""
-	
 	const headers = new Headers()
 	
 	// Add the access token if signed in.
@@ -54,6 +54,7 @@ async function sendRequest(method, uri, body=null, contentType="application/json
 			requestInit.body = bodyToSend
 		}
 		
+		await sleep(networkDelayInMs)
 		return await fetch(rootPath+uri, requestInit)
 		
 	}catch(error){
@@ -494,4 +495,8 @@ module.exports.deleteActivityById = async function(id, callback){
 	
 	callback(errors)
 	
+}
+
+async function sleep(ms){
+	return new Promise(resolve => setTimeout(resolve, ms));
 }
