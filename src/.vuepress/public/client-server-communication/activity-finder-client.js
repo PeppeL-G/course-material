@@ -57,7 +57,6 @@ async function sendRequest(method, uri, body=null, contentType="application/json
 		return await fetch(rootPath+uri, requestInit)
 		
 	}catch(error){
-		debugger
 		throw ["networkError"] 
 	}
 	
