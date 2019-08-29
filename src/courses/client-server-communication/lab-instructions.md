@@ -464,7 +464,7 @@ When you have started the backend application it will listen for incoming HTTP r
 ### Getting started with the frontend
 Create a new Vue application as your frontend application the same way you did in Part 1. Add the file [activity-finder-client.js](/course-material/client-server-communication/activity-finder-client.js) to the `/src` folder of your Vue application. This file is the SDK you can use to communicate with the backend application through its REST API. For example, this file exports a function called `getAllAccounts()`, and when you call this function the SDK will in turn send an HTTP GET request for `/accounts` to the backend application, which then in turn sends back all accounts to the SDK, which then delivers all these accounts to you as an array containing objects where each object contains information about an account. But more on this later.
 
-If you changed the port number the backend is listening for incoming HTTP requests on, you need to change that at the top of the file `activity-finder-client.js` as well.
+If you changed the port number the backend is listening for incoming HTTP requests on, you need to change that at the top of the file `activity-finder-client.js` as well (the constant `rootPath`).
 
 The SDK makes use of the npm package `jwt-decode`, so in the root folder of your Vue application you also need to run the command `npm install jwt-decode`.
 
