@@ -29,6 +29,7 @@ module.exports = {
 				"course-syllabus",
 				"study-guide",
 				"lab-instructions",
+				"tutorials",
 				"project-instructions",
 				"project-grading-guidelines",
 				"time-plan"
