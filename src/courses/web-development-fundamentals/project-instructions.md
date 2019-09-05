@@ -609,7 +609,7 @@ There are 10 different sessions for the demonstration, and you need to demonstra
 Your presentation will not be graded; consider it as (mandatory) practice.
 
 ## Part 11: Submitting your work
-Submit your project work on Ping Pong for grading. Your source code should be uploaded as a ZIP file. When that ZIP file has been unzipped on the examiner's own computer, it is very important that the the website can be started by running the following commands:
+Submit your project work on Ping Pong for grading. Your source code should be uploaded as a ZIP file. When that ZIP file has been unzipped on the examiner's own computer, it is very important that the website can be started by running the following commands:
 
 1. `npm install`
 2. `node app.js` (or whatever main file/script that should be executed)
