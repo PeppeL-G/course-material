@@ -1,7 +1,7 @@
 // Install dependency by running: npm install jwt-decode
 const jwtDecode = require('jwt-decode')
 
-const networkDelayInMs = 2000
+const networkDelayInMs = 10
 const rootPath = "http://localhost:8000"
 
 let accessToken = null
