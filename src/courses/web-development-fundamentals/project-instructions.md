@@ -250,8 +250,8 @@ When you version control a project, do not store the source code for the depende
 Before you start working on this part, you are recommended to:
 
 * View the following videos:
-    * SQLite
-    * Using SQLite in Node.js
+    * [SQLite](../../lectures/sqlite)
+    * [Using SQLite in Node.js](../../lectures/using-sqlite-in-node-js)
 
 ---
 
@@ -420,8 +420,8 @@ Just a reminder that you should not forget to submit your report for feedback on
 Before you start working on this part, you are recommended to:
 
 * View the following videos:
-    * Cookies and Sessions
-    * Using cookies and Sessions in Express
+    * [Cookies and Sessions](../../lectures/cookies-and-sessions)
+    * [Using cookies and Sessions in Express](../../lectures/using-cookies-and-sessions-in-express)
 
 ---
 
@@ -459,8 +459,9 @@ app.listen(8080)
  
 ## Part 7: Improving security
 Before you start working on this part, you are recommended to:
+
 * View the following videos:
-  *  Web Security
+    * [Web Security](../../lectures/web-security)
 
 ---
 
@@ -581,7 +582,7 @@ You have a lot of freedom when it comes to this task, but too simple solutions w
 Before you start working on this part, you are recommended to:
 
 * View the following videos:
-    * Running Node.js on Lightsail
+    * [Running Node.js on Lightsail](../../lectures/running-node-js-on-lightsail)
 
 ---
 
