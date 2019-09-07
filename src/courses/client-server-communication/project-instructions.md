@@ -281,7 +281,7 @@ app.use(function(request, response, next){
 ```
 
 ::: warning Note!
-FireFox supports the `*` value only in the `Access-Control-Allow-Origin` header, so if you want to support Firefox you need to list the values you want to allow in the other 3 headers, e.g. `response.setHeader("Access-Control-Allow-Headers", "Authorization, Content-Type")` instead of using `*`. [FireFox 69 seems to support the `*` value in these three headers](https://bugzilla.mozilla.org/show_bug.cgi?id=1309358), but `*` in the `Access-Control-Allow-Headers` will not necessarily include the `Authorization` headers, which needs to be listed explicitly. 
+FireFox did before support the `*` value only in the `Access-Control-Allow-Origin` header, so if you wanted to support Firefox you needed to list the values you want to allow in the other 3 headers, e.g. `response.setHeader("Access-Control-Allow-Headers", "Authorization, Content-Type")` instead of using `*`, but [support for the `*` value was added in FireFox 69](https://bugzilla.mozilla.org/show_bug.cgi?id=1309358). If you want to support older versions of FireFox, you need to list the supported values instead of using `*`.
 :::
 
 ### Sending HTTP requests from the frontend
@@ -355,31 +355,187 @@ fetch("https://localhost:3000/accounts", {
 </Tabs>
 
 ## Part 6: Adding Login to the REST API
-Add authentication and authorization to the REST API in your project report as described by the [OAuth 2.0 Framework](https://oauth.net/2/) and [OpenID Connect](https://openid.net/connect/). You basically need to add:
+Add authentication and authorization to the REST API in your project report as described by the [OAuth 2.0 Framework](https://oauth.net/2/) and [OpenID Connect](https://openid.net/connect/). You basically need to:
 
-* One request clients can use to "login" to an account (to obtain an access token and an id token).
-* Describe how clients pass the access token to the backend in the requests.
+* Add one request clients can use to "login" to an account (to obtain an access token and an id token).
+    * Clients also need to know which claims the id token contains.
+* Describe how clients can pass the access token to the backend in requests.
 * Describe which clients that are allowed to perform which operations in the API.
 
-You only need to support the *Authorization Grant* called *Resource Owner Password Credentials*. Follow the details in the specification as good as possible.
+You only need to support the *Authorization Grant* called *Resource Owner Password Credentials*. Follow the details in the specification as much as possible.
 
 ::: danger Report Feedback
-You may [submit your report on Ping Pong and get some feedback on it](https://pingpong.hj.se/courseId/21410/content.do?id=16690466) once before you submit your project work for grading at the end of the course. When you have come this far in your project work it is probably a good idea to do that. Note that you only have until 2019-10-04 to submit it.
+You may [submit your report on Ping Pong and get some feedback on it](https://pingpong.hj.se/courseId/21410/content.do?id=16690466) once before you submit your project work for grading at the end of the course. When you have come this far in your project work it is probably a good idea to do that. Note that you only have until 2019-10-04 to submit your report for feedback.
 :::
 
 ## Part 7: Implementing Login in Express
-Implement authentication and authorization in the Express application the way you describe it in the previous part.
+Implement authentication and authorization in the Express application the way you describe it in the previous part. You should also change the code to store hash values of the users passwords, instead of storing them as plain text. Here we give you some hints about how to accomplish this.
 
-::: warning Note
-More detailed instructions will be available here later... (npm package to create JWT, urlencoded middleware, hash passwords...)
+### Adding login/Creating tokens
+According to the OAuth 2.0 specification, when a user logs in with a username and password, they should send it to the server in the body of the request in the data format `application/x-www-form-urlencoded`. This is the same data format that is used in the querystring, e.g. `variable1=value1&variable2=value2&...`. When the backend receives such a request, it needs to parse the body written in that data format. This can be added to Express using a middleware from the npm package `body-parser`:
+
+```js
+const bodyParser = require('body-parser')
+
+app.use(bodyParser.urlencoded({
+    extended: false
+}))
+```
+
+When you have added this middleware, `request.body` will be populated with information from the body, e.g.:
+
+```js
+// Body: variable1=value1&variable2=value2
+app.post('/tokens', function(request, response){
+    const variable1 = request.body.variable1 // value1
+    const variable2 = request.body.variable2 // value2
+    // ...
+})
+```
+
+You need to check that the body contains a variable called `grant_type` with the value `password`. If that's not the case, then the user tries to login in one of the other ways described in OAuth 2.0 that we don't support, and we should send back an error response (see the specification for the details).
+
+If `grant_type` has the value `password`, then the body should also contain the variables `username` and `password`. If that's not the case, then something is wrong with the request and we should send back an error response (see the specification for the details).
+
+If `grant_type` has the value `password` and the body also contains the variables `username` and `password`, then we need to fetch the account from the database with the given `username` and see if the `password` matches. If  no account with that username exists, or if the password is wrong, we should send back an error response (see the specification for the details).
+
+Otherwise, if everything is OK and the user should be signed in, we need to create an access token the user can send to us in the future as a proof of being signed in to a specific account. We can implement these access tokens as [JSON Web Tokens](https://jwt.io/) (JWT). To create a new JWT, we can use the npm package [`jsonwebtoken`](https://www.npmjs.com/package/jsonwebtoken). To install it, run the command `npm install jsonwebtoken` in the root folder of your backend application. Then you can use it like this:
+
+```js
+const jwt = require('jsonwebtoken')
+
+const jwtSecret = "some_hard_to_guess_characters"
+
+const dataToPutInTheToken = { // AKA "claims" and "payload".
+    country: "Sweden"
+}
+
+const accessToken = jwt.sign(dataToPutInTheToken, jwtSecret) // "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3VudHJ5IjoiU3dlZGVuIn0.k6rz1VHMIg3YvFpm4JMy78RUnFBUCPQPRoRXa2HlRjs"
+```
+
+In the access token you probably want to put something that identifies the user, such as the user's account id, and then send it back to the client (see the specification for the details).
+
+When you're done you can use Postman to test if you can login and get back an access token. If you do, you can then use [the debugger at jwt.io](https://jwt.io/#debugger-io) to verify that the token contains expected data.
+
+### Receiving and extracting tokens
+When a client in the future sends requests to the backend and need to prove that she's the owner of a specific account, she can pass the access token in the Authorization, e.g. `Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3VudHJ5IjoiU3dlZGVuIn0.k6rz1VHMIg3YvFpm4JMy78RUnFBUCPQPRoRXa2HlRjs`. When we receive that request we need to extract the access token from this header and then extract the data from the token that we put inside of it. We can do that like this:
+
+```js
+const jwt = require('jsonwebtoken')
+
+const jwtSecret = "some_hard_to_guess_characters" // Same secret as before.
+
+app.get("/some-protected-resource", function(request, response){
+    
+    let dataInToken = null
+    
+    try{
+        const authorizationHeader = request.get("Authorization") // E.g. "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3VudHJ5IjoiU3dlZGVuIn0.k6rz1VHMIg3YvFpm4JMy78RUnFBUCPQPRoRXa2HlRjs"
+        const accessToken = authorization.substr("Bearer ".length) // E.g. "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3VudHJ5IjoiU3dlZGVuIn0.k6rz1VHMIg3YvFpm4JMy78RUnFBUCPQPRoRXa2HlRjs"
+        dataInToken = jwt.verify(accessToken, jwtSecret) // E.g. {country: "Sweden"}
+    }catch(error){
+        // Access token not present or invalid.
+    }
+    
+    if(dataInToken){
+        // We received a valid access token :D
+    }else{
+        // We didn't receive an access token or the received access token was invalid :(
+    }
+    
+})
+```
+
+After we have extracted the data from the token we can figure out to which account the user logged in to before, and then figure out if the user is authorized to make the request or not.
+
+When you have added authorization checks to your code you can use Postman to send requests with the Authorization header containing the access token and see if it works as it should. You can also use [the debugger at jwt.io](https://jwt.io/#debugger-io) to create invalid tokens and see if your backend properly detects them as invalid.
+
+::: tip Avoiding copy-pasting code
+Extracting the access token from the `Authorization` header like that and then extract the data from the access token is something you want to do in many of the requests you need to be able to handle in the backend, so instead of copy-pasting all of this code it is better to put it in a middleware function.
+:::
+
+::: warning Note!
+One should rather use `jwt.sign()` and `jwt.verify()` asynchronously by providing a callback function, but to simplify we used them synchronously instead (they send back a return value). By using them synchronously they are blocking, so concurrent incoming HTTP requests are queued instead of handled immediately (the calls to `jwt.sign()` and `jwt.verify()` takes many milliseconds to execute). The call to these functions with a callback function are not blocking (the long running operations are executed in the background/another thread).
+:::
+
+### Adding OpenID Connect
+When a client logs in and receives back an access token, the client does probably also want to know to which account the user logged into, so the client knows the username of the account, the id of the account, etc. For that we can use [OpenID Connect](https://openid.net/connect/). It specifies that when the client logs in, we do not only send back an access token, but also an id token that contains information about who the user is. Unlike access tokens, id tokens have to be implemented as JWT.
+
+You get to decide what you want to put in your id token, but follow the specification as much as possible.
+
+When you're done you cna use Postman and see if you also get back an id token when you login. If you don you can use [the debugger at jwt.io](https://jwt.io/#debugger-io) to verify that the token contains expected information.
+
+### Hashing passwords
+Storing passwords in plain text is a bad idea. Users often use the same password on different platforms, and if their passwords on our platform are leaked (by accident or by a hacker that has manage to hack our platform), anyone can login on their accounts on the other platforms they are using. Quite bad!
+
+Instead, passwords should be hashed, and we should only store the hash value of their passwords. There exists many different hashing algorithms, but one of the best one to use for hashing passwords is [bcrypt](https://en.wikipedia.org/wiki/Bcrypt). Many hashing algorithms are designed to be fast, so the hash value quickly can be computed, but that is not suitable for passwords, because then hackers can use [brute-force](https://en.wikipedia.org/wiki/Brute-force_attack) to figure out what the original password was. bcrypt on the other hand has been designed to be slow to prevent this, and you can control how slow it should be (so you can make it even slower in the future when computers have become faster).
+
+To use bcrypt in Node.js you can use the npm package [bcrypt.js](https://www.npmjs.com/package/bcryptjs):
+
+1. Download the npm package to your backend application:
+    * In the root folder of your backend application, run the command `npm install bcryptjs`.
+2. When creating a new account, hash the user's password using:
+
+```js
+const bcrypt = require('bcryptjs')
+
+const hashingRounds = 8 // How slow it should be, the higher number the slower.
+
+const passwordToHash = "abc123"
+
+const hashValue = bcrypt.hashSync(passwordToHash, hashingRounds) // "$2y$08$qc1V89V0GAstCI/NAMM4HO4DcP9Jwgk/h/WX2JsgvTIZqXRw6vxAK"
+
+// Store hashValue with the user's account in the database instead of passwordToHash.
+```
+
+3. When the user logs in, fetch the hashValue from the database and see if the provided password matches that one:
+
+```js
+const bcrypt = require('bcryptjs')
+
+const usersEnteredPassword = "abc123"
+const storedHashValue = "$2y$08$qc1V89V0GAstCI/NAMM4HO4DcP9Jwgk/h/WX2JsgvTIZqXRw6vxAK"
+
+if(bcrypt.compareSync(usersEnteredPassword, storedHashValue)){
+    // Correct password.
+}else{
+    // Wrong password.
+}
+```
+
+When you're done, use Postman to create some new accounts and then try to login to these.
+
+::: warning Remember
+The old accounts in your database contains tha password in plain text, so you should not be able to login to them anymore. Feel free to delete these.
+:::
+
+::: warning Note!
+To simplify, many things you should think of for a real platform has been ignored in the instructions above, but here are short descriptions of these things for the curious ones:
+
+One should rather use the npm package `bcrypt` instead of `bcryptjs`. The JavaScript you write to use them is the same, but `bcryptjs` has been implemented in JavaScript, making it 30% slower than `bcrypt`, which is implemented in C, so it is better to use `bcrypt`, but [`bcrypt` has some dependencies](https://github.com/kelektiv/node.bcrypt.js#dependencies) making it a bit harder to use.
+
+One should rather use the asynchronous functions `hash()` and `compare()` instead of the synchronous `hashSync()` and `compareSync()`. The synchronous functions are easier to use (we have return values instead of callback functions), but they are blocking, so concurrent incoming HTTP requests are queued instead of handled immediately. The asynchronous functions computes the hash value in the background/in another thread, so they don't have this shortage. 
+
+You should most likely not use `8` as the number of hashing rounds (too low), but [it is a bit complicated to find out the optimal number of rounds to use](https://security.stackexchange.com/a/3993/70743), and to do that you also need to know which server your backend will be running on in the end, and since deploying a backend on a server is not part of this course, we don't have all the details to compute it. 
 :::
 
 ## Part 8: Adding Login to the Frontend
 Now that the backend have login functionality through access tokens and id tokens, use this login functionality in the frontend application. When you're done, users should only be able to do what they should be able to. For example, a user should not be able to delete another user's account, or similar. 
 
-::: warning Note
-More detailed instructions will be available here later... (npm package to read JWT, ..)
-:::
+You are recommended to keep track of wether the user is logged in or not the same way as you did in the lab, i.e. in add a `user` object to `App.vue` and pass this as a props to your other Vue components.
+
+When the user successfully logs in you get back an id token with information about the user (it's id, username, etc.). You need to open up this JWT and read out the information from it. You can't do that with the npm package `jsonwebtoken` (that you used in your backend), because it only works in Node.js, and not in web browsers. Instead, you can use the npm package `jwt-decode`:
+
+1. In the root folder of your frontend application, run the command `npm install jwt-decode`.
+2. To read out the data from the id token, use the function this npm package consists of:
+
+```js
+const jwtDecode = require('jwt-decode')
+
+const idToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInByZWZlcnJlZF91c2VybmFtZSI6IkFsaWNlIn0.3Xp7iQkttgTE6hpuT28LFdZ7EYWHlPndqdaWoIzTr9A"
+
+const dataInIdToken = jwtDecode(idToken) // E.g. {sub: 4, preferred_username: "Alice"} 
+```
 
 ## Part 9: Presentation
 Present your platform to the rest of your class using a projector. The reason for the presentation is two-folded:
@@ -400,7 +556,7 @@ There are 3 different sessions for the demonstration, and you need to present yo
 Your presentation will not be graded; consider it as (mandatory) practice.
 
 ## Part 10: Grade 4 and 5
-Be sure to read through [Project Grading Guidelines](./project-grading-guidelines) to see that you follow the guidelines for grade 3, 4 and 5 respectively (depending on which grade you're aiming for). To be able get grade 4 and 5 you also need to implement the extra functionality described next.
+Be sure to read through [Project Grading Guidelines](./project-grading-guidelines) to see that you follow the guidelines for grade you're aiming for. To be able get grade 4 and 5 you also need to implement the extra functionality described next.
 
 ### SDK (required for grade 4)
 Create an SDK other programmers can use to communicate with your backend from their client-side JavaScript code. Then also use it in your own frontend.
