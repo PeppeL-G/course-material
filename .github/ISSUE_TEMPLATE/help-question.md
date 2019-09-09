@@ -56,7 +56,7 @@ But when I run the code it never asks me to enter a name, as it should do accord
 I searched for "js sum reduce" on Google and found the webpage XXX which explained how a similar example worked, but I still don't understand how this code works.
 
 # The question(s)
-Write your questions (a list of sentences each ending with a question mark) you want answered here. The teacher (or a friendly student) will only answer the questions you write here, so think twice about them.
+Write your questions (a list of sentences each ending with a question mark) you want answered here. The teacher (or a friendly student) will only answer the questions you write here, so be sure to ask good questions.
 
 ## Example 1
 Why does it display the number 14 instead of the expected number 17?
