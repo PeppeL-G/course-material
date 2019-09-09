@@ -21,6 +21,9 @@ module.exports = {
 				text: "Web Development Fundamentals",
 				link: "/courses/web-development-fundamentals/",
 			}],
+		}, {
+			text: "Get Help",
+			link: "https://github.com/PeppeL-G/course-material/issues"
 		}],
 		sidebarDepth: 2,
 		sidebar: {
