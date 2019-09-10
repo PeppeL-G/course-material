@@ -707,7 +707,7 @@ If you want to make it easy, let users enter `startTime` and `endTime` in `<inpu
 :::
 
 ::: tip Hint
-You can use `<input type="number" step="any">` to let the user enter values for `latitude` and `longitude`. The values can be found using [www.findlatitudeandlongitude.com](https://www.findlatitudeandlongitude.com/). The best would of course be to let users pick location on a map like that directly on the page, but let's do this the easy way to start with.
+You can use `<input type="number" step="any">` to let the user enter values for `latitude` and `longitude`. The values can be found using [https://epsg.io/map](https://epsg.io/map). The best would of course be to let users pick location on a map like that directly on the page, but let's do this the easy way to start with.
 :::
 
 ### View all activities
