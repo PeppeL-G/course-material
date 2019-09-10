@@ -139,5 +139,6 @@ export default {
 	
 	.hasPassed
 		text-decoration line-through
+		background-color #d3bcbc
 	
 </style>
