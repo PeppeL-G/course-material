@@ -624,7 +624,10 @@ Add a "page" where the user can sign in. To tell the backend to sign in, call th
 ```js
 const client = require('../activity-finder-client')
 
-client.signIn("Greta", "rrrrrr", (errors, account) => {
+const username = "Greta"
+const password = "rrrrrr"
+
+client.signIn(username, password, (errors, account) => {
   // errors = array with error codes (empty if everything went OK).
   // account = object with info about the account you signed into if everything went OK.
   if(errors.length == 0){
@@ -665,7 +668,7 @@ Add a "page" where signed in users can create new activities. To tell the backen
 const client = require('../activity-finder-client')
 
 const activity = {
-  accountId: 28, // The id of the account creating the activity.
+  accountId: 28, // The id of the account creating the activity (i.e. the signed in user's account id).
   title: "Play football",
   description: "Ordinary football, but with three teams instead of two :)",
   startTime: 1577199600000, // Unix timestamp (milliseconds)
