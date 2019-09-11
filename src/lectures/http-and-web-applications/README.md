@@ -14,6 +14,10 @@ The web is built on a protocol called *HyperText Transfer Protocol* (HTTP). To b
 * [HTTP/1.1 specification](https://tools.ietf.org/html/rfc2616)
     * Don't read and learn everything by heart, but just enough so you get comfortable looking up things (methods, status codes, etc.) in it.
 
+## Interesting reading
+* [Usage Share of Internet Browsers 1996 - 2019 (visualized)](https://www.reddit.com/r/dataisbeautiful/comments/cxuah9/usage_share_of_internet_browsers_1996_2019_oc/)
+* 
+
 <!--
 
 WORK IN PROGRESS HERE, DON'T BOTHER ABOUT IT ^^'
