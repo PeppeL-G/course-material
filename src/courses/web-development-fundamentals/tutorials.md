@@ -11,3 +11,8 @@ Here you find the source code written in the different tutorials.
 * layout-inline-block.html
 * layout-flex-box.html
 * layout-spectre.html
+
+## Tutorial 3
+[The Git repository on GitHub](https://github.com/PeppeL-G/tutorial-03).
+
+Note what a nice list of commits it contains!
