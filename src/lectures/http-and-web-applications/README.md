@@ -16,7 +16,6 @@ The web is built on a protocol called *HyperText Transfer Protocol* (HTTP). To b
 
 ## Interesting reading
 * [Usage Share of Internet Browsers 1996 - 2019 (visualized)](https://www.reddit.com/r/dataisbeautiful/comments/cxuah9/usage_share_of_internet_browsers_1996_2019_oc/)
-* 
 
 <!--
 
