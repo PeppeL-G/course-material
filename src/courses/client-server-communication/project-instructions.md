@@ -366,7 +366,7 @@ fetch("https://localhost:3000/accounts", {
 </Tab>
 <Tab title="fetch() with async and await">
 
-The main benefit with promises is that we can use the `async` and `await` keywords in JavaScript instead of chaining them. This way, we end up writing code that looks to to run synchronously (and hence very easy to read ☺), but it will run asynchronously (hence not be blocking ☺).
+The main benefit with promises is that we can use the `async` and `await` keywords in JavaScript instead of chaining them. This way, we end up writing code that looks to run synchronously (and hence very easy to read ☺), but it will run asynchronously (hence not blocking ☺).
 
 To learn how to use `async`/`await` you can read the article [How to use Async Await in JavaScript.](https://medium.com/javascript-in-plain-english/async-await-javascript-5038668ec6eb). Using promises with `async`/`await` is probably easier than learning how to chain promises, so don't be afraid of trying.
 
@@ -391,6 +391,8 @@ async function createAccount(accountToBeCreated){
     
 }
 
+// Use this in an async function.
+// (the async keyword cna only be used in async functions)
 try{
     const bodyAsObject = await createAccount({
         username: "Alice",
@@ -400,7 +402,6 @@ try{
 }catch(error){
     // Called when something goes wrong :(
 }
-
 
 ```
 </Tab>
