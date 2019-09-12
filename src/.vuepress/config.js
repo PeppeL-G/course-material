@@ -33,6 +33,7 @@ module.exports = {
 				"study-guide",
 				"lab-instructions",
 				"tutorials",
+				"lectures",
 				"project-instructions",
 				"project-grading-guidelines",
 				"time-plan"
@@ -45,6 +46,7 @@ module.exports = {
 				"course-syllabus",
 				"study-guide",
 				"exercises",
+				"lectures",
 				"tutorials",
 				"project-instructions",
 				"project-grading-guidelines",

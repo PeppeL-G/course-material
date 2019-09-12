@@ -422,6 +422,7 @@ Before you start working on this part, you are recommended to:
 * View the following videos:
     * [Cookies and Sessions](../../lectures/cookies-and-sessions)
     * [Using cookies and Sessions in Express](../../lectures/using-cookies-and-sessions-in-express)
+    * [Designing Account Systems](../../lectures/designing-account-systems)
 
 ---
 
