@@ -237,6 +237,12 @@ Then add the other operations for the other type of resources you have. Note tha
 Don't forget to describe in your project report how the backend has been implemented.
 
 ## Part 5: Implementing the Frontend
+Before you start working on this part you are expected to view the following lectures:
+
+* [SOP and CORS](../../lectures/sop-and-cors)
+
+---
+
 Implement the frontend application in Vue.js. You will not get any help with how to use Vue.js here (use what you learned from the laboratory work), but we will give you some instructions on how to communicate with the backend through its REST API.
 
 ::: warning Remember
@@ -293,12 +299,12 @@ To send HTTP requests from your Vue.js application you can either use [the old X
 ```js
 const request = new XMLHttpRequest()
 
+// Specify method and URI.
+request.open("POST", "https://localhost:3000/accounts")
+
 // Add headers to the request.
 request.setRequestHeader("Content-Type", "application/json")
 // ...
-
-// Specify method and URI.
-request.open("POST", "https://localhost:3000/accounts")
 
 // Add a callback function that will be called when
 // we receive back the response.
@@ -328,6 +334,12 @@ request.send(bodyAsString)
 </Tab>
 <Tab title="fetch()">
 
+You're not expected to learn how promises works in this course, but if you're curios you can learn the basics about promises on your own by reading the article [Understanding promises in JavaScript](https://hackernoon.com/understanding-promises-in-javascript-13d99df067c1).
+
+The benefits with using promises instead of callback function is that you can chain them. You can learn about how to chain promises by reading the article [Promises chaining](https://javascript.info/promise-chaining). 
+
+And of course you also need to learn how to use the `fetch()` function works. You can do that in the article [Introduction to fetch()](https://developers.google.com/web/updates/2015/03/introduction-to-fetch).
+
 ```javascript
 const accountToBeCreated = {
     username: "Alice",
@@ -350,6 +362,46 @@ fetch("https://localhost:3000/accounts", {
 }).catch(function(error){
     // Called when something goes wrong :(
 })
+```
+</Tab>
+<Tab title="fetch() with async and await">
+
+The main benefit with promises is that we can use the `async` and `await` keywords in JavaScript instead of chaining them. This way, we end up writing code that looks to to run synchronously (and hence very easy to read ☺), but it will run asynchronously (hence not be blocking ☺).
+
+To learn how to use `async`/`await` you can read the article [How to use Async Await in JavaScript.](https://medium.com/javascript-in-plain-english/async-await-javascript-5038668ec6eb). Using promises with `async`/`await` is probably easier than learning how to chain promises, so don't be afraid of trying.
+
+```javascript
+async function createAccount(accountToBeCreated){
+    
+    const bodyAsString = JSON.stringify(accountToBeCreated)
+    
+    const response = await fetch("https://localhost:3000/accounts", {
+        method: 'POST',
+        headers: new Headers({
+            'Content-Type': 'application/json'
+        }),
+        body: bodyAsString
+    })
+    
+    const statusCode = response.status
+    const locationHeader = response.headers.get("Location")
+    const bodyAsJsObject = await response.json()
+    
+    return bodyAsObject
+    
+}
+
+try{
+    const bodyAsObject = await createAccount({
+        username: "Alice",
+        password: "abc123"
+    })
+    // ...
+}catch(error){
+    // Called when something goes wrong :(
+}
+
+
 ```
 </Tab>
 </Tabs>
