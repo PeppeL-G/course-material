@@ -408,6 +408,14 @@ try{
 </Tabs>
 
 ## Part 6: Adding Login to the REST API
+Before you start working on this part you are expected to view the following lectures:
+
+* [REST API Authorization](../../lectures/rest-api-authorization)
+* [JSON Web Tokens](../../lectures/json-web-tokens)
+* [Third-Party Authentication](../../lectures/third-party-authentication)
+
+---
+
 Add authentication and authorization to the REST API in your project report as described by the [OAuth 2.0 Framework](https://oauth.net/2/) and [OpenID Connect](https://openid.net/connect/). You basically need to:
 
 * Add one request clients can use to "login" to an account (to obtain an access token and an id token).
@@ -452,12 +460,12 @@ If `grant_type` has the value `password`, then the body should also contain the 
 
 If `grant_type` has the value `password` and the body also contains the variables `username` and `password`, then we need to fetch the account from the database with the given `username` and see if the `password` matches. If  no account with that username exists, or if the password is wrong, we should send back an error response (see the specification for the details).
 
-Otherwise, if everything is OK and the user should be signed in, we need to create an access token the user can send to us in the future as a proof of being signed in to a specific account. We can implement these access tokens as [JSON Web Tokens](https://jwt.io/) (JWT). To create a new JWT, we can use the npm package [`jsonwebtoken`](https://www.npmjs.com/package/jsonwebtoken). To install it, run the command `npm install jsonwebtoken` in the root folder of your backend application. Then you can use it like this:
+Otherwise, if everything is OK and the user should be signed in, we need to create an access token the user can send to the backend in the future as a proof of being signed in to a specific account. We can implement these access tokens as [JSON Web Tokens](https://jwt.io/) (JWT). To create a new JWT, we can use the npm package [`jsonwebtoken`](https://www.npmjs.com/package/jsonwebtoken). To install it, run the command `npm install jsonwebtoken` in the root folder of your backend application. Then you can use it like this:
 
 ```js
 const jwt = require('jsonwebtoken')
 
-const jwtSecret = "some_hard_to_guess_characters"
+const jwtSecret = "some_random_characters"
 
 const dataToPutInTheToken = { // AKA "claims" and "payload".
     country: "Sweden"
@@ -471,12 +479,12 @@ In the access token you probably want to put something that identifies the user,
 When you're done you can use Postman to test if you can login and get back an access token. If you do, you can then use [the debugger at jwt.io](https://jwt.io/#debugger-io) to verify that the token contains expected data.
 
 ### Receiving and extracting tokens
-When a client in the future sends requests to the backend and need to prove that she's the owner of a specific account, she can pass the access token in the Authorization, e.g. `Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3VudHJ5IjoiU3dlZGVuIn0.k6rz1VHMIg3YvFpm4JMy78RUnFBUCPQPRoRXa2HlRjs`. When we receive that request we need to extract the access token from this header and then extract the data from the token that we put inside of it. We can do that like this:
+When a client in the future sends requests to the backend and need to prove that she's the owner of a specific account, she can pass the access token in the `Authorization` header, e.g. `Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3VudHJ5IjoiU3dlZGVuIn0.k6rz1VHMIg3YvFpm4JMy78RUnFBUCPQPRoRXa2HlRjs`. When the backend receives that request it needs to extract the access token from this header and then extract the data from the token that you put inside of it before. You can do that like this:
 
 ```js
 const jwt = require('jsonwebtoken')
 
-const jwtSecret = "some_hard_to_guess_characters" // Same secret as before.
+const jwtSecret = "some_random_characters" // Same secret as before.
 
 app.get("/some-protected-resource", function(request, response){
     
@@ -501,14 +509,14 @@ app.get("/some-protected-resource", function(request, response){
 
 After we have extracted the data from the token we can figure out to which account the user logged in to before, and then figure out if the user is authorized to make the request or not.
 
-When you have added authorization checks to your code you can use Postman to send requests with the Authorization header containing the access token and see if it works as it should. You can also use [the debugger at jwt.io](https://jwt.io/#debugger-io) to create invalid tokens and see if your backend properly detects them as invalid.
+When you have added authorization checks to your code you can use Postman to send requests with the Authorization header containing the access token and see if it works as it should. You can also use [the debugger at jwt.io](https://jwt.io/#debugger-io) to create invalid access tokens and see if your backend properly detects them as invalid.
 
 ::: tip Avoiding copy-pasting code
-Extracting the access token from the `Authorization` header like that and then extract the data from the access token is something you want to do in many of the requests you need to be able to handle in the backend, so instead of copy-pasting all of this code it is better to put it in a middleware function.
+Extracting the access token from the `Authorization` header like that and then extract the data from the access token is something you want to do in many of the requests your backend receives, so instead of copy-pasting all of this code it is better to put it in a function and then call the function when you need to extract it (or even better: use a middleware function).
 :::
 
 ::: warning Note!
-One should rather use `jwt.sign()` and `jwt.verify()` asynchronously by providing a callback function, but to simplify we used them synchronously instead (they send back a return value). By using them synchronously they are blocking, so concurrent incoming HTTP requests are queued instead of handled immediately (the calls to `jwt.sign()` and `jwt.verify()` takes many milliseconds to execute). The call to these functions with a callback function are not blocking (the long running operations are executed in the background/another thread).
+One should rather use `jwt.sign()` and `jwt.verify()` asynchronously by providing a callback function, but to simplify we used them synchronously instead (they send back a return value). By using them synchronously they are blocking, so concurrent incoming HTTP requests are queued instead of handled immediately (the calls to `jwt.sign()` and `jwt.verify()` takes many milliseconds to execute). The call to these functions with a callback function are not blocking (the long running operations are executed in the background/another thread), and therefor better to use.
 :::
 
 ### Adding OpenID Connect
@@ -516,14 +524,14 @@ When a client logs in and receives back an access token, the client does probabl
 
 You get to decide what you want to put in your id token, but follow the specification as much as possible.
 
-When you're done you cna use Postman and see if you also get back an id token when you login. If you don you can use [the debugger at jwt.io](https://jwt.io/#debugger-io) to verify that the token contains expected information.
+When you're done you can use Postman and see if you also get back an id token when you login. If you do you can use [the debugger at jwt.io](https://jwt.io/#debugger-io) to verify that the token contains expected information.
 
 ### Hashing passwords
 Storing passwords in plain text is a bad idea. Users often use the same password on different platforms, and if their passwords on our platform are leaked (by accident or by a hacker that has manage to hack our platform), anyone can login on their accounts on the other platforms they are using. Quite bad!
 
-Instead, passwords should be hashed, and we should only store the hash value of their passwords. There exists many different hashing algorithms, but one of the best one to use for hashing passwords is [bcrypt](https://en.wikipedia.org/wiki/Bcrypt). Many hashing algorithms are designed to be fast, so the hash value quickly can be computed, but that is not suitable for passwords, because then hackers can use [brute-force](https://en.wikipedia.org/wiki/Brute-force_attack) to figure out what the original password was. bcrypt on the other hand has been designed to be slow to prevent this, and you can control how slow it should be (so you can make it even slower in the future when computers have become faster).
+Instead, passwords should be hashed, and we should only store the hash value of their passwords. There exists many different hashing algorithms, but one of the best ones to use for hashing passwords is [bcrypt](https://en.wikipedia.org/wiki/Bcrypt). Many hashing algorithms are designed to be fast, so the hash value quickly can be computed, but that is not suitable for passwords, because then hackers can use [brute-force](https://en.wikipedia.org/wiki/Brute-force_attack) to figure out what the original password was. bcrypt on the other hand has intentionally been designed to be slow to prevent this, and you can control how slow it should be (so you can make it even slower in the future when computers have become faster).
 
-To use bcrypt in Node.js you can use the npm package [bcrypt.js](https://www.npmjs.com/package/bcryptjs):
+To use bcrypt in Node.js you can use the npm package [bcryptjs](https://www.npmjs.com/package/bcryptjs):
 
 1. Download the npm package to your backend application:
     * In the root folder of your backend application, run the command `npm install bcryptjs`.
@@ -532,7 +540,7 @@ To use bcrypt in Node.js you can use the npm package [bcrypt.js](https://www.npm
 ```js
 const bcrypt = require('bcryptjs')
 
-const hashingRounds = 8 // How slow it should be, the higher number the slower.
+const hashingRounds = 8 // How slow it should be (the higher number the slower).
 
 const passwordToHash = "abc123"
 
@@ -541,13 +549,13 @@ const hashValue = bcrypt.hashSync(passwordToHash, hashingRounds) // "$2y$08$qc1V
 // Store hashValue with the user's account in the database instead of passwordToHash.
 ```
 
-3. When the user logs in, fetch the hashValue from the database and see if the provided password matches that one:
+3. When the user logs in, fetch the user's `hashValue` from the database and see if the provided password matches that one:
 
 ```js
 const bcrypt = require('bcryptjs')
 
 const usersEnteredPassword = "abc123"
-const storedHashValue = "$2y$08$qc1V89V0GAstCI/NAMM4HO4DcP9Jwgk/h/WX2JsgvTIZqXRw6vxAK"
+const storedHashValue = "$2y$08$qc1V89V0GAstCI/NAMM4HO4DcP9Jwgk/h/WX2JsgvTIZqXRw6vxAK" // Fetched from database.
 
 if(bcrypt.compareSync(usersEnteredPassword, storedHashValue)){
     // Correct password.
@@ -565,9 +573,9 @@ The old accounts in your database contains tha password in plain text, so you sh
 ::: warning Note!
 To simplify, many things you should think of for a real platform has been ignored in the instructions above, but here are short descriptions of these things for the curious ones:
 
-One should rather use the npm package `bcrypt` instead of `bcryptjs`. The JavaScript you write to use them is the same, but `bcryptjs` has been implemented in JavaScript, making it 30% slower than `bcrypt`, which is implemented in C, so it is better to use `bcrypt`, but [`bcrypt` has some dependencies](https://github.com/kelektiv/node.bcrypt.js#dependencies) making it a bit harder to use.
+One should rather use the npm package `bcrypt` instead of `bcryptjs`. The JavaScript you write to use them is the same, but `bcryptjs` has been implemented in JavaScript, making it 30% slower than `bcrypt`, which is implemented in C, so it is better to use `bcrypt`. But [`bcrypt` has some dependencies](https://github.com/kelektiv/node.bcrypt.js#dependencies) making it a bit harder to use.
 
-One should rather use the asynchronous functions `hash()` and `compare()` instead of the synchronous `hashSync()` and `compareSync()`. The synchronous functions are easier to use (we have return values instead of callback functions), but they are blocking, so concurrent incoming HTTP requests are queued instead of handled immediately. The asynchronous functions computes the hash value in the background/in another thread, so they don't have this shortage. 
+One should rather use the asynchronous functions `hash()` and `compare()` instead of the synchronous `hashSync()` and `compareSync()`. The synchronous functions are easier to use (return values instead of callback functions), but they are blocking, so concurrent incoming HTTP requests are queued instead of handled immediately. The asynchronous functions compute the hash values in the background/in another thread, so they don't have this shortage. 
 
 You should most likely not use `8` as the number of hashing rounds (too low), but [it is a bit complicated to find out the optimal number of rounds to use](https://security.stackexchange.com/a/3993/70743), and to do that you also need to know which server your backend will be running on in the end, and since deploying a backend on a server is not part of this course, we don't have all the details to compute it. 
 :::
