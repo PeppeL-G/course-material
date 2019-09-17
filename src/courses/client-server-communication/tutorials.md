@@ -22,3 +22,7 @@ The source code makes use of [the npm package `chuck-norris-api`](https://www.np
 ::: tip Tips
 I added some comments to the source code indicating how the REST API can be improved.
 :::
+
+## Tutorial 4
+* [The source code for the backend in a ZIP file](/course-material/client-server-communication/tutorial-04-backend.zip)
+* [The source code for the frontend in a ZIP file](/course-material/client-server-communication/tutorial-04-frontend.zip)
