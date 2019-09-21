@@ -34,6 +34,7 @@ module.exports = {
 				"lab-instructions",
 				"tutorials",
 				"lectures",
+				"sample-exam",
 				"project-instructions",
 				"project-grading-guidelines",
 				"time-plan"
