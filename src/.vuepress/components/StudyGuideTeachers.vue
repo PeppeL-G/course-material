@@ -8,7 +8,7 @@
 			<Tab v-for="teacher in teachers" :title="teacher.name">
 				
 				<img
-					:src="'/course-material'+teacher.photo"
+					:src="'/course-material/teacher-pictures/'+teacher.photo"
 					:alt="'Photo of '+teacher.name+'.'">
 				
 				<p><b>{{teacher.roles.join(", ")}}.</b> {{teacher.description}}</p>

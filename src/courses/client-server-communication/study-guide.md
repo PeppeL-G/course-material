@@ -16,7 +16,7 @@ navbarTitle: Client-Server Communication
 <StudyGuideTeachers
     :teachers='[{
         name: "Peter Larsson-Green",
-        photo: "/client-server-communication/peter-larsson-green.jpeg",
+        photo: "peter-larsson-green.jpeg",
         roles: ["Course coordinator", "lecturer", "lab assistant"],
         description: "Has studied and followed the development of the web since 2004 and received his Master of Science in Computer Science at Linköping University in 2014. He has been working as programming teacher (part time) since 2010 at both Linköping University and Jönköping University.",
         email: "Peter.Larsson-Green@ju.se",
@@ -24,7 +24,7 @@ navbarTitle: Client-Server Communication
         website: "https://ju.se/en/personinfo.html?sign=LarPet"
     }, {
         name: "Johan Kohlin",
-        photo: "/client-server-communication/johan-kohlin.jpeg",
+        photo: "johan-kohlin.jpeg",
         roles: ["Examiner"],
         description: "Has been teaching web development and web design since 2006 for communication students at HLK and since 2016 he teaches JavaScript and misc. web technologies at JTH, primarily to New Media Design students.",
         email: "Johan.Kohlin@ju.se",
@@ -32,7 +32,7 @@ navbarTitle: Client-Server Communication
         website: "https://ju.se/en/personinfo.html?sign=KoJo"
     }, {
         name: "Linus Rudbeck",
-        photo: "/client-server-communication/linus-rudbeck.jpeg",
+        photo: "linus-rudbeck.jpeg",
         roles: ["Lab assistant"],
         description: "Former JTH student that studied the program Software Engineering and Mobile Platforms. Started the company Red Capes IT together with Daniel Fransén after he graduated. ",
         email: "",

@@ -17,7 +17,7 @@ navbarTitle: Web Development Fundamentals
 <StudyGuideTeachers
     :teachers='[{
         name: "Peter Larsson-Green",
-        photo: "/web-development-fundamentals/peter-larsson-green.jpeg",
+        photo: "peter-larsson-green.jpeg",
         roles: ["Course coordinator", "examiner", "lecturer", "lab assistant"],
         description: "Has studied and followed the development of the web since 2004 and received his Master of Science in Computer Science at Linköping University in 2014. He has been working as programming teacher (part time) since 2010 at both Linköping University and Jönköping University.",
         email: "Peter.Larsson-Green@ju.se",
@@ -25,7 +25,7 @@ navbarTitle: Web Development Fundamentals
         website: "https://ju.se/en/personinfo.html?sign=LarPet"
     }, {
         name: "Linus Rudbeck",
-        photo: "/web-development-fundamentals/linus-rudbeck.jpeg",
+        photo: "linus-rudbeck.jpeg",
         roles: ["Lab assistant", "guest lecturer"],
         description: "Former JTH student that studied the program Software Engineering and Mobile Platforms. Started the company Red Capes IT together with Daniel Fransén after he graduated. ",
         email: "",
@@ -33,7 +33,7 @@ navbarTitle: Web Development Fundamentals
         website: "https://redcapesit.se/author/linus/"
     }, {
         name: "Filip Andersson",
-        photo: "/web-development-fundamentals/filip-andersson.jpeg",
+        photo: "filip-andersson.jpeg",
         roles: ["Lab assistant"],
         description: "Former bachelor student that studied the program Software Engineering and Mobile Platforms here at JTH. Now master student studying the program AI Engineering.",
         email: "anfi1622@student.ju.se",
@@ -41,7 +41,7 @@ navbarTitle: Web Development Fundamentals
         website: ""
     }, {
         name: "Simon Arvidsson",
-        photo: "/web-development-fundamentals/simon-arvidsson.jpeg",
+        photo: "simon-arvidsson.jpeg",
         roles: ["Lab assistant"],
         description: "Former bachelor student that studied the program Software Engineering and Mobile Platforms here at JTH. Now master student studying the program AI Engineering.",
         email: "arsi1632@student.ju.se",
