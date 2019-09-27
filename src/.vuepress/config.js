@@ -22,6 +22,9 @@ module.exports = {
 				link: "/courses/web-development-fundamentals/",
 			}],
 		}, {
+			text: "About",
+			link: "/"
+		}, {
 			text: "Get Help",
 			link: "https://github.com/PeppeL-G/course-material/issues"
 		}],
@@ -41,6 +44,15 @@ module.exports = {
 			],
 			"/courses/git/": [
 				"",
+			],
+			"/courses/introduction-to-script-programming/": [
+				"",
+				"course-syllabus",
+				"study-guide",
+				"exercises",
+				"laboratory-work",
+				"written-examination",
+				"time-plan"
 			],
 			"/courses/web-development-fundamentals/": [
 				"",
