@@ -1,4 +1,73 @@
 const moment = require('moment')
+const fs = require('fs')
+const path = require('path')
+
+function getCourseSettings(){
+	
+	const pathToCourseFolders = path.resolve(__dirname, "../courses")
+	
+	const courseFolderNames = fs.readdirSync(
+		pathToCourseFolders
+	)
+	
+	const courseSettings = courseFolderNames.map(courseFolderName => {
+		
+		const pathToCourseFolder = path.resolve(pathToCourseFolders, courseFolderName)
+		
+		const courseSettings = require(path.resolve(
+			pathToCourseFolder,
+			"settings.js"
+		))
+		courseSettings.folderName = courseFolderName
+		
+		return courseSettings
+		
+	})
+	
+	return courseSettings
+	
+}
+
+function getNavItems(){
+	
+	const courseSettings = getCourseSettings()
+	
+	courseSettings.sort((a, b) => a.name - b.name)
+	
+	const coursesToShow = courseSettings.filter(c => c.showLink)
+	
+	const items = coursesToShow.map(c => {
+		return {
+			text: c.name,
+			link: "/courses/"+c.folderName+"/"
+		}
+	})
+	
+	return items
+	
+}
+
+function getSideBarObject(){
+	
+	const courseSettings = getCourseSettings()
+	
+	const sidebarObject = {}
+	
+	for(const course of courseSettings){
+		
+		const key = "/courses/"+course.folderName+"/"
+		
+		sidebarObject[key] = course.pages
+		
+	}
+	
+	sidebarObject["/"] = [
+		""
+	]
+	
+	return sidebarObject
+	
+}
 
 module.exports = {
 	base: "/course-material/",
@@ -11,16 +80,7 @@ module.exports = {
 		activeHeaderLinks: false,
 		nav: [{
 			text: "Courses",
-			items: [{
-				text: "Client-Server Communication",
-				link: "/courses/client-server-communication/",
-			}, {
-				text: "Git",
-				link: "/courses/git/",
-			}, {
-				text: "Web Development Fundamentals",
-				link: "/courses/web-development-fundamentals/",
-			}],
+			items: getNavItems(),
 		}, {
 			text: "About",
 			link: "/"
@@ -29,46 +89,7 @@ module.exports = {
 			link: "https://github.com/PeppeL-G/course-material/issues"
 		}],
 		sidebarDepth: 2,
-		sidebar: {
-			"/courses/client-server-communication/": [
-				"",
-				"course-syllabus",
-				"study-guide",
-				"lab-instructions",
-				"tutorials",
-				"lectures",
-				"sample-exam",
-				"project-instructions",
-				"project-grading-guidelines",
-				"time-plan"
-			],
-			"/courses/git/": [
-				"",
-			],
-			"/courses/introduction-to-script-programming/": [
-				"",
-				"course-syllabus",
-				"study-guide",
-				"exercises",
-				"laboratory-work",
-				"written-examination",
-				"time-plan"
-			],
-			"/courses/web-development-fundamentals/": [
-				"",
-				"course-syllabus",
-				"study-guide",
-				"exercises",
-				"lectures",
-				"tutorials",
-				"project-instructions",
-				"project-grading-guidelines",
-				"time-plan"
-			],
-			"/": [
-				"",
-			]
-		},
+		sidebar: getSideBarObject(),
 	},
 	plugins: [['@vuepress/last-updated', {
 		transformer(timestamp, lang){
