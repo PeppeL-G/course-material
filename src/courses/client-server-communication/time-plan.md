@@ -1,7 +1,3 @@
----
-navbarTitle: Client-Server Communication
----
-
 # Time Plan
 The <span style="background-color: lime; display: inline-block; padding: 0 8px; font-weight: bold;">Laboratory Work</span> and <span style="background-color: aqua; display: inline-block; padding: 0 8px; font-weight: bold;">Project Work</span> column indicates what you are expected to work on each day. 
 

@@ -1,7 +1,3 @@
----
-navbarTitle: Introduction to Script Programming
----
-
 # Time Plan
 <TimePlan
 	:startDate='new Date(2019, 9, 21)'

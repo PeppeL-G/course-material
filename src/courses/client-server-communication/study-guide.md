@@ -1,6 +1,3 @@
----
-navbarTitle: Client-Server Communication
----
 # Study Guide
 <StudyGuideInfo
     course-name="Client-Server Communication"

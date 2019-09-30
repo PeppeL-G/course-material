@@ -1,7 +1,3 @@
----
-navbarTitle: Web Development Fundamentals
----
-
 # Study Guide
 <StudyGuideInfo
     course-name="Web Development Fundamentals"

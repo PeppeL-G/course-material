@@ -1,36 +1,9 @@
 const moment = require('moment')
-const fs = require('fs')
-const path = require('path')
-
-function getCourseSettings(){
-	
-	const pathToCourseFolders = path.resolve(__dirname, "../courses")
-	
-	const courseFolderNames = fs.readdirSync(
-		pathToCourseFolders
-	)
-	
-	const courseSettings = courseFolderNames.map(courseFolderName => {
-		
-		const pathToCourseFolder = path.resolve(pathToCourseFolders, courseFolderName)
-		
-		const courseSettings = require(path.resolve(
-			pathToCourseFolder,
-			"settings.js"
-		))
-		courseSettings.folderName = courseFolderName
-		
-		return courseSettings
-		
-	})
-	
-	return courseSettings
-	
-}
+const settingsRetriever = require('./settings-retriever')
 
 function getNavItems(){
 	
-	const courseSettings = getCourseSettings()
+	const courseSettings = settingsRetriever.getAllCourseSettings()
 	
 	courseSettings.sort((a, b) => a.name - b.name)
 	
@@ -49,7 +22,7 @@ function getNavItems(){
 
 function getSideBarObject(){
 	
-	const courseSettings = getCourseSettings()
+	const courseSettings = settingsRetriever.getAllCourseSettings()
 	
 	const sidebarObject = {}
 	
@@ -79,11 +52,11 @@ module.exports = {
 		lastUpdated: "Last Updated",
 		activeHeaderLinks: false,
 		nav: [{
+			text: "Home",
+			link: "/"
+		}, {
 			text: "Courses",
 			items: getNavItems(),
-		}, {
-			text: "About",
-			link: "/"
 		}, {
 			text: "Get Help",
 			link: "https://github.com/PeppeL-G/course-material/issues"
@@ -95,5 +68,7 @@ module.exports = {
 		transformer(timestamp, lang){
 			return moment(timestamp).format('YYYY-MM-DD HH:mm:ss')
 		}
-	}]],
+	}],
+		require('./plugins/plugin-title-maker')
+	],
 }

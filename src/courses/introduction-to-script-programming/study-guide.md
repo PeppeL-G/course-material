@@ -1,7 +1,3 @@
----
-navbarTitle: Introduction to Script Programming
----
-
 # Study Guide
 <StudyGuideInfo
     course-name="Introduction to Script Programming"

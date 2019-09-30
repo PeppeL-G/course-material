@@ -4,7 +4,11 @@
 		class="site-name"
 		:class="{ 'can-hide': $site.themeConfig.logo }"
 	>
-		{{ $parent.$page.frontmatter.navbarTitle || $parent.$page.frontmatter.title}}
+		{{
+			($parent.$page.courseSettings && $parent.$page.courseSettings.name) ||
+			$parent.$page.frontmatter.navbarTitle ||
+			$parent.$page.frontmatter.title
+		}}
 	</span>
 </template>
 

@@ -1,5 +1,4 @@
 ---
-navbarTitle: Introduction to Script Programming
 exercise0ShowAfter: 2018-10-24 11:45
 exercise1ShowAfter: 2018-10-25 14:45
 exercise2ShowAfter: 2018-11-01 14:45

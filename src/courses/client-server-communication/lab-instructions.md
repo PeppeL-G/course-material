@@ -1,6 +1,3 @@
----
-navbarTitle: Client-Server Communication
----
 # Lab Instructions
 This page contains instructions for the examination test *Laboratory Work*. It consists of two parts, and both of them need to be completed and presented orally to a teacher at a lab session before you pass the examination test.
 

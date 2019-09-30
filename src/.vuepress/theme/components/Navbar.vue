@@ -1,19 +1,14 @@
 <template>
   <header class="navbar">
     <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
-
-    <router-link
-      :to="$localePath"
-      class="home-link"
+    
+    <img
+      class="logo"
+      v-if="$site.themeConfig.logo"
+      :src="$withBase($site.themeConfig.logo)"
+      :alt="$siteTitle"
     >
-      <img
-        class="logo"
-        v-if="$site.themeConfig.logo"
-        :src="$withBase($site.themeConfig.logo)"
-        :alt="$siteTitle"
-      >
-      <NavbarTitle />
-    </router-link>
+    <NavbarTitle />
 
     <div
       class="links"

@@ -1,6 +1,3 @@
----
-navbarTitle: Web Development Fundamentals
----
 # Tutorials
 Here you find the source code written in the different tutorials.
 

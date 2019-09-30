@@ -1,6 +1,3 @@
----
-navbarTitle: Web Development Fundamentals
----
 # Project Instructions
 This page contains instructions for the project work.
 

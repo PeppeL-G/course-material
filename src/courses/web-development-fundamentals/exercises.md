@@ -1,6 +1,3 @@
----
-navbarTitle: Web Development Fundamentals
----
 # Exercises
 There is no laboratory work in this course, but here are some optional exercises you can try to complete before you start implementing the website in your project work.
 

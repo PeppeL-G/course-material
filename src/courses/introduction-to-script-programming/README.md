@@ -1,6 +1,3 @@
----
-navbarTitle: Introduction to Script Programming
----
 # Welcome!
 Welcome to the course *Introduction to Script Programming*! In this course you'll learn how to create small programs in Python your computer can execute.
 
