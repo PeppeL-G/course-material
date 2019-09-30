@@ -1,5 +1,12 @@
 ---
 navbarTitle: Introduction to Script Programming
+exercise0ShowAfter: 2018-10-24 11:45
+exercise1ShowAfter: 2018-10-25 14:45
+exercise2ShowAfter: 2018-11-01 14:45
+exercise3ShowAfter: 2018-11-08 14:45
+exercise4ShowAfter: 2018-11-15 14:45
+exercise5ShowAfter: 2018-11-22 14:45
+exercise6ShowAfter: 2018-11-29 14:45
 ---
 # Exercises
 On this page you find information about the exercises in the course.
@@ -7,7 +14,7 @@ On this page you find information about the exercises in the course.
 ## Introduction
 The exercises are not part of any examination test and therefore not mandatory to complete. They consist of programming problems that are a bit easier to solve than the labs, so they serve as good practice problems to solve before attempting to solve the labs.
 
-Solutions to the exercises will be presented at the tutorial each week.
+Solutions to the exercises will be presented at the tutorial each week. After each tutorial sample solutions to the problems will be available on the Tutorials page. 
 
 ## Getting started with Python
 This sub-chapter contains instructions to help you get started with writing and running Python code. All software we use in this course should already be installed on the school's computers (but versions might differ). If you use your own computer, you need to install the software on your own computer yourself, as described further down in this sub-chapter.
@@ -134,6 +141,18 @@ print("The circumference of a circle with radius 7 is 43.96.")
 But this is of course not acceptable, because then *you* have computed the circumference. Instead, it's the computer that should compute the circumference. If you implement your program in a good way, changing the `7` at *one place* in your code to `14` would produce the correct output for the radius `14` (you should not need to change the `7` to `14` at multiple places in your code).
 :::
 
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise0ShowAfter">
+
+```python
+print("This program computes the circumference of a circle.")
+radius = 7
+pi = 3.14
+circumference = 2*radius*pi
+print("The circumference of a circle with radius "+str(radius)+" is "+str(circumference)+".")
+```
+</SampleAnswer>
+
 ### Problem 0.2: Reading input
 Even if the program created in Problem 0.1 works, it is not that useful because it computes and displays the same number each time you run the program. It is an example of a program that doesn't receive any input; it only produces output, as shown in <FigureNumber /> below.
 
@@ -184,6 +203,14 @@ Here are some functions you might need to use to implement the program:
 * `str(123)` to convert the integer `123` to the string `123`.
 :::
 
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise0ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
+
 ### Problem 0.3: Celsius to fahrenheit
 Fahrenheit and Celsius are both units used to measure the temperature of things (how hot they are). A temperature expressed in Celsius (`C`) can be converted to a temperature expressed in Fahrenheit (`F`) using the formula `F = C*9/5 + 32`.
 
@@ -203,6 +230,14 @@ Enter the number of Celsius: 10
 You don't need to have any error handling; you can expect the user to actually enter a number when she's asked to enter the temperature in Celsius.
 :::
 
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise0ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
+
 ### Problem 0.4: Fahrenheit to celsius
 A temperature expressed in Fahrenheit (`F`) can be converted to a temperature expressed in Celsius (`C`) using the formula `C = (F-32) * 5/9`.
 
@@ -221,6 +256,14 @@ Enter the number of Fahrenheit: 50
 ::: warning Note!
 You don't need to have any error handling; you can expect the user to actually enter a number when she's asked to enter the temperature in Fahrenheit.
 :::
+
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise0ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
 
 ### Problem 0.6: Lengths of events
 Events stored in a calendar program usually contains information about which day each event takes place and when the event starts and ends that day. To compute during how long time an event runs, one can "simply" subtract the end time from the start time. This is not straight forward since we humans express times using multiple units (hours, minutes and seconds).
@@ -242,6 +285,14 @@ The length of the event is: 1:30.
 ```
 </Figure>
 
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise0ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
+
 ### Problem 0.7: Lengths of events (seconds)
 This problem is a continuation of Problem 0.6. This time the start time and end time in the program are not only expressed in hours and minutes, but also seconds. To solve this problem, you need to do something similar to what you did in Problem 0.6, but now you have 3 units (hours, minutes and seconds) instead of just 2.
 
@@ -259,6 +310,14 @@ Enter end second of the event: 15
 The length of the event is: 1:29:45.
 ```
 </Figure>
+
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise0ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
 
 
 
@@ -288,6 +347,14 @@ The circumference of a circle with radius 5 is 31.4.
 ```
 </Figure>
 
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise1ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
+
 ### Problem 1.2: Repeated execution
 Looking at your code from Problem 1.1, you probably realize that you repeatedly did the same thing three times. When you repeatedly do the same thing many times, you should rather use a loop to repeatedly execute the same statements multiple times instead of copy-pasting the statements multiple times, because copy-pasting code is usually bad.
 
@@ -298,6 +365,14 @@ So, instead of copy-pasting code you can use a loop to tell Python to repeatedly
 Implement the program in Problem 1.1 using a for loop. To make the for loop iterate 3 times, use a list containing 3 values (we don't really care about what those values are since we won't use them in the iterations).
 
 When you're done, your program should function the same way as before (as described in <FigureNumber previous /> above).
+
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise1ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
 
 ### Problem 1.3: Dynamic number of iterations
 The program in Problem 1.2 works great, but it always asks the user for the radius of 3 different circles. What if the user needs just 2? Or maybe 7? Or 20? For these cases we need the user to first tell the program how many times the loop should iterate.
@@ -319,7 +394,7 @@ The circumference of a circle with radius 3 is 18.84.
 Enter the radius of the circle: 5
 The circumference of a circle with radius 5 is 31.4.
 Enter the radius of the circle: 3
-The circumference of a circle with radius 5 is 18.84.
+The circumference of a circle with radius 3 is 18.84.
 ```
 </Figure>
 
@@ -334,6 +409,14 @@ Sample usage of the `range()` function:
 * `range(3)` --> A sequence with `0`, `1` and `2`
 * `range(5)` --> A sequence with `0`, `1`, `2`, `3` and `4`
 :::
+
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise1ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
 
 ### Problem 1.4: Computing a sum the bad way
 Create a program that computes and prints the sum of the integers between 0 and 15 without a loop. Do something like this:
@@ -356,6 +439,14 @@ The sum of the integers between 0 and 15 is 120.
 ```
 </Figure>
 
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise1ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
+
 ### Problem 1.5: Computing a sum the good way
 The program in the previous exercise contains a lot of statements looking like this:
 
@@ -364,6 +455,14 @@ the_variable = the_variable + x
 ```
 
 Where `x` is an integer between 0 and 15. Instead of having this statement repeated over and over again one can just use it in a loop that repeatedly executes the statement. You just need to make sure that the loop iterates over the values `0`, `1`, `2`, ... `14` and `15`(use the `range()` function to create a sequence containing these values, or simply create a new list containing them), and for each iteration add the current value we are iterating over to `the_variable`.
+
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise1ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
 
 ### Problem 1.6: Computing a sum
 The program in Problem 1.5 works great, but it always computes the sum of the integers between 0 and 15. What if the user wants to compute the sum of the integers between 0 and 10? Or 0 and 90?
@@ -384,6 +483,14 @@ The sum of the integers between 0 and 5 is 15.
 You don't need to have any error handling; you can expect the user to actually enter an integer when she's asked to enter an integer.
 :::
 
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise1ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
+
 ### Problem 1.7: Computing a harder sum
 The program in Problem 1.6 lets the user enter the upper bound for the sum, and the lower bound is always 0. What if the user wants to use something else than 0? Such as computing the sum of the integers between 10 and 20? Or 3 and 64?
 
@@ -401,12 +508,28 @@ Sample usage of the `range()` function:
 * `range(1, 5)` --> A sequence with `1`, `2`, `3`, and `4`
 :::
 
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise1ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
+
 ### Problem 1.8: Computing a harder sum (again)
 This problem is about creating a program similar to the one in Problem 1.7, but you may only pass one number to the `range()` function. This means that the sequence with numbers you get back always will start on 0, so, you need to change other parts of your program to make it work as expected.
 
 ::: warning Note!
 The solution you end up in for this problem is worse than the solution you got in Problem 1.7, but it serves as a good example of how programming/problem solving works: there exists many different ways to solve a problem!
 :::
+
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise1ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
 
 ## Exercise 2: Functions
 In this exercise you will practice on using the following in Python:
@@ -423,6 +546,14 @@ The `math` module in Python's standard library contains the variable `𝜋` whic
 The curios ones can learn more about the `math` module in the documentation at [https://docs.python.org/3/library/math.html](https://docs.python.org/3/library/math.html).
 :::
 
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise2ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
+
 ### Problem 2.2: A random time
 The `random` module contains the `randint()` function one can call to get back a random integer in a specific interval. Your task is to create a program that displays a random time of the day in the `HH:MM:SS` format, such as `23:42:12`.
 
@@ -434,8 +565,24 @@ If a number is lower than 10 you don't need to print a zero before it, e.g. disp
 The curios ones can learn more about the `random` module in the documentation at [https://docs.python.org/3/library/random.html](https://docs.python.org/3/library/random.html).
 :::
 
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise2ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
+
 ### Problem 2.3: Many random integers
 Create a program that first asks the user to enter a positive integer. Your program should then display that many random numbers between 0 and 99. If the user enters the integer 3, your program might for example display the numbers 55, 27 and 81.
+
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise2ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
 
 ### Problem 2.4: Content of folder
 The `os` module contains the function `listdir()` which returns back a list with the names of files and folders in the folder you pass to it (the path). Your task is to create a program that asks the user to enter an absolute path to a folder (e.g. `C:\Users\alice\projects`), and then your program should display the names of all the files and folders in that folder.
@@ -443,6 +590,14 @@ The `os` module contains the function `listdir()` which returns back a list with
 ::: tip Learn more
 The curios ones can learn more about the `random` module in the documentation at [https://docs.python.org/3/library/os.html](https://docs.python.org/3/library/os.html).
 :::
+
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise2ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
 
 ### Problem 2.5: Introducing functions
 If you have the code below to compute the average value of two numbers:
@@ -492,6 +647,14 @@ def get_circle_circumference(radius):
 ```
 </Figure>
 
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise2ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
+
 ### Problem 2.6: Exponentiation
 Create a new program that contains a function named `four_to_the_power_of()` which receives a positive integer as argument and returns `4` to the power of that integer, e.g. `four_to_the_power_of(3)` = `4³` = `4*4*4` = `64`.
 
@@ -505,6 +668,14 @@ Make use of a for loop in your implementation. You may not use the `**` operator
 
 Call your `four_to_the_power_of()` function in your main program and verify that it works correctly. You are strongly recommended to write tests checking if the function works instead of printing return values.
 
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise2ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
+
 ### Problem 2.7: Computing sums
 Create a program that computes the sum of the following sums:
 
@@ -514,6 +685,14 @@ Create a program that computes the sum of the following sums:
 * The sum of the integers 4, 20, 6, 12, 45 and 62.
 
 In your code, try to avoid repeating the same code three times. This basically means that you need to create a function that computes the sum of a sequence of integers.
+
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise2ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
 
 ### Problem 2.8: Computing other sums
 Create a program that computes the sum of the following sums:
@@ -534,6 +713,14 @@ Create a program that computes the sum of the following sums:
 * The sum of every fourth integer between 4 and 10 (4+8).
 
 In your code, try to avoid repeating the same code multiple times. This basically means that you need to use a function.
+
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise2ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
 
 
 
@@ -558,6 +745,14 @@ Enter the second number: 5
 ```
 </Figure>
 
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise3ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
+
 ### Problem 3.2: Comparing more numbers
 Create a program that asks the user to enter three numbers. The program should then print which of them that is greatest respective smallest. It can look as shown in <FigureNumber /> below. Try to create functions to carry out the computations.
 
@@ -570,6 +765,14 @@ Enter the third number: 12
 12 is the greatest.
 ```
 </Figure>
+
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise3ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
 
 ### Problem 3.3: Summering integers
 Create a program that keeps asking the user to enter an integer until the user enters `quit`. The program should then display the sum of all the integers. It can look as shown in <FigureNumber /> below. 
@@ -584,6 +787,14 @@ The sum of the integers is 26.
 ```
 </Figure>
 
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise3ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
+
 ### Problem 3.4: Comparing many numbers
 Create a program that keeps asking the user to enter a positive integer until the user enters `quit`. The program should then display the greatest of the entered numbers. It can look as shown in <FigureNumber /> below. Somehow you need to remember the greatest number the user has entered.
 
@@ -596,6 +807,14 @@ Enter an integer or quit: quit
 12 is the greatest.
 ```
 </Figure>
+
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise3ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
 
 ### Problem 3.5: A multiplication training program
 Create a small program that functions as a simple multiplication training program. When the program starts, it should ask a user to enter a multiplication table, and then ask the user for the answers to 10 different multiplications in that multiplication table. It can look as shown in <FigureNumber /> below.
@@ -621,6 +840,14 @@ Extra features you can implement:
 * Keep asking the user for answers until the user enters quit as the answer. Randomize the numbers.
 * If the user answers a question wrong, keep asking the user the same question until the user answers it right.
 
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise3ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
+
 ### Problem 3.6: A guess game
 Create a small program that functions as a number guessing game. Start by generating a random integer between 0 and 100, and then the user should guess which number it is until the user guess the right one. If the guess is wrong, let the user know if her guess was too high or too low. It can look as shown in <FigureNumber /> below. 
 
@@ -644,6 +871,14 @@ Extra features you can implement:
 Come up with an algorithm (which numbers to guess on) to complete the game in as few guesses as possible. In worst case, 7 guesses should be enough.
 :::
 
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise3ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
+
 ### Problem 3.7: Looking for values
 Create the function `is_in_sequence()`, which receives a sequence with numbers (e.g. a list) and another number as arguments, and returns `True` if that other number is in the list, otherwise `False`.
 
@@ -653,6 +888,14 @@ Sample usage:
 * `is_in_sequence([1, 2], 2)` → `True`
 * `is_in_sequence([4, 2, 8, 6, 1], 6)` → `True`
 
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise3ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
+
 ### Problem 3.8: Greatest value
 Create the function `greatest()`, which receives a sequence with positive numbers (e.g. a list) as argument and returns the greatest number in that sequence.
 
@@ -660,6 +903,14 @@ Sample usage:
 
 * `greatest([5, 2, 7, 6])` → `7`
 * `greatest([6, 4, 9, 8, 3])` → `9`
+
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise3ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
 
 
 
@@ -680,6 +931,14 @@ Sample usage:
 * `merge([1, 2], [3], [4, 5])` → `[1, 2, 3, 4, 5]`
 * `merge([1], [], [2])` → `[1, 2]`
 
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise4ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
+
 ### Problem 4.2: Computing sums
 Create the function `compute_sums()`, which receives two lists as argument, both containing the same number of numbers, and returns a new list containing the pairwise sum of the numbers in the two lists.
 
@@ -687,6 +946,14 @@ Sample usage:
 
 * `compute_sums([1, 2], [3, 4])` → `[4, 6]`
 * `compute_sums([1, 1, 1], [4, 5, 6])` → `[5, 6, 7]`
+
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise4ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
 
 ### Problem 4.3: Translating digits
 Use a dictionary to store the translation of Swedish (or your own language) words to English, in this case the name of digits, e.g.:
@@ -712,6 +979,14 @@ Sample usage:
 Use the `in` operator in a conditional statement to check if the word you should translate exists as a key in the `words` directory.
 :::
 
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise4ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
+
 ### Problem 4.4: The total sum of a dict
 Create the function `sum()`, which receives a dict as argument containing numbers, and returns the sum of all the numbers in the dict (not the keys).
 
@@ -725,6 +1000,14 @@ Sample usage:
 Iterate through all the keys in the dict, and for each key, retrieve its value and add it to a `sum` variable starting on `0`.
 :::
 
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise4ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
+
 ### Problem 4.5: The pairwise sum of two dicts
 Create the function `get_sum()`, which receives two dicts as arguments (they both contains numbers and the same keys), and returns a new dict containing the pairwise sum of the two dicts.
 
@@ -736,6 +1019,14 @@ Sample usage:
 ::: tip Tips!
 Iterate through all the keys in one of the dictionary, and then retrieve the numbers from both of the dicts using the key.
 :::
+
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise4ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
 
 ### Problem 4.6: Grouping words
 Create the function `group_words()`, which receives a list of strings, and returns a dictionary containing multiple lists of strings, where all strings in the same list has the same number of characters. Use the number of characters in these strings as the key for that list of strings.
@@ -750,6 +1041,14 @@ Sample usage:
 ::: tip Tips!
 Start by iterating through all the strings in the list you receive, and create the dictionary with all the keys and empty lists. Then iterate through the list of strings you receive again, and add each string to its corresponding list.
 :::
+
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise4ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
 
 ### Problem 4.7: A friendly program
 Create a program the user can use to store the names of her friends (all information lost when the program is closed). It can look as shown in <FigureNumber /> below. 
@@ -788,6 +1087,14 @@ friends = ["Alice", "Bob"]
 * When the user enters a new friend, add the name of the friend to the end of the list.
 * When the user removes a friend, remove the name of the friend from the list.
 :::
+
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise4ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
 
 ### Problem 4.8: A friendlier program
 Create a program the user can use to store the names and emails of her friends. It can look as shown in <FigureNumber /> below. 
@@ -828,6 +1135,14 @@ friends = [
 ```
 :::
 
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise4ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
+
 ## Exercise 5: Files
 In this exercise you will practice on using the following in Python:
 
@@ -848,6 +1163,14 @@ The file [numbers.txt](/course-material/introduction-to-script-programming/exerc
 
 Write a program that computes the sum of all the numbers in the file (download and save the file locally on your computer).
 
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise5ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
+
 ### Problem 5.2: Working with files
 Imagine your application contains the following data:
 
@@ -867,6 +1190,14 @@ Create three different functions that can be used to store this data in a file:
 * The third function should store the data in an XML file (XML format).
 
 Then create three different functions that can be used to read this data from a file and restore the houses variable.
+
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise5ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
 
 ### Problem 5.3: Storing the friendly friends
 This exercise is a continuation on Problem 4.8.
@@ -898,6 +1229,14 @@ You have 2 friends.
 Enter operation: quit
 ```
 </Figure>
+
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise5ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
 
 
 
@@ -943,6 +1282,14 @@ peter
 You won!
 ```
 
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise6ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
+
 ### Problem 6.2: Creating classes
 Create the class `GuessingGame` that represents a guessing game (the user should guess on a number, and the game let's the user know if the guess is correct or not). The user has at most 10 guesses. The class should have methods as described in Table 2 below.
 
@@ -966,3 +1313,11 @@ if guessed_right:
 else:
     print("Too bad, game over.")
 ```
+
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise5ShowAfter">
+
+```python
+...
+```
+</SampleAnswer>
