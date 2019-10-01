@@ -28,3 +28,9 @@ I added some comments to the source code indicating how the REST API can be impr
 Continued on the backend from the previous tutorial and added accounts and login functionality (access tokens and id tokens).
 
 * [The source code for the backend in a ZIP file](/course-material/client-server-communication/tutorial-05-backend.zip)
+
+## Tutorial 6
+Added login to the frontend and structured the code in the backend in multiple files (`app.js`, `accountRouter.js`, `tweetRouter.js` and `db.js`).
+
+* [The source code for the backend in a ZIP file](/course-material/client-server-communication/tutorial-06-backend.zip)
+* [The source code for the frontend in a ZIP file](/course-material/client-server-communication/tutorial-06-frontend.zip)

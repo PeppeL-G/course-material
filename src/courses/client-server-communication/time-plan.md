@@ -61,8 +61,8 @@ The <span style="background-color: lime; display: inline-block; padding: 0 8px; 
 		{},
 		// 41
 		{p: "Part 8"},
-		{l: "Guest Lecture?", s: "Group 1", l: "Guest Lecture?", p: "Part 8"},
-		{p: "Part 8"},
+		{l: "Guest Lecture", s: "Group 1", p: "Part 8"},
+		{l: "Sample Exam/Extra Help", p: "Part 8"},
 		{s: "Group 2", p: "Part 8"},
 		{p: "Part 8"},
 		{},
