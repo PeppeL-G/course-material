@@ -31,3 +31,11 @@ The same repository is used for all tutorials, but the link leads to a commit sh
 ::: warning Note!
 The same repository is used for all tutorials, but the link leads to a commit showing what the source code looked like after Tutorial 5.
 :::
+
+## Tutorial 6
+[The source code in the ZIP file](/course-material/web-development-fundamentals/tutorial-06.zip). Contains the following vulnerabilities:
+
+* Cross-Site Scripting
+* Client access to any file
+* SQL injection
+* Figuring out users passwords

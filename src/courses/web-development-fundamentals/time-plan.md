@@ -60,8 +60,8 @@ The <span style="background-color: aqua; display: inline-block; padding: 0 8px; 
 		{},
 		// 41
 		{p: "Part 8: Optional"},
-		{l: "Guest Lecture?", p: "Part 8: Optional"},
-		{s: "Group 1", l: "Guest Lecture?", p: "Part 8: Optional"},
+		{l: "Guest Lecture", p: "Part 8: Optional"},
+		{s: "Group 1", l: "Sample Exam/Repetition", p: "Part 8: Optional"},
 		{s: "Group 2", p: "Part 9: Deploy"},
 		{s: "Group 3", p: "Part 9: Deploy"},
 		{},
