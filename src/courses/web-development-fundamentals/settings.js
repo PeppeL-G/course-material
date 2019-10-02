@@ -7,6 +7,7 @@ module.exports = {
 		"study-guide",
 		"exercises",
 		"lectures",
+		"sample-exam",
 		"tutorials",
 		"project-instructions",
 		"project-grading-guidelines",
