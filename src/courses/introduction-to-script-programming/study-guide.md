@@ -42,7 +42,7 @@ More specifically you will learn how to ...
 This course does not have any special pre-requisites than basic math and English.
 
 ## Intended Learning Outcomes
-The intended learning outcomes of the course are found in [the course syllabus](./course-syllabus) in force and are described under the next heading.
+The intended learning outcomes of the course are found in [the course syllabus](course-syllabus/) in force and are described under the next heading.
 
 ## Examination, ILOs and Learning Activities
 
@@ -89,12 +89,12 @@ Display an ability to construct database-backed web applications.
 " />
 
 ### Information to students
-Information about the **Project Work** can be found on the page [Project Instructions](./project-instructions). It's about a website you should create throughout the course.
+Information about the **Project Work** can be found on the page [Project Instructions](project-instructions/). It's about a website you should create throughout the course.
 
 **Written Examination** is a [Digital Exam](https://ju.se/student/en/digital-exam.html) in Inspera at the end of the course. You need to register for it in advance per the instructions at [https://ju.se/student/en/studies/examination.html](https://ju.se/student/en/studies/examination.html).
 
 ### Conditions for the examined elements
-Conditions for the **Project Work** can be found on the page [Project Instructions](./project-instructions).
+Conditions for the **Project Work** can be found on the page [Project Instructions](project-instructions/).
 
 No aids allowed are allowed for the **Written Examination**. The computer you write the exam on may only be used to answer the questions on the exam, nothing else.
 
@@ -116,4 +116,4 @@ The link above leads to a free online version of the book with an interactive to
 :::
 
 ## Time Plan
-A time plan is available on the page [Time Plan](./time-plan).
+A time plan is available on the page [Time Plan](time-plan/).

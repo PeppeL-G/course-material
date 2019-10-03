@@ -1,4 +1,5 @@
 const moment = require('moment')
+const copyStaticFilesToPublic = require('./copy-static-files-to-public')
 const settingsRetriever = require('./settings-retriever')
 
 function getNavItems(){
@@ -41,6 +42,10 @@ function getSideBarObject(){
 	return sidebarObject
 	
 }
+
+
+
+copyStaticFilesToPublic()
 
 module.exports = {
 	base: "/course-material/",

@@ -28,7 +28,7 @@ To write Python code on your computer, you need a text editor. A text editor is 
 More or less all operating systems (Windows, Linux, Mac...) come with a text editor pre-installed. For example, Windows comes with a text editor called *Notepad* (*Anteckningar* in Swedish), as shown in <FigureNumber /> below.
 
 <Figure caption='The Notepad program can be found in Windows by searching for "Notepad".'>
-<img src="/course-material/introduction-to-script-programming/exercises/getting-started-notepad.png" alt='The Notepad program can be found in Windows by searching for "Notepad".'>
+<img src="static-files/exercises/getting-started-notepad.png" alt='The Notepad program can be found in Windows by searching for "Notepad".'>
 </Figure>
 
 These text editors work fine, and you may use them in this course if you want to. Just make sure to save your code in a file with the extension `.py`. But we recommend you to use an Integrated Development Environment (IDE) instead, as described further down in this sub-chapter. IDEs usually makes it much easier to read, write and run code.
@@ -36,19 +36,19 @@ These text editors work fine, and you may use them in this course if you want to
 To run Python code, you need to install the `python` program. The `python` program will simply take the code you have written in a file and execute it for you. The latest version of the `python` program can be downloaded and installed from [python.org](https://www.python.org). Install the version of Python beginning with 3, as shown in <FigureNumber /> below (available for Windows, Mac and Linux).
 
 <Figure caption="Downloading the Python program. Make sure to use the version beginning with 3.">
-<img src="/course-material/introduction-to-script-programming/exercises/getting-started-download-python.png" alt="Downloading the Python program. Make sure to use the version beginning with 3.">
+<img src="static-files/exercises/getting-started-download-python.png" alt="Downloading the Python program. Make sure to use the version beginning with 3.">
 </Figure>
 
 The `python` program can be installed by running the installation program you downloaded. When you run it, make sure to check the option `Add Python 3.X to PATH`, as shown in <FigureNumber /> below. Checking this will make it easier to run the Python program from a shell/terminal/console. Click on `Install Now` to start the installation process.
 
 <Figure caption="Running the Python installation program.">
-<img src="/course-material/introduction-to-script-programming/exercises/getting-started-install-python.png" alt="Running the Python installation program.">
+<img src="static-files/exercises/getting-started-install-python.png" alt="Running the Python installation program.">
 </Figure>
 
 To run the Python program, you just need to write python in a shell/terminal/console and then press the enter key. In Windows, you can use Windows PowerShell for this. Windows PowerShell can easily be started by searching for it, as shown in <FigureNumber /> below. Just running the `python` command will start Python's read-eval-print-loop, where you can enter Python code and have it executed when you press the enter key, but the python command can also be used to execute Python code written in files. How to do that is not explained here, but you can read more about it in the slides from the first lecture.
 
 <Figure caption="Running the Python program using Windows PowerShell.">
-<img src="/course-material/introduction-to-script-programming/exercises/getting-started-run-powershell.png" alt="Running the Python program using Windows PowerShell.">
+<img src="static-files/exercises/getting-started-run-powershell.png" alt="Running the Python program using Windows PowerShell.">
 </Figure>
 
 You do not need to do anything more than this to start writing and running Python code, so it is quite easy to get started. But back to that IDE we mentioned earlier.
@@ -63,31 +63,31 @@ Visual Studio Code is an IDE you can use to write and run your Python code. Some
 Visual Studio Code (available for Windows, Mac and Linux) can be downloaded and installed for free from [code.visualstudio.com](https://code.visualstudio.com), as shown in <FigureNumber /> below.
 
 <Figure caption="Downloading Visual Studio Code.">
-<img src="/course-material/introduction-to-script-programming/exercises/getting-started-download-vs-code.png" alt="Downloading Visual Studio Code.">
+<img src="static-files/exercises/getting-started-download-vs-code.png" alt="Downloading Visual Studio Code.">
 </Figure>
 
 Install Visual Studio Code by running the installation program you just downloaded. During the installation process, check the option `Add to PATH`, as shown in <FigureNumber /> below. This will make it possible to start Visual Studio Code from a shell using the `code` command. Feel free to check the other options if you want.
 
 <Figure caption="Installing Visual Studio Code.">
-<img src="/course-material/introduction-to-script-programming/exercises/getting-started-install-vs-code.png" alt="Installing Visual Studio Code.">
+<img src="static-files/exercises/getting-started-install-vs-code.png" alt="Installing Visual Studio Code.">
 </Figure> 
 
 When the installation process has completed, start Visual Studio Code and open a new project folder you can use to store your Python files in, as shown in <FigureNumber /> below.
 
 <Figure caption="Creating a new project folder in Visual Studio Code.">
-<img src="/course-material/introduction-to-script-programming/exercises/getting-started-vs-code-create-project.png" alt="Creating a new project folder in Visual Studio Code.">
+<img src="static-files/exercises/getting-started-vs-code-create-project.png" alt="Creating a new project folder in Visual Studio Code.">
 </Figure>
 
 Then create a new Python file in your project folder, as shown in <FigureNumber /> below.
 
 <Figure caption="Creating a new Python file in Visual Studio Code and installing the Python extension.">
-<img src="/course-material/introduction-to-script-programming/exercises/getting-started-vs-code-writing-python.png" alt="Creating a new Python file in Visual Studio Code and installing the Python extension.">
+<img src="static-files/exercises/getting-started-vs-code-writing-python.png" alt="Creating a new Python file in Visual Studio Code and installing the Python extension.">
 </Figure>
 
 The first time Visual Studio Code encounters a Python file, it will suggest you install an extension to it containing features for working with Python files. Install that extension. You should then be able to run your Python code by clicking on the green DEBUG button shown in <FigureNumber /> below.
 
 <Figure caption="Running Python files in Visual Studio Code.">
-<img src="/course-material/introduction-to-script-programming/exercises/getting-started-vs-code-running-python.png" alt="Running Python files in Visual Studio Code.">
+<img src="static-files/exercises/getting-started-vs-code-running-python.png" alt="Running Python files in Visual Studio Code.">
 </Figure>
 
 That's it! Now you can write your Python code in files using Visual Studio Code and then click on the green DEBUG button to run it.

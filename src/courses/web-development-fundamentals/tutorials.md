@@ -2,7 +2,7 @@
 Here you find the source code written in the different tutorials.
 
 ## Tutorial 2
-[The source code in the ZIP file](/course-material/web-development-fundamentals/tutorial-02.zip) consists of:
+[The source code in the ZIP file](static-files/tutorial-02.zip) consists of:
 
 * menu.html
 * layout-inline-block.html
@@ -33,7 +33,7 @@ The same repository is used for all tutorials, but the link leads to a commit sh
 :::
 
 ## Tutorial 6
-[The source code in the ZIP file](/course-material/web-development-fundamentals/tutorial-06.zip). Contains the following vulnerabilities:
+[The source code in the ZIP file](static-files/tutorial-06.zip). Contains the following vulnerabilities:
 
 * Cross-Site Scripting
 * Client access to any file

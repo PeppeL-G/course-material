@@ -105,14 +105,14 @@ Total cost: 22190
 Create a program that can calculate LCC for a building using the information in <FigureNumber /> below:
 
 <Figure caption="Slides with the LCC formula and the Present Value Factor">
-<img src="/course-material/introduction-to-script-programming/labs/lab-1-lcc-formula.png" alt="The LCC formula">
-<img src="/course-material/introduction-to-script-programming/labs/lab-1-present-value-factor.png" alt="The Present Value Factor.">
+<img src="static-files/labs/lab-1-lcc-formula.png" alt="The LCC formula">
+<img src="static-files/labs/lab-1-present-value-factor.png" alt="The Present Value Factor.">
 </Figure>
 
 The input to the calculations should be the properties defined in the IDS below:
 
 <Figure caption="IDS">
-<img src="/course-material/introduction-to-script-programming/labs/lab-1-ids.png" alt="IDS">
+<img src="static-files/labs/lab-1-ids.png" alt="IDS">
 </Figure>
 
 On top of this:
@@ -456,7 +456,7 @@ Develop a program that checks if the files in a directory have been named accord
 In <FigureNumber /> below you can see the naming principles of files that are related to CAD.
 
 <Figure caption="">
-<img src="/course-material/introduction-to-script-programming/labs/lab-4-naming-model.png">
+<img src="static-files/labs/lab-4-naming-model.png">
 </Figure>
 
 The file name consists of six different parts. Symbols that can be used are characters (a-z/A-Z), numbers (0-9), dots (.), and dashes (-).
@@ -517,7 +517,7 @@ The extension for the file used. For example, a Revit file is called `.rvt` and 
 The different allowed formats should be defined in the different IDS in the project. A part of an IDS is shown in <FigureNumber /> below.
 
 <Figure caption="">
-<img src="/course-material/introduction-to-script-programming/labs/lab-4-delivery-content.png">
+<img src="static-files/labs/lab-4-delivery-content.png">
 </Figure>
 
 </Tab>
@@ -649,7 +649,7 @@ TRANSPORTINPUTVTY,telnet,telnet,telnet,ssh,ssh
 Instead of manually creating the CSV file yourself, you can easily create and maintain it using Microsoft Excel, as shown in <FigureNumber /> below. When saving the file, just save it as *CSV UTF-8 (Comma Delimited)* instead of *Excel Workbook*.
 
 <Figure caption="Saving an Excell document as a CSV file.">
-<img src="/course-material/introduction-to-script-programming/labs/lab-5-csv-in-excell.png" alt="Saving an Excell document as a CSV file.">
+<img src="static-files/labs/lab-5-csv-in-excell.png" alt="Saving an Excell document as a CSV file.">
 </Figure>
 
 Your task is to create a program that reads the placeholder values from `configuration-values.csv` and then generates new configuration files based on the template in `configuration-template.config`, but where the placeholders have been replaced with the values.
@@ -765,7 +765,7 @@ game.print_game()
 This method prints the game as shown in <FigureNumber /> below.
 
 <Figure caption="What the game looks like printed to the console/terminal/shell. The numbers at the bottom identify the different columns (the first column is 0).">
-<img src="/course-material/introduction-to-script-programming/labs/lab-6-connect-four-empty.png">
+<img src="static-files/labs/lab-6-connect-four-empty.png">
 </Figure>
 
 As you can see, the columns are identified through the digits 0-9.
@@ -784,7 +784,7 @@ game.print_game()
 What the game looks like after the code above has been executed is shown in Figure 2 below. As you can see, `X` starts.
 
 <Figure caption="What the game looks like after some moves have been made.">
-<img src="/course-material/introduction-to-script-programming/labs/lab-6-connect-four-with-moves.png">
+<img src="static-files/labs/lab-6-connect-four-with-moves.png">
 </Figure>
 
 `print_game()` and `make_move(column)` are not the only methods in the class. The table below lists the methods you can use on the game object, and what they do.
