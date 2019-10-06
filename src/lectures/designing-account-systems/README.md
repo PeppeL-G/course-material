@@ -8,6 +8,10 @@ So what do you need to think about when a user can login on your website? Let's 
 
 <iframe width="560" height="314" src="https://www.youtube.com/embed/4-yrBVs85W0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Lecture material
+* [designing-account-systems.pdf](designing-account-systems.pdf)
+* [designing-account-systems.pptx](designing-account-systems.pptx)
+
 ## Recommended reading
 * [Security Authentication vs. Authorization | What’s the Difference?](https://swoopnow.com/security-authentication-vs-authorization/)
 * [About Secure Password Hashing](https://security.blogoverflow.com/2013/09/about-secure-password-hashing/)

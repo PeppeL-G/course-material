@@ -8,6 +8,10 @@ The web is built on a protocol called *HyperText Transfer Protocol* (HTTP). To b
 
 <iframe width="560" height="314" src="https://www.youtube.com/embed/kuTKFoU5v7k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Lecture material
+* [http-and-web-applications.pdf](http-and-web-applications.pdf)
+* [http-and-web-applications.pptx](http-and-web-applications.pptx)
+
 ## Recommended reading
 * [Introduction to HTTP](https://launchschool.com/books/http) by Launch School
     * Up to (including) the chapter HTTP --> Processing Responses

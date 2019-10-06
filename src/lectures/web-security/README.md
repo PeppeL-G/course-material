@@ -8,8 +8,11 @@ Many web applications contains security vulnerabilities hackers can exploit. Let
 
 <iframe width="560" height="314" src="https://www.youtube.com/embed/T5QJR3iXvZg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Recommended reading
+## Lecture material
+* [web-security.pdf](web-security.pdf)
+* [web-security.pptx](web-security.pptx)
 
+## Recommended reading
 * [OWASP Top 10 - 2017](https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf)
 * [How Facebook Was Hacked And Why It's A Disaster For Internet Security](https://www.forbes.com/sites/thomasbrewster/2018/09/29/how-facebook-was-hacked-and-why-its-a-disaster-for-internet-security/#521220f82033)
 * [Are You on Tinder? Someone May Be Watching You Swipe](https://www.checkmarx.com/2018/01/23/tinder-someone-may-watching-swipe-2/)

@@ -8,6 +8,10 @@ So, users get an access token when they login to a REST API. But how do we get i
 
 <iframe width="560" height="314" src="https://www.youtube.com/embed/LcRfHgvXIFI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Lecture material
+* [third-party-authentication.pdf](third-party-authentication.pdf)
+* [third-party-authentication.pptx](third-party-authentication.pptx)
+
 ## Recommended reading
 * [List of public OpenID Connect providers](https://connect2id.com/products/nimbus-oauth-openid-connect-sdk/openid-connect-providers)
 * [OpenID Connect explained](https://connect2id.com/learn/openid-connect)

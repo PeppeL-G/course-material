@@ -28,7 +28,7 @@ Implement the website using technologies taught in this course. Avoid using clie
 
 In addition to implementing the website, you should also write a report describing the implementation of the website. The file [project-report-template.docx](static-files/project-report-template.docx) contains a template with further instructions on this. Your report will be a living document throughout the course (meaning that you will write it as the course run and continuously improve it). 
 
-The page [Project Grading Guidelines](./project-grading-guidelines) contains guidelines for how your work will be graded. You are strongly recommended to read through it every now and then.
+The page [Project Grading Guidelines](project-grading-guidelines/) contains guidelines for how your work will be graded. You are strongly recommended to read through it every now and then.
 
 To help you with your project work, we have divided it into smaller parts that should be completed in order. The rest of this page contains descriptions of these smaller parts. Before you start working on the first part, you are strongly recommended to read through all the parts, which will give you a good overview of the work that lies ahead.
 
@@ -80,7 +80,7 @@ Your first task is to specify:
 * The functionality of the website (which different type of resources it consists of and what you/anyone can do with them).
 * What the graphical user interface (GUI) should look like.
 
-Your decisions should be described in the project report, so in this part of the project work, you will not do any programming, but only work on your report. A good way to describe the functionalities is by sketching what the GUI will look like in the end. Then the reader can easily see all the functionality just by looking at pictures. An example of that is shown in [project-report-template.docx](/static-files/project-report-template.docx).
+Your decisions should be described in the project report, so in this part of the project work, you will not do any programming, but only work on your report. A good way to describe the functionalities is by sketching what the GUI will look like in the end. Then the reader can easily see all the functionality just by looking at pictures. An example of that is shown in [project-report-template.docx](static-files/project-report-template.docx).
 
 Designing a website with a user-friendly GUI is no simple task. Therefore, designers have created CSS frameworks that makes it easy for people who are not good at design to create GUIs that are user-friendly. These frameworks primarily consist of components one can use to implement the GUI (such as one component representing a form, another one representing a menu, a third one representing an article, etc.). Since you have to use a CSS framework in your project work, you are recommended to now select which CSS framework you are going to use, and then design your website using the available components in that framework.
 
@@ -113,9 +113,9 @@ Before you start working on this part, you are recommended to:
     * [Handlebars](../../lectures/handlebars/)
     * [Web Applications in Express](../../lectures/web-applications-in-express/)
 * Complete the following optional exercises:
-    * [Exercise 1: HTML](./exercises.html#exercise-1-html)
-    * [Exercise 2: CSS](./exercises.html#exercise-2-css)
-    * [Exercise 3: JS](./exercises.html#exercise-3-js)
+    * [Exercise 1: HTML](exercises/#exercise-1-html)
+    * [Exercise 2: CSS](exercises/#exercise-2-css)
+    * [Exercise 3: JS](exercises/#exercise-3-js)
 
 ---
 
@@ -247,8 +247,8 @@ When you version control a project, do not store the source code for the depende
 Before you start working on this part, you are recommended to:
 
 * View the following videos:
-    * [SQLite](../../lectures/sqlite)
-    * [Using SQLite in Node.js](../../lectures/using-sqlite-in-node-js)
+    * [SQLite](../../lectures/sqlite/)
+    * [Using SQLite in Node.js](../../lectures/using-sqlite-in-node-js/)
 
 ---
 
@@ -417,9 +417,9 @@ Just a reminder that you should not forget to submit your report for feedback on
 Before you start working on this part, you are recommended to:
 
 * View the following videos:
-    * [Cookies and Sessions](../../lectures/cookies-and-sessions)
-    * [Using cookies and Sessions in Express](../../lectures/using-cookies-and-sessions-in-express)
-    * [Designing Account Systems](../../lectures/designing-account-systems)
+    * [Cookies and Sessions](../../lectures/cookies-and-sessions/)
+    * [Using cookies and Sessions in Express](../../lectures/using-cookies-and-sessions-in-express/)
+    * [Designing Account Systems](../../lectures/designing-account-systems/)
 
 ---
 
@@ -459,7 +459,7 @@ app.listen(8080)
 Before you start working on this part, you are recommended to:
 
 * View the following videos:
-    * [Web Security](../../lectures/web-security)
+    * [Web Security](../../lectures/web-security/)
 
 ---
 
@@ -557,7 +557,7 @@ HTML/HTTP does not come with built-in support to check that, but the synchronize
 Use the npm package `csurf` to protect your website from CSRF-attacks.
 
 ## Part 8: Optional tasks
-Here are some optional tasks you must complete if you want to get a grade higher than 3. Remember that completing these extra tasks does not necessarily give you a higher grade, but you have to complete them to be able to get a higher grade. Also, do not forget to read the [Project Grading Guidelines](./project-grading-guidelines) every now and then.
+Here are some optional tasks you must complete if you want to get a grade higher than 3. Remember that completing these extra tasks does not necessarily give you a higher grade, but you have to complete them to be able to get a higher grade. Also, do not forget to read the [Project Grading Guidelines](project-grading-guidelines/) every now and then.
 
 ### Search (required for grade 4)
 Add search/filter functionality for at least one of your resources.
@@ -580,7 +580,7 @@ You have a lot of freedom when it comes to this task, but too simple solutions w
 Before you start working on this part, you are recommended to:
 
 * View the following videos:
-    * [Running Node.js on Lightsail](../../lectures/running-node-js-on-lightsail)
+    * [Running Node.js on Lightsail](../../lectures/running-node-js-on-lightsail/)
 
 ---
 

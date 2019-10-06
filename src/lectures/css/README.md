@@ -8,6 +8,11 @@ The language to style webpages.
 
 <iframe width="560" height="314" src="https://www.youtube.com/embed/qWonwVDrxq8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Lecture material
+* <a href="css-properties.html">css-properties.html</a>
+* [css.pdf](css.pdf)
+* [css.pptx](css.pptx)
+
 ## Recommended reading
 * [Marksheet - A free HTML & CSS tutorial](https://marksheet.io/)
     * Chapter 04: CSS Basics

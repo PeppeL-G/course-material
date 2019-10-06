@@ -8,6 +8,10 @@ Let's take a look at how users can login to accounts in our REST API.
 
 <iframe width="560" height="314" src="https://www.youtube.com/embed/0Ech5jpP1Dc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Lecture material
+* [rest-api-authorization.pdf](rest-api-authorization.pdf)
+* [rest-api-authorization.pptx](rest-api-authorization.pptx)
+
 ## Recommended reading
 * [Wikipedia's List of OAuth providers](https://en.wikipedia.org/wiki/List_of_OAuth_providers)
     * Notice that you find many of the big guys in the list.

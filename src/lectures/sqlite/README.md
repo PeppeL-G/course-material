@@ -8,6 +8,10 @@ A simple relational database we can use to store our data.
 
 <iframe width="560" height="314" src="https://www.youtube.com/embed/ztodDSWRzVk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Lecture material
+* [sqlite.pdf](sqlite.pdf)
+* [sqlite.pptx](sqlite.pptx)
+
 ## Recommended reading
 
 * [SQLite Documentation](https://www.sqlite.org/docs.html):

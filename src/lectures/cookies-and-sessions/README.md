@@ -8,8 +8,11 @@ HTTP is a stateless protocol, how can the server remember information about clie
 
 <iframe width="560" height="314" src="https://www.youtube.com/embed/JtAy9OZAZ7k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Recommended reading
+## Lecture material
+* [cookies-and-sessions.pdf](cookies-and-sessions.pdf)
+* [cookies-and-sessions.pptx](cookies-and-sessions.pptx)
 
+## Recommended reading
 * [HTTP State Management Mechanism](https://tools.ietf.org/html/rfc6265):
     * Read this if you want to learn the details about cookies.
 * [HTTP cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies):

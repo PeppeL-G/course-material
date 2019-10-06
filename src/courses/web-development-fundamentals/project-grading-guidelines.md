@@ -147,7 +147,7 @@ The quality of the report.
 />
 
 ## Optional Tasks
-Complete [the optional tasks described in the Project Instructions](./project-instructions.html#part-8-optional-tasks).
+Complete [the optional tasks described in the Project Instructions](project-instructions.html#part-8-optional-tasks).
 
 <GradingGuideline
 	gradeU="Not applicable."

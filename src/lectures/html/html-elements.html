@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>This is the title</title>
+		
+		<!-- https://highlightjs.org/usage/ -->
+		<!--
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/purebasic.min.css" integrity="sha256-lKTqsyeK2p9Mp5Hdp4cvEzaI97okO5IkGXBSQfcsGbg=" crossorigin="anonymous" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+		-->
+		<style type="text/css">
+
+			*{
+				box-sizing: border-box;
+			}
+
+			body > div > h1{
+				text-align: center;
+			}
+
+			div div{
+				background-color: silver;
+				padding: 20px;
+				border-radius: 20px;
+				margin-bottom: 10px;
+				overflow: auto;
+			}
+
+			#slaveDiv div{
+				white-space: pre;
+				font-family: monospace;
+			}
+
+		</style>
+		
+		<script type="text/javascript">
+
+			document.addEventListener('DOMContentLoaded', function(){
+
+				var masterDiv = document.getElementById('masterDiv')
+				var slaveDiv = document.getElementById('slaveDiv')
+
+				var subMasterDivs = masterDiv.getElementsByTagName('div')
+
+				for(var i=0; i<subMasterDivs.length; i++){
+
+					var subMasterDiv = subMasterDivs[i]
+					var subSlaveDiv = document.createElement('div')
+					var pre = document.createElement('pre')
+					subSlaveDiv.appendChild(pre)
+					var code = document.createElement('code')
+					code.className = "html"
+					pre.appendChild(code)
+
+					code.innerText = subMasterDiv.innerHTML.trim().replace(/\t/g, "  ")
+					slaveDiv.appendChild(subSlaveDiv)
+
+					var height = Math.max(
+						subMasterDiv.offsetHeight,
+						subSlaveDiv.offsetHeight
+					) + 20
+					subMasterDiv.style.height = height+"px"
+					subSlaveDiv.style.height = height+"px"
+
+				}
+				
+				hljs.initHighlightingOnLoad();
+
+			})
+
+		</script>
+	</head>
+	<body>
+		<div id="slaveDiv" style="float: left; width: 49%">
+			<h1>HTML source code</h1>
+		</div>
+		<div id="masterDiv" style="float: right; width: 49%">
+			<h1>HTML code rendered</h1>
+<div>
+<h1>Header 1</h1>
+<h2>Header 2</h2>
+<h3>Header 3</h3>
+<h4>Header 4</h4>
+<h5>Header 5</h5>
+<h6>Header 6</h6>
+</div>
+<div>
+<p>This is the first paragraph. This is the
+	first paragraph. This is the first paragraph.
+	This is the first paragraph. </p>
+<p>This is the second paragraph.
+	This is the second paragraph.
+	This is the second paragraph.
+	This is the second             paragraph. </p><p>
+	This is the third paragraph.
+</p>
+<p>One<br>Two<br>Three</p>
+</div>
+<div>
+Go to <a href="http://www.ju.se">JU</a>!
+</div>
+<div>
+<p id="theParagraph">This is a paragraph!</p>
+<a href="#theParagraph">Scroll to the paragraph above.</a>
+</div>
+<div>
+Here is an image: <img src="https://ju.se/styles/externalweb/images/logo/ju_logo_white.svg" width="100" height="30" alt="JU logo."> Nice, right?
+</div>
+<div>
+Here is an image: <img src="not-here.jpeg" width="100" height="30" alt="JU logo."> Nice, right?
+</div>
+<div>
+Here is an image:
+<figure>
+	<img src="https://ju.se/styles/externalweb/images/logo/ju_logo_white.svg" width="100" height="30" alt="JU logo.">
+	<figcaption>Jönköping University logo.</figcaption>
+</figure>
+</div>
+<div>
+This is <strong>strong</strong>.<br>
+This is <em>emphasized</em>.<br>
+</div>
+<div>
+<abbr title="HyperText Markup Language">HTML</abbr> is used to create web pages.
+</div>
+<div>
+<ul>
+	<li>List item A</li>
+	<li>List item B</li>
+	<li>List item C</li>
+	<li>List item D</li>
+</ul>
+</div>
+<div>
+<ol>
+	<li>List item A</li>
+	<li>List item B</li>
+	<li>List item C</li>
+	<li>List item D</li>
+</ol>
+</div>
+<div>
+<ol>
+	<li>List item A</li>
+	<li>
+		List item B
+		<ul>
+			<li>List item B.a</li>
+			<li>List item B.b</li>
+			<li>List item B.c</li>
+		</ul>
+	</li>
+	<li>List item C</li>
+	<li>
+		List item D
+		<ol>
+			<li>List item D.a</li>
+			<li>List item D.b</li>
+			<li>List item D.c</li>
+		</ol>
+	</li>
+</ol>
+</div>
+<div>
+<dl>
+
+	<dt>Nintendo</dt>
+	<dd>Best game company in the world.</dd>
+
+	<dt>Microsoft</dt>
+	<dd>Second best game company in the world.</dd>
+
+	<dt>Sony</dt>
+	<dd>Worst game company in the world.</dd>
+
+</dl>
+</div>
+<div>
+<table border="1">
+	<caption>Table demo</caption>
+	<thead>
+		<tr>
+			<th>Header 1</th>
+			<th>Header 2</th>
+			<th>Header 3</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		<tr><td>A</td><td>B</td><td>C</td></tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td>0</td>
+			<td>0</td>
+			<td>0</td>
+		</tr>
+	</tfoot>
+</table>
+</div>
+<div>
+<table border="1">
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td colspan="2">2</td>
+		</tr>
+		<tr>
+			<td>A</td>
+			<td>B</td>
+			<td rowspan="2">C</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div>
+<form method="GET" action="http://www.bing.com/search">
+	Search for: <input type="text" name="q" value="Default Value" placeholder="Type something!"><br>
+	<input type="submit" value="Go!">
+</form>
+</div>
+<div>
+<form method="GET" action="http://www.bing.com/search">
+	Search for:
+	<select name="q">
+		<option value="nintendo">Good games</option>
+		<option value="Sweden" selected>Blue/yellow cross flag</option>
+	</select>
+	<input type="submit" value="Go go go!">
+</form>
+</div>
+<div>
+<form method="GET" action="http://www.bing.com/search">
+	Search for:<br>
+	<input type="radio" name="q" value="1"> One<br>
+	<input type="radio" name="q" value="2" checked> Two<br>
+	<input type="radio" name="q" value="3"> Three<br>
+	<input type="submit" value="Go go go!">
+</form>
+</div>
+<div>
+<form method="GET" action="http://www.bing.com/search">
+	What do you want?<br>
+	<input type="checkbox" name="q" value="1" id="option1"> <label for="option1">Have fun</label><br>
+	<input type="checkbox" name="q" value="2" id="option2" checked> <label for="option2">Be rich</label><br>
+	<input type="checkbox" name="q" value="3" id="option3"> <label for="option3">Drink milk</label><br>
+	<input type="submit" value="Go go go!">
+</form>
+</div>
+<div>
+<form method="GET" action="http://www.bing.com/search">
+	Text: <input type="text"><br>
+	Password: <input type="password"><br>
+	New in HTML5:<br>
+	Email: <input type="email"><br>
+	Number: <input type="number" value="3" min="1" max="10" step="2"><br>
+	Date: <input type="date"><br>
+	Color: <input type="color"><br>
+	Range: <input type="range" min="10" max="50"><br>
+	Month: <input type="month"><br>
+	Week: <input type="week"><br>
+	Time: <input type="time"><br>
+	Datetime local: <input type="datetime-local"><br>
+	Search: <input type="search"><br>
+	Tel: <input type="tel"><br>
+	Url: <input type="url"><br>
+</form>
+</div>
+<div>
+<form method="GET" action="http://www.bing.com/search">
+	<input type="text" name="q" list="game-consoles">
+	<datalist id="game-consoles">
+		<option value="Nintendo"></option>
+		<option value="Super Nintendo"></option>
+		<option value="N64"></option>
+		<option value="Game Cube"></option>
+	</datalist>
+</form>
+</div>
+<div>
+<form method="GET" action="http://www.bing.com/search">
+	<input type="text" name="q1" value="I'm ordinary!"><br>
+	<input type="text" name="q2" value="I'm readonly!" readonly=""><br>
+	<input type="text" name="q3" value="I'm disabled!" disabled=""><br>
+</form>
+</div>
+<div>
+<form method="GET" action="http://www.bing.com/search">
+	<textarea name="q" rows="5" cols="20">Default text</textarea>
+</form>
+</div>
+<div>
+Come visit me at <address>Jönköping University, Gjuterigatan 5, JÖNKÖPING</address>
+</div>
+<div>
+<p>
+	<q
+		cite="http://www.svt.se/nyheter/inrikes/romson-och-fridoli-kallar-till-presskonferens">Vi är beredda att lämna över ansvaret på kongressen</q>
+	har Gustav Fridolin sagt enligt SVT, men flera har
+	feltolkat hans kommentar:
+</p>
+<blockquote cite="http://www.svt.se/nyheter/inrikes/romson-och-fridoli-kallar-till-presskonferens">
+	<p>En del medier skriver att språkrören nu ställer
+		sina platser till förfogande men Gustav Fridolin
+		förtydligar efter presskonferensen att han inte
+		vill använda det uttrycket.</p>
+	<p>– Att säga att man ställer sin plats till
+		förfogande har blivit ett kodspråk för att man
+		avgår, säger Gustav Fridolin.</p>
+	<p>Och det vill ni inte?</p>
+	<p>– Nej, det vill vi verkligen inte, säger
+		Gustav Fridolin.</p>
+</blockquote>
+</div>
+<div>
+<p>Thou shalt <ins cite="file-explaining-the-reason.html">not</ins> kill.</p>
+<p>Honour thy father and <del cite="file-explaining-the-reason.html">not</del> thy mother.</p>
+<p>The price is <s>20SEK</s> 10SEK.</p>
+</div>
+<div>
+<blink>I should blink!</blink>
+<marquee>I should move!</marquee>
+</div>
+<div>
+<pre>This is preformatted text!
+Spaces a    n    d line
+breaks are preserved!</pre>
+</div>
+<div>
+<p>Here <!-- is a --> comment!</p>
+</div>
+<div>
+<h1>Some deprecated elements</h1>
+<p><acronym title="HyperText Markup Language">HTML</acronym> is a markup language.</p>
+<p>Some <big>big</big> text.</p>
+<center>Some centered text.</center>
+<p>Some <font size="5" color="blue">styled</font> text.</p>
+<p>Some <strike>text</strike>.</p>
+</div>
+</div>
+		</div>
+	</body>
+</html>

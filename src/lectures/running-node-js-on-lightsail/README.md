@@ -8,6 +8,10 @@ So, you have implemented a great web application in Node.js, and now you want to
 
 <iframe width="560" height="314" src="https://www.youtube.com/embed/2ovu_lYLN9w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Lecture material
+* [running-node-js-on-lightsail.pdf](running-node-js-on-lightsail.pdf)
+* [running-node-js-on-lightsail.pptx](running-node-js-on-lightsail.pptx)
+
 ::: tip The configuration
 If you need to run just one web application, use the following in you configuration file (or whichever port number you use):
 

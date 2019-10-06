@@ -126,7 +126,7 @@ The quality of the report.
 />
 
 ## Optional Tasks
-Complete [the optional tasks described in the Project Instructions](./project-instructions.html#part-10-grade-4-and-5).
+Complete [the optional tasks described in the Project Instructions](project-instructions.html#part-10-grade-4-and-5).
 
 <GradingGuideline
 	gradeU="Not applicable."

@@ -8,8 +8,11 @@ So, in your client-side JavaScript code you want to send HTTP requests to anothe
 
 <iframe width="560" height="314" src="https://www.youtube.com/embed/Pv6P8B_iJTc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Recommended reading
+## Lecture material
+* [sop-and-cors.pdf](sop-and-cors.pdf)
+* [sop-and-cors.pptx](sop-and-cors.pptx)
 
+## Recommended reading
 * [Authoritative guide to CORS (Cross-Origin Resource Sharing) for REST APIs ](https://www.moesif.com/blog/technical/cors/Authoritative-Guide-to-CORS-Cross-Origin-Resource-Sharing-for-REST-APIs/#)
     * This is an easy to read introduction to CORS.
 * [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)

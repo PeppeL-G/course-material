@@ -1,6 +1,6 @@
 ---
 sidebar: auto
-navbarTitle: Node.js
+navbarTitle: Vue
 ---
 
 # Vue

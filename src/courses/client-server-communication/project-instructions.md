@@ -30,9 +30,9 @@ Describe your platform as detailed as possible in your project report. To a larg
 ## Part 3: Designing the REST API
 Before you start working on this part you are expected to view the following lectures:
 
-* [Internet Basics](../../lectures/internet-basics)
-* [HTTP and Web Applications](../../lectures/http-and-web-applications)
-* [REST API Basics](../../lectures/rest-api-basics)
+* [Internet Basics](../../lectures/internet-basics/)
+* [HTTP and Web Applications](../../lectures/http-and-web-applications/)
+* [REST API Basics](../../lectures/rest-api-basics/)
 
 ---
 
@@ -47,13 +47,13 @@ Describe the REST API in your project report. Be as detailed as possible. Other 
 ## Part 4: Implementing the REST API in Express
 Before you start working on this part you are expected to view the following lectures:
 
-* [Node.js](../../lectures/node-js)
-* [Web Applications in Node.js](../../lectures/web-applications-in-node-js)
-* [npm](../../lectures/npm)
-* [Express Basics](../../lectures/express-basics)
-* [REST API in Express](../../lectures/rest-api-in-express)
-* [SQLite](../../lectures/sqlite)
-* [Using SQLite in Node.js](../../lectures/using-sqlite-in-node-js)
+* [Node.js](../../lectures/node-js/)
+* [Web Applications in Node.js](../../lectures/web-applications-in-node-js/)
+* [npm](../../lectures/npm/)
+* [Express Basics](../../lectures/express-basics/)
+* [REST API in Express](../../lectures/rest-api-in-express/)
+* [SQLite](../../lectures/sqlite/)
+* [Using SQLite in Node.js](../../lectures/using-sqlite-in-node-js/)
 
 ---
 
@@ -236,7 +236,7 @@ Don't forget to describe in your project report how the backend has been impleme
 ## Part 5: Implementing the Frontend
 Before you start working on this part you are expected to view the following lectures:
 
-* [SOP and CORS](../../lectures/sop-and-cors)
+* [SOP and CORS](../../lectures/sop-and-cors/)
 
 ---
 
@@ -407,9 +407,9 @@ try{
 ## Part 6: Adding Login to the REST API
 Before you start working on this part you are expected to view the following lectures:
 
-* [REST API Authorization](../../lectures/rest-api-authorization)
-* [JSON Web Tokens](../../lectures/json-web-tokens)
-* [Third-Party Authentication](../../lectures/third-party-authentication)
+* [REST API Authorization](../../lectures/rest-api-authorization/)
+* [JSON Web Tokens](../../lectures/json-web-tokens/)
+* [Third-Party Authentication](../../lectures/third-party-authentication/)
 
 ---
 
@@ -614,7 +614,7 @@ There are 3 different sessions for the demonstration, and you need to present yo
 Your presentation will not be graded; consider it as (mandatory) practice.
 
 ## Part 10: Grade 4 and 5
-Be sure to read through [Project Grading Guidelines](./project-grading-guidelines) to see that you follow the guidelines for grade you're aiming for. To be able get grade 4 and 5 you also need to implement the extra functionality described next.
+Be sure to read through [Project Grading Guidelines](project-grading-guidelines/) to see that you follow the guidelines for grade you're aiming for. To be able get grade 4 and 5 you also need to implement the extra functionality described next.
 
 ### SDK (required for grade 4)
 Create an SDK other programmers can use to communicate with your backend from their client-side JavaScript code. Then also use it in your own frontend.

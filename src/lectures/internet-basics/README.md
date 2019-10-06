@@ -8,6 +8,10 @@ You have probably heard about and used *the Internet*, but what is it really? An
 
 <iframe width="640" height="360" src="https://www.youtube.com/embed/Mzs5QMy-mT0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Lecture material
+* [internet-basics.pdf](internet-basics.pdf)
+* [internet-basics.pptx](internet-basics.pptx)
+
 ## Recommended reading
 * The following Wikipedia articles gives a good overview of the Internet:
     * [Internet](https://en.wikipedia.org/wiki/Internet)

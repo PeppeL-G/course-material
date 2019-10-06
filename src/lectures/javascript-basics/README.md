@@ -8,6 +8,10 @@ Learn the basics in JavaScript.
 
 <iframe width="560" height="314" src="https://www.youtube.com/embed/Zezsy9FTGjw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Lecture material
+* [javascript-basics.pdf](javascript-basics.pdf)
+* [javascript-basics.pptx](javascript-basics.pptx)
+
 ## Recommended reading
 * [Eloquent JavaScript 3rd edition](http://eloquentjavascript.net/):
     * Chapter 1: Values, Types, and Operators

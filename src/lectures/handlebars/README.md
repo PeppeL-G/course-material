@@ -8,6 +8,10 @@ A templating language used to generate HTML code.
 
 <iframe width="560" height="314" src="https://www.youtube.com/embed/04cXGOZxhAI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Lecture material
+* [handlebars.pdf](handlebars.pdf)
+* [handlebars.pptx](handlebars.pptx)
+
 ## Recommended reading
 * handlebarsjs.com:
     * [Handlebars Expressions](https://handlebarsjs.com/expressions.html)

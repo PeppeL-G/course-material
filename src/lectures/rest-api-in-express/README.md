@@ -8,6 +8,10 @@ Let's take a look at how we can implement REST API:s in Express.
 
 <iframe width="560" height="314" src="https://www.youtube.com/embed/Rv4aye6LiU8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Lecture material
+* [rest-api-in-express.pdf](rest-api-in-express.pdf)
+* [rest-api-in-express.pptx](rest-api-in-express.pptx)
+
 ## Recommended reading
 Recommended reading:
 * *Express in Action: Writing, building, and testing Node.js applications* (the course book, available on JU library online):
