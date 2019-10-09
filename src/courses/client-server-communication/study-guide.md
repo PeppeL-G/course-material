@@ -80,7 +80,7 @@ graph TD
 </Figure>
 
 ## Intended Learning Outcomes
-The intended learning outcomes of the course are found in [the course syllabus](./course-syllabus) in force and are described under the next heading.
+The intended learning outcomes of the course are found in [the course syllabus](course-syllabus/) in force and are described under the next heading.
 
 ## Examination, ILOs and Learning Activities
 
@@ -143,16 +143,16 @@ Demonstrate skills of implementing SPAs using front-end frameworks.
 " />
 
 ### Information to students
-Information about the **Laboratory Work** can be found on the page [Lab Instructions](./lab-instructions). It will teach you how to build a Single-Page Application in Vue.js communicating with a backend using a Software Development Kit.
+Information about the **Laboratory Work** can be found on the page [Lab Instructions](lab-instructions/). It will teach you how to build a Single-Page Application in Vue.js communicating with a backend using a Software Development Kit.
 
-Information about the **Project Work** can be found on the page [Project Instructions](./project-instructions). It's about creating a platform consisting of a frontend application and a backend application communicating using a REST API.
+Information about the **Project Work** can be found on the page [Project Instructions](project-instructions/). It's about creating a platform consisting of a frontend application and a backend application communicating using a REST API.
 
 **Written Examination** is a [Digital Exam](https://ju.se/student/en/digital-exam.html) in Inspera at the end of the course. You need to register for it in advance per the instructions at [https://ju.se/student/en/studies/examination.html](https://ju.se/student/en/studies/examination.html).
 
 ### Conditions for the examined elements
-Conditions for the **Laboratory Work** can be found on the page [Lab Instructions](./lab-instructions).
+Conditions for the **Laboratory Work** can be found on the page [Lab Instructions](lab-instructions/).
 
-Conditions for the **Project Work** can be found on the page [Project Instructions](./project-instructions).
+Conditions for the **Project Work** can be found on the page [Project Instructions](project-instructions/).
 
 No aids allowed are allowed for the **Written Examination**. The computer you write the exam on may only be used to answer the questions on the exam, nothing else.
 
@@ -172,7 +172,7 @@ To receive a final grade on the course you need to pass all examination tests (L
 |---|---|---|---|
 | Written Examination | 40% or max score | 60% of max score | 80% of max score |
 
-The grading criteria for the project work can be found on the page [Project Grading Guidelines](./project-grading-guidelines).
+The grading criteria for the project work can be found on the page [Project Grading Guidelines](project-grading-guidelines/).
 
 ## Course Literature and Other Teaching Aids
 * [Express in Action: Writing, building, and testing Node.js applications](http://proquestcombo.safaribooksonline.com.proxy.library.ju.se/book/programming/javascript/9781617292422) by Evan M. Hahn
@@ -180,4 +180,4 @@ The grading criteria for the project work can be found on the page [Project Grad
 * [Web API Design: Crafting Interfaces that Developers Love](https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf)
 
 ## Time Plan
-A time plan is available on the page [Time Plan](./time-plan).
+A time plan is available on the page [Time Plan](time-plan/).
