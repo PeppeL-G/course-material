@@ -489,7 +489,7 @@ app.get("/some-protected-resource", function(request, response){
     
     try{
         const authorizationHeader = request.get("Authorization") // E.g. "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3VudHJ5IjoiU3dlZGVuIn0.k6rz1VHMIg3YvFpm4JMy78RUnFBUCPQPRoRXa2HlRjs"
-        const accessToken = authorization.substr("Bearer ".length) // E.g. "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3VudHJ5IjoiU3dlZGVuIn0.k6rz1VHMIg3YvFpm4JMy78RUnFBUCPQPRoRXa2HlRjs"
+        const accessToken = authorizationHeader.substr("Bearer ".length) // E.g. "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3VudHJ5IjoiU3dlZGVuIn0.k6rz1VHMIg3YvFpm4JMy78RUnFBUCPQPRoRXa2HlRjs"
         dataInToken = jwt.verify(accessToken, jwtSecret) // E.g. {country: "Sweden"}
     }catch(error){
         // Access token not present or invalid.
