@@ -5,6 +5,7 @@ module.exports = {
 		"",
 		"course-syllabus",
 		"study-guide",
+		"lectures",
 		"exercises",
 		"laboratory-work",
 		"written-examination",
