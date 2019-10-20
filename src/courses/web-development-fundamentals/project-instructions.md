@@ -614,3 +614,5 @@ Submit your project work on Ping Pong for grading. Your source code should be up
 2. `node app.js` (or whatever main file/script that should be executed)
 
 If this does not work you need to submit your work again at the next examination occasion, so double check that this work yourself before you submit your work!
+
+You should also attach the IP address of your Amazon Lightsail server your web application is running on. After the deadline the examiner will visit it once to see that you have deployed it, and then notify that you can take it down.
