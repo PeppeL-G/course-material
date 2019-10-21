@@ -1,21 +1,20 @@
 # Written Examination
-On this page you find information about the examination test *Written Examination*.
+On this page you find information about the examination test `Examination`.
+
+## Number of credits
+The `Examination` test is worth 3 credits. You will primarily prepare for it by completing the Laboratory Work, so you won't spend much time to "prepare for the exam" other than working on the labs.
 
 ## Digital Exam
-The Written Examination is an Inspera exam; a digital exam you write on a school computer. More information about Inspera exams can be found on [the JU page *Digital Exam*](https://ju.se/student/en/digital-exam.html).
+The `Examination` test is an Inspera exam; a digital exam you write on a school computer. More information about Inspera exams can be found on [the JU page *Digital Exam*](https://ju.se/student/en/digital-exam.html).
 
 ## Dates/Re-examinations
-The written examination is offered in:
+The `Examination` test is offered in:
 
 * The exam period in December.
 * The re-exam period in February.
 * The re-exam period in August.
 
 When the date for these periods is approaching you can find more information about location and date on [the JU page *Exam Schedule JTH*](https://ju.se/student/en/studies/examination/exam-schedule-jth.html).
-
-::: warning Note!
-If you fail to pass all three written examination tests you can take the written examination tests offered in the course the next time it runs.
-:::
 
 ## Registration
 As describe on [the JU page *Digital Exam*](https://ju.se/student/en/digital-exam.html) you must register for the Inspera exam before you're allowed to write it.
@@ -29,7 +28,7 @@ You need to register for each written examination you want to attend; if you wan
 :::
 
 ## Permitted aids
-You're not allowed to bring any aids (such as notes or the course book) to the written examination, nor are you allowed to use the computer you write the exam on for anything else but answering the questions on the exam.
+You're **not allowed** to bring any aids (such as notes or the course book) to the `Examination` test, nor are you allowed to use the computer you write the exam on for anything else but answering the questions on the exam.
 
 ## Grades/Marking
 The exam consists of questions worth 30 points in total.

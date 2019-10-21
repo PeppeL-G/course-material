@@ -1,11 +1,11 @@
 ---
-exercise0ShowAfter: 2018-10-24 11:45
-exercise1ShowAfter: 2018-10-25 14:45
-exercise2ShowAfter: 2018-11-01 14:45
-exercise3ShowAfter: 2018-11-08 14:45
-exercise4ShowAfter: 2018-11-15 14:45
-exercise5ShowAfter: 2018-11-22 14:45
-exercise6ShowAfter: 2018-11-29 14:45
+exercise0ShowAfter: 2019-10-25 14:45
+exercise1ShowAfter: 2019-10-25 14:45
+exercise2ShowAfter: 2019-11-01 14:45
+exercise3ShowAfter: 2019-11-08 14:45
+exercise4ShowAfter: 2019-11-15 14:45
+exercise5ShowAfter: 2019-11-22 14:45
+exercise6ShowAfter: 2019-11-29 14:45
 ---
 # Exercises
 On this page you find information about the exercises in the course.
@@ -13,7 +13,7 @@ On this page you find information about the exercises in the course.
 ## Introduction
 The exercises are not part of any examination test and therefore not mandatory to complete. They consist of programming problems that are a bit easier to solve than the labs, so they serve as good practice problems to solve before attempting to solve the labs.
 
-Solutions to the exercises will be presented at the tutorial each week. After each tutorial sample solutions to the problems will be available on the Tutorials page. 
+Solutions to the exercises will be shown on this page after the tutorial each week going through and discussing sample solutions. 
 
 ## Getting started with Python
 This sub-chapter contains instructions to help you get started with writing and running Python code. All software we use in this course should already be installed on the school's computers (but versions might differ). If you use your own computer, you need to install the software on your own computer yourself, as described further down in this sub-chapter.
@@ -93,7 +93,16 @@ The first time Visual Studio Code encounters a Python file, it will suggest you 
 That's it! Now you can write your Python code in files using Visual Studio Code and then click on the green DEBUG button to run it.
 
 ## Exercise 0: Input & output
-In this exercise you will practice on using the following in Python:
+Before you start working on these exercises, you are recommended to watch the following recorded lectures:
+
+* [Introduction to Computers and Programming](../../lectures/introduction-to-computers-and-programming/)
+* [Using Shells](../../lectures/using-shells/)
+* [Python Introduction](../../lectures/python-introduction/)
+* [Python Basics - Part 1](../../lectures/python-basics-part-1/)
+
+---
+
+In these exercises you will practice on using the following in Python:
 
 * Statements
 * Expressions
@@ -324,6 +333,12 @@ The length of the event is: 1:29:45.
 
 
 ## Exercise 1: Loops
+Before you start working on these exercises, you are recommended to watch the following recorded lectures:
+
+* [Python Basics - Part 2](../../lectures/python-basics-part-2/)
+
+---
+
 In this exercise you will practice on using the following in Python:
 
 * For loops
@@ -531,6 +546,13 @@ The solution you end up in for this problem is worse than the solution you got i
 </SampleAnswer>
 
 ## Exercise 2: Functions
+Before you start working on these exercises, you are recommended to watch the following recorded lectures:
+
+* [Python Modules](../../lectures/python-modules/)
+* [Python Functions](../../lectures/python-functions/)
+
+---
+
 In this exercise you will practice on using the following in Python:
 
 * Functions
@@ -727,6 +749,13 @@ In your code, try to avoid repeating the same code multiple times. This basicall
 
 
 ## Exercise 3: Conditions
+Before you start working on these exercises, you are recommended to watch the following recorded lectures:
+
+* [Python Conditions](../../lectures/python-conditions/)
+* [Python Loops](../../lectures/python-loops/)
+
+---
+
 In this exercise you will practice on using the following in Python:
 
 * Conditional statements
@@ -916,6 +945,14 @@ Sample usage:
 
 
 ## Exercise 4: Lists & Dicts
+Before you start working on these exercises, you are recommended to watch the following recorded lectures:
+
+* [Python Strings](../../lectures/python-strings/)
+* [Python Lists](../../lectures/python-lists/)
+* [Python Dicts](../../lectures/python-dicts/)
+
+---
+
 In this exercise you will practice on using the following in Python:
 
 * Strings
@@ -1143,6 +1180,13 @@ friends = [
 </SampleAnswer>
 
 ## Exercise 5: Files
+Before you start working on these exercises, you are recommended to watch the following recorded lectures:
+
+* [Python Modelling](../../lectures/python-modelling/)
+* [Python Data Storage](../../lectures/python-data-storage/)
+
+---
+
 In this exercise you will practice on using the following in Python:
 
 * Files
@@ -1151,7 +1195,7 @@ In this exercise you will practice on using the following in Python:
 * JSON
 
 ### Problem 5.1: Working with files
-The file [numbers.txt](/course-material/introduction-to-script-programming/exercises/numbers.txt) doesn't follow any particular format, but it contains numbers separated by spaces and line breaks. It can look like this:
+The file [numbers.txt](static-files/exercises/numbers.txt) doesn't follow any particular format, but it contains numbers separated by spaces and line breaks. It can look like this:
 
 ```
 1 5 4 3
@@ -1243,6 +1287,13 @@ Enter operation: quit
 
 
 ## Exercise 6: Object-oriented Programming
+Before you start working on these exercises, you are recommended to watch the following recorded lectures:
+
+* [Python Abstraction](../../lectures/python-abstraction/)
+* [Python Object-Oriented Programming](../../lectures/python-object-oriented-programming/)
+
+---
+
 In this exercise you will practice on using the following in Python:
 
 * Classes
@@ -1250,7 +1301,7 @@ In this exercise you will practice on using the following in Python:
 ### Problem 6.1: Using classes
 A class represents something (a ball, a human, a house, a calculator, etc.), and it is the one who creates the class that will do the hard work with implementing the class. The ones who use the class will be able to do that quite easily.
 
-The file [HangmanGame.py](/course-material/introduction-to-script-programming/exercises/HangmanGame.py) contains the class `HangmanGame` that represents [a Hangman game](https://en.wikipedia.org/wiki/Hangman_(game)). One can use that class to implement a program through which the user can play the Hangman game. In our case, the programmer who creates the program will be the one who determines which the correct word is, and the user will then repeatedly guess on the letters in the word. When the user has guessed on letters that are not part of the correct word 9 times, the user loses. The user wins when she has guessed on all the letters part of the correct word.
+The file [HangmanGame.py](static-files/exercises/HangmanGame.py) contains the class `HangmanGame` that represents [a Hangman game](https://en.wikipedia.org/wiki/Hangman_(game)). One can use that class to implement a program through which the user can play the Hangman game. In our case, the programmer who creates the program will be the one who determines which the correct word is, and the user will then repeatedly guess on the letters in the word. When the user has guessed on letters that are not part of the correct word 9 times, the user loses. The user wins when she has guessed on all the letters part of the correct word.
 
 The `HangmanGame` class contains the methods summarized in Table 1 below.
 

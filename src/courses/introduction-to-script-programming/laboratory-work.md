@@ -1,17 +1,29 @@
 # Laboratory Work
-On this page you find information about the examination test *Laboratory Work*.
+On this page you find information about the examination test `Laboratory work`.
 
-## Introduction
-The Laboratory Work should be carried out individually. It consists of 6 different parts called "labs" (Lab 1, Lab 2, ..., Lab 6). Each lab contains a set of programming problems you need to solve. Each solution should be implemented in Python 3, and before you're approved on each lab you also need to orally present your solution and implementation to a teacher at a lab session. You are expected to be able to explain how your solutions (algorithms) work, and how each line of Python code you have written works. The teacher can't approve you on the lab if you can't do that.
+## Number of credits
+The `Laboratory work` is worth 4.5 credits, but you probably need to spend more time than this on completing the labs, because working on the labs will also teach you the things you need to know for the written examination. After you have successfully completed all labs you should not need to study much for the written examination. 
+
+## Description
+The `Laboratory work` should be carried out individually. It consists of 6 different parts called "labs" (Lab 1, Lab 2, ..., Lab 6). You will pass the laboratory work (get grade `G`) when you have completed all 6 labs.
+
+Each lab contains a set of programming problems you need to solve. Each solution should be implemented in Python 3, and before you're approved on each lab you also need to orally present your solution and implementation to a teacher at a lab session. You are expected to be able to explain how your solutions (algorithms) work, and how each line of Python code you have written works. The teacher can't approve you on the lab if you can't do that. 
 
 You are expected to complete one lab each week. No deadlines exist (e.g. presenting Lab 1 four weeks after the course has started is OK), but since you need to present your work at a lab session, the last lab session in the course will in practice function as a deadline.
 
-Re-examination of the laboratory work will be offered at the re-examination periods in February and in August (the same re-examination periods as for the written examination). A special lab session will be booked for these re-examinations periods. If you need to know when the lab session will take place in advance, email the course coordinator.
+## Re-examination
+Re-examination of the `Laboratory work` will be offered at the re-examination periods in February and in August (the same re-examination periods as for the written examination). A special lab session will be booked for these re-examination periods. If you need to know when the lab session will take place in advance, email the course coordinator.
+
+
+
+
+
+
+
 
 ## Lab 1 - Input, output & loops
-
 ::: warning Note!
-Before you attempt solving the programming problems in Lab 1 you are strongly recommended to solve the programming problems in Exercise 0 and Exercise 1.
+Before you attempt solving the programming problems in Lab 1 you are strongly recommended to solve the programming problems in Exercise 0 and Exercise 1 and watch the recorded lectures mentioned there.
 :::
 
 ### Problem 1.1: Computing the sum of 3 numbers
@@ -136,8 +148,11 @@ When the teacher is satisfied with your presentation, upload your Python files t
 
 
 
+
 ## Lab 2 - Functions and Modules
-sdf
+::: warning Note!
+Before you attempt solving the programming problems in Lab 2 you are strongly recommended to solve the programming problems in Exercise 2 and watch the recorded lectures mentioned there.
+:::
 
 ### Problem 2.1: Writing lyrics
 Create a program that prints the lyrics for the song *We wish you a merry Christmas*. It can look as shown in <FigureNumber /> below.
@@ -245,8 +260,20 @@ Sample usage:
 Two for loops (one inside the other) can be used to implement this function. If you're clever you might be able to implement it using only one for loop.
 :::
 
+### Present your work
+Present your work to a teacher at a lab session. Be prepared to explain how your solutions and implementations work, and be prepared to answer any question the teacher might have about your code. It is good to practice this in advance (alone or with a friend).
+
+When the teacher is satisfied with your presentation, upload your Python files to [the assignment Lab 2 on Ping Pong](https://pingpong.hj.se/courseId/21445/content.do?id=16754788). The teacher will then approve you on that assignment.
+
+
+
+
+
+
 ## Lab 3 - Conditions
-sdf
+::: warning Note!
+Before you attempt solving the programming problems in Lab 2 you are strongly recommended to solve the programming problems in Exercise 2 and watch the recorded lectures mentioned there.
+:::
 
 ### Problem 3.1: Absolute value
 Create the function `abs()`, which receives a number as argument and returns the absolute value for that number (the absolute value is the number in its positive form).
@@ -332,13 +359,20 @@ The program finished with 60 stored in memory.
 ```
 </Figure>
 
+### Present your work
+Present your work to a teacher at a lab session. Be prepared to explain how your solutions and implementations work, and be prepared to answer any question the teacher might have about your code. It is good to practice this in advance (alone or with a friend).
+
+When the teacher is satisfied with your presentation, upload your Python files to [the assignment Lab 3 on Ping Pong](https://pingpong.hj.se/courseId/21445/content.do?id=16754792). The teacher will then approve you on that assignment.
+
 
 
 
 
 
 ## Lab 4 - Lists & Dicts
-sdf
+::: warning Note!
+Before you attempt solving the programming problems in Lab 2 you are strongly recommended to solve the programming problems in Exercise 2 and watch the recorded lectures mentioned there.
+:::
 
 ### Problem 4.1: Comparing two lists
 Create the function `are_equal()`, which receives two lists with numbers as arguments and returns `True` if the number at each index in the two lists are equal, otherwise `False`.
@@ -523,8 +557,20 @@ The different allowed formats should be defined in the different IDS in the proj
 </Tab>
 </Tabs>
 
+### Present your work
+Present your work to a teacher at a lab session. Be prepared to explain how your solutions and implementations work, and be prepared to answer any question the teacher might have about your code. It is good to practice this in advance (alone or with a friend).
+
+When the teacher is satisfied with your presentation, upload your Python files to [the assignment Lab 4 on Ping Pong](https://pingpong.hj.se/courseId/21445/content.do?id=16754815). The teacher will then approve you on that assignment.
+
+
+
+
+
+
 ## Lab 5 - Working with files
-sdfd
+::: warning Note!
+Before you attempt solving the programming problems in Lab 2 you are strongly recommended to solve the programming problems in Exercise 2 and watch the recorded lectures mentioned there.
+:::
 
 ### Problem 5.1: Counting things
 Create a file named `text.txt` with the content shown in <FigureNumber /> below. Then write a program that computes and prints:
@@ -742,8 +788,20 @@ Then write a program that computes and prints the total area of the house (the s
 </Tab>
 </Tabs>
 
+### Present your work
+Present your work to a teacher at a lab session. Be prepared to explain how your solutions and implementations work, and be prepared to answer any question the teacher might have about your code. It is good to practice this in advance (alone or with a friend).
+
+When the teacher is satisfied with your presentation, upload your Python files to [the assignment Lab 5 on Ping Pong](https://pingpong.hj.se/courseId/21445/content.do?id=16754819). The teacher will then approve you on that assignment.
+
+
+
+
+
+
 ## Lab 6 - Object-oriented programming
-sdf
+::: warning Note!
+Before you attempt solving the programming problems in Lab 2 you are strongly recommended to solve the programming problems in Exercise 2 and watch the recorded lectures mentioned there.
+:::
 
 ### Problem 6.1: Using the `ConnectFour` class
 In this problem, you should practice on using a class we have created for you. The class is called `ConnectFour`, and it can be used to play the game [Connect Four](https://en.wikipedia.org/wiki/Connect_Four). Instead of red and yellow bricks, we will use `X` and  `O` to represent the different players.
@@ -916,3 +974,7 @@ print("The program finished with "+str(calculator.get_memory_value())+" in memor
 ```
 </Figure>
 
+### Present your work
+Present your work to a teacher at a lab session. Be prepared to explain how your solutions and implementations work, and be prepared to answer any question the teacher might have about your code. It is good to practice this in advance (alone or with a friend).
+
+When the teacher is satisfied with your presentation, upload your Python files to [the assignment Lab 6 on Ping Pong](https://pingpong.hj.se/courseId/21445/content.do?id=16754823). The teacher will then approve you on that assignment.

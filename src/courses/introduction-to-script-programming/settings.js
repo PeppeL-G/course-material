@@ -1,6 +1,6 @@
 module.exports = {
 	name: "Introduction to Script Programming",
-	showLink: false,
+	showLink: true,
 	pages: [
 		"",
 		"course-syllabus",

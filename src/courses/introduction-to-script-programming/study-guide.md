@@ -9,6 +9,16 @@
     ping-pong-password="TSPG17A1943"
 />
 
+## Introduction
+In your daily work it is not uncommon that you find yourself carrying out the same task over and over again. After all, you have been employed for the specific skills you possess, and your employer wants you to make use of them. But in the long run, repeatedly doing the same thing can be quite boring, causing you to lose concentration and start making mistakes, which in turn makes you unproductive and lowering the quality of your work.
+
+A computer is an excellent tool to save you from this. Once programmed, it will not only carry out the tasks for you, but it will do so without complaining, much faster than you can, and with the confidence that the task has been carried out correctly since computers do not do mistakes.
+
+Unfortunately, computers do not operate/think the same way as we humans do, so programming them can be quite tricky. In this course, you will get familiar with how computers work and how to program them using the programming language Python. We will start with the very basics, and at the end of the course, you will be able to program computers on your own.
+
+### Pre-requisites
+This course does not have any special pre-requisites other than basic math and English.
+
 ## Teachers
 <StudyGuideTeachers
     :teachers='[{
@@ -19,94 +29,138 @@
         email: "Peter.Larsson-Green@ju.se",
         phone: "036 - 10 17 35",
         website: "https://ju.se/en/personinfo.html?sign=LarPet"
+    }, {
+        name: "Muhammad Ismail",
+        photo: "muhammad-ismail.jpeg",
+        roles: ["Lecturer"],
+        description: "Currently PhD student at JU.",
+        email: "Muhammad.Ismail@ju.se",
+        phone: "036 - 10 15 92",
+        website: "https://ju.se/en/personinfo.html?sign=IsmMuh"
+    }, {
+        name: "Johannes Schmidt",
+        photo: "johannes-schmidt.jpeg",
+        roles: ["Lab assistant"],
+        description: "Currently assistant professor at JU.",
+        email: "Johannes.Schmidt@ju.se",
+        phone: "036 - 10 15 35",
+        website: "https://ju.se/en/personinfo.html?sign=SCHJOH"
+    }, {
+        name: "Filip Andersson",
+        photo: "filip-andersson.jpeg",
+        roles: ["Lab assistant"],
+        description: "Former bachelor student that studied the program Software Engineering and Mobile Platforms here at JTH. Now master student studying the program AI Engineering.",
+        email: "anfi1622@student.ju.se",
+        phone: "",
+        website: ""
+    }, {
+        name: "Simon Arvidsson",
+        photo: "simon-arvidsson.jpeg",
+        roles: ["Lab assistant"],
+        description: "Former bachelor student that studied the program Software Engineering and Mobile Platforms here at JTH. Now master student studying the program AI Engineering.",
+        email: "arsi1632@student.ju.se",
+        phone: "",
+        website: ""
     }]'
 />
 
-## Introduction
-In this course you will learn ... . <FigureNumber /> below displays an overview of how it works. 
-
-<Figure caption="Overview of what this course is about.">
-<mermaid>
-graph LR
-    you["You"]
-    code("Python Code")
-    computer["Computer"]
-    you -- Write --> code
-    code -- Is executed by --> computer
-</mermaid>
-</Figure>
-
-More specifically you will learn how to ...
-
-### Pre-requisites
-This course does not have any special pre-requisites than basic math and English.
-
 ## Intended Learning Outcomes
-The intended learning outcomes of the course are found in [the course syllabus](course-syllabus/) in force and are described under the next heading.
+The intended learning outcomes of the course are found in [the course syllabus](course-syllabus/) in force. Below is a table showing how the examination tests cover the intended learning outcomes and which teaching activity helping you learn which intended learning outcome. 
 
-## Examination, ILOs and Learning Activities
-
-### Description of the elements that examine the course ILOs, and the corresponding learning activities
 <ILOsActivitiesMapping description="
 
-Display an understanding of the fundamental building blocks of the web (HTTP and HTML).
--Project work
+Display knowledge of how a programming language interacts with the operating system and the underlying hardware.
+-Laboratory work
 -Written examination
-+Recorded lecture: Internet
-+Recorded lecture: Web Applications & HTTP
++Recorded lectures
++Tutorials
++Lab sessions
 
-Display an understanding of common security concerns in web applications.
--Project work
+Display knowledge about integrated development environments and their usage area.
+-Laboratory work
++Recorded lectures
++Tutorials
++Lab sessions
+
+Display knowledge of common terms and concepts in script programming.
+-Laboratory work
 -Written examination
-+Recorded lecture: Authentication & Authorization
-+Recorded lecture: Web Application Vulnerabilities
++Recorded lectures
++Tutorials
++Lab sessions
 
-Display an ability to construct web pages using HTML5, CSS, and CSS frameworks.
--Project work
+Display knowledge of common terms and concepts used in object-oriented programming.
+-Laboratory work
 -Written examination
-+Recorded lecture: HTML
-+Recorded lecture: CSS
-+Recorded lecture: CSS Frameworks
++Recorded lectures
++Tutorials
++Lab sessions
 
-Display an ability to program in JavaScript.
--Project work
+Demonstrate the ability to use common data types and controls structures in a high-level programming language.
+-Laboratory work
 -Written examination
-+Recorded lecture: JavaScript
-+Recorded lecture: Asynchronous Programming
++Recorded lectures
++Tutorials
++Lab sessions
 
-Display an ability to construct web pages using Node.js.
--Project work
+Demonstrate the ability to create interactive console programs in a high-level programming language.
+-Laboratory work
 -Written examination
-+Recorded lecture: Node.js
-+Recorded lecture: Introduction to Express
-+Recorded lecture: Web Applications in Express
++Recorded lectures
++Tutorials
++Lab sessions
 
-Display an ability to construct database-backed web applications.
--Project work
+Demonstrate the ability to develop and implement simple programs and algorithms in a high-level programming language.
+-Laboratory work
 -Written examination
-+Recorded lecture: Using SQLite in Node.js
++Recorded lectures
++Tutorials
++Lab sessions
 
+Demonstrate the ability to use object-oriented programming in a high-level programming language.
+-Laboratory work
+-Written examination
++Recorded lectures
++Tutorials
++Lab sessions
+
+Demonstrate the ability to use script programming to create, read and modify files of different types in a high-level programming language.
+-Laboratory work
+-Written examination
++Recorded lectures
++Tutorials
++Lab sessions
 " />
 
-### Information to students
-Information about the **Project Work** can be found on the page [Project Instructions](project-instructions/). It's about a website you should create throughout the course.
+## Learning Activities
+Here are short introduction to the learning activities offered in the course.
 
-**Written Examination** is a [Digital Exam](https://ju.se/student/en/digital-exam.html) in Inspera at the end of the course. You need to register for it in advance per the instructions at [https://ju.se/student/en/studies/examination.html](https://ju.se/student/en/studies/examination.html).
+### Recorded Lectures
+In the beginning of each week you will be encouraged to view some recorded lectures. These will be quite theoretical and will teach new you things you can use in programming.
 
-### Conditions for the examined elements
-Conditions for the **Project Work** can be found on the page [Project Instructions](project-instructions/).
+### Tutorials
+In the beginning of each week you will also be encouraged to complete some optional exercises. This is for you to practice on using the theory you learned in the recorded lecture. At the end of each week there will be a tutorial where the teacher will show you and discuss sample answers to the exercises.
 
-No aids allowed are allowed for the **Written Examination**. The computer you write the exam on may only be used to answer the questions on the exam, nothing else.
+### Lab Sessions
+Each week you may attend a 4 hours long lab session. At the lab session you may ask the teacher there for help with your laboratory work or the exercises. When you have completed your laboratory work you should also demonstrate your solution to a teacher at a lab sessions.
 
-### Re-examination of this course
-Re-examination for the **Written Examination** is offered in the re-exam periods in January and August.
+There are 4 different lab sessions each week, but you may only come to one. To distribute you, [join one of the lab session groups on Ping Pong](https://pingpong.hj.se/courseId/21445/projectGroupsList.do). First come, first served. 
 
-Re-examination for the **Project Work** is offered in the re-exam periods in January and August. If you need to know a precise date and time in advance, contact the course coordinator. The project work will only be graded 3/U (U=fail) at re-examination.
+## Examination Tests
+The course contains the two examination tests `Examination` and `Laboratory work`. To receive a final grade on the course you need to pass both examination tests. The final grade will be based on the grade for the `Examination` test.
 
-If you haven't passed some examination tests after the three examination opportunities (ordinary + 2 re-exam) you need to re-take those tests the next time the course run. Note that the instructions for those tests might have changed the next time the course run.
+### Examination
+More information about the `Examination` test can be found on the page [Written Examination](written-examination/).
 
-## Grading criteria
-To receive a final grade on the course you need to pass both examination tests (Laboratory Work + Written Examination). The final grade will be based on the grade from the Written Examination. 
+### Laboratory work
+More information about the `Laboratory work` test can be found on the page [Laboratory Work](laboratory-work/).
+
+### Re-examination 
+Re-examination for the tests is offered at the re-exam periods in January and August. If there are some examination tests you haven't passed after that, you can re-take those tests the next time the course run.
+
+::: warning Note!
+The examination tests might have changed a little bit the next time the course run, and if you take some of them then, then you will take them according to the new description of the tests. You don't need to re-take a test you have previously passed.
+:::
 
 ## Course Literature and Other Teaching Aids
 * [How to Think Like a Computer Scientist: Learning with Python](https://runestone.academy/runestone/books/published/thinkcspy/index.html) by Allen Downey, Jeffrey Elkner and Chris Meyers
