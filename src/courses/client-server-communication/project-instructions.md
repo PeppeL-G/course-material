@@ -633,6 +633,29 @@ Try to [find a suitable npm package](https://www.npmjs.com/) doing most of the w
 
 Also update your report to reflect this.
 
+#### Guidelines parsing the body of incoming HTTP request
+Each time you receive an HTTP request with a body, check the `Content-Type` of the incoming HTTP request. If the content type is `application/yaml`, then the resource in the body of the request has been written in YAML format. Then you need to read the body of the quest into a string, and then parse it as YAML code, then you have your resource as a JavaScript object. How to read the body into a strings is described in the lecture [Web Applications in Node.js](../../lectures/web-applications-in-node-js/). Find an npm package you can use to do the parsing of YAML code for you.
+
+::: tip Tips!
+You need to do this for all incoming HTTP requests with a body, so the best way to implement it is as a middleware function. In your middleware function, after you have obtained the resource from the body as a JavaScript object, assign it to `request.body` so your ordinary request handler functions in `app.post(...)` and `app.put(...)` can obtain the resource through `request.body`.
+:::
+
+#### Sending back responses in correct data format
+You can't always call `response.json(theResource)` to send back the resource. You should only use `response.json(...)` if the `Accept` header in the request is `application/json`. If the `Accept` header instead is `application/yaml`, you should send it back in YAML format. To convert the resource to a string with YAML code, use a suitable npm package. To send back the string with the YAML code, use `response.end("THE YAML CODE")`.
+
+::: tip Tips!
+You need to do this for all outgoing HTTP responses with a body, so the best way to implement it is as a function doing something like this:
+```js
+if(/* Accept header in request is application/json */){
+    // Send back the resource in JSON format.
+}else if(/* Accept header in request is application/yaml */){
+    // Send back the resource in YAML format.
+}else{
+    // Send back the resource in your chosen default format.
+}
+```
+:::
+
 ### Third-Party Authentication (required for grade 5)
 Add third-party authentication to your application so users can login on your platform with their Google account (or whichever third-party you choose to use) instead of using a username and password. You need to implement this in your backend application and then use it in your frontend application as well.
 
