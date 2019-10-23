@@ -272,7 +272,7 @@ When the teacher is satisfied with your presentation, upload your Python files t
 
 ## Lab 3 - Conditions
 ::: warning Note!
-Before you attempt solving the programming problems in Lab 2 you are strongly recommended to solve the programming problems in Exercise 2 and watch the recorded lectures mentioned there.
+Before you attempt solving the programming problems in Lab 3 you are strongly recommended to solve the programming problems in Exercise 3 and watch the recorded lectures mentioned there.
 :::
 
 ### Problem 3.1: Absolute value
@@ -371,7 +371,7 @@ When the teacher is satisfied with your presentation, upload your Python files t
 
 ## Lab 4 - Lists & Dicts
 ::: warning Note!
-Before you attempt solving the programming problems in Lab 2 you are strongly recommended to solve the programming problems in Exercise 2 and watch the recorded lectures mentioned there.
+Before you attempt solving the programming problems in Lab 4 you are strongly recommended to solve the programming problems in Exercise 4 and watch the recorded lectures mentioned there.
 :::
 
 ### Problem 4.1: Comparing two lists
@@ -569,7 +569,7 @@ When the teacher is satisfied with your presentation, upload your Python files t
 
 ## Lab 5 - Working with files
 ::: warning Note!
-Before you attempt solving the programming problems in Lab 2 you are strongly recommended to solve the programming problems in Exercise 2 and watch the recorded lectures mentioned there.
+Before you attempt solving the programming problems in Lab 5 you are strongly recommended to solve the programming problems in Exercise 5 and watch the recorded lectures mentioned there.
 :::
 
 ### Problem 5.1: Counting things
@@ -800,7 +800,7 @@ When the teacher is satisfied with your presentation, upload your Python files t
 
 ## Lab 6 - Object-oriented programming
 ::: warning Note!
-Before you attempt solving the programming problems in Lab 2 you are strongly recommended to solve the programming problems in Exercise 2 and watch the recorded lectures mentioned there.
+Before you attempt solving the programming problems in Lab 6 you are strongly recommended to solve the programming problems in Exercise 6 and watch the recorded lectures mentioned there.
 :::
 
 ### Problem 6.1: Using the `ConnectFour` class

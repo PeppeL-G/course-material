@@ -38,13 +38,13 @@ This course does not have any special pre-requisites other than basic math and E
         phone: "036 - 10 15 92",
         website: "https://ju.se/en/personinfo.html?sign=IsmMuh"
     }, {
-        name: "Johannes Schmidt",
-        photo: "johannes-schmidt.jpeg",
+        name: "Makail Ismail Ahmed",
+        photo: "makail-ismail-ahmed.jpeg",
         roles: ["Lab assistant"],
-        description: "Currently assistant professor at JU.",
-        email: "Johannes.Schmidt@ju.se",
-        phone: "036 - 10 15 35",
-        website: "https://ju.se/en/personinfo.html?sign=SCHJOH"
+        description: "Third-year student in the bachelor student Embedded Systems.",
+        email: "isma1660@student.ju.se",
+        phone: "",
+        website: ""
     }, {
         name: "Filip Andersson",
         photo: "filip-andersson.jpeg",
@@ -156,7 +156,7 @@ More information about the `Examination` test can be found on the page [Written 
 More information about the `Laboratory work` test can be found on the page [Laboratory Work](laboratory-work/).
 
 ### Re-examination 
-Re-examination for the tests is offered at the re-exam periods in January and August. If there are some examination tests you haven't passed after that, you can re-take those tests the next time the course run.
+Re-examination for the tests is offered at the re-exam periods in ~~January~~ February and August. If there are some examination tests you haven't passed after that, you can re-take those tests the next time the course run.
 
 ::: warning Note!
 The examination tests might have changed a little bit the next time the course run, and if you take some of them then, then you will take them according to the new description of the tests. You don't need to re-take a test you have previously passed.
