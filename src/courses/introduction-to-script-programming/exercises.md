@@ -412,7 +412,22 @@ The circumference of a circle with radius 5 is 31.4.
 <SampleAnswer :showAfter="$frontmatter.exercise1ShowAfter">
 
 ```python
-...
+print("This program computes the circumference of circles.")
+
+pi = 3.14
+
+radius = float(input("Enter the radius of the circle: "))
+circumference = 2*radius*pi
+print("The circumference of a circle with radius "+str(radius)+" is "+str(circumference)+".")
+
+radius = float(input("Enter the radius of the circle: "))
+circumference = 2*radius*pi
+print("The circumference of a circle with radius "+str(radius)+" is "+str(circumference)+".")
+
+radius = float(input("Enter the radius of the circle: "))
+circumference = 2*radius*pi
+print("The circumference of a circle with radius "+str(radius)+" is "+str(circumference)+".")
+
 ```
 </SampleAnswer>
 
@@ -431,7 +446,14 @@ When you're done, your program should function the same way as before (as descri
 <SampleAnswer :showAfter="$frontmatter.exercise1ShowAfter">
 
 ```python
-...
+print("This program computes the circumference of circles.")
+
+pi = 3.14
+
+for whatever in ["three", "random", "values"]:
+    radius = float(input("Enter the radius of the circle: "))
+    circumference = 2*radius*pi
+    print("The circumference of a circle with radius "+str(radius)+" is "+str(circumference)+".")
 ```
 </SampleAnswer>
 
@@ -475,7 +497,16 @@ Sample usage of the `range()` function:
 <SampleAnswer :showAfter="$frontmatter.exercise1ShowAfter">
 
 ```python
-...
+print("This program computes the circumference of circles.")
+
+pi = 3.14
+
+number_of_circumferences = int(input("Enter the number of circumferences you want to compute: "))
+
+for whatever in range(number_of_circumferences):
+    radius = float(input("Enter the radius of the circle: "))
+    circumference = 2*radius*pi
+    print("The circumference of a circle with radius "+str(radius)+" is "+str(circumference)+".")
 ```
 </SampleAnswer>
 
@@ -504,7 +535,26 @@ The sum of the integers between 0 and 15 is 120.
 <SampleAnswer :showAfter="$frontmatter.exercise1ShowAfter">
 
 ```python
-...
+print("This program computes the sum of the integers between 0 and 15.")
+
+sum = 0
+sum = sum + 1
+sum = sum + 2
+sum = sum + 3
+sum = sum + 4
+sum = sum + 5
+sum = sum + 6
+sum = sum + 7
+sum = sum + 8
+sum = sum + 9
+sum = sum + 10
+sum = sum + 11
+sum = sum + 12
+sum = sum + 13
+sum = sum + 14
+sum = sum + 15
+
+print("The sum of the integers between 0 and 15 is "+str(sum)+".")
 ```
 </SampleAnswer>
 
@@ -521,7 +571,16 @@ Where `x` is an integer between 0 and 15. Instead of having this statement repea
 <SampleAnswer :showAfter="$frontmatter.exercise1ShowAfter">
 
 ```python
-...
+print("This program computes the sum of the integers between 0 and 15.")
+
+last_term = 15
+
+sum = 0
+
+for i in range(last_term + 1):
+    sum = sum + i
+
+print("The sum of the integers between 0 and "+str(last_term)+" is "+str(sum)+".")
 ```
 </SampleAnswer>
 
@@ -548,7 +607,17 @@ You don't need to have any error handling; you can expect the user to actually e
 <SampleAnswer :showAfter="$frontmatter.exercise1ShowAfter">
 
 ```python
-...
+print("This program computes the sum of the integers between two integers.")
+
+first_term = int(input("Enter the first integer: "))
+last_term = int(input("Enter the last integer: "))
+
+sum = 0
+
+for i in range(last_term + 1):
+    sum = sum + i
+
+print("The sum of the integers between "+str(first_term)+" and "+str(last_term)+" is "+str(sum)+".")
 ```
 </SampleAnswer>
 
@@ -573,7 +642,21 @@ Sample usage of the `range()` function:
 <SampleAnswer :showAfter="$frontmatter.exercise1ShowAfter">
 
 ```python
-...
+
+print("This program computes the sum of the integers between two integers.")
+
+first_term = int(input("Enter the first integer: "))
+last_term = int(input("Enter the last integer: "))
+
+sum = 0
+
+for i in range(last_term + 1):
+    sum = sum + i
+
+for i in range(first_term):
+    sum = sum - i
+
+print("The sum of the integers between "+str(first_term)+" and "+str(last_term)+" is "+str(sum)+".")
 ```
 </SampleAnswer>
 
