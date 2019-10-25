@@ -642,7 +642,6 @@ Sample usage of the `range()` function:
 <SampleAnswer :showAfter="$frontmatter.exercise1ShowAfter">
 
 ```python
-
 print("This program computes the sum of the integers between two integers.")
 
 first_term = int(input("Enter the first integer: "))
@@ -650,11 +649,8 @@ last_term = int(input("Enter the last integer: "))
 
 sum = 0
 
-for i in range(last_term + 1):
+for i in range(first_term, last_term + 1):
     sum = sum + i
-
-for i in range(first_term):
-    sum = sum - i
 
 print("The sum of the integers between "+str(first_term)+" and "+str(last_term)+" is "+str(sum)+".")
 ```
@@ -671,7 +667,20 @@ The solution you end up in for this problem is worse than the solution you got i
 <SampleAnswer :showAfter="$frontmatter.exercise1ShowAfter">
 
 ```python
-...
+print("This program computes the sum of the integers between two integers.")
+
+first_term = int(input("Enter the first integer: "))
+last_term = int(input("Enter the last integer: "))
+
+sum = 0
+
+for i in range(last_term + 1):
+    sum = sum + i
+
+for i in range(first_term):
+    sum = sum - i
+
+print("The sum of the integers between "+str(first_term)+" and "+str(last_term)+" is "+str(sum)+".")
 ```
 </SampleAnswer>
 
