@@ -607,10 +607,9 @@ You don't need to have any error handling; you can expect the user to actually e
 <SampleAnswer :showAfter="$frontmatter.exercise1ShowAfter">
 
 ```python
-print("This program computes the sum of the integers between two integers.")
+print("This program computes the sum of the integers between 0 and another integer.")
 
-first_term = int(input("Enter the first integer: "))
-last_term = int(input("Enter the last integer: "))
+last_term = int(input("Enter the other integer: "))
 
 sum = 0
 
@@ -710,7 +709,14 @@ The curios ones can learn more about the `math` module in the documentation at [
 <SampleAnswer :showAfter="$frontmatter.exercise2ShowAfter">
 
 ```python
-...
+import math
+
+print("This program computes the circumference of circles.")
+
+for whatever in ["three", "random", "values"]:
+    radius = float(input("Enter the radius of the circle: "))
+    circumference = 2*radius*math.pi
+    print("The circumference of a circle with radius "+str(radius)+" is "+str(circumference)+".")
 ```
 </SampleAnswer>
 
@@ -729,18 +735,30 @@ The curios ones can learn more about the `random` module in the documentation at
 <SampleAnswer :showAfter="$frontmatter.exercise2ShowAfter">
 
 ```python
-...
+import random
+
+hour = random.randint(0, 23)
+minute = random.randint(0, 59)
+second = random.randint(0, 59)
+
+print(str(hour)+":"+str(minute)+":"+str(second))
 ```
 </SampleAnswer>
 
 ### Problem 2.3: Many random integers
-Create a program that first asks the user to enter a positive integer. Your program should then display that many random numbers between 0 and 99. If the user enters the integer 3, your program might for example display the numbers 55, 27 and 81.
+Create a program that first asks the user to enter a positive integer. Your program should then display that many random numbers between `0` and `99`. If the user enters the integer `3`, your program might for example display the numbers `55`, `27` and `81`.
 
 #### Sample answer
 <SampleAnswer :showAfter="$frontmatter.exercise2ShowAfter">
 
 ```python
-...
+import random
+
+number_of_random_numbers = int(input("Enter number of random numbers: "))
+
+for i in range(number_of_random_numbers):
+    random_number = random.randint(0, 99)
+    print(random_number)
 ```
 </SampleAnswer>
 
@@ -748,14 +766,21 @@ Create a program that first asks the user to enter a positive integer. Your prog
 The `os` module contains the function `listdir()` which returns back a list with the names of files and folders in the folder you pass to it (the path). Your task is to create a program that asks the user to enter an absolute path to a folder (e.g. `C:\Users\alice\projects`), and then your program should display the names of all the files and folders in that folder.
 
 ::: tip Learn more
-The curios ones can learn more about the `random` module in the documentation at [https://docs.python.org/3/library/os.html](https://docs.python.org/3/library/os.html).
+The curios ones can learn more about the `os` module in the documentation at [https://docs.python.org/3/library/os.html](https://docs.python.org/3/library/os.html).
 :::
 
 #### Sample answer
 <SampleAnswer :showAfter="$frontmatter.exercise2ShowAfter">
 
 ```python
-...
+import os
+
+path_to_folder = input("Enter path: ")
+
+entries = os.listdir(path_to_folder)
+
+for entry in entries:
+    print(entry)
 ```
 </SampleAnswer>
 
@@ -800,7 +825,7 @@ With these tests we don't need to run an entire program where the user should en
 
 In Problem 2.1 you created a program users can use to compute the circumference of circles. Change the implementation of the program to use a function to compute the circumference of a circle given its radius. Your function can look something like the one shown in <FigureNumber /> below.
 
-<Figure caption="Code testing if the average() function works as it should.">
+<Figure caption="Code for the get_circle_circumference() function.">
 ```python
 def get_circle_circumference(radius):
     return # ...
@@ -811,7 +836,17 @@ def get_circle_circumference(radius):
 <SampleAnswer :showAfter="$frontmatter.exercise2ShowAfter">
 
 ```python
-...
+import math
+
+print("This program computes the circumference of circles.")
+
+def get_circle_circumference(radius):
+    return 2*radius*math.pi
+
+for whatever in ["three", "random", "values"]:
+    radius = float(input("Enter the radius of the circle: "))
+    circumference = get_circle_circumference(radius)
+    print("The circumference of a circle with radius "+str(radius)+" is "+str(circumference)+".")
 ```
 </SampleAnswer>
 
@@ -832,17 +867,26 @@ Call your `four_to_the_power_of()` function in your main program and verify that
 <SampleAnswer :showAfter="$frontmatter.exercise2ShowAfter">
 
 ```python
-...
+def four_to_the_power_of(exponent):
+    res = 1
+    for i in range(exponent):
+        res = res * 4
+    return res
+
+print(four_to_the_power_of(0) == 1)
+print(four_to_the_power_of(1) == 4)
+print(four_to_the_power_of(2) == 4*4)
+print(four_to_the_power_of(3) == 4*4*4)
 ```
 </SampleAnswer>
 
 ### Problem 2.7: Computing sums
 Create a program that computes the sum of the following sums:
 
-* The sum of the integers between 0 and 10 (including both 0 and 10).
-* The sum of the integers between 5 and 20 (including both 5 and 20.
-* The sum of the integers between 3 and 14 (including both 3 and 14).
-* The sum of the integers 4, 20, 6, 12, 45 and 62.
+* The sum of the integers between `0` and `10` (including both `0` and `10`).
+* The sum of the integers between `5` and `20` (including both `5` and `20`.
+* The sum of the integers between `3` and `14` (including both `3` and `14`).
+* The sum of the integers `4`, `20`, `6`, `12`, `45` and `62`.
 
 In your code, try to avoid repeating the same code three times. This basically means that you need to create a function that computes the sum of a sequence of integers.
 
@@ -850,27 +894,30 @@ In your code, try to avoid repeating the same code three times. This basically m
 <SampleAnswer :showAfter="$frontmatter.exercise2ShowAfter">
 
 ```python
-...
+def sum(numbers):
+    sum = 0
+    for number in numbers:
+        sum = sum + number
+    return sum
+
+sums = [
+    sum(range(0, 11)),
+    sum(range(5, 21)),
+    sum(range(3, 15)),
+    sum([4, 20, 6, 12, 45, 62])
+]
+
+print(sum(sums))
 ```
 </SampleAnswer>
 
 ### Problem 2.8: Computing other sums
 Create a program that computes the sum of the following sums:
 
-* The sum of the even integers between 4 and 10 (including both 4 and 10).
-* The sum of the even integers between 20 and 30 (including both 20 and 30).
-* The sum of the odd integers between 7 and 21 (including both 7 and 21).
-* The sum of the odd integers between 31 and 59 (including both 31 and 59).
-
-In your code, try to avoid repeating the same code multiple times. This basically means that you need to use a function.
-
-### Problem 2.9: Computing fun sums
-Create a program that computes the sum of the following sums:
-
-* The sum of the integers between 4 and 10 (including both 4 and 10).
-* The sum of every second integer between 4 and 10 (4+6+8+10).
-* The sum of every third integers between 4 and 10 (4+7+10).
-* The sum of every fourth integer between 4 and 10 (4+8).
+* The sum of the even integers between `4` and `10` (including both `4` and `10`).
+* The sum of the even integers between `20` and `30` (including both `20` and `30`).
+* The sum of the odd integers between `7` and `21` (including both `7` and `21`).
+* The sum of the odd integers between `31` and `59` (including both `31` and `59`).
 
 In your code, try to avoid repeating the same code multiple times. This basically means that you need to use a function.
 
@@ -878,7 +925,49 @@ In your code, try to avoid repeating the same code multiple times. This basicall
 <SampleAnswer :showAfter="$frontmatter.exercise2ShowAfter">
 
 ```python
-...
+def sum(numbers):
+    sum = 0
+    for number in numbers:
+        sum = sum + number
+    return sum
+
+sums = [
+    sum(range(4, 11, 2)),
+    sum(range(20, 31, 2)),
+    sum(range(7, 22, 2)),
+    sum(range(31, 60, 2))
+]
+
+print(sum(sums))
+```
+</SampleAnswer>
+
+### Problem 2.9: Computing fun sums
+Create a program that computes the sum of the following sums:
+
+* The sum of the integers between `4` and `10` (including both `4` and `10`).
+* The sum of every second integer between `4` and `10` (`4`+`6`+`8`+`10`).
+* The sum of every third integers between `4` and `10` (`4`+`7`+`10`).
+* The sum of every fourth integer between `4` and `10` (`4`+`8`).
+
+In your code, try to avoid repeating the same code multiple times. This basically means that you need to use a function.
+
+#### Sample answer
+<SampleAnswer :showAfter="$frontmatter.exercise2ShowAfter">
+
+```python
+def sum(numbers):
+    sum = 0
+    for number in numbers:
+        sum = sum + number
+    return sum
+
+total_sum = 0
+
+for i in range(1, 5):
+    total_sum = total_sum + sum(range(1, 11, i))
+
+print(total_sum)
 ```
 </SampleAnswer>
 
@@ -916,7 +1005,22 @@ Enter the second number: 5
 <SampleAnswer :showAfter="$frontmatter.exercise3ShowAfter">
 
 ```python
-...
+def smallest(number_a, number_b):
+    if number_a < number_b:
+        return number_a
+    else:
+        return number_b
+
+def greatest(number_a, number_b):
+    if number_a < number_b:
+        return number_b
+    else:
+        return number_a
+
+first_number = int(input("Enter the first number: "))
+second_number = int(input("Enter the second number: "))
+print(str(smallest(first_number, second_number))+" is the smallest.")
+print(str(greatest(first_number, second_number))+" is the greatest.")
 ```
 </SampleAnswer>
 
@@ -937,7 +1041,35 @@ Enter the third number: 12
 <SampleAnswer :showAfter="$frontmatter.exercise3ShowAfter">
 
 ```python
-...
+def smallest(number_a, number_b):
+    if number_a < number_b:
+        return number_a
+    else:
+        return number_b
+
+def greatest(number_a, number_b):
+    if number_a < number_b:
+        return number_b
+    else:
+        return number_a
+
+first_number = int(input("Enter the first number: "))
+second_number = int(input("Enter the second number: "))
+third_number = int(input("Enter the third number: "))
+
+smallest_number = smallest(first_number, second_number)
+smallest_number = smallest(smallest_number, third_number)
+
+greatest_number = greatest(
+    first_number,
+    greatest(
+        second_number,
+        third_number
+    )
+)
+
+print(str(smallest_number)+" is the smallest.")
+print(str(greatest_number)+" is the greatest.")
 ```
 </SampleAnswer>
 
@@ -958,7 +1090,20 @@ The sum of the integers is 26.
 <SampleAnswer :showAfter="$frontmatter.exercise3ShowAfter">
 
 ```python
-...
+sum = 0
+
+entered_text = ""
+
+while entered_text != "quit":
+    
+    entered_text = input("Enter an integer or quit: ")
+    
+    if entered_text != "quit":
+        
+        entered_number = int(entered_text)
+        sum = sum + entered_number
+
+print("The sum of the integers is "+str(sum)+".")
 ```
 </SampleAnswer>
 
@@ -979,7 +1124,21 @@ Enter an integer or quit: quit
 <SampleAnswer :showAfter="$frontmatter.exercise3ShowAfter">
 
 ```python
-...
+greatest_number = 0
+
+entered_text = ""
+
+while entered_text != "quit":
+    
+    entered_text = input("Enter an integer or quit: ")
+    
+    if entered_text != "quit":
+        
+        entered_number = int(entered_text)
+        if greatest_number < entered_number:
+            greatest_number = entered_number
+
+print(str(greatest_number)+" is the greatest.")
 ```
 </SampleAnswer>
 
@@ -1011,7 +1170,32 @@ Extra features you can implement:
 <SampleAnswer :showAfter="$frontmatter.exercise3ShowAfter">
 
 ```python
-...
+import random
+
+multiplication_table = int(input("Enter multiplication table: "))
+
+first_number = 1
+last_number = 10
+number_of_questions = last_number - first_number + 1
+
+numbers = list(range(first_number, last_number+1))
+random.shuffle(numbers)
+
+number_of_correct_answers = 0
+
+for number in numbers:
+    user_answer = int(input("Enter the product of "+str(multiplication_table)+"*"+str(number)+": "))
+    correct_answer = multiplication_table * number
+    if user_answer == correct_answer:
+        print("Correct")
+        number_of_correct_answers = number_of_correct_answers + 1
+    else:
+        print("Wrong. The correct answer is "+str(correct_answer)+".")
+
+if number_of_correct_answers == number_of_questions:
+    print("Good job, all correct!")
+else:
+    print("You got "+str(number_of_correct_answers)+" of "+str(number_of_questions)+" right.")
 ```
 </SampleAnswer>
 
@@ -1042,12 +1226,33 @@ Come up with an algorithm (which numbers to guess on) to complete the game in as
 <SampleAnswer :showAfter="$frontmatter.exercise3ShowAfter">
 
 ```python
-...
+import random
+
+first_number = 0
+last_number = 100
+
+correct_number = random.randint(first_number, last_number)
+guessed_number = -1
+number_of_guesses = 0
+
+print("Guess which number between "+str(first_number)+" and "+str(last_number)+" I'm thinking about!")
+
+while guessed_number != correct_number:
+    
+    guessed_number = int(input("Enter your guess: "))
+    number_of_guesses = number_of_guesses + 1
+    
+    if guessed_number < correct_number:
+        print("Too low!")
+    elif correct_number < guessed_number:
+        print("Too high!")
+
+print("Correct! It took you "+str(number_of_guesses)+" guesses to find the right number.")
 ```
 </SampleAnswer>
 
 ### Problem 3.7: Looking for values
-Create the function `is_in_sequence()`, which receives a sequence with numbers (e.g. a list) and another number as arguments, and returns `True` if that other number is in the list, otherwise `False`.
+Create the function `is_in_sequence()`, which receives a sequence with numbers (e.g. a list) and another number as arguments, and returns `True` if that other number is in the sequence, otherwise `False`.
 
 Sample usage:
 
@@ -1059,7 +1264,11 @@ Sample usage:
 <SampleAnswer :showAfter="$frontmatter.exercise3ShowAfter">
 
 ```python
-...
+def is_in_sequence(sequence, looking_for):
+    for value in sequence:
+        if value == looking_for:
+            return True
+    return False
 ```
 </SampleAnswer>
 
@@ -1075,7 +1284,12 @@ Sample usage:
 <SampleAnswer :showAfter="$frontmatter.exercise3ShowAfter">
 
 ```python
-...
+def greatest(numbers):
+    greatest_number = 0
+    for number in numbers:
+        if greatest_number < number:
+            greatest_number = number
+    return number
 ```
 </SampleAnswer>
 
@@ -1110,7 +1324,15 @@ Sample usage:
 <SampleAnswer :showAfter="$frontmatter.exercise4ShowAfter">
 
 ```python
-...
+def merge(list_1, list_2, list_3):
+    merged_list = []
+    for value in list_1:
+        merged_list.append(value)
+    for value in list_2:
+        merged_list.append(value)
+    for value in list_3:
+        merged_list.append(value)
+    return merged_list
 ```
 </SampleAnswer>
 
@@ -1126,7 +1348,12 @@ Sample usage:
 <SampleAnswer :showAfter="$frontmatter.exercise4ShowAfter">
 
 ```python
-...
+def compute_sums(list_1, list_2):
+    sums = []
+    indexes = range(len(list_1))
+    for index in indexes:
+        sums.append(list_1[index] + list_2[index])
+    return sums
 ```
 </SampleAnswer>
 
@@ -1158,7 +1385,25 @@ Use the `in` operator in a conditional statement to check if the word you should
 <SampleAnswer :showAfter="$frontmatter.exercise4ShowAfter">
 
 ```python
-...
+words = {
+    "noll": "zero",
+    "ett": "one",
+    "två": "two",
+    "tre": "three",
+    "fyra": "four",
+    "fem": "five",
+    "sex": "six",
+    "sju": "seven",
+    "åtta": "eight",
+    "nio": "nine"
+}
+
+def translate(swedish_name):
+    if swedish_name in words:
+        english_name = words[swedish_name]
+        return english_name
+    else:
+        return "unknown"
 ```
 </SampleAnswer>
 
@@ -1179,7 +1424,11 @@ Iterate through all the keys in the dict, and for each key, retrieve its value a
 <SampleAnswer :showAfter="$frontmatter.exercise4ShowAfter">
 
 ```python
-...
+def sum(a_dict):
+    sum = 0
+    for key in a_dict:
+      sum = sum + a_dict[key]
+    return sum
 ```
 </SampleAnswer>
 
@@ -1188,7 +1437,7 @@ Create the function `get_sum()`, which receives two dicts as arguments (they bot
 
 Sample usage:
 
-* `get_sum({"a": 1, "b": 5}, {"a": 2, "b": 6})` → `{"a": 3, "b"}`
+* `get_sum({"a": 1, "b": 5}, {"a": 2, "b": 6})` → `{"a": 3, "b": 11}`
 * `get_sum({"number_of_students": 5}, {"number_of_students": 2})` → `{"number_of_students": 7}`
 
 ::: tip Tips!
@@ -1199,7 +1448,11 @@ Iterate through all the keys in one of the dictionary, and then retrieve the num
 <SampleAnswer :showAfter="$frontmatter.exercise4ShowAfter">
 
 ```python
-...
+def get_sum(dict_1, dict_2):
+    sums = {}
+    for key in dict_1:
+      sums[key] = dict_1[key] + dict_2[key]
+    return sums
 ```
 </SampleAnswer>
 
@@ -1211,7 +1464,7 @@ Sample usage:
 * `group_words(["a", "b", "ab"])` → `{1: ["a", "b"], 2: ["ab"]}`
 * `group_words(["a", "bc", "def"])` → `{1: ["a"], 2: ["ab"], 3: "def"}`
 * `group_words(["a", "b", "c"])` → `{1: ["a", "b", "c"]`
-* `group_words([])` → ???`(you figure it out)
+* `group_words([])` → `???`(you figure it out)
 
 ::: tip Tips!
 Start by iterating through all the strings in the list you receive, and create the dictionary with all the keys and empty lists. Then iterate through the list of strings you receive again, and add each string to its corresponding list.
@@ -1221,7 +1474,14 @@ Start by iterating through all the strings in the list you receive, and create t
 <SampleAnswer :showAfter="$frontmatter.exercise4ShowAfter">
 
 ```python
-...
+def group_words(words):
+    groups = {}
+    for word in words:
+      word_length = len(word)
+      if word_length not in groups:
+        groups[word_length] = []
+      groups[word_length].append(word)
+    return groups
 ```
 </SampleAnswer>
 
@@ -1267,7 +1527,25 @@ friends = ["Alice", "Bob"]
 <SampleAnswer :showAfter="$frontmatter.exercise4ShowAfter">
 
 ```python
-...
+entered_operation = ""
+
+names = ["Alice", "Bob"]
+
+while entered_operation != "quit":
+  
+  entered_operation = input("Enter operation (count/add/view/remove/quit): ")
+  
+  if entered_operation == "count":
+    print("You have "+str(len(names))+" friends.")
+  elif entered_operation == "add":
+    name = input("Enter name: ")
+    names.append(name)
+  elif entered_operation == "view":
+    for name in names:
+      print(name)
+  elif entered_operation == "remove":
+    name = input("Enter name: ")
+    names.remove(name)
 ```
 </SampleAnswer>
 
@@ -1314,7 +1592,34 @@ friends = [
 <SampleAnswer :showAfter="$frontmatter.exercise4ShowAfter">
 
 ```python
-...
+entered_operation = ""
+
+friends = [
+  {"name": "Alice", "email": "al@ice.com"},
+  {"name": "Bob", "email": "bob@by.com"}
+]
+
+while entered_operation != "quit":
+  
+  entered_operation = input("Enter operation (count/add/view/remove/quit): ")
+  
+  if entered_operation == "count":
+    print("You have "+str(len(friends))+" friends.")
+  elif entered_operation == "add":
+    name = input("Enter name: ")
+    email = input("Enter email: ")
+    friends.append({
+      "name": name,
+      "email": email
+    })
+  elif entered_operation == "view":
+    for friend in friends:
+      print(friend["name"]+" - "+friend["email"])
+  elif entered_operation == "remove":
+    name = input("Enter name: ")
+    for friend in friends:
+      if friend["name"] == name:
+        friends.remove(friend)
 ```
 </SampleAnswer>
 
@@ -1510,3 +1815,126 @@ else:
 ...
 ```
 </SampleAnswer>
+
+## Sample code
+Some of the sample code written at the tutorials.
+
+### Rock-Paper-Scissors Game
+```python
+from random import randint
+
+def get_computer_move():
+	computer_move_int = randint(0, 2)
+	if computer_move_int == 0:
+		return "Rock"
+	elif computer_move_int == 1:
+		return "Scissors"
+	else:
+		return "Paper"
+
+def beats(move_1, move_2):
+	return (
+		move_1 == "Scissors" and move_2 == "Paper" or
+		move_1 == "Rock" and move_2 == "Scissors" or
+		move_1 == "Paper" and move_2 == "Rock"
+	)
+
+def get_user_move():
+	
+	user_move = ""
+	
+	while not (user_move == "Rock" or user_move == "Scissors" or user_move == "Paper"):
+		
+		user_move = input("Rock/Scissors/Paper: " )
+	
+	return user_move
+
+computer_wins = 0
+player_wins = 0
+
+for game_round in range(5):
+	
+	user_move = get_user_move()
+	computer_move = get_computer_move()
+	
+	print("Computer choose "+computer_move+".")
+	
+	if computer_move == user_move:
+		print("Draw!")
+	elif beats(computer_move, user_move):
+		print("Computer wins!")
+		computer_wins = computer_wins + 1
+	else:
+		print("You win!")
+		player_wins = player_wins + 1
+
+print("Computer wins: "+str(computer_wins))
+print("Player wins: "+str(player_wins))
+
+if computer_wins == player_wins:
+	print("Final result: Draw")
+elif computer_wins < player_wins:
+	print("Final result: You win! :D")
+else:
+	print("Final result: You lose :(")
+```
+
+### Dice Game
+```python
+import random
+
+def generate_dice_value():
+	return random.randint(1, 6)
+
+def are_all_six(number_1, number_2, number_3):
+	return number_1 == 6 and number_2 == 6 and number_3 == 6
+
+def does_pair_exist(number_1, number_2, number_3):
+	return number_1 == number_2 or number_1 == number_3 or number_2 == number_3
+
+def are_all_three_equal(number_1, number_2, number_3):
+	return number_1 == number_2 and number_1 == number_3
+
+def get_win_money(dice_1, dice_2, dice_3):
+	if are_all_six(dice_1, dice_2, dice_3):
+		return win_all_six
+	elif are_all_three_equal(dice_1, dice_2, dice_3):
+		return win_all_equal
+	elif does_pair_exist(dice_1, dice_2, dice_3):
+		return win_pair
+	else:
+		return 0
+
+game_cost = 10
+player_money = 100
+win_all_six = 100
+win_all_equal = 50
+win_pair = 10
+
+continue_playing = "yes"
+
+while continue_playing == "yes":
+	
+	player_money = player_money - game_cost
+	
+	dice_1 = generate_dice_value()
+	dice_2 = generate_dice_value()
+	dice_3 = generate_dice_value()
+	
+	print("You got "+str(dice_1)+" "+str(dice_2)+" "+str(dice_3))
+	
+	win_money = get_win_money(dice_1, dice_2, dice_3)
+	
+	win_total = win_total + win_money
+	
+	if win_money == 0:
+		print("You lost")
+	else:
+		print("You won "+str(win_money)+".")
+	
+	player_money = player_money + win_money
+	
+	print("You now have "+str(player_money)+".")
+	
+	continue_playing = input("Play gain? yes/no: ")
+```

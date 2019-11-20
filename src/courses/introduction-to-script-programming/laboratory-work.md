@@ -136,6 +136,7 @@ On top of this:
 * Operation cost should be calculated using the default value of 250 SKR/m2(NTA)/year.
 * Costs for maintenance and repairs should be calculated using the default value of 100 SKR/m2(NTA) /year.
 * The cost for the decommissioning should be calculated as 10% of the cost assessment.
+* If some information is missing this information should be provided by the user as input. 
 
 </Tab>
 </Tabs>

@@ -147,7 +147,9 @@ Information about the **Laboratory Work** can be found on the page [Lab Instruct
 
 Information about the **Project Work** can be found on the page [Project Instructions](project-instructions/). It's about creating a platform consisting of a frontend application and a backend application communicating using a REST API.
 
-**Written Examination** is a [Digital Exam](https://ju.se/student/en/digital-exam.html) in Inspera at the end of the course. You need to register for it in advance per the instructions at [https://ju.se/student/en/studies/examination.html](https://ju.se/student/en/studies/examination.html).
+**Written Examination** is a [Digital Exam](https://ju.se/student/en/digital-exam.html) in Inspera at the end of the course. You need to register for it in advance per the instructions at [https://ju.se/student/en/studies/examination.html](https://ju.se/student/en/studies/examination.html). Sample answers are only published for the ordinary exam, not the re-exams. For the re-exams, come and talk with the course coordinator if there are any answers you are unsure of.
+
+* [Sample answers to the exam 2019-10-15](static-files/exam-2019-10-15-sample-answers.txt)
 
 ### Conditions for the examined elements
 Conditions for the **Laboratory Work** can be found on the page [Lab Instructions](lab-instructions/).
