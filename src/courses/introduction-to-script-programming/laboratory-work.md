@@ -693,7 +693,7 @@ TRANSPORTINPUTVTY,telnet,telnet,telnet,ssh,ssh
 ```
 </Figure>
 
-Instead of manually creating the CSV file yourself, you can easily create and maintain it using Microsoft Excel, as shown in <FigureNumber /> below. When saving the file, just save it as *CSV UTF-8 (Comma Delimited)* instead of *Excel Workbook*.
+Instead of manually creating the CSV file yourself, you can easily create and maintain it using Microsoft Excel, as shown in <FigureNumber /> below. When saving the file, just save it as *CSV (Comma Delimited)* instead of *Excel Workbook*.
 
 <Figure caption="Saving an Excell document as a CSV file.">
 <img src="static-files/labs/lab-5-csv-in-excell.png" alt="Saving an Excell document as a CSV file.">
@@ -807,7 +807,7 @@ Before you attempt solving the programming problems in Lab 6 you are strongly re
 ### Problem 6.1: Using the `ConnectFour` class
 In this problem, you should practice on using a class we have created for you. The class is called `ConnectFour`, and it can be used to play the game [Connect Four](https://en.wikipedia.org/wiki/Connect_Four). Instead of red and yellow bricks, we will use `X` and  `O` to represent the different players.
 
-The file [ConnectFour.py](...) contains the `ConnectFour` class you should use. Add the code in that file to your own Python file. Then create a new instance of the class (the object that stores the state of the game) by calling the constructor of the class, e.g.:
+The file [ConnectFour.py](static-files/labs/ConnectFour.py) contains the `ConnectFour` class you should use. Add the code in that file to your own Python file. Then create a new instance of the class (the object that stores the state of the game) by calling the constructor of the class, e.g.:
 
 ```python
 game = ConnectFour(7)
@@ -859,10 +859,16 @@ What the game looks like after the code above has been executed is shown in Figu
 Given the `ConnectFour` class, your task is to implement the main application loop for the game. This loop should simply keep asking the user to enter which column to drop the next `X` or `O` in until there is a winner (the user will enter the digit of the column).
 
 ::: tip Tips!
-To pass, you don't have to use the methods `is_column_full(column`) nor `does_column_exist(column)`, but it is good if you do. These can be used to verify that the user doesn't try to make a move in a column that is full or a column that doesn't exists (such as column `12`).
+To pass, you don't have to use the methods `is_column_full(column)` nor `does_column_exist(column)`, but it is good if you do. These can be used to verify that the user doesn't try to make a move in a column that is full or a column that doesn't exists (such as column `12`).
 :::
 
-### Problem 6.2: Implementing a `Calculator` class
+### Problem 6.2: Implementing a class
+For this problem, students taking the programs *IT Infrastructure and Network Design* and *Sustainable Building Information Management* have a different problem to solve. If you don't take any of these program (e.g. being an exchange student), solve the problem for the program IT Infrastructure and Network Design.
+
+<Tabs rememberSelectedKey="program">
+
+<Tab title="IT Infrastructure and Network Design">
+
 This problem is about implementing a calculator program as described in problem 4.4, but this time using a class to represent the calculator. Write all your code in a file named `lab_06_calculator.py`. When you are done, running the code in `lab_06_calculator.py` should have the very same effect as running the code you wrote for problem 4.4 (the output/input should be the same).
 
 We recommend you to implement the class piece by piece by following the steps below. If you want to do it in another way, feel free to do so, but the class you create should have the same functionality (name/constructor/methods) as described in the steps below.
@@ -975,7 +981,51 @@ print("The program finished with "+str(calculator.get_memory_value())+" in memor
 ```
 </Figure>
 
+</Tab>
+<Tab title="Sustainable Building Information Management">
+
+Develop a software that includes the class `Construction_Entity`, see the UML schema below.
+
+As can be seen the data fields of the class are the same as the ones described in the IDS in lab problem 1.7.
+
+<img style="max-width: 300px;" src="static-files/labs/lab-6-construction-entity.png">
+
+The software should be able to instantiate an unknown number of objects using the class by reading all XML-files from a folder, with the structure described by the example below.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Construction_Entity id="BIM3HUS13">
+    <CoClassCode>CBH</CoClassCode>
+    <PropertyName>Skrea 13:8</PropertyName>
+    <SpaceArea>400</SpaceArea>
+    <CostAssessment>1589457</CostAssessment>
+    <EnergyConsumption>32.74</EnergyConsumption>
+    <CarbonDioxideEquivalency>28626</CarbonDioxideEquivalency>
+</Construction_Entity>
+```
+
+You can use the following XML files to test your software:
+
+* [BIM3HUS12.xml](static-files/labs/BIM3HUS12.xml)
+* [BIM3HUS13.xml](static-files/labs/BIM3HUS13.xml)
+* [BIM3HUS14.xml](static-files/labs/BIM3HUS14.xml)
+* [BIM3HUS24.xml](static-files/labs/BIM3HUS24.xml)
+* [BIMHUS21.xml](static-files/labs/BIMHUS21.xml)
+
+The software should print the average `LCC`/`SpaceArea` for all objects that have the `CoClassCode` given as input. To implement this, the class `Construction_Entity`'s constructor should receive the name of an XML file it should read it values from, and the class should also have the method `getLCC()`, which should compute and return the LCC value for the construction entity (this should then be used by the main program).
+
+:::tip Getting the value for an attribute
+When you have an instance of an `Element` or a `SubElement` that have attributes, you can get the values for the attributes using the `attrib` property, which is a dict containing the name of all the element's attributes as keys, and the attribute values as the values in the dict. For example, if the element is `<my-element a="1" b="2">`, then the element's `attrib` property in Python would be `{"a": "1", "b": "2"}`.
+:::
+
+</Tab>
+</Tabs>
+
 ### Present your work
 Present your work to a teacher at a lab session. Be prepared to explain how your solutions and implementations work, and be prepared to answer any question the teacher might have about your code. It is good to practice this in advance (alone or with a friend).
+
+::: warning Note!
+The difficulties in this lab is not to write much code (most of the code you've written has been given to you), but to understand what code to write, and how that code works. Your oral presentation should reflect that you really understand how the code you've written works.
+:::
 
 When the teacher is satisfied with your presentation, upload your Python files to [the assignment Lab 6 on Ping Pong](https://pingpong.hj.se/courseId/21445/content.do?id=16754823). The teacher will then approve you on that assignment.

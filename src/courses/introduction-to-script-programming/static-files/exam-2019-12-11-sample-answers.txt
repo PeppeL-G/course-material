@@ -1,0 +1,55 @@
+Below is a program that should:
+
+    Ask the user to enter two numbers.
+    Print the sum of the two numbers.
+
+print("Enter two numbers.")
+entered_number_1 = input("The first number: ")
+entered_number_2 = input("The second number: ")
+print("The sum of the numbers is " + entered_number_1+entered_number_2)
+
+When Alice runs the program, it does not work as intended. Explain why the program doesn't work they way it should, and suggest a solution to make it work (no need to write any Python code, describing the changes using words is enough).
+---
+The problem is that even though the user enters numbers, e.g. 123 and 456, these will be read as the strings "123" and "456", and when using the + operation on strings you do string concatenation, and not addition of numbers.
+
+To fix this, the user input needs to be converted to numbers (using either the int() function or the float() function), then the sum of the entered numbers can be computed, and then the sum needs to be converted back to a string using the str() function, so it can be concatenated with the string that should be printed.
+
+Description of error: 0.5 points
+Description of fix: 0.5 points
+
+
+=====
+
+
+Suggest how the following data in Python:
+
+countries = [
+   {"name": "Sweden", "population": 9903000},
+   {"name": "Finland", "population": 5495000},
+   {"name": "Norway", "population": 5233000}
+]
+
+Can be written in XML code instead.
+---
+<countries>
+    <country>
+        <name>Sweden</name>
+        <population>9903000</population>
+    </country>
+    <country>
+        <name>Finland</name>
+        <population>5495000</population>
+    </country>
+    <country>
+        <name>Norway</name>
+        <population>5233000</population>
+    </country>
+</countries>
+
+Each type of mistake: -0.25 points
+Severe errors: -0.5, -0.75 or -1 points
+
+
+=====
+
+

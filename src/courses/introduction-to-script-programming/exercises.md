@@ -1654,7 +1654,12 @@ Write a program that computes the sum of all the numbers in the file (download a
 <SampleAnswer :showAfter="$frontmatter.exercise5ShowAfter">
 
 ```python
-...
+sum = 0
+with open("numbers.txt") as file:
+    for line in file:
+        numbers = line.split(" ")
+        for number in numbers:
+            sum += int(number)
 ```
 </SampleAnswer>
 
@@ -1676,13 +1681,72 @@ Create three different functions that can be used to store this data in a file:
 * The second function should store the data in a CSV file (in CSV format).
 * The third function should store the data in an XML file (XML format).
 
-Then create three different functions that can be used to read this data from a file and restore the houses variable.
+Then create three different functions that can be used to read this data from a file and restore the `houses` variable.
 
 #### Sample answer
 <SampleAnswer :showAfter="$frontmatter.exercise5ShowAfter">
 
 ```python
-...
+import json
+import xml.etree.ElementTree as ET
+import csv
+
+houses = [
+    {"name": "Gryffindor", "founder": "Godric Gryffindor"},
+    {"name": "HufflePuff", "founder": "Helga Hufflepuff"},
+    {"name": "Ravenclaw", "founder": "Rowena Ravenclaw"},
+    {"name": "Slytherin", "founder": "Salazar Slytherin"}
+]
+
+def write_to_json_file(houses):
+    json_code = json.dumps(houses)
+    with open("houses.json", "w") as json_file:
+        json_file.write(json_code)
+
+def write_to_xml_file(houses):
+    houses_element = ET.Element("houses")
+    for house in houses:
+        house_element = ET.SubElement(houses_element, "house")
+        name_element = ET.SubElement(house_element, "name")
+        name_element.text = house["name"]
+        founder_element = ET.SubElement(house_element, "founder")
+        founder_element.text = house["founder"]
+    xml_code = ET.tostring(houses_element, encoding="unicode")
+    with open("houses.xml", "w") as xml_file:
+        xml_file.write(xml_code)
+
+def write_to_csv_file(houses):
+    with open("houses.csv", "w", newline="\n") as csv_file:
+        writer = csv.writer(csv_file, delimiter=",", quotechar='"')
+        for house in houses:
+            writer.writerow([house["name"], house["founder"]])
+
+def read_from_json_file():
+    with open('humans.json', 'r') as json_file:
+        return json.loads(json_file.read())
+
+def read_from_xml_file():
+    houses = []
+    with open('humans.xml', 'r') as xml_file:
+        xml_code = xml_file.read()
+        houses_element = ET.fromstring(xml_code)
+        for house_element in houses_element:
+            houses.append({
+                'name': house_element.find("name").text,
+                'founder': house_element.find("founder").text
+            })
+    return houses
+
+def read_from_csv_file():
+    houses = []
+    with open('humans.csv', 'r') as csv_file:
+        reader = csv.reader(csv_file, delimiter=',', quotechar='"')
+        for row in reader:
+            houses.append({
+                'name': row[0],
+                'founder': row[1]
+            })
+    return houses
 ```
 </SampleAnswer>
 
@@ -1721,7 +1785,94 @@ Enter operation: quit
 <SampleAnswer :showAfter="$frontmatter.exercise5ShowAfter">
 
 ```python
-...
+friends = []
+
+operation = ""
+
+while operation != "quit":
+    
+    operation = input("Enter operation (count/add/view/remove/quit): ")
+    
+    if operation == "count":
+        print("You have "+str(len(friends))+" friends.")
+    elif operation == "add":
+        name = input("Enter name: ")
+        email = input("Enter email: ")
+        friends.append({
+            "name": name,
+            "email": email
+        })
+    elif operation == "view":
+        for friend in friends:
+            print(friend["name"]+" - "+friend["email"])
+    elif operation == "remove":
+        entered_name = input("Enter name: ")
+        index_to_remove = -1
+        for i in range(len(friends)):
+            if friends[i]["name"] == entered_name:
+                index_to_remove = i
+        friends.pop(index_to_remove)
+    
+    elif operation == "save":
+        
+        filename = input("Enter filename: ")
+        
+        if filename.endswith(".json"):
+            with open(filename, "w") as json_file:
+                json_file.write(json.dumps(friends))
+        
+        elif filename.endswith(".xml"):
+            friends_element = ET.Element("friends")
+            for house in houses:
+                friend_element = ET.SubElement(friends_element, "friend")
+                name_element = ET.SubElement(friend_element, "name")
+                name_element.text = friend["name"]
+                email_element = ET.SubElement(friend_element, "email")
+                email_element.text = friend["email"]
+            xml_code = ET.tostring(friends_element, encoding="unicode")
+            with open(filename, "w") as xml_file:
+                xml_file.write(xml_code)
+        
+        elif filename.endswith(".csv"):
+            with open("friends.csv", "w", newline="\n") as csv_file:
+                writer = csv.writer(csv_file, delimiter=",", quotechar='"')
+                for friend in friends:
+                    writer.writerow([friend["name"], friend["email"]])
+        
+        else:
+            print("File type is not supported.")
+    
+    elif operation == "load":
+        
+        filename = input("Enter filename: ")
+        
+        if filename.endswith(".json"):
+            with open(filename, 'r') as json_file:
+                friends = json.loads(json_file.read())
+        
+        elif filename.endswith(".xml"):
+            friends = []
+            with open(filename, 'r') as xml_file:
+                xml_code = xml_file.read()
+                friends_element = ET.fromstring(xml_code)
+                for friend_element in friends_element:
+                    friends.append({
+                        'name': friend_element.find("name").text,
+                        'email': friend_element.find("email").text
+                    })
+        
+        elif filename.endswith(".csv"):
+            friends = []
+            with open(filename, 'r') as csv_file:
+                reader = csv.reader(csv_file, delimiter=',', quotechar='"')
+                for row in reader:
+                    friends.append({
+                        'name': row[0],
+                        'email': row[1]
+                    })
+        
+        else:
+            print("File type is not supported.")
 ```
 </SampleAnswer>
 
@@ -1780,7 +1931,24 @@ You won!
 <SampleAnswer :showAfter="$frontmatter.exercise6ShowAfter">
 
 ```python
-...
+from HangmanGame import HangmanGame
+
+game = HangmanGame("bob")
+
+while not game.has_player_lost() and not game.has_player_won():
+	
+	print(game.get_underlined_word())
+	
+	guess = input("Enter guess: ")
+	
+	game.make_guess(guess)
+
+print(game.get_underlined_word())
+
+if game.has_player_won():
+	print("Good job, you won!")
+else:
+	print("Sorry, you lost.")
 ```
 </SampleAnswer>
 
@@ -1797,7 +1965,7 @@ If you have implemented the class correctly, the program below should be able to
 
 ```python
 game = GuessingGame()
-print("Guess which number I'm thinking of.")
+print("Guess which number between 0 and 20 I'm thinking of.")
 guessed_right = False
 while not guessed_right and not game.has_used_all_guesses():
     guess = int(input("Enter guess: "))
@@ -1809,10 +1977,25 @@ else:
 ```
 
 #### Sample answer
-<SampleAnswer :showAfter="$frontmatter.exercise5ShowAfter">
+<SampleAnswer :showAfter="$frontmatter.exercise6ShowAfter">
 
 ```python
-...
+import random
+
+class GuessingGame:
+	
+	def __init__(self):
+		self.correct_number = random.randint(0, 20)
+		self.number_of_guesses = 0
+	
+	def has_used_all_guesses(self):
+		return self.number_of_guesses == 10
+	
+	def process_guess(self, guess):
+		
+		self.number_of_guesses = self.number_of_guesses + 1
+		
+		return guess == self.correct_number
 ```
 </SampleAnswer>
 
