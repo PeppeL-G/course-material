@@ -45,3 +45,7 @@ You can look at [the exam from 2019-02-13](static-files/exam-2019-02-13.pdf) to 
 ::: warning Note!
 The exam from 2019-02-13 was a Ping Pong exam, your exam will be an Inspera exam. You will get similar type of questions, but it will look a bit different.
 :::
+
+## Sample answers
+Here you find sample answers to some old exams:
+* [Sample answer to the exam from 2019-12-11.](static-files/exam-2019-12-11-sample-answers.txt)

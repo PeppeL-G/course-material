@@ -15,5 +15,5 @@ Web browsers can not only render HTML code styled with CSS, they can also execut
 ## Recommended reading
 * The following chapter from the course book [Eloquent JavaScript](https://eloquentjavascript.net/):
     * Chapter 13: JavaScript and the Browser
-* [JS Browser BOM](https://www.w3schools.com/js/js_window.asp)
-    Note only about JS Window, but all JS **** in the menu. 
+* [JS Browser BOM](https://www.w3schools.com/js/js_window.asp) \
+    Not only about `JS Window`, but all `JS ****` in the `JS Browser BOM` sub-menu. 

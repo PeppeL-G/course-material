@@ -4,7 +4,7 @@ navbarTitle: Using Sequelize in Node.js
 ---
 
 # Using Sequelize in Node.js
-You can write and send your own queries to your relational database, but what if you later change to another relational database using a little bit different SQL dialect? Then you need to through all of your queries and rewrite some of them 😥 Or, you can use an ORM instead, and let the ORM write the SQL queries for you. Then it's easy to switch to another relational database, and you don't even need to know SQL to use the database 😀
+You can write and send your own queries to your relational database, but what if you later change to another relational database using a little bit different SQL dialect? Then you need to go through all your queries and rewrite some of them 😥 Or, you can use an ORM instead, and let the ORM write the SQL queries for you. Then it's easy to switch to another relational database, and you don't even need to know SQL to use the database 😀
 
 <iframe width="560" height="314" src="https://www.youtube.com/embed/0lGWqp-yUTU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

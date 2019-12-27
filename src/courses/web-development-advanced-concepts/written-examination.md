@@ -14,7 +14,7 @@ The `Written Examination` test is offered in:
 * The re-exam period in July.
 * The re-exam period in August.
 
-When the date for these periods is approaching you can find more information about location and date on [the JU page *Exam Schedule JTH*](https://ju.se/student/en/studies/examination/exam-schedule-jth.html).
+When the date for these periods is approaching you can find more information about location and date at [the JU page *Exam Schedule JTH*](https://ju.se/student/en/studies/examination/exam-schedule-jth.html).
 
 ## Registration
 As describe on [the JU page *Digital Exam*](https://ju.se/student/en/digital-exam.html) you must register for the Inspera exam before you're allowed to write it.

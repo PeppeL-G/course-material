@@ -15,7 +15,7 @@
 <script>
 	export default {
 		props: {
-			infoPieces: Array
+			infoPieces: Object
 		}
 	}
 </script>

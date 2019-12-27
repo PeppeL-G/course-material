@@ -22,27 +22,19 @@
     }, {
         name: "Linus Rudbeck",
         photo: "linus-rudbeck.jpeg",
-        roles: ["Lab assistant", "guest lecturer"],
+        roles: ["Lab assistant"],
         description: "Former JTH student that studied the program Software Engineering and Mobile Platforms. Started the company Red Capes IT together with Daniel Fransén after he graduated. ",
         email: "",
         phone: "",
         website: "https://redcapesit.se/author/linus/"
     }, {
-        name: "Filip Andersson",
-        photo: "filip-andersson.jpeg",
+        name: "Muhammad Ismail",
+        photo: "muhammad-ismail.jpeg",
         roles: ["Lab assistant"],
-        description: "Former bachelor student that studied the program Software Engineering and Mobile Platforms here at JTH. Now master student studying the program AI Engineering.",
-        email: "anfi1622@student.ju.se",
-        phone: "",
-        website: ""
-    }, {
-        name: "Simon Arvidsson",
-        photo: "simon-arvidsson.jpeg",
-        roles: ["Lab assistant"],
-        description: "Former bachelor student that studied the program Software Engineering and Mobile Platforms here at JTH. Now master student studying the program AI Engineering.",
-        email: "arsi1632@student.ju.se",
-        phone: "",
-        website: ""
+        description: "Currently PhD student at JU.",
+        email: "Muhammad.Ismail@ju.se",
+        phone: "036 - 10 15 92",
+        website: "https://ju.se/en/personinfo.html?sign=IsmMuh"
     }]'
 />
 
@@ -54,7 +46,7 @@ Then websites got more dynamic. Users could create accounts on the websites and 
 
 Then some websites got so popular that running them on a single computer was not enough; web browsers sent more HTTP requests to the web application than the web application had time to handle. We needed to start worrying about the performance of our web application; how good it could scale, how fast it could send back an HTTP response, etc. Web applications now needed to be built with an architecture in mind.
 
-Then we got Android and iOS devices, and users wanted to be able to use an app to access the content on our websites. But apps don't render HTML code, only web browsers do that. the apps needed a way to just fetch the data from our web applications, so we added APIs to the web applications. 
+Then we got Android and iOS devices, and users wanted to be able to use an app to access the content on our websites. But apps don't render HTML code, only web browsers do that. The apps needed a way to just fetch the data from our web applications, so we added APIs to the web applications. 
 
 Today, good web applications are not straight forward to implement, but in this course you will learn and get hands-on experience of using some of the technologies you can use to do that by implementing your own web application.
 
@@ -63,19 +55,19 @@ At course start you are expected to already possess knowledge corresponding to t
 <Figure caption="Prerequisites for this course.">
 <mermaid>
 graph TD
-	introComp[Introduction to Computing 7.5 Credits]
-	introProg[Introduction to Programming 9 Credits]
-	db[Databases 6 Credits]
-	discMath[Discrete Mathematics 6 Credits]
-	dalg[Data Structures and Algorithms 7.5 Credits]
-	oop[Object-oriented Programming 7.5 Credits]
-	webDevFund[Web Development Fundamentals 7.5 Credits]
+    introComp[Introduction to Computing 7.5 Credits]
+    introProg[Introduction to Programming 9 Credits]
+    db[Databases 6 Credits]
+    discMath[Discrete Mathematics 6 Credits]
+    dalg[Data Structures and Algorithms 7.5 Credits]
+    oop[Object-oriented Programming 7.5 Credits]
+    webDevFund[Web Development Fundamentals 7.5 Credits]
     netProg[Network Programming 7.5 Credits]
     wdac[Web Development Advanced Concepts 7.5 Credits]
     introComp --> introProg
     introProg --> db
     db --> webDevFund
-	introProg --> dalg
+    introProg --> dalg
     discMath --> dalg
     dalg --> oop
     oop --> webDevFund
@@ -90,56 +82,71 @@ The intended learning outcomes of the course are found in the [Course Syllabus](
 
 <ILOsActivitiesMapping description="
 
-Display an understanding of the fundamental building blocks of the web (HTTP and HTML).
--Project work
--Written examination
-+Recorded lecture: Internet
-+Recorded lecture: Web Applications & HTTP
+Display knowledge of the need for, and the use of, Content Delivery Networks
+-Written Examination
++Recorded lecture: Content Delivery Networks
 
-Display an understanding of common security concerns in web applications.
--Project work
--Written examination
-+Recorded lecture: Authentication & Authorization
-+Recorded lecture: Web Application Vulnerabilities
+Display knowledge of the challenges inherent in and technologies used for the construction of scalable web applications (NOSQL databases, horizontal scaling with session management, data partitioning and sharding, etc.)
+-Project Work
+-Written Examination
++Recorded lecture: Scaling Web Applications
++Recorded lecture: Scaling Databases
 
-Display an ability to construct web pages using HTML5, CSS, and CSS frameworks.
--Project work
--Written examination
-+Recorded lecture: HTML
-+Recorded lecture: CSS
-+Recorded lecture: CSS Frameworks
+Display the ability to use JavaScript to manipulate a web page's Document Object Model
+-Laboratory Work
+-Project Work
+-Written Examination
++Recorded lecture: Client-side JavaScript
++Recorded lecture: Document Object Model
 
-Display an ability to program in JavaScript.
--Project work
--Written examination
-+Recorded lecture: JavaScript
-+Recorded lecture: Asynchronous Programming
+Display the ability to program against commonly used JavaScript libraries
+-Project Work
++Various npm packages introduces in the course.
 
-Display an ability to construct web pages using Node.js.
--Project work
--Written examination
-+Recorded lecture: Node.js
-+Recorded lecture: Introduction to Express
-+Recorded lecture: Web Applications in Express
+Display the ability to construct web pages that interact with other web systems using REST/JSON, OAuth, etc.
+-Project Work
+-Written Examination
++Recorded lecture: REST API Basics
++Recorded lecture: REST API in Express
++Recorded lecture: REST API Authorization
++Recorded lecture: JSON Web Tokens
++Recorded lecture: Third-Party Authentication
++Recorded lecture: AJAX
 
-Display an ability to construct database-backed web applications.
--Project work
--Written examination
-+Recorded lecture: Using SQLite in Node.js
+Display the ability to use advanced web client APIs such as web storage, web workers, web components, WebAssembly, etc.
+-Project Work
++Recorded lecture: AJAX
+
+Display the ability to configure and use containers for development, testing, and deployment environments
+-Project Work
+-Written Examination
++Recorded lecture: Docker Basics
+
+Demonstrate the ability to evaluate the security of web applications
+-Project Work
+-Written Examination
++Recorded lecture: Same-origin Policy
++Recorded lecture: Cross-origin Resource Sharing
 
 " />
 
 ## Learning Activities
 Here are short introduction to the learning activities offered in the course.
 
-### Recorded lectures
-...
+### Recorded Lectures
+In the beginning of each week you will be encouraged to view some recorded lectures. These will be quite theoretical and will teach new you things you can use when building a website.
 
 ### Tutorials
-...
+Each week there will be a tutorial session where the teacher will show you how to use what has been taught in the recorded lectures for that week in practice. 
 
-### Lab sessions
-...
+### Lab Sessions
+Each week you may attend a 4 hours long lab session. At the lab session you may ask the teacher there for help with your laboratory work or your project work. When you have completed your laboratory work you should also demonstrate your solution to a teacher at a lab sessions.
+
+There are 3 different lab sessions each week, but you may only attend to one. To distribute you, join one of [the lab session groups on Ping Pong](https://pingpong.hj.se/courseId/22061/projectGroupsList.do). First come, first served. Feel free to attend other lab sessions if there is room for it, but only join one group on Ping Pong.
+
+::: warning Note!
+In the project work you should work in pair, so you might want to find your partner o work with before you join a lab session group. You're also welcome to change lab session group later. 
+:::
 
 ## Examination Tests
 The course contains three examination tests.
@@ -154,13 +161,14 @@ The course contains three examination tests.
 4 credits, graded `Fail`, `3`, `4` and `5`. More information is available on the [Project Work](project-work/) page.
 
 ### Re-examination
-Re-examinations for the examination tests will be available at the re-exam periods in June and August. For more information, see each examination test's own page.
+Re-examination for all examination tests will be available at the re-exam periods in June and August. For more information, see the examination tests' respective pages.
 
 ## Final grade
-To receive a final grade on the course you need to pass all examination tests (`Written Examination` + `Laboratory Work` + `Project Work`). The final grade will be based on the lowest grade on the Project work and the Written Examination, but these grades will also be marked as "weak" or "strong". If one of the grades is lower than the other and has been marked as "strong", the final grade will be the lower grade + 1. For example, a strong 3 and a weak 4 gives you 4 as the final grade, while a weak 3 and a strong 5 gives you 3 as the final grade. For the Written Examination, 50% is a strong 3, and 70% is a strong 4.
+To receive a final grade in the course you need to pass all examination tests (`Written Examination`, `Laboratory Work` and `Project Work`). The final grade will be based on the lowest grade of the `Project Work` and the `Written Examination`, but these grades will also be marked as *weak* or *strong*. If one of the grades is lower than the other and has been marked as *strong*, the final grade will be the lower grade + 1. For example, a strong 3 and a weak 4 gives you 4 as the final grade, while a weak 3 and a strong 5 gives you 3 as the final grade. For the Written Examination, 50% of max score is a strong 3, and 70% of max score is a strong 4.
 
 ## Course Literature and Other Teaching Aids
 * [Eloquent JavaScript 3rd edition](https://eloquentjavascript.net/) by Marijn Haverbeke
+* [The Twelve-Factor App](https://12factor.net/)
 
 ## Time Plan
 A time plan is available on the [Time Plan](time-plan/) page.

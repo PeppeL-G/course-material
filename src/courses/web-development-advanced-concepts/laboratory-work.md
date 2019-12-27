@@ -40,15 +40,15 @@ Feel free to use whichever tools you want to complete the labs described below, 
 Before you start working on the labs you are recommended to:
 
 * View the following videos:
-    * Client-side JavaScript & BOM
-    * Document Object Model
+    * [Client-side JavaScript & BOM](../../lectures/client-side-javascript-and-bom/)
+    * [Document Object Model](../../lectures/document-object-model/)
 
-::: tip Tips about debugging
-When the web browser executes the Javascript statement `debugger;` it enters a debug mode in which you can inspect the values variables have. Use that to debug your code when it doesn't work.
+::: tip Debugging
+When the web browser executes the JavaScript statement `debugger` it enters a debug mode in which you can inspect the values variables have. Use that to debug your code when it doesn't work the way you want.
 :::
 
 ## Lab 1: Generating a table of contents
-The file [lab-01-table-of-contents.html](static-files/lab-01-table-of-contents.html) contains some of the information on [Wikipedia's Jönköping University article](https://en.wikipedia.org/wiki/J%C3%B6nk%C3%B6ping_University). Your task is to write JavaScript code that generates a table of content for the document (i.e. a list with the title of all the headers).
+The file <a href="static-files/lab-01-table-of-contents.html" target="_blank">lab-01-table-of-contents.html</a> contains some of the information on [Wikipedia's Jönköping University article](https://en.wikipedia.org/wiki/J%C3%B6nk%C3%B6ping_University). Your task is to write JavaScript code that generates a table of content for the document (i.e. a list with the title of all the headers).
 
 Some DOM functionalities you might find helpful:
 
@@ -60,7 +60,7 @@ Some DOM functionalities you might find helpful:
 * `anHTMLElement.appendChild(aChildElement)` to add `aChildElement` to `anHTMLElement`.
 
 ## Lab 2: A calculator
-The file [lab-02-calculator.html](static-files/lab-02-calculator.html) contains a form through which users should be able to enter two operands and one operation. Your task is to write JavaScript code that displays the result of the selected operation applied on the two entered operands.
+The file <a href="static-files/lab-02-calculator.html" target="_blank">lab-02-calculator.html</a> contains a form through which users should be able to enter two operands and one operation. Your task is to write JavaScript code that displays the result of the selected operation applied on the two entered operands.
 
 Some DOM functionalities you might find helpful:
 
@@ -73,13 +73,13 @@ If the address bar in the web browser changes (a query string is added to the en
 :::
 
 ## Lab 3: Validating input to forms
-The file [lab-03-form-validation.html](static-files/lab-03-form-validation.html) contains a form users can use to enter information about a new account to be created. Your task is to write JavaScript code validating the data entered in the form when the user submits it according to the following validation rules:
+The file <a href="static-files/lab-03-form-validation.html" target="_blank">lab-03-form-validation.html</a> contains a form users can use to enter information about a new account to be created. Your task is to write JavaScript code validating the data entered in the form when the user submits it according to the following validation rules:
 
 * The email field must contain the `@` symbol.
 * The first password field must contain at least 8 characters.
 * The second password field must be equal to the first password field.
 
-If something is wrong, display the error messages on the screen (in the HTML code, it is not OK to use the `alert()` function). Otherwise (if everything is valid), just let the form be submitted (so the server receives it, although no server exists in this case).
+If something is wrong, display the error messages on the screen (in the HTML code; it is not OK to use the `alert()` function). Otherwise (if everything is valid), just let the form be submitted (so the server receives it, although in this case, no server exists).
 
 Some DOM functionalities you might find helpful:
 
@@ -91,7 +91,7 @@ A user should only see an error like "Cannot send POST request." when the form i
 :::
 
 ## Lab 4: Tabs
-The file [lab-04-tabs.html](static-files/lab-04-tabs.html) contains three forms:
+The file <a href="static-files/lab-04-tabs.html" target="_blank">lab-04-tabs.html</a> contains three forms:
 
 * One form to create a new account.
 * One form to sign in to an existing account.
@@ -108,4 +108,4 @@ If the user has disabled client-side JavaScript in the web browser, all three fo
 :::
 
 ## Present your work
-Present your work to a teacher at one of the lab sessions. Be prepared to explain how your code works and to answer any question the teacher might have about it. When the teacher is satisfied with your presentation, he will pass you on the XXX test on Ping Pong.
+Present your work to a teacher at one of the lab sessions. Be prepared to explain how your code works and to answer any question the teacher might have about it. When the teacher is satisfied with your presentation, he will pass you on [the assignment Laboratory Work on Ping Pong](https://pingpong.hj.se/courseId/22061/content.do?id=17126494).

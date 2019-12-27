@@ -36,3 +36,10 @@
 	}
 	
 </style>
+
+<style lang="stylus">
+
+.mermaid svg
+	max-width 100%
+
+</style>

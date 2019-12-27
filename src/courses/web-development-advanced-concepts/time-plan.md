@@ -1,78 +1,94 @@
 # Time Plan
-The <span style="background-color: aqua; display: inline-block; padding: 0 8px; font-weight: bold;">Project Work</span> column indicates what you are expected to work on each day. 
+The <span style="background-color: aqua; display: inline-block; padding: 0 8px; font-weight: bold;">Work</span> column indicates what you are expected to work on each day. `LW` = `Laboratory Work`, `PW` = `Project Work`.
 
 <TimePlan
-	:startDate='new Date(2019, 7, 26)'
+	:startDate='new Date(2020, 0, 13)'
 	:columns='[
 		{key: "l", name: "Lectures", color: "orange"},
-		{key: "s", name: "Lab sessions", color: "yellow"},
-		{key: "p", name: "Project Work", color: "aqua"},
+		{key: "w", name: "Work", color: "aqua"},
+		{key: "s", name: "Lab Sessions", color: "yellow"},
 		{key: "i", name: "Important", color: "red"},
 	]'
 	:rows='[
-		// 35
-		{},
-		{l: "Introduction", p: "Part 1: Spec."},
-		{s: "Group 1", l: "Tutorial 1: HTTP & HTML", p: "Part 1: Spec."},
-		{s: "Group 2", p: "Part 1: Spec."},
-		{s: "Group 3", p: "Part 1: Spec."},
-		{},
-		{},
-		// 36
-		{p: "Part 2: GUI"},
-		{p: "Part 2: GUI"},
-		{s: "Group 1", l: "Tutorial 2: CSS", p: "Part 2: GUI"},
-		{s: "Group 2", p: "Part 2: GUI"},
-		{s: "Group 3", p: "Part 2: GUI"},
+		// 3
+		{l: "Introduction", w: "LW, PW Part 1"},
+		{w: "LW, PW Part 1"},
+		{l: "Tutorial: Client-side JS", w: "LW, PW Part 1"},
+		{w: "LW, PW Part 2"},
+		{w: "LW, PW Part 2", s: "G2"},
 		{},
 		{},
-		// 37
-		{p: "Part 2: GUI"},
-		{p: "Part 2: GUI"},
-		{s: "Group 1", l: "Tutorial 3: Express", p: "Part 2: GUI"},
-		{s: "Group 2", p: "Part 2: GUI", i: "Inspera Exam Registration Opens"},
-		{s: "Group 3", p: "Part 2: GUI"},
+		// 4
+		{w: "LW, PW Part 2", s: "G3"},
+		{w: "LW, PW Part 3", s: "G1"},
+		{w: "PW Part 3", l: "Tutorial: Layered Web App in Docker"},
+		{w: "PW Part 3"},
+		{w: "PW Part 4", s: "G2"},
 		{},
 		{},
-		// 38
-		{p: "Part 3: SQLite"},
-		{p: "Part 3: SQLite"},
-		{s: "Group 1", l: "Tutorial 4: SQLite", p: "Part 3: SQLite"},
-		{s: "Group 2", p: "Part 4: Forms"},
-		{s: "Group 3", p: "Part 4: Forms"},
+		// 5
+		{w: "PW Part 4", s: "G3"},
+		{w: "PW Part 4", s: "G1"},
+		{w: "PW Part 4"},
+		{w: "PW Part 4"},
+		{w: "PW Part 4", s: "G2"},
 		{},
 		{},
-		// 39
-		{p: "Part 4: Forms"},
-		{p: "Part 5: Errors"},
-		{s: "Group 1", l: "Tutorial 5: Cookies & Sessions", p: "Part 5: Errors"},
-		{s: "Group 2", p: "Part 5: Errors"},
-		{s: "Group 3", p: "Part 6: Auth"},
-		{},
-		{i: "Deadline Submit Project Report for Feedback"},
-		// 40
-		{p: "Part 6: Auth"},
-		{p: "Part 6: Auth"},
-		{s: "Group 1", l: "Tutorial 6: Security", p: "Part 7: Security"},
-		{s: "Group 2", p: "Part 7: Security"},
-		{s: "Group 3", p: "Part 7: Security"},
-		{i: "Inspera Exam Registration Closes"},
-		{},
-		// 41
-		{p: "Part 8: Optional"},
-		{l: "Guest Lecture", p: "Part 8: Optional"},
-		{s: "Group 1", l: "Sample Exam/Repetition", p: "Part 8: Optional"},
-		{s: "Group 2", p: "Part 9: Deploy"},
-		{s: "Group 3", p: "Part 9: Deploy"},
+		// 6
+		{w: "PW Part 4", s: "G3"},
+		{w: "PW Part 5", s: "G1"},
+		{w: "PW Part 5", l: "Tutorial: Dependency Injection and ORM"},
+		{w: "PW Part 5"},
+		{w: "PW Part 6", s: "G2"},
 		{},
 		{},
-		// 42
-		{p: "Part 10: Presentation", i: "Project Work Presentation"},
-		{p: "Part 10: Presentation", i: "Project Work Presentation, Inspera Exam"},
-		{p: "Part 10: Presentation", i: "Project Work Presentation"},
-		{p: "Part 10: Presentation", i: "Project Work Presentation"},
-		{p: "Part 10: Presentation", i: "Project Work Presentation"},
+		// 7 Re-exam period!
+		{i: "Re-exam period."},
+		{i: "Re-exam period."},
+		{i: "Re-exam period."},
+		{i: "Re-exam period."},
+		{i: "Re-exam period."},
+		{i: "Re-exam period."},
+		{i: "Re-exam period."},
+		// 8
+		{w: "PW Part 6", s: "G3"},
+		{w: "PW Part 6", s: "G1"},
+		{w: "PW Part 6"},
+		{w: "PW Part 7"},
+		{w: "PW Part 7", s: "G2"},
 		{},
-		{p: "Part 11: Submitting", i: "Deadline Submit Project Work on Ping Pong"},
+		{},
+		// 9
+		{w: "PW Part 7", s: "G3"},
+		{w: "PW Part 7", s: "G1"},
+		{l: "Tutorial: REST API and SPA", w: "PW Part 7"},
+		{w: "PW Part 8"},
+		{w: "PW Part 8", s: "G2"},
+		{},
+		{},
+		// 10
+		{w: "PW Part 8", s: "G3"},
+		{w: "PW Part 8", s: "G1"},
+		{w: "PW Part 8"},
+		{w: "PW Part 8"},
+		{w: "PW Part 9", s: "G2"},
+		{},
+		{},
+		// 11
+		{w: "PW Part 9", s: "G3"},
+		{w: "PW Part 9", s: "G1"},
+		{l: "Repetition/Sample exam", w: "PW Part 9"},
+		{w: "PW Part 9"},
+		{w: "PW Part 9", s: "G2"},
+		{},
+		{},
+		// 12 Exam period!
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
 	]'
 />
