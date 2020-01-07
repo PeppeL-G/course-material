@@ -13,7 +13,7 @@ Ping Pong will be used to keep track of your progress in the course, to distribu
 If you're an old student that took this course a previous year but still have some examination tests left to pass you take those tests as they are described this year.
 :::
 
-::: danger Swedish VS international students
+::: danger Swedish VS International Students
 The Swedish students taking one of the following programs:
 
 * Software Engineering and Mobile Platforms

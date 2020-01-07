@@ -7,20 +7,20 @@ navbarTitle: Report Writing
 There are some common mistakes students do the first time they try to write a report describing the project work they've done. In this lecture some of those mistakes are covered so you can avoid doing them yourself. But first some important theory to know before you start writing your report.
 
 ## What is a project?
-Most reports are associated with a project, so you must have a good understanding of what a project is before you write a report on one. [Wikipedia's Project page](https://en.wikipedia.org/wiki/Project) has a long definition of the term, but let us be more straight to the point with projects that involves the creation of software of some kind. A project is always about a problem that should be solved and the solution you create that solves that problem, and in our case the solution will involve the creation of software.
+Most reports are associated with a project, so you must have a good understanding of what a project is before you write a report on one. [Wikipedia's Project page](https://en.wikipedia.org/wiki/Project) has a long definition of the term, but let us focus on projects that involves the creation of software of some kind only. A project is always about a problem that should be solved and the solution you create that solves that problem, and in our case the solution will involve the creation of some kind of software.
 
 ### The problem
-The goal with the software you create is to get people to use it. Why would they use it? Because it helps them in some way. So the first thing you should decide in a project work is: *What is the problem people are having and that we try to solve in this project*? Examples of problems are:
+The goal with the software you create is to get people to use it (no point in creating something no one will use). Why would they use it? Because it will help them in some way. So the first thing you should decide in a project work is: *What is the problem people are having and that we try to solve in this project*? Examples of problems are:
 
 * Crossing the road is dangerous.
-* Waiting (in line, at a bus stop, at the traffic lights, etc.) is boring AND a waste of time (two problem in one).
+* Waiting (in line, at a bus stop, at the traffic lights, etc.) is boring AND a waste of time (two problems in one).
 * Leaving the children home alone is dangerous (parents are worried both about the house and their children).
 * Communicating with someone not speaking your language is hard.
-* Remembering when Arsenal plays their next game is hard, and it changes all the time.
+* Remembering when Arsenal plays their next game is hard, and it changes after each game.
 * Contacting all players in a hockey team (to notify them of cancelled matches, changed practice hours, etc.) is hard/time consuming.
 * Knowing what is cheap and what is expensive in a grocery store is hard.
 
-If you can't come up with a problem on your own, simply ask a friend or a company about problems they're having.
+If you can't come up with a problem on your own, simply ask a friend or a company about problems they're having, and then you have a project to solve that problem.
 
 When you have identified a problem to solve, you need to analyze the problem in depth to get a better understanding of it, so you know things like:
 
@@ -30,37 +30,39 @@ When you have identified a problem to solve, you need to analyze the problem in 
     * Do they live in big cities?
     * Are they old?
     * Etc.
+* When are they having the problem?
+* How does the problem impact the rest of their lives?
 * Etc.
 
-To analyse the problem could be a big project itself taking many months, but let us keep things minimal here and move on.
+To analyse the problem could be a big project itself taking many months, but let us keep things minimal here (you don't have time to do an analyze in depth for the project works you do in school) and move on.
 
 ### The solution
-When you have a good understanding of the problem, you need to come up with a solution to the the problem. What the solution looks like do of course depends on what the problem is, but in our case the solution will involve creating software of some kind. For example, if the problem is *My children has grown up and now I have a lot of small clothes no one in the family can use*, then maybe the solution could be to create a website where people can sell their clothes to others.
+When you have a good understanding of the problem, you need to come up with a solution to the the problem. What the solution looks like do of course depends on what the problem is, but in our case the solution will always involve the creation of some kind of software. For example, if the problem is *My children has grown up and now I have a lot of small clothes no one in the family can use*, then maybe the solution could be to create a website where people can sell their clothes to others.
 
-Often you don't only come up with one solution, but many different solutions (coming up with different solutions could be a project itself taking many months), and then you continue to work with the solution you think is the most promising one. When you do, you need to be sure that the people having the problem really think that your solution is a good solution and are willing to use it (optimally willing to pay money for it 🤑). You can compare your solution to existing solutions to see if your solution seems to be better. For example, parents might throw/give away their children clothes for free now, but with your solution they would get some money for them, which would make them prefer your solution.
+Often you don't only come up with one solution, but many different solutions (coming up with different solutions could be a project itself taking many months), and then you continue to work with the solution you think is the most promising one. When you do, you need to be sure that the people having the problem really think that your solution is a good solution and are willing to use it (optimally willing to pay money for it 🤑). You can compare your solution to existing solutions to see if your solution seems to be better. For example, parents might throw/give away their children clothes for free now, but with your solution they would get some money for them, which would make them prefer your solution. Making a survey and asking the people having the problem is of course also a very good idea.
 
-When you have decided which solution to go with, you need to realize it (in this case to build the website), and this is what your project work will be about.
+When you have decided which solution to go with, you need to realize it (in the previous example build the website), and this is what your project work will be about.
 
 ## Report structure
-Most report are quite long, so we divide it into chapters, making it a bit more structured. But which chapters should we have? In which order should they be? There's no single answer to this, but let me give you an example of a good structure.
+Most reports are quite long, so we divide them into chapters, making it a bit more structured. But which chapters should we have? In which order should they be? There's no single correct answer to this, but let me give you an example of a good structure.
 
-### The first chapter: Introduction
-The first chapter in the report should introduce the reader to project. The reader does so far not know anything about your project, so the first thing you need to do is to explain to the reader which problem you try to solve and how you intend to solve it.
+### Chapter 1: Introduction
+The first chapter in the report should introduce the reader to the project. The reader does so far not know anything about your project, so the first thing you need to explain to the reader is which problem you try to solve and how you intend to solve it.
 
-In this chapter you can think of the reader as an investor with a lot of money, and your goal is to convince the reader that the problem is a serious problem worth solving, and that your solution solves the problem in an excellent way. If you manage to convince the reader about this, she will be willing to invest some money in the project, and you get the money you need to start working on the project and to build the solution. 
+In this chapter you can think of the reader as an investor with a lot of money, and your goal is to convince the investor that the problem is a serious problem worth solving, and that your solution solves the problem in an excellent way. If you manage to convince the investor of this, she might be willing to invest some money in your project, and you get the money you need to start working on the project and to build the solution. 
 
-In our case the solution is a website, so we need to tell the reader what problem the users of the website are having and then explain how they solve that problem through the website. A UML use-case diagram is an excellent tool to visualize what the users can do on the website.
+In our case the solution is a website, so we need to tell the reader what problem the users of the website are having and then explain how they solve that problem by using the website. A UML use-case diagram is an excellent tool to visualize what the user will be able to do on the website.
 
-::: warning Remember!
-Investors are not technical people (just rich and stupid bastards 😉), so avoid using technical terms. Anyone reading your report should be able to understand the text in the Introduction chapter, even your grandpa who doesn't even know to turn off the radio.
+::: tip Keep it simple!
+Investors are not technical people (just rich and stupid bastards 😉), so avoid using technical terms. Anyone reading your report should be able to understand the text in the Introduction chapter, even your grandpa who doesn't even know how to turn off the radio.
 :::
 
-### The second chapter: Solution
+### Chapter 2: Solution
 So, you have decided on a solution and you've got the money you need to build it from an investor? Great, now we just need to figure out how we should build it. The solution is usually quite complex, so dividing the solution into multiple chapters is usually a good idea.
 
 In our case, the solution is a website, so this chapter could be about giving an overview of how we will implement the website. In our case we could explain that a user will use her web browser on her computer to communicate with our web application running on our server, and our server in turn will communicate with our database that runs on yet another server. 
 
-In our case the solution consists of two components:
+In our case the solution consists of two components we create ourselves:
 
 * The web application
 * The database
@@ -68,15 +70,21 @@ In our case the solution consists of two components:
 We have a lot to say about these, but that will be implementation details, and those are probably better described in other chapters, so this chapter is just about the architecture of the solution (an overview of the solution). This way, readers who don't know much about programming should still be able to read and understand most parts of this chapters.
 
 ::: tip Tips!
-In our case we describe the architecture of our solution in this chapter, so maybe *Architecture* is a more accurate name on the chapter than *Solution*?
+In our case we describe the architecture of our solution in this chapter, so maybe *Architecture* is a more accurate name on the chapter than *Solution*? 
+:::
+
+::: tip Keep it simple!
+In the Solution chapter you have to get a little bit more technical compared to the Introduction chapter, but try to keep it simple (avoid mentioning technical implementation details unless it makes sense to mention it here) so most readers can read the chapter and understand the solution overall without being technical experts. Your grandpa should be able to understand most of what you've written.
 :::
 
 ### Database
-We can use a separate chapter for the database component in our solution, so in this chapter we describe everything there is to know about the database, such as:
+We can use a separate chapter to describe the database component in our solution, so in this chapter we describe everything there is to know about the database, such as:
 
 * What database do we use (MySQL? SQLite?, MariaDB? Etc.)
 * What tables do we have in the database?
-* ...
+* What columns do we have in the tables?
+* What constraints do we have in our database?
+* Etc.
 
 ::: tip Tips!
 In this chapter you can expect the reader to know a lot about databases, so don't expect your grandpa to understand much of what you write here.
@@ -87,339 +95,825 @@ This chapter is about the database only, so no need to mention anything about th
 :::
 
 ### Web Application
-We can use a separate chapter for the web application component in our solution, so in this chapter we describe everything there is to know about the web application, such as:
+We can use a separate chapter to describe the web application component in our solution, so in this chapter we describe everything there is to know about the web application, such as:
 
 * Which framework is the web application implemented in?
 * How is the source code structured?
-* How do you handle authentication and authorization?
-* How do you remember information about the clients? E.g. cookies, sessions, tokens, etc.
-* What security vulnerability have you thought of and is protected against?
+* How is handle authentication and authorization handled?
+* How is information about the clients remembered? E.g. cookies, sessions, tokens, etc.
+* Which security vulnerabilities has been thought of and is protected against?
 * ...
 
 ::: tip Tips!
-In this chapter you can expect the reader to know a lot about how to implement web applications, so don't expect your grandpa to understand much of what you write here.
+In this chapter you can expect the reader to know a lot about how web applications work, so don't expect your grandpa to understand much of what you write here.
 :::
 
 ::: warning Remember!
-This chapter is about the web application only, so no need to describe implementation details of the database. The only thing you need to mention about the database in this chapter is how you communicates with it.
+This chapter is about the web application only, so no need to describe implementation details of the database. The only thing you need to mention about the database in this chapter is how you communicate with it.
 :::
 
 ### Other chapters
-Add whichever chapters you want. Maybe a chapter describing the website's graphical user interface is good to have? Or maybe designing that is an entire project on its own? Maybe the solution also includes a smartphone app? Then having a chapter explaining the implementation of that app would be good. Maybe our solution also includes special days people can come to a house and leave the clothes they want to sell there, and then others can come to the house and buy them? Then a chapter explaining how this work would be good, etc.
+Add whichever other chapters you want that make sense to have. Maybe a chapter describing the website's graphical user interface is good to have? Or maybe designing that is an entire project on its own? Maybe the solution also includes a smartphone app? Then having a chapter explaining the implementation of that app would be good. Or maybe the smartphone app should be described in a separate report? Maybe our solution also includes special days people can come to a house and leave the clothes they want to sell there, and then others can come to the house and buy them? Then a chapter explaining how this works would be good, etc.
 
-## something
-
-When you write the report you must always remember that you write it for the reader. Each time you hesitate over something, for example:
+## Readers are stupid!
+When you write the report you must always remember that you write it for the readers. Each time you hesitate over something, for example:
 
 * Which chapters do I need?
 * In which chapter should I write this?
 * Do I need a figure to explain this?
 * Have I explained this good enough now?
 
-Always think of the reader. Pretend you are a very stupid reader of the report, and that you don't know anything about the project work. Then try to answer these questions, and then go with the answer you come up with. 
+Always think of the reader. Pretend you are a very stupid reader of the report, and that you don't know anything about the project work. Then try to answer your question, and then go with the answer you come up with. 
 
-Remember that it doesn't matter wether you think the report is good or bad, what's important is what the readers think of your report, since they are the ones who will read it. To make them think the report is good, you often need to do more work with the report than what you think is necessary, because you know YOUR project work by heart, but the reader doesn't know anything about it, so you need to explain more things than you think.
+::: tip Your opinion about the report doesn't matter
+It doesn't matter whether you think the report is good or bad, what's important is what the readers think of your report, since they are the ones who will read it. To make them think the report is good, you often need to do more work with the report than what you initially think is necessary, because you know YOUR project work by heart, but the reader doesn't know anything about it, so you need to explain more things than you think.
+:::
 
 ## Common student mistakes
 So, which are the common mistakes students do in their reports? Here are some of them.
 
 ### Non unique solution name
+<ReportMistake>
+<template v-slot:example-1-bad>
 
-<example>
-    <bad>My Website</bad>
-    <good>ShoeSell</good>
-</example>
+My Website
 
-<example>
-    <bad>Camera App</bad>
-    <good>CamAppo</good>
-</example>
+</template>
+<template v-slot:example-1-good>
 
-<mistake>The name of the solution is very general.</mistake>
+ShoeSell
 
-<problem>The solution is hard to find for people searching on the web, and it's hard to talk about the solution (e.g. Person A: *I like the Camera App, it's a great application*, Person B: *😕 Which camera app?*).</problem>
+</template>
+<template v-slot:example-2-bad>
 
-<solution>Use a more unique name on your solution. Compare to *Google*, *Netflix*, *Spotify*, etc. Hard to come up with one? Use a [project name generator](https://www.google.se/search?q=project+name+gnerator&oq=project+name+generator).</solution>
+Camera App
+
+</template>
+<template v-slot:example-2-good>
+
+CamAppo
+
+</template>
+<template v-slot:mistake>
+
+The name of the solution is very general.
+
+</template>
+<template v-slot:problem>
+
+The solution is hard to find for people searching on the web, and it's hard to talk about the solution (e.g. Person A: *I like the Camera App, it's a great application*, Person B: *😕 Which camera app?*).
+
+</template>
+<template v-slot:solution>
+
+Use a more unique name on your solution. Compare to *Google*, *Netflix*, *Spotify*, etc. Hard to come up with one? Use a [project name generator](https://www.google.se/search?q=project+name+generator).
+
+</template>
+</ReportMistake>
 
 ### Weird solution name
-<example>
-    <bad>Jukioperlatino</bad>
-    <good>Fnelly</good>
-</example>
-<example>
-    <bad>dsfkjs</bad>
-    <good>Klanga</good>
-</example>
+<ReportMistake>
+<template v-slot:example-1-bad>
 
-<mistake>The name of the solution is too strange.</mistake>
+Jukioperlatino
 
-<problem>People can't easily talk about the solution, and remembering the name is extremely hard.</problem>
+</template>
+<template v-slot:example-1-good>
 
-<solution>Use an easier (and possibly shorter) name. Compare to *Google*, *Netflix*, *Spotify*, etc..</solution>
+Fnelly
+
+</template>
+<template v-slot:example-2-bad>
+
+dsfkjs
+
+</template>
+<template v-slot:example-2-good>
+
+Klanga
+
+</template>
+<template v-slot:mistake>
+
+The name of the solution is too strange.
+
+</template>
+<template v-slot:problem>
+
+People can't easily talk about the solution, and remembering the name is extremely hard.
+
+</template>
+<template v-slot:solution>
+
+Use an easier (and possibly shorter) name. Compare to *Google*, *Netflix*, *Spotify*, etc..
+
+</template>
+</ReportMistake>
 
 ### Components used before defined
-<example>
-    <bad>The database stores the resources on the website.</bad>
-    <good>The website has a database it uses to store the resources in.</good>
-</example>
+<ReportMistake>
+<template v-slot:example-1-bad>
 
-<mistake>The text refer to components before they have been introduced.</mistake>
+(first time the database is mentioned in the report)
 
-<problem>The reader has no idea about what you refer to (which database *The database* in the example above refers to), nor that it's part of the solution.</problem>
+The database runs on a separate server.
 
-<solution>Introduce components before you use them.</solution>
+</template>
+<template v-slot:example-1-good>
+
+(first time the database is mentioned in the report)
+
+The website has a database it uses to store the resources in.
+
+</template>
+
+<template v-slot:mistake>
+
+The text refer to components before they have been introduced.
+
+</template>
+<template v-slot:problem>
+
+The reader has no idea about what you refer to (which database *The database* in the example above refers to), nor that it's part of the solution.
+
+</template>
+<template v-slot:solution>
+
+Introduce components before you use them.
+
+</template>
+</ReportMistake>
 
 ### Ambiguous explanations
-<example>
-    <bad>The solution consists of a backend application and a frontend application. The application is...</bad>
-    <good>The solution consists of a backend application and a frontend application. The frontend application is...</good>
-</example>
+<ReportMistake>
+<template v-slot:example-1-bad>
 
-<mistake>The text is ambiguous, i.e. can be read in many different ways.</mistake>
+The solution consists of a backend application and a frontend application. The application is...
 
-<problem>The reader doesn't know what the text actually means and have to guess what the intended meaning is.</problem>
+</template>
+<template v-slot:example-1-good>
 
-<solution>Be explicit about what you mean. Don't leave any room for different interpretation anywhere in the text.</solution>
+The solution consists of a backend application and a frontend application. The frontend application is...
+
+</template>
+<template v-slot:example-2-bad>
+
+Any user can login to the application and upload photos.
+
+</template>
+<template v-slot:example-2-good>
+
+In the application any user can create and login to an account, and thereafter upload photos belonging to the account they are logged in to.
+
+</template>
+<template v-slot:mistake>
+
+The text is ambiguous, i.e. can be read in many different ways.
+
+</template>
+<template v-slot:problem>
+
+The reader doesn't know what the text actually means and have to guess what the intended meaning is. [It can end really bad for you.](https://www.xkcd.com/169/)
+
+</template>
+<template v-slot:solution>
+
+Be explicit about what you mean. Don't leave any room for different interpretations anywhere in the text.
+
+</template>
+</ReportMistake>
 
 ### Inconsistent terms
-<example>
-    <bad>The solution consists of an Android application. The app is designed...</bad>
-    <good>The solution consists of an Android application. The application is designed...</good>
-</example>
+<ReportMistake>
+<template v-slot:example-1-bad>
 
-<mistake>The text use different terms to refer to the same thing.</mistake>
+The solution consists of an Android application. The app is designed... The software securely communicates with...
 
-<problem>It's hard for the reader to read the text, and the reader gets unsure about if you refer to the same thing or two different things when you refer to it by different terms.</problem>
+</template>
+<template v-slot:example-1-good>
 
-<solution>Be consistent with which terms you are using.</solution>
+The solution consists of an Android application. The application is designed... The application securely comminutes with...
+
+</template>
+<template v-slot:mistake>
+
+The text use different terms to refer to the same thing.
+
+</template>
+<template v-slot:problem>
+
+It's hard for the reader to read the text, and the reader gets unsure about if you refer to the same thing or two different things when you refer to it by different terms.
+
+</template>
+<template v-slot:solution>
+
+Be consistent with which terms you use.
+
+</template>
+</ReportMistake>
 
 ### Making text stand out
-<example>
-    <bad>"<b><i><u>Pangoga</u></i></b>" is a platform that...</bad>
-    <good><i>Pangoga</i> is a platform that...</good>
-</example>
+<ReportMistake>
+<template v-slot:example-1-bad>
 
-<mistake>Some of the text stands out too much.</mistake>
+"<b><i><u>Pangoga</u></i></b>" is a platform that...
 
-<problem>The text is harder to read when a word stand out too much from the rest of the. For example, when you looked at this paragraph, this smiley 😃 was probably the first thing you looked at.</problem>
+</template>
+<template v-slot:example-1-good>
 
-<solution>Don't make the text stand out too much. Just using italic is probably good enough.</solution>
+<i>Pangoga</i> is a platform that...
+
+</template>
+<template v-slot:mistake>
+
+Some of the text stands out too much.
+
+</template>
+<template v-slot:problem>
+
+The text is harder to read when a word stands out too much from the rest of the text. For example, when you read this paragraph you probably look at this smiley 😃 before you are supposed to read it, stealing your focus from the text.
+
+</template>
+<template v-slot:solution>
+
+Don't make the text stand out too much. Just using italic is enough in most cases.
+
+</template>
+</ReportMistake>
 
 ### Abbreviations without explanations
-<example>
-    <bad>The GUI has been...</bad>
-    <good>The Graphical User Interface (GUI) has been...</good>
-</example>
+<ReportMistake>
+<template v-slot:example-1-bad>
 
-<mistake>The text use abbreviations without explaining what they mean.</mistake>
+The GUI has been...
 
-<problem>The reader don't know what the abbreviation mean and doesn't understand the text.</problem>
+</template>
+<template v-slot:example-1-good>
 
-<solution>Always explain what the abbreviation mean the first time you use it in the report.</solution>
+The Graphical User Interface (GUI) has been...
+
+</template>
+
+<template v-slot:mistake>
+
+The text use abbreviations without explaining what they mean.
+
+</template>
+<template v-slot:problem>
+
+The reader don't know what the abbreviation mean and doesn't understand the text.
+
+</template>
+<template v-slot:solution>
+
+Always explain what an abbreviation means the first time you use it in the report.
+
+</template>
+</ReportMistake>
 
 ### Repeating information
-<example>
-    <bad>The database contains three tables: accounts, blogposts and comments. [...] The three type of resources in the database are accounts, blogposts and comments. [...] The resources stored in the database (accounts, blogposts and comments) are all validated before they are inserted.</bad>
-    <good>The database contains three tables: accounts, blogposts and comments.</good>
-</example>
+<ReportMistake>
+<template v-slot:example-1-bad>
 
-<mistake>The same type of information is mentioned multiple times in the report, often across many different chapters.</mistake>
+The database contains three tables: accounts, blogposts and comments. [...] The three type of resources in the database are accounts, blogposts and comments. [...] The resources stored in the database (accounts, blogposts and comments) are all validated before they are inserted.
 
-<problem>Making changes in the future will be hard, since the report needs to be updated at multiple places (and oyu will probably forget to update the report at all places, which makes it inconsistent). The report does also have a poor structure if the same information is described at multiple places. For example, if the user want to find this specific information and it's written at multiple different places, it is not obvious where in the report the user should start searching for it.</problem>
+</template>
+<template v-slot:example-1-good>
 
-<solution>Don't repeat the same information, each thing worth mentioning should only be mentioned once, and it should be obvious where in the report (which chapter) each thing is described.</solution>
+The database contains three tables: accounts, blogposts and comments.
+
+</template>
+<template v-slot:mistake>
+
+The same type of information is mentioned multiple times in the report, often across many different chapters.
+
+</template>
+<template v-slot:problem>
+
+Making changes in the future will be hard, since the report needs to be updated at multiple places (and you will probably forget to update the report at all places, which makes it inconsistent). The report does also have a poor structure if the same information is described at multiple places. For example, if the user want to find this specific information and it's written at multiple different places, it is not obvious where in the report the user should start searching for it. Also, the reader doesn't get any new information by reading the same information multiple times, wasting the reader's time.
+
+</template>
+<template v-slot:solution>
+
+Don't repeat the same information; each thing worth mentioning should only be mentioned once, and it should be obvious where in the report (which chapter) each thing is described.
+
+</template>
+</ReportMistake>
 
 ### Chapters start with text
-<example>
-    <bad>[Figure] The figure above shows...</bad>
-    <good>The figure below shows... [Figure]</good>
-</example>
+<ReportMistake>
+<template v-slot:example-1-bad>
 
-<mistake>The first thing in the chapter is a figure.</mistake>
+(in the beginning of a chapter)
 
-<problem>When the reader starts reading the chapter, she has no idea why there's a figure there, or why she should look at it.</problem>
+[Actual Figure]
 
-<solution>Always start a chapter with text, and if you want the reader to immediately look at a figure, tell the reader to do that the first thing you do in the chapter.</solution>
+The figure above shows...
+
+</template>
+<template v-slot:example-1-good>
+
+(in the beginning of a chapter)
+
+The figure below shows...
+
+[Actual Figure]
+
+</template>
+<template v-slot:mistake>
+
+The first thing in the chapter is a figure.
+
+</template>
+<template v-slot:problem>
+
+When the reader starts reading the chapter, she has no idea why there's a figure there, or why she should look at it.
+
+</template>
+<template v-slot:solution>
+
+Always start a chapter with text, and if you want the reader to immediately look at a figure, tell the reader to do that the first thing you do in the chapter.
+
+</template>
+</ReportMistake>
 
 ### Chapters missing figures
-<example>
-    <bad>The default profile avatar is a picture of a human. Only the head is shown, the human is almost smiling and has blue ring above her (his?) head.</bad>
-    <good>The default profile avatar is 👼.</good>
-</example>
+<ReportMistake>
+<template v-slot:example-1-bad>
 
-<mistake>No figures are used in a chapter; the chapter only consists of text.</mistake>
+The default profile avatar is a picture of a human. Only the head is shown, the human is almost smiling and has blue ring above the head.
 
-<problem>Figures are much easier to understand and faster to interpret than reading a long wall of text. It's also easier to remember a figure than it is to remember something described in text. It's also easier to have a discussion about a figure than it is about something only described in text. Each user reading a text paints their own image in their head about what they're reading, by using a figure all readers get the same picture in their head.</problem>
+</template>
+<template v-slot:example-1-good>
 
-<solution>Use many figures in your chapters (which ones has been instructed to you).</solution>
+The default profile avatar is 👼.
+
+</template>
+<template v-slot:mistake>
+
+No figures are used in a chapter; the chapter only consists of text.
+
+</template>
+<template v-slot:problem>
+
+Figures are much easier to understand and faster to interpret than reading a long wall of text. It's also easier to remember a figure than it is to remember something described in text. It's also easier to have a discussion about a figure than it is about something only described in text. Each user reading a text creates their own image in their head about what they're reading, by using a figure all readers get the same picture in their head.
+
+</template>
+<template v-slot:solution>
+
+Use many figures in your chapters. 
+
+</template>
+</ReportMistake>
 
 ### Figures should have captions
-<example>
-    <bad>🐵</bad>
-    <good>🐵 Figure 1: Picture of Peter's pet DK.</good>
-</example>
+<ReportMistake>
+<template v-slot:example-1-bad>
 
-<mistake>Figures don't have captions.</mistake>
+🐵
 
-<problem>Without a descriptive caption, the reader is not always sure about what the figure represents, nor why it's there.</problem>
+</template>
+<template v-slot:example-1-good>
 
-<solution>Each figure should always have a descriptive caption that explains what the figure shows.</solution>
+🐵\
+Figure 1: Picture of Peter's pet DK.
+
+</template>
+<template v-slot:mistake>
+
+Figures don't have captions.
+
+</template>
+<template v-slot:problem>
+
+Without a descriptive caption, the reader is not always sure what the figure represents, nor why it's there.
+
+</template>
+<template v-slot:solution>
+
+Each figure should always have a descriptive caption that explains what the figure shows, no matter how easy it is to interpret the figure.
+
+</template>
+</ReportMistake>
 
 ### Captions should be descriptive
-<example>
-    <bad>🐵 Figure 1: A monkey.</bad>
-    <good>🐵 Figure 1: What students transforms to if they eat too many bananas (a monkey).</good>
-</example>
+<ReportMistake>
+<template v-slot:example-1-bad>
 
-<mistake>The caption doesn't describe the figure good enough.</mistake>
+🐵\
+Figure 1: A monkey.
 
-<problem>The user doesn't know why the figure is there, how it's relevant to the text nor how to interpret the figure.</problem>
+</template>
+<template v-slot:example-1-good>
 
-<solution>Use a descriptive caption. If the figure consists of components, colors, arrows, etc., describe what each component, color, arrow, etc. represent.</solution>
+🐵\
+Figure 1: What students transforms to if they eat too many bananas (a monkey).
+
+</template>
+<template v-slot:mistake>
+
+The caption doesn't describe the figure good enough.
+
+</template>
+<template v-slot:problem>
+
+The user doesn't know why the figure is there, how it's relevant to the text nor how to interpret the figure.
+
+</template>
+<template v-slot:solution>
+
+Use a descriptive caption. If the figure consists of components, colors, arrows, etc., describe what each component, color, arrow, etc. represent.
+
+</template>
+</ReportMistake>
 
 ### Figures should have figure numbers
-<example>
-    <bad>🐵</bad>
-    <good>🐵 Figure 1: What humans looked like just before we evolved from apes.</good>
-</example>
+<ReportMistake>
+<template v-slot:example-1-bad>
 
-<mistake>Figures don't have figures number.</mistake>
+🐵
 
-<problem>You can't refer to a specific figure from the text, and the reader can't easily send the report to a friend and ask the friend to look at a specific figure in the report.</problem>
+</template>
+<template v-slot:example-1-good>
 
-<solution>Give each figure a unique figure number.</solution>
+🐵\
+Figure 1: What humans looked like just before we evolved from apes.
+
+</template>
+<template v-slot:mistake>
+
+Figures don't have figures number.
+
+</template>
+<template v-slot:problem>
+
+You can't refer to a specific figure from the text, and the reader can't easily send the report to a friend and ask the friend to look at a specific figure in the report.
+
+</template>
+<template v-slot:solution>
+
+Give each figure a unique figure number.
+
+</template>
+</ReportMistake>
 
 ### Properly refer to figures
-<example>
-    <bad>The figure below shows...</bad>
-    <good>Figure 5 below shows...</good>
-</example>
+<ReportMistake>
+<template v-slot:example-1-bad>
 
-<mistake>The text refers to figures without using their figure numbers.</mistake>
+The figure below shows...
 
-<problem>It's often ambiguous which figure you refer to if you don't mention the figure number. For example, "the figure below" could refer to any of all the figures below the text, which are quite many at the beginning of the report.</problem>
+</template>
+<template v-slot:example-1-good>
 
-<solution>Refer to figures using their figure numbers.</solution>
+Figure 5 below shows...
+
+</template>
+<template v-slot:mistake>
+
+The text refers to figures without using their figure numbers.
+
+</template>
+<template v-slot:problem>
+
+It's often ambiguous which figure you refer to if you don't mention the figure number. For example, *the figure below* could refer to any of all the figures below the text, which are quite many in the beginning of the report.
+
+</template>
+<template v-slot:solution>
+
+Always refer to figures using their figure numbers.
+
+</template>
+</ReportMistake>
 
 ### The figure should be close to the relevant text
-<example>
-    <bad>[at the begging of the chapter:] Figure 4 at the end of the chapter shows...</bad>
-    <good>[at the begging of the chapter:] Figure 4 below shows...</good>
-</example>
+<ReportMistake>
+<template v-slot:example-1-bad>
 
-<mistake>The text refers to a figure, and the figure is far away.</mistake>
+(at the begging of the chapter)
 
-<problem>The reader needs to stop reading, scroll to the figure, interpret the figure, and then scroll back to the text. This is inconvenient, and the reader lose concentration, making the report much harder to read.</problem>
+Figure 4 at the end of the chapter shows...
 
-<solution>Place figures close to the text referring to the figure.</solution>
+(at the end of the chapter)
+
+[Actual Figure 4]
+
+</template>
+<template v-slot:example-1-good>
+
+(at the begging of the chapter)
+
+Figure 4 below shows...
+
+[Actual Figure 4]
+
+...
+
+</template>
+<template v-slot:mistake>
+
+The text refers to a figure, and the figure is far away.
+
+</template>
+<template v-slot:problem>
+
+The reader needs to stop reading, scroll to the figure, interpret the figure, and then scroll back to the text. This is inconvenient, and the reader lose concentration, making the report much harder to read.
+
+</template>
+<template v-slot:solution>
+
+Place figures close to the text referring to the figure.
+
+</template>
+</ReportMistake>
 
 ### Putting the figures at the end
-<example>
-    <bad>[at the end of the chapter:] Figure 8 below gives an overview of the architecture.</bad>
-    <good>[at the begging of the chapter:] Figure 8 below gives an overview of the architecture.</good>
-</example>
+<ReportMistake>
+<template v-slot:example-1-bad>
 
-<mistake>The figures are put after most of the text, making the reader first read the text, and then look at the figures.</mistake>
+...
 
-<problem>Reading text is hard, interpreting figures is easy. </problem>
+(at the end of the chapter)
 
-<solution>Put figures (often) at the beginning of the text. They give a good understanding of the big picture, and then the reader can read the text to learn the details.</solution>
+Figure 8 below gives an overview of the architecture.
+
+[Actual Figure 8]
+
+</template>
+<template v-slot:example-1-good>
+
+(at the begging of the chapter)
+
+Figure 8 below gives an overview of the architecture.
+
+[Actual Figure 8]
+
+...
+
+</template>
+<template v-slot:mistake>
+
+The figures are put after most of the text, making the reader first read the text, and then look at the figures.
+
+</template>
+<template v-slot:problem>
+
+Reading text is hard and takes time, interpreting figures is easy and can be done fast. 
+
+</template>
+<template v-slot:solution>
+
+Put figures (often) at the beginning of the text. They give a good understanding of the big picture, and then the reader can read the text to learn the details.
+
+</template>
+</ReportMistake>
 
 ### Images should not display text
-<example>
-    <bad>Figure 5 below is a screenshoot of the getAllBlogposts() function.</bad>
-    <good>Figure 5 below contains the code for the getAllBlogposts() function.</good>
-</example>
+<ReportMistake>
+<template v-slot:example-1-bad>
 
-<mistake>Code (or text in general) is shown as images/screenshots instead of text.</mistake>
+Figure 5 below is a screenshoot of the getAllBlogposts() function.
 
-<problem>Searching does not work, zooming works poorly (images have limited resolution) and copy-pasting the text doesn't work.</problem>
+![Code in image](static-files/code-as-image.png)
 
-<solution>Use text to display text, not images.</solution>
+</template>
+<template v-slot:example-1-good>
+
+Figure 5 below contains the code for the getAllBlogposts() function.
+
+```
+function getAllBlogposts(){
+   ...
+}
+```
+
+</template>
+<template v-slot:mistake>
+
+Code (text in general) is shown as images/screenshots instead of text.
+
+</template>
+<template v-slot:problem>
+
+Searching does not work, zooming works poorly (images have limited resolution) and copy-pasting the text doesn't work.
+
+</template>
+<template v-slot:solution>
+
+Always display code (and text) as text, not as images.
+
+</template>
+</ReportMistake>
 
 ### Don't use contractions
-<example>
-    <bad>The client didn't send a request.</bad>
-    <good>The client did not send a request.</good>
-</example>
+<ReportMistake>
+<template v-slot:example-1-bad>
 
-<mistake>Contractions (didn't, can't, won't, etc.) are used.</mistake>
+If the client doesn't receive back a response within 5 seconds...
 
-<problem>Contractions should not be used in report.</problem>
+</template>
+<template v-slot:example-1-good>
 
-<solution>Don't use contractions (write did not, can not, will not, etc.).</solution>
+If the client does not receive back a response within 5 seconds...
+
+</template>
+<template v-slot:mistake>
+
+Contractions (didn't, can't, won't, etc.) are used.
+
+</template>
+<template v-slot:problem>
+
+Contractions should not be used in reports.
+
+</template>
+<template v-slot:solution>
+
+Never use contractions in a report.
+
+</template>
+</ReportMistake>
 
 ### Don't use I, we, etc.
-<example>
-    <bad>We use the database MySQL to...</bad>
-    <good>A MySQL database is used to...</good>
-</example>
+<ReportMistake>
+<template v-slot:example-1-bad>
 
-<mistake>Words such as I, we, us, our, etc. are used.</mistake>
+We use the database MySQL to...
 
-<problem>The reader doesn't know who I/we are. Also, the report should often describe a solution/product, and that should be independent of who created it, so there should be no need to use I/we in a report unless you express you own opinions/decisions. Also, if you write <i>This application is developed and maintained by me.</i>, then you need to update the report if you give away the project to someone else or if you invite someone else to work on the project with you.</problem>
+</template>
+<template v-slot:example-1-good>
 
-<solution>Avoid using I, we, etc. unless you are expressing your own opinions/decisions.</solution>
+A MySQL database is used to...
+
+</template>
+<template v-slot:mistake>
+
+Words such as I, we, us, our, etc. are used.
+
+</template>
+<template v-slot:problem>
+
+The reader doesn't know who *I*/*we*/etc. are. Also, the report should often describe a solution/product, and that should be independent of who created it, so there should be no need to use I/we in a report unless you express you own opinions/decisions. Also, if you write <i>This application is developed and maintained by me.</i>, then you need to update the report if you give away the project to someone else or if you invite someone else to work on the project with you.
+
+</template>
+<template v-slot:solution>
+
+Avoid using I, we, etc. unless you are expressing your own opinions/decisions.
+
+</template>
+</ReportMistake>
 
 ### Properly mark up the text
-<mistake>A bold paragraph is used as a header.</mistake>
+<ReportMistake>
+<template v-slot:mistake>
 
-<problem>The header won't appear in a table of content, the reader gets unsure about wether the bold paragraph is a paragraph or a header, you risk end up having the bold paragraph at the end of one page, and the text belonging to it on the top of the next page.</problem>
+A bold paragraph is used as a header.
 
-<solution>Properly mark up the text.</solution>
+</template>
+<template v-slot:problem>
+
+The header won't appear in the table of content, the reader gets unsure about whether the bold paragraph is a paragraph or a header. You also risk ending up with the bold paragraph at the end of one page, and the text belonging to it on the top of next page.
+
+</template>
+<template v-slot:solution>
+
+Properly mark up the text: mark headers as headers, paragraphs as paragraphs, etc.
+
+</template>
+</ReportMistake>
 
 ### Inconsistent usage of white-space
-<example>
-    <bad>First paragraph...<br><br>Second paragraph...<br>Third paragraph...</bad>
-    <good>First paragraph...<br><br>Second paragraph...<br><br>Third paragraph...</good>
-</example>
+<ReportMistake>
+<template v-slot:example-1-bad>
 
-<mistake>Different parts of the report use white-space differently around headers, lists, paragraphs, tables, figures, etc.</mistake>
+First paragraph...<br><br>Second paragraph...<br>Third paragraph...
 
-<problem>It's hard to see the structure of the report when white-space is used differently.</problem>
+</template>
+<template v-slot:example-1-good>
 
-<solution>Be consistent with how you use white-space throughout the entire report.</solution>
+First paragraph...<br><br>Second paragraph...<br><br>Third paragraph...
+
+</template>
+<template v-slot:mistake>
+
+Different parts of the report use white-space differently around headers, lists, paragraphs, tables, figures, etc.
+
+</template>
+<template v-slot:problem>
+
+It's hard to see the structure of the report when white-space is used inconsistently. 
+
+</template>
+<template v-slot:solution>
+
+Be consistent with how you use white-space throughout the entire report.
+
+</template>
+</ReportMistake>
 
 ### Describe things where they should be described
-<example>
-    <bad>The Database chapter describes parts of the web application (e.g. how it communicates with it, or how the source code has that communicates with the database has been structured).</bad>
-    <good>The Database chapter only describes the database, the web application is not mentioned at all.</good>
-</example>
+<ReportMistake>
+<template v-slot:example-1-bad>
 
-<mistake>One thing is described in a chapter where it doesn't make sense to describe it.</mistake>
+The Database chapter describes parts of the web application (e.g. how it communicates with it, or how the source code has that communicates with the database has been structured, etc.).
 
-<problem>When the reader is looking for some specific information, she won't find it in the chapter she expects to find it in. And when she wants to only learn about a specific thing by reading the corresponding chapter, she's also forced to read the unrelated thing you describe there.</problem>
+</template>
+<template v-slot:example-1-good>
 
-<solution>In a chapter, only describe the thing the chapter is about.</solution>
+The Database chapter only describes the database, the web application is not mentioned at all.
+
+</template>
+<template v-slot:mistake>
+
+One thing is described in a chapter where it doesn't make sense to describe it.
+
+</template>
+<template v-slot:problem>
+
+When the reader is looking for some specific information, she won't find it in the chapter she expects to find it in. And when she wants to only learn about a specific thing by reading the corresponding chapter, she's also forced to read the unrelated thing you describe there.
+
+</template>
+<template v-slot:solution>
+
+In a chapter, only describe the thing the chapter is about.
+
+</template>
+</ReportMistake>
 
 ### Spelling names wrong
-<example>
-    <bad>The graphical user interface is implemented in html.</bad>
-    <good>The graphical user interface is implemented in HTML.</good>
-</example>
-<example>
-    <bad>The framework express is used to implement the web application.</bad>
-    <good>The framework Express is used to implement the web application.</good>
-</example>
+<ReportMistake>
+<template v-slot:example-1-bad>
 
-<mistake>The spelling of names (languages, frameworks, libraries, etc.) are wrong.</mistake>
+The graphical user interface is implemented in html.
 
-<problem>It's harder for the reader to read the text, and the reader is unsure what you refer to.</problem>
+</template>
+<template v-slot:example-1-good>
 
-<solution>Use the correct spelling of names. Feel free to name your own things whatever you want, but be sure to use the names others have given their solutions.</solution>
+The graphical user interface is implemented in HTML.
+
+</template>
+<template v-slot:example-2-bad>
+
+The framework express is used to implement the web application.
+
+</template>
+<template v-slot:example-2-good>
+
+The framework Express is used to implement the web application.
+
+</template>
+<template v-slot:mistake>
+
+The spelling of names (languages, frameworks, libraries, etc.) are wrong.
+
+</template>
+<template v-slot:problem>
+
+It's harder for the reader to read the text, and the reader is unsure what you refer to.
+
+</template>
+<template v-slot:solution>
+
+Use the correct spelling of names. Feel free to name your own things whatever you want, but be sure to use the correct names others have given their solutions.
+
+</template>
+</ReportMistake>
 
 ### Describe your work, not someone else's
-<example>
-    <bad>The graphical user interface is implemented in HTML. HTML is a markup language that contains the tags &lt;a&gt;, &lt;br&gt;, &lt;p&gt;, &lt;link&gt;...</bad>
-    <good>The graphical user interface is implemented in HTML<sup>[1](https://html.spec.whatwg.org/)</sup>. HTML is a markup language used to define what different type of text represents, such as headers and paragraphs.</good>
-</example>
-<example>
-    <bad>The web browser communicates with the web application by sending HTTP requests to it. HTTP is built on top of TCP, which is transport protocol for sending small packages (messages) from one computer to another.</bad>
-    <good>The web browser uses HTTP<sup>[1](https://tools.ietf.org/html/rfc2616)</sup> to communicate with the web application. In HTTP, the client (the web browser) simply sends a HTTP request to the server (the web application), telling the server what it wants it to do, then the server do that and sends back an HTTP response.</good>
-</example>
+<ReportMistake>
+<template v-slot:example-1-bad>
 
-<mistake>Techniques used to implement the solution (such as HTTP, HTML, CSS, Express, etc.) has been described in detail.</mistake>
+The graphical user interface is implemented in HTML. HTML is a markup language that contains the tags &lt;a&gt;, &lt;br&gt;, &lt;p&gt;, &lt;link&gt;...
 
-<problem>The report should be about the solution you have created, not about the techniques you use to implement it. Many readers do probably already know these techniques, and reading about them is no fun, and you describing them in vain wastes your time.</problem>
+</template>
+<template v-slot:example-1-good>
 
-<solution>Only describe what's unique to your solution. You can describe the techniques you are using (HTTP, HTML, etc.) very short and briefly, but for more information about these, provide references to their specifications/documentations and let the reader read more about them there.</solution>
+The graphical user interface is implemented in HTML<sup>[1](https://html.spec.whatwg.org/)</sup>. HTML is a markup language used to define what different type of text represents, such as headers and paragraphs.
+
+</template>
+<template v-slot:example-2-bad>
+
+The web browser communicates with the web application by sending HTTP requests to it. HTTP is built on top of TCP, which is transport protocol for sending small packages (messages) from one computer to another.
+
+</template>
+<template v-slot:example-2-good>
+
+The web browser uses HTTP<sup>[1](https://tools.ietf.org/html/rfc2616)</sup> to communicate with the web application. In HTTP, the client (the web browser) simply sends an HTTP request to the server (the web application), telling the server what it wants it to do, then the server do that and sends back an HTTP response.
+
+</template>
+<template v-slot:mistake>
+
+Techniques used to implement the solution (for example HTTP, HTML, CSS, Express, etc.) has been described in detail.
+
+</template>
+<template v-slot:problem>
+
+The report should be about the solution you have created, not about the techniques you use to implement it. Many readers do probably already know these techniques, and reading about them is no fun, and you describing them in vain wastes your time.
+
+</template>
+<template v-slot:solution>
+
+Only describe what's unique to your solution. You can describe the techniques you are using (HTTP, HTML, etc.) very short and briefly, but for more information about these, provide references to their specifications/documentations and let the reader read more about them there instead.
+
+</template>
+</ReportMistake>
