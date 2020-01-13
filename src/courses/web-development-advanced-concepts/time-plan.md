@@ -11,9 +11,9 @@ The <span style="background-color: aqua; display: inline-block; padding: 0 8px; 
 	]'
 	:rows='[
 		// 3
-		{l: "Introduction", w: "LW, PW Part 1"},
+		{l: "Introduction, Tutorial: Client-side JS", w: "LW, PW Part 1"},
 		{w: "LW, PW Part 1"},
-		{l: "Tutorial: Client-side JS", w: "LW, PW Part 1"},
+		{w: "LW, PW Part 1"},
 		{w: "LW, PW Part 2"},
 		{w: "LW, PW Part 2", s: "G2"},
 		{},
@@ -69,7 +69,7 @@ The <span style="background-color: aqua; display: inline-block; padding: 0 8px; 
 		// 10
 		{w: "PW Part 8", s: "G3"},
 		{w: "PW Part 8", s: "G1"},
-		{w: "PW Part 8"},
+		{l: "Tutorial: REST API and SPA", w: "PW Part 8"},
 		{w: "PW Part 8"},
 		{w: "PW Part 9", s: "G2"},
 		{},
@@ -83,11 +83,11 @@ The <span style="background-color: aqua; display: inline-block; padding: 0 8px; 
 		{},
 		{},
 		// 12 Exam period!
-		{},
-		{},
-		{},
-		{},
-		{},
+		{w: "PW Part 11"},
+		{w: "PW Part 11", i: "Inspera Exam"},
+		{w: "PW Part 11"},
+		{w: "PW Part 11"},
+		{w: "PW Part 11"},
 		{},
 		{},
 	]'

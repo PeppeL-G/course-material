@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Link</title>
+	<script>
+		
+		// Should be put in a separate file!
+		document.addEventListener("DOMContentLoaded", function(){
+			
+			const anchor = document.querySelectorAll("a")[0]
+			
+			anchor.addEventListener("click", function(event){
+				event.preventDefault()
+				alert("But you can't see them!")
+			})
+			
+		})
+		
+	</script>
+</head>
+<body>
+	
+	<p><a href="http://nintendo.se">Nintendo</a> have great games!</p>
+	
+</body>
+</html>

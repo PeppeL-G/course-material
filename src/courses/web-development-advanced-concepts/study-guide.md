@@ -134,13 +134,13 @@ Demonstrate the ability to evaluate the security of web applications
 Here are short introduction to the learning activities offered in the course.
 
 ### Recorded Lectures
-In the beginning of each week you will be encouraged to view some recorded lectures. These will be quite theoretical and will teach new you things you can use when building a website.
+In the beginning of some weeks you will be encouraged to view some recorded lectures. These will be quite theoretical and will teach new you things you can use when building a website.
 
 ### Tutorials
-Every second week there will be a tutorial session where the teacher will show you how to use what has been taught in the recorded lectures in practice. 
+Some weeks there will be a tutorial session where the teacher will show you how to use what has been taught in the recorded lectures in practice. 
 
 ### Lab Sessions
-Each week you may attend a 4 hours long lab session. At the lab session you may ask the teacher there for help with your laboratory work and your project work. When you have completed your laboratory work you should also demonstrate your solution to a teacher at a lab session.
+Each week you may attend a 4 hours lab session. At the lab session you may ask the teacher there for help with your laboratory work and your project work. When you have completed your laboratory work you should also demonstrate your solution to a teacher at a lab session.
 
 There are 3 different lab sessions each week, but you may only attend to one. To distribute you, join one of [the lab session groups on Ping Pong](https://pingpong.hj.se/courseId/22061/projectGroupsList.do). First come, first served. Feel free to attend other lab sessions if there is room for it, but only join one group on Ping Pong.
 
@@ -152,7 +152,7 @@ In the project work you should work in pair, so you might want to find your part
 The course contains three examination tests.
 
 ### Examination test 1: Written Examination
-2.5 credits, graded `Fail`, `3`, `4`, and `5`. More information is available on the [Written Examination](writte-examination/) page.
+2.5 credits, graded `Fail`, `3`, `4`, and `5`. More information is available on the [Written Examination](written-examination/) page.
 
 ### Examination test 2: Laboratory Work
 1 credit, graded `Fail` and `Pass`. More information is available on the [Laboratory Work](laboratory-work/) page.

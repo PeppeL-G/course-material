@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Clock</title>
+	<script>
+		
+		// Should be put in a separate file!
+		document.addEventListener("DOMContentLoaded", function(){
+			
+			const div = document.querySelector("div")
+			
+			setInterval(function(){
+				
+				const now = new Date()
+				
+				div.innerText = now.getHours()+":"+now.getMinutes()+":"+now.getSeconds()
+				
+			}, 1000)
+			
+		})
+		
+	</script>
+</head>
+<body>
+	
+	<div></div>
+	
+</body>
+</html>
