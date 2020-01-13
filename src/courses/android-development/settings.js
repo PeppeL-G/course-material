@@ -1,6 +1,6 @@
 module.exports = {
 	name: "Android Development",
-	showLink: false,
+	showLink: true,
 	pages: [
 		"",
 		"course-syllabus",

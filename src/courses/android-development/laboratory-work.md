@@ -15,16 +15,16 @@ On this page you find information about the examination test `Laboratory Work`.
 In this course, we will only use Android Studio and the tools that come with it to create Android applications. 
 
 ### On the school's computers
-If you work on the computers in E2404, E2432 or E2433, all required software should already be installed for you, so no need to install anything yourself.
+**If you work on a computer in E2404, E2432 or E2433**, all required software should already be installed for you, so no need to install anything yourself.
 
-If you work on a school computer in any other room, you need to manually install the required software through the *Software Center* application (unless someone already has done that on the specific computer you are using).
+**If you work on a school computer in any other room**, you need to manually install the required software through the *Software Center* application (unless someone already has done that on the specific computer you are using).
 
 ### On your own computer
-If you work on your own private computer, you need to download and install all required software yourself. In this course all required software is available for free for both Windows, Mac and Linux.
+**If you work on your own private computer**, you need to download and install all required software yourself. In this course all required software is available for free for both Windows, Mac and Linux.
 
 Just follow the instructions at [https://developer.android.com/studio/index.html](https://developer.android.com/studio/index.html) to download and install Android Studio.
 
-To test the android applications you create, you need to run them on an Android device. If you have your own smartphone or tablet running Android, you can use that one, just connect it to your computer using a USB cable.
+To test the android applications you create, you need to run them on an Android device. If you have your own smartphone or tablet running Android you can use that one, just connect it to your computer using a USB cable.
 
 ::: tip For Windows users
 On Windows you need to [Install OEM USB drivers](https://developer.android.com/studio/run/oem-usb.html) to be able to install Android applications on your connected Android device.
@@ -42,7 +42,7 @@ Those of you taking the course [Web Development - Advanced Concepts](../web-deve
 Getting VM acceleration to work is sometimes hard. If the emulator for some reason can't use it, it's hard to debug the reason. For example, you might get the error message `This computer meets requirements for HAXM, but VT-x is not turned on`, and the problem could be that [an antivirus program doesn't allow it to be used](https://stackoverflow.com/questions/21635504/error-during-installing-haxm-vt-x-not-working). Your development experience will be much better if you manage to enable VM acceleration, but don't spend 10 hours on trying to get it to work, then it's better to use the school's computers instead.
 :::
 
-Android Studio often reads from and writes to many files, for example when you create a new Android Studio project or when you build your application. To be efficient, it's important that reading from and writing to files is fast. There are some known cases slowing down this process, such as:
+Android Studio often reads from and writes to many files, such as when you create a new Android Studio project or when you build your application. To be efficient, it's important that reading from and writing to files is fast. There are some known cases slowing down this process, such as:
 
 * Antivirus programs you have installed
 * Windows Defender
@@ -59,7 +59,7 @@ The Graphical User Interface (GUI) for an Android application is to a large exte
 
 |Website|Android application|
 |---|---|
-| Consists of multiple webpages. | Consists of multiple Activities. |
+| Consists of multiple webpages. | Consists of multiple activities. |
 | One webpage is shown at a time. | One activity is shown at a time. |
 | URIs are used to identify webpages. | Intents are used to identify activities. |
 
@@ -71,11 +71,7 @@ Android applications on the other hand often run on devices with a small screen,
 With the introduction of fragments in Android API level 11 (Android 3), the guideline *One functionality per activity* is not that accurate since an entire application can consist of a single activity that changes which fragments it's displaying, and each fragment provides a functionality of some kind. Hence, *One feature per screen* might be a more accurate guideline.
 :::
 
-In this lab you should implement a simple ToDo app. Start by creating a new project in Android Studio.
-
-...
-
-build and run in emulator or device...
+In this lab you should implement a simple ToDo app. Start by creating a new project in Android Studio. To start easy, add an `Empty Activity` initially, only support the latest version of Android and use Kotlin as your programming language (feel free to use Java if you want, but the code mentioned below on this page is Kotlin code). 
 
 A ToDo item will be represented using the `ToDo` class shown in <FigureNumber /> below.
 
@@ -208,7 +204,7 @@ val title = theActivity.findViewById<EditText>(
 
 </Figure>
 
-Add some kind of validation so the user can't add bad ToDo items, such as a ToDo item with a too short/long title/content. Display descriptive error messages if something is invalid.
+Add some kind of validation so the user can't add bad ToDo items, such as a ToDo item with a too short/long title/content. Display descriptive error messages to the user if something is invalid, e.g. change the text in a [TextView](https://developer.android.com/reference/android/widget/TextView).
 
 ::: tip Listen for user typing
 If you want to listen for when the user types something in an `EditText` you can use a [TextWatcher](https://developer.android.com/reference/android/text/TextWatcher). This way you can validate the input as the user types it (i.e. give immediate feedback), and, for example, disable the SAVE button when the input is invalid, and enable it when the input is valid.
@@ -285,7 +281,7 @@ Before you present your work to a teacher, make sure that:
 * You understand how all code in your application works.
 
 ## Present your work
-Present your work to a teacher at one of the lab sessions. Be prepared to explain how the code in your application works. You should be able to explain all code in your application works, and the teacher will ask you some questions about it to verify this. If the teacher is satisfied with your presentation he will approve you on [the Ping Pong assignment Laboratory Work](/TODO).
+Present your work to a teacher at one of the lab sessions. Be prepared to explain how the code in your application works. You should be able to explain all code in your application works, and the teacher will ask you some questions about it to verify this. If the teacher is satisfied with your presentation he will approve you on [the Ping Pong assignment Laboratory Work](https://pingpong.hj.se/courseId/22045/content.do?id=17161360).
 
 ## Optional exercises
 These exercises are not part of the laboratory work. Feel free to complete them to practice on using various techniques/concepts used in Android applications before you use/apply them in your project work. If you get stuck you can always ask the teacher at a lab session for help. When you're done, feel free to discuss your solution with a teacher at a lab session to get some feedback on your work.

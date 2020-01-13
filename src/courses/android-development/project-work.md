@@ -45,7 +45,7 @@ I got the following grades in the following pre-requisite courses (or similar):
 The course coordinator will then try to match you with students with similar ambitions and skills as you.
 
 ::: danger To the Swedish students
-After you have joined a Project Work Group you should each day write an entry in your diary.
+After you have joined a Project Work Group you should each day you work with the project write an entry in your diary.
 :::
 
 ## Part 2: Specifying the application idea
@@ -87,7 +87,7 @@ Note that your report is a living document throughout the course. What you write
 Do not forget to write an entry in your diary each day you have done some work on your project.
 :::
 
-### Part 3: Creating Mockups
+## Part 3: Creating Mockups
 Create mockups of the graphical user interface. When you are done, show your mockups to a lab assistant at one of the lab sessions. If the lab assistant can't understand how your application will work in the end on his own jut by looking at your mockups, they or the graphical user interface is not good enough and needs to be improved.
 
 When your mockups are good enough for the lab assistant to understand how the application will work in the end, go to [the examiner's Doodle MeetMe page](https://doodle.com/peterlg) and suggest **multiple** (do not only suggest one) different **15 minutes** slots (do not suggest 30 minutes slots, or similar) you can meet him. The examiner will then get back to you once he has selected one of the slots. At that time, you should come to the examiner's office E3408 and present what you have written in the report so far, and what your mockups look like. You only have 15 minutes to do this, so be sure to come prepared and present it in an efficient way. Before the meeting, submit the assignment [Project Work: Application Idea](https://pingpong.hj.se/courseId/22045/content.do?id=17169185) on Ping Pong with the current version of your report and your mockups.
@@ -112,7 +112,7 @@ PLEASE make this easy for all of us: complete and present your `Laboratory Work`
 Start to implement your application using Android Studio. We recommend you to version control your code using a version control system, such as Git. Using a version control system is not a requirement for the project work, but it will make it much easier for you to share the code with each other. Use private repositories if possible. Both [GitHub](https://github.com) and [GitLab](https://gitlab.com) offers free private repositories.
 
 ::: tip Learn Git
-There's a small [Git course](../git/) available on this website teaching you the basics you need to know about Git to use it. The book [Pro Git](https://git-scm.com/book/en/v2) is excellent reading for those of you who want to learn more about Git.
+There's a small [Git course](../git/) available on this website teaching you the basics you need to know about Git to use it. The book [Pro Git](https://git-scm.com/book/en/v2) is excellent reading for those who want to learn more about Git.
 :::
 
 The first Android lectures will primarily focus on how to implement the graphical user interface in Android applications, so you are recommended to start by implementing that part of your application. Learning how to properly implement the graphical user interface (properly handling runtime configuration changes) is also the most difficult part of learning Android development.

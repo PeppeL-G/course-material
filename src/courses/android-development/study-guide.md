@@ -46,7 +46,7 @@ graph TD
     :teachers='[{
         name: "Peter Larsson-Green",
         photo: "peter-larsson-green.jpeg",
-        roles: ["Course coordinator", "lecturer", "lab assistant"],
+        roles: ["Course coordinator", "examiner", "lecturer", "lab assistant"],
         description: "Has studied and followed the development of the web since 2004 and received his Master of Science in Computer Science at Linköping University in 2014. He has been working as programming teacher (part time) since 2010 at both Linköping University and Jönköping University.",
         email: "Peter.Larsson-Green@ju.se",
         phone: "036 - 10 17 35",
@@ -128,18 +128,18 @@ Here are short introduction to the learning activities offered in the course.
 The lectures will teach you most of what you need to learn to pass the examination tests. In the beginning of the course there will be two lectures each week, and then one lecture each week.
 
 ### Lab Sessions
-Each week you may attend a 4 hours long lab session. At the lab session you may ask the teacher there for help with your laboratory work or the exercises. When you have completed your laboratory work you should also demonstrate your solution to a teacher at a lab sessions.
+Each week you may attend a 4 hours lab session. At the lab session you may ask the teacher there for help with your laboratory work and the project work. When you have completed your laboratory work you should also demonstrate your solution to a teacher at a lab sessions.
 
-There are 4 different lab sessions each week, but you may only come to one. To distribute you, [join one of the lab session groups on Ping Pong](https://pingpong.hj.se/courseId/21445/projectGroupsList.do). First come, first served.
+There are 5 different lab sessions each week, but you may only come to one. To distribute you, [join one of the lab session groups on Ping Pong](https://pingpong.hj.se/courseId/22045/projectGroupsList.do). First come, first served.
 
 ## Examination Tests
 The course contains the two examination tests: `Laboratory Work` and `Project Work`. To receive a final grade on the course you need to pass both examination tests. The final grade will be based on the grade for the `Project Work`.
 
-### Laboratory Work
+### Examination test 1: Laboratory Work
 More information about the `Laboratory Work` can be found on the page [Laboratory Work](laboratory-work/).
 
-### Project Work
-More information about the `Project Work` can be found on the page [Laboratory Work](laboratory-work/).
+### Examination test 2: Project Work
+More information about the `Project Work` can be found on the page [Project Work](project-work/).
 
 ### Re-examination
 Re-examination for all examination tests will be available at the re-exam periods in June and August. For more information, see each examination test's respective page.
