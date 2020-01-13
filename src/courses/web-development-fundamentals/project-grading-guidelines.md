@@ -16,7 +16,7 @@ The convention used for indenting code (such as 2 spaces, 4 spaces, a tab, etc.)
 />
 
 ## Coding Style
-The conventions used for writing comments, (not) using optional curly brackets, maximum line lengths, white-spaces in the statements, etc. For more information, see [Wikipedia's article on coding style](https://en.wikibooks.org/wiki/Computer_Programming/Coding_Style).
+The conventions used for writing comments, (not) using optional curly brackets, maximum line lengths, white-spaces in the statements, etc. For more information, see [Wikipedia's article on coding style](https://en.wikibooks.org/wiki/Computer_Programming/Coding_Style). [xkcd has a web comic about it.](https://xkcd.com/1513/)
 
 <GradingGuideline
 	gradeU="No coding style has been used or there exists too many places where the style has not been followed."
@@ -77,7 +77,7 @@ The quality of the resources on the website.
 
 
 ## Database Design
-The quality of the design of the database.
+The quality of the design of the database. [xkcd has a web comic about storing dates.](https://xkcd.com/1883/)
 
 <GradingGuideline
 	gradeU="The design is inappropriate, for example storing all resources in the same table."

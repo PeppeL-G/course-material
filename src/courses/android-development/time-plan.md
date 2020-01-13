@@ -1,79 +1,94 @@
 # Time Plan
-The <span style="background-color: lime; display: inline-block; padding: 0 8px; font-weight: bold;">Laboratory Work</span> and <span style="background-color: aqua; display: inline-block; padding: 0 8px; font-weight: bold;">Project Work</span> column indicates what you are expected to work on each day. 
+The <span style="background-color: aqua; display: inline-block; padding: 0 8px; font-weight: bold;">Work</span> column indicates what you are expected to work on each day. `LW` = `Laboratory Work`, `PW` = `Project Work`.
 
 <TimePlan
-	:startDate='new Date(2019, 7, 26)'
+	:startDate='new Date(2020, 0, 13)'
 	:columns='[
 		{key: "l", name: "Lectures", color: "orange"},
-		{key: "s", name: "Lab sessions", color: "yellow"},
-		{key: "lw", name: "Laboratory Work", color: "lime"},
-		{key: "p", name: "Project Work", color: "aqua"},
+		{key: "w", name: "Work", color: "aqua"},
+		{key: "s", name: "Lab Sessions", color: "yellow"},
 		{key: "i", name: "Important", color: "red"},
 	]'
 	:rows='[
-		// 35
-		{},
-		{s: "Group 1", l: "Introduction", lw: "Part 1"},
-		{l: "Tutorial 1: Vue", lw: "Part 1"},
-		{s: "Group 2", lw: "Part 1"},
-		{lw: "Part 1"},
+		// 3
+		{l: "Introduction, Activities"},
 		{},
 		{},
-		// 36
-		{lw: "Part 1"},
-		{l: "Tutorial 2: Vue + Async", s: "Group 1", lw: "Part 2"},
-		{lw: "Part 2"},
-		{s: "Group 2", lw: "Part 2"},
-		{lw: "Part 2"},
+		{},
+		{l: "Android, Java & Kotlin"},
 		{},
 		{},
-		// 37
-		{lw: "Part 2"},
-		{l: "Tutorial 3: REST in Express", s: "Group 1", p: "Part 1, 2"},
-		{p: "Part 2"},
-		{s: "Group 2", p: "Part 3", i: "Inspera Exam Registration Opens"},
-		{p: "Part 3"},
+		// 4
+		{l: "Layouts & Views, Menu, Jean-Charles Project Idea"},
 		{},
 		{},
-		// 38
-		{p: "Part 3"},
-		{l: "Tutorial 4: SPA Requests", s: "Group 1", p: "Part 4"},
-		{p: "Part 4"},
-		{s: "Group 2", p: "Part 4"},
-		{p: "Part 4"},
+		{},
+		{l: "Fragments, Runtime configuration changes, Dialogs"},
 		{},
 		{},
-		// 39
-		{p: "Part 5"},
-		{l: "Tutorial 5: Security", s: "Group 1", p: "Part 5"},
-		{p: "Part 5"},
-		{s: "Group 2", p: "Part 5"},
-		{p: "Part 6"},
+		// 5
+		{l: "GUI by Filip Lundeholm, 15:00-18:00!"},
 		{},
 		{},
-		// 40
-		{p: "Part 6"},
-		{l: "Tutorial 6: Repetition", s: "Group 1", p: "Part 6"},
-		{p: "Part 7"},
-		{s: "Group 2", p: "Part 7"},
-		{p: "Part 7", i: "Deadline Submit Report for Feedback"},
-		{i: "Inspera Exam Registration Closes"},
 		{},
-		// 41
-		{p: "Part 8"},
-		{l: "Guest Lecture", s: "Group 1", p: "Part 8"},
-		{l: "Sample Exam/Extra Help", p: "Part 8"},
-		{s: "Group 2", p: "Part 8"},
-		{p: "Part 8"},
+		{l: "Asynchronous operations, Permissions, Local data storage"},
 		{},
 		{},
-		// 42
-		{p: "Part 9, 10", i: "Present Project Work"},
-		{p: "Part 10", i: "Inspera Exam"},
-		{p: "Part 10"},
-		{p: "Part 9, 10", i: "Present Project Work"},
-		{p: "Part 9, 10", i: "Present Project Work"},
+		// 6
+		{l: "Services, Notifications, Broadcast receivers"},
 		{},
-		{p: "Part 11", i: "Deadline Submit Project Work"},
+		{},
+		{},
+		{},
+		{i: "Re-exam period"},
+		{i: "Re-exam period"},
+		// 7
+		{i: "Re-exam period"},
+		{i: "Re-exam period"},
+		{i: "Re-exam period"},
+		{i: "Re-exam period"},
+		{i: "Re-exam period"},
+		{i: "Re-exam period"},
+		{i: "Re-exam period"},
+		// 8
+		{l: "Bluetooth, Scheduling"},
+		{},
+		{},
+		{},
+		{},
+		{},
+		{},
+		// 9
+		{l: "Sensors", i: "PW: Halfway Meeting"},
+		{i: "PW: Halfway Meeting"},
+		{i: "PW: Halfway Meeting"},
+		{i: "PW: Halfway Meeting"},
+		{i: "PW: Halfway Meeting"},
+		{},
+		{},
+		// 10
+		{l: "Content Providers", i: "PW: Halfway Meeting"},
+		{i: "PW: Halfway Meeting"},
+		{i: "PW: Halfway Meeting"},
+		{i: "PW: Halfway Meeting"},
+		{i: "PW: Halfway Meeting"},
+		{},
+		{},
+		// 11
+		{},
+		{},
+		{},
+		{},
+		{},
+		{i: "Exam period"},
+		{i: "Exam period"},
+		// 12
+		{w: "PW: Demonstration", i: "Exam period"},
+		{w: "PW: Demonstration", i: "Exam period"},
+		{w: "PW: Demonstration", i: "Exam period"},
+		{w: "PW: Demonstration", i: "Exam period"},
+		{w: "PW: Demonstration", i: "Exam period"},
+		{i: "Exam period"},
+		{i: "Exam period, Deadline submit PW for grading."},
 	]'
 />

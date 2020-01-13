@@ -8,7 +8,7 @@ On this page you find information about the examination test `Laboratory Work`.
     "How to work": "Individually",
     "Goal": "To learn how to use client-side JavaScript.",
     "Instructions": "Complete and present your solutions to the labs on this page to a teacher at a lab session. Each lab is about improving the user experience on a webpage using client-side JavaScript.",
-    "Re-examination": "Special lab session at the re-exam period in June and in August (contact the course manager for more specific details).",
+    "Re-examination": "Special lab session at the re-exam period in June and in August. Contact the course manager for more specific details.",
     "Help": "Ask the teacher for help at the lab sessions."
 }'>
 </CompactInfo>

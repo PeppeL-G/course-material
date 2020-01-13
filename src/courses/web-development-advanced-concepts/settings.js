@@ -1,6 +1,6 @@
 module.exports = {
 	name: "Web Development - Advanced Concepts",
-	showLink: false,
+	showLink: true,
 	pages: [
 		"",
 		"course-syllabus",

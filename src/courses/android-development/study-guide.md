@@ -10,15 +10,15 @@
 />
 
 ## Introduction
-Smartphones and tablets have a huge potential to facilitate for us humans. Often, they can not only replace the old none-digital products we have, but also provide us with an even better solution. As an example, when you play a song on an instrument you need to see the notes you should play, which traditionally have been printed on papers. How easy is it to turn to the next side as you play? And consequently, the notes are usually quite small to fit as many as possible on the same paper, making them hard to read from a distance.
+Smartphones and tablets have a huge potential to facilitate for us humans. Often, they can not only replace the old none-digital products we have, but also provide us with an even better solution. As an example, when you play a song on an instrument you need to see which notes you should play, which traditionally have been printed on papers. How easy is it to turn to the next side as you play and hold an instrument in your hands? And consequently, the notes are usually quite small to fit as many as possible on the same paper, making them hard to read from a distance.
 
-Imagine the notes instead are shown on a tablet, which just displays the notes you need to play at the moment, and that automatically switches to the notes after that as you play them. Furthermore, it is also possibly to record what you play on the instrument, and then re-play it to hear what you need to practice a bit more on. Then you can compare a recording today with a recording you did three weeks ago to see how much you have improved. Used correctly, the potential benefits of these devicese are huge!
+Imagine the notes instead are shown on a tablet, which just displays the notes you need to play at the moment, and that automatically switches to the notes after that as you play them. Furthermore, it is also possibly to record what you play on the instrument, and then re-play it to hear what you need to practice a bit more on. Then you can compare a recording today with a recording you did three weeks ago to see how much you have improved. Used correctly, the potential benefits of these devices are huge!
 
-In this course you will learn how to create applications running smartphones and tablets running Android. Focus will be on learning the fundamental application components Android applications consists of, but you will also be given the opportunity to dig deeper into specific areas, such as:
+In this course you will learn how to create applications running smartphones and tablets running Android. Focus will be on learning the fundamental application components all Android applications consists of, but you will also be given the opportunity to dig deeper into specific areas, such as:
 
-* Using Bluetooth to connect to other devices
-* Using Beacons to detect when the device is close to something and react accordingly
-* Using the Internet (e.g. Firestore) to synchronize data between devices
+* Using Bluetooth to connect to other devices.
+* Using Beacons to detect when the device is close to something and react accordingly.
+* Using the Internet (e.g. Firestore) to synchronize data between devices.
 
 At course start you are expected to possess knowledge corresponding to the pre-requisite courses shown in <FigureNumber /> below. 
 
@@ -52,13 +52,21 @@ graph TD
         phone: "036 - 10 17 35",
         website: "https://ju.se/en/personinfo.html?sign=LarPet"
     }, {
+        name: "Filip Lundeholm",
+        photo: "",
+        roles: ["Lecturer"],
+        description: "User Experience designer.",
+        email: "filip@designbryggan.se",
+        phone: "",
+        website: ""
+    }, {
         name: "Linus Rudbeck",
         photo: "linus-rudbeck.jpeg",
         roles: ["Lab assistant"],
         description: "Former JTH student that studied the program Software Engineering and Mobile Platforms. Started the company Red Capes IT together with Daniel Fransén after he graduated. ",
         email: "",
         phone: "",
-        website: "https://redcapesit.se/author/linus/"
+        website: "https://redcapesit.se/"
     }, {
         name: "Rigmor Skoglund",
         photo: "rigmor-skoglund.jpeg",
@@ -77,50 +85,47 @@ The intended learning outcomes of the course are found in [the course syllabus](
 
 Display an understanding for the consequences of the Android technical and economical ecosystems
 -Project work
-+Recorded Lectures
-+Tutorials
++Lectures
++Lab Sessions
 
 Display an understanding for human interface guidelines for mobile devices
 -Project work
-+Recorded Lectures
-+Tutorials
++Lectures
++Lab Sessions
 
 Display an ability to use the Android SDK and toolchain to develop high quality Android apps
 -Project work
-+Recorded Lectures
-+Tutorials
++Lectures
++Lab Sessions
 
 Display an ability to use sensor systems using Android APIs
 -Project work
-+Recorded Lectures
-+Tutorials
++Lectures
++Lab Sessions
 
 Display an ability to use common APIs for Android
 -Project work
 -Laboratory work
-+Recorded Lectures
-+Tutorials
++Lectures
++Lab Sessions
 
 Display an ability to employ established methods to develop user interfaces for small screens with touch input
 -Project work
-+Recorded Lectures
-+Tutorials
++Lectures
++Lab Sessions
 
 Display an ability to evaluate the Android system architecture
 -Project work
-+Recorded Lectures
-+Tutorials
++Lectures
++Lab Sessions
 
 " />
 
 ## Learning Activities
 Here are short introduction to the learning activities offered in the course.
 
-### Recorded Lectures
-In the beginning of each week you will be encouraged to view some recorded lectures. These will be quite theoretical and will teach new you things you can use in programming.
-
-### Tutorials
-In the beginning of each week you will also be encouraged to complete some optional exercises. This is for you to practice on using the theory you learned in the recorded lecture. At the end of each week there will be a tutorial where the teacher will show you and discuss sample answers to the exercises.
+### Lectures
+The lectures will teach you most of what you need to learn to pass the examination tests. In the beginning of the course there will be two lectures each week, and then one lecture each week.
 
 ### Lab Sessions
 Each week you may attend a 4 hours long lab session. At the lab session you may ask the teacher there for help with your laboratory work or the exercises. When you have completed your laboratory work you should also demonstrate your solution to a teacher at a lab sessions.
@@ -137,16 +142,26 @@ More information about the `Laboratory Work` can be found on the page [Laborator
 More information about the `Project Work` can be found on the page [Laboratory Work](laboratory-work/).
 
 ### Re-examination
-Re-examination for the tests is offered at the re-exam periods in June and August. If there are some examination tests you haven't passed after that, you can re-take those tests the next time the course run.
+Re-examination for all examination tests will be available at the re-exam periods in June and August. For more information, see each examination test's respective page.
 
 ::: warning Note!
-The examination tests might have changed a little bit the next time the course run, and if you take some of them then, then you will take them according to the new description of the tests. You don't need to re-take a test you have previously passed.
+The examination tests might have changed a little bit the next time the course run, and if you re-take some of them then, then you take them according to the new description of the tests. You don't need to re-take a test you have previously passed.
 :::
 
+### Final grade
+To receive a final grade in the course you need to pass all examination tests. The final grade will be based on the grade for the `Project Work`.
+
 ## Course Literature and Other Teaching Aids
-* [Express in Action: Writing, building, and testing Node.js applications](http://proquestcombo.safaribooksonline.com.proxy.library.ju.se/book/programming/javascript/9781617292422) by Evan M. Hahn
-* [Working with Web APIs](https://launchschool.com/books/working_with_apis) by Launch School
-* [Web API Design: Crafting Interfaces that Developers Love](https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf)
+The following [CommonsWare’s Books](https://commonsware.com/catalog):
+
+* [Elements of Android Room](https://commonsware.com/Room)
+* [Elements of Android Jetpack](https://commonsware.com/Jetpack)
+* [Elements of Kotlin Coroutines](https://commonsware.com/Coroutines)
+* [Elements of Kotlin](https://commonsware.com/Kotlin)
+* [Exploring Android](https://commonsware.com/AndExplore)
+* [Elements of Android Q](https://commonsware.com/Q)
+
+They are all available online for $20 through [the Warescription program](https://commonsware.com/warescription).
 
 ## Time Plan
 A time plan is available on the page [Time Plan](time-plan/).

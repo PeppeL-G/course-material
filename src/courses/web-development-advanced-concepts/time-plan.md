@@ -40,8 +40,8 @@ The <span style="background-color: aqua; display: inline-block; padding: 0 8px; 
 		{w: "PW Part 5", l: "Tutorial: Dependency Injection and ORM"},
 		{w: "PW Part 5"},
 		{w: "PW Part 6", s: "G2"},
-		{},
-		{},
+		{i: "Re-exam period."},
+		{i: "Re-exam period."},
 		// 7 Re-exam period!
 		{i: "Re-exam period."},
 		{i: "Re-exam period."},

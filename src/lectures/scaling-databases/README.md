@@ -16,3 +16,4 @@ So, you have managed to scale your web application, to handle a huge amount of c
 * [Mongo DB is Web Scale](https://www.youtube.com/watch?v=b2F-DItXtZs)
 * [Concurrent and Scalable Storage Backends](http://berb.github.io/diploma-thesis/original/062_internals.html) (entire chapter 6)
 * [What is the difference between MySQL Replication and MySQL Cluster?](http://www.mysqlab.net/knowledge/kb/detail/topic/cluster/id/5184)
+* [Why SQL is beating NoSQL, and what this means for the future of data](https://blog.timescale.com/blog/why-sql-beating-nosql-what-this-means-for-future-of-data-time-series-database-348b777b847a/)

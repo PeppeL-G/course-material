@@ -1,5 +1,5 @@
 # Project Grading Guidelines
-This page contains guidelines for how your work will be graded. For the guidelines where it make sense, a higher grade includes the guidelines for the lower grades (for example, to be able to get `Grade 5`, you also need to follow the guidelines for `Grade 3` and `Grade 4`).
+This page contains guidelines for how your work will be graded. For the guidelines where it make sense, a higher grade includes the guidelines for the lower grades. For example, to be able to get `Grade 5`, you also need to follow the guidelines for `Grade 3` and `Grade 4`.
 
 ::: warning Note
 This page does only contain *guidelines* for how your work will be graded. When we grade your work we'll make an assessment of your entire work, which is not limited to these guidelines, so **do not use these guidelines as a checklist for a certain grade**. Instead, rather see them as minimum requirements to be able to get a certain grade.
@@ -16,7 +16,7 @@ The convention used for indenting code (such as 2 spaces, 4 spaces, a tab, etc.)
 />
 
 ## Coding Style
-The conventions used for writing comments, (not) using optional curly brackets, maximum line lengths, white-spaces in the statements, etc. For more information, see [Wikipedia's article on coding style](https://en.wikibooks.org/wiki/Computer_Programming/Coding_Style).
+The conventions used for writing comments, (not) using optional curly brackets, maximum line lengths, white-spaces in the statements, etc. For more information, see [Wikipedia's article on coding style](https://en.wikibooks.org/wiki/Computer_Programming/Coding_Style). [xkcd has a web comic about it.](https://xkcd.com/1513/)
 
 <GradingGuideline
 	gradeU="No coding style has been used or there exists too many places where the style has not been followed."
@@ -55,64 +55,34 @@ Avoid using [magic numbers](https://en.wikipedia.org/wiki/Magic_number_%28progra
 	grade5="No magic numbers exist."
 />
 
-## Resources
-The quality of the resources on the platform.
-
-<GradingGuideline
-	gradeU="It is not possible to apply CRUD operations on at least accounts + 1 other type of resource stored in a relational database."
-	grade3="The resources are validated so the database does not contain resources in bad state (such as an account with an empty username)."
-	grade4="The resources are not 'minimal', but 'rich'. For example, if a resource represents an account, it does not only consist of a username and a password, but also of more relevant information that make sense (email, city, date of birth, date signing up, whatever...)."
-	grade5="Not applicable."
-/>
-
-## Database Design
-The quality of the design of the database.
-
-<GradingGuideline
-	gradeU="The design is inappropriate, for example storing all resources in the same table."
-	grade3="Primary keys are properly used."
-	grade4="Constraints (such as unique constraints and foreign key constraints) are used correctly where suitable."
-	grade5="Data is stored using appropriate data types (especially important for booleans and dates/unix timestamps)."
-/>
-
-## REST API Design
-The quality of the design of the database.
-
-<GradingGuideline
-	gradeU="Not possible to apply CRUD operations on at least accounts + 1 other type of resource."
-	grade3="Possible to apply CRUD operations on at least accounts + 1 other type of resource."
-	grade4="Methods and URIs are properly used."
-	grade5="The report fully describes the design of the REST API, including which methods, URIs, headers, body, etc. that can be used, and what the possible responses (status code, headers, body, etc.) are."
-/>
-
 ## Error Handling
-Handling of various errors that can occur when the user is using your platform, including validation errors and database errors (both on the fronend and the backend).
+Handling of various errors that can occur when the user is using the application, such as validation errors, no network connection, the device doesn't have a camera, the user doesn't grant you a permission, etc.
 
 <GradingGuideline
-	gradeU="Errors are not handled or the error messages are confusing to the user (remember: users are not programmers)."
+	gradeU="Errors are not handled, or the error messages shown are confusing to the user."
 	grade3="Handles and display error messages for at least 90% of the errors that can occur."
 	grade4="Handles and display error messages for at least 95% of the errors that can occur."
 	grade5="Handles and display error messages for all errors that can occur."
 />
 
 ## Graphical User Interface
-The logical placement and usage of components (menus, sub-menus, pagination, forms, buttons, etc.), the support for different screen sizes (small smartphones, medium tablets, large desktop screens, etc.), the support for different input methods (touch screen, mouse, keyboard, etc.), etc.
+The logical placement and usage of components (buttons, input fields, etc.), the support for different screen sizes, how intuitive it is to use the application, etc.
 
 <GradingGuideline
-	gradeU="The frontend contains components users don't understand how to use/can't use."
-	grade3="The placement of components is logical and users understand how to use them on a desktop computer."
-	grade4="The frontend do to some extent have support for smartphones (for example having support for just the screen size or just the input method)."
-	grade5="The frontend have very good support for both smartphones and desktop computers."
+	gradeU="-"
+	grade3="The user understands how to use the application without external instructions."
+	grade4="-"
+	grade5="-"
 />
 
-## Security
-Vulnerabilities such as SQL injections, not checking authorization, storing password in plain text, improper implemented authentication, etc.
+## Fundamental application components
+The usage of fundamental application components.
 
 <GradingGuideline
-	gradeU="3 or more security vulnerabilities exist."
-	grade3="At most 2 security vulnerabilities exist."
-	grade4="At most 1 security vulnerability exists."
-	grade5="No security vulnerability exists."
+	gradeU="-"
+	grade3="Fundamental application components are used."
+	grade4="Fundamental application components are mostly used properly, such as code belonging in a service is written in a service."
+	grade5="Fundamental application components are used properly, including the communication between them (for example no global variables)."
 />
 
 ## Report
@@ -125,12 +95,88 @@ The quality of the report.
 	grade5="Everything with the report is great."
 />
 
-## Optional Tasks
-Complete [the optional tasks described in the Project Instructions](project-instructions.html#part-10-grade-4-and-5).
+## Extra Functionalities
+Implement extra functionalities listed in the table below.
 
 <GradingGuideline
 	gradeU="Not applicable."
-	grade3="No extra tasks need to be completed."
-	grade4="The extra tasks SDK and Supporting Multiple Data Formats needs to be completed."
-	grade5="The extra task Third-Party Authentication needs to be completed."
+	grade3="Implement extra functionalities worth at least 3 points in total."
+	grade4="Implement extra functionalities worth at least 7 points in total."
+	grade5="Implement extra functionalities worth at least 11 points in total."
 />
+
+::: warning Note!
+You may not get all the points for the functionality you implement. You need to implement the functionality in a good way to get all the points for that functionality.
+:::
+
+<table>
+    <thead>
+        <tr>
+            <th>Points</th>
+            <th>Feature</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Multiple languages</td>
+            <td>
+                Full support for at least two languages everywhere (English + one more):
+                <ul>
+                    <li>No strings shown to the user hardcoded in your Kotlin/Java code (use string resources).</li>
+                    <li>No strings shown to the user hardcoded in your XML code (use string resources).</li>
+                    <li>Text entered by the users will of course only be in one language.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Runtime permissions</td>
+            <td>On newer versions of Android, ask for the permissions you need at runtime (when you need them). If you don't get them, deal with it in a good way.</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Runtime configuration changes</td>
+            <td>
+                Handle runtime configuration changes in a good way throughout the entire application, such as:
+                <ul>
+                    <li>HTTP requests are not re-sent.</li>
+                    <li>Bluetooth connections are maintained.</li>
+                    <li>Results of long running operations are cached.</li>
+                </ul>
+                Use model fragments, ViewModels, or whatever you prefer.
+            </td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Widget</td>
+            <td>Create a widget the user can use from the launcher. Too simple widgets (such as only "click on the widget to start an activity") are not accepted.</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Foreground service</td>
+            <td>Make use of a foreground service in a suitable way (important background computations, geofences, Bluetooth connections, etc.).</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Re-using fragments</td>
+            <td>Re-use none-elementary fragments you have created, such as one fragment showing a list of items, another one showing a single item, and then show one fragment at a time on a small screen and show both side-by-side on a large screen.</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Third-party authentication</td>
+            <td>Let users login with their account from another company, such as Google or Facebook.</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Loading indicators</td>
+            <td>When the application starts a long running operation/waits for something, show a loading indicator of some kind reflecting this. Remove the loading indicator afterwards.</td>
+        </tr>
+        <tr>
+            <td>?</td>
+            <td>Own suggestions</td>
+            <td>Come up with your own suggestions of extra functionality. Describe the functionality and email the examiner for approval at [Peter.Larsson-Green@ju.se](mailto:Peter.Larsson-Green@ju.se).</td>
+        </tr>
+    </tbody>
+</table>

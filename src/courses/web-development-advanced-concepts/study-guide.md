@@ -31,7 +31,7 @@
         name: "Muhammad Ismail",
         photo: "muhammad-ismail.jpeg",
         roles: ["Lab assistant"],
-        description: "Currently PhD student at JU.",
+        description: "Laboratory Engineer at JTH.",
         email: "Muhammad.Ismail@ju.se",
         phone: "036 - 10 15 92",
         website: "https://ju.se/en/personinfo.html?sign=IsmMuh"
@@ -84,7 +84,7 @@ The intended learning outcomes of the course are found in the [Course Syllabus](
 
 Display knowledge of the need for, and the use of, Content Delivery Networks
 -Written Examination
-+Recorded lecture: Content Delivery Networks
++Tutorial
 
 Display knowledge of the challenges inherent in and technologies used for the construction of scalable web applications (NOSQL databases, horizontal scaling with session management, data partitioning and sharding, etc.)
 -Project Work
@@ -137,15 +137,15 @@ Here are short introduction to the learning activities offered in the course.
 In the beginning of each week you will be encouraged to view some recorded lectures. These will be quite theoretical and will teach new you things you can use when building a website.
 
 ### Tutorials
-Each week there will be a tutorial session where the teacher will show you how to use what has been taught in the recorded lectures for that week in practice. 
+Every second week there will be a tutorial session where the teacher will show you how to use what has been taught in the recorded lectures in practice. 
 
 ### Lab Sessions
-Each week you may attend a 4 hours long lab session. At the lab session you may ask the teacher there for help with your laboratory work or your project work. When you have completed your laboratory work you should also demonstrate your solution to a teacher at a lab sessions.
+Each week you may attend a 4 hours long lab session. At the lab session you may ask the teacher there for help with your laboratory work and your project work. When you have completed your laboratory work you should also demonstrate your solution to a teacher at a lab session.
 
 There are 3 different lab sessions each week, but you may only attend to one. To distribute you, join one of [the lab session groups on Ping Pong](https://pingpong.hj.se/courseId/22061/projectGroupsList.do). First come, first served. Feel free to attend other lab sessions if there is room for it, but only join one group on Ping Pong.
 
 ::: warning Note!
-In the project work you should work in pair, so you might want to find your partner o work with before you join a lab session group. You're also welcome to change lab session group later. 
+In the project work you should work in pair, so you might want to find your partner to work with before you join a lab session group. You're also welcome to change lab session group later. 
 :::
 
 ## Examination Tests
@@ -161,10 +161,14 @@ The course contains three examination tests.
 4 credits, graded `Fail`, `3`, `4` and `5`. More information is available on the [Project Work](project-work/) page.
 
 ### Re-examination
-Re-examination for all examination tests will be available at the re-exam periods in June and August. For more information, see the examination tests' respective pages.
+Re-examination for all examination tests will be available at the re-exam periods in June and August. For more information, see each examination test's respective page.
 
-## Final grade
-To receive a final grade in the course you need to pass all examination tests (`Written Examination`, `Laboratory Work` and `Project Work`). The final grade will be based on the lowest grade of the `Project Work` and the `Written Examination`, but these grades will also be marked as *weak* or *strong*. If one of the grades is lower than the other and has been marked as *strong*, the final grade will be the lower grade + 1. For example, a strong 3 and a weak 4 gives you 4 as the final grade, while a weak 3 and a strong 5 gives you 3 as the final grade. For the Written Examination, 50% of max score is a strong 3, and 70% of max score is a strong 4.
+::: warning Note!
+The examination tests might have changed a little bit the next time the course run, and if you re-take some of them then, then you take them according to the new description of the tests. You don't need to re-take a test you have previously passed.
+:::
+
+### Final grade
+To receive a final grade in the course you need to pass all examination tests. The final grade will be based on the lowest grade of the `Project Work` and the `Written Examination`, but these grades will also be marked as *weak* or *strong*. If one of the grades is lower than the other and has been marked as *strong*, the final grade will be the lower grade + 1. For example, a strong 3 and a weak 4 gives you 4 as the final grade, while a weak 3 and a strong 5 gives you 3 as the final grade. For the `Written Examination`, 50% of max score is a strong 3, and 70% of max score is a strong 4.
 
 ## Course Literature and Other Teaching Aids
 * [Eloquent JavaScript 3rd edition](https://eloquentjavascript.net/) by Marijn Haverbeke

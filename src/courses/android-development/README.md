@@ -10,7 +10,7 @@ This website will be used to host the course material, but you still need to joi
 Ping Pong will be used to keep track of your progress in the course, to distribute you among the lab session groups, to handle submissions of your laboratory work, etc. You should only need to use Ping Pong when you are instructed to do that on this website (e.g. when submitting your laboratory work).
 
 ::: warning Note to old students
-If you're an old student that took this course a previous year but still have some examination tests left to pass you take those tests as they are described this year.
+If you're an old student that took this course a previous year but still have some examination tests left to pass you take those tests as they are described this year. Also join this year's Ping Pong event, since the last year's Ping Pong event won't be used any more.
 :::
 
 ::: danger Swedish VS International Students
@@ -23,6 +23,6 @@ Will in the next study period take the course [Gruppdynamik (TGYG19, 3 Credits)]
 
 More information about this later, but what's important for you to know now is that:
 
-* Swedish students will not work with international students in this course (the groups you use in this course will be used in the Gruppdynamik course as well).
+* Swedish students will not work with international students in this course (the project work groups you use in this course will be used in the Gruppdynamik course as well).
 * Swedish students failing to participate in the project work in this course will have a hard time passing the Gruppdynamik course since they won't have a diary of good enough quality to use in that course.
 :::

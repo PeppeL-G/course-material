@@ -3,7 +3,7 @@ Welcome to the course *Introduction to Script Programming*! In this course you'l
 
 This website will be used to host the course material, but you still need to join the course's Ping Pong event:
 
-1. Go to [the event cataloge on Ping Pong](https://pingpong.hj.se/courseCatalog.do).
+1. Go to [the event catalogue on Ping Pong](https://pingpong.hj.se/courseCatalog.do).
 2. Find the event `Introduction to Script Programming - TSPG17 - A19`.
 3. Join ("Start") the event by providing the password `TSPG17A1943`.
 
