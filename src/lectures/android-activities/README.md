@@ -22,4 +22,4 @@ Activities are one of the four different fundamental application components all 
     * Setting up the App Bar
     * Setting up an Activity
 
-The [Android Developers Guide](https://developer.android.com/guide) i a free alternative.
+The [Android Developers Guide](https://developer.android.com/guide) is a free alternative.
