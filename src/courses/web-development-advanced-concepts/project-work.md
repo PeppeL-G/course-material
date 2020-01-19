@@ -321,6 +321,7 @@ On your platform, users should at least be able to create new resources and to b
 Before you start working on this part, you are recommended to:
 
 * View the following recorded lectures:
+    * [Handling Concurrent HTTP Requests](../../lectures/handling-concurrent-http-requests/)
     * [Scaling Web Applications](../../lectures/scaling-web-applications/)
     * [Scaling Databases](../../lectures/scaling-databases/)
 

@@ -10,7 +10,7 @@ So, our web application receives 1000 requests/second, how does it handle that a
 
 ## Lecture material
 * [handling-concurrent-http-requests.pdf](handling-concurrent-http-requests.pdf)
-* [handling-concurrent-http-requests.pptx]handling-concurrent-http-requests(.pptx)
+* [handling-concurrent-http-requests.pptx](handling-concurrent-http-requests.pptx)
 
 ## Recommended reading
 * [Node JS Architecture – Single Threaded Event Loop](https://www.journaldev.com/7462/node-js-architecture-single-threaded-event-loop)
