@@ -251,6 +251,7 @@ Then create a new file in `/platform/database` called `initialize-database.sql`.
 
 The database image can be started and stopped in the same way as your web application image. After you have started it you should be able to connect to it from your host computer using [http://localhost:3306](http://localhost:3306) (or the Docker Machine's IP address). If you have a MySQL Database Management Tool (such as [MySQL Workbench](https://www.mysql.com/products/workbench/) or one of the [MySQL extensions to Visual Studio Code](https://marketplace.visualstudio.com/search?term=mysql&target=VSCode)), try it out!
 
+### Using Docker Compose
 Docker has a tool called [Docker Compose](https://docs.docker.com/compose/) that greatly simplifies for us to start and stop multiple containers at the same time, as well as handle the connection between them (which we need, since the web application needs to communicate with the database). To use it, simply create a file in `/platform` called `docker-compose.yml` with the content shown in <FigureNumber /> below. 
 
 <Figure caption="The content of docker-compose.yml in /platform.">
@@ -278,7 +279,17 @@ services:
 
 </Figure>
 
-Your images can now be built and started in containers using the `docker-compose up` command in `/platform`, and the web application can now use the domain name `database` to connect to the MySQL database that runs in another container. However, if you make changes which requires your images to be re-built, you need to re-build them manually yourself, or you can start docker compose with the `--build` flag (in which case docker will re-build the images before it starts them).
+Your images can now be built and started in containers using the `docker-compose up` command in `/platform`, and the web application can now use the domain name `database` to connect to the MySQL database that runs in another container.
+
+::: tip Rebuilding images
+`docker-compose up` will run the latest build of your images. If you make changes to an image, you need to rebuild it before using `docker-compose up`, or simply use the command `docker-compose --build`.
+:::
+
+::: warning Handling anonymous volumes
+The MySQL image uses an anonymous volume to store it's data, and by default it's only created the first time you start it using `docker-compose up`. A result of this is that your SQL code in the `/docker-entrypoint-initdb.d/` in the image will only be executed the first time you start it with `docker-compose up`. The next time you run `docker-compose up` it will resume using the tables from before and not execute your SQL code in `/docker-entrypoint-initdb.d/`. This is usually NOT what you want. You can get around this by using the command `docker-compose down` before you run `docker-compose up`, or you can add the flag `--renew-anon-volumes` to `docker-compose up`.
+
+For more information, see [Issue #2127 in the Docker Compose repository](https://github.com/docker/compose/issues/2127).
+:::
  
 ## Part 4: Implementing the Web Application
 Before you start working on this part, you are recommended to:
@@ -313,7 +324,7 @@ graph LR
 
 There exists different ways one can separate the code into these three layers. The simplest way is probably to just create three different folders, one for each layer, and then put all code belonging to a layer in the corresponding folder.
 
-To help you get started you can use the skeleton code available in the ZIP file [the-community.zip](static-files/the-community).
+To help you get started you can use the skeleton code available in the ZIP file [the-community.zip](static-files/the-community.zip).
 
 On your platform, users should at least be able to create new resources and to browse and view existing resources. You do not need to implement update and delete functionality; that is an extra task you can complete at the end of the course if you have time for it. You neither need to implement authorization/login functionality now. That is the next part of the project work. 
 

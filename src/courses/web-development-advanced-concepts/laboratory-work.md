@@ -79,7 +79,7 @@ The file <a href="static-files/lab-03-form-validation.html" target="_blank">lab-
 * The first password field must contain at least 8 characters.
 * The second password field must be equal to the first password field.
 
-If something is wrong, display the error messages on the screen (in the HTML code; it is not OK to use the `alert()` function). Otherwise (if everything is valid), just let the form be submitted (so the server receives it, although in this case, no server exists).
+If something is wrong, display the error messages on the screen (in the HTML code using JavaScript; it is not OK to use the `alert()` function). Otherwise (if everything is valid), just let the form be submitted (so the server receives it, although in this case, no server exists).
 
 Some DOM functionalities you might find helpful:
 
@@ -87,7 +87,7 @@ Some DOM functionalities you might find helpful:
 * `aString.includes(aSubString)` to check if `aString` contains `aSubString`.
 
 ::: warning Note!
-A user should only see an error like "Cannot send POST request." when the form is submitted and there are no validation errors. If there are validation errors, the form should not be submitted.
+The form should be submitted if there are no validation errors. If you open the webpage using the `file` protocol, the web browser will simply reload the webpage when the form is submitted.
 :::
 
 ## Lab 4: Tabs
