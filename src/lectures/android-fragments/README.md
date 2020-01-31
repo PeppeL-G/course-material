@@ -25,7 +25,7 @@ The `CounterFragment` contains a counter button starting on 0. Its state is reta
 <Tab title="MainActivity.kt">
 
 ```kotlin
-class MainActivity : BaseActivity() {
+class MainActivity : AppCompatActivity() {
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

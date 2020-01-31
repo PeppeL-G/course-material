@@ -16,13 +16,48 @@ So, how can Android that easily support i18n? The secret is through is how it ha
     * [Coping with Configurations](https://wares.commonsware.com/app/internal/book/Jetpack/page/chap-config-001.html)
 
 ## Example
-An activity with a counter button storing it's state using a Bundle.
+`MainActivity` with a button functioning as a counter starting on 0. It retains its state using the savedInstanceStateBundle..
 
-<Tabs remember-selected-key="example-987">
+<Tabs remember-selected-key="example-675">
 <Tab title="MainActivity.kt">
 
 ```kotlin
-sdfsf
+class MainActivity : AppCompatActivity() {
+    
+    companion object {
+        const val KEY_COUNTER = "COUNTER"
+    }
+    
+    var counter = 0
+    
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        
+        counter = when(savedInstanceState){
+            null ->
+                0
+            else ->
+                savedInstanceState.getInt(KEY_COUNTER)
+        }
+        
+        val button: Button = findViewById(R.id.button)
+        with(button){
+            text = "$counter"
+            setOnClickListener {
+                counter += 1
+                text = "$counter"
+            }
+        }
+    
+    }
+    
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt(KEY_COUNTER, counter)
+    }
+    
+}
 ```
 
 </Tab>
