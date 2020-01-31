@@ -282,7 +282,7 @@ services:
 Your images can now be built and started in containers using the `docker-compose up` command in `/platform`, and the web application can now use the domain name `database` to connect to the MySQL database that runs in another container.
 
 ::: tip Rebuilding images
-`docker-compose up` will run the latest build of your images. If you make changes to an image, you need to rebuild it before using `docker-compose up`, or simply use the command `docker-compose --build`.
+`docker-compose up` will run the latest build of your images. If you make changes to an image, you need to rebuild it before using `docker-compose up`, or simply use the command `docker-compose up --build`.
 :::
 
 ::: warning Handling anonymous volumes
