@@ -13,3 +13,7 @@ Material from the lectures will be uploaded here after each lecture.
 * [Android Runtime Configuration Changes](../../lectures/android-runtime-configuration-changes/)
 * [Android Fragment](../../lectures/android-fragments/)
 * [Android Dialogs](../../lectures/android-dialogs/)
+* [Android Permissions](../../lectures/android-permissions/)
+* [Android Asynchronous Operations](../../lectures/android-asynchronous-operations/)
+* [Android File System](../../lectures/android-file-system/)
+* [Android SQLite Database](../../lectures/android-sqlite-database/)
