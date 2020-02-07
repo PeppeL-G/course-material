@@ -18,6 +18,6 @@ Material from the lectures will be uploaded here after each lecture.
 * [Android File System](../../lectures/android-file-system/)
 * [Android SQLite Database](../../lectures/android-sqlite-database/)
 * [Kotlin Asynchronous Operations](../../lectures/kotlin-asynchronous-operations/)
-* [Android Services](../../lectures/android-Services/)
+* [Android Services](../../lectures/android-services/)
 * [Android Notifications](../../lectures/android-notifications/)
 * [Android Broadcast Receivers](../../lectures/android-broadcast-receivers/)
