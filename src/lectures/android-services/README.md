@@ -1,0 +1,17 @@
+---
+sidebar: auto
+navbarTitle: Android Services
+---
+
+# Android Services
+So, you want your application to keep on running even if the user leaves your activities and start another application? Then tell android about it, and have your code continue to be executed by a service.
+
+## Lecture material
+* [android-services.pdf](android-services.pdf)
+* [android-services.pptx](android-services.pptx)
+
+## Recommended reading
+The following chapters from the course book *The Busy Coder's Guide to Android Development*:
+* [Services and the Command Pattern](https://wares.commonsware.com/app/internal/book/Android/page/chap-services-001.html)
+
+The [Android Developers Guide's page about Services](https://developer.android.com/guide/components/services).

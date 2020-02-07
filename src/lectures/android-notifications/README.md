@@ -1,0 +1,18 @@
+---
+sidebar: auto
+navbarTitle: Android Notifications
+---
+
+# Android Notifications
+Services have no graphical user interface, so what if you have code running in the background that suddenly needs to inform the user about something? Notifications to the rescue. Use them to get your users' attention, but try avoid annoying the user too much.
+
+## Lecture material
+* [android-notifications.pdf](android-notifications.pdf)
+* [android-notifications.pptx](android-notifications.pptx)
+
+## Recommended reading
+The following chapters from the course book *The Busy Coder's Guide to Android Development*:
+* [Notifications](https://wares.commonsware.com/app/internal/book/Android/page/chap-notify-001.html)
+* [Advanced Notifications](https://wares.commonsware.com/app/internal/book/Android/page/chap-advnotify-001.html)
+
+The [Android Developers Guide's page about Notifications](https://developer.android.com/guide/topics/ui/notifiers/notifications).
