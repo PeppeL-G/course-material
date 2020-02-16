@@ -21,3 +21,4 @@ Material from the lectures will be uploaded here after each lecture.
 * [Android Services](../../lectures/android-services/)
 * [Android Notifications](../../lectures/android-notifications/)
 * [Android Broadcast Receivers](../../lectures/android-broadcast-receivers/)
+* [Android Bluetooth Classic](../../lectures/android-bluetooth-classic/)

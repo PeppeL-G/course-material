@@ -51,7 +51,7 @@ The <span style="background-color: aqua; display: inline-block; padding: 0 8px; 
 		{i: "Re-exam period"},
 		{i: "Re-exam period"},
 		// 8
-		{l: "Bluetooth, Scheduling", w: "PW: Part 4"},
+		{l: "Bluetooth", w: "PW: Part 4"},
 		{w: "PW: Part 4"},
 		{w: "PW: Part 4"},
 		{w: "PW: Part 4"},
@@ -59,7 +59,7 @@ The <span style="background-color: aqua; display: inline-block; padding: 0 8px; 
 		{},
 		{},
 		// 9
-		{l: "Sensors", i: "PW: Halfway Meeting", w: "PW: Part 4"},
+		{l: "Scheduling, Sensors", i: "PW: Halfway Meeting", w: "PW: Part 4"},
 		{i: "PW: Halfway Meeting", w: "PW: Part 4"},
 		{i: "PW: Halfway Meeting", w: "PW: Part 4"},
 		{i: "PW: Halfway Meeting", w: "PW: Part 4"},
