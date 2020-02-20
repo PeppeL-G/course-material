@@ -7,10 +7,10 @@ navbarTitle: Report Writing
 There are some common mistakes students do the first time they try to write a report describing the project work they've done. In this lecture some of those mistakes are covered so you can avoid doing them yourself. But first some important theory to know before you start writing your report.
 
 ## What is a project?
-Most reports are associated with a project, so you must have a good understanding of what a project is before you write a report on one. [Wikipedia's Project page](https://en.wikipedia.org/wiki/Project) has a long definition of the term, but let us focus on projects that involves the creation of software of some kind only. A project is always about a problem that should be solved and the solution you create that solves that problem, and in our case the solution will involve the creation of some kind of software.
+Most reports are associated with a project, so you must have a good understanding of what a project is before you write a report on one. [Wikipedia's Project page](https://en.wikipedia.org/wiki/Project) has a long definition of the term, but let us only focus on projects where the goal is to implement some software. A project is always about a problem that should be solved, and the solution (in this case the software) you create should solve that problem.
 
 ### The problem
-The goal with the software you create is to get people to use it (no point in creating something no one will use). Why would they use it? Because it will help them in some way. So the first thing you should decide in a project work is: *What is the problem people are having and that we try to solve in this project*? Examples of problems are:
+The goal with the software you create is to get people to use it (no point in creating something no one will use). Why would they use it? Because it will help them in some way. So the first thing you should decide in a project work is: *What is the problem people are having that we will try to solve in this project*? Examples of problems are:
 
 * Crossing the road is dangerous.
 * Waiting (in line, at a bus stop, at the traffic lights, etc.) is boring AND a waste of time (two problems in one).
@@ -34,17 +34,17 @@ When you have identified a problem to solve, you need to analyze the problem in 
 * How does the problem impact the rest of their lives?
 * Etc.
 
-To analyse the problem could be a big project itself taking many months, but let us keep things minimal here (you don't have time to do an analyze in depth for the project works you do in school) and move on.
+To analyse the problem in depth could be a big project itself taking many months, but let us keep things minimal here (you don't have time to do an analyze the project in depth for the project works you do in school) and move on.
 
 ### The solution
-When you have a good understanding of the problem, you need to come up with a solution to the the problem. What the solution looks like do of course depends on what the problem is, but in our case the solution will always involve the creation of some kind of software. For example, if the problem is *My children has grown up and now I have a lot of small clothes no one in the family can use*, then maybe the solution could be to create a website where people can sell their clothes to others.
+When you have a good understanding of the problem, you need to come up with a solution to the problem. What the solution looks like do of course depends on what the problem is, but in our case the solution will always involve the creation of software. For example, if the problem is *My children has grown up and now I have a lot of small clothes no one in the family can use*, then maybe the solution could be to create a website where people can sell their clothes to others.
 
 Often you don't only come up with one solution, but many different solutions (coming up with different solutions could be a project itself taking many months), and then you continue to work with the solution you think is the most promising one. When you do, you need to be sure that the people having the problem really think that your solution is a good solution and are willing to use it (optimally willing to pay money for it 🤑). You can compare your solution to existing solutions to see if your solution seems to be better. For example, parents might throw/give away their children clothes for free now, but with your solution they would get some money for them, which would make them prefer your solution. Making a survey and asking the people having the problem is of course also a very good idea.
 
 When you have decided which solution to go with, you need to realize it (in the previous example build the website), and this is what your project work will be about.
 
 ## Report structure
-Most reports are quite long, so we divide them into chapters, making it a bit more structured. But which chapters should we have? In which order should they be? There's no single correct answer to this, but let me give you an example of a good structure.
+Most reports are quite long, so we divide them into chapters, making them a bit more structured. But which chapters should we have? In which order should they be? There's no single correct answer to this, but let me give you an example of a good structure.
 
 ### Chapter 1: Introduction
 The first chapter in the report should introduce the reader to the project. The reader does so far not know anything about your project, so the first thing you need to explain to the reader is which problem you try to solve and how you intend to solve it.
@@ -70,7 +70,7 @@ In our case the solution consists of two components we create ourselves:
 We have a lot to say about these, but that will be implementation details, and those are probably better described in other chapters, so this chapter is just about the architecture of the solution (an overview of the solution). This way, readers who don't know much about programming should still be able to read and understand most parts of this chapters.
 
 ::: tip Tips!
-In our case we describe the architecture of our solution in this chapter, so maybe *Architecture* is a more accurate name on the chapter than *Solution*? 
+In our case we describe the architecture of our solution in this chapter, so maybe *Architecture* is a more accurate chapter name than *Solution*? 
 :::
 
 ::: tip Keep it simple!
@@ -99,7 +99,7 @@ We can use a separate chapter to describe the web application component in our s
 
 * Which framework is the web application implemented in?
 * How is the source code structured?
-* How is handle authentication and authorization handled?
+* How is authentication and authorization handled?
 * How is information about the clients remembered? E.g. cookies, sessions, tokens, etc.
 * Which security vulnerabilities has been thought of and is protected against?
 * ...
@@ -113,20 +113,20 @@ This chapter is about the web application only, so no need to describe implement
 :::
 
 ### Other chapters
-Add whichever other chapters you want that make sense to have. Maybe a chapter describing the website's graphical user interface is good to have? Or maybe designing that is an entire project on its own? Maybe the solution also includes a smartphone app? Then having a chapter explaining the implementation of that app would be good. Or maybe the smartphone app should be described in a separate report? Maybe our solution also includes special days people can come to a house and leave the clothes they want to sell there, and then others can come to the house and buy them? Then a chapter explaining how this works would be good, etc.
+Add whichever other chapters you want that make sense to have. Maybe a chapter describing the website's graphical user interface is good to have? Or maybe designing the graphical user interface is an entire project on its own? Maybe the solution also includes a smartphone app? Then having a chapter explaining the implementation of that app maybe would be good? Or maybe the smartphone app should be described in a separate report? Maybe our solution also includes special days people can come to a house and leave the clothes they want to sell there, and then others can come to the house and buy them? Then a chapter explaining how this works would be good, etc.
 
 ## Readers are stupid!
-When you write the report you must always remember that you write it for the readers. Each time you hesitate over something, for example:
+When you write a report you must always remember that you write it for the readers. Each time you hesitate over something, for example:
 
 * Which chapters do I need?
 * In which chapter should I write this?
 * Do I need a figure to explain this?
 * Have I explained this good enough now?
 
-Always think of the reader. Pretend you are a very stupid reader of the report, and that you don't know anything about the project work. Then try to answer your question, and then go with the answer you come up with. 
+Always think of the reader. Pretend you are a very stupid reader of the report, and that you don't know anything about the project. Then try to answer your question, and then go with the answer you come up with. 
 
 ::: tip Your opinion about the report doesn't matter
-It doesn't matter whether you think the report is good or bad, what's important is what the readers think of your report, since they are the ones who will read it. To make them think the report is good, you often need to do more work with the report than what you initially think is necessary, because you know YOUR project work by heart, but the reader doesn't know anything about it, so you need to explain more things than you think.
+It doesn't matter whether you think the report is good or bad, what's important is what the readers think of your report, since they are the ones who will read it. To make them think the report is good, you often need to do more work on it than you initially think is necessary, because you know YOUR project work by heart, but the reader doesn't know anything about it, so you need to explain more things than you think.
 :::
 
 ## Common student mistakes
@@ -263,7 +263,7 @@ Any user can login to the application and upload photos.
 </template>
 <template v-slot:example-2-good>
 
-In the application any user can create and login to an account, and thereafter upload photos belonging to the account they are logged in to.
+In the application any user can create and login to an account, and thereafter upload photos belonging to the account they logged in to.
 
 </template>
 <template v-slot:mistake>
@@ -278,7 +278,7 @@ The reader doesn't know what the text actually means and have to guess what the 
 </template>
 <template v-slot:solution>
 
-Be explicit about what you mean. Don't leave any room for different interpretations anywhere in the text.
+Be explicit about what you mean. Don't leave any room for different interpretations anywhere in the report.
 
 </template>
 </ReportMistake>
@@ -331,7 +331,7 @@ Some of the text stands out too much.
 </template>
 <template v-slot:problem>
 
-The text is harder to read when a word stands out too much from the rest of the text. For example, when you read this paragraph you probably look at this smiley 😃 before you are supposed to read it, stealing your focus from the text.
+The text is harder to read when a word stands out too much from the rest of the text. For example, when you read this paragraph chances are you looked at this smiley 😃 before you were supposed to, stealing your focus from the text. It can even steal your focus when you read this text, which appears after it.
 
 </template>
 <template v-slot:solution>
@@ -356,12 +356,12 @@ The Graphical User Interface (GUI) has been...
 
 <template v-slot:mistake>
 
-The text use abbreviations without explaining what they mean.
+The text uses abbreviations without explaining what they mean.
 
 </template>
 <template v-slot:problem>
 
-The reader don't know what the abbreviation mean and doesn't understand the text.
+The reader doesn't know what the abbreviation mean and doesn't understand the text.
 
 </template>
 <template v-slot:solution>
@@ -432,7 +432,7 @@ When the reader starts reading the chapter, she has no idea why there's a figure
 </template>
 <template v-slot:solution>
 
-Always start a chapter with text, and if you want the reader to immediately look at a figure, tell the reader to do that the first thing you do in the chapter.
+Always start a chapter with text, and if you want the reader to immediately look at a figure, tell the reader to do that the first thing you write in the chapter.
 
 </template>
 </ReportMistake>
@@ -491,7 +491,7 @@ Without a descriptive caption, the reader is not always sure what the figure rep
 </template>
 <template v-slot:solution>
 
-Each figure should always have a descriptive caption that explains what the figure shows, no matter how easy it is to interpret the figure.
+Each figure should always have a descriptive caption that explains what the figure shows, no matter how easy it is to interpret it.
 
 </template>
 </ReportMistake>
@@ -617,7 +617,7 @@ The text refers to a figure, and the figure is far away.
 </template>
 <template v-slot:problem>
 
-The reader needs to stop reading, scroll to the figure, interpret the figure, and then scroll back to the text. This is inconvenient, and the reader lose concentration, making the report much harder to read.
+The reader needs to stop reading, scroll to the figure, interpret the figure, and then scroll back to the text. This is inconvenient, and the reader loses her concentration, making the report much harder to read.
 
 </template>
 <template v-slot:solution>
@@ -893,7 +893,7 @@ The graphical user interface is implemented in HTML<sup>[1](https://html.spec.wh
 </template>
 <template v-slot:example-2-bad>
 
-The web browser communicates with the web application by sending HTTP requests to it. HTTP is built on top of TCP, which is transport protocol for sending small packages (messages) from one computer to another.
+The web browser communicates with the web application by sending HTTP requests to it. HTTP is a protocol built on top of TCP, which is transport protocol for sending small packages (messages) from one computer to another.
 
 </template>
 <template v-slot:example-2-good>
