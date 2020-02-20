@@ -10,7 +10,7 @@ You want your application to communicate with an application running on another 
 * [android-bluetooth-classic.pdf](android-bluetooth-classic.pdf)
 * [android-bluetooth-classic.pptx](android-bluetooth-classic.pptx)
 * [chatti.zip](chatti.zip) \
-  A sample application where two devices can connect and chat using Bluetooth Classic.
+  A sample application where two devices can connect and chat using Bluetooth Classic (Note: does not support i18n and error handling).
 
 ## Recommended reading
 The [Android Developers Guide's page about Bluetooth](https://developer.android.com/guide/topics/connectivity/bluetooth).
