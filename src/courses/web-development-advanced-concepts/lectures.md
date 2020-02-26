@@ -17,3 +17,4 @@ The instructions on the [Laboratory Work](laboratory-work/) page and the [Projec
 * [Third-Party Authentication](../../lectures/third-party-authentication/)
 * [AJAX](../../lectures/ajax/)
 * [Same-Origin Policy & Cross-Origin Resource Sharing](../../lectures/sop-and-cors/)
+* [Report Writing](../../lectures/report-writing/)
