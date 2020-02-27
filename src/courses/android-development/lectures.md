@@ -23,3 +23,6 @@ Material from the lectures will be uploaded here after each lecture.
 * [Android Broadcast Receivers](../../lectures/android-broadcast-receivers/)
 * [Android Bluetooth Classic](../../lectures/android-bluetooth-classic/)
 * [Report Writing](../../lectures/report-writing/)
+* [Android Conditional Resources](../../lectures/android-conditional-resources/)
+* [Android GPS](../../lectures/android-gps/)
+* [Android Sensors](../../lectures/android-sensors/)
