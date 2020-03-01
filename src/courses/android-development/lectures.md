@@ -26,3 +26,5 @@ Material from the lectures will be uploaded here after each lecture.
 * [Android Conditional Resources](../../lectures/android-conditional-resources/)
 * [Android GPS](../../lectures/android-gps/)
 * [Android Sensors](../../lectures/android-sensors/)
+* [Android Content Providers](../../lectures/android-content-providers/)
+* [Android Scheduling](../../lectures/android-scheduling/)
