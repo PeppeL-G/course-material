@@ -436,3 +436,5 @@ Play around with [Visualizing Git](http://git-school.github.io/visualizing-git/#
 * [Chapter 1: Getting Started](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
 * [Chapter 2: Git Basics](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)
   * You can skip the parts about using a remote repository (`git clone`, `git pull`, `git push`, ...); that's something you'll learn in the third lecture.
+
+If you find it a bit hard to start using Git, [you're not alone](https://xkcd.com/1597/).

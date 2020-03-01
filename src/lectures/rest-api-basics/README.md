@@ -25,3 +25,4 @@ So, what's a REST API and what do we use them for?
     CHAPTER 5: Representational State Transfer (REST)
     (feel free to read the other chapters as well)
 
+Those who are curious about the history of JSON can read the article [The Rise and Rise of JSON](https://twobithistory.org/2017/09/21/the-rise-and-rise-of-json.html) from *Two-Bit History*.

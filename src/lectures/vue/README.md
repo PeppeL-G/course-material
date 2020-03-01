@@ -10,3 +10,5 @@ Vue (Vue.js) is a JavaScript Framework one can use to build Single-Page Applicat
 
 ## Recommended reading
 * [Vue's Guide](https://vuejs.org/v2/guide/)
+
+The ones who are curios about the history of Vue and its creator Evan You can view [Vue.js: The Documentary](https://www.youtube.com/watch?v=OrxmtDw4pVI) on YouTube.
