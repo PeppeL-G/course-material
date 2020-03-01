@@ -15,6 +15,7 @@ Many web applications contains security vulnerabilities hackers can exploit. Let
 ## Recommended reading
 * [OWASP Top 10 - 2017](https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf)
 * [2019 Data Breach Hall of Shame: These were the biggest data breaches of the year](https://www.cnet.com/news/2019-data-breach-hall-of-shame-these-were-the-biggest-data-breaches-of-the-year/)
+* [FBI recommends passphrases over password complexity](https://www.zdnet.com/article/fbi-recommends-passphrases-over-password-complexity/)
 * [How Facebook Was Hacked And Why It's A Disaster For Internet Security](https://www.forbes.com/sites/thomasbrewster/2018/09/29/how-facebook-was-hacked-and-why-its-a-disaster-for-internet-security/#521220f82033)
 * [Are You on Tinder? Someone May Be Watching You Swipe](https://www.checkmarx.com/2018/01/23/tinder-someone-may-watching-swipe-2/)
 * [The Bank Job](https://boris.in/blog/2016/the-bank-job/%20)
