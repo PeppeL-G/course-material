@@ -17,7 +17,7 @@ Unzip <a href="static-files/tutorial-02/platform.zip">the source code for the pl
 4. Run the command `node app.js` to start the application.
 5. Send your HTTP requests to the application (e.g. `GET /pets`) on port `8080` using for example [Postman](https://www.postman.com/) (or from your Android/iOS application or single-page application).
 
-## Tutorial 4 (REST API in Express)
+## Tutorial 5 (Single-Page Application)
 1. Unzip <a href="static-files/tutorial-05/tutorial-05.zip">the source code for the backend + frontend</a>.
 2. Enter the root folder of the backend (use the `cd ...` command).
 3. Run the command `npm install` to install all dependencies.
