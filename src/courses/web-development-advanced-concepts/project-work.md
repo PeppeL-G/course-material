@@ -705,17 +705,17 @@ Since web browsers follow the same-origin policy, your REST API needs to support
 Here are some optional tasks you must complete if you want to get a grade higher than 3. Remember that completing these extra tasks does not necessarily give you a higher grade, but you have to complete them to have a chance to get a higher grade. Also, do not forget to look through the page [Project Grading Guidelines](project-grading-guidelines/).
 
 ### A fancy website (required for grade 4 and 5)
-Do also implement update and delete operations for your resources on the website (not necessary for the REST API).
+Do also implement update and delete operations for your resources on the website (this extra task is only relevant your website, and not your REST API).
 
 ### A fancy SPA (required for grade 4 and 5)
 In your single-page application, when you have sent an HTTP request to the REST API and wait for an HTTP response, show a loading indicator of some kind. When forms are submitted, users should not be able to submit the form again while you are waiting for the response.
 
-To verify that it works as it should, you need simulate latency (so it takes a couple of seconds before you get back an HTTP response). This can be done using the [setTimeout()](https://www.w3schools.com/jsref/met_win_settimeout.asp) function in your JavaScript code, or (even better) by telling the web browser to simulate it for you. The blogpost [Simulate slow connections with the network throttling tool](https://blog.nightly.mozilla.org/2016/11/07/simulate-slow-connections-with-the-network-throttling-tool/) shows how to do it in Firefox.
+To verify that it works as it should, you need simulate latency, so it takes a couple of seconds before you get back an HTTP response. This can be done using the [setTimeout()](https://www.w3schools.com/jsref/met_win_settimeout.asp) function in your JavaScript code, or (even better) by telling the web browser to simulate it for you. The blogpost [Simulate slow connections with the network throttling tool](https://blog.nightly.mozilla.org/2016/11/07/simulate-slow-connections-with-the-network-throttling-tool/) shows how to do it in Firefox.
 
 ### Supporting third-party authentication (required for grade 5)
 Let users create a new account on your platform by using their existing account on another platform supporting OpenID Connect instead creating yet another username and password. You can for example use Google.
 
-This does only have to work either through the website or through the REST API. You choose which one if you don't want to implement both.
+This does only have to work either through the website or through the REST API. You choose which one if you don't want to implement both, and that should of course be described in your report.
 
 ## Part 11: Demonstration
 Demonstrate how your application works to the rest of your class. The reason for the demonstration is two-folded:
