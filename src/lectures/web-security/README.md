@@ -12,6 +12,11 @@ Many web applications contains security vulnerabilities hackers can exploit. Let
 * [web-security.pdf](web-security.pdf)
 * [web-security.pptx](web-security.pptx)
 
+## Fun from xkcd:
+* [Voting Machines](https://xkcd.com/463/)
+* [Exploits of a Mom](https://xkcd.com/327/)
+* [Security](https://xkcd.com/538/)
+
 ## Recommended reading
 * [OWASP Top 10 - 2017](https://www.owasp.org/images/7/72/OWASP_Top_10-2017_%28en%29.pdf.pdf)
 * [2019 Data Breach Hall of Shame: These were the biggest data breaches of the year](https://www.cnet.com/news/2019-data-breach-hall-of-shame-these-were-the-biggest-data-breaches-of-the-year/)
