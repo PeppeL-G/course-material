@@ -87,7 +87,7 @@ The <span style="background-color: aqua; display: inline-block; padding: 0 8px; 
 		{w: "PW: Presentations cancelled!", i: "Exam period"},
 		{w: "PW: Presentations cancelled!", i: "Exam period"},
 		{w: "PW: Presentations cancelled!", i: "Exam period"},
-		{w: "PW: Presentations cancelled!, i: "Exam period"},
+		{w: "PW: Presentations cancelled!", i: "Exam period"},
 		{i: "Exam period"},
 		{w: "PW: Part 6", i: "Exam period, Deadline submit PW for grading."},
 	]'
