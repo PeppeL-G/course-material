@@ -144,6 +144,8 @@ We recommend you to not start too advanced. To pass the course, it is more impor
 If you want to get grade 4 or 5, you must come and see the examiner for another meeting to discuss your progress. Your work will not be graded, but this is an extra chance for you to get some feedback on your work before the final submission at the end of the course. If you are aiming for grade 3 you are welcome to book one of these meetings as well, but it is only mandatory for grade 4 and 5. The meeting should take place week 9 or 10. Use [the examiner's Doodle MeetMe page](https://doodle.com/peterlg) again the same way as before. After the meeting, the examiner will approve you on the assignment [Project Work: Halfway Meeting](https://pingpong.hj.se/courseId/22045/content.do?id=17169192) on Ping Pong.
 
 ## Part 5: Demonstrating the Application
+To avoid risk spreading the coronavirus the demonstration sessions are cancelled.
+<!--
 Your application should be demonstrated to the rest of the class (in smaller groups) at the end of course. All members in the group need to be present at the demonstration. At the demonstration, you should:
 
 * Explain what your application can do/be used for.
@@ -164,6 +166,7 @@ The reasons you should demonstrate your application to the rest of the class are
 Join a [Project Demonstration Groups](https://pingpong.hj.se/courseId/22045/projectGroupsList.do) on Ping Pong to let the examiner know which project demonstration session you want to attend to.
 
 After you have demonstrated the application the teacher will mark you as approved on the assignment [Project Work: Demonstration](https://pingpong.hj.se/courseId/22045/content.do?id=17169197) on Ping Pong.
+-->
 
 ## Part 6: Submitting your Work
 When you are done with your project work, upload it to Ping Pong for grading by submitting the assignment [Project Work: Final Submission](https://pingpong.hj.se/courseId/22045/content.do?id=17169201). When you submit the assignment, you should attach:
