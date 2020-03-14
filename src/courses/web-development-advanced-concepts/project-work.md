@@ -719,7 +719,9 @@ This does only have to work either through the website or through the REST API. 
 
 ## Part 11: Demonstration
 To avoid risk spreading the coronavirus the demonstration sessions are cancelled.
-<!--
+
+<del>
+
 Demonstrate how your application works to the rest of your class. The reason for the demonstration is two-folded:
 
 * You get some practice in presenting your work, which is a very important skill in your future professional career.
@@ -742,8 +744,9 @@ At the demonstration, you should:
 
 You may use at most 15 minutes, so come prepared. You will not have time for *Oh, what more can I show you?* or *Wait, let me try to remember/look up how we did that*, so rehearse the demonstration in advance. Be prepared to answer any question about your solution the audience might have. 
 
-The examiner will approve you on the Ping Pong assignment [Project Work: Demonstration](https://pingpong.hj.se/courseId/22061/content.do?id=17129200) after your demonstration. 
--->
- 
+The examiner will approve you on the Ping Pong assignment [Project Work: Demonstration](https://pingpong.hj.se/courseId/22061/content.do?id=17129200) after your demonstration.
+
+</del>
+
 ## Part 12: Submitting your work
 When you're done with your work, upload it to Ping Pong by submitting the assignment [Project Work: Final Submission](https://pingpong.hj.se/courseId/22061/content.do?id=17129206). Be sure to follow the submission instructions described on that page.

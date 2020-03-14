@@ -145,7 +145,9 @@ If you want to get grade 4 or 5, you must come and see the examiner for another 
 
 ## Part 5: Demonstrating the Application
 To avoid risk spreading the coronavirus the demonstration sessions are cancelled.
-<!--
+
+<del>
+
 Your application should be demonstrated to the rest of the class (in smaller groups) at the end of course. All members in the group need to be present at the demonstration. At the demonstration, you should:
 
 * Explain what your application can do/be used for.
@@ -166,7 +168,8 @@ The reasons you should demonstrate your application to the rest of the class are
 Join a [Project Demonstration Groups](https://pingpong.hj.se/courseId/22045/projectGroupsList.do) on Ping Pong to let the examiner know which project demonstration session you want to attend to.
 
 After you have demonstrated the application the teacher will mark you as approved on the assignment [Project Work: Demonstration](https://pingpong.hj.se/courseId/22045/content.do?id=17169197) on Ping Pong.
--->
+
+</del>
 
 ## Part 6: Submitting your Work
 When you are done with your project work, upload it to Ping Pong for grading by submitting the assignment [Project Work: Final Submission](https://pingpong.hj.se/courseId/22045/content.do?id=17169201). When you submit the assignment, you should attach:
