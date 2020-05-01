@@ -21,7 +21,7 @@
   "homepage": "https://github.com/PeppeL-G/course-material#readme",
   "dependencies": {
     "mermaid": "^8.4.4",
-    "moment": "^2.24.0",
-    "vuepress": "^1.2.0"
+    "moment": "^2.25.0",
+    "vuepress": "^1.4.1"
   }
 }
