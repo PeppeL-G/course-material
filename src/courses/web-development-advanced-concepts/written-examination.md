@@ -45,3 +45,6 @@ You can look at [the exam from 2019-06-04](static-files/exam-2019-06-04.pdf) to 
 ::: warning Note!
 The exam from 2019-06-04 was a Ping Pong exam, your exam will be an Inspera exam. You will get similar type of questions, but it will look a bit different.
 :::
+
+## Sample answers
+The file [exam-2020-03-17-sample-answers.txt](static-files/exam-2020-03-17-sample-answers.txt) contains sample answers and marking guidelines to the exam 2020-03-17.
