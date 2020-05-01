@@ -83,12 +83,12 @@ The <span style="background-color: aqua; display: inline-block; padding: 0 8px; 
 		{},
 		{},
 		// 12 Exam period!
-		{w: "PW Part 11"},
-		{w: "PW Part 11", i: "Inspera Exam"},
-		{w: "PW Part 11"},
-		{w: "PW Part 11"},
-		{w: "PW Part 11"},
+		{w: "PW Presentations Cancelled"},
+		{w: "PW Presentations Cancelled", i: "Inspera Exam"},
+		{w: "PW Presentations Cancelled"},
+		{w: "PW Presentations Cancelled"},
+		{w: "PW Presentations Cancelled"},
 		{},
-		{},
+		{w: "PW Part 12"},
 	]'
 />
