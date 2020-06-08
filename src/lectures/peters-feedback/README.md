@@ -3,7 +3,7 @@ sidebar: auto
 navbarTitle: Peter's Feedback
 ---
 
-# Peters Feedback
+# Peter's Feedback
 On this page you find instructions on how to interpret feedback on your work received from me (Peter).
 
 Getting feedback on your work is very important for you to understand what you can do to improve it and get better at the subject. That's why we recommend you to get continuos feedback on your work throughout the entire course by discussing it with a teacher at the lab sessions.
