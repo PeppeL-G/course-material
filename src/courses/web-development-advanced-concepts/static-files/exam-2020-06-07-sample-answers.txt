@@ -1,0 +1,367 @@
+The following code is used for a search form on a webpage:
+
+<h1>Search</h1>
+<form id="searchForm">
+  <input id="searchInput">
+  <input type="submit" value="Search">
+</form>
+
+<div id="searchErrorDiv"></div>
+
+<script>
+
+const searchForm = document.getElementById("searchForm")
+
+searchForm.addEventListener('submit', function(event){
+  event.preventDefault()
+  
+  const searchInput = document.getElementById('searchInput')
+  const searchErrorDiv = document.getElementById('searchErrorDiv')
+  
+  const searchTerm = searchInput.value
+  
+  if(50 < searchTerm.length){
+    searchErrorDiv.innerHTML = searchTerm+" is too long."
+  }else{
+    // Process search...
+  }
+  
+})
+
+</script>
+
+Does the code contain a security vulnerability hackars can exploit? Justify your answer.
+
+---
+
+Since searchTerm is displayed using innerHTML, the web browser will interpret it as HTML code if it contains HTML code, which could open up for a XSS attack. But since searchTerm comes from the user herself, the user would only hack herself if she tried to exploit it, so even though it's better to use innerText instead of innerHTML, this is not really a security vulnerability since hackers can only hack themselves, and not exploit it to hack others.
+
+Justification hackers can't hack others: 2 points
+(innerHTML is a vulnerability: 0.5 points)
+
+
+=====
+
+
+If a user can enter some text in an <input> element that is sent to and stored on the server, then when the server sends back that text as part of a webpage's HTML code, that text needs to be escaped (i.e. < replaced with &lt;, etc.), otherwise there exists an XSS vulnerability.
+
+If the user instead of entering text in an <input> element gets to select text from a <select> element with pre-populated options like the one below, would that XSS vulnerability still exists if the text isn't escaped? Justify your answer.
+
+<select name="someText">
+  <option value="soccer">Soccer</option>
+  <option value="hockey">Hockey</option>
+</search
+
+---
+
+Yes, the vulnerability would still exist. Hackers can create and send their own HTTP requests to the server, and they are not limited to only send someText=soccer or someText=hockey, but could send someText=HTML_CODE, so the input the server receives still needs to be escaped before it's sent to other clients as part of a webpage.
+
+Correct answer: 0.25 points
+Valid justification: 1.75 points
+
+
+=====
+
+
+Carl is assigned the task to design a REST API. To delete movies in a specific genre a specific year, he decides clients should send an HTTP DELETE request to /movies, add the header Content-Type: application/json and in the body of the request add {"year": 2000, "genre": "drama"} (change 2000 and "drama" to desired values).
+
+Is this a good or bad REST API design? Justify your answer.
+
+Note: You don't need to worry about authorization in this question.
+
+---
+
+This is a bad REST API design. The URI should identify the resources the request is about, so year and genre should be part of the URI, for example as querystring parameters. DELETE requests should not contain a body at all since the client does not send a resource to the server in a DELETE request.
+
+Valid justification: 2
+(URI contains movie id instead: 0.5 points)
+
+
+=====
+
+
+Alice is assigned the task to design a REST API clients can use to login and then create new blogposts belonging to that account. She decides that when a user logs in, the client obtains an access token containing the user's account id, which can be used to act on the behalf of that user. Then when the user wants to create a new blogpost belonging to her own account, the client sends an HTTP POST request to /blogposts with the headers Authorization: Bearer THE.ACCESS.TOKEN and Content-Type: application/json, and in the body pass {"title": "The actual title", "content": "The blogpost text."}.
+
+Is this a good or bad design? Justify your answer.
+
+---
+
+The design contains one big mistake: the request doesn't specify which account the blogpost should belong to; the body of the request should also contain "accountId: 123", or something similar. It's also a good idea to send back an ID token when the user logs in, so the client knows the id of the account the user logged in to.
+
+accountId missing in request: 2 points
+
+
+=====
+
+
+Willy is assigned the task to design a REST API clients can use to compute mathematical expressions consisting of one operator (+, -, * or /) and two numbers. He decides that clients should send a POST request to /compute, add the header Content-Type: application/json and then in the body pass {"leftOperand": 123, "operator": "+", "rightOperand": 321} (123, "+" and 321 are sample values). The response would then contain the result of the mathematical expression (i.e. a number).
+
+This design is quite poor. Explain to Willy what he has done wrong and suggest a better design.
+
+---
+
+Mistake 1: The URI does not identify a resource. /compute rather identifies an action. He could use /result or /number instead.
+
+Mistake 2: No new resource is created on the server, so it does not make sense to send a POST request. He should rather use a GET request, because he obtains a resource; the result of a computation. Then the URI should identify which resource, so the operands and operator should be part of the URI, for example as querystring parameters. It could look like this (+-operator needs to be encoded):
+
+GET /result?leftOperand=123&operator=+&rightOperand=321
+
+URI should identify resource: 0.33 points
+Method should be GET: 0.33 points
+URI should contain "the POST body": 33 points
+
+
+=====
+
+
+When logging in over a REST API, explain why it's most often not is enough to only receive an access token, but you also need to receive an ID token.
+
+---
+
+The access token only gives the user permission to access to her resources. Most often she also needs to know her account id to be able to identify her resources, and the account id can be obtained from the ID token.
+
+Explanation: 2 points
+
+
+=====
+
+
+JWT tokens are self-contained. That means that the data the token represents is stored in the token itself. Therefore, when a client obtains an access token that has been implemented as a JWT token, the client can read the data in the token, and even change it, for example modify the data in it to mean that the client has access to resources it shouldn't have access to. But the server has a way to discover if the client has modified the token. Explain how the server does that by describing a detailed example.
+
+---
+
+(the task is "... by describing a detailed example", which almost no student did)
+
+When a user logs in, the server creates a JWT (the access token) and put's the user's account id in it, meaning that the one with this token is authorized to act on the behalf of the user with that account id. The token does not only contain the user's account id, but also a hash value (known as the signature) of "the rest of the token and a secret string". Only the server knows the secret string. The token is then passed to the client.
+
+Each time the server get backs the access token from a client, it computes the signature again using its secret string. If the computed signature doesn't match the one in the token the server knows a client has attempted to modify the data in the token. If a client tries to modify the data in the token it must also change the signature to a valid signature, but it can't do that since it doesn't know which secret string the server is using.
+
+Answer explains somewhat how JWT works: 1 point
+Answer explains server re-computes signature when it receives token: 1 point
+Quality: 1 point
+
+
+=====
+
+
+In a three-layered architecture, validation and authorization should be carried out in the business logic layer, and not in the presentation layer. Explain the benefits with carrying out validation and authorization in the business logic layer instead of in the presentation layer.
+
+---
+
+The main benefit with carrying out validation and authorization in the BLL is that it can be re-used in multiple PLs. For example, what a user should be allowed to do should be independent on weather the user uses the application through a REST API (one PL) or a website (another PL). If the PLs would implement validation and authorization on their own, you would duplicate that code in the two PLs, and possibly implement different validation and authorization rules by mistake.
+
+There are also some other benefits, such as it's easier to test in BLL when there's no interface (API/GUI) involved.
+
+Main benefit: 2 points
+Other benefits: 0.5 points each
+
+
+=====
+
+
+The business logic layer function createGuestbookPost(name, content) sends back a string with the error message "The name needs to be at least 3 characters long" if the name is shorter than 3 characters. Would it be better to send back an error code like "nameTooShort" instead? Justify your answer.
+
+---
+
+Yes, it's better to use error codes instead of error messages. If the PL wants to look for this specific error, it's hard to look for the string "The name needs to be at least 3 characters long" because the number 3 might change in the future. Also, the PL might not display error messages at all (maybe errors are displayed using images?). And the user might wants to display error messages in another language than English.
+
+Justification: 2 points
+Strange justification: -0.25 points
+
+
+=====
+
+
+Give one reason for why it's bad for a layer in a three-layered architecture to expose an implementation detail.
+
+---
+
+If a layer exposes an implementation detail the implementation of that layer can't be changed without changing the implementation of the other layers. For example, if the DAL exposes a MySQL error that the BLL is looking for, you can't change DAL to communicate with a PostgreSQL database without changing the code in the BLL.
+
+Valid reason: 2 points
+Half good reason: 1 point
+
+
+=====
+
+
+Explain how you would structure the solution for a website you want to be scaleable and where users can register new accounts they can login to and then upload files (e.g. video files) they can share with other users. Describing which Docker images and containers you would use and how they communicate with each other and how clients use them is enough. Justify your solution.
+
+---
+
+We'll aim for horizontal scaling instead of vertical scaling since horizontal scaling is less limited. Therefor we should try to have many components with small/specific responsibilities. We'll have:
+
+A relational database running in one container used to store the resources on the website. Having this as as a separate component makes the database easier to scale than if it would run as part of the web application (for example as SQLite would). Using a relational database is probably better than a none relational database since new resource types with relations to accounts may be added in the future.
+
+A key-value database running in one container to store the users' sessions. Sessions don't have any relational to other data, so no need to store them in a relational database, so better to store them in a key-value database that is easier to scale.
+
+The web application running in one container handling all HTTP requests excepts GET requests for the uploaded files. The web application uses the relational database to store the resources, the key-value database to store the users' sessions and a file server to store the users' uploaded files (nothing should be stored in the web application since it needs to be stateless to be horizontally scalable). Users uploads files to the web application, which checks validation and authorization, and then uploads them to the file server if everything is OK.
+
+A file server running in one container to store all uploaded files. Better to store them in a separate component and not in the web application since it will be easier to scale GET requests for the files if that's the only thing a component handle.
+
+Clients can send GET requests directly to the file server to fetch uploaded files (assuming anyone should have access to any uploaded file) and all other requests about the website to the web application.
+
+
+=====
+
+
+The function addBlogpost() below comes from a blogpost repository in the Data Access Layer of a three layered application that stores its resources in a relational database. On the website, users can create their own accounts and then create blogposts belonging to their own account.
+
+function addBlogpost(blogpost, callback){
+  
+  const query = `
+    INSERT INTO blogposts (accountId, title, content) VALUES(?, ?, ?)
+  `
+  const values = [
+    blogpost.accountId,
+    blogpost.title,
+    blogpost.content
+  ]
+  
+  db.query(query, values, function(error, results){
+    if(error){
+      callback("DB Communication error.")
+    }else{
+      callback(null, results.insertId)
+    }
+  })
+  
+}
+
+What's wrong with the current implementation of the function? Explain how you would solve that problem (in words, don't write any code).
+
+---
+
+The problem is that the code doesn't look for foreign key constraint errors. The blogposts table has a relation to the accounts table, and if you try to insert a blogpost that belongs to an account that doesn't exist we should send back an error indicating that. When we get back an error from the database we should look at the error to see if it's a foreign key constraint error, and if so report that back to the caller.
+
+Correct explanation: 2 points
+(Check error but not specify which: 1 point)
+
+
+=====
+
+
+The JavaScript function setTimeout() can be used to schedule a call to a function in the future. Example:
+
+setTimeout(function(){
+  // This code runs 1000 ms later.
+}, 1000)
+
+The function getInfo() can be used to fetch some info from a server. Sample usage:
+
+getInfo(function(info){
+  // This code runs when we have got the info.
+})
+
+As you can see, getInfo() is asynchronous, and it might take a few seconds before it has fetched the info from the server and pass it to the callback function.
+
+Your task is to implement the function getInfoOrFail() that works according to the sample usage below.
+
+getInfoOrFail(function(didGetInfo, info){
+  if(!didGetInfo){
+    // The server did not send back info within 3 seconds.
+  }else{
+    // We got info within 3 seconds.
+  }
+})
+
+The callback function passed to getInfoOrFail() should only be called once.
+
+---
+
+function getInfoOrFail(callback){
+  
+  let hasCalledCallback = false
+  
+  setTimeout(function(){
+    if(!hasCalledCallback){
+      hasCalledCallback = true
+      callback(false)
+    }
+  }, 3000)
+  
+  getInfo(function(info){
+    if(!hasCalledCallback){
+      hasCalledCallback = true
+      callback(true, info)
+    }
+  })
+  
+}
+
+Calls callback immediately: 0 points
+Does not fail as soon as possible (the whole point): -1 point
+Syntax errors: -0.25 - -1.5 points
+
+
+=====
+
+
+The function loadJSONFile(filename, callback) can be used to open a JSON file and parse its content. If something is wrong, callback("Could not load the data.") will be used, and if everything went well callback(null, theLoadedData) will be used.
+
+Alex has created the function loadData(callback) below.
+
+function loadData(callback){
+  loadJSONFile("settings.json", function(settingsError, settings){
+    if(settingsError){
+      callback("Could not load data.")
+    }else{
+      
+      loadJSONFile("constants.json", function(constantsError, constants){
+        if(constantsError){
+          callback("Could not load data.")
+        }else{
+          callback(null, {
+            settings,
+            constants
+          })
+        }
+      })
+      
+    }
+  })
+}
+
+As you can see, loadData() calls loadJSONFile() twice. loadData() has not been implemented in the most efficient way, and Alex is now assigned the task to optimize loadData() so it's executed faster. What makes the current implementation of loadData() slow (write your answer as a comment)? Also, rewrite the code for Alex so the function executes faster. The interface of the function (name of function, parameters, callback parameters, etc.) should be identical to before, you may only change the implementation of the function, not how other programmers will use it.
+
+---
+
+/* What makes the current implementation of the function slow is that it
+ * first calls loadJSONFile("settings.json"), then waits for the settings
+ * to be loaded, and then calls loadJSONFile("constants.json"), then waits
+ * for the constants to be loaded, and then sends back the result. It's,
+ * more efficient to start loading twice initially, so you wait for both
+ * at the same time. */
+
+function loadData(callback){
+  
+  const data = {}
+  let hasSentError = false
+  
+  function onJSONLoaded(didErrorOccur){
+    if(hasSentError){
+      // Do nothing.
+    }else if(didErrorOccur){
+      hasSentError = true
+      callback("Could not load data.")
+    }else if(data.settings && data.constants){
+      callback(null, data)
+    }
+  }
+  
+  loadJSONFile("settings.json", function(settingsError, settings){
+    data.settings = settings
+    onJSONLoaded(settingsError != null)
+  })
+  
+  loadJSONFile("constants.json", function(constantsError, constants){
+    data.constants = constants
+    onJSONLoaded(constantsError != null)
+  })
+  
+}
+
+Explanation: 0.5 points
+Calls callback immediately: 0 points
+Callback called twice if two errors occur: -0.5 points
+Wrong error message: -0.25 points
