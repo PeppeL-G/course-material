@@ -14,10 +14,12 @@
 			<dd>{{courseCoordinator}}</dd>
 			<dt>Examiner</dt>
 			<dd>{{examiner}}</dd>
-			<dt>Ping Pong event</dt>
-			<dd>{{pingPongEvent}}</dd>
-			<dt>Ping Pong password</dt>
-			<dd>{{pingPongPassword}}</dd>
+			<dt v-if="pingPongEvent">Ping Pong event</dt>
+			<dd v-if="pingPongEvent">{{pingPongEvent}}</dd>
+			<dt v-if="pingPongPassword">Ping Pong password</dt>
+			<dd v-if="pingPongPassword">{{pingPongPassword}}</dd>
+			<dt v-if="canvasCourseId">Canvas Course</dt>
+			<dd v-if="canvasCourseId"><a :href="'https://ju.instructure.com/courses/'+canvasCourseId">{{courseName}}</a></dd>
 		</dl>
 		
 	</div>
@@ -32,7 +34,8 @@
 			courseCoordinator: String,
 			examiner: String,
 			pingPongEvent: String,
-			pingPongPassword: String
+			pingPongPassword: String,
+			canvasCourseId: String
 		}
 	}
 </script>
