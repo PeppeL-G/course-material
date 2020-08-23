@@ -141,4 +141,9 @@ export default {
 		text-decoration line-through
 		background-color #d3bcbc
 	
+	@media print{
+		table{
+			font-size: 60%;
+		}
+	}
 </style>

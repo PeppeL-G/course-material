@@ -47,4 +47,8 @@ The exam from 2019-06-04 was a Ping Pong exam, your exam will be an Inspera exam
 :::
 
 ## Sample answers
-The file [exam-2020-03-17-sample-answers.txt](static-files/exam-2020-03-17-sample-answers.txt) contains sample answers and marking guidelines to the exam 2020-03-17.
+Sample answers (with grading guidelines) are available to the following exams:
+
+* [exam-2020-03-17-sample-answers.txt](static-files/exam-2020-03-17-sample-answers.txt)
+* [exam-2020-06-07-sample-answers.txt](static-files/exam-2020-06-07-sample-answers.txt)
+* [exam-2020-08-10-sample-answers.txt](static-files/exam-2020-08-10-sample-answers.txt)

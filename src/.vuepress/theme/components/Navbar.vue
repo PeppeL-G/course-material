@@ -110,4 +110,10 @@ $navbar-horizontal-padding = 1.5rem
       display none
     .links
       padding-left 1.5rem
+
+@media print{
+  header{
+    display: none;
+  }
+}
 </style>

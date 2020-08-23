@@ -29,3 +29,13 @@ export default {
 	
 }
 </script>
+
+<style scoped>
+
+@media print {
+	.tabs-component-panel{
+		display: block !important;
+	}
+}
+
+</style>
