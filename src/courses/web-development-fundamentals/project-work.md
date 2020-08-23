@@ -1,8 +1,10 @@
-# Project Instructions
+# Project Work
 This page contains instructions for the project work.
 
 ## Introduction
-As project work you should (individually) create a personal website. You have a lot of freedom when it comes to the design and functionality of the website, but the following three requirements exist:
+As project work you should (individually) create a website __one__ user can login to and administrate. We recommend you to create a personal website you can login to and write information about yourself. Having such a website can be very beneficial for a programmer applying for a job. If you prefer you can create a website for a small company with a single login account that can be used to update what products the company have in store, or similar.
+
+You have a lot of freedom when it comes to the design and functionality of the website, but the following three requirements exist:
 
 * There should exist basic pages with trivial information, including:
   * A home/start page.
@@ -20,11 +22,15 @@ Use whichever type of resources you want. Some suggestions are:
 * Guestbook posts (only you can update/delete entries, anyone can retrieve/create entries).
 * FAQ entries (only you can update/delete entries, anyone can retrieve/create entries).
 
-Implement the website using technologies taught in this course. Avoid using client-side JavaScript. If you insist on using client-side JavaScript, it is OK, but:
+Implement the website using technologies taught in this course. It is OK to use similar technologies and not the specific ones taught in the course. For example, instead of using the web framework *Express*, you can use the web framework *Koa*. It's probably a good idea to email the course coordinator and ask if the technologies you want to use is OK or not if you don't stick to using the ones taught in the course.
+
+::: danger Don't use client-side JavaScript!
+Avoid using client-side JavaScript. If you insist on using client-side JavaScript, it is OK, but:
 
 * Good client-side JavaScript code will not improve your grade.
 * Bad client-side JavaScript code will lower your grade.
 * Your entire website must still work for users who have JavaScript disabled in their web browser (use client-side JavaScript only to enhance the browsing experience for the users who have JavaScript enabled in their web browsers).
+:::
 
 In addition to implementing the website, you should also write a report describing the implementation of the website. The file [project-report-template.docx](static-files/project-report-template.docx) contains a template with further instructions on this. Your report will be a living document throughout the course (meaning that you will write it as the course run and continuously improve it). 
 
@@ -70,6 +76,7 @@ Before you start working on this part, you are recommended to:
     * [HTTP and Web Applications](../../lectures/http-and-web-applications/)
     * [Character Encodings](../../lectures/character-encodings/)
     * [Using Shells](../../lectures/using-shells/)
+    * [Report Writing](../../lectures/report-writing/)
 * Take [the mini-course in Git](../git/).
     * You don't have to use Git in this course, but you are strongly recommended to make it a habit to use it for all your programming related tasks (you will use it a lot as a professional programmer, and you will have very good use of it in other courses, so the sooner you learn it, the better).
 
@@ -410,7 +417,7 @@ It is not only data that comes from your clients that can result in errors. Exte
 Deal with the various errors that can happen in your web application, and then update your report with a description of your implementation so far.
 
 ::: danger Deadline
-Just a reminder that you should not forget to submit your report for feedback on Ping Pong. The deadline might already have been, but if you follow the time plan now should be a good time to submit it.
+Just a reminder that you should not forget to [submit your report for feedback on Canvas](https://ju.instructure.com/courses/2142/assignments/5752). The deadline might have already been, but if you follow the time plan now should be a good time to submit it.
 :::
 
 ## Part 6: Adding authentication & authorization
@@ -587,7 +594,7 @@ Before you start working on this part, you are recommended to:
 Deploy your web application on a server. Use whichever you want, but it should be publicly accessible for other computers on the Internet. 
  
 ## Part 10: Demonstration
-Demonstrate how your application works to the rest of your class. The reason for the demonstration is two-folded:
+Demonstrate how your application works to "the rest of your class". The reason for the demonstration is two-folded:
 
 * You get some practice in presenting your work, which is a very important skill in your future professional career.
 * You get to see other ways to implement similar functionality (hopefully not all websites will look the same).
@@ -597,22 +604,22 @@ At the demonstration you will simply show how users (you as the admin, and the r
 To be allowed to demonstrate your website, you need to have implemented at least:
 
 * A functional login system.
-* All 4 CRUD operations for at least 2 type of resources with appropriate validation and authorization
+* All 4 CRUD operations for at least 2 type of resources with appropriate validation and authorization.
 
-You may use at most 10 minutes for your demonstration. If you need more than this to show all features, then skip some of them. If your demonstration takes just 2 minutes, that could be OK as well. Don't start talking about irrelevant things just to make the demonstration longer.
+You may use at most 10 minutes for your demonstration. If you need more than this to show all features, then skip some of them. If your demonstration takes just 2 minutes, that could be OK as well. Don't start talking about irrelevant things just to make the demonstration last longer.
 
-At the demonstration we will have a laptop connected to the projector in the room you can use to show your website. For this to work, your website must have been deployed to a server on the Internet (Part 9 of the project work needs to have been completed). If you have not completed Part 9 yet, you can bring and use your own laptop and run your your website locally on your own computer.
+At the demonstration we will have a laptop connected to the projector in the room you can use to show your website. For this to work, your website must have been deployed to a server on the Internet (Part 9 of the project work needs to have been completed). If you have not completed Part 9 yet, you can bring and use your own laptop and run your website locally on your own laptop.
 
-There are 10 different sessions for the demonstration, and you need to demonstrate your website at one of them. Select which one by joining the corresponding project group on Ping Pong (first come, first served).
+Join one of the [Project Work Presentation Groups](https://ju.instructure.com/courses/2142/groups#tab-1946) on Canvas to decide when you want to present. At most 6 students in each group, first come, first served.
 
-Your presentation will not be graded; consider it as (mandatory) practice.
+Your presentation will not be graded; consider it as (mandatory) practice (you must do it to pass the project work).
 
 ## Part 11: Submitting your work
-Submit your project work on Ping Pong for grading. Your source code should be uploaded as a ZIP file. When that ZIP file has been unzipped on the examiner's own computer, it is very important that the website can be started by running the following commands:
+Submit your project work on Canvas for grading. Your report should be uploaded as a PDF file. Your source code should be uploaded as a ZIP file. When that ZIP file has been unzipped on the examiner's own computer, it is very important that the website can be started by running the following commands:
 
 1. `npm install`
-2. `node app.js` (or whatever main file/script that should be executed)
+2. `node app.js` (or whichever tha name of your main file is)
 
 If this does not work you need to submit your work again at the next examination occasion, so double check that this work yourself before you submit your work!
 
-You should also attach the IP address of your Amazon Lightsail server your web application is running on. After the deadline the examiner will visit it once to see that you have deployed it, and then notify that you can take it down.
+You should also write the IP address of your Amazon Lightsail server your web application is running on as a comment on the upload. After the deadline the examiner will visit it once to see that you have deployed it, and then notify that you can take it down (only the first month is free).

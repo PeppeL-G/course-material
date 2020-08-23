@@ -1,8 +1,8 @@
 # Exercises
-There is no laboratory work in this course, but here are some optional exercises you can try to complete before you start implementing the website in your project work.
+There is no laboratory work in this course, but here are some optional exercises you can try to complete before you start implementing the website in your project work. Completing the exercises will give you a gentler start compared to starting to work on the project directly.
 
 ## Exercise 1: HTML
-The goal with this exercises is to teach you the basics in HTML.
+The goal with this exercise is to teach you the basics in HTML.
 
 ### Introduction to HTML
 HTML is a markup language. It is used to mark what type of data different text represents. For example, to mark that some text is a paragraph, one would write `<p>some text</p>`, and to mark that it instead is a header, one would write `<h1>some text</h1>` (for subchapters, one would use `<h2>`, `<h3>`, `<h4>`, `<h5>` or `<h6>` instead of `<h1>`, depending on the chapter level).
@@ -110,6 +110,10 @@ To get acquainted with JavaScript, try solving the problems below.
 ### Problem 1: `sum()`
 Implement the function `sum()`, which should receive an integer as argument, and returns the sum of the integers between 0 and the argument it receives, e.g. `sum(3)` → `0+1+2+3` → `6`.
 
+::: tip Showing output
+To print values to the shell, you can use `console.log("This will be printed to the console.")`.
+:::
+
 ### Problem 2: `sumOfNumbers()`
 Implement the function `sumOfNumbers()`, which should receive an array with numbers as argument, and returns the sum of the numbers in that array, e.g. `sumOfNumbers([5, 2, 8])` → `5+2+8` → `15`.
 
@@ -139,9 +143,10 @@ Create the function `makeCount()` which returns a new `count()` function as spec
 
 ```js
 const firstCount = makeCount()
-const secondCount = makeCount()
 firstCount() → 1
 firstCount() → 2
+const secondCount = makeCount()
 secondCount() → 1
 secondCount() → 2
+firstCount() → 3
 ```

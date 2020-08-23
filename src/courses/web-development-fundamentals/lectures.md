@@ -1,10 +1,11 @@
 # Lectures
-The Project Instructions indicate when you're expected to view each lecture, but here's a list of all of them.
+The instructions on the [Project Work](./project-work/) page indicate when you're expected to view each lecture, but here's a list of all of them.
 
 * [Internet Basics](../../lectures/internet-basics/)
 * [HTTP and Web Applications](../../lectures/http-and-web-applications/)
 * [Character Encodings](../../lectures/character-encodings/)
 * [Using Shells](../../lectures/using-shells/)
+* [Report Writing](../../lectures/report-writing/)
 * [HTML](../../lectures/html/)
 * [CSS](../../lectures/css/)
 * [HTML & CSS Frameworks](../../lectures/html-and-css-frameworks/)

@@ -1,8 +1,12 @@
 # Project Grading Guidelines
 This page contains guidelines for how your work will be graded. For the guidelines where it make sense, a higher grade includes the guidelines for the lower grades (for example, to be able to get `Grade 5`, you also need to follow the guidelines for `Grade 3` and `Grade 4`).
 
-::: warning Note
-This page does only contain *guidelines* for how your work will be graded. When we grade your work we'll make an assessment of your entire work, which is not limited to these guidelines, so **do not use these guidelines as a checklist for a certain grade**. Instead, rather see them as minimum requirements to be able to get a certain grade.
+::: warning Guidelines only
+This page does only contain *guidelines* for how your work will be graded. When we grade your work we'll make an assessment of your entire work, which is not limited to these guidelines, so **do not use these guidelines as a checklist for a certain grade**. Instead, rather see them as **minimum requirements** to be able to get a certain grade.
+:::
+
+::: danger Not average
+To get grade `X`, the student is expected to obtain at least grade `X` on all guidelines. Small exceptions to this might be made, but that is nothing the students should count on.
 :::
 
 ## Indentation Convention
@@ -56,7 +60,7 @@ Avoid using [magic numbers](https://en.wikipedia.org/wiki/Magic_number_%28progra
 />
 
 ## Implementation
-When a solution can be implemented in different ways, the most preferred implementation is used. If statements VS switches, arrays VS switches, for loops VS while loops VS do-while loops, iteration over indexes VS iteration over values, etc. Use functions instead of code duplication. 
+When a solution can be implemented in different ways, the most preferred implementation is used. If statements VS switches, arrays VS switches, for loops VS while loops VS do-while loops, iteration over indexes VS iteration over values, etc. Use functions instead of code duplication. Eliminate unnecessary if statements. Solutions aren't overcomplicated.
 
 <GradingGuideline
 	gradeU="Solutions have not been implemented at all."
@@ -86,8 +90,18 @@ The quality of the design of the database. [xkcd has a web comic about storing d
 	grade5="Data is stored using appropriate data types (especially important for booleans and dates/unix timestamps)."
 />
 
+## Validation
+Validation of resources on the website entered by a user.
+
+<GradingGuideline
+	gradeU="No validation is carried out."
+	grade3="All fields on all resources are validated (at least checking that the expected fields exists on the resource), and the user is notified that something is wrong."
+	grade4="All fields are properly validated, e.g. checking lower and upper bounds for a number, the length of strings, etc., and all validation errors are displayed to the user."
+	grade5="When validation errors occur, the user doesn't have to re-type anything from scratch (e.g. in an empty form), but can fix the validation errors on the last resource sent to the server in a pre-populated form."
+/>
+
 ## Error Handling
-Handling of various errors that can occur when the user is using your website, including validation errors and database errors.
+Handling of various errors that can occur when the user is using your website, including such as database errors.
 
 <GradingGuideline
 	gradeU="Errors are not handled or the error messages displayed are confusing to the user (remember: users are not programmers)."
@@ -97,7 +111,7 @@ Handling of various errors that can occur when the user is using your website, i
 />
 
 ## Graphical User Interface
-The logical placement and usage of components (menus, sub-menus, pagination, forms, buttons, etc.), the support for different screen sizes (small smartphones, medium tablets, large desktop screens, etc.), the support for different input methods (touch screen, mouse, keyboard, etc.), etc.
+The logical placement and usage of components (menus, sub-menus, pagination, forms, buttons, etc.), the support for different screen sizes (small smartphones, medium tablets, large desktop screens, etc.), the support for different input methods (touch screen, mouse, keyboard, etc.), etc. Simply put, users should understand how to use the website.
 
 <GradingGuideline
 	gradeU="The website contains components users don't understand how to use/can't use."
@@ -120,7 +134,7 @@ Proper usage of HTML tags. Very important for applications (instead of humans) t
 Custom CSS code (if used, not mandatory).
 
 <GradingGuideline
-	gradeU="The HTML style attribute is used."
+	gradeU="The HTML style attribute is used when not needed."
 	grade3="The HTML style element and the HTML link element are used appropriately."
 	grade4="CSS selectors are used appropriately (for example id VS class, combining selectors, etc.)."
 	grade5="Not applicable."
@@ -140,8 +154,8 @@ Vulnerabilities such as SQL injections, XSS, CSRF, not checking authorization, s
 The quality of the report.
 
 <GradingGuideline
-	gradeU="The reader does not get a good understanding of what the project is about (the problem and the solution) nor how the solution works/will be used/has been implemented."
-	grade3="The readers gets a good understanding of what the project is about and how the solution works/will be used/has been implemented. Figures are used, they have been numbered and given descriptive captions, and they are referred to from the main text using their figure numbers. The text does not contain obvious spelling mistake nor incomprehensible sentences."
+	gradeU="The reader does not get a good understanding of what the project is about (the problem and the solution), nor how the solution works/will be used/has been implemented."
+	grade3="The reader gets a good understanding of what the project is about and how the solution works/will be used/has been implemented. Figures are used, they have been numbered and given descriptive captions, and they are referred to from the main text using their figure numbers. The text does not contain obvious spelling mistake nor incomprehensible sentences."
 	grade4="Chapters and sub-chapters are properly used to give the report a good structure. The reader can easily find the specific information she's looking for in the expected chapter/sub-chapter."
 	grade5="Everything with the report is great."
 />
@@ -152,6 +166,6 @@ Complete [the optional tasks described in the Project Instructions](project-inst
 <GradingGuideline
 	gradeU="Not applicable."
 	grade3="No extra tasks need to be completed."
-	grade4="The extra tasks Search and Pagination needs to be completed."
-	grade5="The extra task Uploading Files needs to be completed."
+	grade4="The extra tasks Search and Pagination has been completed."
+	grade5="The extra task Uploading Files has been completed."
 />
