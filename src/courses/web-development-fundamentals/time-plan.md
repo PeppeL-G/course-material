@@ -5,10 +5,6 @@ The <span style="background-color: aqua; display: inline-block; padding: 0 8px; 
 In the beginning of each week a new announcement message will be posted on the course's Canvas page to let you know what you are expected to work on that week.
 :::
 
-::: danger Exam Missing
-Important dates for the `Written Examination` test will be added to the timetable when it has been scheduled.
-:::
-
 <TimePlan
 	:startDate='new Date(2020, 7, 24)'
 	:columns='[
@@ -38,7 +34,7 @@ Important dates for the `Written Examination` test will be added to the timetabl
 		{p: "Part 2: GUI"},
 		{p: "Part 2: GUI", l: "Tutorial 3: Express"},
 		{s: "Group 1", p: "Part 2: GUI"},
-		{s: "Group 2", p: "Part 2: GUI"},
+		{s: "Group 2", p: "Part 2: GUI", i: "Registration for Written Examination open"},
 		{s: "Group 3", p: "Part 2: GUI"},
 		{},
 		{},
@@ -78,7 +74,7 @@ Important dates for the `Written Examination` test will be added to the timetabl
 		{p: "Part 10: Presentation", i: "Project Work Presentation"},
 		{p: "Part 10: Presentation", i: "Project Work Presentation"},
 		{p: "Part 10: Presentation", i: "Project Work Presentation"},
-		{p: "Part 10: Presentation", i: "Project Work Presentation"},
+		{p: "Part 10: Presentation", i: "Project Work Presentation, Written Examination"},
 		{p: "Part 10: Presentation", i: "Project Work Presentation"},
 		{},
 		{p: "Part 11: Submitting", i: "Deadline Submit Project Work on Canvas"},
