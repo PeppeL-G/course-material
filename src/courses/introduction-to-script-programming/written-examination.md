@@ -50,3 +50,4 @@ The exam from 2019-02-13 was a Ping Pong exam, your exam will be an Inspera exam
 Here you find sample answers to some old exams:
 * [Sample answer to the exam from 2019-12-11.](static-files/exam-2019-12-11-sample-answers.txt)
 * [Sample answer to the exam from 2020-02-12.](static-files/exam-2020-02-12-sample-answers.txt)
+* [Sample answer to the exam from 2020-08-12.](static-files/exam-2020-08-12-sample-answers.txt)

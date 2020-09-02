@@ -1,0 +1,369 @@
+Below is a program that should:
+
+    1. Ask the user to enter a positive integer.
+    2. Compute and print the sum of the integers between 0 and the entered integer.
+
+n = input("Enter a positive integer: ")
+sum = 0
+for i in range(n+1):
+  sum = sum + i
+  print("The sum of the numbers between 0 and "+str(n)+" is "+str(sum)+".")
+
+Intended sample run (user input is bold):
+
+Enter a positive integer: 5
+The sum of the numbers between 0 and 5 is 15.
+
+When Alice runs the program, it does not work as intended. Explain why the program doesn't work they way it should, and suggest what changes that needs to be done to make it work as intended (no need to write any Python code, describing the changes using words is enough).
+---
+When the user enters the positive integer, it is read as a string. Before you can use it as an integer you first need to convert it to one using the int() function.
+
+Another problem is that the print-line is inside the loop, so it will be executed each iteration the loop does. It should rather be after the loop, so indent line one step less.
+
+0.25 points for each problem explanation.
+0.25 points for each change suggestion.
+
+
+=====
+
+
+Write the following code:
+
+list = []
+for a in [4, 2, -7, 5, 1, -5]:
+    list.append(min(a, a*a))
+
+As a list comprehension expression instead. Your own code should have the exact same meaning as the code above.
+---
+list = [min(a, a*a) for a in [4, 2, -7, 5, 1, -5]]
+
+
+=====
+
+
+Write the following code:
+
+list = []
+for x in "Okidoki!":
+    if x != "o" and x != "O":
+        list.append(1)
+
+As a list comprehension expression instead. Your own code should have the exact same meaning as the code above.
+---
+list = [1 for x in "Okidoki!" if x != "o" and x != "O"]
+
+
+=====
+
+
+Here is a quite complex structure with information about the population in different areas:
+
+populations = {
+    "countries": [
+        {"name": "Sweden", "population": 9903000},
+        {"name": "Finland", "population": 5495000},
+        {"name": "Norway", "population": 5233000}
+    ],
+    "cities": [
+        {"name": "Stockholm", "population": 789024},
+        {"name": "Jönköping", "population": 122952}
+    ]
+}
+
+Given this structure, write an expression that evaluates to the population of the country with the name Finland, i.e. 5495000.
+
+Note: Do not write a statement, and simply writing 5495000 is of course not OK; the value needs to be retrieved from the structure.
+---
+populations["countries"][1]["population"]
+
+
+=====
+
+
+Suggest how the following data in Python:
+
+movies = [
+   {"title": "Catch me if you can", "rating": 4},
+   {"title": "Dead poets society", "rating": 3},
+   {"title": "Tomorrow never dies", "rating": 3}
+]
+
+Can be written in XML code instead.
+---
+<movies>
+	<movie>
+		<title>Catch me if you can</title>
+		<rating>4</rating>
+	</movie>
+	<movie>
+		<title>Dead poets society</title>
+		<rating>3</rating>
+	</movie>
+	<movie>
+		<title>Tomorrow never dies</title>
+		<rating>3</rating>
+	</movie>
+</movies>
+
+
+=====
+
+
+Suggest how the following data in Python:
+
+countries = [
+   {"name": "Sweden", "population": 9903000},
+   {"name": "Finland", "population": 5495000},
+   {"name": "Norway", "population": 5233000}
+]
+
+Can be written in CSV format.
+---
+Sweden,9903000
+Finland,5495000
+Norway,5233000
+
+
+=====
+
+
+The function contains_short_string below should check if the list of strings passed to it contains any string with less than 3 characters. If it does, it should return True, otherwise it should return False.
+
+def contains_short_string(strings):
+    found_short = False
+    for s in strings:
+        if len(s) < 3:
+            found_short = True
+        else:
+            found_short = False
+    return found_short
+
+At the moment, it does not work as it should. Explain why it does not work as it should, and explain what changes that needs to be made to make it work (do not write an entirely different solution; just describe the changes that needs to be made). There's no need to write any Python code, but if you think that makes your answer more readable, feel free to do that.
+---
+The variable found_short should be False in the beginning, and we should only change it to True when we come across a short string in the loop. Currently, we change it to False in the loop when we come across a long string. So if the list contains a short string, but the last string in the list is long, we will return back wrong value.
+
+The solution is to delete else part of the conditional statement, it shouldn't be there.
+
+0.5 points explaining the problem.
+0.5 points explaining the solution.
+
+
+=====
+
+
+Implement the function english_to_swedish, which receives a digit name in English and should return that digit's name in Swedish.
+
+Sample usage:
+
+english_to_swedish("zero") → "noll"
+english_to_swedish("one") → "ett"
+english_to_swedish("two") → "två"
+english_to_swedish("three") → "tre"
+english_to_swedish("four") → "fyra"
+english_to_swedish("five") → "fem"
+english_to_swedish("six") → "sex"
+english_to_swedish("seven") → "sju"
+english_to_swedish("eight") → "åtta"
+english_to_swedish("nine") → "nio"
+---
+swedish_digit_names = {
+	"zero": "noll",
+	"one": "ett",
+	"two": "två",
+	"three": "tre",
+	"four": "fyra",
+	"five": "fem",
+	"six": "sex",
+	"seven": "sju",
+	"eight": "åtta",
+	"nine": "nio"
+}
+
+def english_to_swedish(english_digit_name):
+	return swedish_digit_names[english_digit_name]
+
+
+=====
+
+
+Write a program that keeps asking the user to enter an integer until the user enters stop. The program should then print the average of the numbers the user entered.
+
+When running the program, it can look like this (bold text represents text entered by the user).
+
+Enter an integer or stop: 1
+Enter an integer or stop: 6
+Enter an integer or stop: 2
+Enter an integer or stop: stop
+The average of the entered integers is 3.
+
+Note: The output should look precisely as in the example above (including white-spaces, but with the exception of the boldness from the input, of course) if the user enters at least 1 integer. If the user enters stop without entering any integer at all, the output should be No integer entered..
+
+Note: You can expect the user to actually enter a number or stop (no error handling needed).
+---
+entered_integers = []
+entered_text = ""
+
+while entered_text != "stop":
+	
+	entered_text = input("Enter an integer or stop: ")
+	
+	if entered_text != "stop":
+		entered_integers.append(int(entered_text))
+
+if len(entered_integers) == 0:
+	print("No integer entered.")
+else:
+	average = sum(entered_integers) / len(entered_integers)
+	print("The average of the entered integers is "+str(average)+".")
+
+0.5 points: the 0 case.
+1.5 points: the rest.
+
+=====
+
+
+Implement the function contains_zero, which receives a list of numbers, and returns True if the list contains 0, otherwise False.
+
+Write two different implementations of the function: one using a while loop, and another one using a for loop.
+
+Sample usage:
+
+contains_zero([4, 7, 2, 5])  →   False
+contains_zero([5, 0, 5])     →   True
+---
+def contains_zero(numbers):
+	for number in numbers:
+		if number == 0:
+			return True
+	return False
+
+def contains_zero(numbers):
+	i = 0
+	while i < len(numbers):
+		if numbers[i] == 0:
+			return True
+		i += 1
+	return False
+
+
+=====
+
+
+Implement the function get_positive_numbers, which receives a list with numbers, and returns a new list containing the numbers from the received list that are greater than 0.
+
+Sample usage:
+
+get_positive_numbers([7, -4, 3, 5, -4])  →  [7, 3, 5]
+get_positive_numbers([0, 1, 2])  →  [1, 2]
+get_positive_numbers([0, 0, 0])  →  []
+---
+def get_positive_numbers(numbers):
+	positive_numbers = []
+	for number in numbers:
+		if 0 < number:
+			positive_numbers.append(number)
+	return positive_numbers
+
+
+=====
+
+
+Given the following data about some movies:
+
+movies = [
+    {"title": "GoldenEye",  "year": 1995, "length_in_minutes": 130},
+    {"title": "Titanic",    "year": 1997, "length_in_minutes": 195},
+    {"title": "I Robot",    "year": 2004, "length_in_minutes": 115},
+    {"title": "Braveheart", "year": 1995, "length_in_minutes": 178},
+    {"title": "Shrek",      "year": 2001, "length_in_minutes":  90}
+]
+
+Write code that computes and prints the title of the shortest movie and the longest movie released after (and including) 2000.
+
+Note: Your code should still work as expected if one adds a movie to or remove a movie from the list.
+---
+movies_after_2000 = [movie for movie in movies if 2000 <= movie["year"]]
+
+shortest_movie = movies_after_2000[0]
+longest_movie = movies_after_2000[0]
+
+for movie in movies_after_2000:
+	if movie["length_in_minutes"] < shortest_movie["length_in_minutes"]:
+		shortest_movie = movie
+	if longest_movie["length_in_minutes"] < movie["length_in_minutes"]:
+		longest_movie = movie
+
+print("The shortest movie after 2000 (including) is "+shortest_movie["title"]+".")
+print("The longest movie after 2000 (including) is "+longest_movie["title"]+".")
+
+
+=====
+
+
+The class Directions represents a sequence of directions (one direction is a string describing the direction) that can be given to the user (one at a time). It has the following constructor/methods:
+
+Directions(list_of_directions)
+Creates a new Directions instance containing the list_of_directions that should be presented to the user.
+
+get_next_direction()
+Returns the next direction that should be presented to the user. The first call to the function will return the first direction, the second call to the function will return the second direction, and so on.
+
+has_retrieved_all_directions()
+Returns True if get_next_direction() has been called once for each direction, otherwise False.
+
+Write a program making use of the class so the following directions are presented to the user.
+
+Go left 4 steps.
+Go north 7 steps.
+Turn 90 degrees clockwise.
+Go 5 steps.
+
+Note: The output should look precisely as in the example above, and you must use the class and a loop.
+---
+directions = Directions([
+	"Go left 4 steps.",
+	"Go north 7 steps.",
+	"Turn 90 degrees clockwise.",
+	"Go 5 steps."
+])
+
+while not directions.has_retrieved_all_directions():
+	print(directions.get_next_direction())
+
+
+=====
+
+
+Another programmer wants you to create the class Team that can be used like this:
+
+my_team = Team()
+my_team.add_player("Alice")
+my_team.add_player("Bob")
+my_team.add_player("Claire")
+if my_team.contains_player("Bob"):
+    print("Bob is in the team!")
+else:
+    print("Bob is not in the team.")
+if my_team.contains_player("David"):
+    print("David is in the team!")
+else:
+    print("David is not in the team.")
+
+When running the code above, the following should be printed to the console:
+
+Bob is in the team!
+David is not in the team.
+
+Write the code implementing the Team class so it works as explained above.
+---
+class Team:
+	
+	def __init__(self):
+		self.player_names = []
+	
+	def add_player(self, player_name):
+		self.player_names.append(player_name)
+	
+	def contains_player(self, player_name):
+		return player_name in self.player_names
+
