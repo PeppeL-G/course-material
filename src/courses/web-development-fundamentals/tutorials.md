@@ -30,7 +30,7 @@ Run instructions:
 
 * [Recording](https://ju.instructure.com/courses/2142/pages/tutorial-recordings)
 * [GitHub repository](https://github.com/PeppeL-G/wdf-example/tree/tutorial-03)
-* [Source code in ZIP file](./static-files/tutorial-02.zip)
+* [Source code in ZIP file](./static-files/tutorial-03.zip)
 
 ::: tip Git Commit History
 Notice how beautiful and easy read the Git commit history is:
