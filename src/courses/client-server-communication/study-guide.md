@@ -150,6 +150,7 @@ Information about the **Project Work** can be found on the page [Project Instruc
 **Written Examination** is a [Digital Exam](https://ju.se/student/en/digital-exam.html) in Inspera at the end of the course. You need to register for it in advance per the instructions at [https://ju.se/student/en/studies/examination.html](https://ju.se/student/en/studies/examination.html). Sample answers are only published for the ordinary exam, not the re-exams. For the re-exams, come and talk with the course coordinator if there are any answers you are unsure of.
 
 * [Sample answers to the exam 2019-10-15](static-files/exam-2019-10-15-sample-answers.txt)
+* [Sample answers to the exam 2020-08-13](static-files/exam-2020-08-13-sample-answers.txt)
 
 ### Conditions for the examined elements
 Conditions for the **Laboratory Work** can be found on the page [Lab Instructions](lab-instructions/).
