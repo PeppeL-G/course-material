@@ -18,6 +18,7 @@ The instructions on the [Project Work](./project-work/) page indicate when you'r
 * [Web Applications in Express](../../lectures/web-applications-in-express/)
 * [SQLite](../../lectures/sqlite/)
 * [Using SQLite in Node.js](../../lectures/using-sqlite-in-node-js/)
+* [GDPR](../../lectures/gdpr/)
 * [Cookies and Sessions](../../lectures/cookies-and-sessions/)
 * [Using cookies and Sessions in Express](../../lectures/using-cookies-and-sessions-in-express/)
 * [Designing Account Systems](../../lectures/designing-account-systems/)
