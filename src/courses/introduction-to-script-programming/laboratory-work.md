@@ -99,7 +99,7 @@ Write a program that first asks the user to enter a number of months, and then c
 
 It can look something like what is shown in <FigureNumber /> below.
 
-<Figure caption="Sample input/output to/from the program.">
+<Figure caption="Sample input to and output from the program.">
 ```
 Enter the number of months the servers will run: 2
 The server costing 3200 costs on average 1700 each month.
@@ -219,7 +219,7 @@ Sample usage:
 ### Problem 2.4: Practising multiplication
 Create a program that asks the user to enter a number for which the user would like to practice the multiplication table, and then ask the user how many questions it would like to have. Your program should then generate that many random questions and ask the user to enter the correct number as answer to the question, and then print the correct answer. It can look as shown in <FigureNumber /> below.
 
-<Figure caption="Sample input/output to/from the program.">
+<Figure caption="Sample input to and output from the program.">
 ```
 Enter multiplication table: 5
 Enter number of questions: 3
@@ -346,7 +346,7 @@ Create a small program that functions as a simple calculator with a number store
 
 When you're done it can look like as shown in <FigureNumber /> below.
 
-<Figure caption="Sample input/output to/from the program.">
+<Figure caption="Sample input to and output from the program.">
 ```
 Enter initial memory value: 0
 Enter operation (add/sub/mul/div/quit): add
@@ -443,7 +443,7 @@ Add the operation *undo* to your calculator. It should (if possible) undo the us
 
 When you're done it can look like as shown in <FigureNumber /> below.
 
-<Figure caption="Sample input/output to/from the program.">
+<Figure caption="Sample input to and output from the program.">
 ```
 Enter initial memory value: 0
 Enter operation (add/sub/mul/div/undo/quit): undo

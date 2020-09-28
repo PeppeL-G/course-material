@@ -4,10 +4,10 @@ Each exercise on the [Exercises](exercises/) page contains a list of recorded le
 Here is a list of all the recorded lectures in the course. That gives you a good overview what you will learn in this course and what you are expected to know at the written examination.
 
 * [Introduction to Computers and Programming](../../lectures/introduction-to-computers-and-programming/)
+* [Using Shells](../../lectures/using-shells/)
 * [Python Introduction](../../lectures/python-introduction/)
 * [Python Basics - Part 1](../../lectures/python-basics-part-1/)
 * [Python Basics - Part 2](../../lectures/python-basics-part-2/)
-* [Using Shells](../../lectures/using-shells/)
 * [Python Modules](../../lectures/python-modules/)
 * [Python Functions](../../lectures/python-functions/)
 * [Python Conditions](../../lectures/python-conditions/)

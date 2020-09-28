@@ -1,11 +1,11 @@
 ---
-exercise0ShowAfter: 2019-10-24 11:45
-exercise1ShowAfter: 2019-10-25 14:45
-exercise2ShowAfter: 2019-11-01 14:45
-exercise3ShowAfter: 2019-11-08 14:45
-exercise4ShowAfter: 2019-11-15 14:45
-exercise5ShowAfter: 2019-11-22 14:45
-exercise6ShowAfter: 2019-11-29 14:45
+exercise0ShowAfter: 2020-10-20 9:45
+exercise1ShowAfter: 2020-10-23 14:45
+exercise2ShowAfter: 2020-10-30 14:45
+exercise3ShowAfter: 2020-11-06 14:45
+exercise4ShowAfter: 2020-11-13 14:45
+exercise5ShowAfter: 2020-11-20 14:45
+exercise6ShowAfter: 2020-11-27 14:45
 ---
 # Exercises
 On this page you find information about the exercises in the course.
@@ -190,7 +190,7 @@ graph LR
 
 <FigureNumber /> below shows sample input/output when running the program.
 
-<Figure caption="Sample input/output to/from the program.">
+<Figure caption="Sample input to and the output from the program.">
 ```
 This program computes the circumference of a circle.
 Enter the radius of the circle: 9
@@ -230,7 +230,7 @@ Create a program in a file called `celsius-to-fahrenheit-converter.py` that asks
 
 When you are done, the input/output of the program should be as shown in <FigureNumber /> below.
 
-<Figure caption="The input/output to/from the program">
+<Figure caption="The input to and the output from the program">
 ```
 This program converts Celsius to Fahrenheit.
 Enter the number of Celsius: 10
@@ -260,7 +260,7 @@ Create a program in a file called `fahrenheit-to-celsius-converter.py` that asks
 
 When you are done, the input/output of the program should be as shown in <FigureNumber /> below.
 
-<Figure caption="The input/output to/from the program">
+<Figure caption="The input to and the output from the program">
 ```
 This program converts Fahrenheit to Celsius.
 Enter the number of Fahrenheit: 50
@@ -292,7 +292,7 @@ To compute the length of the event you can start by expressing the start time in
 
 When you are done, the input/output of the program should be as shown in <FigureNumber /> below.
 
-<Figure caption="The input/output to/from the program">
+<Figure caption="The input to and the output from the program">
 ```
 This program computes the length of an event.
 Enter start hour of the event: 10
@@ -331,7 +331,7 @@ This problem is a continuation of Problem 0.6. This time the start time and end 
 
 When you are done, the input/output of the program should be as shown in <FigureNumber /> below.
 
-<Figure caption="The input/output to/from the program">
+<Figure caption="The input to and the output from the program">
 ```
 This program computes the length of an event.
 Enter start hour of the event: 10
@@ -396,7 +396,7 @@ In Problem 0.2 you created a program that asked the user to enter the radius of 
 
 When you are done, the input/output of the program should be as shown in <FigureNumber /> below.
 
-<Figure caption="The input/output to/from the program">
+<Figure caption="The input to and the output from the program">
 ```
 This program computes the circumferences of circles.
 Enter the radius of the circle: 9
@@ -466,7 +466,7 @@ The sequence we get back from the `range()` is what we will use to iterate over 
 
 When you are done, the input/output of the program should be as shown in <FigureNumber /> below.
 
-<Figure caption="The input/output to/from the program">
+<Figure caption="The input to and the output from the program">
 ```
 This program computes the circumferences of some circles.
 Enter the number of circumferences you want to compute: 4
@@ -524,7 +524,7 @@ After that you have computed the sum of the integers between 0 and 15 and can pr
 
 When you are done, the input/output of the program should be as shown in <FigureNumber /> below.
 
-<Figure caption="The input/output to/from the program">
+<Figure caption="The input to and the output from the program">
 ```
 This program computes the sum of the integers between 0 and 15.
 The sum of the integers between 0 and 15 is 120.
@@ -591,7 +591,7 @@ Change the program from the previous exercise to first ask the user which the hi
 
 When you are done, the input/output of the program should be as shown in <FigureNumber /> below.
 
-<Figure caption="The input/output to/from the program">
+<Figure caption="The input to and the output from the program">
 ```
 This program computes the sum of the integers between 0 and another integer.
 Enter the other integer: 5
@@ -992,7 +992,7 @@ In this exercise you will practice on using the following in Python:
 ### Problem 3.1: Comparing numbers
 Create a program that asks the user to enter two numbers. The program should then print which of them that is greatest respective smallest. It can look as shown in <FigureNumber /> below. Try to create functions to carry out the computations.
 
-<Figure caption="Sample input/output to/from the program">
+<Figure caption="Sample input to and the output from the program">
 ```
 Enter the first number: 9
 Enter the second number: 5
@@ -1027,7 +1027,7 @@ print(str(greatest(first_number, second_number))+" is the greatest.")
 ### Problem 3.2: Comparing more numbers
 Create a program that asks the user to enter three numbers. The program should then print which of them that is greatest respective smallest. It can look as shown in <FigureNumber /> below. Try to create functions to carry out the computations.
 
-<Figure caption="Sample input/output to/from the program">
+<Figure caption="Sample input to and the output from the program">
 ```
 Enter the first number: 9
 Enter the second number: 5
@@ -1076,7 +1076,7 @@ print(str(greatest_number)+" is the greatest.")
 ### Problem 3.3: Summering integers
 Create a program that keeps asking the user to enter an integer until the user enters `quit`. The program should then display the sum of all the integers. It can look as shown in <FigureNumber /> below. 
 
-<Figure caption="Sample input/output to/from the program">
+<Figure caption="Sample input to and the output from the program">
 ```
 Enter an integer or quit: 9
 Enter an integer or quit: 5
@@ -1110,7 +1110,7 @@ print("The sum of the integers is "+str(sum)+".")
 ### Problem 3.4: Comparing many numbers
 Create a program that keeps asking the user to enter a positive integer until the user enters `quit`. The program should then display the greatest of the entered numbers. It can look as shown in <FigureNumber /> below. Somehow you need to remember the greatest number the user has entered.
 
-<Figure caption="Sample input/output to/from the program">
+<Figure caption="Sample input to and the output from the program">
 ```
 Enter an integer or quit: 9
 Enter an integer or quit: 5
@@ -1145,7 +1145,7 @@ print(str(greatest_number)+" is the greatest.")
 ### Problem 3.5: A multiplication training program
 Create a small program that functions as a simple multiplication training program. When the program starts, it should ask a user to enter a multiplication table, and then ask the user for the answers to 10 different multiplications in that multiplication table. It can look as shown in <FigureNumber /> below.
 
-<Figure caption="Sample input/output to/from the program">
+<Figure caption="Sample input to and the output from the program">
 ```
 Enter multiplication table: 4
 Enter the product of 4*1: 4
@@ -1202,7 +1202,7 @@ else:
 ### Problem 3.6: A guess game
 Create a small program that functions as a number guessing game. Start by generating a random integer between 0 and 100, and then the user should guess which number it is until the user guess the right one. If the guess is wrong, let the user know if her guess was too high or too low. It can look as shown in <FigureNumber /> below. 
 
-<Figure caption="Sample input/output to/from the program">
+<Figure caption="Sample input to and the output from the program">
 ```
 Guess which number between 0 and 100 I'm thinking about!
 Enter your guess: 20
@@ -1488,7 +1488,7 @@ def group_words(words):
 ### Problem 4.7: A friendly program
 Create a program the user can use to store the names of her friends (all information lost when the program is closed). It can look as shown in <FigureNumber /> below. 
 
-<Figure caption="Sample input/output to/from the program">
+<Figure caption="Sample input to and the output from the program">
 ```
 Enter operation (count/add/view/remove/quit): count
 You have 0 friends.
@@ -1552,7 +1552,7 @@ while entered_operation != "quit":
 ### Problem 4.8: A friendlier program
 Create a program the user can use to store the names and emails of her friends. It can look as shown in <FigureNumber /> below. 
 
-<Figure caption="Sample input/output to/from the program">
+<Figure caption="Sample input to and the output from the program">
 ```
 Enter operation (count/add/view/remove/quit): count
 You have 0 friends.
@@ -1757,7 +1757,7 @@ Add two new commands: `save` and `load`. These commands should ask the user to e
 
 It can look as shown in <FigureNumber /> below. 
 
-<Figure caption="Sample input/output to/from the program">
+<Figure caption="Sample input to and the output from the program">
 ```
 Enter operation: add
 Enter name: Alice
@@ -1999,6 +1999,7 @@ class GuessingGame:
 ```
 </SampleAnswer>
 
+<!--
 ## Sample code
 Some of the sample code written at the tutorials.
 
@@ -2121,3 +2122,4 @@ while continue_playing == "yes":
 	
 	continue_playing = input("Play gain? yes/no: ")
 ```
+-->
