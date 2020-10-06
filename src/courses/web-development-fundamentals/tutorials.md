@@ -82,3 +82,6 @@ Notice how beautiful and easy read the Git commit history is:
 
 Always before coding, decide what the goal of your next commit should be!
 :::
+
+## Tutorial 7
+* [Recording](https://ju.instructure.com/courses/2142/pages/tutorial-recordings)
