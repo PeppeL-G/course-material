@@ -32,7 +32,13 @@ You need to register for each written examination you want to attend; if you wan
 :::
 
 ## Permitted aids
-You're **not allowed** to bring any aids (such as notes or the course book) to the `Written Examination` test, nor are you allowed to use the computer you write the exam on for anything else but answering the questions on the exam.
+The only permitted aids at the `Written Examination` test are:
+
+* A dictionary to transle to/from English from/to your native language.
+
+::: danger About the computer
+The computer you write the exam on may only be used to enter your answers on the exam. You may not use it to run other applications or search the web.
+:::
 
 ## Grades/Marking
 The exam consists of questions worth 30 points in total.
