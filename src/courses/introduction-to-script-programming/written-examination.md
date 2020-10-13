@@ -7,6 +7,10 @@ The `Examination` test is worth 3 credits. You will primarily prepare for it by 
 ## Digital Exam
 The `Examination` test is an Inspera exam; a digital exam you write on a school computer. More information about Inspera exams can be found on [the JU page *Digital Exam*](https://ju.se/student/en/digital-exam.html).
 
+::: warning Given at school
+The aim is that you will write the exam at school, but that might change depending on the corona situation at that time.
+:::
+
 ## Dates/Re-examinations
 The `Examination` test is offered in:
 
@@ -20,7 +24,7 @@ When the date for these periods is approaching you can find more information abo
 As describe on [the JU page *Digital Exam*](https://ju.se/student/en/digital-exam.html) you must register for the Inspera exam before you're allowed to write it.
 
 ::: warning Note!
-You need to register for each written examination you want to attend; if you want to write it twice, you need to register two times.
+You need to register for each written examination you want to attend. For example, if you want to write a re-exam, you need to register for the re-exam even if you already have registered for and written the ordinary exam.
 :::
 
 ::: danger Important!
@@ -28,7 +32,13 @@ You need to register for each written examination you want to attend; if you wan
 :::
 
 ## Permitted aids
-You're **not allowed** to bring any aids (such as notes or the course book) to the `Examination` test, nor are you allowed to use the computer you write the exam on for anything else but answering the questions on the exam.
+The only permitted aids to bring to the `Examination` test are:
+
+* A dictionary to translate to/from English from/to your native language.
+
+::: danger About the computer
+The computer you write the exam on may only be used to enter your answers on the exam. You may not use it to run other applications, search the web, or anything else.
+:::
 
 ## Grades/Marking
 The exam consists of questions worth 30 points in total.
@@ -47,4 +57,4 @@ The exam from 2019-02-13 was a Ping Pong exam, your exam will be an Inspera exam
 :::
 
 ## Sample answers
-After the exams, sample answers will be published here.
+After the exams, sample answers will be available here.

@@ -144,7 +144,7 @@ On top of this:
 ### Present your work
 Present your work to a teacher at a lab session. Be prepared to explain how your solutions and implementations work, and be prepared to answer any question the teacher might have about your code. It is good to practice this in advance (alone or with a friend).
 
-When the teacher is satisfied with your presentation, upload your Python files to [the assignment Lab 1 on Ping Pong](https://pingpong.hj.se/courseId/21445/content.do?id=16754735). The teacher will then approve you on that assignment.
+When the teacher is satisfied with your presentation, upload your Python files to [the assignment Lab 1 on Canvas](https://ju.instructure.com/courses/2129/assignments/5754). The teacher will then approve you on that assignment.
 
 
 
@@ -264,7 +264,7 @@ Two for loops (one inside the other) can be used to implement this function. If 
 ### Present your work
 Present your work to a teacher at a lab session. Be prepared to explain how your solutions and implementations work, and be prepared to answer any question the teacher might have about your code. It is good to practice this in advance (alone or with a friend).
 
-When the teacher is satisfied with your presentation, upload your Python files to [the assignment Lab 2 on Ping Pong](https://pingpong.hj.se/courseId/21445/content.do?id=16754788). The teacher will then approve you on that assignment.
+When the teacher is satisfied with your presentation, upload your Python files to [the assignment Lab 2 on Canvas](https://ju.instructure.com/courses/2129/assignments/5755). The teacher will then approve you on that assignment.
 
 
 
@@ -363,7 +363,7 @@ The program finished with 60 stored in memory.
 ### Present your work
 Present your work to a teacher at a lab session. Be prepared to explain how your solutions and implementations work, and be prepared to answer any question the teacher might have about your code. It is good to practice this in advance (alone or with a friend).
 
-When the teacher is satisfied with your presentation, upload your Python files to [the assignment Lab 3 on Ping Pong](https://pingpong.hj.se/courseId/21445/content.do?id=16754792). The teacher will then approve you on that assignment.
+When the teacher is satisfied with your presentation, upload your Python files to [the assignment Lab 3 on Canvas](https://ju.instructure.com/courses/2129/assignments/5756). The teacher will then approve you on that assignment.
 
 
 
@@ -561,7 +561,7 @@ The different allowed formats should be defined in the different IDS in the proj
 ### Present your work
 Present your work to a teacher at a lab session. Be prepared to explain how your solutions and implementations work, and be prepared to answer any question the teacher might have about your code. It is good to practice this in advance (alone or with a friend).
 
-When the teacher is satisfied with your presentation, upload your Python files to [the assignment Lab 4 on Ping Pong](https://pingpong.hj.se/courseId/21445/content.do?id=16754815). The teacher will then approve you on that assignment.
+When the teacher is satisfied with your presentation, upload your Python files to [the assignment Lab 4 on Canvas](https://ju.instructure.com/courses/2129/assignments/5757). The teacher will then approve you on that assignment.
 
 
 
@@ -792,7 +792,7 @@ Then write a program that computes and prints the total area of the house (the s
 ### Present your work
 Present your work to a teacher at a lab session. Be prepared to explain how your solutions and implementations work, and be prepared to answer any question the teacher might have about your code. It is good to practice this in advance (alone or with a friend).
 
-When the teacher is satisfied with your presentation, upload your Python files to [the assignment Lab 5 on Ping Pong](https://pingpong.hj.se/courseId/21445/content.do?id=16754819). The teacher will then approve you on that assignment.
+When the teacher is satisfied with your presentation, upload your Python files to [the assignment Lab 5 on Canvas](https://ju.instructure.com/courses/2129/assignments/5758). The teacher will then approve you on that assignment.
 
 
 
@@ -1028,4 +1028,4 @@ Present your work to a teacher at a lab session. Be prepared to explain how your
 The difficulties in this lab is not to write much code (most of the code you've written has been given to you), but to understand what code to write, and how that code works. Your oral presentation should reflect that you really understand how the code you've written works.
 :::
 
-When the teacher is satisfied with your presentation, upload your Python files to [the assignment Lab 6 on Ping Pong](https://pingpong.hj.se/courseId/21445/content.do?id=16754823). The teacher will then approve you on that assignment.
+When the teacher is satisfied with your presentation, upload your Python files to [the assignment Lab 6 on Canvas](https://ju.instructure.com/courses/2129/assignments/5759). The teacher will then approve you on that assignment.

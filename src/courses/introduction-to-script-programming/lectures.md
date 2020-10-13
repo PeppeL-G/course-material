@@ -1,7 +1,7 @@
 # Lectures
 Each exercise on the [Exercises](exercises/) page contains a list of recorded lectures you are recommended to watch before attempting to solve the exercises and the labs.
 
-Here is a list of all the recorded lectures in the course. That gives you a good overview what you will learn in this course and what you are expected to know at the written examination.
+Below is a list of all the recorded lectures in the course. That will give you a good overview what you will learn in this course and what you are expected to know at the written examination.
 
 * [Introduction to Computers and Programming](../../lectures/introduction-to-computers-and-programming/)
 * [Using Shells](../../lectures/using-shells/)

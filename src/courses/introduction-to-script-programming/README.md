@@ -17,7 +17,7 @@ At the moment, the only difference between these two are some of the problems th
 :::
 
 ::: danger Note to "IT Infrastructure and Network Design" students
-Starting autumn 2020, the bachelor students from *IT Infrastructure and Network Design* read this course in Year 2. This means the course doesn't run for the students from this program this year (autumn 2020).
+Starting autumn 2020, the bachelor students from *IT Infrastructure and Network Design* read this course in Year 2. This means the course doesn't run for the students from this program this year (autumn 2020). However, you can however still present your laboratory work at a lab session and write the exam (for more details, see the separate email message sent to you).
 :::
 
 ::: warning Note to old students

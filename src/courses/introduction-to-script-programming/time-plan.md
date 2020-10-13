@@ -11,7 +11,7 @@ The <span style="background-color: aqua; display: inline-block; padding: 0 8px; 
 		{key: "i", name: "Important", color: "red"},
 	]'
 	:rows='[
-		// 43
+		// 1
 		{e: "Exercise 0"},
 		{e: "Exercise 0", t: "Introduction"},
 		{e: "Exercise 0", g: "L1"},
@@ -19,7 +19,7 @@ The <span style="background-color: aqua; display: inline-block; padding: 0 8px; 
 		{e: "Exercise 1", t: "Tutorial 1"},
 		{},
 		{},
-		// 44
+		// 2
 		{l: "Lab 1"},
 		{l: "Lab 1", t: "Repetition"},
 		{l: "Lab 1"},
@@ -27,7 +27,7 @@ The <span style="background-color: aqua; display: inline-block; padding: 0 8px; 
 		{e: "Exercise 2", t: "Tutorial 2"},
 		{},
 		{},
-		// 45
+		// 3
 		{l: "Lab 2"},
 		{l: "Lab 2", t: "Repetition"},
 		{l: "Lab 2", g: "L1"},
@@ -35,15 +35,15 @@ The <span style="background-color: aqua; display: inline-block; padding: 0 8px; 
 		{e: "Exercise 3", t: "Tutorial 3"},
 		{},
 		{},
-		// 46
+		// 4
 		{l: "Lab 3"},
 		{l: "Lab 3", t: "Repetition"},
 		{l: "Lab 3"},
-		{e: "Exercise 4", g: "L1, L2"},
+		{e: "Exercise 4", g: "L1, L2", i: "Registration Exam Open"},
 		{e: "Exercise 4", t: "Tutorial 4"},
 		{},
 		{},
-		// 47
+		// 5
 		{l: "Lab 4"},
 		{l: "Lab 4", t: "Repetition"},
 		{l: "Lab 4", g: "L1"},
@@ -51,7 +51,7 @@ The <span style="background-color: aqua; display: inline-block; padding: 0 8px; 
 		{e: "Exercise 5", t: "Tutorial 5"},
 		{},
 		{},
-		// 48
+		// 6
 		{l: "Lab 5"},
 		{l: "Lab 5", t: "Repetition"},
 		{l: "Lab 5"},
@@ -59,21 +59,21 @@ The <span style="background-color: aqua; display: inline-block; padding: 0 8px; 
 		{e: "Exercise 6", t: "Tutorial 6"},
 		{},
 		{},
-		// 49
+		// 7
 		{l: "Lab 6"},
 		{l: "Lab 6"},
 		{l: "Lab 6"},
-		{l: "Lab 6", g: "L1, L2"},
+		{l: "Lab 6", g: "L1, L2", i: "Registration Exam Closes"},
 		{l: "Lab 6", t: "Sample exam"},
 		{},
 		{},
-		// 50
+		// 8
 		{},
 		{},
 		{},
 		{},
 		{},
 		{},
-		{},
+		{i: "Written Exam"},
 	]'
 />
