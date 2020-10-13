@@ -1,5 +1,5 @@
 module.exports = {
-	name: "Client-Server Communication",
+	name: "Client-Server Communication 2019",
 	showLink: true,
 	pages: [
 		"",

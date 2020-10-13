@@ -1,5 +1,5 @@
 module.exports = {
-	name: "Web Development Fundamentals",
+	name: "Web Development Fundamentals 2020",
 	showLink: true,
 	pages: [
 		"",
