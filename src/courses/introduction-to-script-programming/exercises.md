@@ -1,5 +1,5 @@
 ---
-exercise0ShowAfter: 2020-10-20 14:45
+exercise0ShowAfter: 2020-10-23 14:45
 exercise1ShowAfter: 2020-10-23 14:45
 exercise2ShowAfter: 2020-10-30 14:45
 exercise3ShowAfter: 2020-11-06 14:45
