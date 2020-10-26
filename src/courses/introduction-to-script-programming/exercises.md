@@ -1,11 +1,11 @@
 ---
-exercise0ShowAfter: 2020-10-23 14:45
-exercise1ShowAfter: 2020-10-23 14:45
-exercise2ShowAfter: 2020-10-30 14:45
-exercise3ShowAfter: 2020-11-06 14:45
-exercise4ShowAfter: 2020-11-13 14:45
-exercise5ShowAfter: 2020-11-20 14:45
-exercise6ShowAfter: 2020-11-27 14:45
+exercise0ShowAfter: 2020-10-23T14:45
+exercise1ShowAfter: 2020-10-23T14:45
+exercise2ShowAfter: 2020-10-30T14:45
+exercise3ShowAfter: 2020-11-06T14:45
+exercise4ShowAfter: 2020-11-13T14:45
+exercise5ShowAfter: 2020-11-20T14:45
+exercise6ShowAfter: 2020-11-27T14:45
 ---
 # Exercises
 On this page you find information about the exercises in the course.
