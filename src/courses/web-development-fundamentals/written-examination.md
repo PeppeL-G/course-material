@@ -57,4 +57,6 @@ The exam from 2019-01-11 was a Ping Pong exam, your exam will be an Inspera exam
 :::
 
 ## Sample answers
-Here sample answers and grading guidelines to the exams will be available after the exams have been given.
+Sample answers and some grading guidelines are available for the following exams:
+
+* [Exam 2020-10-15](./exam-2020-10-15-sample-answers/)
