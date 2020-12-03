@@ -1722,12 +1722,12 @@ def write_to_csv_file(houses):
             writer.writerow([house["name"], house["founder"]])
 
 def read_from_json_file():
-    with open('humans.json', 'r') as json_file:
+    with open('houses.json', 'r') as json_file:
         return json.loads(json_file.read())
 
 def read_from_xml_file():
     houses = []
-    with open('humans.xml', 'r') as xml_file:
+    with open('houses.xml', 'r') as xml_file:
         xml_code = xml_file.read()
         houses_element = ET.fromstring(xml_code)
         for house_element in houses_element:
@@ -1739,7 +1739,7 @@ def read_from_xml_file():
 
 def read_from_csv_file():
     houses = []
-    with open('humans.csv', 'r') as csv_file:
+    with open('houses.csv', 'r') as csv_file:
         reader = csv.reader(csv_file, delimiter=',', quotechar='"')
         for row in reader:
             houses.append({
@@ -1823,7 +1823,7 @@ while operation != "quit":
         
         elif filename.endswith(".xml"):
             friends_element = ET.Element("friends")
-            for house in houses:
+            for friend in friends:
                 friend_element = ET.SubElement(friends_element, "friend")
                 name_element = ET.SubElement(friend_element, "name")
                 name_element.text = friend["name"]
