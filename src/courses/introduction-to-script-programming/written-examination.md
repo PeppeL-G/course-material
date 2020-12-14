@@ -58,3 +58,5 @@ The exam from 2019-02-13 was a Ping Pong exam, your exam will be an Inspera exam
 
 ## Sample answers
 After the exams, sample answers will be available here.
+
+* [Exam 2020-12-13](./exams/exam-2020-12-13-sample-answers/)
