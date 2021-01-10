@@ -4,7 +4,7 @@ navbarTitle: Report Writing
 ---
 
 # Report Writing
-There are some common mistakes students do the first time they try to write a report describing the project work they've done. In this lecture some of those mistakes are covered so you can avoid doing them yourself. But first some important theory to know before you start writing your report.
+There are some common mistakes students do the first time they try to write a report describing the project work they've done. In this lecture some of those mistakes are pointed out so you can avoid doing them yourself. But first some important theory to know before you start writing your report.
 
 ## What is a project?
 Most reports are associated with a project, so you must have a good understanding of what a project is before you write a report on one. [Wikipedia's Project page](https://en.wikipedia.org/wiki/Project) has a long definition of the term, but let us only focus on projects where the goal is to implement some software. A project is always about a problem that should be solved, and the solution (in this case the software) you create should solve that problem.
@@ -29,22 +29,30 @@ When you have identified a problem to solve, you need to analyze the problem in 
     * Are they rich?
     * Do they live in big cities?
     * Are they old?
+    * Do they all have driver licenses?
     * Etc.
 * When are they having the problem?
 * How does the problem impact the rest of their lives?
 * Etc.
 
-To analyse the problem in depth could be a big project itself taking many months, but let us keep things minimal here (you don't have time to do an analyze the project in depth for the project works you do in school) and move on.
+To analyse the problem in depth could be a big project itself taking many months, but let us keep things minimal here (you don't have time to do a proper analyze of the project in depth for the project works you do in school) and move on.
 
 ### The solution
 When you have a good understanding of the problem, you need to come up with a solution to the problem. What the solution looks like do of course depends on what the problem is, but in our case the solution will always involve the creation of software. For example, if the problem is *My children has grown up and now I have a lot of small clothes no one in the family can use*, then maybe the solution could be to create a website where people can sell their clothes to others.
 
-Often you don't only come up with one solution, but many different solutions (coming up with different solutions could be a project itself taking many months), and then you continue to work with the solution you think is the most promising one. When you do, you need to be sure that the people having the problem really think that your solution is a good solution and are willing to use it (optimally willing to pay money for it 🤑). You can compare your solution to existing solutions to see if your solution seems to be better. For example, parents might throw/give away their children clothes for free now, but with your solution they would get some money for them, which would make them prefer your solution. Making a survey and asking the people having the problem is of course also a very good idea.
+Often you don't only come up with one solution, but many different solutions (coming up with different solutions could be a project itself taking many months), and then you continue to work with the solution you think is the most promising one. When you do, you need to be sure that the people having the problem really think that the solution you pick is a good solution they are willing to use (optimally willing to pay money for it 🤑). You can compare your solution to existing solutions to see if your solution seems to be better. For example, parents might throw/give away their children clothes for free now, but with your solution they would get some money for the clothes, making them prefer your solution. Making a survey and asking the people having the problem is of course also a very good idea.
 
-When you have decided which solution to go with, you need to realize it (in the previous example build the website), and this is what your project work will be about.
+When you have decided which solution to go with, you need to realize it (in the previous example implement the website). When you're done realizing the solution, we'll for simplicity consider the project to be over. Real projects could however continue after this. For example, the following could also be part of the project:
+
+* Delivering the solution to a customer.
+* Running the solution for a customer.
+* Maintaining the solution for a customer.
+* Add new functionality to the solution for a customer.
+* Fix bugs in the solution.
+* ...
 
 ## Report structure
-Most reports are quite long, so we divide them into chapters, making them a bit more structured. But which chapters should we have? In which order should they be? There's no single correct answer to this, but let me give you an example of a good structure.
+Reports describing projects tends to be quite long. Therefore, we divide them into chapters, making them a bit more structured. But which chapters should we have? In which order should they be? There's no single correct answer to this, but let's go through an example of a good structure for a report.
 
 ### Chapter 1: Introduction
 The first chapter in the report should introduce the reader to the project. The reader does so far not know anything about your project, so the first thing you need to explain to the reader is which problem you try to solve and how you intend to solve it.
@@ -58,7 +66,7 @@ Investors are not technical people (just rich and stupid bastards 😉), so avoi
 :::
 
 ### Chapter 2: Solution
-So, you have decided on a solution and you've got the money you need to build it from an investor? Great, now we just need to figure out how we should build it. The solution is usually quite complex, so dividing the solution into multiple chapters is usually a good idea.
+So, you have decided on a solution and you've got the money you need to build it from an investor? Great, now we just need to figure out the technical details of how to build the solution. The solution is usually quite complex, so dividing the solution into multiple chapters is usually a good idea, but if the solution is small and simple, a single chapter describing the solution can be enough.
 
 In our case, the solution is a website, so this chapter could be about giving an overview of how we will implement the website. In our case we could explain that a user will use her web browser on her computer to communicate with our web application running on our server, and our server in turn will communicate with our database that runs on yet another server. 
 
@@ -70,11 +78,11 @@ In our case the solution consists of two components we create ourselves:
 We have a lot to say about these, but that will be implementation details, and those are probably better described in other chapters, so this chapter is just about the architecture of the solution (an overview of the solution). This way, readers who don't know much about programming should still be able to read and understand most parts of this chapters.
 
 ::: tip Tips!
-In our case we describe the architecture of our solution in this chapter, so maybe *Architecture* is a more accurate chapter name than *Solution*? 
+In our case we describe the architecture of our solution in this chapter, so maybe *Architecture* is a more accurate chapter name than *Solution*? It's your report, you decide!
 :::
 
 ::: tip Keep it simple!
-In the Solution chapter you have to get a little bit more technical compared to the Introduction chapter, but try to keep it simple (avoid mentioning technical implementation details unless it makes sense to mention it here) so most readers can read the chapter and understand the solution overall without being technical experts. Your grandpa should be able to understand most of what you've written.
+In the Solution chapter you have to get a little bit more technical compared to the Introduction chapter, but try to keep it simple (avoid mentioning technical implementation details unless it makes sense to mention them here) so most readers can read the chapter and understand the solution overall without being technical experts. Your grandpa should be able to understand most of what you've written, even though [he doesn't know where the any key is](https://www.youtube.com/watch?v=st6-DgWeuos).
 :::
 
 ### Database
@@ -84,7 +92,7 @@ We can use a separate chapter to describe the database component in our solution
 * What tables do we have in the database?
 * What columns do we have in the tables?
 * What constraints do we have in our database?
-* Etc.
+* ...
 
 ::: tip Tips!
 In this chapter you can expect the reader to know a lot about databases, so don't expect your grandpa to understand much of what you write here.
@@ -116,7 +124,7 @@ This chapter is about the web application only, so no need to describe implement
 Add whichever other chapters you want that make sense to have. Maybe a chapter describing the website's graphical user interface is good to have? Or maybe designing the graphical user interface is an entire project on its own? Maybe the solution also includes a smartphone app? Then having a chapter explaining the implementation of that app maybe would be good? Or maybe the smartphone app should be described in a separate report? Maybe our solution also includes special days people can come to a house and leave the clothes they want to sell there, and then others can come to the house and buy them? Then a chapter explaining how this works would be good, etc.
 
 ## Readers are stupid!
-When you write a report you must always remember that you write it for the readers. Each time you hesitate over something, for example:
+When you write a report you must always remember that you write it for the readers. Each time you hesitate over something, such as:
 
 * Which chapters do I need?
 * In which chapter should I write this?
@@ -130,7 +138,7 @@ It doesn't matter whether you think the report is good or bad, what's important 
 :::
 
 ## Common student mistakes
-So, which are the common mistakes students do in their reports? Here are some of them.
+So, which are the common mistakes students do in their reports and that you should avoid? Here are some of them.
 
 ### Non unique solution name
 <ReportMistake>
@@ -166,7 +174,7 @@ The solution is hard to find for people searching on the web, and it's hard to t
 </template>
 <template v-slot:solution>
 
-Use a more unique name on your solution. Compare to *Google*, *Netflix*, *Spotify*, etc. Hard to come up with one? Use a [project name generator](https://www.google.se/search?q=project+name+generator).
+Use a more unique name on your solution. Compare to *Google*, *Netflix*, *Spotify*, etc. Hard to come up with a unique name? Use a [project name generator](https://www.google.se/search?q=project+name+generator).
 
 </template>
 </ReportMistake>
@@ -395,12 +403,12 @@ Making changes in the future will be hard, since the report needs to be updated 
 </template>
 <template v-slot:solution>
 
-Don't repeat the same information; each thing worth mentioning should only be mentioned once, and it should be obvious where in the report (which chapter) each thing is described.
+Don't repeat the same information; each thing worth mentioning should only be mentioned once, and it should be obvious where in the report (which chapter) each thing is described. If it's not obvious you probably need to re-structure your report somehow.
 
 </template>
 </ReportMistake>
 
-### Chapters start with text
+### Chapters start with figures
 <ReportMistake>
 <template v-slot:example-1-bad>
 
@@ -466,7 +474,7 @@ Use many figures in your chapters.
 </template>
 </ReportMistake>
 
-### Figures should have captions
+### Figures don't have captions
 <ReportMistake>
 <template v-slot:example-1-bad>
 
@@ -496,7 +504,7 @@ Each figure should always have a descriptive caption that explains what the figu
 </template>
 </ReportMistake>
 
-### Captions should be descriptive
+### Captions aren't descriptive
 <ReportMistake>
 <template v-slot:example-1-bad>
 
@@ -527,7 +535,7 @@ Use a descriptive caption. If the figure consists of components, colors, arrows,
 </template>
 </ReportMistake>
 
-### Figures should have figure numbers
+### Figures don't have figure numbers
 <ReportMistake>
 <template v-slot:example-1-bad>
 
@@ -557,14 +565,24 @@ Give each figure a unique figure number.
 </template>
 </ReportMistake>
 
-### Properly refer to figures
+### Figures aren't referred to properly
 <ReportMistake>
 <template v-slot:example-1-bad>
+
+Some text that doesn't mention the figure above/below at all...
+
+</template>
+<template v-slot:example-1-good>
+
+Figure 5 below shows...
+
+</template>
+<template v-slot:example-2-bad>
 
 The figure below shows...
 
 </template>
-<template v-slot:example-1-good>
+<template v-slot:example-2-good>
 
 Figure 5 below shows...
 
@@ -576,7 +594,7 @@ The text refers to figures without using their figure numbers.
 </template>
 <template v-slot:problem>
 
-It's often ambiguous which figure you refer to if you don't mention the figure number. For example, *the figure below* could refer to any of all the figures below the text, which are quite many in the beginning of the report.
+If you don't refer to the figure from the main text at all, it's unclear when and why the reader should look at the figure. If you refer to a figure without using the figure numbers it's often ambiguous which figure you refer to. For example, *the figure below* could refer to any of all the figures below the text, which are quite many in the beginning of the report.
 
 </template>
 <template v-slot:solution>
@@ -586,7 +604,7 @@ Always refer to figures using their figure numbers.
 </template>
 </ReportMistake>
 
-### The figure should be close to the relevant text
+### The figure is far away
 <ReportMistake>
 <template v-slot:example-1-bad>
 
@@ -617,7 +635,7 @@ The text refers to a figure, and the figure is far away.
 </template>
 <template v-slot:problem>
 
-The reader needs to stop reading, scroll to the figure, interpret the figure, and then scroll back to the text. This is inconvenient, and the reader loses her concentration, making the report much harder to read.
+The reader needs to stop reading, scroll to the figure, interpret the figure, and then scroll back to the text. This is inconvenient, and the reader loses her concentration, making the report very hard to read.
 
 </template>
 <template v-slot:solution>
@@ -668,7 +686,7 @@ Put figures (often) at the beginning of the text. They give a good understanding
 </template>
 </ReportMistake>
 
-### Images should not display text
+### Images display text
 <ReportMistake>
 <template v-slot:example-1-bad>
 
@@ -705,7 +723,7 @@ Always display code (and text) as text, not as images.
 </template>
 </ReportMistake>
 
-### Don't use contractions
+### Use contractions
 <ReportMistake>
 <template v-slot:example-1-bad>
 
@@ -734,7 +752,7 @@ Never use contractions in a report.
 </template>
 </ReportMistake>
 
-### Don't use I, we, etc.
+### Use I, we, etc.
 <ReportMistake>
 <template v-slot:example-1-bad>
 
@@ -763,7 +781,7 @@ Avoid using I, we, etc. unless you are expressing your own opinions/decisions.
 </template>
 </ReportMistake>
 
-### Properly mark up the text
+### Don't properly mark up the text
 <ReportMistake>
 <template v-slot:mistake>
 
@@ -811,11 +829,11 @@ Be consistent with how you use white-space throughout the entire report.
 </template>
 </ReportMistake>
 
-### Describe things where they should be described
+### Describe things where they shouldn't be described
 <ReportMistake>
 <template v-slot:example-1-bad>
 
-The Database chapter describes parts of the web application (e.g. how it communicates with it, or how the source code has that communicates with the database has been structured, etc.).
+The Database chapter describes parts of the web application (e.g. how web application communicates with the database, or how the source code in the web application that communicates with the database has been structured, etc.).
 
 </template>
 <template v-slot:example-1-good>
@@ -879,7 +897,7 @@ Use the correct spelling of names. Feel free to name your own things whatever yo
 </template>
 </ReportMistake>
 
-### Describe your work, not someone else's
+### Describing others work
 <ReportMistake>
 <template v-slot:example-1-bad>
 
@@ -893,7 +911,7 @@ The graphical user interface is implemented in HTML<sup>[1](https://html.spec.wh
 </template>
 <template v-slot:example-2-bad>
 
-The web browser communicates with the web application by sending HTTP requests to it. HTTP is a protocol built on top of TCP, which is transport protocol for sending small packages (messages) from one computer to another.
+The web browser communicates with the web application by sending HTTP requests to it. HTTP is a protocol built on top of TCP, which is transport protocol for sending small packages (messages) from one computer to another. ...
 
 </template>
 <template v-slot:example-2-good>
@@ -908,12 +926,12 @@ Techniques used to implement the solution (for example HTTP, HTML, CSS, Express,
 </template>
 <template v-slot:problem>
 
-The report should be about the solution you have created, not about the techniques you use to implement it. Many readers do probably already know these techniques, and reading about them is no fun, and you describing them in vain wastes your time.
+The report should be about the solution you have created, not details about the techniques you use to implement it. Many readers do probably already know these techniques, and reading about them is no fun, and you describing them in vain wastes your time.
 
 </template>
 <template v-slot:solution>
 
-Only describe what's unique to your solution. You can describe the techniques you are using (HTTP, HTML, etc.) very short and briefly, but for more information about these, provide references to their specifications/documentations and let the reader read more about them there instead.
+Only describe what's unique to your solution. You can describe the techniques you are using (HTTP, HTML, etc.) very short and briefly, but for more information about these, provide references to their specifications/documentations and let the reader read more about them there instead. No use in you writing a tutorial about how other techniques work.
 
 </template>
 </ReportMistake>
