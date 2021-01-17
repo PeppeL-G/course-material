@@ -35,11 +35,14 @@ To more easily debug applications when they run on your own Android device, you 
 If you don't have your own Android device to run your Android applications on, you can use an Android emulator that comes with Android Studio. If the emulator has not automatically been configured to take advantage of VM acceleration when Android Studio was installed, we highly recommend you to configure it to take advantage of the speed improvements (so the emulator lag less) by [Configuring VM acceleration](https://developer.android.com/studio/run/emulator-acceleration#accel-vm). This is a good idea even if you have a physical Android device to test on, because you probably want to test run your Android applications on different versions of Android, different screen sizes, etc., which is easy to do on an emulator, but impossible to do on a physical device.
 
 ::: tip For Windows users
-Those of you taking the course [Web Development - Advanced Concepts](../web-development-advanced-concepts/) will be using VM acceleration to run your docker containers. If you in that course use *Windows Hypervisor Platform* as your hypervisor, then stick with that one for this course too.
+Those of you taking the course [Web Development - Advanced Concepts](../web-development-advanced-concepts/) will be using VM acceleration to run your Docker containers. If you do that in Windows Subsystem for Linux, then you can't use VM acceleration for your Android device in this course. If your computer runs Windows 10 Pro (and not Windows 10 Home), then you can use Hyper-V to enable VM acceleration for both Docker and Android. Read more about that on the following pages:
+
+* Android: [Configure VM acceleration using Windows Hypervisor Platform](https://developer.android.com/studio/run/emulator-acceleration#vm-windows-whpx)
+* Docker: [Virtualization](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization)
 :::
 
 ::: warning Note!
-Getting VM acceleration to work is sometimes hard. If the emulator for some reason can't use it, it's hard to debug the reason. For example, you might get the error message `This computer meets requirements for HAXM, but VT-x is not turned on`, and the problem could be that [an antivirus program doesn't allow it to be used](https://stackoverflow.com/questions/21635504/error-during-installing-haxm-vt-x-not-working). Your development experience will be much better if you manage to enable VM acceleration, but don't spend 10 hours on trying to get it to work, then it's better to use the school's computers instead.
+Getting VM acceleration to work is sometimes hard. If the emulator for some reason can't use it, it's hard to debug the reason. For example, you might get the error message `This computer meets requirements for HAXM, but VT-x is not turned on`, and the problem could be that [an antivirus program doesn't allow it to be used](https://stackoverflow.com/questions/21635504/error-during-installing-haxm-vt-x-not-working). Your development experience will be much better if you manage to enable VM acceleration, but it's probably not worth spending 20 hours on trying to get it to work.
 :::
 
 Android Studio often reads from and writes to many files, such as when you create a new Android Studio project or when you build your application. To be efficient, it's important that reading from and writing to files is fast. There are some known cases slowing down this process, such as:
@@ -47,6 +50,8 @@ Android Studio often reads from and writes to many files, such as when you creat
 * Antivirus programs you have installed
 * Windows Defender
 * Windows File Indexing
+
+Nowadays Android Studio might install exceptions to these programs, improving the build performance, but if Android Studio is slow, you might want to investigate this.
 
 ::: tip For Windows users
 You can often find out what's slowing down Android Studio by using the [Task Manager](https://www.howtogeek.com/108742/how-to-use-the-new-task-manager-in-windows-8/) to find the process that allocates much of your computer resources when Android Studio is slow, and then try to configure it to ignore Android Studio's folders. For example, see [configure Windows Defender and Windows File Indexing to ignore Android Studio folders](https://stackoverflow.com/a/49336163/2104665).
@@ -71,9 +76,9 @@ Android applications on the other hand often run on devices with a small screen,
 With the introduction of fragments in Android API level 11 (Android 3), the guideline *One functionality per activity* is not that accurate since an entire application can consist of a single activity that changes which fragments it's displaying, and each fragment provides a functionality of some kind. Hence, *One feature per screen* might be a more accurate guideline.
 :::
 
-In this lab you should implement a simple ToDo app. Start by creating a new project in Android Studio. To start easy, add an `Empty Activity` initially, only support the latest version of Android and use Kotlin as your programming language (feel free to use Java if you want, but the code mentioned below on this page is Kotlin code). 
+In this lab you should implement a simple ToDo app, in which users can create, view, edit and delete ToDo items. Start by creating a new project in Android Studio. To start easy, add an `Empty Activity` initially, only support the latest version of Android and use Kotlin as your programming language (feel free to use Java if you want, but the code mentioned below on this page is Kotlin code). 
 
-A ToDo item will be represented using the `ToDo` class shown in <FigureNumber /> below.
+A ToDo item will be represented using the `ToDo` class shown in <FigureNumber /> below. That code can be put in a new Kotlin file named `Todo.kt`, or similar.
 
 <Figure caption="The ToDo class.">
 
@@ -93,7 +98,7 @@ data class ToDo(
 
 </Figure>
 
-The data in your application is optimally stored in the built in supported SQLite database, but to simplify we will in this lab (which primarily is about using activities) instead store the ToDo items in a global variable as shown in <FigureNumber /> below. 
+The data in your application is optimally stored in the built in supported SQLite database, but to simplify this lab (which primarily is about using activities) we will instead store the ToDo items in a global variable as shown in <FigureNumber /> below. 
 
 <Figure caption="The ToDo items are stored in a global variable.">
 
@@ -169,7 +174,7 @@ Now we have the handling of the data in the application done, now we just need t
 You should support at least 2 languages (English + another one), but the data (title and content of the ToDo items) will of course only be available in one language.
 
 ### MainActivity
-The `MainActivity` should list the titles of all ToDo items and a CREATE button. Clicking on one of the titles should start the `ViewToDoActivity` that displays more information about the ToDo that was clicked (pass the id of the clicked ToDo item in the intent), and clicking on the CREATE button should start the `CreateToDoActivity`.
+The `MainActivity` should list the titles of all ToDo items and have a CREATE button. Clicking on one of the titles should start the `ViewToDoActivity` that displays more information about the ToDo that was clicked (pass the id of the clicked ToDo item in the intent), and clicking on the CREATE button should start the `CreateToDoActivity`.
 
 The layout for the `MainActivity` can be a [ConstraintLayout](https://developer.android.com/reference/android/support/constraint/ConstraintLayout) that displays a [Button](https://developer.android.com/guide/topics/ui/controls/button) at the bottom of the layout and a [ListView](https://developer.android.com/reference/android/widget/ListView) in the rest of the space above it. The `ListView` will in turn display the title of each ToDo item. To do that, you can use code like the one shown <FigureNumber /> below in the Activity's `onCreate()` (you need to add a `<ListView>` to your layout with appropriate attributes).
 
@@ -275,16 +280,16 @@ Before you present your work to a teacher, make sure that:
 
 * At least two different languages are supported throughout the entire application.
 * You validate the user input when creating and updating a ToDo item and display descriptive error messages if something is invalid.
-* The back navigation always makes sense.
+* The back navigation always makes sense (especially after you have created, deleted or updated a ToDo item.
 * The data shown on the screen always is up to date (especially after you have created, deleted or updated a ToDo item).
 * The user always can properly use the GUI no matter how small screen the user has or how long texts the ToDo items contain.
 * You understand how all code in your application works.
 
 ## Present your work
-Present your work to a teacher at one of the lab sessions. Be prepared to explain how the code in your application works. You should be able to explain all code in your application works, and the teacher will ask you some questions about it to verify this. If the teacher is satisfied with your presentation he will approve you on [the Ping Pong assignment Laboratory Work](https://pingpong.hj.se/courseId/22045/content.do?id=17161360).
+Present your work to a teacher at one of the lab sessions. You should be able to explain how all code in your application works, and the teacher will ask you some questions about it to verify this. If the teacher is satisfied with your presentation he will approve you on the Canvas assignment [The Lab](https://ju.instructure.com/courses/3421/assignments/12889?module_item_id=75652).
 
 ## Optional exercises
-These exercises are not part of the laboratory work. Feel free to complete them to practice on using various techniques/concepts used in Android applications before you use/apply them in your project work. If you get stuck you can always ask the teacher at a lab session for help. When you're done, feel free to discuss your solution with a teacher at a lab session to get some feedback on your work.
+These exercises are not part of the laboratory work. Feel free to complete them to practice on using various techniques/concepts used in Android applications before you apply them in your project work. If you get stuck you can always ask the teacher at a lab session for help. When you're done, feel free to discuss your solution with a teacher at a lab session to get some feedback on your work.
 
 ### Handling runtime configuration changes
 In the `ViewToDoActivity`, when the activity starts, create a new instance of [TextToSpeech](https://developer.android.com/reference/android/speech/tts/TextToSpeech) and use it to speak out loud the title and the content of the ToDo item.

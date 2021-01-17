@@ -7,8 +7,8 @@ On this page you find information about the examination test `Laboratory Work`.
     "Grades": ["Fail", "Pass"],
     "How to work": "Individually",
     "Goal": "To learn how to use client-side JavaScript.",
-    "Instructions": "Complete and present your solutions to the labs on this page to a teacher at a lab session. Each lab is about improving the user experience on a webpage using client-side JavaScript.",
-    "Re-examination": "Special lab session at the re-exam period in June and in August. Contact the course manager for more specific details.",
+    "Instructions": "Complete and present your solutions to the labs on this page to a teacher at a lab session. Each lab is about improving the user experience on a webpage by using client-side JavaScript.",
+    "Re-examination": "Special lab session at the re-exam period in June and in August. Contact the course coordinator for more specific details.",
     "Help": "Ask the teacher for help at the lab sessions."
 }'>
 </CompactInfo>
@@ -39,12 +39,12 @@ Feel free to use whichever tools you want to complete the labs described below, 
 
 Before you start working on the labs you are recommended to:
 
-* View the following videos:
+* Read/View the following lectures:
     * [Client-side JavaScript & BOM](../../lectures/client-side-javascript-and-bom/)
     * [Document Object Model](../../lectures/document-object-model/)
 
 ::: tip Debugging
-When the web browser executes the JavaScript statement `debugger` it enters a debug mode in which you can inspect the values variables have. Use that to debug your code when it doesn't work the way you want.
+When the web browser executes the JavaScript statement `debugger` it enters a debug mode in which you can inspect the values variables have, use step-by-step execution, etc.. Use that to debug your code when it doesn't work the way you want.
 :::
 
 ## Lab 1: Generating a table of contents
@@ -108,4 +108,9 @@ If the user has disabled client-side JavaScript in the web browser, all three fo
 :::
 
 ## Present your work
-Present your work to a teacher at one of the lab sessions. Be prepared to explain how your code works and to answer any question the teacher might have about it. When the teacher is satisfied with your presentation, he will pass you on [the assignment Laboratory Work on Ping Pong](https://pingpong.hj.se/courseId/22061/content.do?id=17126494).
+Present your work to a teacher at one of the lab sessions. Be prepared to explain how your code works and to answer any question the teacher might have about it. When the teacher is satisfied with your presentation, he will pass you on respective assignment on Canvas:
+
+* [Lab 1](https://ju.instructure.com/courses/3372/assignments/12475)
+* [Lab 2](https://ju.instructure.com/courses/3372/assignments/12476)
+* [Lab 3](https://ju.instructure.com/courses/3372/assignments/12477)
+* [Lab 4](https://ju.instructure.com/courses/3372/assignments/12478)

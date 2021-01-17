@@ -5,8 +5,7 @@
     credits="7.5"
     course-coordinator="Peter Larsson-Green"
     examiner="Peter Larsson-Green"
-    ping-pong-event="Web Development - Advanced Concepts - TFWN19 - S20"
-    ping-pong-password="TFWN19S2003"
+    canvas-course-id="3372"
 />
 
 ## Teachers
@@ -27,14 +26,6 @@
         email: "",
         phone: "",
         website: "https://redcapesit.se/author/linus/"
-    }, {
-        name: "Muhammad Ismail",
-        photo: "muhammad-ismail.jpeg",
-        roles: ["Lab assistant"],
-        description: "Laboratory Engineer at JTH.",
-        email: "Muhammad.Ismail@ju.se",
-        phone: "036 - 10 15 92",
-        website: "https://ju.se/en/personinfo.html?sign=IsmMuh"
     }]'
 />
 
@@ -101,7 +92,7 @@ Display the ability to use JavaScript to manipulate a web page's Document Object
 
 Display the ability to program against commonly used JavaScript libraries
 -Project Work
-+Various npm packages introduces in the course.
++Various npm packages introduced in the course.
 
 Display the ability to construct web pages that interact with other web systems using REST/JSON, OAuth, etc.
 -Project Work
@@ -125,8 +116,7 @@ Display the ability to configure and use containers for development, testing, an
 Demonstrate the ability to evaluate the security of web applications
 -Project Work
 -Written Examination
-+Recorded lecture: Same-origin Policy
-+Recorded lecture: Cross-origin Resource Sharing
++Recorded lecture: Same-origin Policy & Cross-origin Resource Sharing
 
 " />
 
@@ -134,38 +124,38 @@ Demonstrate the ability to evaluate the security of web applications
 Here are short introduction to the learning activities offered in the course.
 
 ### Recorded Lectures
-In the beginning of some weeks you will be encouraged to view some recorded lectures. These will be quite theoretical and will teach new you things you can use when building a website.
+In the beginning of some weeks you will be encouraged to view some recorded lectures. These will be quite theoretical and will teach you new things you can use when building a website.
 
 ### Tutorials
-Some weeks there will be a tutorial session where the teacher will show you how to use what has been taught in the recorded lectures in practice. 
+Some weeks there will be a tutorial session where the teacher will show you how to use what has been taught in the recorded lectures in practice. This year the tutorials will be given online using Zoom.
 
 ### Lab Sessions
-Each week you may attend a 4 hours lab session. At the lab session you may ask the teacher there for help with your laboratory work and your project work. When you have completed your laboratory work you should also demonstrate your solution to a teacher at a lab session.
+Each week you may attend a 4 hours lab session. At the lab session you may ask the teacher there for help with your laboratory work and your project work. When you have completed your laboratory work you should also present your solution to a teacher at a lab session.
 
-There are 3 different lab sessions each week, but you may only attend to one. To distribute you, join one of [the lab session groups on Ping Pong](https://pingpong.hj.se/courseId/22061/projectGroupsList.do). First come, first served. Feel free to attend other lab sessions if there is room for it, but only join one group on Ping Pong.
-
-::: warning Note!
-In the project work you should work in pair, so you might want to find your partner to work with before you join a lab session group. You're also welcome to change lab session group later. 
-:::
+There are 2 different lab sessions each week, but you may only attend to one of them. To distribute you, join one of the [Lab Session Groups](https://ju.instructure.com/courses/3372/groups#tab-3284) on Canvas. First come, first served. Feel free to attend the other lab sessions as well, but students that have signed up for a specific lab session should of course be prioritized by the teacher.
 
 ## Examination Tests
 The course contains three examination tests.
 
-### Examination test 1: Written Examination
+### 1. Written Examination
 2.5 credits, graded `Fail`, `3`, `4`, and `5`. More information is available on the [Written Examination](written-examination/) page.
 
-### Examination test 2: Laboratory Work
+### 2. Laboratory Work
 1 credit, graded `Fail` and `Pass`. More information is available on the [Laboratory Work](laboratory-work/) page.
 
-### Examination test 3: Project Work
+### 3. Project Work
 4 credits, graded `Fail`, `3`, `4` and `5`. More information is available on the [Project Work](project-work/) page.
 
 ### Re-examination
-Re-examination for all examination tests will be available at the re-exam periods in June and August. For more information, see each examination test's respective page.
+<p><FigureNumber /> below shows the study and exam periods during a year. The small yellow circle sectors shows when the (re-)examinations are offered in this course (at the re-exam periods in June and August).</p>
 
-::: warning Note!
-The examination tests might have changed a little bit the next time the course run, and if you re-take some of them then, then you take them according to the new description of the tests. You don't need to re-take a test you have previously passed.
-:::
+<AcademicYearFigure />
+
+If you need to know a precise date and time for the re-examination in advance, email the course coordinator at `peter.larsson-green@ju.se`. An announcement on Canvas with more information will be posted soon before the re-examination periods for this course.
+
+The project work will only be graded 3/U (U=fail) at re-examination.
+
+If you haven't passed some examination tests after the three examination opportunities (ordinary + 2 re-exam) you need to re-take those tests the next time the course run. Note that the instructions for those tests might have changed the next time the course run, and that you should take them according to the new instructions.
 
 ### Final grade
 To receive a final grade in the course you need to pass all examination tests. The final grade will be based on the lowest grade of the `Project Work` and the `Written Examination`, but these grades will also be marked as *weak* or *strong*. If one of the grades is lower than the other and has been marked as *strong*, the final grade will be the lower grade + 1. For example, a strong 3 and a weak 4 gives you 4 as the final grade, while a weak 3 and a strong 5 gives you 3 as the final grade. For the `Written Examination`, 50% of max score is a strong 3, and 70% of max score is a strong 4.

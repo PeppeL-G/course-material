@@ -2,7 +2,7 @@
 The <span style="background-color: aqua; display: inline-block; padding: 0 8px; font-weight: bold;">Work</span> column indicates what you are expected to work on each day. `LW` = `Laboratory Work`, `PW` = `Project Work`.
 
 <TimePlan
-	:startDate='new Date(2020, 0, 13)'
+	:startDate='new Date(2021, 0, 18)'
 	:columns='[
 		{key: "l", name: "Lectures", color: "orange"},
 		{key: "w", name: "Work", color: "aqua"},
@@ -11,35 +11,35 @@ The <span style="background-color: aqua; display: inline-block; padding: 0 8px; 
 	]'
 	:rows='[
 		// 3
-		{l: "Introduction, Activities", w: "LW, PW: Part 1", i: "Swedish students fix a group today!"},
+		{w: "LW, PW: Part 1", i: "Swedish students fix a group today!"},
 		{w: "LW, PW: Part 1"},
+		{w: "LW, PW: Part 1", l: "Course Introduction, Android Basics"},
 		{w: "LW, PW: Part 1"},
-		{w: "LW, PW: Part 1"},
-		{l: "Android, Java & Kotlin", w: "LW, PW: Part 1"},
+		{w: "LW, PW: Part 1", l: "Tutorial: Sample App (Activities)"},
 		{},
 		{},
 		// 4
-		{l: "Layouts & Views, Jean-Charles Project Idea", w: "LW, PW: Part 1"},
+		{w: "LW, PW: Part 1"},
 		{w: "LW, PW: Part 2"},
 		{w: "LW, PW: Part 2"},
 		{w: "LW, PW: Part 2"},
-		{l: "ListView, Menus", w: "LW, PW: Part 2"},
+		{w: "LW, PW: Part 2", l: "Design by Martin Lindh"},
 		{},
 		{},
 		// 5
-		{l: "GUI by Filip Lundeholm, 15:00-18:00!", w: "LW, PW: Part 2"},
+		{w: "LW, PW: Part 3",},
+		{w: "LW, PW: Part 3"},
+		{w: "PW: Part 3", l: "Tutorial: Sample App (Fragments)"},
 		{w: "PW: Part 3"},
-		{w: "PW: Part 3"},
-		{w: "PW: Part 3"},
-		{l: "Fragments, Runtime configuration changes, Dialogs", w: "PW: Part 3"},
+		{w: "PW: Part 3", l: "Design by Martin Lindh"},
 		{},
 		{},
 		// 6
-		{l: "Asynchronous operations, Permissions, Local data storage", w: "PW: Part 4"},
 		{w: "PW: Part 4"},
 		{w: "PW: Part 4"},
+		{w: "PW: Part 4", l: "Tutorial: Sample App (Long Running Operations)"},
 		{w: "PW: Part 4"},
-		{l: "Services, Notifications, Broadcast receivers", w: "PW: Part 4"},
+		{w: "PW: Part 4"},
 		{i: "Re-exam period"},
 		{i: "Re-exam period"},
 		// 7
@@ -51,15 +51,15 @@ The <span style="background-color: aqua; display: inline-block; padding: 0 8px; 
 		{i: "Re-exam period"},
 		{i: "Re-exam period"},
 		// 8
-		{l: "Bluetooth", w: "PW: Part 4"},
 		{w: "PW: Part 4"},
 		{w: "PW: Part 4"},
+		{w: "PW: Part 4", l: "Tutorial: Sample App (Bluetooth)"},
 		{w: "PW: Part 4"},
 		{w: "PW: Part 4"},
 		{},
 		{},
 		// 9
-		{l: "Scheduling, Sensors", i: "PW: Halfway Meeting", w: "PW: Part 4"},
+		{w: "PW: Part 4", i: "PW: Halfway Meeting"},
 		{i: "PW: Halfway Meeting", w: "PW: Part 4"},
 		{i: "PW: Halfway Meeting", w: "PW: Part 4"},
 		{i: "PW: Halfway Meeting", w: "PW: Part 4"},
@@ -67,11 +67,11 @@ The <span style="background-color: aqua; display: inline-block; padding: 0 8px; 
 		{},
 		{},
 		// 10
-		{l: "Content Providers", i: "PW: Halfway Meeting", w: "PW: Part 4"},
-		{i: "PW: Halfway Meeting", w: "PW: Part 4"},
-		{i: "PW: Halfway Meeting", w: "PW: Part 4"},
-		{i: "PW: Halfway Meeting", w: "PW: Part 4"},
-		{i: "PW: Halfway Meeting", w: "PW: Part 4"},
+		{w: "PW: Part 4", i: "PW: Halfway Meeting"},
+		{w: "PW: Part 4", i: "PW: Halfway Meeting"},
+		{w: "PW: Part 4", i: "PW: Halfway Meeting"},
+		{w: "PW: Part 4", i: "PW: Halfway Meeting"},
+		{w: "PW: Part 4", i: "PW: Halfway Meeting"},
 		{},
 		{},
 		// 11
@@ -83,11 +83,11 @@ The <span style="background-color: aqua; display: inline-block; padding: 0 8px; 
 		{i: "Exam period"},
 		{i: "Exam period"},
 		// 12
-		{w: "PW: Presentations cancelled!", i: "Exam period"},
-		{w: "PW: Presentations cancelled!", i: "Exam period"},
-		{w: "PW: Presentations cancelled!", i: "Exam period"},
-		{w: "PW: Presentations cancelled!", i: "Exam period"},
-		{w: "PW: Presentations cancelled!", i: "Exam period"},
+		{w: "PW: Presentation", i: "Exam period"},
+		{w: "PW: Presentation", i: "Exam period"},
+		{w: "PW: Presentation", i: "Exam period"},
+		{w: "PW: Presentation", i: "Exam period"},
+		{w: "PW: Presentation", i: "Exam period"},
 		{i: "Exam period"},
 		{w: "PW: Part 6", i: "Exam period, Deadline submit PW for grading."},
 	]'

@@ -5,17 +5,17 @@ On this page you find information about the examination test `Project work`.
 <CompactInfo :infoPieces='{
     "Number of credits": "4",
     "Grades": ["Fail", "3", "4", "5"],
-    "How to work": "In pair",
+    "How to work": "In pairs",
     "Goal": "To learn how to implement a scalable platform built on Docker containers running a web application, a single-page application, a database to store sessions in and a database to store your resources in. You will also learn how to use a three-layered architecture, dependency injection and how to design and implement a REST API in your web application.",
     "Instructions": "Complete the different parts the project work consists of described on this page. You will implement a platform, write a report describing your implementation and present your platform to the rest of the class at the end of the course.",
     "Grading guidelines": "Available on the Project Grading Guidelines page.",
-    "Re-examination": "Special presentation sessions will be available at the re-exam periods in June and in August (contact the course manager for more details). Your work can also be graded at these re-exam period, but it will only be graded Fail/3.",
+    "Re-examination": "Special presentation sessions will be available at the re-exam periods in June and in August (contact the course coordinator for more details). Your work can also be graded at these re-exam period, but it will only be graded Fail/3.",
     "Help": "Ask the teacher for help at the lab sessions."
 }'>
 </CompactInfo>
 
 ## Introduction
-As project work, you should work in pair to create a platform per the instructions in this document. The platform will consist of:
+As project work, you should work in pairs to create a platform per the instructions in this document. The platform will consist of:
 
 * A relational database that stores the resources created on the platform.
 * A none-relational database to store temporary data (sessions) on the platform.
@@ -39,7 +39,7 @@ Use whichever type of resources you want in addition to accounts. Examples are:
 * *Blog posts* logged in users can create and that other logged in users can write *comments* on.
 * *Todo lists* logged in users can create and add *todo items* to.
 
-Implement the platform using the technologies taught in this course. In addition to implementing the web application, you should also write a report describing how the platform works and how it has been implemented. The file [project-report-template.docx](static-files/project-report-template.docx) contains a template with further instructions on this. Your report will be a living document throughout the course (meaning that you will continuously improve/add content to it). 
+Implement the platform using the technologies taught in this course. In addition to implementing the web application, you should also write a report describing how the platform works and how it has been implemented. The file [project-report-template.docx](static-files/project-report-template.docx) contains a template with further instructions on this. Your report will be a living document throughout the course, meaning that you will continuously improve/add content to it. 
 
 On the [Project Grading Guidelines](./project-grading-guidelines/) page you find some guidelines for how your project work will be graded. You are recommended to read through it every now and then.
 
@@ -48,26 +48,24 @@ To help you, we have divided the project work into smaller parts that should be 
 Good luck!
 
 ## Installing required software
-**If you work on the computers in E2404, E2432, E2433 or E4205**, all required software should already be installed for you, so you should not need to install anything yourself.
+**If you work on the computers in E2404, E2432 or E2433**, all required software should already be installed for you, so you should not need to install anything yourself.
 
-**If you work on a school computer in any other room**, you need to manually install the required software through the *Software Center* application (unless someone already has done that on the specific computer you sit at).
+**If you work on a school computer in any other room**, you need to manually install the required software through the *Software Center* application (unless someone else has already done that on the specific computer you sit at).
 
 **If you work on your own private computer**, you need to download and install all required software yourself. In this course, we use only free software available for both Windows, Mac and Linux.
 
 The required software is:
-* [Docker](https://docs.docker.com/install/) \
+* [Docker](https://docs.docker.com/get-docker/) \
     A program used for containerization, i.e. a program used for running other programs in an isolated and configured environment.
+  
+::: warning Docker has been updated
+Before, there was a legacy version of Docker called *Docker Toolbox*, and a newer version of Docker called *Docker Desktop for Windows*. There are some minor differences between, such as commands, bugs, etc. Of course, using the newer version is better, but you could not do that if you had *Windows 10 Home*, but instead needed to have *Windows 10 Pro*. Many users do of course not have Windows 10 Pro, so they had to use the old version of Docker instead.
 
-::: warning Information to Windows users
-**Does your computer run Windows 10 Pro or Windows 10 Education?** \
-Then your computer supports Hyper-V, and you can use the newer version of Docker: Docker for Windows.
+In March 2020, [Docker released a new version of Docker Desktop for Windows](https://www.docker.com/blog/docker-desktop-for-windows-home-is-here/) that also works on Windows 10 Home using *Windows Subsystem for Linux*. So nowadays all Windows users can use Docker Desktop for Windows, and forget about Docker Toolbox. But keep in mind that there are still a lot resources out there that might have been written for Docker Toolbox instead of Docker Desktop for Windows.
 
-**Note:** The newer version of Docker makes use of virtualization through Hyper-V. If you take the course [Android Development](../android-development/) you can speed up Android emulators by using virtualization either through Hyper-V or through Intel's HAXM. Both can't be used at the same time, so you avoid problems if you just stick to Hyper-V when you use Windows 10 Pro or Windows 10 Education.
+The instructions for installing Docker Desktop for Windows differs depending on if you have Windows 10 Home or Windows 10 Pro. Make sure to follow the correct instructions for your operating system.
 
-**Does your computer run Windows 10 Home or an older version of Windows?** \
-Then your computer doesn't support Hyper-V, and you have to use the older version of Docker: Docker Toolbox on Windows.
-
-**Heads-up:** The older version of Docker does not completely support port forwarding, so you can't access containers through `localhost`, but must instead use the IP address of the Docker Machine you run instead. More information on this later.
+If you also take the course [Android Development](../../android-development/), ETC. Docker has a setting called `Use the WSL 2 based engine`. For Windows 10 Home users, this option must be checked. For Windows 10 Pro users, this option can be unchecke
 :::
 
 * [Node.js](https://nodejs.org/en/) \
@@ -75,15 +73,19 @@ Then your computer doesn't support Hyper-V, and you have to use the older versio
 * [npm](https://www.npmjs.com/) \
     This one is installed along with Node.js, so you do not need to install it separately. However, you might want to [update npm to the latest version](https://docs.npmjs.com/troubleshooting/try-the-latest-stable-version-of-npm).
 
-The following software tool is not required (use whichever IDE you want), but recommended:
+The following software tool is not required, but recommended:
 
 * [Visual Studio Code](https://code.visualstudio.com/) \
-    IDE with good support for writing, running and debugging Node.js and JavaScript code.
+    IDE with good support for writing, running and debugging Node.js and JavaScript code, but use whichever IDE you want.
+* [Git](https://git-scm.com/) \
+    Version Control System that makes it very convenient to work on the project from different computers.
  
 ## Part 1: Joining a project group
-The project work should be carried out in pairs. Let the examiner know who you are working with by joining one of [the project groups on Ping Pong](https://pingpong.hj.se/courseId/22061/projectGroupsList.do).
+The project work should be carried out in pairs. Let the examiner know who you are working with by joining one of [the Project Groups on Canvas](https://ju.instructure.com/courses/3372/groups#tab-3280).
 
-If you can't find someone to work with, send the course coordinator an email at [Peter.Larsson-Green@ju.se](mailto:Peter.Larsson-Green@ju.se) using the template below (you just need to replace `XXX` with your specific values).
+If you can't find someone to work with, send the course coordinator an email at [Peter.Larsson-Green@ju.se](mailto:Peter.Larsson-Green@ju.se) using the template in <FigureNumber /> below (you just need to replace `XXX` with your specific values).
+
+<Figure caption="Template of message to be sent to the course coordinator if you can't find a partner to work with on your own.">
 
 ```
 Hi!
@@ -95,15 +97,26 @@ My JU email: XXX@student.ju.se
 The grade I'm aiming for in this course: XXX
 I got the following grades in the following pre-requisite courses:
  - Introduction to Programming: XXX
- - Data Structures and Algorithms: XXX
+ - Data Structures and Algorithms: XXX*
  - Object-Oriented Programming: XXX
  - Network Programming: XXX
  - Web Development Fundamentals: XXX
+
+Thanks!
 ```
+
+</Figure>
 
 If you don't care about who you are matched with, you just need to enter your name and JU email in the template. The course coordinator will then try to match you with a student with similar ambitions and skills as you.
 
 ## Part 2: Platform idea
+Before you start working on this part, you are recommended to:
+
+* Read/View the following lectures:
+    * [Report Writing](../../lectures/report-writing/)
+* Read the following short course on Git:
+    * [Git](../git/)
+
 Your first task is to come up with what the platform you will create should do. Try to be creative and create a platform that solves a real-world problem ordinary people are having. Feel free to ask your family and friends for problems they have that could be solved using a platform. Examples of real-world problems could be:
 
 * I often forget meetings.
@@ -112,11 +125,11 @@ Your first task is to come up with what the platform you will create should do. 
 * I eat lunches alone, and that's so boring.
 * I need to find someone I can play padel with.
 
-The only important thing is that your platform can be implemented using at least 3 type of resources (accounts + at least two more), but the more useful it is the better.
+The only important thing is that your platform can be implemented using at least 3 type of resources (accounts + at least two more), but the more useful it is the better. Optimally you have such a great idea that you will want to launch your platform after the course.
 
 Your platform should be described in the project report, so in this part of the project work, you will not do any programming, but only work on your report. You should be able to complete at least the *Introduction* chapter.
 
-When you're done describing your idea in the report, discuss it with a teacher at one of the lab sessions. It's not mandatory, but you are then recommended to upload the current version of your report to Ping Pong by submitting the assignment [Project Work: Platform Idea](https://pingpong.hj.se/courseId/22061/content.do?id=17129195) to get some initial feedback on your idea from the examiner.
+When you're done describing your idea in the report, discuss it with a teacher at one of the lab sessions, or some friends so you get some initial feedback on it and can improve it. Then recommended to upload the current version of your report to Canvas by submitting the assignment [Platform Idea](https://ju.instructure.com/courses/3372/assignments/12479?module_item_id=75146) to get some feedback on your idea from the examiner.
 
 ## Part 3: Setting up docker
 Before you start working on this part you must:
@@ -126,13 +139,13 @@ Before you start working on this part you must:
 
 Before you start working on this part, you are recommended to:
 
-* View the following recorded lectures:
+* Read/View the following lectures:
     * [Docker Basics](../../lectures/docker-basics/)
 
 The web application should be implemented in Node.js using the Express framework (feel free to use [Koa](https://koajs.com/) instead of Express if you are willing to learn it (not officially part of this course, so you can't expect to get any help with it from the lab assistants)), and the resources on the platform should be stored in a MySQL database. We could create a Docker container that contains both, but when it comes to containerization it is better that a container just has a single responsibility, e.g. to just run the web application or to just run the database. Among other things, it is much easier to scale a container that has a single responsibility. Therefore, the web application should run in one container, and the database should run in another container.
 
 ### The Web Application image
-Start by creating a new folder to store all the source code for the entire platform. In this document we will refer to this folder as `/platform` (you should of course use a more unique/descriptive name than `platform`). Then create a sub-folder inside this one to store the source code for the web application. In this document we will refer to that sub-folder as `/platform/web-application`.
+Start by creating a new folder to store all the source code for the entire platform. In this document we will refer to this folder as `/platform` (you should of course use a more unique/descriptive name than `platform`). This is the folder you want to version control, so here you also want to initialize your Git repository. Then create a sub-folder inside this one to store the source code for the web application. In this document we will refer to that sub-folder as `/platform/web-application`.
 
 In `/platform/web-application`, run the following commands:
 
@@ -161,7 +174,7 @@ app.listen(8080, function(){
 
 Verify that the code you have written so far works by starting the web application using the command `node app.js` in `/platform/web-application` and then visit [http://localhost:8080](http://localhost:8080) in a web browser and verify that you see the text *Hello, World*. If you do, then it works as it should, and you can stop running the web application.
 
-You just ran the web application as an ordinary program on your own computer. Let's try to run it in a container using Docker instead. To do that we need to tell Docker which environment our code needs to run, and how it should be started. To do that we need to put our code in an image that contains all this information, and then ask Docker to start running that image in a new container.
+You just ran the web application as an ordinary program on your own computer. Let's try to run it in a container using Docker instead. To do that we need to tell Docker which environment our code needs to run, and how it should be started. To do that we need to put our code in a Docker image that contains all this information, and then ask Docker to start running that image in a new Docker container.
 
 To specify the environment in the image one usually inherit the environment from an existing image. The [Docker Hub](https://hub.docker.com) contains a collection of images we can use, and in our case we need an image with Node.js pre-installed. Node.js provides *official images* that comes with Node.js pre-installed, so try searching for `node` there and find a suitable image (e.g. `node:13.5.0`). Then create a file called `Dockerfile` in `/platform/web-application` that looks something like what shown in <FigureNumber /> below.
 
@@ -185,13 +198,13 @@ CMD ["node", "app.js"]
 
 </Figure>
 
-Docker can then use the information in this file to build a new image that contains your source code and Node.js to run it. To do that, run the command `docker build --tag=my-web-app:latest .` in `/platform/web-application`. This tells Docker to build the image and to add it to its own collection of images on your computer. At the same time, it will also download the `node:13.5.0` image from Docker Hub (unless it has done that before).
-
-To run the image in a new container, run the command `docker run -p 3000:8080 my-web-app:latest`. If this doesn't work, you might first need to start the Docker Machine by running the command `docker-machine start`. When the container is running you should be able to send HTTP requests to your web application by opening [http://localhost:3000](http://localhost:3000) in a web browser on your computer (if this doesn't work, see the red box below). The command used to start the container told Docker that all incoming traffic to port 3000 on your computer should be forwarded to the container's port 8080.
-
-::: danger Port forwarding does not work on Docker Toolbox
-Visiting [http://localhost:3000](http://localhost:3000) does unfortunately not work with the old version of Docker on Windows (Docker Toolbox). If you use that, then you first need to run the command `docker-machine ip` to get the IP address of the Docker Machine and use that one instead, e.g. visiting [http://192.168.99.100:3000](http://192.168.99.100:3000) (or whichever IP address your Docker Machine gets). 
+::: warning Start Docker Desktop for Windows
+Before you use any docker command you must start the Docker Desktop for Windows application. 
 :::
+
+Docker can then use the information in `Dockerfile` to build a new image that contains your source code and Node.js to run it. To do that, run the command `docker build --tag=my-web-app:latest .` in `/platform/web-application`. This tells Docker to build the image and to add it to its own collection of images on your computer. At the same time, it will also download the `node:13.5.0` image from Docker Hub (unless it has already done that).
+
+To run the image in a new container, run the command `docker run -p 3000:8080 my-web-app:latest`. When the container is running you should be able to send HTTP requests to your web application by opening [http://localhost:3000](http://localhost:3000) in a web browser on your computer (that is, if you use Docker for Windows, if you use Docker Toolbox instead, see the red box below). The command used to start the container told Docker that all incoming traffic to port 3000 on your computer should be forwarded to the container's port 8080.
 
 On Mac and Linux you can stop the container from running by pressing `[CTRL]` + `[C]`. On Windows you also need to run the command `docker container ls` to retrieve the name of the container and then run the command `docker container stop theContainerName`.
 
@@ -208,15 +221,23 @@ Your workflow will kind of be:
 
 To manually carry out these steps each time you want to test changes you make to the source code is quite time consuming and boring. Docker has a solution to this problem: volumes. With volumes you can synch folders on your computer with folders in a running container. When you change a file in one of these folders on your computer, Docker will automatically send the new version of the file to the corresponding folder in the container that is running, so the container always have the latest version of the file.
 
+::: tip Volumes on Windows
+When using volumes on Windows, the recommendation is to put the volumes (in your case all your source code) directly in the filesystem on the Linux distribution you are running in Windows Subsystem for Linux, instead of in the file system for Windows. Read more about it in [Docker's best practices](https://docs.docker.com/docker-for-windows/wsl/#best-practices).
+:::
+
 Using a volume is quite easy. When you start a container with the `docker run` command you also specify which folders that should be synched using the `-v` option, like (on Windows)
 `docker run -v //c/folder/on/host/computer:/folder/in/container` (plus the `-p` for port forwarding as before). You don't want to synch your entire `/platform/web-application` folder (the `node_modules` folder in it and some other files/folder should not be synched, only the code you've written), so it might be a good idea to put your source code files in a new folder, for example called `/platform/web-application/src`, and use volumes to synch only this subfolder instead.
 
 However, synching files is not enough to keep your web application in the container up to date. Each time a JavaScript file changes the web application running in the container needs to be restarted. To make that happen we can use an npm package called [nodemon](https://nodemon.io/). Simply:
 
 1. Install `nodemon` by running the command `npm install nodemon` in `/platform/web-application`.
-2.	Change `package.json` to contain a script called `start` that executes
-`nodemon src/app.js -L`. \
-    **Note:** The `-L` flag is only necessary if you run the older version of Docker (Docker Toolbox). Read more about it at [https://stackoverflow.com/q/39239686/2104665](https://stackoverflow.com/q/39239686/2104665). This flag will increase the CPU usage, so remove it if you use the newer version of Docker and it works without it.
+2. Change `package.json` to contain a script called `start` that executes
+`nodemon src/app.js -L`.
+::: warning Volumes on Windows
+If you have put your source code on the file system for the Linux distribution in Windows Subsystem for Linux, then you can skip the `-L` flag. That flag activates a workaround causing the computer to do more work than it should need to, but the flag is required if you put your source code on the Windows file system. To learn why, read [Docker's best practices](https://docs.docker.com/docker-for-windows/wsl/#best-practices) and [nodemon's docs](https://github.com/remy/nodemon#application-isnt-restarting).
+
+Docker has a setting called `Use the WSL 2 based engine`. For Windows 10 Home users, this option must be checked. For Windows 10 Pro users, this option can be unchecked, in which case volumes will work a little bit different, and you don't don't need to use `-L` flag if your source code is placed on Windows file system. However, you will still get overall better performance by leaving this option checked and place your source code on the file system for the Linux distribution you are running on Windows Subsystem for Linux (according to Docker).
+:::
 3. Change your `Dockerfile` to start the web application with the command `npm run start`.
 
 When you have built and run this new image and used volumes to synch folders the web application in the container should restart as soon as you change any JavaScript file the web application is dependent on. Your new workflow will simply be:
@@ -227,7 +248,10 @@ When you have built and run this new image and used volumes to synch folders the
 3. See the changes in your web browser.
 4. Restart on #2.
 
-**Note:** When you install a new npm package you need to restart on #1.
+::: warning Installing new npm packages
+When you install a new npm package you need to restart on #1 above. The container will only read the `dependencies` list in `package.json` and download the npm packages to the `node_modules` folder when you build the image.
+:::
+
 If you want to be able to debug your Node.js application from Visual Studio Code, you need to tell Visual Studio Code how to connect to the Node.js application running in the container. The tutorial [Setting up Debugger for Node.js in Docker with VS code](https://blog.theodo.com/2018/10/setting-debugger-node-js-docker-vs-code/) shows you how you can do that. That tutorial makes use of Docker Compose, which you will start using after you have created a database image to run your database.
 
 You have now successfully setup a project suitable for implementing a web application in Node.js with Docker containers. Good job!
@@ -235,7 +259,7 @@ You have now successfully setup a project suitable for implementing a web applic
 ### The Database image
 Since the MySQL database should run in a separate container, let us do something similar for the database as we did for the web application.
 
-Start by creating a new folder inside the Docker folder to store information about the database image. In this document we will refer to that sub-folder as `/platform/database`. Create a new file in this sub-folder called `Dockerfile` with the content similar to the one in <FigureNumber /> below. That Dockerfile describes an image inheriting from `mysql:5.7.24`, which is an image that runs a MySQL server.
+Start by creating a new folder inside `/platform` to store information about the database image. In this document we will refer to that sub-folder as `/platform/database`. Create a new file in this sub-folder called `Dockerfile` with the content similar to the one in <FigureNumber /> below. That Dockerfile describes an image inheriting from `mysql:5.7.24`, which is an image that runs a MySQL server. Read more about [the MySQL image](https://hub.docker.com/_/mysql) on Docker Hub.
 
 <Figure caption="The content of Dockerfile in the database folder.">
 
@@ -286,7 +310,7 @@ Your images can now be built and started in containers using the `docker-compose
 :::
 
 ::: warning Handling anonymous volumes
-The MySQL image uses an anonymous volume to store it's data, and by default it's only created the first time you start it using `docker-compose up`. A result of this is that your SQL code in the `/docker-entrypoint-initdb.d/` in the image will only be executed the first time you start it with `docker-compose up`. The next time you run `docker-compose up` it will resume using the tables from before and not execute your SQL code in `/docker-entrypoint-initdb.d/`. This is usually NOT what you want. You can get around this by using the command `docker-compose down` before you run `docker-compose up`, or you can add the flag `--renew-anon-volumes` to `docker-compose up`.
+The MySQL image uses an anonymous volume to store it's data, and by default it's only created the first time you start it using `docker-compose up`. A result of this is that your SQL code in the `/docker-entrypoint-initdb.d/` in the image will only be executed the first time you start it with `docker-compose up`. The next time you run `docker-compose up` it will resume using the tables from before and not execute your SQL code in `/docker-entrypoint-initdb.d/`. This is usually NOT what you want. You can get around this by using the command `docker-compose down` before you run `docker-compose up`, or you can add the flag `--renew-anon-volumes` (short form is `-V`) to `docker-compose up`.
 
 For more information, see [Issue #2127 in the Docker Compose repository](https://github.com/docker/compose/issues/2127).
 :::
@@ -294,8 +318,9 @@ For more information, see [Issue #2127 in the Docker Compose repository](https:/
 ## Part 4: Implementing the Web Application
 Before you start working on this part, you are recommended to:
 
-* View the following recorded lectures:
+* Read/View the following lectures:
     * [Layered Architecture in Node.js](../../lectures/layered-architecture-in-node-js/)
+    * [Asynchronous Programming in JavaScript](../../lectures/asynchronous-programming-in-js/)
 
 Implement the website using a three-layered architecture:
 
@@ -331,7 +356,7 @@ On your platform, users should at least be able to create new resources and to b
 ## Part 5: Adding Authorization
 Before you start working on this part, you are recommended to:
 
-* View the following recorded lectures:
+* Read/View the following lectures:
     * [Handling Concurrent HTTP Requests](../../lectures/handling-concurrent-http-requests/)
     * [Scaling Web Applications](../../lectures/scaling-web-applications/)
     * [Scaling Databases](../../lectures/scaling-databases/)
@@ -370,7 +395,7 @@ Then add the login feature to your web application and add authorization. Rememb
 ## Part 6: Using Dependency Injection
 Before you start working on this part, you are recommended to:
 
-* View the following recorded lectures:
+* Read/View the following lectures:
     * [Dependency Injection in Node.js](../../lectures/dependency-injection-in-node-js/)
 
 The three layers the web application consists of have some dependencies:
@@ -591,7 +616,7 @@ If you want, feel free to use any other dependency injection method you prefer, 
 ## Part 7: Multiple Data Access Layers/ORM
 Before you start working on this part, you are recommended to:
 
-* View the following recorded lectures:
+* Read/View the following lectures:
     * [Using Sequelize in Node.js](../../lectures/using-sequelize-in-node-js/)
 
 Now that your web application makes use of dependency injection, let us see if it works by implementing another data access layer. The new data access layer should have the same interface as the old one (must implement the same exposed functions, must send back identical errors, etc.) but should be implemented differently. Let us implement it using an Object-Relational Mapping framework, so you get some practice on using that.
@@ -622,7 +647,7 @@ graph LR
 ## Part 8: Adding a REST API
 Before you start working on this part, you are recommended to:
 
-* View the following recorded lectures:
+* Read/View the following lectures:
     * [REST API Basics](../../lectures/rest-api-basics/)
     * [REST API in Express](../../lectures/rest-api-in-express/)
     * [REST API Authorization](../../lectures/rest-api-authorization/)
@@ -685,7 +710,7 @@ Implement Access Tokens as described by the [OAuth 2.0 Framework](https://oauth.
 ## Part 9: Implementing a Single-Page Application
 Before you start working on this part, you are recommended to:
 
-* View the following recorded lectures:
+* Read/View the following lectures:
     * [AJAX](../../lectures/ajax/)
     * [Same-Origin Policy and Cross-Origin Resource Sharing](../../lectures/sop-and-cors/)
 
@@ -701,7 +726,7 @@ Since the SPA only consists of static HTML, CSS and JS files (and possibly image
 
 Since web browsers follow the same-origin policy, your REST API needs to support cross-origin resource sharing, so if you haven't added that to it yet, do it now.
 
-## Part 10: Optional tasks
+## Part 10: Optional Tasks
 Here are some optional tasks you must complete if you want to get a grade higher than 3. Remember that completing these extra tasks does not necessarily give you a higher grade, but you have to complete them to have a chance to get a higher grade. Also, do not forget to look through the page [Project Grading Guidelines](project-grading-guidelines/).
 
 ### A fancy website (required for grade 4 and 5)
@@ -717,36 +742,30 @@ Let users create a new account on your platform by using their existing account 
 
 This does only have to work either through the website or through the REST API. You choose which one if you don't want to implement both, and that should of course be described in your report.
 
-## Part 11: Demonstration
-To avoid risk spreading the coronavirus the demonstration sessions are cancelled.
-
-<del>
-
-Demonstrate how your application works to the rest of your class. The reason for the demonstration is two-folded:
+## Part 11: Presentation
+Present how your platform works to the rest of your class. The reason for the presentation is two-folded:
 
 * You get some practice in presenting your work, which is a very important skill in your future professional career.
-* You get to see other ways to implement similar functionality (hopefully not all websites will look the same).
+* You get to see a variety of different platforms implemented in a very similar same (hopefully not all platforms is about solving the same problem).
 
-Your demonstration will not be graded; consider it as (mandatory) practice.
+Your presentation will not be graded; consider it as (mandatory) practice.
 
-Join a [Project Demonstration Group](https://pingpong.hj.se/courseId/22061/projectGroupsList.do) on Ping Pong (first come, first served). Only one in each project work pair should join the Project Demonstration Group you want to join. Which group you join determines when you should demonstrate your work. You will only demonstrate to the rest of the project groups in the same demonstration group as you.
+Join one of the [Project Presentation Groups](https://ju.instructure.com/courses/3372/groups#tab-3279) on Canvas (first come, first served). Only one in each project work pair should join the Project Presentation Group you want to join. Which group you join determines when you should demonstrate your work. You will only demonstrate to the rest of the project groups in the same presentation group as you.
 
-At the demonstration, you should:
+At the presentation, you should:
 
 * Explain what the platform you have created is about, including (basically the Introduction chapter in the report):
     * Why would someone use it?
     * What can the platform be used for?
     * How have you made the platform as good as possible (so users won't use any other solution)?
-    * Explain the architecture of the platform, including (basically the Architecture chapter in the report):
+    * Explain the architecture of the platform, including (basically the Architecture chapter in the report, show figures!).
     * How the solution/platform is implemented. Give an overview.
 * Give an overview of the implementation of each component the architecture consists of (basically an overview of the rest of the chapters in the report). Use figures!
 * Give a demonstration of how your solution works. A good idea is that one of you tell the other one what do to (e.g. *Go ahead and create a new account for me.*), and then the other one shows how to do that.
 
-You may use at most 15 minutes, so come prepared. You will not have time for *Oh, what more can I show you?* or *Wait, let me try to remember/look up how we did that*, so rehearse the demonstration in advance. Be prepared to answer any question about your solution the audience might have. 
+You may use at most 15 minutes, so come prepared. You will not have time for *Oh, what more can I show you?* or *Wait, let me try to remember/look up how we did that*, so rehearse the presentation in advance. Be prepared to answer any question about your solution the audience might have. 
 
-The examiner will approve you on the Ping Pong assignment [Project Work: Demonstration](https://pingpong.hj.se/courseId/22061/content.do?id=17129200) after your demonstration.
+The examiner will approve you on the Canvas assignment [Presentation](https://ju.instructure.com/courses/3372/assignments/12480?module_item_id=75148) after your presentation.
 
-</del>
-
-## Part 12: Submitting your work
-When you're done with your work, upload it to Ping Pong by submitting the assignment [Project Work: Final Submission](https://pingpong.hj.se/courseId/22061/content.do?id=17129206). Be sure to follow the submission instructions described on that page.
+## Part 12: Final Submission
+When you're done with your work, upload it to Canvas by submitting the assignment [Final Submission](https://ju.instructure.com/courses/3372/assignments/12481?module_item_id=75147). Be sure to follow the submission instructions described on that page.

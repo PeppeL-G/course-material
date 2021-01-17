@@ -6,6 +6,8 @@ navbarTitle: Android Dialogs
 # Android Dialogs
 You want to ask the user something? Then start a dialog with her!
 
+<iframe width="560" height="314" src="https://www.youtube.com/embed/u3gZ2xQWYZY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Lecture material
 * [android-dialogs.pdf](android-dialogs.pdf)
 * [android-dialogs.pptx](android-dialogs.pptx)

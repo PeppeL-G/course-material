@@ -17,10 +17,10 @@ The `Written Examination` test is offered in:
 When the date for these periods is approaching you can find more information about location and date at [the JU page *Exam Schedule JTH*](https://ju.se/student/en/studies/examination/exam-schedule-jth.html).
 
 ## Registration
-As describe on [the JU page *Digital Exam*](https://ju.se/student/en/digital-exam.html) you must register for the Inspera exam before you're allowed to write it.
+As describe on the JU page [Digital Exam](https://ju.se/student/en/digital-exam.html) you must register for the Inspera exam before you're allowed to write it.
 
 ::: warning Re-register for re-examinations
-You need to register for each written examination you want to attend; if you want to write a re-exam, you still need to register for it even if you registered for the ordinary exam.
+You need to register for each written examination you want to attend. If you want to write a re-exam, you need to register for the re-exam even if you registered for the ordinary exam.
 :::
 
 ::: danger The registration closes
@@ -28,7 +28,13 @@ You need to register for each written examination you want to attend; if you wan
 :::
 
 ## Permitted aids
-You're **not allowed** to bring any aids (such as notes or the course book) to the `Written Examination` test, nor are you allowed to use the computer you write the exam on for anything else but answering the questions on the exam.
+The only permitted aids at the `Written Examination` test are:
+
+* A dictionary to translate to/from English from/to your native language.
+
+::: danger About the computer
+The computer you write the exam on may only be used to enter your answers on the exam. You may not use it to run other applications or search the web.
+:::
 
 ## Grades/Marking
 The exam consists of questions worth 30 points in total.
@@ -37,7 +43,7 @@ The exam consists of questions worth 30 points in total.
 * For grade 4, 60% of max score (18 points) is required.
 * For grade 5, 80% of max score (24 points) is required.
 
-The exam will be in English, but you may write your answers in either English or Swedish. If you write answers in Swedish, make sure to not introduce any translation confusement. Write proper sentences (spelling, upper/lower case characters, punctuation, etc.). Answers that do not do this good enough/are vague/are partly incomprehensible cannot receive full score on the questions.
+The exam will be in English, but you may write your answers in either English or Swedish. If you write your answers in Swedish, make sure to not introduce any translation confusement. Write proper sentences (spelling, upper/lower case characters, punctuation, etc.). Answers that do not do this good enough/are vague/are partly incomprehensible cannot receive full score on the questions.
 
 ## Sample exam
 You can look at [the exam from 2019-06-04](static-files/exam-2019-06-04.pdf) to get some idea about what the questions on your exam will be.
@@ -47,8 +53,4 @@ The exam from 2019-06-04 was a Ping Pong exam, your exam will be an Inspera exam
 :::
 
 ## Sample answers
-Sample answers (with grading guidelines) are available to the following exams:
-
-* [exam-2020-03-17-sample-answers.txt](static-files/exam-2020-03-17-sample-answers.txt)
-* [exam-2020-06-07-sample-answers.txt](static-files/exam-2020-06-07-sample-answers.txt)
-* [exam-2020-08-10-sample-answers.txt](static-files/exam-2020-08-10-sample-answers.txt)
+Sample answers with some grading guideline comments will be published here after each exam.

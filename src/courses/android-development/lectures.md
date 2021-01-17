@@ -1,14 +1,18 @@
 # Lectures
-Material from the lectures will be uploaded here after each lecture.
+Material for the lectures will be uploaded here during the course.
 
-* [Android Activities](../../lectures/android-activities/)
-* [Java](../../lectures/java/)
-* [Kotlin](../../lectures/kotlin/)
 * [Android Introduction](../../lectures/android-introduction/)
+* [Java](../../lectures/java/)
 * [Android Design Patterns](../../lectures/android-design-patterns/)
+* [Android Activities](../../lectures/android-activities/)
+* [Android Views and Layouts](../../lectures/android-views-and-layouts/)
+
+
+<div v-if="false">
+
+* [Kotlin](../../lectures/kotlin/)
 * [Android Menus](../../lectures/android-menus/)
 * [Android ListView](../../lectures/android-list-view/)
-* [User Experience Design](https://pingpong.hj.se/courseId/22045/node.do?id=17219175)
 * [Android App Bar](../../lectures/android-app-bar/)
 * [Android Runtime Configuration Changes](../../lectures/android-runtime-configuration-changes/)
 * [Android Fragment](../../lectures/android-fragments/)
@@ -16,6 +20,7 @@ Material from the lectures will be uploaded here after each lecture.
 * [Android Permissions](../../lectures/android-permissions/)
 * [Android Asynchronous Operations](../../lectures/android-asynchronous-operations/)
 * [Android File System](../../lectures/android-file-system/)
+* sqlite lecture!
 * [Android SQLite Database](../../lectures/android-sqlite-database/)
 * [Kotlin Asynchronous Operations](../../lectures/kotlin-asynchronous-operations/)
 * [Android Services](../../lectures/android-services/)
@@ -28,3 +33,5 @@ Material from the lectures will be uploaded here after each lecture.
 * [Android Sensors](../../lectures/android-sensors/)
 * [Android Content Providers](../../lectures/android-content-providers/)
 * [Android Scheduling](../../lectures/android-scheduling/)
+
+</div>

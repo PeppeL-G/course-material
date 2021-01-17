@@ -181,7 +181,7 @@ You may not get all the points for the functionality you implement. You need to 
         <tr>
             <td>?</td>
             <td>Own suggestions</td>
-            <td>Come up with your own suggestions of extra functionality. Describe the functionality and email the examiner for approval at [Peter.Larsson-Green@ju.se](mailto:Peter.Larsson-Green@ju.se).</td>
+            <td>Come up with your own suggestions of extra functionality. Describe the functionality and email the examiner for approval at <a href="mailto:Peter.Larsson-Green@ju.se">Peter.Larsson-Green@ju.se</a>).</td>
         </tr>
     </tbody>
 </table>

@@ -6,6 +6,8 @@ navbarTitle: Android Activities
 # Android Activities
 Activities are one of the four different fundamental application components all Android applications consists of. We use them to specify what the graphical user interface should look like. Let's take a look at how they work!
 
+<iframe width="560" height="314" src="https://www.youtube.com/embed/2clnFgc69nA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Lecture material
 * [android-activities.pdf](android-activities.pdf)
 * [android-activities.pptx](android-activities.pptx)

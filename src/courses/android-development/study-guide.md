@@ -5,14 +5,13 @@
     credits="7.5"
     course-coordinator="Peter Larsson-Green"
     examiner="Peter Larsson-Green"
-    ping-pong-event="Android Development - TAGK19 - S20"
-    ping-pong-password="TAGK19S2003"
+    canvas-course-id="3421"
 />
 
 ## Introduction
-Smartphones and tablets have a huge potential to facilitate for us humans. Often, they can not only replace the old none-digital products we have, but also provide us with an even better solution. As an example, when you play a song on an instrument you need to see which notes you should play, which traditionally have been printed on papers. How easy is it to turn to the next side as you play and hold an instrument in your hands? And consequently, the notes are usually quite small to fit as many as possible on the same paper, making them hard to read from a distance.
+Smartphones and tablets have a huge potential to facilitate for us humans. Often, they can not only replace old none-digital products we have, but also provide us with an even better solution. As an example, when you play a song on an instrument you need to see which notes you should play, which traditionally have been printed on papers. How easy is it to turn to the next side as you play and hold an instrument in your hands? And consequently, the notes are usually quite small to fit as many as possible on the same paper, making them hard to read from a distance.
 
-Imagine the notes instead are shown on a tablet, which just displays the notes you need to play at the moment, and that automatically switches to the notes after that as you play them. Furthermore, it is also possibly to record what you play on the instrument, and then re-play it to hear what you need to practice a bit more on. Then you can compare a recording today with a recording you did three weeks ago to see how much you have improved. Used correctly, the potential benefits of these devices are huge!
+Imagine the notes instead are shown on a tablet, which just displays the notes you need to play at the moment, and that automatically switches to the notes after that as you play them. Furthermore, it is also possible to record what you play on the instrument, and then re-play it to hear what you need to practice a bit more on. Then you can compare a recording today with a recording you did three weeks ago to see how much you have improved. Used correctly, the potential benefits of these devices are huge!
 
 In this course you will learn how to create applications running smartphones and tablets running Android. Focus will be on learning the fundamental application components all Android applications consists of, but you will also be given the opportunity to dig deeper into specific areas, such as:
 
@@ -50,15 +49,17 @@ graph TD
         description: "Has studied and followed the development of the web since 2004 and received his Master of Science in Computer Science at Linköping University in 2014. He has been working as programming teacher (part time) since 2010 at both Linköping University and Jönköping University.",
         email: "Peter.Larsson-Green@ju.se",
         phone: "036 - 10 17 35",
-        website: "https://ju.se/en/personinfo.html?sign=LarPet"
+        website: "https://ju.se/en/personinfo.html?sign=LarPet",
+        zoomLink: "https://ju.instructure.com/courses/3421/pages/zoom-links?module_item_id=76266"
     }, {
-        name: "Filip Lundeholm",
-        photo: "",
+        name: "Martin Lindh",
+        photo: "martin-lindh.jpeg",
         roles: ["Lecturer"],
-        description: "User Experience designer.",
-        email: "filip@designbryggan.se",
-        phone: "",
-        website: ""
+        description: "Experienced designer.",
+        email: "martin.lindh@ju.se",
+        phone: "036 - 10 19 23",
+        website: "https://ju.se/en/personinfo.html?sign=lindma",
+        zoomLink: "https://ju.instructure.com/courses/3421/pages/zoom-links?module_item_id=76266"
     }, {
         name: "Linus Rudbeck",
         photo: "linus-rudbeck.jpeg",
@@ -66,15 +67,16 @@ graph TD
         description: "Former JTH student that studied the program Software Engineering and Mobile Platforms. Started the company Red Capes IT together with Daniel Fransén after he graduated. ",
         email: "",
         phone: "",
-        website: "https://redcapesit.se/"
+        website: "https://redcapesit.se/",
+        zoomLink: "https://ju.instructure.com/courses/3421/pages/zoom-links?module_item_id=76266"
     }, {
         name: "Rigmor Skoglund",
         photo: "rigmor-skoglund.jpeg",
         roles: ["Teacher in Gruppdynamic"],
-        description: "Not directly involved in this course, but the course Gruppdynamic. Only the Swedish students will meet her.",
+        description: "Not directly involved in this course, but course coordinator for the course Gruppdynamic. Only the Swedish students will meet her.",
         email: "rigmor.skoglund@ju.se",
         phone: "036 - 10 19 10",
-        website: "https://ju.se/personinfo.html?sign=SKORIG"
+        website: "https://ju.se/en/personinfo.html?sign=SKORIG"
     }]'
 />
 
@@ -85,28 +87,32 @@ The intended learning outcomes of the course are found in [the course syllabus](
 
 Display an understanding for the consequences of the Android technical and economical ecosystems
 -Project work
-+Lectures
++Recorded Lectures
++Tutorials
 +Lab Sessions
 
 Display an understanding for human interface guidelines for mobile devices
 -Project work
-+Lectures
++Lecture
 +Lab Sessions
 
 Display an ability to use the Android SDK and toolchain to develop high quality Android apps
 -Project work
-+Lectures
++Recorded Lectures
++Tutorials
 +Lab Sessions
 
 Display an ability to use sensor systems using Android APIs
 -Project work
-+Lectures
++Recorded Lectures
++Tutorials
 +Lab Sessions
 
 Display an ability to use common APIs for Android
 -Project work
 -Laboratory work
-+Lectures
++Recorded Lectures
++Tutorials
 +Lab Sessions
 
 Display an ability to employ established methods to develop user interfaces for small screens with touch input
@@ -116,7 +122,8 @@ Display an ability to employ established methods to develop user interfaces for 
 
 Display an ability to evaluate the Android system architecture
 -Project work
-+Lectures
++Recorded Lectures
++Tutorials
 +Lab Sessions
 
 " />
@@ -124,29 +131,39 @@ Display an ability to evaluate the Android system architecture
 ## Learning Activities
 Here are short introduction to the learning activities offered in the course.
 
+### Recorded Lectures
+Most lectures will be pre-recorded and available online and teach you most of what you need to learn to pass the examination tests. Some lectures will be available at course start, but most will be published as the course proceed. 
+
+### Tutorials
+The recorded lectures will be quite theoretical and focus on specific techniques. The tutorials will be given on Zoom and show you how you can combine different techniques taught in the recorded lectures to build Android apps. 
+
 ### Lectures
-The lectures will teach you most of what you need to learn to pass the examination tests. In the beginning of the course there will be two lectures each week, and then one lecture each week.
+Martin Lindh will give you two online lectures focused on Material Design and prototyping in Adobe XD.
 
 ### Lab Sessions
-Each week you may attend a 4 hours lab session. At the lab session you may ask the teacher there for help with your laboratory work and the project work. When you have completed your laboratory work you should also demonstrate your solution to a teacher at a lab sessions.
+Each week you may attend a 4 hours lab session. At the lab session you may ask the teacher there for help with your laboratory work and your project work. When you have completed your laboratory work you should also present your solution to a teacher at a lab sessions. This year the lab sessions will be given online due to the corona restrictions.
 
-There are 5 different lab sessions each week, but you may only come to one. To distribute you, [join one of the lab session groups on Ping Pong](https://pingpong.hj.se/courseId/22045/projectGroupsList.do). First come, first served.
+There are 4 different lab sessions each week, but you may only come to one of them. To distribute you, join one of the [Lab Session Groups](https://ju.instructure.com/courses/3421/groups#tab-3282) on Canvas. First come, first served. Feel free to attend the other lab sessions as well, but students that have signed up for a specific lab session should of course be prioritized by the teacher.
 
 ## Examination Tests
-The course contains the two examination tests: `Laboratory Work` and `Project Work`. To receive a final grade on the course you need to pass both examination tests. The final grade will be based on the grade for the `Project Work`.
+The course contains two examination tests.
 
-### Examination test 1: Laboratory Work
+### 1. Laboratory Work
 More information about the `Laboratory Work` can be found on the page [Laboratory Work](laboratory-work/).
 
-### Examination test 2: Project Work
+### 2. Project Work
 More information about the `Project Work` can be found on the page [Project Work](project-work/).
 
 ### Re-examination
-Re-examination for all examination tests will be available at the re-exam periods in June and August. For more information, see each examination test's respective page.
+<p><FigureNumber /> below shows the study and exam periods during a year. The small yellow circle sectors shows when the (re-)examinations are offered in this course (at the re-exam periods in June and August).</p>
 
-::: warning Note!
-The examination tests might have changed a little bit the next time the course run, and if you re-take some of them then, then you take them according to the new description of the tests. You don't need to re-take a test you have previously passed.
-:::
+<AcademicYearFigure />
+
+If you need to know a precise date and time for the re-examination in advance, email the course coordinator at `peter.larsson-green@ju.se`. An announcement on Canvas with more information will be posted soon before the re-examination periods for this course.
+
+The project work will only be graded 3/U (U=fail) at re-examination.
+
+If you haven't passed some examination tests after the three examination opportunities (ordinary + 2 re-exam) you need to re-take those tests the next time the course run. Note that the instructions for those tests might have changed the next time the course run, and that you should take them according to the new instructions.
 
 ### Final grade
 To receive a final grade in the course you need to pass all examination tests. The final grade will be based on the grade for the `Project Work`.

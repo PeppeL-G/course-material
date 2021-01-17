@@ -16,7 +16,8 @@
 				<ul>
 					<li v-if="teacher.email">Email: <a :href="'mailto:'+teacher.email">{{teacher.email}}</a></li>
 					<li v-if="teacher.phone">Phone: {{teacher.phone}}</li>
-					<li v-if="teacher.website">Website: <a :href="teacher.website" target="_blank">{{teacher.website}}</a></li>
+					<li v-if="teacher.website"><a :href="teacher.website" target="_blank">Website</a></li>
+					<li v-if="teacher.zoomLink"><a :href="teacher.zoomLink" target="_blank">Zoom Link</a></li>
 				</ul>
 				
 				<div style="clear: right" />

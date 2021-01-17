@@ -5,6 +5,7 @@ The instructions on the [Laboratory Work](laboratory-work/) page and the [Projec
 * [Document Object Model](../../lectures/document-object-model/)
 * [Docker Basics](../../lectures/docker-basics/)
 * [Layered Architecture in Node.js](../../lectures/layered-architecture-in-node-js/)
+* [Asynchronous Programming in JavaScript](../../lectures/asynchronous-programming-in-js/)
 * [Handling Concurrent HTTP Requests](../../lectures/handling-concurrent-http-requests/)
 * [Scaling Web Applications](../../lectures/scaling-web-applications/)
 * [Scaling Databases](../../lectures/scaling-databases/)

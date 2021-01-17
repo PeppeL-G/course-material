@@ -1,5 +1,5 @@
 module.exports = {
-	name: "Android Development 2020",
+	name: "Android Development 2021",
 	showLink: true,
 	pages: [
 		"",

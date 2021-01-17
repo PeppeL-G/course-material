@@ -6,6 +6,8 @@ navbarTitle: Android Fragments
 # Android Fragments
 With fragments we can re-use a part of the GUI in different activities or swap one part the GUI for another part.
 
+<iframe width="560" height="314" src="https://www.youtube.com/embed/c8KZkWdXkTY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Lecture material
 * [android-fragments.pdf](android-fragments.pdf)
 * [android-fragments.pptx](android-fragments.pptx)
