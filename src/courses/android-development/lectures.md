@@ -6,6 +6,7 @@ Material for the lectures will be uploaded here during the course.
 * [Android Design Patterns](../../lectures/android-design-patterns/)
 * [Android Activities](../../lectures/android-activities/)
 * [Android Views and Layouts](../../lectures/android-views-and-layouts/)
+* [Kotlin](../../lectures/kotlin/)
 
 
 <div v-if="false">
