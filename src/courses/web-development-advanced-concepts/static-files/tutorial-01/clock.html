@@ -11,13 +11,16 @@
 			
 			const div = document.querySelector("div")
 			
-			setInterval(function(){
+			function updateGUI(){
 				
 				const now = new Date()
 				
 				div.innerText = now.getHours()+":"+now.getMinutes()+":"+now.getSeconds()
 				
-			}, 1000)
+			}
+			
+			setInterval(updateGUI, 1000)
+			updateGUI()
 			
 		})
 		

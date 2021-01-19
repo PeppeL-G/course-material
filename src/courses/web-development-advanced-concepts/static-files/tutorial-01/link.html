@@ -9,12 +9,19 @@
 		// Should be put in a separate file!
 		document.addEventListener("DOMContentLoaded", function(){
 			
-			const anchor = document.querySelectorAll("a")[0]
-			
-			anchor.addEventListener("click", function(event){
+			function handleLinkClick(event){
 				event.preventDefault()
+				
+				// Modify the DOM yourself.
 				alert("But you can't see them!")
-			})
+				
+			}
+			
+			const links = document.querySelectorAll("a")
+			
+			for(const link of links){
+				link.addEventListener("click", handleLinkClick)
+			}
 			
 		})
 		
@@ -22,6 +29,9 @@
 </head>
 <body>
 	
+	<p><a href="http://nintendo.se">Nintendo</a> have great games!</p>
+	<p><a href="http://nintendo.se">Nintendo</a> have great games!</p>
+	<p><a href="http://nintendo.se">Nintendo</a> have great games!</p>
 	<p><a href="http://nintendo.se">Nintendo</a> have great games!</p>
 	
 </body>
