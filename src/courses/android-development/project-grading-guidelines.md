@@ -164,9 +164,9 @@ You may not get all the points for the functionality you implement. You need to 
             <td>Re-use none-elementary fragments you have created, such as one fragment showing a list of items, another one showing a single item, and then show one fragment at a time on a small screen and show both side-by-side on a large screen.</td>
         </tr>
         <tr>
-            <td>2</td>
+            <td>1</td>
             <td>Third-party authentication</td>
-            <td>Let users login with their account from another company, such as Google or Facebook.</td>
+            <td>Let users login with their account from another company, such as Google or Facebook. This is of course in addition to ordinary login with username and password, or similar.</td>
         </tr>
         <tr>
             <td>1</td>
