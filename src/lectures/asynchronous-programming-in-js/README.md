@@ -36,16 +36,15 @@ This sounds obvious, right? Well, that's because it works the way you're used to
 The problem with synchronous programming occurs when we have *long running operations*. What counts as a long running operation depends on what type of application you create, but operations that takes more than a few milliseconds to complete usually count as long running. The problem with synchronous programming is that we can only run one long running operation at a time, and that can be problematic for our application. A few examples of this is given next.
 
 ### Problem Example 1: Graphical User Interfaces
+<ClientOnly>
+
 <script>
-window.sleep = function(sleepMs){
-	const timeToWakeUp = Date.now() + sleepMs
-	while(Date.now() < timeToWakeUp){
-		// Do nothing
-	}
-}
+
 </script>
 
-One problem with synchronous programming occurs when we implement graphical user interfaces (GUI). Imagine the user clicks on a button, and we start to compute something that takes 3 seconds to compute. If we use synchronous programming, nothing else in our code during those 3 seconds would run, so the graphical user interface would freeze, so the user can't click on an abort button, nor do anything else. Want an example of this? Just click <button onclick="window.sleep(3000)">this button</button> and then try to select text on this page, click on a link, or something, within 3 seconds (requires JavaScript to be enabled in your web browser).
+</ClientOnly>
+
+One problem with synchronous programming occurs when we implement graphical user interfaces (GUI). Imagine the user clicks on a button, and we start to compute something that takes 3 seconds to compute. If we use synchronous programming, nothing else in our code during those 3 seconds would run, so the graphical user interface would freeze, so the user can't click on an abort button, nor do anything else. Want an example of this? Just click <SleepButton :sleepMs="3000">this button</SleepButton> and then try to select text on this page, click on a link, or something, within 3 seconds (requires JavaScript to be enabled in your web browser).
 
 The code in <FigureNumber /> below explains the problem in detail.
 
