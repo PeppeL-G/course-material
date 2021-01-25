@@ -8,17 +8,19 @@ Material for the lectures will be uploaded here during the course.
 * [Android Views and Layouts](../../lectures/android-views-and-layouts/)
 * [Kotlin](../../lectures/kotlin/)
 
+Added Course Week 2:
+
+* [Android Backward Compatible](../../lectures/android-backward-compatible/)
+* [Android ListView](../../lectures/android-list-view/)
+* [Android Permissions](../../lectures/android-permissions/)
+* [Report Writing](../../lectures/report-writing/)
 
 <div v-if="false">
-
-* [Kotlin](../../lectures/kotlin/)
 * [Android Menus](../../lectures/android-menus/)
-* [Android ListView](../../lectures/android-list-view/)
 * [Android App Bar](../../lectures/android-app-bar/)
 * [Android Runtime Configuration Changes](../../lectures/android-runtime-configuration-changes/)
 * [Android Fragment](../../lectures/android-fragments/)
 * [Android Dialogs](../../lectures/android-dialogs/)
-* [Android Permissions](../../lectures/android-permissions/)
 * [Android Asynchronous Operations](../../lectures/android-asynchronous-operations/)
 * [Android File System](../../lectures/android-file-system/)
 * sqlite lecture!
@@ -28,7 +30,6 @@ Material for the lectures will be uploaded here during the course.
 * [Android Notifications](../../lectures/android-notifications/)
 * [Android Broadcast Receivers](../../lectures/android-broadcast-receivers/)
 * [Android Bluetooth Classic](../../lectures/android-bluetooth-classic/)
-* [Report Writing](../../lectures/report-writing/)
 * [Android Conditional Resources](../../lectures/android-conditional-resources/)
 * [Android GPS](../../lectures/android-gps/)
 * [Android Sensors](../../lectures/android-sensors/)
