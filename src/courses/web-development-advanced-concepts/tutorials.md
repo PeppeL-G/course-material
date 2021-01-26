@@ -9,7 +9,7 @@ Here you will find material from the different tutorials.
 * <a href="./static-files/tutorial-01/link.html">link.html</a>
 
 ## Tutorial 2 (Docker + Layered Architecture)
-The material for this tutorial will be published after the tutorial has been given.
+* [Recording](https://ju.instructure.com/courses/3372/pages/tutorial-recordings)
 
 ## Tutorial 4 (REST API in Express)
 The material for this tutorial will be published after the tutorial has been given.
