@@ -219,14 +219,18 @@ Your workflow will kind of be:
 5. Stop the container from running.
 6. Restart on #1.
 
-To manually carry out these steps each time you want to test changes you make to the source code is quite time consuming and boring. Docker has a solution to this problem: volumes. With volumes you can synch folders on your computer with folders in a running container. When you change a file in one of these folders on your computer, Docker will automatically send the new version of the file to the corresponding folder in the container that is running, so the container always have the latest version of the file.
+To manually carry out these steps each time you want to test changes you make to the source code is quite time consuming and boring. Docker has a solution to this problem: volumes. With volumes you can make a container read files stored on your computer. This can be used to always give the container access to the latest version of your files in a specific folder.
 
 ::: tip Volumes on Windows
 When using volumes on Windows, the recommendation is to put the volumes (in your case all your source code) directly in the filesystem on the Linux distribution you are running in Windows Subsystem for Linux, instead of in the file system for Windows. Read more about it in [Docker's best practices](https://docs.docker.com/docker-for-windows/wsl/#best-practices).
 :::
 
+::: danger Volumes on Windows
+If you don't put your source code on the filesystem for your Linux instance, it's is a bit uncleared how to specify paths to folders in Windows. [One comment on GitHub](https://github.com/docker/for-win/issues/6628#issuecomment-635906394) suggests several different ways to do it, but not all of them have worked for me (Peter) in Docker 3. `/host_mnt/c/path/to/folder` did work, so that's the one used in the instructions below.
+:::
+
 Using a volume is quite easy. When you start a container with the `docker run` command you also specify which folders that should be synched using the `-v` option, like (on Windows)
-`docker run -v //c/folder/on/host/computer:/folder/in/container` (plus the `-p` for port forwarding as before). You don't want to synch your entire `/platform/web-application` folder (the `node_modules` folder in it and some other files/folder should not be synched, only the code you've written), so it might be a good idea to put your source code files in a new folder, for example called `/platform/web-application/src`, and use volumes to synch only this subfolder instead.
+`docker run -v /host_mnt/c/folder/on/host/computer:/folder/in/container` (plus the `-p` for port forwarding as before). You don't want to use the entire `/platform/web-application` folder as your volume (the `node_modules` folder in it and some other files/folder should not be synched, only the code you've written), so it might be a good idea to put your source code files in a new folder, for example called `/platform/web-application/src`, and use volumes to synch only this subfolder instead.
 
 However, synching files is not enough to keep your web application in the container up to date. Each time a JavaScript file changes the web application running in the container needs to be restarted. To make that happen we can use an npm package called [nodemon](https://nodemon.io/). Simply:
 
