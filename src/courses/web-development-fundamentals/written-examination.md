@@ -60,3 +60,4 @@ The exam from 2019-01-11 was a Ping Pong exam, your exam will be an Inspera exam
 Sample answers and some grading guidelines are available for the following exams:
 
 * [Exam 2020-10-15](./exam-2020-10-15-sample-answers/)
+* [Exam 2021-01-16](./exam-2021-01-16-sample-answers/)
