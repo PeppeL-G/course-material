@@ -14,6 +14,7 @@ Added Course Week 2:
 * [Android ListView](../../lectures/android-list-view/)
 * [Android Permissions](../../lectures/android-permissions/)
 * [Report Writing](../../lectures/report-writing/)
+* [Martin's Design Lecture #1](https://ju.instructure.com/courses/3421/pages/tutorial-recordings?module_item_id=78645)
 
 <div v-if="false">
 * [Android Menus](../../lectures/android-menus/)
