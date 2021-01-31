@@ -235,6 +235,13 @@ Using a volume is quite easy. When you start a container with the `docker run` c
 However, synching files is not enough to keep your web application in the container up to date. Each time a JavaScript file changes the web application running in the container needs to be restarted. To make that happen we can use an npm package called [nodemon](https://nodemon.io/). Simply:
 
 1. Install `nodemon` by running the command `npm install nodemon` in `/platform/web-application`.
+
+::: warning Note
+Since `nodemon` is only needed during development, and not when the application runs for real on a server, you should really add this package in the `devDependencies` list in `package.json`, instead of the ordinary `dependencies` section.
+
+Read mor about this in the docs [Specifying dependencies and devDependencies in a package.json file](https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file).
+:::
+
 2. Change `package.json` to contain a script called `start` that executes
 `nodemon src/app.js -L`.
 ::: warning Volumes on Windows
