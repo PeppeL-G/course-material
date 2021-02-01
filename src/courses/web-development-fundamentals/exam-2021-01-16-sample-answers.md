@@ -151,7 +151,7 @@ As your answer, write a username and password you can use to login to the existi
 Be explicit about what you enter as username and what you enter as password.
 ___
 
-Username: `Doesn't matter`
+Username: `Doesn't matter` \
 Password: `" OR id="1`
 ___
 
@@ -340,7 +340,7 @@ ___
 
 ```js
 function half(number){
-    return half / 2
+    return number / 2
 }
 function quarter(number){
     return half(half(number))
