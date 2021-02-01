@@ -737,6 +737,10 @@ Since the SPA only consists of static HTML, CSS and JS files (and possibly image
 
 Since web browsers follow the same-origin policy, your REST API needs to support cross-origin resource sharing, so if you haven't added that to it yet, do it now.
 
+::: danger Do not use frontend frameworks
+Since there are no indented learning outcomes in the course about learning a frontend framework like Vue, Svelte, Angular or React, you must implement the SPA yourself from scratch. Feel free to use minor client-side JavaScript libraries you need, such as Moment.js to format dates, and CSS frameworks, such as Bootstrap.
+:::
+
 ## Part 10: Optional Tasks
 Here are some optional tasks you must complete if you want to get a grade higher than 3. Remember that completing these extra tasks does not necessarily give you a higher grade, but you have to complete them to have a chance to get a higher grade. Also, do not forget to look through the page [Project Grading Guidelines](project-grading-guidelines/).
 
