@@ -16,12 +16,18 @@ Added Course Week 2:
 * [Report Writing](../../lectures/report-writing/)
 * [Martin's Design Lecture #1](https://ju.instructure.com/courses/3421/pages/tutorial-recordings?module_item_id=78645)
 
-<div v-if="false">
-* [Android Menus](../../lectures/android-menus/)
-* [Android App Bar](../../lectures/android-app-bar/)
+Added Course Week 3:
+
 * [Android Runtime Configuration Changes](../../lectures/android-runtime-configuration-changes/)
 * [Android Fragment](../../lectures/android-fragments/)
 * [Android Dialogs](../../lectures/android-dialogs/)
+* TODO: Android ViewModel
+* TODO: Android RecyclerView
+
+<div v-if="false">
+
+* [Android Menus](../../lectures/android-menus/)
+* [Android App Bar](../../lectures/android-app-bar/)
 * [Android Asynchronous Operations](../../lectures/android-asynchronous-operations/)
 * [Android File System](../../lectures/android-file-system/)
 * sqlite lecture!

@@ -4,7 +4,9 @@ navbarTitle: Android Runtime Configuration Changes
 ---
 
 # Android Runtime Configuration Changes
-So, how can Android that easily support i18n? The secret is through is how it handles runtime configuration changes. When the user changes language, all the GUI is destroyed and then re-created. The hard part is to make sure that it's re-created exactly the way the user left it!
+So, how can Android that easily support i18n? The secret is through how it handles runtime configuration changes. When the user changes language, all the GUI is destroyed and then re-created. The hard part is to make sure that it's re-created exactly the way the user left it!
+
+<iframe width="560" height="314" src="https://www.youtube.com/embed/P107Qcnnyys" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Lecture material
 * [android-runtime-configuration-changes.pdf](android-runtime-configuration-changes.pdf)
