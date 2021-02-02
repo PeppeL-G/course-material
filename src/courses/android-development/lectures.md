@@ -21,8 +21,8 @@ Added Course Week 3:
 * [Android Runtime Configuration Changes](../../lectures/android-runtime-configuration-changes/)
 * [Android Fragment](../../lectures/android-fragments/)
 * [Android Dialogs](../../lectures/android-dialogs/)
-* TODO: Android ViewModel
-* TODO: Android RecyclerView
+* [Android ViewModel](../../lectures/android-view-model/)
+* [Android RecyclerView](../../lectures/android-recycler-view/)
 
 <div v-if="false">
 
