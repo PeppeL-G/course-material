@@ -15,3 +15,11 @@ I've hard coded strings at some places, but should of course have used string re
 
 `activity_login.xml` has been updated to more nicely position the views in the ConstraintLayout.
 :::
+
+## Tutorial 2 (Fragments and Runtime Configuration Changes)
+* [Recording](https://ju.instructure.com/courses/3421/pages/tutorial-recordings?module_item_id=78645)
+* [tutorial-02-app.zip](./static-files/tutorials/tutorial-02-app.zip)
+
+::: warning Note
+Do not hardcode text shown to the user as I have done in the app, use string resources!
+:::
