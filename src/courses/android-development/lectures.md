@@ -23,6 +23,7 @@ Added Course Week 3:
 * [Android Dialogs](../../lectures/android-dialogs/)
 * [Android ViewModel](../../lectures/android-view-model/)
 * [Android RecyclerView](../../lectures/android-recycler-view/)
+* [Martin's Design Lecture #2](https://ju.instructure.com/courses/3421/pages/tutorial-recordings?module_item_id=78645)
 
 <div v-if="false">
 
