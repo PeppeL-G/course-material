@@ -25,15 +25,21 @@ Added Course Week 3:
 * [Android RecyclerView](../../lectures/android-recycler-view/)
 * [Martin's Design Lecture #2](https://ju.instructure.com/courses/3421/pages/tutorial-recordings?module_item_id=78645)
 
+Added Course Week 4:
+
+* [Android Asynchronous Operations](../../lectures/android-asynchronous-operations/)
+* More will be published during the week.
+
 <div v-if="false">
 
-* [Android Menus](../../lectures/android-menus/)
+* [Kotlin Asynchronous Operations](../../lectures/kotlin-asynchronous-operations/)
 * [Android App Bar](../../lectures/android-app-bar/)
-* [Android Asynchronous Operations](../../lectures/android-asynchronous-operations/)
+* [Android CoordinatorLayout](../../lectures/android-coordinator-layout/)
+* Android 
+* [Android Menus](../../lectures/android-menus/)
 * [Android File System](../../lectures/android-file-system/)
 * sqlite lecture!
 * [Android SQLite Database](../../lectures/android-sqlite-database/)
-* [Kotlin Asynchronous Operations](../../lectures/kotlin-asynchronous-operations/)
 * [Android Services](../../lectures/android-services/)
 * [Android Notifications](../../lectures/android-notifications/)
 * [Android Broadcast Receivers](../../lectures/android-broadcast-receivers/)
