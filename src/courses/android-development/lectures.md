@@ -28,6 +28,7 @@ Added Course Week 3:
 Added Course Week 4:
 
 * [Android Asynchronous Operations](../../lectures/android-asynchronous-operations/)
+* [Kotlin Asynchronous Operations](../../lectures/kotlin-asynchronous-operations/)
 * More will be published during the week.
 
 <div v-if="false">
