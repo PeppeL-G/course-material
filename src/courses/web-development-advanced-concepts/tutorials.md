@@ -11,6 +11,12 @@ Here you will find material from the different tutorials.
 ## Tutorial 2 (Docker + Layered Architecture)
 * [Recording](https://ju.instructure.com/courses/3372/pages/tutorial-recordings)
 
+## Tutorial 3 (ORM + Dependency Injection)
+* [Recording](https://ju.instructure.com/courses/3372/pages/tutorial-recordings)
+* [the-community-multiple-dals.zip](./static-files/tutorial-03/the-community-multiple-dals.zip)
+  * Run `docker-compose up --build -V` in the root folder of the platform to start it.
+  * Change which Data Access Layer to use in `main.js`.
+
 ## Tutorial 4 (REST API in Express)
 The material for this tutorial will be published after the tutorial has been given.
 
