@@ -51,7 +51,7 @@ The <span style="background-color: aqua; display: inline-block; padding: 0 8px; 
 		{i: "Re-exam period."},
 		{i: "Re-exam period."},
 		// 8
-		{w: "PW Part 6"},
+		{w: "PW Part 6", i: "Registration for Exam open"},
 		{w: "PW Part 6"},
 		{w: "PW Part 6"},
 		{w: "PW Part 7", s: "L1"},
@@ -70,7 +70,7 @@ The <span style="background-color: aqua; display: inline-block; padding: 0 8px; 
 		{w: "PW Part 8"},
 		{w: "PW Part 8", l: "Tutorial: REST API and SPA"},
 		{w: "PW Part 8"},
-		{w: "PW Part 8", s: "L1"},
+		{w: "PW Part 8", s: "L1", i: "Registration for Exam close"},
 		{w: "PW Part 9", s: "L2"},
 		{},
 		{},
@@ -81,7 +81,7 @@ The <span style="background-color: aqua; display: inline-block; padding: 0 8px; 
 		{w: "PW Part 9", s: "L1"},
 		{w: "PW Part 9", s: "L2"},
 		{},
-		{},
+		{i: "Exam"},
 		// 12 Exam period!
 		{w: "PW Part 11"},
 		{w: "PW Part 11"},

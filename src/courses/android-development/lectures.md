@@ -29,13 +29,12 @@ Added Course Week 4:
 
 * [Android Asynchronous Operations](../../lectures/android-asynchronous-operations/)
 * [Kotlin Asynchronous Operations](../../lectures/kotlin-asynchronous-operations/)
-* More will be published during the week.
+* [Android CoordinatorLayout](../../lectures/android-coordinator-layout/)
+* [Android Bottom Navigation View and Drawer Layout](../../lectures/android-bottom-navigation-view-and-drawer-layout/)
 
 <div v-if="false">
 
-* [Kotlin Asynchronous Operations](../../lectures/kotlin-asynchronous-operations/)
 * [Android App Bar](../../lectures/android-app-bar/)
-* [Android CoordinatorLayout](../../lectures/android-coordinator-layout/)
 * Android 
 * [Android Menus](../../lectures/android-menus/)
 * [Android File System](../../lectures/android-file-system/)
