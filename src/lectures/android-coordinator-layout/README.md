@@ -9,10 +9,6 @@ Let's take a look at one of the new layouts we got with material design: `Coordi
 ## Recommended reading
 Android documentation:
 * [CoordinatorLayout](https://developer.android.com/reference/androidx/coordinatorlayout/widget/CoordinatorLayout)
-The following pages from Android Developers Guide:
-* [Content providers](https://developer.android.com/guide/topics/providers/content-providers)
-* [Setting up file sharing](https://developer.android.com/training/secure-file-sharing/setup-sharing)
-* [Take photos](https://developer.android.com/training/camera/photobasics)
 
 ## The CoordinatorLayout
 When we got Material Design components in Android, some views needed to be coordinated to appear and behave correct. By placing views in a `CoordinatorLayout`, each view can have a *behavior* attached to it that can tell the `CoordinatorLayout` which other views in the layout that view is dependent on. The `CoordinatorLayout` will then inform the behavior when any of the dependent views change in size or position, at which point the behavior should update its own view to behave correctly, such as to move it.
