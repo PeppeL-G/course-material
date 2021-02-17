@@ -32,22 +32,27 @@ Added Course Week 4:
 * [Android CoordinatorLayout](../../lectures/android-coordinator-layout/)
 * [Android Bottom Navigation View and Drawer Layout](../../lectures/android-bottom-navigation-view-and-drawer-layout/)
 
-<div v-if="false">
+Added Re-exam Period:
 
-* [Android App Bar](../../lectures/android-app-bar/)
-* Android 
-* [Android Menus](../../lectures/android-menus/)
-* [Android File System](../../lectures/android-file-system/)
-* sqlite lecture!
+* [Cloud Firestore](../../lectures/cloud-firestore/)
+* [Android Cloud Firestore](../../lectures/android-cloud-firestore/)
+* [SQLite](../../lectures/sqlite/)
 * [Android SQLite Database](../../lectures/android-sqlite-database/)
 * [Android Services](../../lectures/android-services/)
 * [Android Notifications](../../lectures/android-notifications/)
 * [Android Broadcast Receivers](../../lectures/android-broadcast-receivers/)
 * [Android Bluetooth Classic](../../lectures/android-bluetooth-classic/)
 * [Android Conditional Resources](../../lectures/android-conditional-resources/)
+
+<div v-if="false">
+
 * [Android GPS](../../lectures/android-gps/)
-* [Android Sensors](../../lectures/android-sensors/)
-* [Android Content Providers](../../lectures/android-content-providers/)
 * [Android Scheduling](../../lectures/android-scheduling/)
+* [Android Content Providers](../../lectures/android-content-providers/)
+* [Android File System](../../lectures/android-file-system/)
+* [Android Sensors](../../lectures/android-sensors/)
+* [Android App Bar](../../lectures/android-app-bar/)
+* Android 
+* [Android Menus](../../lectures/android-menus/)
 
 </div>
