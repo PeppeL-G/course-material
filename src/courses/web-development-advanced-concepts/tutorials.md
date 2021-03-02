@@ -18,7 +18,12 @@ Here you will find material from the different tutorials.
   * Change which Data Access Layer to use in `main.js`.
 
 ## Tutorial 4 (REST API in Express)
-The material for this tutorial will be published after the tutorial has been given.
+* [Recording](https://ju.instructure.com/courses/3372/pages/tutorial-recordings)
+* [humans-app-backend.zip](./static-files/tutorial-04/humans-app-backend.zip)
+  1. Run `npm install` in the root folder of the platform to start it.
+  2. Run `node app.js`.
+  3. Use for example [Postman](https://www.postman.com/downloads/) to send request to your backend.
+* [humans-app-frontend-android.zip](./static-files/tutorial-04/humans-app-frontend-android.zip)
 
 ## Tutorial 5 (Single-Page Application)
 The material for this tutorial will be published after the tutorial has been given.
