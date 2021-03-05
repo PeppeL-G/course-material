@@ -44,6 +44,11 @@ Added Re-exam Period:
 * [Android Bluetooth Classic](../../lectures/android-bluetooth-classic/)
 * [Android Conditional Resources](../../lectures/android-conditional-resources/)
 
+Added Week 7:
+
+* [Android Content Providers](../../lectures/android-content-providers/)
+* [Android File Storage](../../lectures/android-file-storage/)
+
 <div v-if="false">
 
 * [Android GPS](../../lectures/android-gps/)
