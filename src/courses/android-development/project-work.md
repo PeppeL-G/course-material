@@ -175,7 +175,7 @@ The reasons you should present your application to the rest of the class are two
 * To learn what type of Android applications you can create (you have all taken the same course, so you should all be able to create the applications the other students have created).
 * To practice your presentation technique. This is not limited to improving your speaking skills, but also includes improving your skills to explain how something works to others, and to prepare and carry out presentations (your future customers will appreciate such skills).
 
-Join one of the [Project Presentation Groups](https://ju.instructure.com/courses/3421/groups#tab-3283) on Canvas to let the examiner know which project presentation session you want to attend to. Only one in your Project Group should do this.
+Join one of the [Project Presentation Sessions](https://ju.instructure.com/courses/3421/groups#tab-3283) on Canvas to let the examiner know which project presentation session you want to attend to. Only one in your Project Group should do this.
 
 After you have presented your work the teacher will mark you as approved on the assignment [Presentation](https://ju.instructure.com/courses/3421/assignments/12891) on Canvas.
 

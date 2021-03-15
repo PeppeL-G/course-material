@@ -765,7 +765,7 @@ Present how your platform works to the rest of your class. The reason for the pr
 
 Your presentation will not be graded; consider it as (mandatory) practice.
 
-Join one of the [Project Presentation Groups](https://ju.instructure.com/courses/3372/groups#tab-3279) on Canvas (first come, first served). Only one in each project work pair should join the Project Presentation Group you want to join. Which group you join determines when you should demonstrate your work. You will only demonstrate to the rest of the project groups in the same presentation group as you.
+Join one of the [Project Presentation Sessions](https://ju.instructure.com/courses/3372/groups#tab-3279) on Canvas (first come, first served). Only one in each project work pair should join the Project Presentation Session you want to join. Which session you join determines when you should present your work. You will only present to the rest of the project groups in the same presentation session as you.
 
 At the presentation, you should:
 
