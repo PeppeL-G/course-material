@@ -780,6 +780,8 @@ At the presentation, you should:
 
 You may use at most 15 minutes, so come prepared. You will not have time for *Oh, what more can I show you?* or *Wait, let me try to remember/look up how we did that*, so rehearse the presentation in advance. Be prepared to answer any question about your solution the audience might have. 
 
+Due to the corona-situation, the presentations will be given online in [Peter's Zoom room](https://ju.instructure.com/courses/3372/pages/zoom-links?module_item_id=76183).
+
 The examiner will approve you on the Canvas assignment [Presentation](https://ju.instructure.com/courses/3372/assignments/12480?module_item_id=75148) after your presentation.
 
 ## Part 12: Final Submission

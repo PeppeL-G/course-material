@@ -164,7 +164,7 @@ Your work should be presented to "the rest" of the class (in smaller groups) at 
 * Explain how users can use your application to solve the problem.
 * Show how users will use the application (a demonstration of its features).
 
-You may structure your presentation however you want, as long as you present it in a good way Showing pictures of the figures you have in your report is an excellent idea.
+You may structure your presentation however you want, as long as you present it in a good way. Showing the figures you have in your report is an excellent idea.
 
 The presentation is preferably carried out by having one person interacting with the application (shown on a big screen), and another one explaining what the first person is doing/telling the first person what to do.
 
@@ -176,6 +176,8 @@ The reasons you should present your application to the rest of the class are two
 * To practice your presentation technique. This is not limited to improving your speaking skills, but also includes improving your skills to explain how something works to others, and to prepare and carry out presentations (your future customers will appreciate such skills).
 
 Join one of the [Project Presentation Sessions](https://ju.instructure.com/courses/3421/groups#tab-3283) on Canvas to let the examiner know which project presentation session you want to attend to. Only one in your Project Group should do this.
+
+Due to the corona-situation, the presentations will be given online in [Peter's Zoom room](https://ju.instructure.com/courses/3421/pages/zoom-links?module_item_id=76266). Those that need to run your application on a real Android device (such as those of you using Bluetooth) can use [Vysor](https://www.vysor.io/) (or similar software) to mirror the screen on the Android to your computer. The free version should suffice.
 
 After you have presented your work the teacher will mark you as approved on the assignment [Presentation](https://ju.instructure.com/courses/3421/assignments/12891) on Canvas.
 
