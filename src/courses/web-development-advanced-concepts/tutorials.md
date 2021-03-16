@@ -33,3 +33,6 @@ Here you will find material from the different tutorials.
   3. Run `npm install` in the root folder of the frontend to install dependencies.
   4. Run `node app.js` in the root folder of the frontend to run it.
   3. Try the frontend at [localhost:8080](http://localhost:8080/).
+
+## Tutorial 6 (Sample Exam)
+* [Recording](https://ju.instructure.com/courses/3372/pages/tutorial-recordings)
