@@ -179,6 +179,11 @@ You may not get all the points for the functionality you implement. You need to 
             <td>Schedule alarms/jobs that notifies the user at certain times, for example 15 minutes before a meeting starts. If the meeting is cancelled or the time for the meeting is changed, the scheduled alarms of course need to be deleted or updated too. Structure your solution well, so there's no need to copy-paste similar code if you for example want to create new meetings at multiple different places in your application.</td>
         </tr>
         <tr>
+            <td>1</td>
+            <td>Push Notifications</td>
+            <td>Automatically send a push notification to a user's device (for example using <a href="https://firebase.google.com/docs/cloud-messaging" target="_blank">Firebase Cloud Messaging</a>) when there is something the user needs to be notified about ASAP, such as new event created nearby, new message sent to the user, an event the user has signed up for is cancelled, etc.).<br><br><b>Note: </b> Push Notifications are not the same thing as ordinary <a href="https://developer.android.com/guide/topics/ui/notifiers/notifications">Notifications</a> in Android; Push Notifications are "pushed" to the device from a server.</td>
+        </tr>
+        <tr>
             <td>?</td>
             <td>Own suggestions</td>
             <td>Come up with your own suggestions of extra functionality. Describe the functionality and email the examiner for approval at <a href="mailto:Peter.Larsson-Green@ju.se">Peter.Larsson-Green@ju.se</a>).</td>
