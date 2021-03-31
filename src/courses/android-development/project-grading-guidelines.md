@@ -181,7 +181,12 @@ You may not get all the points for the functionality you implement. You need to 
         <tr>
             <td>1</td>
             <td>Push Notifications</td>
-            <td>Automatically send a push notification to a user's device (for example using <a href="https://firebase.google.com/docs/cloud-messaging" target="_blank">Firebase Cloud Messaging</a>) when there is something the user needs to be notified about ASAP, such as new event created nearby, new message sent to the user, an event the user has signed up for is cancelled, etc.).<br><br><b>Note: </b> Push Notifications are not the same thing as ordinary <a href="https://developer.android.com/guide/topics/ui/notifiers/notifications">Notifications</a> in Android; Push Notifications are "pushed" to the device from a server.</td>
+            <td>Automatically send a push notification to a user's device (for example using <a href="https://firebase.google.com/docs/cloud-messaging" target="_blank">Firebase Cloud Messaging</a>) when there is something the user needs to be notified about ASAP, such as new event created nearby, new message sent to the user, an event the user has signed up for is cancelled, etc.).<br><br><b>Note:</b> Push Notifications are not the same thing as ordinary <a href="https://developer.android.com/guide/topics/ui/notifiers/notifications">Notifications</a> in Android; Push Notifications are "pushed" to the device from a server.</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Different type of accounts</td>
+            <td>Support different type of accounts, such as guest accounts, ordinary accounts, admin accounts, etc. Users should be able to do different things in the app depending on what type of account they are signed in to. For example, an ordinary user might only be able to create data belonging to her own account, while an admin can create data belonging to another account (acting as if she is signed in to another account).<br><br><b>Note:</b> Simply hiding/showing a few GUI components depending on the account type (such as admin accounts have a link to an admin activity ordinary users can't access) is not enough.</td>
         </tr>
         <tr>
             <td>?</td>
