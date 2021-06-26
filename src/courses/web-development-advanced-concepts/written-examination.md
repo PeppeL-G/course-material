@@ -54,3 +54,4 @@ The exam from 2019-06-04 was a Ping Pong exam, your exam will be an Inspera exam
 
 ## Sample answers
 * [Exam 2021-03-21](./exams/exam-2021-03-21/)
+* [Exam 2021-06-09](./exams/exam-2021-06-09/)
