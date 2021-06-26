@@ -1,0 +1,357 @@
+The URI /show-latest-blogpost is not a good URI. Why not?
+
+Note: This questions is about HTTP, not about web applications.
+---
+The URI should identify resources, not what to dow ith them, so "show" should not be part of the URI (the method indicates what to do with the resource).
+
+0.5 points for valid explanation.
+
+
+=====
+
+
+Name the HTTP method you would use in an HTTP request that is about:
+
+1. Creating a new blogpost.
+2. Adding a player to a team.
+3. Removing a player from a team.
+
+For each of your answer, write a short justification.
+
+Note: The question is about HTTP, and not about web applications.
+---
+1. POST, since we create a new resource (a blogpost).
+2. POST, since we create a new resource (a player-team relation). 
+3. DELETE, since we delete an existing resource (a player-team relation).
+
+Note: (2) and (3) can also be implemented using PUT and an array, but this is not a good solution in this case, since a lot of info is sent to just add/remove one player.
+
+0.15 points each correct answer and justification.
+0.5 points for all correct.
+
+
+=====
+
+
+Explain what the HTTP headers Accept and Content-Type are used for respectively. Which of them can be used in requests and responses respectively?
+---
+Accept: Used in requests to indicate in which data format the client prefers to have the response body written in.
+
+Content-Type: Used in both requests and responses to indicate in which data format the body of the request/response is written in.
+
+accept description: 0.25 points
+accept requests: 0.25 points
+content-type description: 0.25 points
+content-type requests and responses: 0.25 points
+
+
+=====
+
+
+To insert some vertical white-space on a webpage, one can use the HTML tag <br>, but most likely it makes more sense to use CSS margins instead. Why?
+---
+HTML is a language for marking what type of data different text represents, it's not a language for describing what the graphical user interface should look like. If you want to change what the graphical user interface looks like, use CSS.
+
+1 point for a valid justification.
+
+
+=====
+
+
+The form below exists on a webpage and can be used to tell the web application to send a new password to the user with the provided email.
+
+<form method="XXXXXXX" action="/send-new-password">
+  Email: <input type="email" name="email">
+         <input type="submit" value="Mail new password">
+</form>
+
+Should the form be submitted with the GET method or the POST method (what should XXXXXXX above be?)? Justify your answer.
+---
+This is not a request about retrieving a resource, and should therefor not be a GET request. The only option left is POST, so this should be a POST request.
+
+1 point for correct answer and valid justification.
+
+
+=====
+
+
+Here is some CSS code:
+
+div#div.div div.div{
+  background-color: black;
+}
+
+Write HTML code that contains a match for the CSS selector in the code above.
+
+Note: You only need to write the HTML code found in the <body> element (including the <body> element), you do not need to write the HTML code for an entire HTML document.
+---
+<body>
+  <div id="div" class="div">
+    <div class="div">This element is matched!</div>
+  </div>
+</body>
+
+1 point for correct solution.
+
+
+=====
+
+
+Explain what a rule is in CSS, give an example of one and explain how it works.
+---
+A rule in CSS tells the web browser that the HTML elements matched by the selector in the rule should be styled according to the declarations in the rule.
+
+Example: all paragraphs should have blue text:
+
+p{
+  color: blue; 
+}
+
+0.75 points for general explanation.
+0.25 points for example + explanation.
+
+
+=====
+
+
+Explain what pseudo-classes can be used for in CSS. Also, name one and explain what that pseudo-class do.
+---
+Pseudo-classes in CSS can be used in selectors to match elements in a specific state.
+
+For example, the :focus pseudo-class matches an element when that element is the currently focused element on the webpage.
+
+0.5 points for general explanation.
+0.25 points for naming one.
+0.25 points for explaining how that one works.
+
+
+=====
+
+
+Explain how an application built on middlewares works and how a middleware is implemented/works in Express. Also name or describe two different middlewares (from npm packages) you've been using in your project work.
+---
+An application built on middlewares consists of a sequence of middlewares, each providing a small part of the functionality of the application. When an application receives a request, it is first sent to the first middleware, which can:
+
+1. Handle the request and send back a response.
+2. Ignore or carry out a small part of the request, and then invoke the next middleware.
+
+The next middleware then have the same options.
+
+In Express a middleware is implemented as a function with the three parameters "request", "response" and "next". "request" and "response" are objects representing the incoming HTTP request and the outgoing HTTP response respectively, and "next" is a function you can call to invoke the next middleware in the chain.
+
+One middleware used in the project work is urlencoded() from the body-parser package. Another one is the session middleware from the express-session package.
+
+middleware general description: 0.75 points
+middleware express description: 0.75 points
+middleware example 1: 0.25 points
+middleware example 2: 0.25 points
+
+
+=====
+
+
+Carl is an ordinary person who doesn't know anything about programming nor web applications, but he knows how to browse the web using a web browser. Explain to him (so he understands) the danger with using HTTP when he browse to his bank website to make transactions from his account.
+---
+If Carl uses HTTP to visit his bank's website, all the information he enters on the website will be sent in plain text to the bank's server. This is dangerous, since the owners of the hardware that help forwarding his information to the bank's server, such as the (Wi-Fi) router he's connected to, or his Internet Service Provider (for example Telia), can see that information. If he for example sends his login credentials, these guys can see those and login to his account themselves, and do whatever they want.
+
+1 point for explanation making Carl understand why it's dangerous.
+0.5 point for explanation without example of hackers would abuse it.
+
+=====
+
+
+Here is an HTML form on a website one can use to login to that website:
+
+<form method="post" action="/login">
+   Username: <input type="text"     name="username">
+   Password: <input type="password" name="password">
+             <input type="submit"   value="Sign in!">
+</form>
+
+Here is the code on the server handling the HTTP request sent when the form is submitted:
+
+app.post('/login', function(request, response){
+  const username = request.body.username
+  const password = request.body.password
+  // Query to be sent to the database to check if password and username are correct.
+  const query = 'SELECT id FROM members WHERE password = "'+password+'" AND username = "'+username+'"'
+  // Query sent to database, the id of the user is retrieved, etc.
+  // ...
+})
+
+As your answer, write a username and password you can use to login to the existing account with the username Bob no matter which password he has.
+
+Be explicit about what you enter as username and what you enter as password.
+---
+Username: Bob
+Password: " OR "1" = "1
+
+
+=====
+
+
+Explain why hash values can't be used to implement encrypted communication.
+---
+The problem is that hash algorithms are one-way functions. The sender of the message "abc" can for example hash that message and send the hash value "xyz", but there's no way for the receiver to reverse "xyz" back to the original message "abc". The best thing the receiver can do is trying to brute force the message (try hashing different random messages and see if one of them produces the same hash value), but that is extremely time consuming and not practical, and different messages can also have the same hash value, so even if a match is found, there' no way to be sure that the matched message was the sent message.
+
+1 point for good explanation.
+
+
+=====
+
+
+Explain what a cookie is, give two examples of what they can be used for and explain how they are created/transferred. Be as detailed as possible.
+---
+A cookie is a key-value pair the server can use to remember information about a client that is stored on the client. The server can ask the client to create a new cookie in an HTTP response sent to the client by adding the header:
+
+Set-Cookie: cookie-name=cookie-value
+
+The client should then create a cookie with the name "cookie-name" and the value "cookie-value". The client should then add this cookie to HTTP requests it sends to the server in the future by adding the header:
+
+Cookie: cookie-name=cookie-value
+
+Now the server receives back information about the client it wanted the client to store for it.
+
+Example 1: Remember what the client has searched for in a search engine.
+Example 2: Remember which products the user has viewed in a webshop website.
+
+key-value pair: 0.25 points
+stored on client: 0.25 points
+example 1: 0.25 points
+example 2: 0.25 points
+set-cookie header name: 0.25 points
+set-cookie header value: 0.25 points
+cookie header name: 0.25 points
+cookie header value: 0.25 points
+
+
+=====
+
+
+Explain what a session is, give two examples of what they can be used for and explain how they work/can be implemented.
+---
+A session is a collection of key-value pairs stored on the server that belongs to a specific client. The server can use this to remember information about a client on the server side. Each session has it's own unique session id, and when the server creates a new session for a client, it asks the client to create a cookie with the session id identifying the session for that client. The client then sends that cookie back to the server in future request, and the server can that way find the session belonging to that client and read information out from the session it has stored about that client.
+
+Example 1: Remember if a client has logged in to an account or not (and which account).
+Example 2: Remember which products the user has put in the shopping cart on a shopping website.
+
+key-value pairs: 0.25 points
+stored on server: 0.5 points
+session id: 0.25 points
+session id in cookie: 0.5 points
+example 1: 0.25 points
+example 2: 0.25 points
+
+
+=====
+
+
+If a user has an account at website-a.com and another account at website-b.com, can a vulnerability at website-a.com affect his account at website-b.com? Justify your answer.
+---
+If website-b.com is not protected against CSRF attacks, then a hacker can use a XSS vulnerability on website-a.com to tell the user's web browser (when the user visits website-a.com) to send HTTP requests to website-b.com, and if the user is logged in at website-b.com, then website-b.com will think that those request are intentionally sent by the user and will carry them out, which can be dangerous for the user if the requests are somehow connected to his account at website-b.com.
+
+So, yes, a vulnerability at website-a.com can affect a user's account on website-b.com.
+
+1 point for correct answer and valid justification.
+-0.5 point for not describing in detail how a hacker would exploit it.
+
+
+=====
+
+
+Use JavaScript to implement the function factorial which receives a positive integer as argument and returns the product of the integers between 1 and that integer (OBS: factorial(0) --> 1).
+
+Example: factorial(3) --> 6
+---
+function factorial(n){
+  let product = 1
+  for(let i=1; i<=n; i++){
+    product *= i
+  }
+  return product
+}
+
+1 point for correct implementation.
+
+
+=====
+
+
+Use JavaScript to implement the function getAgesFromHumans which receives an array with objects like {name: "Alice", age: 10} as argument and returns a new array that contains only the age of each human from the array it received.
+
+Example: getAgesFromHumans([{name: "Alice", age: 10}, {name: "Bob", age: 15}]) --> [10, 15]
+---
+function getAgesFromHumans(humans){
+  const ages = []
+  for(const human of humans){
+    ages.push(human.age)
+  }
+  return ages
+}
+
+1 point for correct implementation.
+
+
+=====
+
+The code below is taken from an Express application making use of an SQLite database. For simplicity we ignore database errors.
+
+let humans = null
+let pets = null
+app.get("/humans", function(request, response){
+  humans = null
+  pets = null
+  db.all("SELECT * FROM humans", function(error, fetchedHumans){
+    humans = fetchedHumans
+    if(pets != null){
+      response.render("humans-and-pets.hbs", {humans, pets})
+    }
+  })
+  db.all("SELECT * FROM pets", function(error, fetchedPets){
+    pets = fetchedPets
+    if(humans != null){
+      response.render("humans-and-pets.hbs", {humans, pets})
+    }
+  })
+})
+
+Sometimes the code does not work as intended. What is the problem with the code?
+---
+The problem is that "pets" and "humans" are global variables. This is a problem since it takes time to carry out the request (to fetch the information from the database). When halfway through one request (for example, when all humans have been fetched for one client), the web application might receive a GET /humans request from another client, changing the "pets" and "humans" variables to null again for both the clients. This might result in the first client to never receive back a response at all.
+
+2 points for correct explanation of the problem.
+
+
+=====
+
+Use JavaScript to implement the following two functions:
+
+increment(3) --> 4
+incrementTwice(3) --> 5
+
+Implement increment using addition by one (no other computations allowed), and implement incrementTwice by using/calling the incremenet function (no other computations allowed).
+
+First implement the functions according to the sample usage above. Then implement the functions again, but this time making use of callback functions instead of return values.
+---
+function increment(x){
+  return x + 1
+}
+
+function incrementTwice(x){
+  return increment(increment(x))
+}
+
+function increment(x, callback){
+  callback(x + 1)
+}
+
+function incrementTwice(x, callback){
+  increment(x, function(xPlusOne){
+    increment(xPlusOne, callback)
+  })
+}
+
+0.25 points increment return
+0.25 points incrementTwice return
+0.5 points increment callback
+1 point incrementTwice callback

@@ -1,0 +1,269 @@
+What is the URI used for in an HTTP request? Give two examples of URI:s that can be used in an HTTP request.
+---
+The URI (Uniform Resource Identifier) is used to identify which resource the request is about.
+
+Example 1: /humans
+Identifies all human resources on the server.
+
+Example 2: /humans/123
+Identifies the human resource with id 123 on the server.
+
+
+=====
+
+
+What is the method used for in an HTTP request? Name five different methods one can use in an HTTP request and what they are used for.
+---
+The method is used to indicate what the server should do with the resource the request is about.
+
+GET: The server should send back the resource to the client.
+POST: The server should create a new resource on the server (the body of the request contains information about the resource to be created).
+PATCH: The server should update the resource identifier through the URI (updated information is found in the body of the request).
+PUT: The server should take the resource in the body of the request and store it using the URI in the request as the identifier for the resource.
+
+
+=====
+
+
+Explain what the HTTP headers Accept, Content-Type and Location are used for/represents respectively. Which of them can be used in requests and responses respectively?
+---
+Accept: Used in requests to indicate in which data format the client prefers to have the response body written in.
+
+Content-Type: Used in both requests and responses to indicate in which data format the body of the request/response is written in.
+
+Location: Used in responses to indicate the URI of a newly created resource.
+
+
+=====
+
+
+Explain how an application built on middlewares works and how a middleware is implemented/works in Express. Also name or describe two different middlewares (from npm packages) you've been using in your project work.
+---
+An application built on middlewares consists of a sequence of middlewares, each providing a small part of the functionality of the application. When an application receives a request, it is first sent to the first middleware, which can:
+
+1. Handle the request and send back a response.
+2. Ignore or carry out a small part of the request, and then invoke the next middleware.
+
+The next middleware then have the same choices.
+
+In Express a middleware is implemented as a function with the three parameters "request", "response" and "next". "request" and "response" are objects representing the incoming HTTP request and outgoing HTTP response respectively, and "next" is a function you can call to invoke the next middleware in the chain.
+
+One middleware used in the project work is urlencoded() from the body-parser package. Another one is the json() middleware, also from the body-parser package.
+
+
+=====
+
+
+According to Roy Thomas Fielding, what is an architectural constraint?
+---
+An architectural constraint is a rule/guideline about how to build something. By following the rule/guideline you avoid having common architectural design flaws in the thing you build.
+
+
+=====
+
+
+Name and describe each architectural constraint REST consists of.
+---
+https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm
+
+
+=====
+
+
+Explain each of the terms Identity, Authentication and Authorization.
+---
+Identity: An entity of some kind that can be identified, for example an account with a username.
+
+Authentication: The process of proving ownership of an identity, for example by providing the correct password to an account with a specific username.
+
+Authorization: The process of proving that you are entitled to request what you are requesting, for example by sending an access token in an HTTP request as a proof of that you have previously obtained authorization to send this type of request.
+
+
+=====
+
+
+What is the Same-Origin Policy? Why does it exist? Give an example of how things can go bad if the policy wouldn't exist.
+---
+What it is
+The Same-Origin Policy i a policy web browsers follow. It limits what requests client-side code in web browsers may send and which responses they may receive.
+
+Why it exists
+Without it, it would be very dangerous for users to visit websites containing bad client-side code.
+
+Example
+Imagine you login to your bank account. Your bank creates a new session to remember which account you logged in to, and it tells your web browser to create a cookie storing the session id. Then you visit a website containing bad client-side code, telling your web browser to send a GET request to your bank sending back information about the account you logged in to. The web browser sends the request with the cookie containing the session id, and the bad client-side code would receive the response with information about your account, which it then could forward to a hacker's server. That's bad! But the Same-Origin Policy forbids the bad client-side code to read the response, because that code's origin (the server it comes from) is different from the bank's server.
+
+
+=====
+
+
+What is Cross-Origin Resources Sharing? Why does it exist? Give an example (or rather two examples) with details showing how it works.
+---
+Sometimes you want client-side code to be allowed to send cross-site requests. For example, client-side code on website.com may want to fetch weather data from weather.com to display the current temperature in a specific city. The Same-Origin Policy forbids this, but if website.com implements Cross-Origin Resource Sharing, it can tell the web browser to allow client-side code to read the response. It do that by adding headers to the response, telling the web browser which client-side code that is allowed to read the response.
+
+If the client-side code sends what is called a simple requests (the method is GET or POST, the Content-Type may only be application/x-www-form-urlencoded, only some specific headers may be used, ...), the server should simply add a few headers (such as Access-Control-Allow-Origin) to indicate which client-side code that may read the response.
+
+If the client-side code sends any other request, the web browser will first send a pre-flight request to the server. This is a request the web browser do to ask the server if the client-side code may send the request it want to send. The server sends back a response with headers (such as Access-Control-Allow-Origin, Access-Control-Allow-Methods, ...) to indicate what type of requests the client-side code may send. If the request the client-side code wanted to send is one of these, the web browser will send it to the server, and then let the client-side code read the response.
+
+
+=====
+
+
+Explain what a JWT token is and how they work/are structured. Is it safe to store any information you want in it? Can you really trust the data stored in the token?
+---
+A JWT token consists of three parts:
+
+* A header
+* A payload
+* A signature
+
+These are separated by dots, so a JWT token looks like this:
+
+the_header.the_payload.the_signature
+
+the_header is a JSON object that has been Base 64 URL encoded. It contains meta information about the token, such as that it is a JWT token and which algorithm that is used to compute the signature.
+
+the_payload is also a JSON object that has been Base 64 URL encoded. It contains the actual information the token represent expressed as claims (key-value pairs).
+
+the_signature is the hash value from the algorithm specified in the_header when it is sent the the_header.the_payload plus a secret only the server knows. This is something the server can use to verify that the token has been created by the server itself when it receives the token from a client in the future (the server will simply compute the signature again and see if it matches the one in the token).
+
+Clients can read the data in the token, so you should not put sensitive data in the token that you don't want clients to be able to find out.
+
+The server can trust the data in the token when it receives one after it has verified the signature. Since only the server should know the secret it use to compute the signature, clients should not be able to create valid tokens on their own, because for that they need the server secret, which they don't know.
+
+
+=====
+
+
+OAuth 2.0 defines four different ways a client can obtain an access token. Explain how each of them works and when you are supposed to use which one.
+---
+https://tools.ietf.org/html/rfc6749#section-4
+
+
+=====
+
+
+Imagine that there exists a web application with user accounts consisting of username and password. Now you're assigned the task to add third-party authentication with Google (let users create and login to accounts using their Google account (in addition to username and password)). Explain what you need to do to add that functionality. A full score answer is not expected to contain all details, but be as detailed as you can. 
+
+Do not write any code; just describe the flow/steps/changes you need to make with as many details as you remember.
+
+Note: Google supports OpenID Connect, and you're not expected to mention any specific details about Google in your answer, but stick to how the OpenID Connect specification works.
+---
+In the accounts table in the database I need to add an extra column (Google Id) to remember which Google account that account is associated with.
+
+Then I need to pre-register the web application as a client at Google, at which point I obtain my client_id and client_secret.
+
+When user wants to create a new account using their Google account, I redirect the user to Google (scope=openid), and ask them to read out basic information about their account (their Google id). When they accept, Google redirect them back to my web application with an authorization code. On the server-side of my web application, I send this authorization code and client_id and client_secret to Google and trade it for an id token containing information about the user's Google account. I read out their Google ID (the sub claim) and insert a new entry in the accounts table in the database.
+
+When the user logs in the procedure is the same, but instead of creating a new account, I find the account with the user's Google Id, and logs in the user to that account.
+
+
+=====
+
+
+What is a foreign key constraint? Why should you use them, and what can happen if you don't use them? Give an example.
+---
+A foreign key constraint is a constraint telling our database which fields in our database tables that refers to foreign fields (fields in another table). This will enforce those fields to actually contain values that exists in the foreign fields they refer to, which prevents us from having posts with relation to other posts that doesn't exist.
+
+For example, we can have an accounts table and a notes table, and each note should belong to an account. In the notes table we have the field accountId to keep track of the id of the account the note belongs to. We add a foreign key constraint to this field, so we can't insert new notes that belongs to an account that doesn't exist.
+
+
+=====
+
+
+Imagine a web application containing human resources where each human consists of:
+
+    An id (auto incremented integer).
+    A name (string).
+    An age (integer).
+
+Your are then assigned the task to add a REST API to the web application through which clients (all clients) are able to:
+
+    Retrieve all humans.
+    Retrieve a human with a specific id.
+    Retrieve all humans with a specific age.
+    Create a new human.
+
+To carry out the task, you first need to decide how the REST API should be designed. As you answer, write the specification (design) of your REST API. You are free to design it however you want, but try to make use of HTTP properly. Make sure to mention all details necessary for others to understand how they can use the API.
+---
+All requests may send back status code 500 if something goes wrong (that response won't contain any other useful information).
+
+Retrieve all humans:
+Request
+URI: /humans
+Method: GET
+Headers: accept: application/json
+
+Response
+Status code: 200
+Headers: Content-Type: application/json
+Body: [{"id": 1, "name": "Alice", "age": 10}, ...]
+
+
+Retrieve a human with a SPECIFIC_ID:
+Request
+URI: /humans/SPECIFIC_ID
+Method: GET
+Headers: accept: application/json
+
+Response
+If no human with that id exists
+Status code: 404
+
+If human with that id exists
+Status code: 200
+Headers: Content-Type: application/json
+Body: {"id": SPECIFIC_ID, "name": "Alice", "age": 10}
+
+
+Retrieve all humans with a SPECIFIC_AGE:
+Request
+URI: /humans?age=SPECIFIC_AGE
+Method: GET
+Headers: accept: application/json
+
+Response
+Status code: 200
+Headers: Content-Type: application/json
+Body: [{"id": 1, "name": "Alice", "age": SPECIFIC_AGE}, ...]
+
+
+Create a new human:
+Request
+URI: /humans
+Method: POST
+Headers: accept: application/json, Content-Type: application/json
+Body: {"name": "Alice", "age": 10}
+
+Response
+If no validation errors exists (human was created)
+Status code: 201
+Headers: Content-Type: application/json, Location: /humans/1
+Body: {"id": 1, "name": "Alice", "age": 10}
+
+If validation errors exist:
+Status code: 400
+Headers: Content-Type: application/json
+Body: ["validation-error-1", "validation-error-2", ...]
+Possible validation errors: "Name too short", "Name too long", "Age too small"
+
+
+=====
+
+
+The code below is taken from an Express application making use of an SQLite database. 
+
+app.get("/humans", function(request, response){
+  let humans = []
+  db.all("SELECT * FROM humans", function(error, fetchedHumans){
+    // For simplicity, let us assume no error occurred.
+    humans = fetchedHumans
+  })
+  response.status(200).json(humans)
+})
+
+The response back to the client never includes any human resources, although the database contains plenty of them. Why? Also, explain what needs to be done do make the code work as intended.
+---
+db.all() is an asynchronous call, it will return back immediately, and response.status(200).json(humans) will be executed next. Then some time in the future we will get the result from the database and our callback function to db.all() will be called, but it's too late.
+
+To fix the problem, move response.status(200).json(humans) to the end of the callback function.

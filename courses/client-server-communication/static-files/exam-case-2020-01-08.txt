@@ -1,0 +1,59 @@
+LINK
+https://dh.ju.se/selfserviceopen/case/NewCase?language=SE&customerId=35&caseTemplateId=401
+
+
+-----
+
+
+SUBJECT
+Inspera Exam Client-Server Communication
+
+
+-----
+
+
+MESSAGE
+Hej!
+
+Här är uppgifter om den annalkande Inspera-tentan.
+
+Namnet på uppgiftsgrupp
+TSPK18 - Client-Server Communication - 1803 - 20200108
+
+Ansvarig för tentan
+Peter Larsson-Green, larpet@ju.se
+
+Bedömare på tentan
+Peter Larsson-Green, larpet@ju.se
+
+Betygsskala och poänggränser för varje betyg
+U: 0 - 11.99
+3: 12 - 17.99
+4: 18 - 23.99
+5: 24 - 30
+
+Jag vill att studenterna INTE ska kunna se sina poäng då de lämnar in tentan.
+
+Tack!
+
+Hälsningar Peter L-G
+
+
+-----
+
+
+SUBJECT
+Omslagssida Client-Server Communication
+
+
+-----
+
+
+MESSAGE
+Hej!
+
+Här är omslagssidan för den annalkande tentan.
+
+Tack!
+
+Hälsningar Peter L-G

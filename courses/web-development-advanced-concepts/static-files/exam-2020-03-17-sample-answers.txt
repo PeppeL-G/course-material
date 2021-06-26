@@ -1,0 +1,337 @@
+In client-side JavaScript, explain when you should use anElement.innerText and when you should use anElement.innerHTML.
+---
+Using innerText you can read out the text content of an HTML element (and its sub-element's text content, and so on) as a string. Using innerHTML, you get the same thing, but the string will also contain each of the HTML elements' tags and attributes (i.e. the HTML code).
+
+If you assign an HTML element's innerHTML a string, it will be interpreted as HTML code, and the content of the HTML element will consists of the elements in that HTML code. Using innerText instead, the string will be seen as text, and if it contains HTML code, that HTML code will be displayed as text.
+
+If the string you want to assign to innerText/innerHTML contains text from a user, you typically want to use innerText instead of innerHTML, because otherwise the user might have written some dangerous HTML/JavaScript code in the string, and you will have a XSS vulnerability if you use innerHTML.
+
+XSS-vulnerability: 1 point
+correct explanation without mentioning XSS: 0.8 points
+incorrect/irrelevant thing: -0.1-0.5 points
+
+
+=====
+
+
+The following client-side code should display the sum of the two integers entered in the two inputs:
+
+<input type="number" id="x">
+<input type="number" id="y">
+<button id="sumButton">Compute sum</button>
+<script>
+const x = parseInt(document.getElementById("x").value)
+const y = parseInt(document.getElementById("y").value)
+document.getElementById("sumButton").addEventListener("click", function(event){
+    alert(x + y)
+})
+</script>
+
+The code does not work as intended. Explain why the code does not work as intended and suggest what needs to be changed to make it work as it should.
+---
+The problem is that the x and y variables will be assigned their values when the page loads, and at that time the input elements won't contain anything. These two variables should instead be created when the button is clicked, so the numbers the user has entered in the inputs are used.
+
+explanation: 0.5 points
+suggestion: 0.5 points
+
+
+=====
+
+
+Name three different events that can fire on a webpage, and explain when they fire.
+---
+submit: When a form is submitted, for example when the user clicks on a submit button in a form.
+DOMContentLoaded: When the web browser is done parsing the HTML code on the webpage.
+click: When an HTML element is clicked, for example when the user clicks on an anchor element.
+
+each correct name: 0.165 points
+each correct explanations: 0.165 points
+uses "on[eventname]: -0.165 points (only once)
+uppercase/lowercase wrong: -0.165 points (only once)
+other weird things: -0.1-0.5 points
+
+
+=====
+
+
+Explain what a docker container and a docker image is.
+---
+A docker image is a description of everything needed to run an application in an isolated environment, including the operating system, the application's code, how to start the application, etc.. A docker container is a thing that can run a docker image, i.e that can run the application in an isolated environment with all its dependencies.
+
+explanation docker container: 0.5 points
+explanation docker image: 0.5 points
+describes the image as the Dockerfile: -0.25 points
+doesn't explain what we use them for (run applications): -0.5
+
+
+=====
+
+
+What is the main difference between vertical scaling and horizontal scaling? Can an application that can be scaled vertically always easilly be scaled horizontally as well? Justify your answer.
+---
+Vertical scaling is when you run your application on a better/faster/more powerful computer than before. Horizontal scaling is when you run your application on multiple computers and distribute the application's workload between them.
+
+An application that can be scaled vertically can not always easily be scaled horizontally. To scale horizontally in an easy way the application needs to be stateless, so it doesn't matter which computer getting which load of the work that needs to be carried out. This is not a requirement for an application to be scaled vertically.
+
+For example, if a web application stores the users' sessions on it's own file system, it has introduced a state the other computers receiving the rest of the application's workloads don't have, and it will be hard to distribute the load between the computers since they don't contain the same state, and some work needs to be carried on the computer with a specific state.
+
+difference: 0.5 points
+justification-state: 1.5 points
+(justification-load-balancer: 0.5 points)
+
+
+=====
+
+
+Explain how a three layered architecture works. What is the name and responsibility of each layer, and what technologies do we use in each of them in web applications?
+---
+A three layered architecture is an architecture of the source code where it has been divided into three different layers, each with its own responsibility.
+
+The Presentation Layer is responsible for implementing the interface through which the user interacts with the application. In web applications, the Presentation Layer makes use of HTTP (receives requests and sends back responses), HTML, CSS, client-side JS, images, etc. to implement the GUI. To carry out the requests, it tells the Business Logic Layer what to do.
+
+The Business Logic is responsible for implementing the business logic rules the application should use. This includes validation and authorization. It uses the Data Access Layer to store/retrieve/update/delete data (the resources).
+
+The Data Access Layer is responsible for storing and providing access to the data (the resources). Often the data is stored in a relational database, so in this layer we could for example find the connection to the database and the SQL queries we send to it or code making use of an Object-Relational Mapping framework.
+
+presentation name: 0.25
+presentation responsibility: 0.25
+presentation technologies: 0.25
+business name: 0.25
+business responsibility: 0.25
+data name: 0.25
+data responsibility: 0.25
+data technologies: 0.25
+quality: 1
+No indication of which layer using which layer: -0.25 points
+
+
+=====
+
+
+In a three-layered architecture for a web application, is it only in the Presentation Layer we need to think about security vulnerabilities hackers can take advantage of? Justify your answer.
+---
+No, counterexample: an SQL injection vulnerability is a security vulnerability found in the Data Access Layer.
+
+correct answer and valid justification: 1 point
+correct answer and vague justification: 0.25 points.
+
+
+=====
+
+
+In a three layered architecture, give an example of an implementation detail that should not be exposed to the next layer. Choose whichever layer you want. Justify your answer.
+---
+The Data Access Layer should not expose how it stores the data (e.g. not expose whether it stores the data in JSON files, a relational database, a non-relational database, etc.). If it for example stores the data in a relational database and exposes a function called "selectAllAccountsFromTheAccountsTable()", then later changing the implementation to a non-relational database would require to change the name of this function (since the accounts are no longer stored in a table), but that would also require to change the code in the Business Logic Layer that called this function, which would not be required if you simply called the function "getAllAccounts()" from the beginning and didn't expose any implementation detail.
+
+example: 0.25 points
+justification: 0.75 points
+
+
+=====
+
+
+In a three-layered architecture, which layer is responsible for hashing the users' passwords? Justify your answer.
+---
+The Data Access Layer is responsible for storing the data in a secure way, so from that point of view it's the Data Access Layer's responsibility. But if it's responsible for hashing passwords, then it will also be responsible for verifying login attempts, which it shouldn't be.
+
+Computing hash values are pure computations, and from that point of view it's rather the Business Logic Layer's responsibility. By hashing passwords in the BLL it is also easier to change the implementation of the Data Access Layer (since it's not responsible for hashing passwords it gets smaller). 
+
+correct answer bad justification: 0.5 points
+correct answer good justification: 1 point
+
+
+=====
+
+
+Mention one benefit with using an ORM instead of sending your own SQL queries to the database directly.
+---
+ORMs usually support many different type of databases (MySQL, Maria DB, SQLite, etc.), so if you want to change which database you use you don't need to re-write much code.
+
+benefit: 1 point
+
+
+=====
+
+
+With relational databases we get strong consistency by using various constraints (foreign key constraints, unique constraints, etc.). For many applications this is really important. Many non-relational databases don't offer strong consistency, but some programmers sometimes choose to use a non-relational database anyway? Why would they do that?
+---
+One reason to prefer a non-relation database over a relational database is because they are easier to scale and therefor can store and process more data.
+
+why: 1 point
+weird why: -0.1 points
+wrong statement: -0.25 points
+
+
+=====
+
+
+On a website the URI /accounts does currently identify all the accounts on the website. The website grows and does now contain quite many accounts, and fetching all of them at the same time is not useful. Instead, this website now wants to support pagination (e.g. 10 accounts on each "page") and filtering (e.g. the user can enter the search term "ad", and then only the accounts whose username contains this search term ("Adam", "Ada", "Madrido", etc.) are matched) for the account resources, both at the same time. In the future they might add more filtering options, such as filtering on the date the account was created, how old the account owner is, etc.
+
+What is the best way to structure the URI to support pagination and filtering, both at the same time? Describe how they should structure it in detail.
+---
+The best way to support pagination and filtering is by using the query string-part of the URI, for example /accounts?page=2&searchTerm=ad. The only alternative is to use something like /accounts/2/ad, but this is not a good alternative since someone using these URLs must remember in which order the parameter values come, and it will be hard to manage optional parameters. Those problems do not exist if you use query string parameters instead.
+
+use querystring: 2 points
+
+
+=====
+
+
+Explain which parts a JSON Web Token consists of, including the name and description/usage of each.
+---
+A JSON Web token consists of a header, a payload and a signature, and it looks like this: "theHeader.thePayload.theSignature".
+
+theHeader is a JSON object encoded using the base 64 encoding, and it contains meta information about the token (such as which type of token it is and which algorithm that is used to generate the signature).
+
+thePayload is a JSON object (containing key-value pairs called claims) encoded using the base 64 encoding too, and it contains the actual information the token represents (what is up to the programmer to decide).
+
+theSignature is the value you get when you use the specified algorithm in the header on "theHeader.thePayload" and a secret only the one generating the token knows. This way, when the one who generated the token later gets it back, it can verify if someone has changed the token or not by generating the signature again, and compare it to the one in the token. If they match the token has not been changed, because if it has been changed, the signatures would no longer match unless someone else also knows which secret that should be used to generate a valid signature, which no one else should know.
+
+each name: 0.25 points
+each function: 0.25 points
+each implementation: 0.25 points
+details/quality: 0.75 points
+
+
+=====
+
+This is how we implement login functionality on a website using usernames and passwords (without hashing the passwords):
+
+To add login functionality to a website, we first create an accounts table in the database storing the id (auto-generated), username and password of each user when they register. Then, when a user tries to login, we fetch the account with the username and password we retrieved from the user with the login request. If we find an account, we know that we got the correct username and password from the user, and we remember in the session which account (the id of the account) the user logged in to.
+
+Now, explain in a similar way the steps you would need to take to implement login functionality where users can login with their Google accounts (Google supports OpenID Connect).
+---
+1. Pre-register our application at Google (obtain client_id + client_secret).
+2. Create an accounts table in our database storing all accounts, but instead of username and password we will store their Google ID.
+3. When users want to register/login, we redirect the user to Google with our client_id and ask them to login.
+4. Google redirects the user back to our application. If the user did login, we receive an OAuth 2.0 authorization code. We can send this one to Google and get back an ID Token (JWT) with information about who the user is, including the ID the user has on Google. If no account with this Google ID exists in our accounts table, we create a new account with this Google ID, and login to that account by remembering it (the id) in the user's session. Otherwise, find the account with this Google ID in our accounts table, and remember that account (it's id) in the user's session.
+
+pre-register: 1 point
+table design: 1 point
+flow: 1 point
+missing detail: -0.25 points each
+
+
+=====
+
+
+Does it make sense to store the user's password in an Id Token? Does it make sense to store it in an Access Token? Justify your answers.
+---
+No, it doesn't make sense to store the user's password in any of those. The user's password is sensitive information and should not be stored anywhere outside the server, since sending it to/storing it on another computer increases the risk of a hacker coming over it, no matter if it's hashed or not. A client could for example contain viruses or other vulnerabilities that could read the user's password that way.
+
+Further more, there's no use-case for storing the user's password in an ID Token or an Access Token.
+
+valid justification: 1 point
+
+
+=====
+
+
+Describe a case where you need to add CORS support to your web application. Then also describe how you would add support for it (in general, and not in a specific framework).
+---
+We need to add CORS when client-side JavaScript code on one website want to send HTTP requests to a web application running on a different domain (known as a cross-domain request) then the client-side JavaScript came from. Then that web application need to support CORS.
+
+An example is a website implemented as a Single-Page Application that contains client-side JavaScript code that sends HTTP requests to a web application running on another domain to fetch some data, for example weather information.
+
+CORS support can be added on the web application receiving the HTTP requests from the client-side JavaScript code by adding some HTTP headers in the HTTP response, such as Access-Control-Allow-Origin (specifying the websites with the client-side code that may send the request), Access-Control-Allow-Methods (which HTTP methods they may use) and Access-Control-Allow-Headers (which HTTP headers they may use). These headers tell the web browser what type of HTTP requests the client-side JavaScript code may send to it.
+
+case: 0.5 points
+implemented as (response) headers: 0.5 points
+1 header name: 0.5 points
+quality/details: 0.5 points
+
+
+=====
+
+
+Explain what a CORS preflight request is, and give example of when one is needed.
+---
+Client-side code can send cross-domain requests without the receiving web application supporting CORS. This can be done by for example requesting the web browser to load an image, a CSS file or submitting a form. But the type of requests that can be sent this way are quite limited (for example, you can't specify which headers to send). These type of requests are known as "simple requests".
+
+If you want to send an HTTP request that can't be sent as a simple request, then the web browser will first send it's own HTTP request to the server, asking the server if it's OK to send the actual HTTP request the client-side code wants to send. This extra HTTP request is known as the preflight request. The web browser will only send the actual HTTP request if the web application respond that it's OK to send it.
+
+An example of an HTTP request that needs a preflight request is an HTTP request using the method DELETE.
+
+explanation: 0.75 points
+example: 0.25 points
+
+
+=====
+
+
+A programmer can use the asynchronous function getGoogleSearchResultAsync() like this:
+
+getGoogleSearchResultAsync("football", function(searchResult){
+    console.log(searchResult)
+})
+
+The programmer prefers to use synchronous functions instead and tries to create a wrapper function for getGoogleSearchResultAsync() like this:
+
+function getGoogleSearchResult(searchTerm){
+    let returnValue = null
+    getGoogleSearchResultAsync(searchTerm, function(searchResult){
+        returnValue = searchResult
+    })
+    return returnValue
+}
+
+However, this does not work as the programmer intended. Explain how the code works when someone uses getGoogleSearchResult("football") and what the problem is.
+---
+How the code works:
+
+1. "let returnValue = null" is executed.
+2. The call to getGoogleSearchResultAsync() is made. It returns back immediately, and the function runs in the background.
+3. "return returnValue" is executed (null is returned back).
+4. When getGoogleSearchResultAsync() has got the result from Google, the callback function passed to it will be called, and "returnValue = searchResult" is executed.
+
+The problem is that (3) and (4) are executed in wrong order; they need to be switched, so "returnValue = searchResult" is executed before "return returnValue". 
+
+how: 0.5 points
+problem: 0.5 points
+vague explanations: -0.25 points - -0.75 points
+
+
+=====
+
+
+The function getAccountById() can be used to fetch an account with a specific id, for example:
+
+getAccountById(3, function(account){
+     // account = {id: 3, username: "Claire"}
+})
+
+Implement the function getAccountsByIds() that receives an array with account ids and that uses getAccountById() to fetch respective account and then sends them all back in an array passed to the callback function. Others should be able to use your function like this:
+
+getAccountsByIds([2, 5, 3], function(accounts){
+    // accounts = [
+        {id: 2, username: "Bob"},
+        {id: 5, username: "Erica"},
+        {id: 3, username: "Claire
+    // ]
+})
+
+The order of the accounts in the array is not important.
+---
+function getAccountsByIds(ids, callback){
+    
+    const receivedAccounts = []
+    
+    for(const id of ids){
+        getAccountById(id, function(account){
+            receivedAccounts.push(account)
+            if(receivedAccounts.length == ids.length){
+                callback(receivedAccounts)
+            }
+        })
+    }
+    
+}
+
+(this was the expected solution, although it does not always work as it should)
+
+not taking into account async function: 0 points on question
+iterate over indexes instead of values: -0.25 points
+use return instead of callback: -0.25 points
+use var/let instead of const: -0 points
+use global variable: -0.25 points
+missing keyword (e.g. "function"): -0.25 points

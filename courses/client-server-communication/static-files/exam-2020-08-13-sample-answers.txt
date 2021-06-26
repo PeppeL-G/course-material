@@ -1,0 +1,245 @@
+Does it make sense to use the body in an HTTP GET request? Justify your answer.
+---
+No, because the body in a GET request has no meaning. A GET request is about fetching a resource from the server, and the URI is used to indicate which resource that is, so the body is not used for anything.
+
+0.25 points correct answer.
+0.75 points justification.
+
+
+=====
+
+
+Alice is assigned the task to design a REST API clients can use to login and then create new blogposts belonging to that account. She decides that when a user logs in, the client obtains an access token containing the user's account id, which can be used to act on the behalf of that user. Then when the user wants to create a new blogpost belonging to her own account, the client sends an HTTP POST request to /blogposts with the headers Authorization: Bearer THE.ACCESS.TOKEN and Content-Type: application/json, and in the body pass {"title": "The actual title", "content": "The blogpost text."}.
+
+Is this a good or bad design? Justify your answer.
+---
+It's a bad design, because the request does not contain all information about the request. What's missing is which account the blogpost should belong to.
+
+2 points for valid justification.
+
+
+=====
+
+
+Explain what the HTTP headers Accept and Content-Type are used for respectively. Which of them can be used in requests and responses respectively?
+---
+Accept: Used in requests to indicate in which data format the client prefers to have the response body written in.
+
+Content-Type: Used in both requests and responses to indicate in which data format the body of the request/response is written in.
+
+0.25 points for Accept explanation.
+0.25 points for Content-Type explanation.
+0.25 points for Accept in requests.
+0.25 points for Content-Type in requests and responses.
+
+
+=====
+
+
+Explain what the middlewares from the npm package body-parser do, and describe how one of them works. Try to be as detailed as possible. There is of course no need to mention any code.
+---
+The middlewares from the body-parser package will parse the body of incoming HTTP requests so we easily can access the resource in the body using the "body" property on the "request" object.
+
+The bodyParser.json() middleware would work something like this:
+
+1. If there's no body in the request, continue to next middleware. Otherwise:
+2. Check if the Content-Type header is in the request and that it has the value "application/json". If not, continue to next middleware, otherwise:
+3. Read the body of the request (the resource expressed in JSON code) into a string.
+4. Convert the string with the JSON code into a JavaScript object.
+5. Store the JavaScript object in the "body" property on the "request" object.
+
+0.5 points for explaining what the middlewares do.
+1.5 point for describing how one of them works in detail.
+
+
+=====
+
+
+A REST architecture consists of a set of architectural constraints, as described by Roy Thomas Fielding. Explain what an architectural constraint is.
+---
+An architectural constraint is a rule/guideline about how to build something. By following the rule/guideline you avoid having common architectural design flaws in the thing you build.
+
+1 point for correct answer.
+
+
+=====
+
+
+Name and describe each architectural constraint REST consists of.
+---
+https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm
+
+0.25 points for each name.
+0.10 points for each half-good description.
+0.25 points for each good description.
+
+
+=====
+
+
+Here is a short story:
+
+Alice is going to an amusement park for adults only (only people older than 18 years are allowed). At the entrance she needs to show her driver license to prove that she's older than 18 years, and then she pays for a "ride pass" (a piece of paper you put around your wrist giving you free access to all the fun things inside the amusement park). She receives her ride pass and put it around her wrist. Then she goes to a merry-go-around, show her ride pass to the responsible personnel there, which let her onboard the merry-go-around, and then she have the time of her life.
+
+In this story, we have one identity and places where authentication and authorization takes place. Which are (all of) them? You only need to mention those that are explicitly mentioned in the text.
+---
+Identity: Alice
+Authentication places: Entrance
+Authorization places: Entrance, Merry-go-round
+
+0.5 points for identity.
+0.5 points for authentication places.
+0.5 points for authorization places.
+
+
+=====
+
+
+Willy is assigned the task to design a REST API clients can use to compute mathematical expressions consisting of one operator (+, -, * or /) and two numbers. He decides that clients should send a POST request to /compute, add the header Content-Type: application/json and then in the body pass {"leftOperand": 123, "operator": "+", "rightOperand": 321} (123, "+" and 321 are sample values). The response would then contain the result of the mathematical expression (i.e. a number).
+
+This design is quite poor. Explain to Willy what he has done wrong and suggest a better design.
+---
+The URI should identify resources, not action. Instead of /compute, it should rather be /result.
+
+The request is not about creating a new resource, but rather to retrieve a resource (the result), so it should be a GET request, and not a POST request.
+
+When it's a GET request, the URI should indicate which resource to retrieve, so the {"leftOperand": 123, "operator": "+", "rightOperand": 321} information should not be in the body of the request, but this information should rather be passed as querystring parameters and be part of the URL.
+
+Since we have no body, the Content-Type is not needed at all.
+
+0.5 points /result instead of /compute (with explanation).
+1 point GET instead of POST (with explanation).
+0.5 points querystring instead of body (with explanation).
+
+
+=====
+
+
+Explain what Cross-Origin Resources Sharing is and describe when it is used and how it works.
+---
+Web browsers follow a policy called the Same-Origin Policy. For one, that means that client-side JavaScript code coming from one domain can't send HTTP requests to another domain and receive and read the HTTP responses. This is for example desirable when implementing a Single-Page Application running on one domain that needs to communicate with another application (for example over a REST API) running on another domain.
+
+Cross-Origin Resource Sharing is a protocol web applications can implement to tell web browsers that it is OK for client-side JavaScript code coming from another domain to send HTTP requests to it and to read the HTTP responses from it. Cross-Origin Resource Sharing is built on top of HTTP.
+
+When client-side JavaScript code wants to send a "Simple HTTP Request" (GET or POST request with a limited number of allowed headers), the web browser will send the request to the web application. If the web application wants to allow the client-side JavaScript code to read the response, it add the header Access-Control-Allow-Origin to the response to indicate the domain name of the client-side Javascript code that may read the response.
+
+When client-side JavaScript code wants to send a a request that is not a simple request, the web browser will first send a "pre-flight request" to ask the server if it's OK to send the actual request the client-side code wanted to send. The pre-flight request contains headers indicating what the actual request is about, such as:
+
+Access-Control-Request-Method - The method used in the actual request.
+Access-Control-Request-Headers - Which headers that are sent in the actual request.
+
+The web application then adds headers in the HTTP response to indicate what types of requests client-side code may send to it, such as:
+
+Access-Control-Allow-Origin - The domain name of client-side JavaScript code that may send to it.
+Access-Control-Allow-Methods - Which HTTP methods that may be used in the actual request.
+Access-Control-Allow-Headers - Which HTTP headers that may be used in the actual request.
+
+The web browser will only send the actual request if it conforms to these requirements.
+
+0.5 points for what it is.
+0.5 points for "simple request".
+1 point for "pre-flight request".
+
+
+=====
+
+
+JWT tokens are self-contained. That means that the data the token represents is stored in the token itself. Therefore, when a client obtains an access token that has been implemented as a JWT token, the client can read the data in the token, and even change it, for example modify the data in it to mean that the client has access to resources it shouldn't have access to. But the server has a way to discover if the client has modified the token. Explain how the server does that by describing a detailed example.
+---
+A JWT token does not only contain the data the token represents, but also a signature written by the server who created the token. The signature is simply a hash value of "the data in the token and a secret only the server knows".
+
+When the server receives a token, it computes the signature again by hashing the data in the token with it's secret. If the computed hash value is the same as the hash value stored in the token, the server can be certain the client hasn't modified the data in the token. If a client wants to modify the data in the token and be able to trick the server, the client also needs to change the signature stored in the token, but since the client doesn't know the secret the server use to compute the signature, the client can't produce a valid signature, so the server will discover all tokens clients have tempted with.
+
+
+=====
+
+
+When logging in over a REST API, explain why it's most often not is enough to only receive an access token, but you also need to receive an ID token.
+---
+An access token only gives the client permissions to send some requests, it does not tell the client into which account the user logged in to. By also receiving an ID token, the client can read out information about the account the user logged in to, and for example read out the user's id, so you kow which resources you have permission to access with the access token.
+
+1.5 points for valid explanation.
+
+
+=====
+
+
+OAuth 2.0 defines four different ways a client can obtain an access token. Explain how each of them works and when you are supposed to use which one.
+---
+https://tools.ietf.org/html/rfc6749#section-4
+
+
+0.25 points for each name.
+0.5 points for each explanation of they work.
+0.25 points for each when to use it.
+
+
+=====
+
+
+Must an ID Token from OpenID Connect be self-contained? Justify your answer.
+---
+The OpenID Connect specification states that the ID token must be a JWT token, and those are self-contained tokens, so yes, ID Tokens must be ("always will be") self-contained tokens.
+
+1 point correct answer.
+
+
+=====
+
+
+How can clients obtain an ID Token from a server that supports OpenID Connect?
+---
+They obtain an ID Token the same way they obtain an access token: when they "login" by providing their username and password (or however they login), they don't only get back an access token in the response, but also an ID Token.
+
+1 point for correct answer.
+
+
+=====
+
+
+In relational databases, explain why it's better to use a foreign key constraint instead of first sending a query to check if a constraint is fulfilled and then go ahead and execute the actual query you wanted to send if the constraint was fulfilled. Also show an example of this with actual queries.
+---
+To create a new blogpost to an account with a specific id (e.g. 123):
+
+1. Send query to DB to check that an account with that id exists:
+   SELECT * FROM accounts WHERE id=123
+2. Wait for DB response.
+3. If account exists, create a new blogpost:
+   INSERT INTO blogposts (accountId, title) VALUES (123, "My Post")
+
+The problem here is that the DB response we get back might say that an account with id 123 exists, but before we have done (3), someone else has deleted that account from the database (directly in the database, or through another concurrent request), so this is not a secure way to make sure that all blogposts belongs to existing accounts. Therefore it's better to use foreign key constraint in the database, so we don't need to do (1), but we can do (3) directly, and the DB will give us an error if the account doesn't exist.
+
+2 points for correct explanation and sample queries.
+
+
+=====
+
+
+The code below is taken from an Express application making use of an SQLite database. 
+
+app.get("/humans", function(request, response){
+  let data = {}
+  db.all("SELECT * FROM humans", function(error, fetchedHumans){
+    // For simplicity, let us assume no database error occurred.
+    data.humans = fetchedHumans
+  })
+  response.json(data.humans)
+})
+
+The response back to the client never includes any human resources, although the database contains plenty of them. Why? Also, rewrite the code so it works as intended.
+---
+The reason is because the call to db.all() is asynchronous. The callback passed to it will run sometime in the future, but before that happens we immediately afterward execute response.json(data.humans). When this happens, data.humans = fetchedHumans has not been executed yet, so in this case we try to send back an undefined value to the client.
+
+The solution is to send back the response after we have fetched the resources from the database:
+
+app.get("/humans", function(request, response){
+  let data = {}
+  db.all("SELECT * FROM humans", function(error, fetchedHumans){
+    // For simplicity, let us assume no database error occurred.
+    data.humans = fetchedHumans
+    response.json(data.humans)
+  })
+})
+
+0.5 points for explaining problem.
+0.5 points for working solution.

@@ -1,0 +1,421 @@
+What is the URI used for in an HTTP request? Give two examples of URI:s that can be used in an HTTP request.
+---
+The URI (Uniform Resource Identifier) is used to identify which resource(s) the request is about.
+
+Example 1: /humans
+Identifies all human resources on the server.
+
+Example 2: /humans/123
+Identifies the human resource with id 123 on the server.
+
+1 correct: 0.1 points
+2 correct: 0.3 points
+3 correct: 0.5 points
+
+
+=====
+
+
+What is the method used for in an HTTP request? Name two different methods one can use in an HTTP request in addition to GET and POST.
+---
+The method is used to indicate what the server should do with the resource(s) the request is about.
+
+PUT
+DELETE
+
+1 correct: 0.1 points
+2 correct: 0.3 points
+3 correct: 0.5 points
+
+
+=====
+
+
+Explain what the HTTP headers Accept and Content-Type are used for respectively. Which of them can be used in requests and responses respectively?
+---
+Accept: Used in requests to indicate in which data format the client prefers to have the response body written in.
+
+Content-Type: Used in both requests and responses to indicate in which data format the body of the request/response is written in.
+
+accept description: 0.25 points
+accept requests: 0.25 points
+content-type description: 0.25 points
+content-type requests and responses: 0.25 points
+
+
+=====
+
+
+If you want web browsers to render some text on your webpage with a large font size you can surround the text with an <h1> element. However, this is not always a good solution. Why?
+---
+HTML is not about how the text will be visualized, HTML is a markup language, it's about what the text represents/means/is.
+
+correct answer: 0.5 points
+correct answer with semantic justification: 1 points
+
+
+=====
+
+
+The form below exists on a webpage and can be used to send two numbers and an operation (i.e. +, -, * or /) to the server, and the server then send back HTML code displaying the result of the operation.
+
+<form method="XXXXXXX" action="/result">
+  First number:  <input type="number" name="x">
+  Operation:     <input type="text" name="operation">
+  Second number: <input type="number" name="y">
+                 <input type="submit" value="Compute">
+</form>
+
+Should the form be submitted with the GET method or the POST method (what should XXXXXXX above be?)? Justify your answer.
+---
+The form should be submitted with the GET method, because we fetch the result (there is no need to use POST, because there are no side effects). You can look at it as if the server contains all numbers, and the X, OPERATION and Y in the querystring are used to identify which number.
+
+correct answer and justification: 1 point
+
+
+=====
+
+
+Here is some CSS code:
+
+main div #message.important{
+  font-weight: bold;
+}
+
+Write HTML code that contains a match for the CSS selector in the code above.
+
+Note: You only need to write the HTML code found in the <body> element (including the <body> element), you do not need to write the HTML code for an entire HTML document.
+---
+<body>
+	<main>
+		<div>
+			<div id="message" class="important">
+				I will be matched!
+			</div>
+		</div>
+	</main>
+</body>
+
+correct answer: 1 point
+
+=====
+
+
+Explain what a declaration is in CSS.
+---
+A declaration in CSS consists of a CSS property and the value we want it to have. It tells the web browser how to style some part of the element, such as using green as the background color or a solid black line as a border around it.
+
+correct answer: 1 points
+only example: 0.5 points
+saying the declaration is everything between { and } in a rule: 0.25 points
+
+
+=====
+
+
+What can media queries be used for in CSS?
+---
+Media queries can be used to conditionally apply CSS code based on which media the user use to visit the webpage. With it, we can for example have some CSS that should be applied on small screens only, and some CSS code that should be applied on large screens only.
+
+correct answer: 1 point
+
+=====
+
+
+Explain how an application built on middlewares works and how a middleware is implemented/works in Express. Also name or describe two different middlewares (from npm packages) you've been using in your project work.
+---
+An application built on middlewares consists of a sequence of middlewares, each providing a small part of the functionality of the application. When an application receives a request, it is first sent to the first middleware, which can:
+
+1. Handle the request and send back a response.
+2. Ignore or carry out a small part of the request, and then invoke the next middleware.
+
+The next middleware then have the same options.
+
+In Express a middleware is implemented as a function with the three parameters "request", "response" and "next". "request" and "response" are objects representing the incoming HTTP request and the outgoing HTTP response respectively, and "next" is a function you can call to invoke the next middleware in the chain.
+
+One middleware used in the project work is urlencoded() from the body-parser package. Another one is the session middleware from the express-session package.
+
+middleware general description: 0.75 points
+middleware express description: 0.75 points
+middleware example 1: 0.25 points
+middleware example 2: 0.25 points
+
+=====
+
+
+If a user should enter a password on a website it is important to use HTTPS, otherwise (if HTTP is used) can anyone who help forwarding the request to the server read the user's password in plain text. But what if one hashes the user's password with client-side JavaScript code before it is sent to the server (so the ones who forwards the requests only sees the hash value of the password). Is this a good/secure workaround instead of using HTTPS? Justify your answer.
+
+Note: You do not need to think about sessions for this question; imagine that the user just need to enter her password to retrieve a secret page once, and that's it.
+---
+That workaround is not good/not secure. Sure, the ones who help forwarding the request to the server can't see the user's password in plain text, but they can see the hash value of it, and that is something they can use themselves to authenticate themselves as the user to the server.
+
+brute-force trouble: 0.25 points
+client-side js disabled: 0.25 points
+correct answer and justification: 1 point
+
+
+=====
+
+
+Here is an HTML form on a website one can use to login to that website:
+
+<form method="post" action="/login">
+   Username: <input type="text"     name="username">
+   Password: <input type="password" name="password">
+             <input type="submit"   value="Sign in!">
+</form>
+
+Here is the code on the server handling the HTTP request sent when the form is submitted:
+
+app.post('/login', function(request, response){
+  const username = request.body.username
+  const password = request.body.password
+  // Query to be sent to the database to check if
+  // username and password are correct.
+  const query = `
+    SELECT id FROM members WHERE
+      username = "`+username+`" AND
+      password = "`+password+`"
+  `
+  // Query sent to database, the id of the user is retrieved, etc.
+  // ...
+})
+
+As your answer, write a username and password you can use to login without creating your own account in advance.
+---
+Username: Doesn't matter
+Password: " OR "1"="1
+
+answer that works: 1 point
+
+
+=====
+
+
+A programmer states the following:
+
+On my website I hash and salt the users' passwords, so it doesn't matter if the users use weak or strong passwords, all of them can be considered strong passwords anyway.
+
+Is the programmer wrong or correct? Justify your answer.
+---
+The programmer is wrong. If a hacker would come across our database with the hash values of all the passwords, he could use a rainbow table/generate her own from a list with common passwords to find out what password each hash value was originally. Since strong passwords don't exist in these existing rainbow tables/lists of common passwords, they will be much harder for the hacker to figure out compared to weak passwords, which exist here.
+
+correct justification: 1 point
+badly described justification: -0.25 - -0.5 points
+not answering the question: -0.25 points.
+
+
+=====
+
+
+Explain what a cookie is, give two examples of what they can be used for and explain how they are created/transferred. Be as detailed as possible.
+---
+A cookie is a key-value pair the server can use to remember information about a client that is stored on the client. The server can ask the client to create a new cookie in an HTTP response sent to the client by adding the header:
+
+Set-Cookie: cookie-name=cookie-value
+
+The client should then create a cookie with the name "cookie-name" and the value "cookie-value". The client should then add this cookie to HTTP requests it sends to the server in the future by adding the header:
+
+Cookie: cookie-name=cookie-value
+
+Now the server receives back information about the client it wanted the client to store for it.
+
+Example 1: Remember what the client has searched for in a search engine.
+Example 2: Remember which products the user has viewed in a webshop website.
+
+key-value pair: 0.25 points
+stored on client: 0.25 points
+example 1: 0.25 points
+example 2: 0.25 points
+set-cookie header name: 0.25 points
+set-cookie header value: 0.25 points
+cookie header name: 0.25 points
+cookie header value: 0.25 points
+
+
+=====
+
+
+Explain what a session is, give two examples of what they can be used for and explain how they work/can be implemented.
+---
+A session is a collection of key-value pairs stored on the server that belongs to a specific client. The server can use this to remember information about a client on the server side. Each session has it's own unique session id, and when the server creates a new session for a client, it asks the client to create a cookie with the session id identifying the session for that client. The client then sends that cookie back to the server in future request, and the server can that way find the session belonging to that client and read information our from the session it has stored about that client.
+
+Example 1: Remember if a client has logged in to an account or not (and which account).
+Example 2: Remember which products the user has put in the shopping cart on a shopping website.
+
+key-value pairs: 0.25 points
+stored on server: 0.5 points
+session id: 0.25 points
+session id in cookie: 0.5 points
+example 1: 0.25 points
+example 2: 0.25 points
+
+
+=====
+
+
+The code below is taken from an Express application in which users can create links containing text in the querystring. When someone visits the link the text in the querystring is displayed on the page.
+
+app.get("/display-text", function(request, response){
+  const textToDisplay = request.query.text
+  response.send("<h1>"+textToDisplay+"</h1>")
+})
+
+The implementation contains a common security vulnerability. What is the vulnerability? What needs to be done to be protected against the vulnerability? You don't need to write any code, just explaining what needs to be done is enough.
+---
+The vulnerability is Cross-Site Scripting. If the TEXT parameter in the querystring contains HTML code, that HTML code will be sent to the user's web browser, which will interpret it as HTML code. A hacker could use this to send links to users containing HTML code, and when the users visit the links, their web browser will receive the HTML code. The HTML code could in turn contain JavaScript, telling the users web browsers to send their data to the hacker or some requests to other servers on the web benefiting the hacker.
+
+To protect against this, the characters in the TEST parameter with special meaning in HTML (<, >, etc.) needs to be encoded using their character entities (&lt; &gt;, etc.) before we send it back to the client.
+
+what: 0.5 points
+how to protect: 0.5 points
+
+
+=====
+
+
+What does tokens in forms protect your website from? Name the vulnerability and describe how the tokens works/are used to protect you form the vulnerability.
+---
+Tokens in forms protects you from Cross-Site Requests Forgery attacks. They make sure that when your web application receives a POST request from a form beoing submitted, that request actually was sent by the user submitting the form, and not by a hacker's client-side code on a bad website the user visits.
+
+When the user sends a GET request for the form, the web application generates a token (a long string of random characters) and adds it to the form in a hidden input field, and remembers the token for that user (for example in a cookie or in the user's session). When the web application receives a POST request that should come from the submission of the form, it verifies that the token in the form is the same as the one it generated before (the same as the one in the cookie/the user's session). If they are, it can be sure the request comes from the user submitting the form, because the Same-Origin Policy forbids a hacker's client-side code on the bad website the user visits to read the response from GET requests for the form, so the hacker has no way of knowing which token to use when it tricks the user's web browser to send the POST request, so the web application receiving the POST request will simply ignore it, since it doesn't contain the correct token.
+
+vulnerability description: 0.75 points
+vulnerability name: 0.25 points
+vulnerability protection: 1 point
+
+
+=====
+
+
+Use JavaScript to implement the function sum() which receives a positive integer as argument and returns the sum of the integers between 0 and the integer it receives.
+
+Sample usage:
+    sum(5) → 0 + 1 + 2 + 3 + 4 + 5 → 15
+---
+function sum(lastTerm){
+	let sum = 0
+	for(let i=0; i<=lastTerm; i++){
+		sum += i
+	}
+	return sum
+}
+
+correct solution: 1 points
+bad variable name: -0.1 points
+bad var/let/const/missing: -0.1 points
+while instead of for: -0.1 points
+function keyword missing: -0.1 points
+missing last iteration: -0.1 points
+unnecessary code: -0.25 points
+
+
+=====
+
+
+Use JavaScript to implement the function getAllPositivePlus3() which receives an array with numbers as argument and returns a new array containing only the numbers in the array it received that are greater than 0 and where each number has been incremented by 3.
+
+Sample usage:
+    getAllPositivePlus3([3, -2, -5, 1]) → [6, 4]
+---
+function getAllPositivePlus3(numbers){
+	const positiveNumbersPlus3 = []
+	for(const number of numbers){
+		if(0 <= number){
+			positiveNumbersPlus3.push(number + 3)
+		}
+	}
+	return positiveNumbersPlus3
+}
+
+correct solution: 1 points
+bad variable name: -0.1 points
+bad var/let/const/missing: -0.1 points
+while/for/for in instead of for/for of: -0.1 points
+function keyword missing: -0.1 points
+missing last iteration: -0.1 points
+computing the length of the array wrong: -0.1 points
+adding values to the array wrong: -0.1 points
+unnecessary code: -0.25 points
+add 3 and then check > 0: -0.25
+
+
+=====
+
+
+The code below is taken from an Express application making use of an SQLite database.
+
+app.get("/humans", function(request, response){
+  let humans = []
+  db.all("SELECT * FROM humans", function(error, fetchedHumans){
+    // For simplicity, let us assume no error occurred.
+    humans = fetchedHumans
+  })
+  const model = {
+    humans: humans
+  }
+  response.render("all-humans.hbs", model)
+})
+
+The response back to the client never includes any human resources, although the database contains plenty of them. Why? Also, rewrite the code so it works as intended.
+---
+Because the call db.all() is asynchronous, it will send the query to the database and then return back immediately, and we continue to send back the response. Then in the future we will get back the result from the database and our callback function to db.all() will be called, but we have already sent back the response at this time.
+
+Fixed code:
+
+app.get("/humans", function(request, response){
+  db.all("SELECT * FROM humans", function(error, fetchedHumans){
+    // For simplicity, let us assume no error occurred.
+    const model = {
+      humans: fetchedHumans
+    }
+    response.render("all-humans.hbs", model)
+  })
+})
+
+why: 0.5 points
+correct code: 0.5 points
+
+
+=====
+
+
+Use JavaScript to implement the following three functions:
+
+getOne() --> 1
+getTwo() --> 2
+getThree() --> 3
+
+getThree() must make use of getOne() and getTwo() when it computes the 3 it should return.
+
+First implement the functions according to the sample usage above. Then implement the functions again, but this time making use of callback functions instead of return values (getThree() must make use of the new getOne() and getTwo() when it computes the 3 it should "return").
+---
+// Functions using return values.
+function getOne(){
+	return 1
+}
+function getTwo(){
+	return 2
+}
+function getThree(){
+	return getOne() + getTwo()
+}
+
+// Functions using callback functions.
+function getOne(callback){
+	callback(1)
+}
+function getTwo(callback){
+	callback(2)
+}
+function getThree(callback){
+	getOne(function(one){
+		getTwo(function(two){
+			callback(one + two)
+		})
+	})
+}
+
+correct synch getOne(), getTwo() and getThree(): 0.25 points
+correct async getOne() and getTwo(): 0.25
+correct async getThree(): 0.5

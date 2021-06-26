@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<Construction_Entity id="BIM3HUS13"> 
+     
+    <CoClassCode>CBH</CoClassCode>
+    <PropertyName>Skrea 13:8 </PropertyName>
+    <SpaceArea>400</SpaceArea>
+    <CostAssessment>1589457</CostAssessment>
+    <EnergyConsumption>32.74</EnergyConsumption>
+    <CarbonDioxideEquivalency>28626</CarbonDioxideEquivalency>
+</Construction_Entity> 
+
+
