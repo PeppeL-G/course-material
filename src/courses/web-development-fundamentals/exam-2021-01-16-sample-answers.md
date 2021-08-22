@@ -1,3 +1,7 @@
+---
+sidebar: auto
+---
+
 # Exam 2021-01-16 Sample Answers
 Here are sample answers and some grading guidelines for the exam 2020-10-15. Auto marked questions aren't shown here, check your answers on Inspera to see the correct answers.
 

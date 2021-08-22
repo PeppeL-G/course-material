@@ -61,3 +61,4 @@ After the exams, sample answers will be available here.
 
 * [Exam 2020-12-13](./exams/exam-2020-12-13-sample-answers/)
 * [Exam 2021-02-18](./exams/exam-2021-02-18-sample-answers/)
+* [Exam 2021-08-17](./exams/exam-2021-08-17-sample-answers/)
