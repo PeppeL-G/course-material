@@ -1,4 +1,4 @@
-<SetTitle title="Web Development Fundamentals" />
+<SetTitle title="Web Development Fundamentals 2021" />
 
 # Time Plan
 The <span style="background-color: #80008082; display: inline-block; padding: 0 8px; font-weight: bold;">Exercise</span> and <span style="background-color: #00ffff54; display: inline-block; padding: 0 8px; font-weight: bold;">Project Work</span> column indicates what you are expected to work on each day. 

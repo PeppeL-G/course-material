@@ -7,7 +7,7 @@ exercise4ShowAfter: 2020-11-13T14:45
 exercise5ShowAfter: 2020-11-20T14:45
 exercise6ShowAfter: 2020-11-27T14:45
 ---
-<SetTitle title="Introduction to Script Programming" />
+<SetTitle title="Introduction to Script Programming 2020" />
 
 # Exercises
 On this page you find information about the exercises in the course.

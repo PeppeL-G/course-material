@@ -1,4 +1,4 @@
-<SetTitle title="Introduction to Script Programming" />
+<SetTitle title="Introduction to Script Programming 2020" />
 
 # Lectures
 Each exercise on the [Exercises](exercises/) page contains a list of recorded lectures you are recommended to watch before attempting to solve the exercises and the labs.

@@ -1,4 +1,4 @@
-<SetTitle title="Web Development - Advanced Concepts" />
+<SetTitle title="Web Development - Advanced Concepts 2021" />
 
 # Course Syllabus
 Curious students can take a look at the course syllabus, which kind of is the interface for the course. The implementation of the course is described in the [Study Guide](study-guide/).

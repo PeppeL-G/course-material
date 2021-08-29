@@ -1,7 +1,7 @@
 ---
 sidebar: auto
 ---
-<SetTitle title="Introduction to Script Programming" />
+<SetTitle title="Introduction to Script Programming 2020" />
 
 # Exam 2021-08-17
 Here you find sample answers and grading guidelines to the questions on the exam 2021-08-17.

@@ -1,4 +1,4 @@
-<SetTitle title="Introduction to Script Programming" />
+<SetTitle title="Introduction to Script Programming 2020" />
 
 # Written Examination
 On this page you find information about the examination test `Examination`.

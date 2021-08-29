@@ -1,4 +1,4 @@
-<SetTitle title="Introduction to Script Programming" />
+<SetTitle title="Introduction to Script Programming 2020" />
 
 # Laboratory Work
 On this page you find information about the examination test `Laboratory work`.

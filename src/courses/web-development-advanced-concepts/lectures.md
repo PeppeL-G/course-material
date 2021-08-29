@@ -1,4 +1,4 @@
-<SetTitle title="Web Development - Advanced Concepts" />
+<SetTitle title="Web Development - Advanced Concepts 2021" />
 
 # Lectures
 The instructions on the [Laboratory Work](laboratory-work/) page and the [Project Work](project-work/) page indicate when you're expected to view each lecture, but here's a list of all of them.

@@ -1,4 +1,4 @@
-<SetTitle title="Web Development - Advanced Concepts" />
+<SetTitle title="Web Development - Advanced Concepts 2021" />
 
 # Time Plan
 The <span style="background-color: aqua; display: inline-block; padding: 0 8px; font-weight: bold;">Work</span> column indicates what you are expected to work on each day. `LW` = `Laboratory Work`, `PW` = `Project Work`.

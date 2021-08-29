@@ -1,4 +1,4 @@
-<SetTitle title="Client-Server Communication" />
+<SetTitle title="Client-Server Communication 2019" />
 
 # Lectures
 The Lab Instructions and Project Instructions indicate when you're expected to view each lecture, but here's a list of all of them.

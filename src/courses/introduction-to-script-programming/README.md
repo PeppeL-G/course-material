@@ -1,4 +1,4 @@
-<SetTitle title="Introduction to Script Programming" />
+<SetTitle title="Introduction to Script Programming 2020" />
 
 # Welcome!
 Welcome to the course *Introduction to Script Programming*! In this course you'll learn how to create small programs in Python your computer can execute.

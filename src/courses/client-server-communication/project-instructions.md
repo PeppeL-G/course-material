@@ -1,4 +1,4 @@
-<SetTitle title="Client-Server Communication" />
+<SetTitle title="Client-Server Communication 2019" />
 
 # Project Instructions
 As project you should work in pairs and create a platform (a solution consisting of both a backend application handling the data on the platform and a frontend application containing the graphical user interface through which users will use the platform). The backend should expose a REST API which the frontend can use to work with the data on the platform. The platform should be implemented with the technologies taught in the course, i.e. Node.js/Express for the backend and Vue.js for the frontend.

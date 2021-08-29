@@ -1,4 +1,4 @@
-<SetTitle title="Introduction to Script Programming" />
+<SetTitle title="Introduction to Script Programming 2020" />
 
 # Course Syllabus
 Curious students can take a look at the course syllabus, which kind of is the interface for the course. The implementation of the course is described in the [Study Guide](study-guide/).
