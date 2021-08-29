@@ -135,7 +135,7 @@ export default {
 }
 </script>
 
-<style scoped lang="stylus">
+<style scoped>
 
 canvas{
 	max-width: 100%;

@@ -1,8 +1,18 @@
+<SetTitle title="Web Development Fundamentals" />
+
 # Exercises
-There is no laboratory work in this course, but here are some optional exercises you can try to complete before you start implementing the website in your project work. Completing the exercises will give you a gentler start compared to starting to work on the project directly.
+There is no laboratory work in this course, but here are some optional exercises you can try to complete before you start implementing the website in your project work. Completing the exercises will give you a gentler start compared to starting to work on the project directly, so you are strongly recommended to complete them  .
 
 ## Exercise 1: HTML
-The goal with this exercise is to teach you the basics in HTML.
+The goal with this exercise is to teach you the basics in HTML. Before you start working on it, you are recommended to:
+
+* View the following videos:
+    * [Internet Basics](../../lectures/internet-basics/)
+    * [HTTP and Web Applications](../../lectures/http-and-web-applications/)
+    * [Character Encodings](../../lectures/character-encodings/)
+    * [HTML](../../lectures/html/)
+
+---
 
 ### Introduction to HTML
 HTML is a markup language. It is used to mark what type of data different text represents. For example, to mark that some text is a paragraph, one would write `<p>some text</p>`, and to mark that it instead is a header, one would write `<h1>some text</h1>` (for subchapters, one would use `<h2>`, `<h3>`, `<h4>`, `<h5>` or `<h6>` instead of `<h1>`, depending on the chapter level).
@@ -41,7 +51,7 @@ According to [gs.statcounter.com](https://gs.statcounter.com/), Google Chrome is
 | Samsung Internet | 3.77% |
 | Others | Remaining % |
 
-[Chapter 4 in the HTML specification](https://html.spec.whatwg.org/#semantics) defines the tags HTML consists of. There you can learn which different tags you can use, and what they are used for. If you find specifications hard to read, you can use one of the many websites teaching HTML, e.g. [W3Schools](https://www.w3schools.com/).
+[Chapter 4 in the HTML specification](https://html.spec.whatwg.org/#toc-semantics) defines the tags HTML consists of. There you can learn which different tags you can use, and what they are used for. If you find specifications hard to read, you can use one of the many websites teaching HTML, e.g. [W3Schools](https://www.w3schools.com/).
 
 ### The Task
 An HTML file can be thought of as a word document, but instead of having a fancy <abbr title="What You See Is What You Get">WYSIWYG</abbr> interface to edit it, you only see the document as raw text (HTML code) in your text editor. If you want to see what it looks like rendered on the screen, you need to open it in a web browser.
@@ -51,7 +61,10 @@ Your task is to create an HTML file containing a copy of the content in this cha
 Good luck! 😊
 
 ## Exercise 2: CSS
-The goal with this exercises is to teach you the basics in CSS.
+The goal with this exercises is to teach you the basics in CSS. Before you start working on it, you are recommended to:
+
+* View the following videos:
+    * [CSS](../../lectures/css/)
 
 ### Introduction to CSS
 A web browser's primary purpose is to render the webpages we visit ("to render" does in this context mean to visualize on the screen). These days, almost all modern web browsers render the different HTML tags the same way, but back in the old days (in the beginning of [the browser wars](https://en.wikipedia.org/wiki/Browser_wars)), a common problem for web developers was that their websites looked good in one web browser, but completely wrong in another one.
@@ -90,7 +103,13 @@ Your task is to create an HTML file containing a copy of the content in this cha
 <span style="font-weight: bold; font-size: 75%; color: blue; font-style: italic; text-decoration: line-through; background-color: lime;">Good luck!</span> 😊
 
 ## Exercise 3: JS
-The goal with this exercise is to teach you the basics in JavaScript.
+The goal with this exercise is to teach you the basics in JavaScript. Before you start working on it, you are recommended to:
+
+* View the following videos:
+    * [Using Shells](../../lectures/using-shells/)
+    * [JavaScript Basics](../../lectures/javascript-basics/)
+    * [Asynchronous Programming in JavaScript](../../lectures/asynchronous-programming-in-js/)
+    * [Node.js](../../lectures/node-js/)
 
 ### Getting started with JavaScript
 To run JavaScript code, you need to have a JavaScript engine that can execute the code for you. The runtime environment Node.js comes with a JavaScript engine you can use to do that. Node.js also contains an environment (modules) you can use to access OS protected resources (network functionality, filesystem, etc..
@@ -112,6 +131,10 @@ Implement the function `sum()`, which should receive an integer as argument, and
 
 ::: tip Showing output
 To print values to the shell, you can use `console.log("This will be printed to the console.")`.
+:::
+
+::: danger Return, don't print!
+As always, functions computing something should **return** the value they compute, and don't print it directly. Let the caller print the return value instead. 
 :::
 
 ### Problem 2: `sumOfNumbers()`

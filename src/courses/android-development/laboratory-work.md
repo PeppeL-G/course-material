@@ -1,3 +1,5 @@
+<SetTitle title="Android Development" />
+
 # Laboratory Work
 On this page you find information about the examination test `Laboratory Work`.
 

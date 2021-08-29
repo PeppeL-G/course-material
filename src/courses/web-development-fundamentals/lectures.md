@@ -1,3 +1,5 @@
+<SetTitle title="Web Development Fundamentals" />
+
 # Lectures
 The instructions on the [Project Work](./project-work/) page indicate when you're expected to view each lecture, but here's a list of all of them.
 
@@ -10,6 +12,7 @@ The instructions on the [Project Work](./project-work/) page indicate when you'r
 * [CSS](../../lectures/css/)
 * [HTML & CSS Frameworks](../../lectures/html-and-css-frameworks/)
 * [JavaScript Basics](../../lectures/javascript-basics/)
+* [Asynchronous Programming in JavaScript](../../lectures/asynchronous-programming-in-js/)
 * [Node.js](../../lectures/node-js/)
 * [Web Applications in Node.js](../../lectures/web-applications-in-node-js/)
 * [npm](../../lectures/npm/)
@@ -18,7 +21,6 @@ The instructions on the [Project Work](./project-work/) page indicate when you'r
 * [Web Applications in Express](../../lectures/web-applications-in-express/)
 * [SQLite](../../lectures/sqlite/)
 * [Using SQLite in Node.js](../../lectures/using-sqlite-in-node-js/)
-* [GDPR](../../lectures/gdpr/)
 * [Cookies and Sessions](../../lectures/cookies-and-sessions/)
 * [Using cookies and Sessions in Express](../../lectures/using-cookies-and-sessions-in-express/)
 * [Designing Account Systems](../../lectures/designing-account-systems/)

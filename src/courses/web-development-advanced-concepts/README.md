@@ -1,3 +1,5 @@
+<SetTitle title="Web Development - Advanced Concepts" />
+
 # Welcome!
 Welcome to the course *Web Development - Advanced Concepts*! This is a follow up course to [Web Development Fundamentals](../web-development-fundamentals/), so you are expected to already know how to create web applications storing resources in a database and the things you learned in that course. In this course you will learn how to create web applications as well, but they will be bigger and better by using things like a three-layered architecture, dependency injection, client-side JavaScript and Docker.
 
@@ -11,6 +13,7 @@ This website will be used to host the course material only. If you take this cou
 If you're an old student that took this course a previous year but still have some examination tests left to pass you take those tests as they are described this year. The old Ping Pong event won't be used any more, so join this year's Canvas page, so we can keep track of your progress in the course this year there. If you aren't registered for the course this year, ask the course coordinator to invite you to the Canvas page by sending him an email message based on the template in <FigureNumber /> below with the topic `Invitation to Canvas Course` to `peter.larsson-green@ju.se`.
 
 <Figure caption="Template for email message to be invited to a Canvas Course. Replace XXX with your own value.">
+
 ```
 Hi!
 
@@ -24,5 +27,7 @@ Web Development - Advanced Concepts
 
 Thanks!
 ```
+
 </Figure>
+
 :::

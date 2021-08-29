@@ -10,15 +10,15 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr v-for="ilo in ilos">
+				<tr v-for="ilo in ilos" :key="ilo.text">
 					<td>{{ilo.text}}</td>
 					<td>
-						<div v-for="test in ilo.tests">
+						<div v-for="test in ilo.tests" :key="test">
 							{{test}}
 						</div>
 					</td>
 					<td>
-						<div v-for="activity in ilo.activities">
+						<div v-for="activity in ilo.activities" :key="activity">
 							{{activity}}
 						</div>
 					</td>
@@ -35,12 +35,12 @@
 			description: String,
 		},
 		created(){
-			this.ilos = this.description.trim().split(/\n\s*\n/).map(iloString => {
-				const stringParts = iloString.split("\n")
+			this.ilos = this.description.trim().split('---').map(iloString => {
+				const stringParts = iloString.trim().split("\n")
 				return {
 					text: stringParts[0],
-					tests: stringParts.filter(s => s.startsWith("-")).map(s => s.substr(1)),
-					activities: stringParts.filter(s => s.startsWith("+")).map(s => s.substr(1)),
+					tests: stringParts.filter(s => s.startsWith("-")).map(s => s.substr(1).trim()),
+					activities: stringParts.filter(s => s.startsWith("+")).map(s => s.substr(1).trim()),
 				}
 			})
 		}
@@ -48,12 +48,14 @@
 	
 </script>
 
-<style scoped lang="stylus">
+<style scoped>
 	
-	table
-		font-size 90%
+	table{
+		font-size: 90%;
+	}
 	
-	table div
-		white-space nowrap
+	table div{
+		white-space: nowrap;
+	}
 	
 </style>

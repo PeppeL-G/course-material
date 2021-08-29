@@ -1,3 +1,5 @@
+<SetTitle title="Web Development Fundamentals" />
+
 # Written Examination
 On this page you find information about the examination test `Written Examination`.
 
@@ -6,10 +8,6 @@ The `Written Examination` test is worth 2 credits. You will primarily prepare fo
 
 ## Digital Exam
 The `Written Examination` test is an Inspera exam; a digital exam you write on a school computer. More information about Inspera exams can be found on [the JU page *Digital Exam*](https://ju.se/student/en/digital-exam.html).
-
-::: tip The exam is given at school
-Although we have the corona situation, the exam in this course will be given at school as usual.
-:::
 
 ## Dates/Re-examinations
 The `Written Examination` test is offered in:
@@ -34,7 +32,8 @@ You need to register for each written examination you want to attend; if you wan
 ## Permitted aids
 The only permitted aids at the `Written Examination` test are:
 
-* A dictionary to transle to/from English from/to your native language.
+* A dictionary to translate to/from English from/to your native language.
+* Pen and paper to sketch on (does not need to be handed in).
 
 ::: danger About the computer
 The computer you write the exam on may only be used to enter your answers on the exam. You may not use it to run other applications or search the web.
@@ -50,15 +49,7 @@ The exam consists of questions worth 30 points in total.
 The exam will be in English, but you may write your answers in either English or Swedish. If you write answers in Swedish, make sure to not introduce any translation confusement. Write proper sentences (spelling, upper/lower case characters, punctuation, etc.). Answers that do not do this good enough/are vague/are partly incomprehensible cannot receive full score on the questions.
 
 ## Sample exam
-You can look at [the exam from 2019-01-11](static-files/exam-2019-01-11.pdf) to get some idea about what the questions on your exam will be.
-
-::: warning Note!
-The exam from 2019-01-11 was a Ping Pong exam, your exam will be an Inspera exam. You will get similar type of questions, but it will look a bit different.
-:::
-
+You can look at [the exam from 2021-08-16](./exams/exam-2021-08-16/) to get some idea about what the questions on your exam will be.
+ 
 ## Sample answers
-Sample answers and some grading guidelines are available for the following exams:
-
-* [Exam 2020-10-15](./exam-2020-10-15-sample-answers/)
-* [Exam 2021-01-16](./exam-2021-01-16-sample-answers/)
-* [Exam 2021-08-16](./exam-2021-08-16-sample-answers/)
+After your exams, sample answers and grading guidelines will be published here.

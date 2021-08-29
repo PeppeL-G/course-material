@@ -1,3 +1,5 @@
+<SetTitle title="Web Development - Advanced Concepts" />
+
 # Written Examination
 On this page you find information about the examination test `Written Examination`.
 

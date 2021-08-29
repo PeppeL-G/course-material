@@ -1,6 +1,7 @@
 ---
 sidebar: auto
 ---
+<SetTitle title="Introduction to Script Programming" />
 
 # Exam 2020-12-13
 Here you find sample answers and grading guidelines to the questions on the exam 2020-12-13.

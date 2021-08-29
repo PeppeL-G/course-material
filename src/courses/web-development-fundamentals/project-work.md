@@ -1,3 +1,5 @@
+<SetTitle title="Web Development Fundamentals" />
+
 # Project Work
 This page contains instructions for the project work.
 
@@ -22,14 +24,14 @@ Use whichever type of resources you want. Some suggestions are:
 * Guestbook posts (only you can update/delete entries, anyone can retrieve/create entries).
 * FAQ entries (only you can update/delete entries, anyone can retrieve/create entries).
 
-Implement the website using technologies taught in this course. It is OK to use similar technologies and not the specific ones taught in the course. For example, instead of using the web framework *Express*, you can use the web framework *Koa*. It's probably a good idea to email the course coordinator and ask if the technologies you want to use is OK or not if you don't stick to using the ones taught in the course.
+Implement the website using technologies taught in this course. It is OK to use similar technologies and not the specific ones taught in the course. For example, instead of using the web framework *Express* (taught in this course), you can use the web framework [Koa](https://koajs.com/). It's probably a good idea to email the course coordinator and ask if the technologies you want to use is OK or not if you don't stick to using the ones taught in the course.
 
 ::: danger Don't use client-side JavaScript!
 Avoid using client-side JavaScript. If you insist on using client-side JavaScript, it is OK, but:
 
-* Good client-side JavaScript code will not improve your grade.
-* Bad client-side JavaScript code will lower your grade.
-* Your entire website must still work for users who have JavaScript disabled in their web browser (use client-side JavaScript only to enhance the browsing experience for the users who have JavaScript enabled in their web browsers).
+* Good client-side JavaScript code will not improve your grade (this course is not about learning client-side JavaScript).
+* Bad client-side JavaScript code will lower your grade (this course is about implementing good websites).
+* Your __entire__ website must work for users who have JavaScript disabled in their web browser (use client-side JavaScript only to enhance the browsing experience for the users who have JavaScript enabled in their web browsers).
 :::
 
 In addition to implementing the website, you should also write a report describing the implementation of the website. The file [project-report-template.docx](static-files/project-report-template.docx) contains a template with further instructions on this. Your report will be a living document throughout the course (meaning that you will write it as the course run and continuously improve it). 
@@ -50,16 +52,16 @@ Good luck!
 The required software is:
 
 * [Node.js](https://nodejs.org/)
-    1. Use the Current version.
+    1. Use the <abbr title="Long-Term Support">LTS</abbr> version.
     2. In the installation process, make sure the following features are installed (they are checked by default, so simply don't uncheck them!):
         * Node.js runtime
         * npm package manager
         * Add to PATH
-    3. To verify that Node.js has been successfully installed, run the command `node -v` in a shell (you might need to restart your computer first). If it has been installed successfully, you should see the version of Node.js that was installed, something like `v11.6.0`.
+    3. To verify that Node.js has been successfully installed, run the command `node -v` in a shell (e.g. Windows PowerShell on Windows (you might need to restart your computer first)). If it has been installed successfully, you should see the version of Node.js that was installed, something like `v11.6.0`.
 * [npm](https://www.npmjs.com/)
-    * This one is installed along with Node.js, so you don't need to install it separately. However, you might want to update it to the latest version (not required):
+    * This one is installed along with Node.js, so you don't need to install it separately. However, you might want to update it to the latest version (not required in this course):
         * [Update npm instructions](https://docs.npmjs.com/troubleshooting/try-the-latest-stable-version-of-npm)
-    * To verify that npm has been successfully installed, run the command `npm -v` in a shell (you might need to restart your computer first). If it has been installed successfully, you should see the version of npm that was installed, something like `6.9.0`.
+    * To verify that npm has been successfully installed, run the command `npm -v` in a shell (you might need to restart your computer first). If it has been installed successfully, you should see the version of npm that is installed, something like `6.9.0`.
 
 The following software tools are not required (use whichever tools you want), but recommended:
 
@@ -74,8 +76,6 @@ Before you start working on this part, you are recommended to:
 * View the following videos:
     * [Internet Basics](../../lectures/internet-basics/)
     * [HTTP and Web Applications](../../lectures/http-and-web-applications/)
-    * [Character Encodings](../../lectures/character-encodings/)
-    * [Using Shells](../../lectures/using-shells/)
     * [Report Writing](../../lectures/report-writing/)
 * Take [the mini-course in Git](../git/).
     * You don't have to use Git in this course, but you are strongly recommended to make it a habit to use it for all your programming related tasks (you will use it a lot as a professional programmer, and you will have very good use of it in other courses, so the sooner you learn it, the better).
@@ -105,28 +105,98 @@ We recommend you to use a simple layout. This is no design course, so do not was
 
 Feel free to show your report to one of the teachers at the lab sessions to get some feedback on your work. Don't expect the teacher to read your report, only to look at the figures in the report, but that should be enough to give you valuable feedback.
  
-## Part 2: Implementing the graphical user interface
+## Part 2: Prototyping the graphical user interface
 Before you start working on this part, you are recommended to:
 
+* Complete the following optional exercises:
+    * [Exercise 1: HTML](exercises/#exercise-1-html)
+    * [Exercise 2: CSS](exercises/#exercise-2-css)
 * View the following videos:
+    * [Character Encodings](../../lectures/character-encodings/)
     * [HTML](../../lectures/html/)
     * [CSS](../../lectures/css/)
     * [HTML & CSS Frameworks](../../lectures/html-and-css-frameworks/)
+
+---
+
+Instead of having *implement the web application* as the goal you immediately try to achieve, we recommend you to break it down into multiple smaller goals, and then try to achieve all these sub-goals, one at a time, and when all these sub-goals have been achieved, your main goal (*implement the web application*) has been achieved too ([Divide and Conquer](https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm)!).
+
+We recommend that your first sub-goal is to implement the graphical user interface in static HTML and CSS files, i.e. a prototype. The prototype will be a static website that will look like your final website, but submitting forms won't work; only viewing resources by clicking on links will work.
+
+::: tip Prototype means shortcuts 😃
+Implementing a prototype means it's OK to take various shortcuts. For example, if you have a blog on your website and you in the end want to have one page that displays all blog posts, and clicking on one of them takes you to a new page that displays all info about the blog post that was clicked, as shown in <figureNumber /> below.
+
+<Figure caption="Fully functional website.">
+<mermaid>
+{{`
+flowchart LR
+	subgraph blogposts["Page /blogposts"]
+		link1["Blogpost 1"]
+		link2["Blogpost 2"]
+		link3["Blogpost 3"]
+	end
+	subgraph blogpost1["Page /blogposts/1"]
+		content1["Vacation..."]
+	end
+	subgraph blogpost2["Page /blogposts/2"]
+		content2["Christmas..."]
+	end
+	subgraph blogpost3["Page /blogposts/3"]
+		content3["Birthday..."]
+	end
+	link1 -- Click --> blogpost1
+	link2 -- Click --> blogpost2
+	link3 -- Click --> blogpost3
+`}}
+</mermaid>
+</Figure>
+
+Then in the prototype, you can hardcode three resources, and no matter which one that is clicked, the user comes to a page showing all info about the second resource, as shown in <FigureNumber /> below.
+
+<Figure caption="Prototype of website.">
+<mermaid>
+{{`
+flowchart LR
+	subgraph blogposts["Page blogposts.html"]
+		link1["Blogpost 1"]
+		link2["Blogpost 2"]
+		link3["Blogpost 3"]
+	end
+	subgraph blogpost2["Page blogpost.html"]
+		content2["Christmas..."]
+	end
+	link1 -- Click --> blogpost2
+	link2 -- Click --> blogpost2
+	link3 -- Click --> blogpost2
+`}}
+</mermaid>
+</Figure>
+
+And in the end you might want some links only to be shown when the user is logged in, but for the prototype it's OK to always display all links.
+
+:::
+
+When you are done with your prototype, feel free to show it to one of the teachers at the lab sessions to get some feedback on your work. 
+
+## Part 3: Starting to implement the web application
+Before you start working on this part, you are recommended to:
+
+* Complete the following optional exercises:
+    * [Exercise 3: JS](exercises/#exercise-3-js)
+* View the following videos:
+    * [Using Shells](../../lectures/using-shells/)
     * [JavaScript Basics](../../lectures/javascript-basics/)
+    * [Asynchronous Programming in JavaScript](../../lectures/asynchronous-programming-in-js/)
     * [Node.js](../../lectures/node-js/)
     * [Web Applications in Node.js](../../lectures/web-applications-in-node-js/)
     * [npm](../../lectures/npm/)
     * [Express Basics](../../lectures/express-basics/)
     * [Handlebars](../../lectures/handlebars/)
     * [Web Applications in Express](../../lectures/web-applications-in-express/)
-* Complete the following optional exercises:
-    * [Exercise 1: HTML](exercises/#exercise-1-html)
-    * [Exercise 2: CSS](exercises/#exercise-2-css)
-    * [Exercise 3: JS](exercises/#exercise-3-js)
 
 ---
 
-Implement the website in Node.js. Ideally, the website's recourses are stored in a database, but to get a gentler start, you can instead store the resources in a file (i.e. use "dummy data") for now. 
+The next sub-goal we recommend you to have is to implement the graphical user interface of the website in Node.js. Ideally, the website's recourses are stored in a database, but to get a gentler start, you can instead store the resources in a file (i.e. use "dummy data") for now. 
 To start, run the following commands in a shell/console/terminal (such as Windows PowerShell in Windows):
 
 1. `mkdir my-website` - Creates a new folder named `my-website` (do not call the folder `my-website`; use a proper name).
@@ -135,15 +205,19 @@ To start, run the following commands in a shell/console/terminal (such as Window
 4. `npm install express` - Installs the npm package `express`.
 5. `npm install express-handlebars` - Installs the npm package `express-handlebars`.
 
+::: tip Tips
+When you version control a project, do not store the source code for the dependencies in your own repository. For Node.js applications, the `node_modules` folder should not be committed to your repository; it's enough to commit `package.json` and `package-lock.json` to your repository. These files contain a list of all your dependencies (and the specific versions of them), and others that clones your project can run the command `npm install` to install these dependencies in their own `node_modules` folder.
+:::
+
 ::: warning Note
-The instructions in this document is for the template syntax language Handlebars. If you prefer, feel free to use another template syntax language. You find a list of template engines you can use at [https://github.com/expressjs/express/wiki](https://github.com/expressjs/express/wiki#template-engines).
+The instructions in this document is for the template syntax language Handlebars. If you prefer, feel free to use another template syntax language. You find a list of template engines you can use at [https://github.com/expressjs/express/wiki](https://expressjs.com/en/resources/template-engines.html).
 :::
 
 Then create the following files with their corresponding content:
 
-<Tabs remember-selected-key="express-example-45543435">
-<Tab title="dummy-data.js">
+:::: code-group
 
+::: code-group-item dummy-data.js
 ```javascript
 exports.humans = [{
   id: 0,
@@ -159,10 +233,10 @@ exports.pets = [{
   name: "Catty"
 }]
 ```
+:::
 
-</Tab>
-<Tab title="app.js">
 
+::: code-group-item app.js
 ```javascript
 const dummyData = require('./dummy-data')
 const express = require('express')
@@ -183,10 +257,10 @@ app.get('/', function(request, response){
 
 app.listen(8080)
 ```
+:::
 
-</Tab>
-<Tab title="views/show-all-humans.hbs">
 
+::: code-group-item views/show-all-humans.hbs
 ```handlebars
 <h2>All Humans</h2>
 {{#if humans.length}}
@@ -199,10 +273,10 @@ app.listen(8080)
   <p>No humans exist.</p>
 {{/if}}
 ```
+:::
 
-</Tab>
-<Tab title="views/layouts/main.hbs">
 
+::: code-group-item views/layouts/main.hbs
 ```handlebars
 <!DOCTYPE html>
 <html>
@@ -216,8 +290,10 @@ app.listen(8080)
   </body>
 </html>
 ```
-</Tab>
-</Tabs>
+:::
+
+::::
+
 
 Then run the following command:
 
@@ -230,7 +306,7 @@ Continue by changing and adding code so it instead looks like your own personal 
 1. Add references to your CSS framework in the layout file.
     * For many CSS frameworks, you can just add a `<link>` element to the CSS file containing the framework's code on a Content Delivery Network (CDN).
     * Many CSS frameworks are distributed as npm packages. For these, you can download the source code for the framework using the `npm install ***` command, and then add a `<link>` element to the CSS file in the `node_modules` folder.
-2. Implement most of the layout of your website by changing the code in the layout file.
+2. Implement most of the layout of your website by changing the code in `views/layouts/main.hbs`.
 3. Create new views (new `.hbs` files in the `views` folder) representing your basic pages (about page, contact page, etc.). Then change your JavaScript code so web browsers can request these pages.
 
 ::: warning Remember!
@@ -244,13 +320,11 @@ Each time you change your JavaScript code, you need to restart the application f
 You will use forms in your views (for create, update and delete operations), but handling the submission of these forms will be dealt with later. Implementing the login functionality is also something you will do later. For now, just having these forms is enough; nothing should happen when they are submitted.
 :::
 
-When you are done, it should be possible for a user to visit all the different pages on your website (including the pages only you should be able to access in the end). Update your report with a description of your implementation so far.
+When you are done, it should be possible for a user to visit all the pages on your website, including the ones only the logged in user should be able to access (will be fixed later). Update your report with a description of your implementation so far.
 
-::: tip Tips
-When you version control a project, do not store the source code for the dependencies in your own repository. For Node.js applications, the `node_modules` folder should not be commited to your repository; it's enough to commit `package.json` to your repository. That file contains a list of all your dependencies, and others that clones your project need to run the command `npm install` to install all these dependencies in their own `node_modules` folder.
-:::
+Feel free to show your work so far to a teacher at a lab session to get some feedback on it.
 
-## Part 3: Using a relational database
+## Part 4: Using a relational database
 Before you start working on this part, you are recommended to:
 
 * View the following videos:
@@ -263,25 +337,27 @@ Storing data in variables works, but it is usually a bad solution for several re
 
 * When the web application stops running, the data will be lost.
 * Computers' main memory (where variables are stored) is quite limited, so storing a big amount of data here is not appropriate.
-* It makes it hard to scale the web application (having it running on multiple servers at the same time), which is needed when your website becomes really popular and have a lot of visitors.
+* It makes it hard to scale the web application (having it running on multiple servers at the same time), which is needed when your website becomes really popular and have a lot of visitors (will happen sooner or later, right? 😉).
 
 Most web applications instead store data in a relational database, such as MySQL. Relational databases store the data in secondary storage (i.e. the hard drive), where it will persist even after the computer is shut down. Usually, the database runs on a server separate from the server the web application runs on, as shown in <FigureNumber/> below. 
 
 <Figure caption="Common web application architecture.">
-  <mermaid>
-  graph LR
-    subgraph "Client"
-      webBrowser[Web Browser]
-    end
-    subgraph "Web Server"
-      webApplication[Web Application]
-    end
-    subgraph "Database Server"
-      db[Database]
-    end
-    webBrowser -- HTTP --> webApplication
-    webApplication -- SQL --> db
-  </mermaid>
+<mermaid>
+{{`
+graph LR
+	subgraph "Client"
+		webBrowser[Web Browser]
+	end
+	subgraph "Web Server"
+		webApplication[Web Application]
+	end
+	subgraph "Database Server"
+		db[Database]
+	end
+	webBrowser -- HTTP --> webApplication
+	webApplication -- SQL --> db
+`}}
+</mermaid>
 </Figure>
 
 Having the database running on a separate server from the web application (instead of on the same server) has a couple of advantages:
@@ -292,44 +368,46 @@ Having the database running on a separate server from the web application (inste
 However, setting up a database on a separate server is not straightforward and takes time, so in this course we will instead run the database on the same server as the web application, as shown in <FigureNumber/> below.
 
 <Figure caption="Web application architecture with only one server.">
-  <mermaid>
-  graph LR
-    subgraph Client
-      webBrowser[Web Browser]
-    end
-    subgraph Server
-      webApplication[Web Application]
-      db[Database]
-    end
-    webBrowser -- HTTP --> webApplication
-    webApplication -- SQL --> db
-  </mermaid>
+<mermaid>
+{{`
+graph LR
+	subgraph Client
+		webBrowser[Web Browser]
+	end
+	subgraph Server
+		webApplication[Web Application]
+		db[Database]
+	end
+	webBrowser -- HTTP --> webApplication
+	webApplication -- SQL --> db
+`}}
+</mermaid>
 </Figure>
 
 Furthermore, we will use SQLite as our database, and it will not run as a separate process, but part of the process executing our web application. This makes it very easy to use, but will be a bottleneck for scaling (but remember, [premature optimization is the root of all evil](https://stackify.com/premature-optimization-evil/)). 
 
 Start by installing an npm package through which you can use SQLite (you don't need to install SQLite separately, just installing the npm package will be enough). You can use the package `sqlite3` for this.
-Then delete `dummy-data.js`, and create, store and retrieve your data from an SQLite database instead (putting this code in a file called `database.js` (or similar) makes sense). Make sure your tables use proper primary keys, foreign key constraints, unique constraints, etc.
+Then delete `dummy-data.js`, and create, store and retrieve your data from an SQLite database instead (putting this code in a file called `database.js` (or similar) makes sense). **Make sure your tables use proper primary keys, foreign key constraints, unique constraints, etc.**
 
 ::: warning Note!
 Do not send `CREATE TABLE xxx (...)` queries to the database, because the second time your web application starts, the tables will already exist, and you will get an error. Use `CREATE TABLE IF NOT EXISTS xxx (...)` instead. And if you screw up, you can always start over by deleting the database file.
 :::
 
-You can use *DB Browser for SQLite* to view your database and manually insert some records.
+You can use *DB Browser for SQLite* to view your database and manually insert some resources.
 
 ::: tip Tips
-The database is not part of the source code for a web application and should therefor not be commited to a version control repository. When someone else clones your project and start your web application, the database should automatically be created if it does not exist.
+The database is not part of the source code for a web application and should therefor not be committed to a version control repository. When someone else clones your project and start your web application, the database should automatically be created if it does not exist.
 :::
 
-When you are done, your web application should work precisely the same way as when you had completed Part 2 but the resources should now be stored in the database instead of variables. Then update your report with a description of your implementation so far, and if you want feedback on your report, show your figures in the report to a teacher at one of the lab sessions.
+When you are done, your web application should work precisely the same way as when you had completed Part 3 but the resources should now be stored in the database instead of variables. Then update your report with a description of your implementation so far, and if you want feedback on your report and your code, show them to a teacher at one of the lab sessions.
  
-## Part 4: Handling forms
+## Part 5: Handling forms
 When a user submits an HTML form (`<form>`), the web browser will send a new HTTP request to the server. If the GET method is used (`<form method="get">`), the data entered in the form will be added to the query string in the URI (the part after the `?` in the URI). In an express callback function receiving the request, that data can be accessed using the `query` property, i.e. `request.query`. This will be an object whose keys corresponds to the value given to the `name` attribute in the `<input>` fields in the form and the values will be the text the user entered in those `<input>` fields. It works similar for the other input elements you can use in forms (dropdown lists, checkboxes, radio buttons, etc.).
 
-::: tip Example
+::::: tip Example
 
-<Tabs remember-selected-key="express-form-get-example">
-<Tab title="views/search.hbs">
+:::: code-group
+::: code-group-item views/search.hbs
 
 ```html
 <form method="get" action="/search">
@@ -338,8 +416,8 @@ When a user submits an HTML form (`<form>`), the web browser will send a new HTT
 </form>
 ```
 
-</Tab>
-<Tab title="app.js">
+:::
+::: code-group-item app.js
 
 ```js
 const express = require('express')
@@ -355,17 +433,16 @@ app.get('/search', function(request, response){
 app.listen(8080)
 ```
 
-</Tab>
-</Tabs>
-
 :::
+::::
+:::::
 
-If the POST method is used to submit the form (`<form method="post">`), the data in the form will be inserted added to the body of the request, expressed in the data format `application/x-www-form-urlencoded` (the header `Content-Type: application/x-www-form-urlencoded` is added to the HTTP request). Express does not provide a convenient way to read this data, but the npm package `body-parser` can be used to do that. Once you have installed it (`npm install body-parser`) and added it as a middleware function using its `urlencoded()` function, you can access the data entered in form using `request.body`.
+If the POST method is used to submit the form (`<form method="post">`), the data in the form will be added to the body of the request, expressed in the data format `application/x-www-form-urlencoded` (the header `Content-Type: application/x-www-form-urlencoded` is added to the HTTP request). Express does not provide a convenient way to read this data, but the npm package `body-parser` can be used to do that. Once you have installed it (`npm install body-parser`) and added it as a middleware function using its `urlencoded()` function, you can access the data entered in the form using `request.body`.
  
-::: tip Example
+::::: tip Example
 
-<Tabs remember-selected-key="express-form-post">
-<Tab title="views/search.hbs">
+:::: code-group
+::: code-group-item views/search.hbs
 
 ```html
 <form method="post" action="/search">
@@ -374,8 +451,8 @@ If the POST method is used to submit the form (`<form method="post">`), the data
 </form>
 ```
 
-</Tab>
-<Tab title="app.js">
+:::
+::: code-group-item app.js
 
 ```js
 const express = require('express')
@@ -396,10 +473,9 @@ app.post('/search', function(req, res){
 app.listen(8080)
 ```
 
-</Tab>
-</Tabs>
-
 :::
+::::
+:::::
 
 Change your JavaScript code to handle submissions of forms (except the login and logout forms). When you are done, any user should be able to create/edit/delete resources through the forms. Then update your report with a description of your implementation so far.
 
@@ -407,20 +483,22 @@ Change your JavaScript code to handle submissions of forms (except the login and
 When should you submit a form with the GET method, and when should you use the POST method? Remember that GET requests should only be used to retrieve resources, and they should not change anything on the server (no harm in sending the same request 10 times in a row by accident), while POST requests may change things on the server or have some other type of side effect, such as sending an email.
 :::
 
-## Part 5: Handling errors
-When a user submits a form to create/edit a resource, you need to validate the data entered in the form, and only carry out the request if the entered data is valid. For example, the user might have forgot to enter data in a form field, or maybe the user has entered some invalid data (for example entered `-43` as the number of pages for a book resource). If the data is not valid, you should display the form to the user again (with the data the user entered), together with descriptive error messages explaining what was wrong.
+Show your work to a teacher at one of the lab sessions to get some feedback on it.
+
+## Part 6: Handling errors
+When a user submits a form to create/edit a resource, you need to validate the data entered in the form, and only carry out the request if the entered data is valid. For example, the user might have forgot to enter data in a form field, or maybe the user has entered some invalid data (for example entered `-43` as the number of pages for a book resource). **If the data is not valid, you should display the form to the user again (with the data the user entered), together with descriptive error messages explaining what was wrong.**
 
 Your route parameters (such as `bookId` in `/books/:booksId`) needs to be validated too. Maybe the user visits your website and ends up at `/books/4`, bookmarks this page, and then you delete it from your database. If the user now goes to this page through her bookmark, she should not see an empty/crashed page, but a message saying that the book does not exist.
 
-It is not only data that comes from your clients that can result in errors. External systems your web application depends on (such as the database) can fail as well. For example, if the database is full, you cannot insert a new resource into it. In these cases, there is no need to show a descriptive error message like The database is full, because the user cannot fix the problem anyway. Instead, it is better to show a general error message like *Server error, we are working on fixing it*, and then log the error details, so you then can debug and fix the error.
+It is not only data that comes from your clients that can result in errors. External systems your web application depends on (such as the database) can fail as well. For example, if the database is full, you cannot insert a new resource into it. In these cases, there is no need to show a descriptive error message like *The database is full*, because the user cannot fix the problem anyway. Instead, it is better to show a general error message like *Server error, we are working on fixing it*, and then log the error details, so you then can debug and fix the error.
 
 Deal with the various errors that can happen in your web application, and then update your report with a description of your implementation so far.
 
 ::: danger Deadline
-Just a reminder that you should not forget to [submit your report for feedback on Canvas](https://ju.instructure.com/courses/2142/assignments/5752). The deadline might have already been, but if you follow the time plan now should be a good time to submit it.
+Just a reminder that you should not forget to [submit your report for feedback on Canvas](https://ju.instructure.com/courses/4558/assignments/19357). The deadline might have already been (depending on how slow/fast you work), but if you follow the time plan, now should be a good time to submit it.
 :::
 
-## Part 6: Adding authentication & authorization
+## Part 7: Adding authentication & authorization
 Before you start working on this part, you are recommended to:
 
 * View the following videos:
@@ -461,8 +539,12 @@ app.get('/the-page', function(request, response){
 app.listen(8080)
 ```
 :::
+
+::: danger Store sessions properly!
+The example above stores the sessions in main memory, and it never removes old sessions. If such a solution would run on a real server, it would run out of memory quite soon. Instead, [read the docs for `express-session`](https://github.com/expressjs/session#api) to learn how to store the sessions elsewhere.
+:::
  
-## Part 7: Improving security
+## Part 8: Improving security
 Before you start working on this part, you are recommended to:
 
 * View the following videos:
@@ -471,7 +553,9 @@ Before you start working on this part, you are recommended to:
 ---
 
 ### SQL injections
-If you have code like the one shown below, you are vulnerable to SQL injections.
+If you have code like the one shown in <FigureNumber /> below, you are vulnerable to SQL injections.
+
+<Figure caption="Example of code vulnerable to SQL injections.">
 
 ```js
 const express = require('express')
@@ -496,11 +580,15 @@ app.get('/books/:id', function(request, response){
 app.listen(8080)
 ```
 
+</Figure>
+
 Most of your users will go to URLs like `/books/53`, and the query sent to the database will be like
 `SELECT * FROM books WHERE id = 53 LIMIT 1`, as expected. But a hacker might try to visit the URL `/books/1 OR title='hello'`, and the query sent to the database will be
 `SELECT * FROM books WHERE id = 1 OR title='hello' LIMIT 1`. Although no harm has been done in this case, it shows how hackers can manipulate queries sent to the database, and potentially read (or delete, update, insert, etc.) information they should not be able to.
 
-Data received from users, no matter if it comes from the URL, the query string, cookies or the body of the request, cannot be trusted, so manually constructing SQL queries through string concatenation as done in the code above is very dangerous and must be avoided. Instead, you can use placeholders, as shown in the code below.
+Data received from users, no matter if it comes from the URL, the query string, cookies or the body of the request, cannot be trusted, so manually constructing SQL queries through string concatenation as done in the code above is very dangerous and must be avoided. Instead, you can use placeholders, as shown in the code in <FigureNumber /> below.
+
+<Figure caption="Example of code not vulnerable to SQL injections.">
 
 ```js
 // Send back a book with a specific id.
@@ -524,6 +612,8 @@ app.get('/books/:id', function(request, response){
 })
 ```
 
+</Figure>
+
 This way, the query with the placeholder is sent to the database as one unit, and the value for the placeholder is sent as another unit, so the data cannot alter the query sent to the database, and you are protected against SQL injections.
 
 Make sure all your code is protected against SQL injections.
@@ -535,6 +625,10 @@ Instead of storing passwords in plain text, one can hash passwords and store the
 
 There exist hashing algorithms specifically designed to hash passwords (they are intentionally slow). Use one of them to securely store your account's password. You can for example use the npm package `bcrypt` to accomplish this.
 
+::: warning bcrypt uses Python
+The npm package `bcrypt` might need a Python installation on your computer to work. If you can't get it to work, you can use `bcryptjs` instead, but that one is slower since it's implemented in pure JavaScript.
+:::
+
 When you are done, you should have a hard-coded hash value of your password in your source code instead of a hard-coded password in plain text.
 
 ### Cross-Site Scripting
@@ -543,7 +637,7 @@ The danger with SQL injections is that data coming from one user is injected and
 Make sure all data you receive from your users is escaped before it is sent to your users.
 
 ::: warning Note!
-Most template engines automatically escape HTML code unless you use a special syntax. If you use Handlebars as your template engine, you can read more about it under [the section HTML Escaping at handlebarsjs.com](https://handlebarsjs.com/#html-escaping).
+Most template engines automatically escape HTML code unless you use a special syntax. If you use Handlebars as your template engine, you can read more about it under [the guide at handlebarsjs.com](https://handlebarsjs.com/guide/#html-escaping).
 :::
 
 ### Cross-Site Request Forgery
@@ -563,7 +657,7 @@ HTML/HTTP does not come with built-in support to check that, but the synchronize
 
 Use the npm package `csurf` to protect your website from CSRF-attacks.
 
-## Part 8: Optional tasks
+## Part 9: Optional tasks
 Here are some optional tasks you must complete if you want to get a grade higher than 3. Remember that completing these extra tasks does not necessarily give you a higher grade, but you have to complete them to be able to get a higher grade. Also, do not forget to read the [Project Grading Guidelines](project-grading-guidelines/) every now and then.
 
 ### Search (required for grade 4)
@@ -583,7 +677,7 @@ Note that files should not be stored in a database (but on the file system), and
 
 You have a lot of freedom when it comes to this task, but too simple solutions will not be accepted (error handling needed). 
 
-## Part 9: Deploying
+## Part 10: Deploying
 Before you start working on this part, you are recommended to:
 
 * View the following videos:
@@ -593,7 +687,7 @@ Before you start working on this part, you are recommended to:
 
 Deploy your web application on a server. Use whichever you want, but it should be publicly accessible for other computers on the Internet. 
  
-## Part 10: Demonstration
+## Part 11: Demonstration
 Demonstrate how your application works to "the rest of your class". The reason for the demonstration is two-folded:
 
 * You get some practice in presenting your work, which is a very important skill in your future professional career.
@@ -610,16 +704,9 @@ You may use at most 10 minutes for your demonstration. If you need more than thi
 
 At the demonstration we will have a laptop connected to the projector in the room you can use to show your website. For this to work, your website must have been deployed to a server on the Internet (Part 9 of the project work needs to have been completed). If you have not completed Part 9 yet, you can bring and use your own laptop and run your website locally on your own laptop.
 
-Join one of the [Project Work Presentation Groups](https://ju.instructure.com/courses/2142/groups#tab-1946) on Canvas to decide when you want to present. At most 6 students in each group, first come, first served.
+Join one of the [Project Work Demonstration Groups](https://ju.instructure.com/courses/4558/groups) on Canvas to decide when you want to demonstrate. At most 6 students in each group, first come, first served.
 
-Your presentation will not be graded; consider it as (mandatory) practice (you must do it to pass the project work).
+Your demonstration will not be graded; consider it as (mandatory) practice (you must do it to pass the project work).
 
-## Part 11: Submitting your work
-Submit your project work on Canvas for grading. Your report should be uploaded as a PDF file. Your source code should be uploaded as a ZIP file. When that ZIP file has been unzipped on the examiner's own computer, it is very important that the website can be started by running the following commands:
-
-1. `npm install`
-2. `node app.js` (or whichever tha name of your main file is)
-
-If this does not work you need to submit your work again at the next examination occasion, so double check that this work yourself before you submit your work!
-
-You should also write the IP address of your Amazon Lightsail server your web application is running on as a comment on the upload. After the deadline the examiner will visit it once to see that you have deployed it, and then notify that you can take it down (only the first month is free).
+## Part 12: Submitting your work
+Submit your work for grading by uploading it to the assignment [Project Work Final Submission](https://ju.instructure.com/courses/4558/assignments/19360) on Canvas. **Be sure to follow the submission instructions there to 100%!**

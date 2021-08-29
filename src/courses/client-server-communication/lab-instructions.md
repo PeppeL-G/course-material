@@ -1,3 +1,5 @@
+<SetTitle title="Client-Server Communication" />
+
 # Lab Instructions
 This page contains instructions for the examination test *Laboratory Work*. It consists of two parts, and both of them need to be completed and presented orally to a teacher at a lab session before you pass the examination test.
 
@@ -75,13 +77,13 @@ Start by using the Vue CLI program to create a new folder containing the initial
 
 Let's quickly go through the most important files and folders your Vue application consists of:
 
-<Tabs remember-selected-key="files-87687">
-<Tab title="/public/*">
+:::: code-group
+::: /public/*
 
 In this folder you can place static files (such as images) and then refer to them in the other source files using absolute paths. Often better to use the `/src/assets/` folder instead.
 
-</Tab>
-<Tab title="/public/index.html">
+:::
+::: code-group-item /public/index.html
 
 Contains the fundamental HTML code for your Single-Page Application. This is the only HTML file you will have in your entire application.
 
@@ -107,8 +109,8 @@ The most important part is `<div id="app"></div>`. This is the element Vue will 
 </html>
 ```
 
-</Tab>
-<Tab title="/src/main.js">
+:::
+::: code-group-item /src/main.js
 
 This is the file that first run when your Vue application starts. It is primarily used to configure the Vue application. Currently it:
 
@@ -129,8 +131,8 @@ new Vue({
 }).$mount('#app')
 ```
 
-</Tab>
-<Tab title="/src/router.js">
+:::
+::: code-group-item /src/router.js
 
 This file tells Vue what main content to show (which Vue component to use) on the page depending on which URI the user navigates to. Initially it says:
 
@@ -158,8 +160,8 @@ export default new Router({
 })
 ```
 
-</Tab>
-<Tab title="/src/App.vue">
+:::
+::: code-group-item /src/App.vue
 
 This is the main Vue component that is shown. It acts as the layout and will insert the main content on the page where you use the special Vue component `<router-view/>`. To insert links that changes the main content when clicked on use the special Vue component `<router-link to="/THE-URI">LINK TEXT</router-link>`
 
@@ -175,8 +177,8 @@ This is the main Vue component that is shown. It acts as the layout and will ins
 </template>
 ```
 
-</Tab>
-<Tab title="/src/views/*.vue">
+:::
+::: code-group-item /src/views/*.vue
 
 The Vue components in this folder (`Home.vue` and `About.vue`) represent the main content on the various pages. They are also called *views*.
 
@@ -203,8 +205,8 @@ export default {
 </script>
 ```
 
-</Tab>
-<Tab title="/src/components/*.vue">
+:::
+::: code-group-item /src/components/*.vue
 
 The Vue components in this folder represent Vue components that can be re-used in other Vue components. As example, if you want to have a login form at multiple different places in your application you could create a Vue component in this folder (e.g. `Login.vue`) containing that login form/functionality, and then refer to this component in any other Vue component where you want the login form to appear.
 
@@ -235,13 +237,13 @@ export default {
 </style>
 ```
 
-</Tab>
-<Tab title="/src/assets/*">
+:::
+::: code-group-item /src/assets/*
 
 In this folder you can place static files (such as images) and then refer to them in the other source files using relative paths.
 
-</Tab>
-</Tabs>
+:::
+::::
 
 ### Application (layout)
 So `/src/App.vue` is a Vue component that act as the layout for the application. In this component you can use the special Vue component `<router-view/>` to insert the main content at one place, and you can use the special Vue component `<router-link to="/THE-URI">LINK TEXT</router-link>` to insert links to the other "pages"/views (`/src/views/Home.Vue` and `/src/views/About.Vue`).

@@ -1,3 +1,5 @@
+<SetTitle title="Git" />
+
 # Git
 This is not an actual course given at Jönköping University. Instead, it's an improvised mini course teaching you the basics in Git, something that every programmer should know these days. It is very useful when you are multiple programmers working on the same project at the same time.
 

@@ -43,15 +43,18 @@
 	}
 </script>
 
-<style lang="stylus" scoped>
+<style scoped>
 
-.dont
-	background-color red
+.dont{
+	background-color: red;
+}
 
-.do
-	background-color lime
+.do{
+	background-color: lime;
+}
 
-legend
-	font-weight bold
+legend{
+	font-weight: bold;
+}
 
 </style>

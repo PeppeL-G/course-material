@@ -1,3 +1,5 @@
+<SetTitle title="Client-Server Communication" />
+
 # Project Instructions
 As project you should work in pairs and create a platform (a solution consisting of both a backend application handling the data on the platform and a frontend application containing the graphical user interface through which users will use the platform). The backend should expose a REST API which the frontend can use to work with the data on the platform. The platform should be implemented with the technologies taught in the course, i.e. Node.js/Express for the backend and Vue.js for the frontend.
 
@@ -290,8 +292,8 @@ FireFox did before support the `*` value only in the `Access-Control-Allow-Origi
 ### Sending HTTP requests from the frontend
 To send HTTP requests from your Vue.js application you can either use [the old XMLHttpRequest object](https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started) or [the new `fetch()` function](https://davidwalsh.name/fetch). Below you find example of how to use each of them.
 
-<Tabs>
-<Tab title="XMLHttpRequest">
+:::: code-group
+::: code-group-item XMLHttpRequest
 
 ```js
 const request = new XMLHttpRequest()
@@ -328,8 +330,8 @@ const bodyAsString = JSON.stringify(accountToBeCreated)
 request.send(bodyAsString)
 ```
 
-</Tab>
-<Tab title="fetch()">
+:::
+::: code-group-item fetch()
 
 You're not expected to learn how promises works in this course, but if you're curios you can learn the basics about promises on your own by reading the article [Understanding promises in JavaScript](https://hackernoon.com/understanding-promises-in-javascript-13d99df067c1).
 
@@ -360,8 +362,8 @@ fetch("https://localhost:3000/accounts", {
     // Called when something goes wrong :(
 })
 ```
-</Tab>
-<Tab title="fetch() with async and await">
+:::
+::: code-group-item fetch() with async and await
 
 The main benefit with promises is that we can use the `async` and `await` keywords in JavaScript instead of chaining them. This way, we end up writing code that looks to run synchronously (and hence very easy to read ☺), but it will run asynchronously (hence not blocking ☺).
 
@@ -401,8 +403,8 @@ try{
 }
 
 ```
-</Tab>
-</Tabs>
+:::
+::::
 
 ## Part 6: Adding Login to the REST API
 Before you start working on this part you are expected to view the following lectures:

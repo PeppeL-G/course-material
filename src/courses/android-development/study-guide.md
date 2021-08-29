@@ -1,3 +1,5 @@
+<SetTitle title="Android Development" />
+
 # Study Guide
 <StudyGuideInfo
     course-name="Android Development"
@@ -23,6 +25,7 @@ At course start you are expected to possess knowledge corresponding to the pre-r
 
 <Figure caption="Prerequisites for this course.">
 <mermaid>
+{{`
 graph TD
 	introCompTech[Introduction to Computer Technology 7.5 Credits]
 	introProg[Introduction to Programming 7.5 Credits]
@@ -37,96 +40,101 @@ graph TD
 	dalg --> oop
 	oop --> oop2
 	oop2 --> andDev
+`}}
 </mermaid>
 </Figure>
 
 ## Teachers
-<StudyGuideTeachers
-    :teachers='[{
-        name: "Peter Larsson-Green",
-        photo: "peter-larsson-green.jpeg",
-        roles: ["Course coordinator", "examiner", "lecturer", "lab assistant"],
-        description: "Has studied and followed the development of the web since 2004 and received his Master of Science in Computer Science at Linköping University in 2014. He has been working as programming teacher (part time) since 2010 at both Linköping University and Jönköping University.",
-        email: "Peter.Larsson-Green@ju.se",
-        phone: "036 - 10 17 35",
-        website: "https://ju.se/en/personinfo.html?sign=LarPet",
-        zoomLink: "https://ju.instructure.com/courses/3421/pages/zoom-links?module_item_id=76266"
-    }, {
-        name: "Martin Lindh",
-        photo: "martin-lindh.jpeg",
-        roles: ["Lecturer"],
-        description: "Experienced designer.",
-        email: "martin.lindh@ju.se",
-        phone: "036 - 10 19 23",
-        website: "https://ju.se/en/personinfo.html?sign=lindma",
-        zoomLink: "https://ju.instructure.com/courses/3421/pages/zoom-links?module_item_id=76266"
-    }, {
-        name: "Linus Rudbeck",
-        photo: "linus-rudbeck.jpeg",
-        roles: ["Lab assistant"],
-        description: "Former JTH student that studied the program Software Engineering and Mobile Platforms. Started the company Red Capes IT together with Daniel Fransén after he graduated. ",
-        email: "",
-        phone: "",
-        website: "https://redcapesit.se/",
-        zoomLink: "https://ju.instructure.com/courses/3421/pages/zoom-links?module_item_id=76266"
-    }, {
-        name: "Rigmor Skoglund",
-        photo: "rigmor-skoglund.jpeg",
-        roles: ["Teacher in Gruppdynamic"],
-        description: "Not directly involved in this course, but course coordinator for the course Gruppdynamic. Only the Swedish students will meet her.",
-        email: "rigmor.skoglund@ju.se",
-        phone: "036 - 10 19 10",
-        website: "https://ju.se/en/personinfo.html?sign=SKORIG"
-    }]'
+
+### Peter Larsson-Green
+<Teacher
+    name="Peter Larsson-Green"
+    photo="peter-larsson-green.jpeg"
+    :roles='["Course coordinator", "examiner", "lecturer", "lab assistant"]'
+    description="Has studied and followed the development of the web since 2004 and received his Master of Science in Computer Science at Linköping University in 2014. He has been working as programming teacher (part time) since 2010 at both Linköping University and Jönköping University."
+    email="Peter.Larsson-Green@ju.se"
+    phone="036 - 10 17 35"
+    website="https://ju.se/en/personinfo.html?sign=LarPet"
+/>
+
+### Martin Lindh
+<Teacher
+    name="Martin Lindh"
+    photo="martin-lindh.jpeg"
+    :roles='["Lecturer"]'
+    description="Experienced designer."
+    email="martin.lindh@ju.se"
+    phone="036 - 10 19 23"
+    website="https://ju.se/en/personinfo.html?sign=lindma"
+    zoomLink="https://ju.instructure.com/courses/3421/pages/zoom-links?module_item_id=76266"
+/>
+
+### Linus Rudbeck
+<Teacher
+    name="Linus Rudbeck"
+    photo="linus-rudbeck.jpeg"
+    :roles='["Lab assistant"]'
+    description="Former JTH student that studied the program Software Engineering and Mobile Platforms. Started the company Red Capes IT together with Daniel Fransén after he graduated."
+    website="https://redcapesit.se/"
+    zoomLink= "https://ju.instructure.com/courses/3421/pages/zoom-links?module_item_id=76266"
+/>
+
+### Rigmor Skoglund
+<Teacher
+    name="Rigmor Skoglund"
+    photo="rigmor-skoglund.jpeg"
+    :roles='["Teacher in Gruppdynamic"]'
+    description="Not directly involved in this course, but course coordinator for the course Gruppdynamic. Only the Swedish students will meet her."
+    email="rigmor.skoglund@ju.se"
+    phone="036 - 10 19 10"
+    website="https://ju.se/en/personinfo.html?sign=SKORIG"
 />
 
 ## Intended Learning Outcomes
 The intended learning outcomes of the course are found in [the course syllabus](course-syllabus/) in force. Below is a table showing how the examination tests cover the intended learning outcomes and which teaching activity helping you learn which intended learning outcome.
 
 <ILOsActivitiesMapping description="
-
 Display an understanding for the consequences of the Android technical and economical ecosystems
 -Project work
 +Recorded Lectures
 +Tutorials
 +Lab Sessions
-
+---
 Display an understanding for human interface guidelines for mobile devices
 -Project work
 +Lecture
 +Lab Sessions
-
+---
 Display an ability to use the Android SDK and toolchain to develop high quality Android apps
 -Project work
 +Recorded Lectures
 +Tutorials
 +Lab Sessions
-
+---
 Display an ability to use sensor systems using Android APIs
 -Project work
 +Recorded Lectures
 +Tutorials
 +Lab Sessions
-
+---
 Display an ability to use common APIs for Android
 -Project work
 -Laboratory work
 +Recorded Lectures
 +Tutorials
 +Lab Sessions
-
+---
 Display an ability to employ established methods to develop user interfaces for small screens with touch input
 -Project work
 +Lectures
 +Lab Sessions
-
+---
 Display an ability to evaluate the Android system architecture
 -Project work
 +Recorded Lectures
 +Tutorials
 +Lab Sessions
-
-" />
+"/>
 
 ## Learning Activities
 Here are short introduction to the learning activities offered in the course.

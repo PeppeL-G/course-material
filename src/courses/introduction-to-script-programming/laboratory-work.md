@@ -1,3 +1,5 @@
+<SetTitle title="Introduction to Script Programming" />
+
 # Laboratory Work
 On this page you find information about the examination test `Laboratory work`.
 
@@ -39,6 +41,7 @@ Create a program that first asks the user how many numbers she would like to ent
 Create a program that asks the user to enter a number for which the multiplication table (between 0 and 9) should be printed. The program should then print that multiplication table. It can look like as shown in <FigureNumber /> below.
 
 <Figure caption="Sample input/output of the program.">
+
 ```
 This program displays a multiplication table.
 Enter the number for which the multiplication table should be shown: 5
@@ -53,12 +56,14 @@ Enter the number for which the multiplication table should be shown: 5
 8 * 5 = 40
 9 * 5 = 45
 ```
+
 </Figure>
 
 ### Problem 1.5: Displaying a more complex multiplication table
 Create a program that first asks the user to enter a number for which the multiplication table should be printed, and then asks the user to enter integers representing the lower bound and the upper bound of the multiplication table. It can look like as shown in <FigureNumber /> below.
 
 <Figure caption="Sample input/output of the program.">
+
 ```
 This program displays a multiplication table.
 Enter the number for which the multiplication table should be shown: 5
@@ -70,25 +75,28 @@ Enter upper bound: 7
 6 * 5 = 30
 7 * 5 = 35
 ```
+
 </Figure>
 
 ### Problem 1.6: Computing products
 Create a program that asks the user to enter two integers. The program should then compute and print the product of the integers between (and including) these two integers. For example, the product of the integers between `3` and `5` is `3*4*5` = `60`. Assume the user enters the lower integer first. It can look like as shown in <FigureNumber /> below.
 
 <Figure caption="Sample input/output of the program.">
+
 ```
 This program computes the product of the integers in a range.
 Enter the lower number of the range: 3
 Enter the upper number of the range: 5
 The product of the integers between 3 and 5 is 60.
 ```
+
 </Figure>
 
 ### Problem 1.7: Computing things
 For this problem, students taking the programs *IT Infrastructure and Network Design* and *Sustainable Building Information Management* have a different problem to solve. If you don't take any of these program (e.g. being an exchange student), solve the problem for the program IT Infrastructure and Network Design.
 
-<Tabs rememberSelectedKey="program">
-<Tab title="IT Infrastructure and Network Design">
+:::: code-group
+::: code-group-item IT Infrastructure and Network Design
 
 A company is planning on buying 5 different servers. The costs to buy the servers are 3200, 5000, 1790, 8900 and 2300 SEK respectively, and they each cost 100 SEK to run each month (power consumption, floor space, etc.). The servers will run for a number of months and then be given away for charity.
 
@@ -100,6 +108,7 @@ Write a program that first asks the user to enter a number of months, and then c
 It can look something like what is shown in <FigureNumber /> below.
 
 <Figure caption="Sample input to and output from the program.">
+
 ```
 Enter the number of months the servers will run: 2
 The server costing 3200 costs on average 1700 each month.
@@ -109,10 +118,11 @@ The server costing 8900 costs on average 4550 each month.
 The server costing 2300 costs on average 1250 each month.
 Total cost: 22190
 ```
+
 </Figure>
 
-</Tab>
-<Tab title="Sustainable Building Information Management">
+:::
+::: code-group-item Sustainable Building Information Management
 
 Create a program that can calculate LCC for a building using the information in <FigureNumber /> below:
 
@@ -138,8 +148,8 @@ On top of this:
 * The cost for the decommissioning should be calculated as 10% of the cost assessment.
 * If some information is missing this information should be provided by the user as input. 
 
-</Tab>
-</Tabs>
+:::
+::::
 
 ### Present your work
 Present your work to a teacher at a lab session. Be prepared to explain how your solutions and implementations work, and be prepared to answer any question the teacher might have about your code. It is good to practice this in advance (alone or with a friend).
@@ -186,6 +196,7 @@ We wish you a Merry Christmas
 We wish you a Merry Christmas
 We wish you a Merry Christmas and a Happy New Year
 ```
+
 </Figure>
 
 Use loops and functions as much as possible to avoid writing the same statement multiple times. Use at least:
@@ -220,6 +231,7 @@ Sample usage:
 Create a program that asks the user to enter a number for which the user would like to practice the multiplication table, and then ask the user how many questions it would like to have. Your program should then generate that many random questions and ask the user to enter the correct number as answer to the question, and then print the correct answer. It can look as shown in <FigureNumber /> below.
 
 <Figure caption="Sample input to and output from the program.">
+
 ```
 Enter multiplication table: 5
 Enter number of questions: 3
@@ -233,6 +245,7 @@ What is 5 * 8?
 Enter answer: 45
 Correct answer is 40.
 ```
+
 </Figure>
 
 ### Problem 2.5: String with numbers
@@ -347,6 +360,7 @@ Create a small program that functions as a simple calculator with a number store
 When you're done it can look like as shown in <FigureNumber /> below.
 
 <Figure caption="Sample input to and output from the program.">
+
 ```
 Enter initial memory value: 0
 Enter operation (add/sub/mul/div/quit): add
@@ -358,6 +372,7 @@ Enter operand: 3
 Enter operation (add/sub/mul/div/quit): quit
 The program finished with 60 stored in memory.
 ```
+
 </Figure>
 
 ### Present your work
@@ -399,6 +414,7 @@ Create the function `change_to_highest()`, which receives a list as argument. Th
 A sample usage is shown in <FigureNumber /> below.
 
 <Figure caption="Sample usage of the function.">
+
 ```python
 the_list = [
     [1, 2, 3],
@@ -408,6 +424,7 @@ the_list = [
 change_to_highest(the_list) # → None (no return value!).
 # the_list should now be [3, 5, 7].
 ```
+
 </Figure>
 
 ::: danger Don't!
@@ -444,6 +461,7 @@ Add the operation *undo* to your calculator. It should (if possible) undo the us
 When you're done it can look like as shown in <FigureNumber /> below.
 
 <Figure caption="Sample input to and output from the program.">
+
 ```
 Enter initial memory value: 0
 Enter operation (add/sub/mul/div/undo/quit): undo
@@ -463,6 +481,7 @@ There is nothing to undo.
 Enter operation (add/sub/mul/div/undo/quit): quit
 The program finished with 0 in memory.
 ```
+
 </Figure>
 
 ::: tip Tips
@@ -472,8 +491,8 @@ Have an empty list in the beginning that is used to store all memory values, and
 ### Problem 4.5: Verifying strings
 For this problem, students taking the programs *IT Infrastructure and Network Design* and *Sustainable Building Information Management* have a different problem to solve. If you don't take any of these program (e.g. being an exchange student), solve the problem for the program IT Infrastructure and Network Design.
 
-<Tabs rememberSelectedKey="program">
-<Tab title="IT Infrastructure and Network Design">
+:::: code-group
+::: code-group-item IT Infrastructure and Network Design
 
 Create a program that asks the user to enter a path to a directory on the file system. Your program should then check if that directory only contains files with the following names:
 
@@ -482,8 +501,8 @@ Create a program that asks the user to enter a path to a directory on the file s
 
 There may exists several files with the name `backup-config-YYYY-MM-DD.xml`, and `YYYY-MM-DD` should of course be a date for when the backup of the `config.xml` was created (e.g. `2018-11-12`). Your program should print text telling the user if all the files were named in one of these two formats, or if there exist files that doesn't follow these formats (in which case you should print the name of these files that don't follow the formats).
 
-</Tab>
-<Tab title="Sustainable Building Information Management">
+:::
+::: code-group-item Sustainable Building Information Management
 
 Develop a program that checks if the files in a directory have been named according to the description below. The path to the directory should be given as input.
 
@@ -555,8 +574,8 @@ The different allowed formats should be defined in the different IDS in the proj
 <img src="static-files/labs/lab-4-delivery-content.png">
 </Figure>
 
-</Tab>
-</Tabs>
+:::
+::::
 
 ### Present your work
 Present your work to a teacher at a lab session. Be prepared to explain how your solutions and implementations work, and be prepared to answer any question the teacher might have about your code. It is good to practice this in advance (alone or with a friend).
@@ -594,6 +613,7 @@ Nisl rhoncus mattis rhoncus urna neque viverra. Cursus eget nunc scelerisque viv
 
 Facilisi nullam vehicula ipsum a. Neque egestas congue quisque egestas diam in arcu cursus euismod. Enim tortor at auctor urna. Nibh sed pulvinar proin gravida hendrerit. Posuere sollicitudin aliquam ultrices sagittis orci a. Malesuada bibendum arcu vitae elementum curabitur vitae. Maecenas sed enim ut sem viverra. In iaculis nunc sed augue. Facilisis sed odio morbi quis commodo odio aenean. Diam phasellus vestibulum lorem sed risus. Habitant morbi tristique senectus et netus et malesuada fames ac. Ornare lectus sit amet est. Eget aliquet nibh praesent tristique magna. Sed cras ornare arcu dui vivamus arcu felis. Et ligula ullamcorper malesuada proin libero nunc consequat interdum. Sem nulla pharetra diam sit amet nisl. Egestas erat imperdiet sed euismod nisi. Non enim praesent elementum facilisis. Tortor at auctor urna nunc id cursus. Vel fringilla est ullamcorper eget nulla facilisi etiam.
 ```
+
 </Figure>
 
 You can presume the text only contains the following characters:
@@ -621,12 +641,13 @@ It should not be possible to undo the store or load operation, i.e.:
 ### Problem 5.3: Doing things
 For this problem, students taking the programs *IT Infrastructure and Network Design* and *Sustainable Building Information Management* have a different problem to solve. If you don't take any of these program (e.g. being an exchange student), solve the problem for the program IT Infrastructure and Network Design.
 
-<Tabs rememberSelectedKey="program">
-<Tab title="IT Infrastructure and Network Design">
+:::: code-group
+::: code-group-item IT Infrastructure and Network Design
 
 Write a default configuration for a Cisco router in a file called `configuration-template.config`. In this file, you should be able to use placeholders that later will be replaced with the actual values that should be used. The file can look like the one shown in <FigureNumber /> below. In this case, placeholders are all words surrounded with curly brackets, `{like_this}`.
 
 <Figure caption="Sample of the configuration template file. The parts with curly brackets are placeholders.">
+
 ```
 !
 ! BASIC CONFIGURATION FOR CISCO ROUTERS
@@ -664,11 +685,13 @@ line vty 0 4
 !
 end
 ```
+
 </Figure>
 
 Then create another file called `configuration-values.csv`, that contains the value for each placeholder in the configuration template. Furthermore, it does not only contain one value for each placeholder, but a list of them. It can look like the one shown in <FigureNumber /> below, in this case 5 values for each placeholder (the name of the placeholder is the first value on each line).
 
 <Figure caption="Sample of the configuration template file. The parts with curly brackets are placeholders.">
+
 ```
 HOSTNAME,R1,R2,R3,R4,R5
 ENABLEPASSWORD,cisco,cisco,cisco,cisco,cisco
@@ -691,6 +714,7 @@ CONSOLEPASSWORD,cisco1,cisco2,cisco3,cisco4,cisco5
 VTYPASSWORD,cisco1,cisco2,cisco3,cisco4,cisco5
 TRANSPORTINPUTVTY,telnet,telnet,telnet,ssh,ssh
 ```
+
 </Figure>
 
 Instead of manually creating the CSV file yourself, you can easily create and maintain it using Microsoft Excel, as shown in <FigureNumber /> below. When saving the file, just save it as *CSV (Comma Delimited)* instead of *Excel Workbook*.
@@ -704,6 +728,7 @@ Your task is to create a program that reads the placeholder values from `configu
 With the two files given above, your program should generate 5 new configuration files, the first one looking like the one shown in <FigureNumber /> below.
 
 <Figure caption="Sample of what the first generated configuration file can look like.">
+
 ```
 !
 ! BASIC CONFIGURATION FOR CISCO ROUTERS
@@ -742,6 +767,7 @@ line vty 0 4
 !
 end
 ```
+
 </Figure>
 
 ::: tip Tips!
@@ -762,12 +788,13 @@ Then you loop 5 times (since each placeholder has five different values), and ea
 3. Store `template` in a new file.
 :::
 
-</Tab>
-<Tab title="Sustainable Building Information Management">
+:::
+::: code-group-item Sustainable Building Information Management
 
 Create a file named `house.xml` with the XML code shown in <FigureNumber /> below. The XML code contains information about a house with a set of rectangular rooms.
 
 <Figure caption="The XML code in house.xml.">
+
 ```
 <house>
   <room>
@@ -782,12 +809,13 @@ Create a file named `house.xml` with the XML code shown in <FigureNumber /> belo
   </room>
 </house>
 ```
+
 </Figure>
 
 Then write a program that computes and prints the total area of the house (the sum of the area of the rooms) in the XML file. Your program should still work if one add/remove rooms to the XML file.
 
-</Tab>
-</Tabs>
+:::
+::::
 
 ### Present your work
 Present your work to a teacher at a lab session. Be prepared to explain how your solutions and implementations work, and be prepared to answer any question the teacher might have about your code. It is good to practice this in advance (alone or with a friend).
@@ -865,9 +893,8 @@ To pass, you don't have to use the methods `is_column_full(column)` nor `does_co
 ### Problem 6.2: Implementing a class
 For this problem, students taking the programs *IT Infrastructure and Network Design* and *Sustainable Building Information Management* have a different problem to solve. If you don't take any of these program (e.g. being an exchange student), solve the problem for the program IT Infrastructure and Network Design.
 
-<Tabs rememberSelectedKey="program">
-
-<Tab title="IT Infrastructure and Network Design">
+:::: code-group
+::: code-group-item IT Infrastructure and Network Design
 
 This problem is about implementing a calculator program as described in problem 4.4, but this time using a class to represent the calculator. Write all your code in a file named `lab_06_calculator.py`. When you are done, running the code in `lab_06_calculator.py` should have the very same effect as running the code you wrote for problem 4.4 (the output/input should be the same).
 
@@ -979,10 +1006,11 @@ while operation != "quit":
 
 print("The program finished with "+str(calculator.get_memory_value())+" in memory.")
 ```
+
 </Figure>
 
-</Tab>
-<Tab title="Sustainable Building Information Management">
+:::
+::: code-group-item Sustainable Building Information Management
 
 Develop a software that includes the class `Construction_Entity`, see the UML schema below.
 
@@ -1018,8 +1046,8 @@ The software should print the average `LCC`/`SpaceArea` for all objects that hav
 When you have an instance of an `Element` or a `SubElement` that have attributes, you can get the values for the attributes using the `attrib` property, which is a dict containing the name of all the element's attributes as keys, and the attribute values as the values in the dict. For example, if the element is `<my-element a="1" b="2">`, then the element's `attrib` property in Python would be `{"a": "1", "b": "2"}`.
 :::
 
-</Tab>
-</Tabs>
+:::
+::::
 
 ### Present your work
 Present your work to a teacher at a lab session. Be prepared to explain how your solutions and implementations work, and be prepared to answer any question the teacher might have about your code. It is good to practice this in advance (alone or with a friend).

@@ -1,3 +1,5 @@
+<SetTitle title="Android Development" />
+
 # Welcome!
 Welcome to the course *Android Development*! In this course you'll learn how to create Android applications. 
 
@@ -11,6 +13,7 @@ This website will be used to host the course material only. If you take this cou
 If you're an old student that took this course a previous year but still have some examination tests left to pass you take those tests as they are described this year. The old Ping Pong event won't be used any more, so join this year's Canvas page, so we can keep track of your progress in the course this year there. If you aren't registered for the course this year, ask the course coordinator to invite you to the Canvas page by sending him an email message based on the template in <FigureNumber /> below with the topic `Invitation to Canvas Course` to `peter.larsson-green@ju.se`.
 
 <Figure caption="Template for email message to be invited to a Canvas Course. Replace XXX with your own value.">
+
 ```
 Hi!
 
@@ -24,7 +27,9 @@ Android Development
 
 Thanks!
 ```
+
 </Figure>
+
 :::
 
 ::: danger Swedish VS International Students

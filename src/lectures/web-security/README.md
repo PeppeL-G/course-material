@@ -93,9 +93,9 @@ With proper protection, the search form in the previous example would work like 
 <Tabs remember-selected-key="lang-framework">
 <Tab title="Node.js/Express">
 
-::: v-pre
+<p v-pre>
 When you use `request.send("Input from a client.")` you are responsible for escaping the input yourself. When you pass input to a view, the view engine usually escapes the data for you. For example, when using Handlebars as your view engine, data you insert into the view using `{{expression}}` will escape the HTML code in `expression`. This is usually what you want to happen, but if you for some reason don't want that, you can use `{{{expression}}}`, which won't escape the HTML code in `expression`, but then you are responsible to make sure that no XSS vulnerability exists.
-:::
+</p>
 
 </Tab>
 <Tab title="PHP">

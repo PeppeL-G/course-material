@@ -1,3 +1,5 @@
+<SetTitle title="Web Development - Advanced Concepts" />
+
 # Study Guide
 <StudyGuideInfo
     course-name="Web Development - Advanced Concepts"
@@ -9,24 +11,24 @@
 />
 
 ## Teachers
-<StudyGuideTeachers
-    :teachers='[{
-        name: "Peter Larsson-Green",
-        photo: "peter-larsson-green.jpeg",
-        roles: ["Course coordinator", "examiner", "lecturer", "lab assistant"],
-        description: "Has studied and followed the development of the web since 2004 and received his Master of Science in Computer Science at Linköping University in 2014. He has been working as programming teacher (part time) since 2010 at both Linköping University and Jönköping University.",
-        email: "Peter.Larsson-Green@ju.se",
-        phone: "036 - 10 17 35",
-        website: "https://ju.se/en/personinfo.html?sign=LarPet"
-    }, {
-        name: "Linus Rudbeck",
-        photo: "linus-rudbeck.jpeg",
-        roles: ["Lab assistant"],
-        description: "Former JTH student that studied the program Software Engineering and Mobile Platforms. Started the company Red Capes IT together with Daniel Fransén after he graduated. ",
-        email: "",
-        phone: "",
-        website: "https://redcapesit.se/author/linus/"
-    }]'
+### Peter Larsson-Green
+<Teacher
+    name="Peter Larsson-Green"
+    photo="peter-larsson-green.jpeg"
+    :roles='["Course coordinator", "examiner", "lecturer", "lab assistant"]'
+    description="Has studied and followed the development of the web since 2004 and received his Master of Science in Computer Science at Linköping University in 2014. He has been working as programming teacher (part time) since 2010 at both Linköping University and Jönköping University."
+    email="Peter.Larsson-Green@ju.se"
+    phone="036 - 10 17 35"
+    website="https://ju.se/en/personinfo.html?sign=LarPet"
+/>
+
+### Linus Rudbeck
+<Teacher
+    name="Linus Rudbeck"
+    photo="linus-rudbeck.jpeg"
+    :roles='["Lab assistant"]'
+    description="Former JTH student that studied the program Software Engineering and Mobile Platforms. Started the company Red Capes IT together with Daniel Fransén after he graduated. "
+    website="https://redcapesit.se/author/linus/"
 />
 
 ## Introduction
@@ -45,26 +47,28 @@ At course start you are expected to already possess knowledge corresponding to t
 
 <Figure caption="Prerequisites for this course.">
 <mermaid>
+{{`
 graph TD
-    introComp[Introduction to Computing 7.5 Credits]
-    introProg[Introduction to Programming 9 Credits]
-    db[Databases 6 Credits]
-    discMath[Discrete Mathematics 6 Credits]
-    dalg[Data Structures and Algorithms 7.5 Credits]
-    oop[Object-oriented Programming 7.5 Credits]
-    webDevFund[Web Development Fundamentals 7.5 Credits]
-    netProg[Network Programming 7.5 Credits]
-    wdac[Web Development Advanced Concepts 7.5 Credits]
-    introComp --> introProg
-    introProg --> db
-    db --> webDevFund
-    introProg --> dalg
-    discMath --> dalg
-    dalg --> oop
-    oop --> webDevFund
-    oop --> netProg
-    webDevFund --> wdac
-    netProg --> wdac
+	introComp[Introduction to Computing 7.5 Credits]
+	introProg[Introduction to Programming 9 Credits]
+	db[Databases 6 Credits]
+	discMath[Discrete Mathematics 6 Credits]
+	dalg[Data Structures and Algorithms 7.5 Credits]
+	oop[Object-oriented Programming 7.5 Credits]
+	webDevFund[Web Development Fundamentals 7.5 Credits]
+	netProg[Network Programming 7.5 Credits]
+	wdac[Web Development Advanced Concepts 7.5 Credits]
+	introComp --> introProg
+	introProg --> db
+	db --> webDevFund
+	introProg --> dalg
+	discMath --> dalg
+	dalg --> oop
+	oop --> webDevFund
+	oop --> netProg
+	webDevFund --> wdac
+	netProg --> wdac
+`}}
 </mermaid>
 </Figure>
 
@@ -72,28 +76,27 @@ graph TD
 The intended learning outcomes of the course are found in the [Course Syllabus](course-syllabus/). Below is a table showing how the examination tests cover the intended learning outcomes and which teaching activity helping you learn which intended learning outcome.
 
 <ILOsActivitiesMapping description="
-
 Display knowledge of the need for, and the use of, Content Delivery Networks
 -Written Examination
 +Tutorial
-
+---
 Display knowledge of the challenges inherent in and technologies used for the construction of scalable web applications (NOSQL databases, horizontal scaling with session management, data partitioning and sharding, etc.)
 -Project Work
 -Written Examination
 +Recorded lecture: Scaling Web Applications
 +Recorded lecture: Scaling Databases
-
+---
 Display the ability to use JavaScript to manipulate a web page's Document Object Model
 -Laboratory Work
 -Project Work
 -Written Examination
 +Recorded lecture: Client-side JavaScript
 +Recorded lecture: Document Object Model
-
+---
 Display the ability to program against commonly used JavaScript libraries
 -Project Work
 +Various npm packages introduced in the course.
-
+---
 Display the ability to construct web pages that interact with other web systems using REST/JSON, OAuth, etc.
 -Project Work
 -Written Examination
@@ -103,22 +106,21 @@ Display the ability to construct web pages that interact with other web systems 
 +Recorded lecture: JSON Web Tokens
 +Recorded lecture: Third-Party Authentication
 +Recorded lecture: AJAX
-
+---
 Display the ability to use advanced web client APIs such as web storage, web workers, web components, WebAssembly, etc.
 -Project Work
 +Recorded lecture: AJAX
-
+---
 Display the ability to configure and use containers for development, testing, and deployment environments
 -Project Work
 -Written Examination
 +Recorded lecture: Docker Basics
-
+---
 Demonstrate the ability to evaluate the security of web applications
 -Project Work
 -Written Examination
 +Recorded lecture: Same-origin Policy & Cross-origin Resource Sharing
-
-" />
+"/>
 
 ## Learning Activities
 Here are short introduction to the learning activities offered in the course.

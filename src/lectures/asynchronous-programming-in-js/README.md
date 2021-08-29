@@ -425,7 +425,7 @@ The callback function you pass to `.then()` can:
 2. Return back another value that automatically will be wrapped in a promise that will be immediately resolved.
 3. Not return back any value at all (i.e. `undefined`), in which case we can **see it as** the promise you called `.then()` on will be returned back.
 
-Note that you can *see it as** that the callback function you pass to `.then()` will always return back a promise. Promises are also implemented in a very clever way, so you can **see it as** the promise you return back from the callback function passed to `.then()` will also be returned from the call to `.then()`. All this and list item 3 above means that we can simplify the code we had earlier to the one shown in <FigureNumber /> below.
+Note that you can **see it as** that the callback function you pass to `.then()` will always return back a promise. Promises are also implemented in a very clever way, so you can **see it as** the promise you return back from the callback function passed to `.then()` will also be returned from the call to `.then()`. All this and list item 3 above means that we can simplify the code we had earlier to the one shown in <FigureNumber /> below.
 
 <Figure caption="Sample usage of an asynchronous function returning a promise.">
 

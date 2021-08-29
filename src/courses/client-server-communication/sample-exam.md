@@ -1,3 +1,5 @@
+<SetTitle title="Client-Server Communication" />
+
 # Sample Exam
 You can look at [the exam from 2019-01-09](static-files/exam-2019-01-09.pdf) to get some idea about what the questions on your exam will be, but note:
 

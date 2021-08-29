@@ -1,3 +1,5 @@
+<SetTitle title="Client-Server Communication" />
+
 # Study Guide
 <StudyGuideInfo
     course-name="Client-Server Communication"
@@ -10,32 +12,36 @@
 />
 
 ## Teachers
-<StudyGuideTeachers
-    :teachers='[{
-        name: "Peter Larsson-Green",
-        photo: "peter-larsson-green.jpeg",
-        roles: ["Course coordinator", "lecturer", "lab assistant"],
-        description: "Has studied and followed the development of the web since 2004 and received his Master of Science in Computer Science at Linköping University in 2014. He has been working as programming teacher (part time) since 2010 at both Linköping University and Jönköping University.",
-        email: "Peter.Larsson-Green@ju.se",
-        phone: "036 - 10 17 35",
-        website: "https://ju.se/en/personinfo.html?sign=LarPet"
-    }, {
-        name: "Johan Kohlin",
-        photo: "johan-kohlin.jpeg",
-        roles: ["Examiner"],
-        description: "Has been teaching web development and web design since 2006 for communication students at HLK and since 2016 he teaches JavaScript and misc. web technologies at JTH, primarily to New Media Design students.",
-        email: "Johan.Kohlin@ju.se",
-        phone: "036 - 10 15 09",
-        website: "https://ju.se/en/personinfo.html?sign=KoJo"
-    }, {
-        name: "Linus Rudbeck",
-        photo: "linus-rudbeck.jpeg",
-        roles: ["Lab assistant"],
-        description: "Former JTH student that studied the program Software Engineering and Mobile Platforms. Started the company Red Capes IT together with Daniel Fransén after he graduated. ",
-        email: "",
-        phone: "",
-        website: "https://redcapesit.se/author/linus/"
-    }]'
+### Peter Larsson-Green
+<Teacher
+    name="Peter Larsson-Green"
+    photo="peter-larsson-green.jpeg"
+    :roles='["Course coordinator", "lecturer", "lab assistant"]'
+    description="Has studied and followed the development of the web since 2004 and received his Master of Science in Computer Science at Linköping University in 2014. He has been working as programming teacher (part time) since 2010 at both Linköping University and Jönköping University."
+    email="Peter.Larsson-Green@ju.se"
+    phone="036 - 10 17 35"
+    website="https://ju.se/en/personinfo.html?sign=LarPet"
+/>
+
+### Johan Kohlin
+<Teacher
+    name="Johan Kohlin"
+    photo="johan-kohlin.jpeg"
+    :roles='["Examiner"]'
+    description="Has been teaching web development and web design since 2006 for communication students at HLK and since 2016 he teaches JavaScript and misc. web technologies at JTH, primarily to New Media Design students."
+    email="Johan.Kohlin@ju.se"
+    phone="036 - 10 15 09"
+    website="https://ju.se/en/personinfo.html?sign=KoJo"
+/>
+
+### Linus Rudbeck
+<Teacher
+    name="Linus Rudbeck"
+    photo="linus-rudbeck.jpeg"
+    :roles='["Lab assistant"]'
+    description="Former JTH student that studied the program Software Engineering and Mobile Platforms. Started the company Red Capes IT together with Daniel Fransén after he graduated."
+    phone="036 - 10 17 35"
+    website="https://redcapesit.se/author/linus/"
 />
 
 ## Introduction
@@ -45,20 +51,22 @@ In this course you will learn in more detail how the communication between clien
 
 <Figure caption="Common web application architecture.">
 <mermaid>
+{{`
 graph LR
 	users["Users"]
 	subgraph "Users' smartphone"
-        webBrowser["Android App"]
-    end
+		webBrowser["Android App"]
+	end
 	subgraph "Web Server"
-        webApp["Web Application"]
-    end
-    subgraph "Database Server"
-    	db["Database"]
-    end
-    users -- Use --> webBrowser
-    webBrowser -- HTTP/REST API --> webApp
-    webApp -- SQL --> db
+	webApp["Web Application"]
+	end
+	subgraph "Database Server"
+		db["Database"]
+	end
+	users -- Use --> webBrowser
+	webBrowser -- HTTP/REST API --> webApp
+	webApp -- SQL --> db
+`}}
 </mermaid>
 </Figure>
 
@@ -66,6 +74,7 @@ At course start you are expected to possess knowledge corresponding to the pre-r
 
 <Figure caption="Prerequisites for this course.">
 <mermaid>
+{{`
 graph TD
 	wuid[Web and User Interface Design 7.5 Credits]
 	gdvc[Graphic Design and Visual Communication 15 Credits]
@@ -76,6 +85,7 @@ graph TD
 	gdvc --> csp
 	csp --> awa
 	awa --> csc
+`}}
 </mermaid>
 </Figure>
 
@@ -86,32 +96,31 @@ The intended learning outcomes of the course are found in [the course syllabus](
 
 ### Description of the elements that examine the course ILOs, and the corresponding learning activities
 <ILOsActivitiesMapping description="
-
 Display knowledge of the HTTP protocol.
 -Laboratory work
 -Project work
 -Written examination
 +Recorded lecture: Internet
 +Recorded lecture: Web Applications & HTTP
-
+---
 Display knowledge of the REST architectural style.
 -Laboratory work
 -Project work
 -Written examination
 +Recorded lecture: REST API Basics
-
+---
 Demonstrate comprehension of architectures consisting of multiple systems communicating through APIs.
 -Laboratory work
 -Project work
 -Written examination
 +Recorded lecture: REST API Basics
-
+---
 Demonstrate the ability to design and document user-friendly APIs.
 -Project work
 -Written examination
 +Recorded lecture: REST Basics
 +Recorded lecture: REST API in Express
-
+---
 Demonstrate skills of implementing APIs.
 -Project work
 -Written examination
@@ -120,27 +129,26 @@ Demonstrate skills of implementing APIs.
 +Recorded lecture: REST API in Express
 +Recorded lecture: SQLite in Node.js
 +Recorded lecture: JWT
-
+---
 Demonstrate skills of consuming APIs.
 -Project work
 -Written examination
 +Recorded lecture: SPA Requests
 +Recorded lecture: SOP & CORS
 +Recorded lecture: JWT
-
+---
 Demonstrate skills of implementing SDKs for APIs.
 -Project work
 -Written examination
 +Recorded lecture: SPA Requests
 +Recorded lecture: SOP & CORS
 +Recorded lecture: JWT
-
+---
 Demonstrate skills of implementing SPAs using front-end frameworks.
 -Laboratory work
 -Project work
 +Recorded lecture: Vue
-
-" />
+"/>
 
 ### Information to students
 Information about the **Laboratory Work** can be found on the page [Lab Instructions](lab-instructions/). It will teach you how to build a Single-Page Application in Vue.js communicating with a backend using a Software Development Kit.

@@ -1,0 +1,19 @@
+code{
+	user-select: all;
+}
+
+pre code{
+	user-select: auto;
+}
+
+.site-name{
+	color: var(--c-text-accent) !important;
+}
+
+@media print{
+	
+	iframe{
+		visibility: hidden;
+	}
+	
+}

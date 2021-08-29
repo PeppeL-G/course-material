@@ -1,3 +1,5 @@
+<SetTitle title="Introduction to Script Programming" />
+
 # Welcome!
 Welcome to the course *Introduction to Script Programming*! In this course you'll learn how to create small programs in Python your computer can execute.
 
@@ -24,6 +26,7 @@ Starting autumn 2020, the bachelor students from *IT Infrastructure and Network 
 If you're an old student that took this course a previous year but still have some examination tests left to pass you take those tests as they are described this year. The old Ping Pong event won't be used any more, so join this year's Canvas Course, so we can keep track of your progress in the course this year there. If you aren't registered for the course this year, ask the course manager to invite you to the Canvas Course by sending him an email message based on the template in <FigureNumber /> below with the topic `Invitation to Canvas Course` to `peter.larsson-green@ju.se`.
 
 <Figure caption="Template for email message to be invited to a Canvas Course. Replace XXX with your own value.">
+
 ```
 Hi!
 
@@ -37,5 +40,7 @@ Introduction to Script Programming
 
 Thanks!
 ```
+
 </Figure>
+
 :::

@@ -1,3 +1,5 @@
+<SetTitle title="Web Development - Advanced Concepts" />
+
 # Laboratory Work
 On this page you find information about the examination test `Laboratory Work`.
 

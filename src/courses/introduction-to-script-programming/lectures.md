@@ -1,3 +1,5 @@
+<SetTitle title="Introduction to Script Programming" />
+
 # Lectures
 Each exercise on the [Exercises](exercises/) page contains a list of recorded lectures you are recommended to watch before attempting to solve the exercises and the labs.
 

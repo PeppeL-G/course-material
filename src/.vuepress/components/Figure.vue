@@ -27,7 +27,7 @@
 <style scoped>
 	
 	figcaption::before{
-		content: "Figure " counter(figureNumber);
+		content: "Figure " counter(figureNumber) " ";
 		font-weight: bold;
 	}
 	
@@ -37,9 +37,10 @@
 	
 </style>
 
-<style lang="stylus">
+<style>
 
-.mermaid svg
-	max-width 100%
+.mermaid svg{
+	max-width: 100%;
+}
 
 </style>

@@ -2,7 +2,7 @@ module.exports = {
 	name: "Web Development Fundamentals 2020",
 	showLink: true,
 	pages: [
-		"",
+		"index.html",
 		"course-syllabus",
 		"study-guide",
 		"lectures",

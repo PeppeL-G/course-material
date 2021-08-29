@@ -1,3 +1,5 @@
+<SetTitle title="Web Development - Advanced Concepts" />
+
 # Project Work
 On this page you find information about the examination test `Project work`.
 
@@ -343,18 +345,20 @@ Implement the website using a three-layered architecture:
 
 <Figure caption="A three-layered architecture. The Presentation Layer is the one receiving HTTP requests from clients, to carry them out is uses the Business Logic Layer, and so on.">
 <mermaid>
+{{`
 graph LR
-    wb[Web Browser]
-    subgraph Web Application
-        pl(Presentation Layer)
-        bll(Business Logic Layer)
-        dal(Data Access Layer)
-    end
-    db[Database]
-    wb --HTTP--> pl
-    pl --> bll
-    bll --> dal
-    dal --SQL--> db
+	wb[Web Browser]
+	subgraph Web Application
+		pl(Presentation Layer)
+		bll(Business Logic Layer)
+		dal(Data Access Layer)
+	end
+	db[Database]
+	wb --HTTP--> pl
+	pl --> bll
+	bll --> dal
+	dal --SQL--> db
+`}}
 </mermaid>
 </Figure>
 
@@ -378,17 +382,19 @@ The most common used approach to scaling web applications is by running multiple
 
 <Figure caption="A common used architecture for scaling. The Load Balancer receives HTTP requests from Clients and then forwards them to (one of) the Web Application Instances.">
 <mermaid>
+{{`
 graph LR
-    clients[Clients]
-    lb[Load Balancer]
-    wai1[Web Application Instance 1]
-    wai2[Web Application Instance 2]
-    wain[Web Application Instance n]
-    db[Database]
-    clients --HTTP--> lb
-    lb --HTTP--> wai1 --SQL-->db
-    lb --HTTP--> wai2 --SQL-->db
-    lb --HTTP--> wain --SQL-->db
+	clients[Clients]
+	lb[Load Balancer]
+	wai1[Web Application Instance 1]
+	wai2[Web Application Instance 2]
+	wain[Web Application Instance n]
+	db[Database]
+	clients --HTTP--> lb
+	lb --HTTP--> wai1 --SQL-->db
+	lb --HTTP--> wai2 --SQL-->db
+	lb --HTTP--> wain --SQL-->db
+`}}
 </mermaid>
 </Figure>
 
@@ -416,8 +422,8 @@ The three layers the web application consists of have some dependencies:
 
 These dependencies are hardcoded at multiple places, as shown in the figures below.
 
-<Tabs rememberSelectedKey="layer">
-<Tab title="Presentation Layer">
+:::: code-group
+::: code-group-item Presentation Layer
 <Figure caption="account-router.js in the Presentation Layer.">
 
 `account-router.js` in the Presentation Layer has a dependency on `account-manager.js` in the Business Logic Layer.
@@ -443,8 +449,8 @@ module.exports = router
 ```
 
 </Figure>
-</Tab>
-<Tab title="Business Logic Layer">
+:::
+::: code-group-item Business Logic Layer
 <Figure caption="account-manager.js in the Business Logic Layer.">
 
 `account-manager.js` in the Business Logic Layer has a dependency on `account-repository.js` in the Data Access Layer.
@@ -461,8 +467,8 @@ exports.getAllAccounts = function(callback){
 ```
 
 </Figure>
-</Tab>
-<Tab title="Data Access Layer">
+:::
+::: code-group-item Data Access Layer
 <Figure caption="account-repository.js in the Data Access Layer.">
 
 `account-repository.js` in the Data Access Layer (has no dependency on any other layer but is shown for the completeness of the three layers).
@@ -484,8 +490,8 @@ exports.getAllAccounts = function(callback){
 ```
 
 </Figure>
-</Tab>
-</Tabs>
+:::
+::::
 
 Hardcoding dependencies like this makes our web application less flexible. For example, each time we use the account manager, the account manager will always use the account repository that works with the data in the MySQL databases. You might think this is not such a big deal, because that's what we want to happen when our web application runs, right? Yes, if we want to use the code to run the web application, then yes, that is what we want to happen. But what if we write tests and just want to run the code inside the account manager to test if that works? Then we don't necessarily want the account manager to make use of the account repository that communicates with the MySQL database, because if the test fails when we run it, then the problem could just as well be in the account repository (e.g. broken connection to the database).
 
@@ -513,8 +519,8 @@ So, in our account manager, we can't hardcode which version of the account repos
 
 When we start the program, we specify which account repository to use, and then when we use the account manager it will use the account repository we specified. How we make all this happen depends on which dependency injection framework/container we use. The npm package [awilix](https://github.com/jeffijoe/awilix) gives us this functionality. The figures below shows one way to use it.
 
-<Tabs rememberSelectedKey="layer">
-<Tab title="Data Access Layer">
+:::: code-group
+::: code-group-item Data Access Layer
 <Figure caption="account-repository.js in the Data Access Layer.">
 
 `account-repository.js` in the Data Access Layer (has no dependency on any other layer but is shown for the completeness of the three layers).
@@ -536,8 +542,8 @@ module.exports = function({}){
 ```
 
 </Figure>
-</Tab>
-<Tab title="Business Logic Layer">
+:::
+::: code-group-item Business Logic Layer
 <Figure caption="account-manager.js in the Business Logic Layer.">
 
 `account-manager.js` in the Business Logic Layer has a dependency on `account-repository.js` in the Data Access Layer but doesn't specify which one.
@@ -558,8 +564,8 @@ module.exports = function({accountRepository}){
 ```
 
 </Figure>
-</Tab>
-<Tab title="Presentation Layer">
+:::
+::: code-group-item Presentation Layer
 <Figure caption="account-router.js in the Presentation Layer.">
 
 `account-router.js` in the Presentation Layer has a dependency on `account-manager.js` in the Business Logic Layer but doesn't specify which one.
@@ -588,8 +594,8 @@ module.exports = function({accountManager}){
 ```
 
 </Figure>
-</Tab>
-</Tabs>
+:::
+::::
 
 With Awilix we can then in the main file specify which dependencies we want to use, as shown in <FigureNumber /> below.  If we want to change which account repository to use, we just need to change that at line 4 in that file.
 
@@ -638,20 +644,22 @@ When you're done your architecture could look like the one shown in <FigureNumbe
 
 <Figure caption="Current architecture.">
 <mermaid>
+{{`
 graph LR
-    wb[Web Browser]
-    subgraph Web Application
-        pl(Presentation Layer)
-        bll(Business Logic Layer)
-        dalMy(Data Access Layer MySQL)
-        dalPost(Data Access Layer PostgreSQL)
-    end
-    dbMy[Database MySQL]
-    dbPost[Database PostgreSQL]
-    wb --HTTP--> pl
-    pl --> bll
-    bll --> dalMy --SQL--> dbMy
-    bll --> dalPost --SQL--> dbPost
+	wb[Web Browser]
+	subgraph Web Application
+		pl(Presentation Layer)
+		bll(Business Logic Layer)
+		dalMy(Data Access Layer MySQL)
+		dalPost(Data Access Layer PostgreSQL)
+	end
+	dbMy[Database MySQL]
+	dbPost[Database PostgreSQL]
+	wb --HTTP--> pl
+	pl --> bll
+	bll --> dalMy --SQL--> dbMy
+	bll --> dalPost --SQL--> dbPost
+`}}
 </mermaid>
 </Figure>
 
@@ -671,14 +679,16 @@ However, unlike the web application, a native smartphone application can't commu
 
 <Figure caption="Overview of the platform.">
 <mermaid>
+{{`
 graph LR
-    wb[Web Browser]
-    nsa[Native Smartphone Application]
-    wa[Web Application]
-    db[Database]
-    wb --HTTP HTML/x-www-form-urlencoded--> wa
-    nsa --HTTP REST API JSON-->wa
-    wa --SQL-->db
+	wb[Web Browser]
+	nsa[Native Smartphone Application]
+	wa[Web Application]
+	db[Database]
+	wb --HTTP HTML/x-www-form-urlencoded--> wa
+	nsa --HTTP REST API JSON-->wa
+	wa --SQL-->db
+`}}
 </mermaid>
 </Figure>
 
@@ -688,19 +698,21 @@ The REST API can be implemented as an additional Presentation Layer in the web a
 
 <Figure caption="Current architecture (with one Data Access Layer).">
 <mermaid>
+{{`
 graph LR
-    wb[Web Browser]
-    nsa[Native Smartphone Application]
-    subgraph Web Application
-        plw(Presentation Layer Website)
-        plr(Presentation Layer REST API)
-        bll(Business Logic Layer)
-        dal(Data Access Layer)
-    end
-    db[Database]
-    wb --HTTP HTML/x-www-form-urlencoded--> plw --> bll
-    nsa --HTTP REST API JSON--> plr --> bll
-    bll --> dal --SQL--> db
+	wb[Web Browser]
+	nsa[Native Smartphone Application]
+	subgraph Web Application
+		plw(Presentation Layer Website)
+		plr(Presentation Layer REST API)
+		bll(Business Logic Layer)
+		dal(Data Access Layer)
+	end
+	db[Database]
+	wb --HTTP HTML/x-www-form-urlencoded--> plw --> bll
+	nsa --HTTP REST API JSON--> plr --> bll
+	bll --> dal --SQL--> db
+`}}
 </mermaid>
 </Figure>
 

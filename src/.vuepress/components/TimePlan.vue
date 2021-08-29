@@ -2,27 +2,27 @@
 	<div>
 		
 		<table>
-			<template v-for="week of weeks">
+			<template v-for="week of weeks" :key="week.realWeekNumber">
 				<tr>
-					<td>Week {{week.relativeWeekNumber}}</td>
-					<td>Week {{week.realWeekNumber}}</td>
-					<td v-for="header of headers">{{header}}</td>
+					<td :title="`Course Week ${week.relativeWeekNumber}`">Week {{week.relativeWeekNumber}}</td>
+					<td :title="`Year Week ${week.realWeekNumber}`">Week {{week.realWeekNumber}}</td>
+					<td v-for="header of headers" :key="header">{{header}}</td>
 				</tr>
-				<tr v-for="day of week.days" :class="{hasPassed: day.hasPassed}">
+				<tr v-for="day of week.days" :key="day.date" :class="{hasPassed: day.hasPassed}">
 					<td>{{day.weekday}}</td>
 					<td>{{day.date}}</td>
-					<td v-for="task of day.tasks">{{task}}</td>
+					<td v-for="task of day.tasks" :key="task">{{task}}</td>
 				</tr>
 			</template>
 		</table>
 		
-		<style scoped v-for="column, index of columns">
+		<component :is="'style'" scoped v-for="column, index of columns" :key="column.key">
 			
 			td:nth-child({{3+index}}):not(:empty){
 				background-color: {{column.color}};
 			}
 			
-		</style>
+		</component>
 		
 	</div>
 </template>
@@ -124,22 +124,29 @@ export default {
 </script>
 
 
-<style scoped lang="stylus">
+<style scoped>
 	
-	table
-		white-space nowrap
-		font-size 90%
-		margin-bottom 0
-		margin-top 0
+	table{
+		white-space: nowrap;
+		font-size: 90%;
+		margin-bottom: 0;
+		margin-top: 0;
+		max-width: 100%;
+	}
 	
-	tr:nth-child(8n+1)
-		font-weight bold
-		background-color lime
-		font-size 100%
+	tr:nth-child(8n+1){
+		font-weight: bold;
+		font-size: 100%;
+	}
 	
-	.hasPassed
-		text-decoration line-through
-		background-color #d3bcbc
+	tr:nth-child(8n+1) td:nth-child(1), tr:nth-child(8n+1) td:nth-child(2){
+		background-color: var(--c-tip);
+	}
+	
+	.hasPassed{
+		text-decoration: line-through;
+		background-color: gray;
+	}
 	
 	@media print{
 		table{

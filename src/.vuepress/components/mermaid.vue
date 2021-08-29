@@ -14,12 +14,13 @@ export default {
 			m.init()
 		})
 	}
-};
+}
 </script>
 
-<style scoped lang="stylus">
+<style scoped>
 
-.mermaid
-	text-align center
+.mermaid{
+	text-align: center;
+}
 
 </style>

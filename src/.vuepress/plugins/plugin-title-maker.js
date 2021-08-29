@@ -4,6 +4,8 @@ module.exports = function(options={}, context){
 	
 	return {
 		
+		name: "vuepress-plugin-title-maker",
+		
 		extendPageData($page){
 			
 			if($page.regularPath.startsWith("/courses/")){

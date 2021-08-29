@@ -1,3 +1,5 @@
+<SetTitle title="Introduction to Script Programming" />
+
 # Study Guide
 <StudyGuideInfo
     course-name="Introduction to Script Programming"
@@ -19,92 +21,93 @@ Unfortunately, computers do not operate/think the same way as we humans do, so p
 This course does not have any special pre-requisites other than basic math and English.
 
 ## Teachers
-<StudyGuideTeachers
-    :teachers='[{
-        name: "Peter Larsson-Green",
-        photo: "peter-larsson-green.jpeg",
-        roles: ["Course coordinator", "Examiner", "Lecturer", "Lab Assistant"],
-        description: "Has studied and followed the development of the web since 2004 and received his Master of Science in Computer Science at Linköping University in 2014. He has been working as programming teacher (part time) since 2010 at both Linköping University and Jönköping University.",
-        email: "peter.larsson-green@ju.se",
-        phone: "036 - 10 17 35",
-        website: "https://ju.se/en/personinfo.html?sign=LarPet"
-    }, {
-        name: "Alex Sattari",
-        photo: "alex-sattari.jpeg",
-        roles: ["Lab Assistant"],
-        description: "A postdoc from Canada doing research with the help of machine learning.",
-        email: "arsalan.sattari@ju.se",
-        website: "https://ju.se/en/personinfo?sign=SATARS"
-    }]'
+### Peter Larsson-Green
+<Teacher
+    name="Peter Larsson-Green"
+    photo="peter-larsson-green.jpeg"
+    :roles='["Course coordinator", "examiner", "lecturer", "lab assistant"]'
+    description="Has studied and followed the development of the web since 2004 and received his Master of Science in Computer Science at Linköping University in 2014. He has been working as programming teacher (part time) since 2010 at both Linköping University and Jönköping University."
+    email="Peter.Larsson-Green@ju.se"
+    phone="036 - 10 17 35"
+    website="https://ju.se/en/personinfo.html?sign=LarPet"
+/>
+
+### Alex Sattari
+<Teacher
+    name="Alex Sattari"
+    photo="missing.jpeg"
+    :roles='["Lab Assistant"]'
+    description="A postdoc from Canada doing research with the help of machine learning."
+    email="arsalan.sattari@ju.se"
+    website="https://ju.se/en/personinfo?sign=SATARS"
 />
 
 ## Intended Learning Outcomes
 The intended learning outcomes of the course are found in [the course syllabus](course-syllabus/) in force. Below is a table showing how the examination tests cover the intended learning outcomes and which teaching activity helping you learn which intended learning outcome. 
 
 <ILOsActivitiesMapping description="
-
 Display knowledge of how a programming language interacts with the operating system and the underlying hardware.
 -Laboratory work
 -Written examination
 +Recorded lectures
 +Tutorials
 +Lab sessions
-
+---
 Display knowledge about integrated development environments and their usage area.
 -Laboratory work
 +Recorded lectures
 +Tutorials
 +Lab sessions
-
+---
 Display knowledge of common terms and concepts in script programming.
 -Laboratory work
 -Written examination
 +Recorded lectures
 +Tutorials
 +Lab sessions
-
+---
 Display knowledge of common terms and concepts used in object-oriented programming.
 -Laboratory work
 -Written examination
 +Recorded lectures
 +Tutorials
 +Lab sessions
-
+---
 Demonstrate the ability to use common data types and controls structures in a high-level programming language.
 -Laboratory work
 -Written examination
 +Recorded lectures
 +Tutorials
 +Lab sessions
-
+---
 Demonstrate the ability to create interactive console programs in a high-level programming language.
 -Laboratory work
 -Written examination
 +Recorded lectures
 +Tutorials
 +Lab sessions
-
+---
 Demonstrate the ability to develop and implement simple programs and algorithms in a high-level programming language.
 -Laboratory work
 -Written examination
 +Recorded lectures
 +Tutorials
 +Lab sessions
-
+---
 Demonstrate the ability to use object-oriented programming in a high-level programming language.
 -Laboratory work
 -Written examination
 +Recorded lectures
 +Tutorials
 +Lab sessions
-
+---
 Demonstrate the ability to use script programming to create, read and modify files of different types in a high-level programming language.
 -Laboratory work
 -Written examination
 +Recorded lectures
 +Tutorials
 +Lab sessions
-" />
+"/>
 
 ## Learning Activities
 Here are short introduction to the learning activities offered in the course.

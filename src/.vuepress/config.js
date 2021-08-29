@@ -1,3 +1,4 @@
+const path = require('path')
 const moment = require('moment')
 const copyStaticFilesToPublic = require('./copy-static-files-to-public')
 const settingsRetriever = require('./settings-retriever')
@@ -48,20 +49,21 @@ function getSideBarObject(){
 copyStaticFilesToPublic()
 
 module.exports = {
+	bundler: '@vuepress/vite',
 	base: "/course-material/",
+	title: "Course Material",
 	themeConfig: {
 		docsDir: "src",
 		repo: "https://github.com/PeppeL-G/course-material",
-		editLinks: true,
+		editLink: true,
 		editLinkText: 'Improve this page!',
-		lastUpdated: "Last Updated",
-		activeHeaderLinks: false,
-		nav: [{
+		lastUpdatedText: "Last Updated",
+		navbar: [{
 			text: "Home",
 			link: "/"
 		}, {
 			text: "Courses",
-			items: getNavItems(),
+			children: getNavItems(),
 		}, {
 			text: "Get Help",
 			link: "https://github.com/PeppeL-G/course-material/issues"
@@ -69,11 +71,14 @@ module.exports = {
 		sidebarDepth: 2,
 		sidebar: getSideBarObject(),
 	},
-	plugins: [['@vuepress/last-updated', {
-		transformer(timestamp, lang){
-			return moment(timestamp).format('YYYY-MM-DD HH:mm:ss')
-		}
-	}],
-		require('./plugins/plugin-title-maker')
+	plugins: [
+		'@vuepress/git',
+		path.resolve(__dirname, './plugins/plugin-title-maker.js'),
+		[
+			'@vuepress/register-components',
+			{
+				componentsDir: path.resolve(__dirname, './components'),
+			},
+		],
 	],
 }

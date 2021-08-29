@@ -7,6 +7,8 @@ exercise4ShowAfter: 2020-11-13T14:45
 exercise5ShowAfter: 2020-11-20T14:45
 exercise6ShowAfter: 2020-11-27T14:45
 ---
+<SetTitle title="Introduction to Script Programming" />
+
 # Exercises
 On this page you find information about the exercises in the course.
 
@@ -126,10 +128,12 @@ Create a program in a file called `circle-circumference-computer.py` that comput
 When you are done, the output of the program should be as shown in <FigureNumber /> below (if `𝜋` is `3.14`).
 
 <Figure caption="The output the program should produce.">
+
 ```
 This program computes the circumference of a circle.
 The circumference of a circle with radius 7 is 43.96.
 ```
+
 </Figure>
 
 ::: tip Tips
@@ -166,10 +170,12 @@ Even if the program created in Problem 0.1 works, it is not that useful because 
 
 <Figure caption="Visualization of how the program from Problem 0.1 works.">
 <mermaid>
+{{`
 graph LR
-    program["Program"]
-    output("Output")
-    program -- Produces --> output
+	program["Program"]
+	output("Output")
+	program -- Produces --> output
+`}}
 </mermaid>
 </Figure>
 
@@ -179,23 +185,27 @@ When you're done, the program will not only produce output, but also receive inp
 
 <Figure caption="Visualization of how the program works.">
 <mermaid>
+{{`
 graph LR
-    input("Input")
-    program["Program"]
-    output("Output")
-    input -- Is entered by the user to . --> program
-    program -- Produces --> output
+	input("Input")
+	program["Program"]
+	output("Output")
+	input -- Is entered by the user to . --> program
+	program -- Produces --> output
+`}}
 </mermaid>
 </Figure>
 
 <FigureNumber /> below shows sample input/output when running the program.
 
 <Figure caption="Sample input to and the output from the program.">
+
 ```
 This program computes the circumference of a circle.
 Enter the radius of the circle: 9
 The circumference of a circle with radius 9 is 56.52.
 ```
+
 </Figure>
 
 ::: warning Note!
@@ -231,11 +241,13 @@ Create a program in a file called `celsius-to-fahrenheit-converter.py` that asks
 When you are done, the input/output of the program should be as shown in <FigureNumber /> below.
 
 <Figure caption="The input to and the output from the program">
+
 ```
 This program converts Celsius to Fahrenheit.
 Enter the number of Celsius: 10
 10 Celsius is equal to 50 Fahrenheit.
 ```
+
 </Figure>
 
 ::: warning Note!
@@ -261,11 +273,13 @@ Create a program in a file called `fahrenheit-to-celsius-converter.py` that asks
 When you are done, the input/output of the program should be as shown in <FigureNumber /> below.
 
 <Figure caption="The input to and the output from the program">
+
 ```
 This program converts Fahrenheit to Celsius.
 Enter the number of Fahrenheit: 50
 50 Fahrenheit is equal to 10 Celsius.
 ```
+
 </Figure>
 
 ::: warning Note!
@@ -293,6 +307,7 @@ To compute the length of the event you can start by expressing the start time in
 When you are done, the input/output of the program should be as shown in <FigureNumber /> below.
 
 <Figure caption="The input to and the output from the program">
+
 ```
 This program computes the length of an event.
 Enter start hour of the event: 10
@@ -301,6 +316,7 @@ Enter end hour of the event: 12
 Enter end minute of the event: 15
 The length of the event is: 1:30.
 ```
+
 </Figure>
 
 #### Sample answer
@@ -332,6 +348,7 @@ This problem is a continuation of Problem 0.6. This time the start time and end 
 When you are done, the input/output of the program should be as shown in <FigureNumber /> below.
 
 <Figure caption="The input to and the output from the program">
+
 ```
 This program computes the length of an event.
 Enter start hour of the event: 10
@@ -342,6 +359,7 @@ Enter end minute of the event: 15
 Enter end second of the event: 15
 The length of the event is: 1:29:45.
 ```
+
 </Figure>
 
 #### Sample answer
@@ -397,6 +415,7 @@ In Problem 0.2 you created a program that asked the user to enter the radius of 
 When you are done, the input/output of the program should be as shown in <FigureNumber /> below.
 
 <Figure caption="The input to and the output from the program">
+
 ```
 This program computes the circumferences of circles.
 Enter the radius of the circle: 9
@@ -406,6 +425,7 @@ The circumference of a circle with radius 3 is 18.84.
 Enter the radius of the circle: 5
 The circumference of a circle with radius 5 is 31.4.
 ```
+
 </Figure>
 
 #### Sample answer
@@ -467,6 +487,7 @@ The sequence we get back from the `range()` is what we will use to iterate over 
 When you are done, the input/output of the program should be as shown in <FigureNumber /> below.
 
 <Figure caption="The input to and the output from the program">
+
 ```
 This program computes the circumferences of some circles.
 Enter the number of circumferences you want to compute: 4
@@ -479,6 +500,7 @@ The circumference of a circle with radius 5 is 31.4.
 Enter the radius of the circle: 3
 The circumference of a circle with radius 3 is 18.84.
 ```
+
 </Figure>
 
 ::: warning Note!
@@ -525,10 +547,12 @@ After that you have computed the sum of the integers between 0 and 15 and can pr
 When you are done, the input/output of the program should be as shown in <FigureNumber /> below.
 
 <Figure caption="The input to and the output from the program">
+
 ```
 This program computes the sum of the integers between 0 and 15.
 The sum of the integers between 0 and 15 is 120.
 ```
+
 </Figure>
 
 #### Sample answer
@@ -592,11 +616,13 @@ Change the program from the previous exercise to first ask the user which the hi
 When you are done, the input/output of the program should be as shown in <FigureNumber /> below.
 
 <Figure caption="The input to and the output from the program">
+
 ```
 This program computes the sum of the integers between 0 and another integer.
 Enter the other integer: 5
 The sum of the integers between 0 and 5 is 15.
 ```
+
 </Figure>
 
 ::: warning Note!
@@ -802,6 +828,7 @@ Then you have kind of copy-pasted your code and just changed the name of the var
 Whenever you need the use the same functionality (such as computing the average value of two numbers) multiple times it is better to create a function that contains that functionality, as shown in <FigureNumber /> below.
 
 <Figure caption="Sample implementation and usage of the average() function.">
+
 ```python
 def average(x, y):
     return (x + y) / 2
@@ -809,16 +836,19 @@ def average(x, y):
 first_average = average(5, 6)
 second_average = average(8, 3)
 ```
+
 </Figure>
 
 Another benefit with using a function is that you can write tests checking if the code in the function works correctly, as shown in <FigureNumber /> below.
 
 <Figure caption="Code testing if the average() function works as it should.">
+
 ```python
 print(average(2, 2) == 2) # Is True printed?
 print(average(4, 6) == 5) # Is True printed?
 print(average(-10, 10) == 0) # Is True printed?
 ```
+
 </Figure>
 
 With these tests we don't need to run an entire program where the user should enter some input to test if the code works; we just need to run the program containing the code in <FigureNumber previous /> above, and if only `True` is printed on the screen we know that the function seems to work correctly.
@@ -826,10 +856,12 @@ With these tests we don't need to run an entire program where the user should en
 In Problem 2.1 you created a program users can use to compute the circumference of circles. Change the implementation of the program to use a function to compute the circumference of a circle given its radius. Your function can look something like the one shown in <FigureNumber /> below.
 
 <Figure caption="Code for the get_circle_circumference() function.">
+
 ```python
 def get_circle_circumference(radius):
     return # ...
 ```
+
 </Figure>
 
 #### Sample answer
@@ -993,12 +1025,14 @@ In this exercise you will practice on using the following in Python:
 Create a program that asks the user to enter two numbers. The program should then print which of them that is greatest respective smallest. It can look as shown in <FigureNumber /> below. Try to create functions to carry out the computations.
 
 <Figure caption="Sample input to and the output from the program">
+
 ```
 Enter the first number: 9
 Enter the second number: 5
 5 is the smallest.
 9 is the greatest.
 ```
+
 </Figure>
 
 #### Sample answer
@@ -1028,6 +1062,7 @@ print(str(greatest(first_number, second_number))+" is the greatest.")
 Create a program that asks the user to enter three numbers. The program should then print which of them that is greatest respective smallest. It can look as shown in <FigureNumber /> below. Try to create functions to carry out the computations.
 
 <Figure caption="Sample input to and the output from the program">
+
 ```
 Enter the first number: 9
 Enter the second number: 5
@@ -1035,6 +1070,7 @@ Enter the third number: 12
 5 is the smallest.
 12 is the greatest.
 ```
+
 </Figure>
 
 #### Sample answer
@@ -1077,6 +1113,7 @@ print(str(greatest_number)+" is the greatest.")
 Create a program that keeps asking the user to enter an integer until the user enters `quit`. The program should then display the sum of all the integers. It can look as shown in <FigureNumber /> below. 
 
 <Figure caption="Sample input to and the output from the program">
+
 ```
 Enter an integer or quit: 9
 Enter an integer or quit: 5
@@ -1084,6 +1121,7 @@ Enter an integer or quit: 12
 Enter an integer or quit: quit
 The sum of the integers is 26.
 ```
+
 </Figure>
 
 #### Sample answer
@@ -1111,6 +1149,7 @@ print("The sum of the integers is "+str(sum)+".")
 Create a program that keeps asking the user to enter a positive integer until the user enters `quit`. The program should then display the greatest of the entered numbers. It can look as shown in <FigureNumber /> below. Somehow you need to remember the greatest number the user has entered.
 
 <Figure caption="Sample input to and the output from the program">
+
 ```
 Enter an integer or quit: 9
 Enter an integer or quit: 5
@@ -1118,6 +1157,7 @@ Enter an integer or quit: 12
 Enter an integer or quit: quit
 12 is the greatest.
 ```
+
 </Figure>
 
 #### Sample answer
@@ -1146,6 +1186,7 @@ print(str(greatest_number)+" is the greatest.")
 Create a small program that functions as a simple multiplication training program. When the program starts, it should ask a user to enter a multiplication table, and then ask the user for the answers to 10 different multiplications in that multiplication table. It can look as shown in <FigureNumber /> below.
 
 <Figure caption="Sample input to and the output from the program">
+
 ```
 Enter multiplication table: 4
 Enter the product of 4*1: 4
@@ -1157,6 +1198,7 @@ Enter the product of 4*10: 40
 Correct.
 You got 8 of 10 right (80%).
 ```
+
 </Figure>
 
 Extra features you can implement:
@@ -1203,6 +1245,7 @@ else:
 Create a small program that functions as a number guessing game. Start by generating a random integer between 0 and 100, and then the user should guess which number it is until the user guess the right one. If the guess is wrong, let the user know if her guess was too high or too low. It can look as shown in <FigureNumber /> below. 
 
 <Figure caption="Sample input to and the output from the program">
+
 ```
 Guess which number between 0 and 100 I'm thinking about!
 Enter your guess: 20
@@ -1212,6 +1255,7 @@ Too low!
 Enter your guess: 14
 Correct! It took you 3 guesses to find the right number.
 ```
+
 </Figure>
 
 Extra features you can implement:
@@ -1489,6 +1533,7 @@ def group_words(words):
 Create a program the user can use to store the names of her friends (all information lost when the program is closed). It can look as shown in <FigureNumber /> below. 
 
 <Figure caption="Sample input to and the output from the program">
+
 ```
 Enter operation (count/add/view/remove/quit): count
 You have 0 friends.
@@ -1509,6 +1554,7 @@ Enter operation (count/add/view/remove/quit): view
 Bob
 Enter operation (count/add/view/remove/quit): quit
 ```
+
 </Figure>
 
 ::: tip Tips!
@@ -1553,6 +1599,7 @@ while entered_operation != "quit":
 Create a program the user can use to store the names and emails of her friends. It can look as shown in <FigureNumber /> below. 
 
 <Figure caption="Sample input to and the output from the program">
+
 ```
 Enter operation (count/add/view/remove/quit): count
 You have 0 friends.
@@ -1575,6 +1622,7 @@ Enter operation (count/add/view/remove/quit): view
 Bob – bob@gmail.com
 Enter operation (count/add/view/remove/quit): quit
 ```
+
 </Figure>
 
 ::: tip Tips!
@@ -1758,6 +1806,7 @@ Add two new commands: `save` and `load`. These commands should ask the user to e
 It can look as shown in <FigureNumber /> below. 
 
 <Figure caption="Sample input to and the output from the program">
+
 ```
 Enter operation: add
 Enter name: Alice
@@ -1779,6 +1828,7 @@ Enter operation: count
 You have 2 friends.
 Enter operation: quit
 ```
+
 </Figure>
 
 #### Sample answer

@@ -1,3 +1,5 @@
+<SetTitle title="Android Development" />
+
 # Lectures
 Material for the lectures will be uploaded here during the course.
 

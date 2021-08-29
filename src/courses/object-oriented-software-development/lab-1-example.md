@@ -1,3 +1,5 @@
+<SetTitle title="Object-oriented Software Development" />
+
 # Lab 1 Example
 Here's a short example of another system designed in a similar way as described in Lab 1. The system here is a simple Ping Pong game (each user is expected to have their own instance of the system) users can play either against each other (over Bluetooth) or the computer . There's also a highscore system for playing against the computer, and there should exists three different level of difficulties (easy, medium and hard) on the computer.
 
@@ -152,18 +154,20 @@ A sequence diagram for <u>Play VS Player as Host</u> is found in <FigureNumber /
 
 <Figure caption="Sequence diagram for Play VS Player as Host.">
 <mermaid>
+{{`
 sequenceDiagram
-  participant User
-  participant Device
-  User->>Device: Play Bluetooth game as host
-  Device->>User: Please turn on Bluetooth
-  User->>Device: Turn on Bluetooth
-  loop Until the user selects device
-    Device->>Device: Search for devices
-    Device->>User: Found devices
-  end
-  User->>Device: Selected device
-  Device->>Device: Connect to selected device
-  Device->>User: Play!
+	participant User
+	participant Device
+	User->>Device: Play Bluetooth game as host
+	Device->>User: Please turn on Bluetooth
+	User->>Device: Turn on Bluetooth
+	loop Until the user selects device
+		Device->>Device: Search for devices
+		Device->>User: Found devices
+	end
+	User->>Device: Selected device
+	Device->>Device: Connect to selected device
+	Device->>User: Play!
+`}}
 </mermaid>
 </Figure>

@@ -1,3 +1,5 @@
+<SetTitle title="Introduction to Script Programming" />
+
 # Time Plan
 The <span style="background-color: aqua; display: inline-block; padding: 0 8px; font-weight: bold;">Exercise</span> and <span style="background-color: yellow; display: inline-block; padding: 0 8px; font-weight: bold;">Lab</span> columns indicate what you are expected to work on each day. 
 
