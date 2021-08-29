@@ -692,7 +692,7 @@ Put figures (often) at the beginning of the text. They give a good understanding
 
 Figure 5 below is a screenshoot of the getAllBlogposts() function.
 
-![Code in image](static-files/code-as-image.png)
+![Code in image](./code-as-image.png)
 
 </template>
 <template v-slot:example-1-good>

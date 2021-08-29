@@ -50,7 +50,7 @@ In this course you will learn in more detail how the communication between clien
 <FigureNumber /> below displays an overview of how it can work. 
 
 <Figure caption="Common web application architecture.">
-<mermaid>
+<Mermaid>
 {{`
 graph LR
 	users["Users"]
@@ -67,13 +67,13 @@ graph LR
 	webBrowser -- HTTP/REST API --> webApp
 	webApp -- SQL --> db
 `}}
-</mermaid>
+</Mermaid>
 </Figure>
 
 At course start you are expected to possess knowledge corresponding to the pre-requisite courses shown in <FigureNumber /> below. 
 
 <Figure caption="Prerequisites for this course.">
-<mermaid>
+<Mermaid>
 {{`
 graph TD
 	wuid[Web and User Interface Design 7.5 Credits]
@@ -86,7 +86,7 @@ graph TD
 	csp --> awa
 	awa --> csc
 `}}
-</mermaid>
+</Mermaid>
 </Figure>
 
 ## Intended Learning Outcomes
@@ -157,8 +157,8 @@ Information about the **Project Work** can be found on the page [Project Instruc
 
 **Written Examination** is a [Digital Exam](https://ju.se/student/en/digital-exam.html) in Inspera at the end of the course. You need to register for it in advance per the instructions at [https://ju.se/student/en/studies/examination.html](https://ju.se/student/en/studies/examination.html). Sample answers are only published for the ordinary exam, not the re-exams. For the re-exams, come and talk with the course coordinator if there are any answers you are unsure of.
 
-* [Sample answers to the exam 2019-10-15](static-files/exam-2019-10-15-sample-answers.txt)
-* [Sample answers to the exam 2020-08-13](static-files/exam-2020-08-13-sample-answers.txt)
+* [Sample answers to the exam 2019-10-15](files/exam-2019-10-15-sample-answers.txt)
+* [Sample answers to the exam 2020-08-13](files/exam-2020-08-13-sample-answers.txt)
 
 ### Conditions for the examined elements
 Conditions for the **Laboratory Work** can be found on the page [Lab Instructions](lab-instructions/).

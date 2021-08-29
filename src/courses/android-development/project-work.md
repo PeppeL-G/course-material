@@ -21,7 +21,7 @@ As project work, you should create a non-elementary Android application for smar
 
 The [Project Grading Guidelines](project-grading-guidelines/) page contains some guidelines for how your work will be graded. We recommend you read through it every now and then to double check that you fulfill the requirements for the grade you are aiming for.
 
-In your work you should also write a report explaining how your application is implemented. The report will be a living document throughout the course, meaning that you will continuously improve and add content to it as the course proceeds. The Word file [project-report-template.docx](static-files/project-report-template.docx) contains more information about what the report should cover.
+In your work you should also write a report explaining how your application is implemented. The report will be a living document throughout the course, meaning that you will continuously improve and add content to it as the course proceeds. The Word file [project-report-template.docx](files/project-report-template.docx) contains more information about what the report should cover.
 
 ## Part 1: Joining a project group
 The project work should be carried out in groups of 3 students each. Let the examiner know who you are working with by joining one of the [Project Groups](https://ju.instructure.com/courses/3421/groups#tab-3281) on Canvas.
@@ -85,7 +85,7 @@ The application you create must make use of at least one other device in additio
 
 The application may also not be too simple. For example, creating the simplest possible all-to-all chat application synchronizing chat messages using Firestore will not be accepted. But often ideas like this one can quite easily be made more complex by adding functionalities to it. For example, in this case one could also add support for one-to-one chats, group chats, friends chat, etc.
 
-Describe your application by starting to write on [the project report](static-files/project-report-template.docx). Especially, visualize which components your solution consists of (android device running your application + at least one other device) and how they make use of each other. You should especially write as much as possible for now in the Introduction chapter and the Overview chapter. 
+Describe your application by starting to write on [the project report](files/project-report-template.docx). Especially, visualize which components your solution consists of (android device running your application + at least one other device) and how they make use of each other. You should especially write as much as possible for now in the Introduction chapter and the Overview chapter. 
 
 Note that your report is a living document throughout the course. What you write now will most likely be changed later when you come up with ideas for improvements, so do not spend too much time on details now. Just write it detailed enough so the reader gets a rough understanding of everything, e.g. start out simple. But write it properly (sentences, upper/lower case characters, etc.), of course!
 

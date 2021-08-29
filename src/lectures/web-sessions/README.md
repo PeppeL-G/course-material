@@ -57,9 +57,8 @@ If you use a counter to keep track of how many times a user has failed to login 
 
 ## Using sessions in practise
 
-
-<Tabs remember-selected-key="framework">
-<Tab title="Express">
+:::: code-group
+::: code-group-item Express
 
 Express does not have built-in support for sessions, but it can easily be added through a middleware function from the [express-session](https://github.com/expressjs/session) package.
 
@@ -115,8 +114,8 @@ The `resave` option...
 
 The `saveUninitialized` option...
 
-</Tab>
-<Tab title="PHP">
+:::
+::: code-group-item PHP
 
 PHP has built-in support for sessions, but to use them you first need to "activate them" by calling the function `session_start()`. You need to call this function each time you receive an HTTP request, and it will create a new session for the client if the client doesn't have one, or re-use the existing one the client already have.
 
@@ -147,8 +146,8 @@ The first time a user visits the page, she will get back the text *You have visi
 
 :::
 
-</Tab>
-</Tabs>
+:::
+::::
 
 ## A Note on Stateless
 Depending on where you store your sessions, your web application either become statefull or remain stateless, and this affects how hard it will be to scale your web application in the future. We will not get into the details of scaling here, but be aware of that if the sessions are stored on the same server that is running your web application (for example in files, which is the case when using the default configuration of PHP), your application becomes statefull and a bit harder to scale. If you instead store the sessions in a database running on a separate sever, your web application remain stateless and is a bit easier to scale.

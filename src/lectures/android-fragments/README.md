@@ -23,8 +23,8 @@ With fragments we can re-use a part of the GUI in different activities or swap o
 ### Static counter fragment
 The `CounterFragment` contains a counter button starting on 0. Its state is retained across runtime configuration changes. Three instances of it are statically inserted into the `MainActivity` using the `<fragment>` tag.
 
-<Tabs remember-selected-key="example-742">
-<Tab title="MainActivity.kt">
+:::: code-group
+::: code-group-item MainActivity.kt
 
 ```kotlin
 class MainActivity : AppCompatActivity() {
@@ -37,8 +37,8 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-</Tab>
-<Tab title="res/layout/activity_main.xml">
+:::
+::: code-group-item res/layout/activity_main.xml
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -70,8 +70,8 @@ class MainActivity : AppCompatActivity() {
 </LinearLayout>
 ```
 
-</Tab>
-<Tab title="CounterFragment.kt">
+:::
+::: code-group-item CounterFragment.kt
 
 ```kotlin
 class CounterFragment : Fragment() {
@@ -123,8 +123,8 @@ class CounterFragment : Fragment() {
 }
 ```
 
-</Tab>
-<Tab title="res/layout/fragment_counter.xml">
+:::
+::: code-group-item res/layout/fragment_counter.xml
 
 ```xml
 <LinearLayout
@@ -142,14 +142,14 @@ class CounterFragment : Fragment() {
 </LinearLayout>
 ```
 
-</Tab>
-</Tabs>
+:::
+::::
 
 ### Dynamic countdown fragment
 The `CounterFragment` functions as a countdown. The start value is configurable and retained across runtime configuration changes using the arguments Bundle. Its state is retained across runtime configuration changes using the savedInstanceState Bundle. Three instances of it are dynamically inserted into the `MainActivity`.
 
-<Tabs remember-selected-key="example-832">
-<Tab title="MainActivity.kt">
+:::: code-group
+::: code-group-item MainActivity.kt
 
 ```kotlin
 class MainActivity : AppCompatActivity() {
@@ -172,8 +172,8 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-</Tab>
-<Tab title="res/layout/activity_main.xml">
+:::
+::: code-group-item res/layout/activity_main.xml
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -202,8 +202,8 @@ class MainActivity : AppCompatActivity() {
 </LinearLayout>
 ```
 
-</Tab>
-<Tab title="CounterFragment.kt">
+:::
+::: code-group-item CounterFragment.kt
 
 ```kotlin
 class CounterFragment : Fragment() {
@@ -271,8 +271,8 @@ class CounterFragment : Fragment() {
 }
 ```
 
-</Tab>
-<Tab title="res/layout/fragment_counter.xml">
+:::
+::: code-group-item res/layout/fragment_counter.xml
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -305,5 +305,5 @@ class CounterFragment : Fragment() {
 </LinearLayout>
 ```
 
-</Tab>
-</Tabs>
+:::
+::::

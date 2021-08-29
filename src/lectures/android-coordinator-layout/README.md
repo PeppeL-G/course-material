@@ -20,8 +20,8 @@ The `CoordinatorLayout` is primarily for coordinating views through behaviors ad
 ### Behavior
 In the `Activity` below, each click on the `Button` moves the first `TextView` to the right a little bit.
 
-<Tabs>
-<Tab title="Result">
+:::: code-group
+::: code-group-item Result
 
 <Smartphone>
   <div>Some text</div>
@@ -29,8 +29,8 @@ In the `Activity` below, each click on the `Button` moves the first `TextView` t
   <button onclick="this.previousElementSibling.previousElementSibling.innerHTML = '&nbsp;'+this.previousElementSibling.previousElementSibling.innerHTML">Move first text</button>
 </Smartphone>
 
-</Tab>
-<Tab title="MainActivity.kt">
+:::
+::: code-group-item MainActivity.kt
 
 ```kt
 class MainActivity : AppCompatActivity() {
@@ -55,8 +55,8 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-</Tab>
-<Tab title="activity_layout.xml">
+:::
+::: code-group-item activity_layout.xml
 
 ```xml
 <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -88,13 +88,13 @@ class MainActivity : AppCompatActivity() {
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 ```
 
-</Tab>
-</Tabs>
+:::
+::::
 
 If we want the second `TextView` to be moved the same way as the first `TextView`, we can add a `Behavior` to it that tells the `CoordinatorLayout` that it depends on the first `TextView`. Then the `CoordinatorLayout` will notify the `Behavior` each time the first `TextView` is moved, and the `Behavior` can in turn change the position of the second `TextView` it has been added to, as in the `Activity` below.
 
-<Tabs>
-<Tab title="Result">
+:::: code-group
+::: code-group-item Result
 
 <Smartphone>
   <div>Some text</div>
@@ -102,8 +102,8 @@ If we want the second `TextView` to be moved the same way as the first `TextView
   <button onclick="this.previousElementSibling.previousElementSibling.innerHTML = '&nbsp;'+this.previousElementSibling.previousElementSibling.innerHTML; this.previousElementSibling.innerHTML = '&nbsp;'+this.previousElementSibling.innerHTML">Move first text</button>
 </Smartphone>
 
-</Tab>
-<Tab title="MainActivity.kt">
+:::
+::: code-group-item MainActivity.kt
 
 ```kt
 // Same as before.
@@ -128,8 +128,8 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-</Tab>
-<Tab title="activity_layout.xml">
+:::
+::: code-group-item activity_layout.xml
 
 ```xml
 <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -162,8 +162,8 @@ class MainActivity : AppCompatActivity() {
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 ```
 
-</Tab>
-<Tab title="MyBehavior.kt">
+:::
+::: code-group-item MyBehavior.kt
 
 ```kt
 // The type of view we specify in the super class should match the type of view the behavior can be added to.
@@ -208,8 +208,8 @@ class MyBehavior(context: Context, attrs: AttributeSet) :
 }
 ```
 
-</Tab>
-</Tabs>
+:::
+::::
 
 Often we don't create our own behaviors (the code for behaviors usually get quite complicated), but instead use some behaviors others have created for us. The Android support library has some for different type of views.
 
@@ -218,8 +218,8 @@ The `CoordinatorLayout` has one new way to position its views: using anchors. Yo
 
 Before we created our own `Behavior` to make one `TextView` follow another `TextView` as it moved. This is more or less what anchors are used for, so we could achieve similar functionality using the `layout_anchor*` attributes, as shown in the `Activity` below.
 
-<Tabs>
-<Tab title="Result">
+:::: code-group
+::: code-group-item Result
 
 <Smartphone>
   <div>Some text</div>
@@ -227,8 +227,8 @@ Before we created our own `Behavior` to make one `TextView` follow another `Text
   <button onclick="this.previousElementSibling.previousElementSibling.innerHTML = '&nbsp;'+this.previousElementSibling.previousElementSibling.innerHTML; this.previousElementSibling.innerHTML = '&nbsp;'+this.previousElementSibling.innerHTML">Move first text</button>
 </Smartphone>
 
-</Tab>
-<Tab title="MainActivity.kt">
+:::
+::: code-group-item MainActivity.kt
 
 ```kt
 // Same as before.
@@ -253,8 +253,8 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-</Tab>
-<Tab title="activity_layout.xml">
+:::
+::: code-group-item activity_layout.xml
 
 ```xml
 <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -291,5 +291,5 @@ class MainActivity : AppCompatActivity() {
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 ```
 
-</Tab>
-</Tabs>
+:::
+::::

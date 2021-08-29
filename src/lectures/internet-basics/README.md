@@ -26,7 +26,7 @@ You have probably heard about and used *the Internet*, but what is it really? An
 The Internet can be seen as a large network that spans across most of the planet (i.e. where people live). This is a simplified view of how it works, but that view is accurate enough for programmers to learn how to create applications using it. By connecting your computer to the Internet, your computer can communicate with other computers connected to the Internet. This is visualized in <FigureNumber /> below.
 
 <Figure caption="A visualization of the Internet as a large network computers can connect to. Computer 4 is not connected to the network, and hence can't use the Internet to communicate with the other computers.">
-<mermaid>
+<Mermaid>
 graph TD
     i((Internet))
     c1[Computer 1]---i
@@ -35,7 +35,7 @@ graph TD
     i---c5[Computer 5]
     i---c6[Computer 6]
     c4[Computer 4]
-</mermaid>
+</Mermaid>
 </Figure>
 
 It's not wrong to say that two computers communicate with each other, but it's more accurate to say that it's the applications running on the computers that communicate with each other.

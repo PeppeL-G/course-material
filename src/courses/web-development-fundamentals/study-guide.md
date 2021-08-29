@@ -14,7 +14,7 @@
 In this course you will learn what the web is and how you can create web applications running on it. <FigureNumber /> below displays the architecture of a typical web application. 
 
 <Figure caption="Common web application architecture.">
-<mermaid>
+<Mermaid>
 {{`
 graph LR
 	users["Users"]
@@ -31,7 +31,7 @@ graph LR
 	webBrowser -- HTTP --> webApp
 	webApp -- SQL --> db
 `}}
-</mermaid>
+</Mermaid>
 </Figure>
 
 More specifically you will learn how to create a web application to which a single user can login to modify the resources on it, such as blog posts and guestbook posts. To accomplish this your web application will use an SQLite database to store the resources and the web framework Express to handle incoming HTTP requests. To avoid spending too much time on the graphical design of the web application you will also learn how to use a CSS framework with pre-styled graphical user interface components you can use. Your web application must of course also be secure, so you will also learn about common vulnerabilities in web applications and how you can prevent them.
@@ -40,7 +40,7 @@ More specifically you will learn how to create a web application to which a sing
 At course start you are expected to already possess knowledge corresponding to the prerequisite courses shown in <FigureNumber/> below. 
 
 <Figure caption="Prerequisites for this course.">
-<mermaid>
+<Mermaid>
 {{`
 graph TD
 	introComp[Introduction to Computing 7.5 Credits]
@@ -58,7 +58,7 @@ graph TD
 	dalg --> oop
 	oop --> webDevFund
 `}}
-</mermaid>
+</Mermaid>
 </Figure>
 
 ## Teachers

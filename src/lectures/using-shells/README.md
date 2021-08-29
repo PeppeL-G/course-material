@@ -81,7 +81,7 @@ A computer usually contains many files, and instead of having them all in a sing
 <FigureNumber /> shows an example of some files and folders stored on a computer.
 
 <Figure caption="A visualization of how files can be structured in folders. ▭ are files, ♢ are folders. Arrows point to the files and sub-folders a folder contains.">
-<mermaid>
+<Mermaid>
 graph TD
     root{"/"}
     d1{"school-work"}
@@ -98,7 +98,7 @@ graph TD
     d2 --> notes1
     d2 --> notes2
     d3 --> notes3
-</mermaid>
+</Mermaid>
 </Figure>
 
 ::: tip Folder or Directory?

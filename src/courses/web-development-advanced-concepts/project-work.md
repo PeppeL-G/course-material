@@ -41,7 +41,7 @@ Use whichever type of resources you want in addition to accounts. Examples are:
 * *Blog posts* logged in users can create and that other logged in users can write *comments* on.
 * *Todo lists* logged in users can create and add *todo items* to.
 
-Implement the platform using the technologies taught in this course. In addition to implementing the web application, you should also write a report describing how the platform works and how it has been implemented. The file [project-report-template.docx](static-files/project-report-template.docx) contains a template with further instructions on this. Your report will be a living document throughout the course, meaning that you will continuously improve/add content to it. 
+Implement the platform using the technologies taught in this course. In addition to implementing the web application, you should also write a report describing how the platform works and how it has been implemented. The file [project-report-template.docx](files/project-report-template.docx) contains a template with further instructions on this. Your report will be a living document throughout the course, meaning that you will continuously improve/add content to it. 
 
 On the [Project Grading Guidelines](./project-grading-guidelines/) page you find some guidelines for how your project work will be graded. You are recommended to read through it every now and then.
 
@@ -344,7 +344,7 @@ Implement the website using a three-layered architecture:
 <FigureNumber /> below is a visualization of a three-layered architecture.
 
 <Figure caption="A three-layered architecture. The Presentation Layer is the one receiving HTTP requests from clients, to carry them out is uses the Business Logic Layer, and so on.">
-<mermaid>
+<Mermaid>
 {{`
 graph LR
 	wb[Web Browser]
@@ -359,12 +359,12 @@ graph LR
 	bll --> dal
 	dal --SQL--> db
 `}}
-</mermaid>
+</Mermaid>
 </Figure>
 
 There exists different ways one can separate the code into these three layers. The simplest way is probably to just create three different folders, one for each layer, and then put all code belonging to a layer in the corresponding folder.
 
-To help you get started you can use the skeleton code available in the ZIP file [the-community.zip](static-files/the-community.zip).
+To help you get started you can use the skeleton code available in the ZIP file [the-community.zip](files/the-community.zip).
 
 On your platform, users should at least be able to create new resources and to browse and view existing resources. You do not need to implement update and delete functionality; that is an extra task you can complete at the end of the course if you have time for it. You neither need to implement authorization/login functionality now. That is the next part of the project work. 
 
@@ -381,7 +381,7 @@ When the web application receives a successful sign in request from a client it 
 The most common used approach to scaling web applications is by running multiple instances of them and use a load balancer to distribute the load (the HTTP requests) between them, as seen in <FigureNumber /> below. Each instance can for example run in its own Docker container or on its own server. When the load increases, we just launch more instances to handle it, and when the load decreases, we just remove some of the instances (so we don't need to pay for having servers up and running that don't do any work).
 
 <Figure caption="A common used architecture for scaling. The Load Balancer receives HTTP requests from Clients and then forwards them to (one of) the Web Application Instances.">
-<mermaid>
+<Mermaid>
 {{`
 graph LR
 	clients[Clients]
@@ -395,7 +395,7 @@ graph LR
 	lb --HTTP--> wai2 --SQL-->db
 	lb --HTTP--> wain --SQL-->db
 `}}
-</mermaid>
+</Mermaid>
 </Figure>
 
 With this architecture, if the sessions are stored locally in the web application instances, then each clients' HTTP request must be forwarded to the same instance all the time, because it is only that instance that have access to the client's session. This can be achieved with a technique called sticky sessions (the load balancer tells the client to create a cookie specifying which web application instance it should forward the requests from that particular client to), but a solution that is easier to implement is to simply store the sessions in the database. This works since all web application instances are connected to the same database, so they store the sessions at the same place. However, fetching the session from the database for each request will make it take a little bit longer to carry out the requests, so this solution is not necessarily the best one.
@@ -643,7 +643,7 @@ Use whichever ORM you want, but [Sequelize](https://sequelize.org/) is quite sim
 When you're done your architecture could look like the one shown in <FigureNumber /> below, but when running the application only one of the Data Access Layers will be used.
 
 <Figure caption="Current architecture.">
-<mermaid>
+<Mermaid>
 {{`
 graph LR
 	wb[Web Browser]
@@ -660,7 +660,7 @@ graph LR
 	bll --> dalMy --SQL--> dbMy
 	bll --> dalPost --SQL--> dbPost
 `}}
-</mermaid>
+</Mermaid>
 </Figure>
 
 ## Part 8: Adding a REST API
@@ -678,7 +678,7 @@ Users can use the platform on their smartphones through the web browser on it, b
 However, unlike the web application, a native smartphone application can't communicate directly with our database. One need to know the username and password to the database to use it, and we can't put that in a native smartphone application, because then any hacker would be able to retrieve it from the smartphone application after they have downloaded it. Then they could login to the database and change it however they please. Instead we will add a REST API to our web application, and the native application should be able to store/retrieve/update/delete data in the database through it. The platform will be as shown in <FigureNumber /> below. 
 
 <Figure caption="Overview of the platform.">
-<mermaid>
+<Mermaid>
 {{`
 graph LR
 	wb[Web Browser]
@@ -689,7 +689,7 @@ graph LR
 	nsa --HTTP REST API JSON-->wa
 	wa --SQL-->db
 `}}
-</mermaid>
+</Mermaid>
 </Figure>
 
 The difference between the way the web browser and the native smartphone application communicates with the web application will primarily be the data format they use. Both will communicate with the web application using HTTP, but the web application will send data (submitted forms) in the data format `application/x-www-form-urlencoded` and receive back HTML code, while the native smartphone application will send and receive in the data format `application/json` (JSON), which is a much simpler data format.
@@ -697,7 +697,7 @@ The difference between the way the web browser and the native smartphone applica
 The REST API can be implemented as an additional Presentation Layer in the web application, as shown in <FigureNumber /> below. Since the users who use the platform through the native smartphone application should be able to do the same thing as users who use the platform through the web browser, we should not need to make that much changes to the code in the business logic layer nor the data access layer (but we might need to add code). You should be able to re-use most of the functionalities from these layers.
 
 <Figure caption="Current architecture (with one Data Access Layer).">
-<mermaid>
+<Mermaid>
 {{`
 graph LR
 	wb[Web Browser]
@@ -713,7 +713,7 @@ graph LR
 	nsa --HTTP REST API JSON--> plr --> bll
 	bll --> dal --SQL--> db
 `}}
-</mermaid>
+</Mermaid>
 </Figure>
 
 Now the REST API can run as its own Express application in one container, and the Website runs as an Express application in its own container, and these can scale independently of each other. If you prefer, you can run both Presentation Layers in the same container. Then each Presentation Layer can export it's own Express Application object which then is used by a fourth layer (which also is an Express application). See the documentation for [app.use()](https://expressjs.com/en/4x/api.html#app.use) to learn how one Express Application object can make use of other Express Application objects.

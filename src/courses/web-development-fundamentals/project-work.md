@@ -34,7 +34,7 @@ Avoid using client-side JavaScript. If you insist on using client-side JavaScrip
 * Your __entire__ website must work for users who have JavaScript disabled in their web browser (use client-side JavaScript only to enhance the browsing experience for the users who have JavaScript enabled in their web browsers).
 :::
 
-In addition to implementing the website, you should also write a report describing the implementation of the website. The file [project-report-template.docx](static-files/project-report-template.docx) contains a template with further instructions on this. Your report will be a living document throughout the course (meaning that you will write it as the course run and continuously improve it). 
+In addition to implementing the website, you should also write a report describing the implementation of the website. The file [project-report-template.docx](files/project-report-template.docx) contains a template with further instructions on this. Your report will be a living document throughout the course (meaning that you will write it as the course run and continuously improve it). 
 
 The page [Project Grading Guidelines](project-grading-guidelines/) contains guidelines for how your work will be graded. You are strongly recommended to read through it every now and then.
 
@@ -87,7 +87,7 @@ Your first task is to specify:
 * The functionality of the website (which different type of resources it consists of and what you/anyone can do with them).
 * What the graphical user interface (GUI) should look like.
 
-Your decisions should be described in the project report, so in this part of the project work, you will not do any programming, but only work on your report. A good way to describe the functionalities is by sketching what the GUI will look like in the end. Then the reader can easily see all the functionality just by looking at pictures. An example of that is shown in [project-report-template.docx](static-files/project-report-template.docx).
+Your decisions should be described in the project report, so in this part of the project work, you will not do any programming, but only work on your report. A good way to describe the functionalities is by sketching what the GUI will look like in the end. Then the reader can easily see all the functionality just by looking at pictures. An example of that is shown in [project-report-template.docx](files/project-report-template.docx).
 
 Designing a website with a user-friendly GUI is no simple task. Therefore, designers have created CSS frameworks that makes it easy for people who are not good at design to create GUIs that are user-friendly. These frameworks primarily consist of components one can use to implement the GUI (such as one component representing a form, another one representing a menu, a third one representing an article, etc.). Since you have to use a CSS framework in your project work, you are recommended to now select which CSS framework you are going to use, and then design your website using the available components in that framework.
 
@@ -127,7 +127,7 @@ We recommend that your first sub-goal is to implement the graphical user interfa
 Implementing a prototype means it's OK to take various shortcuts. For example, if you have a blog on your website and you in the end want to have one page that displays all blog posts, and clicking on one of them takes you to a new page that displays all info about the blog post that was clicked, as shown in <figureNumber /> below.
 
 <Figure caption="Fully functional website.">
-<mermaid>
+<Mermaid>
 {{`
 flowchart LR
 	subgraph blogposts["Page /blogposts"]
@@ -148,13 +148,13 @@ flowchart LR
 	link2 -- Click --> blogpost2
 	link3 -- Click --> blogpost3
 `}}
-</mermaid>
+</Mermaid>
 </Figure>
 
 Then in the prototype, you can hardcode three resources, and no matter which one that is clicked, the user comes to a page showing all info about the second resource, as shown in <FigureNumber /> below.
 
 <Figure caption="Prototype of website.">
-<mermaid>
+<Mermaid>
 {{`
 flowchart LR
 	subgraph blogposts["Page blogposts.html"]
@@ -169,7 +169,7 @@ flowchart LR
 	link2 -- Click --> blogpost2
 	link3 -- Click --> blogpost2
 `}}
-</mermaid>
+</Mermaid>
 </Figure>
 
 And in the end you might want some links only to be shown when the user is logged in, but for the prototype it's OK to always display all links.
@@ -342,7 +342,7 @@ Storing data in variables works, but it is usually a bad solution for several re
 Most web applications instead store data in a relational database, such as MySQL. Relational databases store the data in secondary storage (i.e. the hard drive), where it will persist even after the computer is shut down. Usually, the database runs on a server separate from the server the web application runs on, as shown in <FigureNumber/> below. 
 
 <Figure caption="Common web application architecture.">
-<mermaid>
+<Mermaid>
 {{`
 graph LR
 	subgraph "Client"
@@ -357,7 +357,7 @@ graph LR
 	webBrowser -- HTTP --> webApplication
 	webApplication -- SQL --> db
 `}}
-</mermaid>
+</Mermaid>
 </Figure>
 
 Having the database running on a separate server from the web application (instead of on the same server) has a couple of advantages:
@@ -368,7 +368,7 @@ Having the database running on a separate server from the web application (inste
 However, setting up a database on a separate server is not straightforward and takes time, so in this course we will instead run the database on the same server as the web application, as shown in <FigureNumber/> below.
 
 <Figure caption="Web application architecture with only one server.">
-<mermaid>
+<Mermaid>
 {{`
 graph LR
 	subgraph Client
@@ -381,7 +381,7 @@ graph LR
 	webBrowser -- HTTP --> webApplication
 	webApplication -- SQL --> db
 `}}
-</mermaid>
+</Mermaid>
 </Figure>
 
 Furthermore, we will use SQLite as our database, and it will not run as a separate process, but part of the process executing our web application. This makes it very easy to use, but will be a bottleneck for scaling (but remember, [premature optimization is the root of all evil](https://stackify.com/premature-optimization-evil/)). 

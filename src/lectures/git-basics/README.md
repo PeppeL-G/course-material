@@ -52,8 +52,8 @@ Since the name of the `.git` folder starts with a dot, most file explorers don't
 :::
 
 ::: tip Example
-<Tabs remember-selected-key="selected-os">
-<Tab title="Windows PowerShell">
+:::: code-group
+::: code-group-item Windows PowerShell
 
 ```powershell
 # Which directory are we currently standing in?
@@ -73,15 +73,15 @@ $ dir -Name -Force
 .git
 ```
 
-</Tab>
-<Tab title="Linux">
+:::
+::: code-group-item Linux
 
 ```bash
 # TODO
 ```
 
-</Tab>
-</Tabs>
+:::
+::::
 :::
 
 ### Commits (versions)
@@ -117,8 +117,8 @@ When using the various `git` commands, it will often tell you that you are worki
 
 In the previous example we had just setup a new Git repository for an empty project folder. Now, let us create and change some files in our project folder.
 
-<Tabs remember-selected-key="selected-os">
-<Tab title="Windows PowerShell">
+:::: code-group
+::: code-group-item Windows PowerShell
 
 ```powershell
 # What is the current status of our source files?
@@ -250,15 +250,15 @@ On branch master
 nothing to commit, working tree clean
 ```
 
-</Tab>
-<Tab title="Linux">
+:::
+::: code-group-item Linux
 
 ```bash
 # TODO...
 ```
 
-</Tab>
-</Tabs>
+:::
+::::
 
 :::
 
@@ -274,8 +274,8 @@ To view all the commits in the repository, you can use the command `git log`.
 
 ::: tip Example (continuation of previous example)
 
-<Tabs remember-selected-key="selected-os">
-<Tab title="Windows PowerShell">
+:::: code-group
+::: code-group-item Windows PowerShell
 
 ```powershell
 # Show all commits.
@@ -293,15 +293,15 @@ Date:   Wed Apr 24 11:21:50 2019 +0200
     The first commit.
 ```
 
-</Tab>
-<Tab title="Linux">
+:::
+::: code-group-item Linux
 
 ```bash
 # TODO
 ```
 
-</Tab>
-</Tabs>
+:::
+::::
 :::
 
 ### Switching versions
@@ -310,29 +310,6 @@ To view a specific version of the project, you simply tell Git *Show me the file
 ::: warning Note
 You can't use the command `git reset XXX` if you have made changes to the source files you haven't committed yet (because then those changes would be lost).
 :::
-
-<!-- TODO
-
-::: tip Example (continuation of previous example)
-<Tabs remember-selected-key="selected-os">
-<Tab title="Windows PowerShell">
-
-```powershell
-# TODO
-```
-
-</Tab>
-<Tab title="Linux">
-
-```bash
-# TODO
-```
-
-</Tab>
-</Tabs>
-:::
-
--->
 
 ### The HEAD pointer
 In Git, each repository also contains a pointer called HEAD. It points to the branch you are currently working on, but since we avoid introducing branches in this lecture, you can for now see it as that the HEAD pointer points to the last commit you've created/the commit you are currently working on. That's how Git knows which the "previous commit" should be when you create a new commit: it simply uses the commit the HEAD pointer points to as the previous commit, and then when you create a new commit it changes the HEAD pointer to point to the newly created commit.

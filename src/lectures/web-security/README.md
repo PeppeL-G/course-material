@@ -90,20 +90,20 @@ With proper protection, the search form in the previous example would work like 
 <p id="rrrr"></p>
 :::
 
-<Tabs remember-selected-key="lang-framework">
-<Tab title="Node.js/Express">
+:::: code-group
+::: code-group-item Node.js/Express
 
 <p v-pre>
 When you use `request.send("Input from a client.")` you are responsible for escaping the input yourself. When you pass input to a view, the view engine usually escapes the data for you. For example, when using Handlebars as your view engine, data you insert into the view using `{{expression}}` will escape the HTML code in `expression`. This is usually what you want to happen, but if you for some reason don't want that, you can use `{{{expression}}}`, which won't escape the HTML code in `expression`, but then you are responsible to make sure that no XSS vulnerability exists.
 </p>
 
-</Tab>
-<Tab title="PHP">
+:::
+::: code-group-item PHP
 
 PHP has a function called [htmlspecialchars()](https://www.php.net/manual/en/function.htmlspecialchars.php) you can use to escape HTML code.
 
-</Tab>
-</Tabs>
+:::
+::::
 
 ## Cross-Site Request Forgery (CSRF)
 ### Vulnerability
@@ -146,8 +146,8 @@ Below you can change the URI and see how the query to the database changes (requ
 ### Protection
 Don't use input from the client (a query string parameter, a cookie, the body of the request, a dynamic URI parameter, etc.) to dynamically generate SQL queries sent to the database. Instead, use placeholders for dynamic values in the query, and pass the values separately to the database.
 
-<Tabs remember-selected-key="lang-framework">
-<Tab title="Node.js/Express/SQLite 3">
+:::: code-group
+::: code-group-item Node.js/Express/SQLite 3
 
 ```js
 app.get("/accounts/:ACCOUNT_ID", function(request, response){
@@ -162,8 +162,8 @@ app.get("/accounts/:ACCOUNT_ID", function(request, response){
 })
 ```
 
-</Tab>
-<Tab title="PHP">
+:::
+::: code-group-item PHP
 
 Using the old (now deprecated) `mysql_***()` functions, you needed to escape untrusted values yourself by calling the function [mysql_real_escape_string()](https://www.php.net/manual/en/function.mysql-real-escape-string.php):
 
@@ -193,5 +193,5 @@ mysqli_stmt_bind_result($statement, $result);
 mysqli_stmt_fetch($statement);
 ```
 
-</Tab>
-</Tabs>
+:::
+::::

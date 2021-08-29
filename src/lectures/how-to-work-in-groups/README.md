@@ -12,16 +12,16 @@ It's usually a bad idea that the entire group work on one and the same problem. 
 So, don't view the project as one big thing, as shown in <FigureNumber /> below.
 
 <Figure caption="The entire project.">
-<mermaid>
+<Mermaid>
 graph TB
     Project
-</mermaid>
+</Mermaid>
 </Figure>
 
 Instead, view the project as a collection of tasks that needs to be completed, as shown in <FigureNumber /> below. When all tasks have been completed, the entire project has been completed. This way, each project member can then work on her own task, and contribute that way.
 
 <Figure caption="Dividing the project into multiple smaller tasks.">
-<mermaid>
+<Mermaid>
 graph LR
     subgraph Project
         a[Task A]
@@ -29,7 +29,7 @@ graph LR
         c[Task C]
         d[Task D]
     end
-</mermaid>
+</Mermaid>
 </Figure>
 
 How the work is divided into these task depends on what type of project it is, so it differs quite a lot from project to project. If you don't know how to do it, then an excellent first task that can be assigned to a project member is *Divide the project into multiple smaller tasks*.
@@ -38,7 +38,7 @@ How the work is divided into these task depends on what type of project it is, s
 In best case you manage to divide the work into multiple tasks that can be completed in parallel. That's great, because then all project members have something different to work on at the same time. For example, on a website, Alice can implement the guestbook page and Bob can implement the contact page in parallel because these are independent of each other, as shown in <FigureNumber /> below.
 
 <Figure caption='Example of parallel tasks ("Implement the guestbook page" and "Implement the contact page").'>
-<mermaid>
+<Mermaid>
 graph TB
     subgraph Website Project
         a[Setup the layout]
@@ -48,14 +48,14 @@ graph TB
         a-->b1-->c
         a-->b2-->c
     end
-</mermaid>
+</Mermaid>
 </Figure>
 
 ### Sequential tasks
 Sometimes you have tasks that must be completed in order, i.e. Task 1 must be completed before Task 2 can be started, and Task 2 must be completed before Task 3 can be started, and so on. An example of that is a website with a blog users can write comment on. Alice is responsible for implementing the blog page, and Bob is responsible for implementing the comment functionality on the blog posts. Bob can't start working on his task until Alice has completed her task, as shown in <FigureNumber /> below.
 
 <Figure caption='Example of sequential tasks (all of them).'>
-<mermaid>
+<Mermaid>
 graph TB
     subgraph Website Project
         a[Setup the layout]
@@ -64,7 +64,7 @@ graph TB
         d[Deliver website to customer]
         a-->b-->c-->d
     end
-</mermaid>
+</Mermaid>
 </Figure>
 
 Now Alice and Bob can't work at the same time, but this is still manageable. When Alice and Bob can work on their tasks in parallel, they might work on the tasks at 50% of their capacity (they have other things to do too) for 2 days, so after 2 days they have completed their tasks. When the tasks needs to be completed in order, Alice probably needs to work 100% on her task the first day, and then Bob needs to work 100% on his task the second day, and they will now have completed their two tasks within two days even though they needed to be completed in order.
@@ -76,7 +76,7 @@ So, with sequential tasks you will just be less flexible with when you can work 
 <FigureNumber /> below shows an example of tasks identified in a bigger project. At the start of the project it can be hard to identify all tasks, and the goal of the project also sometimes changes while you work on it, so it's not uncommon that tasks are added to/removed from the project as it progresses.
 
 <Figure caption='Example of tasks in a bigger project.'>
-<mermaid>
+<Mermaid>
 graph LR
     subgraph Website Project
         start1[Create database]
@@ -111,7 +111,7 @@ graph LR
         b2a-->stop
         b2b-->stop
     end
-</mermaid>
+</Mermaid>
 </Figure>
 
 ## Regular meetings

@@ -19,7 +19,9 @@ Here's a short example of another system designed in a similar way as described 
 <FigureNumber /> below shows a use-case diagram of the Ping Pong Game (System under Design).
 
 <Figure caption="Use-case diagram of the Ping Pong Game (System under Design).">
-<img src="static-files/lab-1/use-case-diagram.jpeg" alt="Use-case diagram of the Ping Pong Game (System under Design).">
+
+<img src="./files/lab-1-use-case-diagram.jpeg" alt="Use-case diagram of the Ping Pong Game (System under Design).">
+
 </Figure>
 
 ## Brief Descriptions
@@ -35,10 +37,10 @@ The user <u>Play VS Computer</u>. After the game the user tells the system she w
 The user selects the option to view the highscore. The user is then presented the top 10 highscores and names in the game.
 
 ### Play VS Player as Host
-The user selects the option to play VS another player as the host. The user sees a list of nearby devices that want to <u>Play VS Player as Joiner</u>. The user selects one of them, and then the game starts.
+The user selects the option to play VS another player as the host. The user sees a list of nearby devices that want to <u> VS Player as Joiner</u>. The user selects one of them, and then the game starts.
 
 ### Play VS Player as Joiner
-The user selects the option to join a <u>Play VS Player as Host</u> game. The system waits till another device hosting a game accepts playing against this user, then the game starts.
+The user selects the option to join a <u> VS Player as Host</u> game. The system waits till another device hosting a game accepts playing against this user, then the game starts.
 
 ## Fully Dressed
 <table>
@@ -153,7 +155,7 @@ The user selects the option to join a <u>Play VS Player as Host</u> game. The sy
 A sequence diagram for <u>Play VS Player as Host</u> is found in <FigureNumber /> below.
 
 <Figure caption="Sequence diagram for Play VS Player as Host.">
-<mermaid>
+<Mermaid>
 {{`
 sequenceDiagram
 	participant User
@@ -169,5 +171,5 @@ sequenceDiagram
 	Device->>Device: Connect to selected device
 	Device->>User: Play!
 `}}
-</mermaid>
+</Mermaid>
 </Figure>

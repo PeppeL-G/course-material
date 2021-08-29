@@ -8,7 +8,7 @@ Here you will find material from the different tutorials.
 
 ## Tutorial 1 (Activities)
 * [Recording](https://ju.instructure.com/courses/3421/pages/tutorial-recordings?module_item_id=78645)
-* [tutorial-01-app.zip](./static-files/tutorials/tutorial-01-app.zip)
+* [tutorial-01-app.zip](./files/tutorials/tutorial-01-app.zip)
 
 ::: warning Note
 `aView.postRunnable()` did auto-cancel the runnable when the activity was destroyed, but the code has been updated to use `aHandler.postRunnable()` instead, and that one does not auto-cancel the runnable when the activity is destroyed, so with this version of the app you can see that the countdown continues even after the activity is destroyed unless you cancel the runnable with `aHandler.removeCallbacks()` in `onDestroy()`.
@@ -20,7 +20,7 @@ I've hard coded strings at some places, but should of course have used string re
 
 ## Tutorial 2 (Fragments and Runtime Configuration Changes)
 * [Recording](https://ju.instructure.com/courses/3421/pages/tutorial-recordings?module_item_id=78645)
-* [tutorial-02-app.zip](./static-files/tutorials/tutorial-02-app.zip)
+* [tutorial-02-app.zip](./files/tutorials/tutorial-02-app.zip)
 
 ::: warning Note
 Do not hardcode text shown to the user as I have done in the app, use string resources!
@@ -28,7 +28,7 @@ Do not hardcode text shown to the user as I have done in the app, use string res
 
 ## Tutorial 3 (Runtime Configuration Changes, Long Running Operations and Panes)
 * [Recording](https://ju.instructure.com/courses/3421/pages/tutorial-recordings?module_item_id=78645)
-* [tutorial-03-app.zip](./static-files/tutorials/tutorial-03-app.zip)
+* [tutorial-03-app.zip](./files/tutorials/tutorial-03-app.zip)
 
 ::: tip Extra info
 The view binding problem I had with layouts with the same name and different qualifiers was because one and the same id was used on different type of views in the different layouts. View binding works fine as long as views in the different layouts with the same id are of the same type (e.g. both are `Button`).
@@ -38,7 +38,7 @@ In the final solution, the `ListToDosFragment` communicates with the `MainActivi
 
 ## Tutorial 4 (Brodcast Receviers, Services and Bluetooth Classic)
 * [Recording](https://ju.instructure.com/courses/3421/pages/tutorial-recordings?module_item_id=78645)
-* [tutorial-04-app.zip](./static-files/tutorials/tutorial-04-app.zip)
+* [tutorial-04-app.zip](./files/tutorials/tutorial-04-app.zip)
 
 ::: tip Extra info
 The problem I had with the devices not receiving messages from the other was because I translated the byte array code in Java to Kotlin wrong. That has been corrected in the source code now, so the app is fully functional.

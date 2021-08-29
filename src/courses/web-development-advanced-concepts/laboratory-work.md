@@ -50,7 +50,7 @@ When the web browser executes the JavaScript statement `debugger` it enters a de
 :::
 
 ## Lab 1: Generating a table of contents
-The file <a href="static-files/lab-01-table-of-contents.html" target="_blank">lab-01-table-of-contents.html</a> contains some of the information on [Wikipedia's Jönköping University article](https://en.wikipedia.org/wiki/J%C3%B6nk%C3%B6ping_University). Your task is to write JavaScript code that generates a table of content for the document (i.e. a list with the title of all the headers).
+The file <a :href="$withBase('courses/web-development-advanced-concepts/files/lab-01-table-of-contents.html')" target="_blank">lab-01-table-of-contents.html</a> contains some of the information on [Wikipedia's Jönköping University article](https://en.wikipedia.org/wiki/J%C3%B6nk%C3%B6ping_University). Your task is to write JavaScript code that generates a table of content for the document (i.e. a list with the title of all the headers).
 
 Some DOM functionalities you might find helpful:
 
@@ -62,7 +62,7 @@ Some DOM functionalities you might find helpful:
 * `anHTMLElement.appendChild(aChildElement)` to add `aChildElement` to `anHTMLElement`.
 
 ## Lab 2: A calculator
-The file <a href="static-files/lab-02-calculator.html" target="_blank">lab-02-calculator.html</a> contains a form through which users should be able to enter two operands and one operation. Your task is to write JavaScript code that displays the result of the selected operation applied on the two entered operands.
+The file <a :href="$withBase('courses/web-development-advanced-concepts/files/lab-02-calculator.html')" target="_blank">lab-02-calculator.html</a> contains a form through which users should be able to enter two operands and one operation. Your task is to write JavaScript code that displays the result of the selected operation applied on the two entered operands.
 
 Some DOM functionalities you might find helpful:
 
@@ -75,7 +75,7 @@ If the address bar in the web browser changes (a query string is added to the en
 :::
 
 ## Lab 3: Validating input to forms
-The file <a href="static-files/lab-03-form-validation.html" target="_blank">lab-03-form-validation.html</a> contains a form users can use to enter information about a new account to be created. Your task is to write JavaScript code validating the data entered in the form when the user submits it according to the following validation rules:
+The file <a :href="$withBase('courses/web-development-advanced-concepts/files/lab-03-form-validation.html')" target="_blank">lab-03-form-validation.html</a> contains a form users can use to enter information about a new account to be created. Your task is to write JavaScript code validating the data entered in the form when the user submits it according to the following validation rules:
 
 * The email field must contain the `@` symbol.
 * The first password field must contain at least 8 characters.
@@ -93,7 +93,7 @@ The form should be submitted if there are no validation errors. If you open the 
 :::
 
 ## Lab 4: Tabs
-The file <a href="static-files/lab-04-tabs.html" target="_blank">lab-04-tabs.html</a> contains three forms:
+The file <a :href="$withBase('courses/web-development-advanced-concepts/files/lab-04-tabs.html')" target="_blank">lab-04-tabs.html</a> contains three forms:
 
 * One form to create a new account.
 * One form to sign in to an existing account.

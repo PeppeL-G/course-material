@@ -1,7 +1,7 @@
 const path = require('path')
 const moment = require('moment')
-const copyStaticFilesToPublic = require('./copy-static-files-to-public')
 const settingsRetriever = require('./settings-retriever')
+const copyStaticFilesToPublic = require('./copy-static-files-to-public')
 
 function getNavItems(){
 	
@@ -44,9 +44,9 @@ function getSideBarObject(){
 	
 }
 
-
-
 copyStaticFilesToPublic()
+
+const tags = []
 
 module.exports = {
 	bundler: '@vuepress/vite',
@@ -72,7 +72,6 @@ module.exports = {
 		sidebar: getSideBarObject(),
 	},
 	plugins: [
-		'@vuepress/git',
 		path.resolve(__dirname, './plugins/plugin-title-maker.js'),
 		[
 			'@vuepress/register-components',

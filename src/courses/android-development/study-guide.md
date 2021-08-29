@@ -24,7 +24,7 @@ In this course you will learn how to create applications running smartphones and
 At course start you are expected to possess knowledge corresponding to the pre-requisite courses shown in <FigureNumber /> below. 
 
 <Figure caption="Prerequisites for this course.">
-<mermaid>
+<Mermaid>
 {{`
 graph TD
 	introCompTech[Introduction to Computer Technology 7.5 Credits]
@@ -41,7 +41,7 @@ graph TD
 	oop --> oop2
 	oop2 --> andDev
 `}}
-</mermaid>
+</Mermaid>
 </Figure>
 
 ## Teachers

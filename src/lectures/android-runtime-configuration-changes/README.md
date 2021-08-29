@@ -20,8 +20,8 @@ So, how can Android that easily support i18n? The secret is through how it handl
 ## Example
 `MainActivity` with a button functioning as a counter starting on 0. It retains its state using the savedInstanceStateBundle..
 
-<Tabs remember-selected-key="example-675">
-<Tab title="MainActivity.kt">
+:::: code-group
+::: code-group-item MainActivity.kt
 
 ```kotlin
 class MainActivity : AppCompatActivity() {
@@ -62,8 +62,8 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-</Tab>
-<Tab title="res/layout/activity_main-xml">
+:::
+::: code-group-item res/layout/activity_main-xml
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -85,5 +85,5 @@ class MainActivity : AppCompatActivity() {
 </LinearLayout>
 ```
 
-</Tab>
-</Tabs>
+:::
+::::

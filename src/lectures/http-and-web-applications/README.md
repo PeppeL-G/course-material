@@ -27,14 +27,14 @@ The HTTP protocol is built on a *client-server* architecture. That means that so
 A client can send an HTTP request to a server, asking the server to do something for it. When a server receives the HTTP request, it should carry out the request, and then send back an HTTP response to the client. This is visualized in <FigureNumber /> below. Having a server on it own is useless; servers exist to serve clients (that's why we call them servers).
 
 <Figure caption="Example of Client-Server communication.">
-<mermaid>
+<Mermaid>
 sequenceDiagram
     participant Client
     participant Server
     Client->>+Server: 1. HTTP Request
     Note right of Server: 2. Carry out request
     Server-->>-Client: 3. HTTP Response
-</mermaid>
+</Mermaid>
 </Figure>
 
 For example, when you click on a link in your web browser, your web browser sends an HTTP request to a server, requesting the server to send back the webpage the link leads to. When the server receives this request it generates the webpage/loads it from a file and sends it back in an HTTP response, and when your web browser receives the HTTP response it displays the webpage on the screen.
@@ -171,8 +171,8 @@ There exists a bunch of different HTTP methods, but web developers primarily nee
 * Update: `PUT`
 * Delete: `Delete`
 
-<Tabs remember-selected-key="http-method">
-<Tab title="GET">
+:::: code-group
+::: code-group-item GET
 
 A client can send a `GET` request to a server to tell the server to send back the resource identified through the URI in the request. A `GET` requests contains no body since the request is only about fetching a resource from the server, and not sending a resource to the server.
 
@@ -184,8 +184,8 @@ Accept: text/html
 ```
 :::
 
-</Tab>
-<Tab title="POST">
+:::
+::: code-group-item POST
 
 A client can send a `POST` request to a server to tell the server to create a new resource. The URI in the request should identify what type of resource that should be created, and the body of the request should contain the resource.
 
@@ -199,8 +199,8 @@ Content-Type: application/json
 ```
 :::
 
-</Tab>
-<Tab title="PUT">
+:::
+::: code-group-item PUT
 
 A client can send a `PUT` request to a server to tell the server to replace an existing resource on the server with a new one the client sends it. The URI in the request should identify which resource on the server to be replaced, and the body of the request should contain the new resource.
 
@@ -214,8 +214,8 @@ Content-Type: application/json
 ```
 :::
 
-</Tab>
-<Tab title="DELETE">
+:::
+::: code-group-item DELETE
 
 A client can send a `DELETE` request to a server to tell the server to delete all resources on the server identified through the URI in the request.
 
@@ -226,8 +226,8 @@ Host: football-lovers.com
 ```
 :::
 
-</Tab>
-</Tabs>
+:::
+::::
 
 ::: warning PUT and DELETE not in HTML
 In the language used to build web pages, HTML, it's only possible to send `GET` and `POST` requests. Therefore, web developers rarely use `PUT` and `DELETE` requests. On websites, `PUT` and `DELETE` requests are often implemented as `POST` requests, and the URI is used to indicate if it should be a create, update or a delete operation.
@@ -259,13 +259,13 @@ Although HTTP requests and HTTP responses both contain headers, which headers th
 ### Status codes
 The three digit status code can either start with the digit `1`, `2`, `3`, `4` or `5`. Which digit it is hints about how the server handled the request.
 
-<Tabs remember-selected-key="http-status-code">
-<Tab title="1XX">
+:::: code-group
+::: code-group-item 1XX
 
 The `1XX` status codes indicate an *informational* response. These aren't that important to know for programmers using HTTP.
 
-</Tab>
-<Tab title="2XX">
+:::
+::: code-group-item 2XX
 
 The `2XX` status codes indicate that the server successfully carried out the HTTP request. The most commonly used ones are (reason phrase shown after the status code):
 
@@ -276,16 +276,16 @@ The `2XX` status codes indicate that the server successfully carried out the HTT
 * `204` No Content\
   The server carried out the request, but the response contains no body.
 
-</Tab>
-<Tab title="3XX">
+:::
+::: code-group-item 3XX
 
 The `3XX` status codes indicate that the server encourages the client to send a new HTTP request using another URI (i.e. redirecting the client).
 
 * `302` Found\
   The server encourages the client to send the same HTTP request again but with the URI specified in the `Location` response header instead. This is useful if you change URIs on a website. For example, first maybe `/about-us` was used to identify the about page on the website, and then you changed that to just `/about`. Then when a client sends a `GET` request to `/about-us` you can send back a `302` response with the header `Location: /about` to indicate that the URI for the page has changed to `/about`.
 
-</Tab>
-<Tab title="4XX">
+:::
+::: code-group-item 4XX
 
 The `4XX` status codes indicate that the server didn't carry out the request because the client has done something wrong with the request. The client needs to fix the problem and try again.
 
@@ -296,16 +296,16 @@ The `4XX` status codes indicate that the server didn't carry out the request bec
 * `404` Not Found\
   The server didn't carry out the request because the URI in the request doesn't identify a resource that exists.
 
-</Tab>
-<Tab title="5XX">
+:::
+::: code-group-item 5XX
 
 The `5XX` status codes indicates that the server couldn't carry out the request because something is wrong on the server-side. Maybe the server crashed, or maybe the server needs an external resource (e.g. a database) to carry out the request, and it doesn't have access to it the moment, etc.
 
 * `500 ` Internal Server Error\
   The server couldn't carry out the request.
 
-</Tab>
-</Tabs>
+:::
+::::
 
 ## World Wide Web
 ::: tip Terminology
@@ -319,7 +319,7 @@ A *website* is the collection of all webpages on one and the same server (i.e. a
 So, why is it called *the world wide web*? Webpages can contain links to other webpages, and if you try to visualize this structure, you end up with something looking like a web, as shown in <FigureNumber /> below (some imagination required!).
 
 <Figure caption="A visualization of some webpages and where their links lead.">
-<mermaid>
+<Mermaid>
 graph TD
   a[Webpage A]
   b[Webpage B]
@@ -345,5 +345,5 @@ graph TD
   g-->e
   d-->g
   c-->g
-</mermaid>
+</Mermaid>
 </Figure>

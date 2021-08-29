@@ -26,7 +26,7 @@
 		margin: 1em 10%;
 		padding: 1%;
 		border: 3px solid black;
-		background-color: silver;
+		background-color: #c0c0c06b;
 		border-radius: 1em;
 	}
 	

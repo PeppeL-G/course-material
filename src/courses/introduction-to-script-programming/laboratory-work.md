@@ -127,14 +127,19 @@ Total cost: 22190
 Create a program that can calculate LCC for a building using the information in <FigureNumber /> below:
 
 <Figure caption="Slides with the LCC formula and the Present Value Factor">
-<img src="static-files/labs/lab-1-lcc-formula.png" alt="The LCC formula">
-<img src="static-files/labs/lab-1-present-value-factor.png" alt="The Present Value Factor.">
+
+<img src="./files/labs/lab-1-lcc-formula.png" alt="The LCC formula">
+
+<img src="./files/labs/lab-1-present-value-factor.png" alt="The Present Value Factor.">
+
 </Figure>
 
 The input to the calculations should be the properties defined in the IDS below:
 
 <Figure caption="IDS">
-<img src="static-files/labs/lab-1-ids.png" alt="IDS">
+
+<img src="./files/labs/lab-1-ids.png" alt="IDS">
+
 </Figure>
 
 On top of this:
@@ -510,7 +515,9 @@ Develop a program that checks if the files in a directory have been named accord
 In <FigureNumber /> below you can see the naming principles of files that are related to CAD.
 
 <Figure caption="">
-<img src="static-files/labs/lab-4-naming-model.png">
+
+<img src="./files/labs/lab-4-naming-model.png">
+
 </Figure>
 
 The file name consists of six different parts. Symbols that can be used are characters (a-z/A-Z), numbers (0-9), dots (.), and dashes (-).
@@ -571,7 +578,9 @@ The extension for the file used. For example, a Revit file is called `.rvt` and 
 The different allowed formats should be defined in the different IDS in the project. A part of an IDS is shown in <FigureNumber /> below.
 
 <Figure caption="">
-<img src="static-files/labs/lab-4-delivery-content.png">
+
+<img src="./files/labs/lab-4-delivery-content.png">
+
 </Figure>
 
 :::
@@ -720,7 +729,9 @@ TRANSPORTINPUTVTY,telnet,telnet,telnet,ssh,ssh
 Instead of manually creating the CSV file yourself, you can easily create and maintain it using Microsoft Excel, as shown in <FigureNumber /> below. When saving the file, just save it as *CSV (Comma Delimited)* instead of *Excel Workbook*.
 
 <Figure caption="Saving an Excell document as a CSV file.">
-<img src="static-files/labs/lab-5-csv-in-excell.png" alt="Saving an Excell document as a CSV file.">
+
+<img src="./files/labs/lab-5-csv-in-excell.png" alt="Saving an Excell document as a CSV file.">
+
 </Figure>
 
 Your task is to create a program that reads the placeholder values from `configuration-values.csv` and then generates new configuration files based on the template in `configuration-template.config`, but where the placeholders have been replaced with the values.
@@ -835,7 +846,7 @@ Before you attempt solving the programming problems in Lab 6 you are strongly re
 ### Problem 6.1: Using the `ConnectFour` class
 In this problem, you should practice on using a class we have created for you. The class is called `ConnectFour`, and it can be used to play the game [Connect Four](https://en.wikipedia.org/wiki/Connect_Four). Instead of red and yellow bricks, we will use `X` and  `O` to represent the different players.
 
-The file [ConnectFour.py](static-files/labs/ConnectFour.py) contains the `ConnectFour` class you should use. Add the code in that file to your own Python file. Then create a new instance of the class (the object that stores the state of the game) by calling the constructor of the class, e.g.:
+The file [ConnectFour.py](files/labs/ConnectFour.py) contains the `ConnectFour` class you should use. Add the code in that file to your own Python file. Then create a new instance of the class (the object that stores the state of the game) by calling the constructor of the class, e.g.:
 
 ```python
 game = ConnectFour(7)
@@ -852,7 +863,9 @@ game.print_game()
 This method prints the game as shown in <FigureNumber /> below.
 
 <Figure caption="What the game looks like printed to the console/terminal/shell. The numbers at the bottom identify the different columns (the first column is 0).">
-<img src="static-files/labs/lab-6-connect-four-empty.png">
+
+<img src="./files/labs/lab-6-connect-four-empty.png">
+
 </Figure>
 
 As you can see, the columns are identified through the digits 0-9.
@@ -871,7 +884,9 @@ game.print_game()
 What the game looks like after the code above has been executed is shown in Figure 2 below. As you can see, `X` starts.
 
 <Figure caption="What the game looks like after some moves have been made.">
-<img src="static-files/labs/lab-6-connect-four-with-moves.png">
+
+<img src="./files/labs/lab-6-connect-four-with-moves.png">
+
 </Figure>
 
 `print_game()` and `make_move(column)` are not the only methods in the class. The table below lists the methods you can use on the game object, and what they do.
@@ -1016,7 +1031,7 @@ Develop a software that includes the class `Construction_Entity`, see the UML sc
 
 As can be seen the data fields of the class are the same as the ones described in the IDS in lab problem 1.7.
 
-<img style="max-width: 300px;" src="static-files/labs/lab-6-construction-entity.png">
+<img style="max-width: 300px;" src="./files/labs/lab-6-construction-entity.png">
 
 The software should be able to instantiate an unknown number of objects using the class by reading all XML-files from a folder, with the structure described by the example below.
 
@@ -1034,11 +1049,11 @@ The software should be able to instantiate an unknown number of objects using th
 
 You can use the following XML files to test your software:
 
-* [BIM3HUS12.xml](static-files/labs/BIM3HUS12.xml)
-* [BIM3HUS13.xml](static-files/labs/BIM3HUS13.xml)
-* [BIM3HUS14.xml](static-files/labs/BIM3HUS14.xml)
-* [BIM3HUS24.xml](static-files/labs/BIM3HUS24.xml)
-* [BIMHUS21.xml](static-files/labs/BIMHUS21.xml)
+* [BIM3HUS12.xml](files/labs/BIM3HUS12.xml)
+* [BIM3HUS13.xml](files/labs/BIM3HUS13.xml)
+* [BIM3HUS14.xml](files/labs/BIM3HUS14.xml)
+* [BIM3HUS24.xml](files/labs/BIM3HUS24.xml)
+* [BIMHUS21.xml](files/labs/BIMHUS21.xml)
 
 The software should print the average `LCC`/`SpaceArea` for all objects that have the `CoClassCode` given as input. To implement this, the class `Construction_Entity`'s constructor should receive the name of an XML file it should read it values from, and the class should also have the method `getLCC()`, which should compute and return the LCC value for the construction entity (this should then be used by the main program).
 

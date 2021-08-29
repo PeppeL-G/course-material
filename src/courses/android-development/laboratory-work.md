@@ -169,7 +169,7 @@ Now we have the handling of the data in the application done, now we just need t
 
 <Figure caption="Overview of the GUI.">
 
-![Overview of the GUI.](static-files/laboratory-work-gui.jpeg)
+![Overview of the GUI.](./files/laboratory-work-gui.jpeg)
 
 </Figure>
 

@@ -4,7 +4,7 @@
 		<fieldset class="mistake">
 			<legend>Mistake</legend>
 			<slot name="mistake"></slot>
-			<table v-if="this.$slots['example-1-bad']">
+			<table v-if="$slots['example-1-bad']">
 				<thead>
 					<tr>
 						<th class="dont">Don't</th>
@@ -16,7 +16,7 @@
 						<td><slot name="example-1-bad"></slot></td>
 						<td><slot name="example-1-good"></slot></td>
 					</tr>
-					<tr v-if="this.$slots['example-2-bad']">
+					<tr v-if="$slots['example-2-bad']">
 						<td><slot name="example-2-bad"></slot></td>
 						<td><slot name="example-2-good"></slot></td>
 					</tr>
@@ -46,11 +46,11 @@
 <style scoped>
 
 .dont{
-	background-color: red;
+	background-color: #ff0000a8;
 }
 
 .do{
-	background-color: lime;
+	background-color: #00ff00a1;
 }
 
 legend{
