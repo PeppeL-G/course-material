@@ -27,7 +27,8 @@ The Internet can be seen as a large network that spans across most of the planet
 
 <Figure caption="A visualization of the Internet as a large network computers can connect to. Computer 4 is not connected to the network, and hence can't use the Internet to communicate with the other computers.">
 <Mermaid>
-graph TD
+{{`
+flowchart TD
     i((Internet))
     c1[Computer 1]---i
     c2[Computer 2]---i
@@ -35,6 +36,7 @@ graph TD
     i---c5[Computer 5]
     i---c6[Computer 6]
     c4[Computer 4]
+`}}
 </Mermaid>
 </Figure>
 

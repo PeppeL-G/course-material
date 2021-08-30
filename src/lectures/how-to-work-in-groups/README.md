@@ -13,8 +13,10 @@ So, don't view the project as one big thing, as shown in <FigureNumber /> below.
 
 <Figure caption="The entire project.">
 <Mermaid>
+{{`
 graph TB
     Project
+`}}
 </Mermaid>
 </Figure>
 
@@ -22,6 +24,7 @@ Instead, view the project as a collection of tasks that needs to be completed, a
 
 <Figure caption="Dividing the project into multiple smaller tasks.">
 <Mermaid>
+{{`
 graph LR
     subgraph Project
         a[Task A]
@@ -29,6 +32,7 @@ graph LR
         c[Task C]
         d[Task D]
     end
+`}}
 </Mermaid>
 </Figure>
 
@@ -39,6 +43,7 @@ In best case you manage to divide the work into multiple tasks that can be compl
 
 <Figure caption='Example of parallel tasks ("Implement the guestbook page" and "Implement the contact page").'>
 <Mermaid>
+{{`
 graph TB
     subgraph Website Project
         a[Setup the layout]
@@ -48,6 +53,7 @@ graph TB
         a-->b1-->c
         a-->b2-->c
     end
+`}}
 </Mermaid>
 </Figure>
 
@@ -56,6 +62,7 @@ Sometimes you have tasks that must be completed in order, i.e. Task 1 must be co
 
 <Figure caption='Example of sequential tasks (all of them).'>
 <Mermaid>
+{{`
 graph TB
     subgraph Website Project
         a[Setup the layout]
@@ -64,6 +71,7 @@ graph TB
         d[Deliver website to customer]
         a-->b-->c-->d
     end
+`}}
 </Mermaid>
 </Figure>
 
@@ -77,6 +85,7 @@ So, with sequential tasks you will just be less flexible with when you can work 
 
 <Figure caption='Example of tasks in a bigger project.'>
 <Mermaid>
+{{`
 graph LR
     subgraph Website Project
         start1[Create database]
@@ -111,6 +120,7 @@ graph LR
         b2a-->stop
         b2b-->stop
     end
+`}}
 </Mermaid>
 </Figure>
 

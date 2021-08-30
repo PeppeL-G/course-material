@@ -28,12 +28,14 @@ A client can send an HTTP request to a server, asking the server to do something
 
 <Figure caption="Example of Client-Server communication.">
 <Mermaid>
+{{`
 sequenceDiagram
     participant Client
     participant Server
     Client->>+Server: 1. HTTP Request
     Note right of Server: 2. Carry out request
     Server-->>-Client: 3. HTTP Response
+`}}
 </Mermaid>
 </Figure>
 
@@ -320,6 +322,7 @@ So, why is it called *the world wide web*? Webpages can contain links to other w
 
 <Figure caption="A visualization of some webpages and where their links lead.">
 <Mermaid>
+{{`
 graph TD
   a[Webpage A]
   b[Webpage B]
@@ -345,5 +348,6 @@ graph TD
   g-->e
   d-->g
   c-->g
+`}}
 </Mermaid>
 </Figure>

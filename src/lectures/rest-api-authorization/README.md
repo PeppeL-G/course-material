@@ -51,6 +51,7 @@ This flow does not require the Client to first register at the Authorization Ser
 
 <Figure caption="The flow of the Resource Owner Password Credentials Grant.">
 <Mermaid>
+{{`
 sequenceDiagram
     participant ro as Resource Owner
     participant c as Client 
@@ -72,6 +73,7 @@ sequenceDiagram
     activate c
     c ->> ro: Resources successfully fetched.
     deactivate c
+`}}
 </Mermaid>
 </Figure>
 
@@ -84,6 +86,7 @@ This flow can be used when the Client is not from the same company as the Server
 
 <Figure caption="The flow of the Resource Owner Password Credentials Grant.">
 <Mermaid>
+{{`
 sequenceDiagram
     participant ro as Resource Owner
     participant c as Client 
@@ -117,6 +120,7 @@ sequenceDiagram
     activate c
     c ->> ro: I got the resources, everything is fine.
     deactivate c
+`}}
 </Mermaid>
 </Figure>
 
@@ -131,6 +135,7 @@ This flow is a bit more complicated (more steps), but the benefit is that the Ac
 
 <Figure caption="The flow of the Implicit Grant.">
 <Mermaid>
+{{`
 sequenceDiagram
     participant ro as Resource Owner
     participant c as Client 
@@ -170,6 +175,7 @@ sequenceDiagram
     activate c
     c ->> ro: I got the resources, everything is fine.
     deactivate c
+`}}
 </Mermaid>
 </Figure>
 
@@ -178,6 +184,7 @@ This flow can be used when the Client wants to obtain an Access Token it can use
 
 <Figure caption="The flow of the Client Credentials Grant.">
 <Mermaid>
+{{`
 sequenceDiagram
     participant ro as Resource Owner
     participant c as Client 
@@ -193,5 +200,6 @@ sequenceDiagram
     activate rs
     rs ->> c: Access Token token is valid, here are your resources.
     deactivate rs
+`}}
 </Mermaid>
 </Figure>

@@ -39,6 +39,7 @@ This is visualized in <FigureNumber /> below.
 
 <Figure caption="Sequence Diagram visualizing how cookies work.">
 <Mermaid>
+{{`
 sequenceDiagram
 	participant Client
 	participant Server
@@ -49,6 +50,7 @@ sequenceDiagram
 	Client->>+Server: HTTP Request (with cookie)
 	Note right of Server: Reads info from cookie
 	Server->>-Client: HTTP Response
+`}}
 </Mermaid>
 </Figure>
 
