@@ -68,8 +68,14 @@ module.exports = {
 			text: "Get Help",
 			link: "https://github.com/PeppeL-G/course-material/issues"
 		}],
+		contributors: false,
 		sidebarDepth: 2,
-		sidebar: getSideBarObject(),
+		sidebar: getSideBarObject()
+	},
+	markdown: {
+		code: {
+			lineNumbers: false,
+		}
 	},
 	plugins: [
 		path.resolve(__dirname, './plugins/plugin-title-maker.js'),
