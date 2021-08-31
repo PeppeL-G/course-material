@@ -28,18 +28,20 @@ Here the terms are used interchangeably, but they are actually not the same. See
 A *file* is a collection of data, for example some text you've typed. An example of that is shown in <FigureNumber /> below.
 
 <Figure caption="Example of text content in a file containing data about a list of things.">
+
 ```
 My todo list
  - Clean garden
  - Grocery shopping
  - Feed the pet
 ```
+
 </Figure>
 
 Computers can store multiple files, and for us to be able to distinguish them from each other, we give each one a name. For example, the file with the name `my-todo-list` can contain information about what I need to do, and the file with the name `my-lecture-notes` can contain notes I've written at the lectures I've attended.
 
 ::: warning No spaces?
-Filenames can contain spaces (` `), but since spaces are used to separate arguments passed to commands in shells, it's a bad idea to use spaces in filenames.
+Filenames can contain spaces ("` `"), but since spaces are used to separate arguments passed to commands in shells, it's a bad idea to use spaces in filenames.
 
 Some applications and programming libraries have difficulties handling filenames with spaces, so it's also a bit safer to never user spaces in filenames, otherwise you might get into trouble with those.
 
