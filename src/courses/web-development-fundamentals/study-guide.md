@@ -87,7 +87,7 @@ Here are short presentations of the teachers involved in the course.
 ### William Sjökvist
 <Teacher
     name="William Sjökvist"
-    photo="missing.jpeg"
+    photo="william-sjokvist.jpeg"
     :roles='["Lab assistant"]'
     description="Third year student of the bachelor program Software Development and Mobile Platforms."
     email="sjwi19io@student.ju.se"
