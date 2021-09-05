@@ -6,12 +6,12 @@
 			<slot name="question"></slot>
 		</div>
 		
-		<div class="sample-answer" v-if="$slots['sampleAnswer']">
+		<div class="sample-answer" v-if="$slots['sample-answer']">
 			<h2>Sample answer</h2>
 			<slot name="sample-answer"></slot>
 		</div>
 		
-		<div class="marking-guidelines" v-if="$slots['markingGuidelines']">
+		<div class="marking-guidelines" v-if="$slots['marking-guidelines']">
 			<h2>Marking guidelines</h2>
 			<slot name="marking-guidelines"></slot>
 		</div>
