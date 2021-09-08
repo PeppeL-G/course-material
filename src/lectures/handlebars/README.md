@@ -93,10 +93,6 @@ Generated HTML code:
 * [handlebars.pptx](handlebars.pptx)
 
 ## Recommended reading
-* handlebarsjs.com:
-    * [Handlebars Expressions](https://handlebarsjs.com/expressions.html)
-        * Primarily *Basic Usage* and *Escaping*
-    * [Handlebars Block Helpers](https://handlebarsjs.com/block_helpers.html)
-        * Primarily *Simple Iterators* and *Conditionals*
+* [Handlebars' Language Guide](https://handlebarsjs.com/guide/)
 * [tryhandlebarsjs.com](http://tryhandlebarsjs.com/)
     * Use it for practice and to see a lot of examples.

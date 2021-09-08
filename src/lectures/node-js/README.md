@@ -8,6 +8,14 @@ You want to execute your JavaScript code? That you can do in Node.js, a JavaScri
 
 <iframe width="560" height="314" src="https://www.youtube.com/embed/ybIg85flNeA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+::: warning Node.js support ECMAScript modules
+In the lecture slides it says Node.js doesn't support ECMAScript modules. That is no longer the case, see:
+
+[https://nodejs.org/api/esm.html](https://nodejs.org/api/esm.html)
+
+However, Require JS and ECMAScript modules aren't 100% interchangeable, so it's probably best to be consistent and use only one of them, and I suspect many npm packages out there don't support ECMAScript modules to 100%, so the safest is probably to stick to using Require JS for now.
+:::
+
 ## Lecture material
 * [node-js.pdf](node-js.pdf)
 * [node-js.pptx](node-js.pptx)

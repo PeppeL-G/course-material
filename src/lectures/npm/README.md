@@ -13,7 +13,4 @@ Use npm to install libraries/packages you can use in your Node.js application.
 * [npm.pptx](npm.pptx)
 
 ## Recommended reading
-* npm's [Getting Started](https://docs.npmjs.com/getting-started/what-is-npm) pages:
-    * 01 - What is npm?
-    * 02 - How to find & select packages
-    * 05 - Working with package.json
+* [Getting packages from the registry](https://docs.npmjs.com/packages-and-modules/getting-packages-from-the-registry) on npm's website
