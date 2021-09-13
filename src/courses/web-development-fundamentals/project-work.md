@@ -530,7 +530,7 @@ app.use(session())
 // Use sessions to count how many times each client has visited this page.
 app.get('/the-page', function(request, response){
   if(!request.session.counter){
-    req.session.counter = 0
+    request.session.counter = 0
   }
   request.session.counter += 1
   // ...
