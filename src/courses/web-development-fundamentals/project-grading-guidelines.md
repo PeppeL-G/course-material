@@ -15,40 +15,40 @@ To get grade `X`, the student is expected to obtain at least grade `X` on all gu
 The convention used for indenting code (such as 2 spaces, 4 spaces, a tab, etc.). For more information, see [Wikipedia's article on indentation style](https://en.wikipedia.org/wiki/Indentation_style)
 
 <GradingGuideline
-	gradeU="No indentation convention has been used or there exists too many places where the convention has not been followed."
-	grade3="The same indentation convention is mostly used, but at a few places the convention has not been followed."
-	grade4="Each file correctly use an indentation convention, but different conventions are used in different files, and there's no consistency in when to use which one."
-	grade5="The same indentation convention is consistently used across all files of the same type."
+	gradeU="No indentation convention has been used."
+	grade3="Each file use an indentation convention, but it hasn't been used correctly at at most 3 places (in total)."
+	grade4="Each file correctly use an indentation convention."
+	grade5="All files of the same type use the same indentation convention."
 />
 
 ## Coding Style
 The conventions used for writing comments, (not) using optional curly brackets, maximum line lengths, white-spaces in the statements, etc. For more information, see [Wikipedia's article on coding style](https://en.wikibooks.org/wiki/Computer_Programming/Coding_Style). [xkcd has a web comic about it.](https://xkcd.com/1513/)
 
 <GradingGuideline
-	gradeU="No coding style has been used or there exists too many places where the style has not been followed."
-	grade3="The same coding style is mostly used, but at a few places the style has not been followed."
-	grade4="The same coding style is consistently used in each file, although individual files (even of the same type) use different coding styles."
-	grade5="The same coding style is consistently used across all files of the same type."
+	gradeU="No coding style has been used."
+	grade3="Each file use a coding style, but it hasn't been used correctly at at most 3 places (in total)."
+	grade4="Each file correctly use a coding style."
+	grade5="All files of the same type use the same coding style."
 />
 
 ## Naming Convention
 The convention used when naming variables, constants, functions, classes, methods, functions, files, packages, etc. For more information, see [Wikipedia's article on naming convention](https://en.wikipedia.org/wiki/Naming_convention_(programming)).
 
 <GradingGuideline
-	gradeU="No naming convention has been used or there exists too many places where the convention has not been followed."
-	grade3="The same naming convention is mostly used, but at a few places the convention has not been followed."
-	grade4="The same naming convention is consistently used in each file, although individual files (even of the same type) use different naming conventions."
-	grade5="The same naming convention is consistently used across all files of the same type."
+	gradeU="No naming convention has been used."
+	grade3="Each file use a naming convention, but it hasn't been used correctly at at most 3 places (in total)."
+	grade4="Each file correctly use a naming convention."
+	grade5="All files of the same type use the same naming convention."
 />
 
 ## Mnemonic names
 The names used (on variables, functions, classes, files, tables in the database, etc.) reflect what they represent. Optimal names are short and very descriptive. For more information, see [Chapter 2.12 in Python for Everybody (Severance)](https://eng.libretexts.org/Bookshelves/Computer_Science/Book%3A_Python_for_Everybody_(Severance)/2%3A_Variables%2C_Expressions%2C_and_Statements/2.12%3A_Choosing_Mnemonic_Variable_Names).
 
 <GradingGuideline
-	gradeU="Many names are not mnemonic."
-	grade3="Many names (at least 90%) are mnemonic."
-	grade4="Almost all names (at least 95%) are mnemonic."
-	grade5="All names (100%) are mnemonic."
+	gradeU="6 or more names are not mnemonic."
+	grade3="At most 5 names are not mnemonic."
+	grade4="At most 3 names are not mnemonic."
+	grade5="At most 1 name is not mnemonic."
 />
 
 ## Magic Numbers
@@ -97,19 +97,19 @@ Validation of resources on the website entered by a user.
 
 <GradingGuideline
 	gradeU="No validation is carried out."
-	grade3="All fields on all resources are validated (at least checking that the expected fields exists on the resource), and the user is notified that something is wrong."
+	grade3="All fields on all resources are validated (at least checking that the expected fields exists on the resource), and the user is notified that something is wrong, and what the user had written in the form before is still there."
 	grade4="All fields are properly validated, e.g. checking lower and upper bounds for a number, the length of strings, etc., and all validation errors are displayed to the user."
-	grade5="When validation errors occur, the user doesn't have to re-type anything from scratch (e.g. in an empty form), but can fix the validation errors on the last resource sent to the server in a pre-populated form."
+	grade5="Not applicable."
 />
 
 ## Error Handling
 Handling of various errors that can occur when the user is using your website, including such as database errors.
 
 <GradingGuideline
-	gradeU="Errors are not handled or the error messages displayed are confusing to the user (remember: users are not programmers)."
-	grade3="Handles and display error messages for at least 90% of the errors that can occur."
-	grade4="Handles and display error messages for at least 95% of the errors that can occur."
-	grade5="Handles and display error messages for all errors that can occur."
+	gradeU="Errors are not handled, or error messages are not displayed, or the error messages displayed are confusing to the user (remember: users are not programmers)."
+	grade3="At most 5 errors that can occur are not handled."
+	grade4="At most 3 errors that can occur are not handled."
+	grade5="At most 1 error that can occur is not handled."
 />
 
 ## Graphical User Interface
@@ -127,8 +127,8 @@ Proper usage of HTML tags. Very important for applications (instead of humans) t
 
 <GradingGuideline
 	gradeU="The HTML syntax is not followed."
-	grade3="The HTML syntax is followed."
-	grade4="HTML tags are used semantically correct."
+	grade3="The HTML syntax is followed. XHTML is not used."
+	grade4="HTML tags are used for semantic, not visual appearance (e.g. don't use the br tag)."
 	grade5="Extra code has been written to give the website semantically better structure (such as using the label element, the alt attribute for images, etc.)."
 />
 
@@ -157,9 +157,9 @@ The quality of the report.
 
 <GradingGuideline
 	gradeU="The reader does not get a good understanding of what the project is about (the problem and the solution), nor how the solution works/will be used/has been implemented."
-	grade3="The reader gets a good understanding of what the project is about and how the solution works/will be used/has been implemented. Figures are used, they have been numbered and given descriptive captions, and they are referred to from the main text using their figure numbers. The text does not contain obvious spelling mistake nor incomprehensible sentences."
-	grade4="Chapters and sub-chapters are properly used to give the report a good structure. The reader can easily find the specific information she's looking for in the expected chapter/sub-chapter."
-	grade5="Everything with the report is great."
+	grade3="The reader gets a good understanding of what the project is about and how the solution works/will be used/has been implemented. Figures are used, they have been numbered and given descriptive captions, and they are referred to from the main text using their figure numbers. The text does not contain obvious spelling mistake nor incomprehensible sentences. At most 5 mistakes mentioned in the lecture Report Writing exists."
+	grade4="Chapters and sub-chapters are properly used to give the report a good structure. The reader can easily find the specific information she's looking for in the expected chapter/sub-chapter. At most 3 mistakes mentioned in the lecture Report Writing exists."
+	grade5="Everything with the report is great. At most 1 mistake mentioned in the lecture Report Writing exists."
 />
 
 ## Optional Tasks

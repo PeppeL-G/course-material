@@ -222,14 +222,14 @@ Use an easier (and possibly shorter) name. Compare to *Google*, *Netflix*, *Spot
 <ReportMistake>
 <template v-slot:example-1-bad>
 
-(first time the database is mentioned in the report)
+(first time *database* is mentioned in the report)
 
 The database runs on a separate server.
 
 </template>
 <template v-slot:example-1-good>
 
-(first time the database is mentioned in the report)
+(first time *database* is mentioned in the report)
 
 The website has a database it uses to store the resources in.
 
@@ -237,7 +237,7 @@ The website has a database it uses to store the resources in.
 
 <template v-slot:mistake>
 
-The text refer to components before they have been introduced.
+The text refers to components before they have been introduced.
 
 </template>
 <template v-slot:problem>
@@ -305,7 +305,7 @@ The solution consists of an Android application. The application is designed... 
 </template>
 <template v-slot:mistake>
 
-The text use different terms to refer to the same thing.
+The text uses different terms to refer to the same thing.
 
 </template>
 <template v-slot:problem>
@@ -454,7 +454,10 @@ The default profile avatar is a picture of a human. Only the head is shown, the 
 </template>
 <template v-slot:example-1-good>
 
-The default profile avatar is 👼.
+The default profile avatar is shown in Figure 1 below.
+
+👼\
+Figure 1: The default avatar profile.
 
 </template>
 <template v-slot:mistake>
@@ -833,12 +836,12 @@ Be consistent with how you use white-space throughout the entire report.
 <ReportMistake>
 <template v-slot:example-1-bad>
 
-The Database chapter describes parts of the web application (e.g. how web application communicates with the database, or how the source code in the web application that communicates with the database has been structured, etc.).
+The database chapter describes parts of the web application (e.g. how the web application communicates with the database, or how the source code in the web application that communicates with the database has been structured, etc.).
 
 </template>
 <template v-slot:example-1-good>
 
-The Database chapter only describes the database, the web application is not mentioned at all.
+The database chapter only describes the database, the web application is not mentioned at all since the database doesn't use the web application.
 
 </template>
 <template v-slot:mistake>
@@ -911,7 +914,7 @@ The graphical user interface is implemented in HTML<sup>[1](https://html.spec.wh
 </template>
 <template v-slot:example-2-bad>
 
-The web browser communicates with the web application by sending HTTP requests to it. HTTP is a protocol built on top of TCP, which is transport protocol for sending small packages (messages) from one computer to another. ...
+The web browser communicates with the web application by sending HTTP requests to it. HTTP is a protocol built on top of TCP, which is a transfer protocol for sending small packages (messages) from one computer to another. ...
 
 </template>
 <template v-slot:example-2-good>
@@ -926,7 +929,7 @@ Techniques used to implement the solution (for example HTTP, HTML, CSS, Express,
 </template>
 <template v-slot:problem>
 
-The report should be about the solution you have created, not details about the techniques you use to implement it. Many readers do probably already know these techniques, and reading about them is no fun, and you describing them in vain wastes your time.
+The report should be about the solution you have created, not details about the techniques you have used to implement it. Many readers do probably already know these techniques, and reading about them is no fun, and you describing them in vain wastes your time.
 
 </template>
 <template v-slot:solution>
