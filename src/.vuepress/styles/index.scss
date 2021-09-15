@@ -16,4 +16,20 @@ pre code{
 		visibility: hidden;
 	}
 	
+	.sidebar{
+		display: none;
+	}
+	
+	.page{
+		padding-left: 0;
+	}
+	
+	.navbar{
+		display: none;
+	}
+	
+	.code-group-item{
+		display: block;
+	}
+	
 }
