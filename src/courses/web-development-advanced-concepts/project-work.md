@@ -420,15 +420,13 @@ The three layers the web application consists of have some dependencies:
 * The `Presentation Layer` has some dependencies on the `Business Logic Layer`.
 * The `Business Logic Layer` has some dependencies on the `Data Access Layer`.
 
-These dependencies are hardcoded at multiple places, as shown in the figures below.
+These dependencies are hardcoded at multiple places, as shown in the tabs below.
 
 :::: code-group
 ::: code-group-item Presentation Layer
-<Figure caption="account-router.js in the Presentation Layer.">
-
-`account-router.js` in the Presentation Layer has a dependency on `account-manager.js` in the Business Logic Layer.
-
 ```js
+// account-router.js
+
 const express = require('express')
 // Here we have hardcoded a dependency on the account manager.
 const accountManager = require('../business-logic-layer/account-manager')
@@ -447,15 +445,11 @@ router.get("/", function(request, response){
 
 module.exports = router
 ```
-
-</Figure>
 :::
 ::: code-group-item Business Logic Layer
-<Figure caption="account-manager.js in the Business Logic Layer.">
-
-`account-manager.js` in the Business Logic Layer has a dependency on `account-repository.js` in the Data Access Layer.
-
 ```js
+// account-manager.js
+
 // Here we have hardcoded a dependency on the account repository.
 const accountRepository = require('../data-access-layer/account-repository')
 
@@ -465,15 +459,12 @@ exports.getAllAccounts = function(callback){
   })
 }
 ```
-
-</Figure>
 :::
 ::: code-group-item Data Access Layer
-<Figure caption="account-repository.js in the Data Access Layer.">
-
-`account-repository.js` in the Data Access Layer (has no dependency on any other layer but is shown for the completeness of the three layers).
-
 ```js
+// account-repository.js
+
+// No dependency on another layer, but shown for completeness.
 const mysql = require('mysql')
 const connection = mysql.connect(...)
 
@@ -488,8 +479,6 @@ exports.getAllAccounts = function(callback){
   })
 }
 ```
-
-</Figure>
 :::
 ::::
 
@@ -521,16 +510,14 @@ When we start the program, we specify which account repository to use, and then 
 
 :::: code-group
 ::: code-group-item Data Access Layer
-<Figure caption="account-repository.js in the Data Access Layer.">
-
-`account-repository.js` in the Data Access Layer (has no dependency on any other layer but is shown for the completeness of the three layers).
-
 ```js
+// account-repository.js
+
 module.exports = function({}){
-  // Name all the dependencies in the curly brackets (none in this case). 
+  // Name all the dependencies in the curly brackets above (none in this case). 
   
   const allAccounts = []
-
+  
   return {
     getAllAccounts: function(callback){
       callback([], allAccounts)
@@ -540,18 +527,14 @@ module.exports = function({}){
   
 }
 ```
-
-</Figure>
 :::
 ::: code-group-item Business Logic Layer
-<Figure caption="account-manager.js in the Business Logic Layer.">
-
-`account-manager.js` in the Business Logic Layer has a dependency on `account-repository.js` in the Data Access Layer but doesn't specify which one.
-
 ```js
-module.exports = function({accountRepository}){
-  // Name all the dependencies in the curly brackets. 
+// account-manager.js
 
+module.exports = function({accountRepository}){
+  // Name all the dependencies in the curly brackets above.
+  
   return {
     getAllAccounts: function(callback){
       accountRepository.getAllAccounts(function(errors, accounts){
@@ -562,19 +545,15 @@ module.exports = function({accountRepository}){
   }
 }
 ```
-
-</Figure>
 :::
 ::: code-group-item Presentation Layer
-<Figure caption="account-router.js in the Presentation Layer.">
-
-`account-router.js` in the Presentation Layer has a dependency on `account-manager.js` in the Business Logic Layer but doesn't specify which one.
-
 ```js
+// account-router.js
+
 const express = require('express')
 
 module.exports = function({accountManager}){
-  // Name all the dependencies in the curly brackets. 
+  // Name all the dependencies in the curly brackets above.
   
   const router = express.Router()
   
@@ -592,8 +571,6 @@ module.exports = function({accountManager}){
   
 }
 ```
-
-</Figure>
 :::
 ::::
 

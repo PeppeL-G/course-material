@@ -95,9 +95,7 @@ The product of the integers between 3 and 5 is 60.
 ### Problem 1.7: Computing things
 For this problem, students taking the programs *IT Infrastructure and Network Design* and *Sustainable Building Information Management* have a different problem to solve. If you don't take any of these program (e.g. being an exchange student), solve the problem for the program IT Infrastructure and Network Design.
 
-:::: code-group
-::: code-group-item IT Infrastructure and Network Design
-
+#### IT Infrastructure and Network Design
 A company is planning on buying 5 different servers. The costs to buy the servers are 3200, 5000, 1790, 8900 and 2300 SEK respectively, and they each cost 100 SEK to run each month (power consumption, floor space, etc.). The servers will run for a number of months and then be given away for charity.
 
 Write a program that first asks the user to enter a number of months, and then computes and prints:
@@ -121,16 +119,15 @@ Total cost: 22190
 
 </Figure>
 
-:::
-::: code-group-item Sustainable Building Information Management
+#### Sustainable Building Information Management
 
 Create a program that can calculate LCC for a building using the information in <FigureNumber /> below:
 
 <Figure caption="Slides with the LCC formula and the Present Value Factor">
 
-<img src="./files/labs/lab-1-lcc-formula.png" alt="The LCC formula">
+![The LCC formula](./files/labs/lab-1-lcc-formula.png)
 
-<img src="./files/labs/lab-1-present-value-factor.png" alt="The Present Value Factor.">
+![The Present Value Factor.](./files/labs/lab-1-present-value-factor.png)
 
 </Figure>
 
@@ -138,7 +135,7 @@ The input to the calculations should be the properties defined in the IDS below:
 
 <Figure caption="IDS">
 
-<img src="./files/labs/lab-1-ids.png" alt="IDS">
+![IDS](./files/labs/lab-1-ids.png)
 
 </Figure>
 
@@ -152,9 +149,6 @@ On top of this:
 * Costs for maintenance and repairs should be calculated using the default value of 100 SKR/m2(NTA) /year.
 * The cost for the decommissioning should be calculated as 10% of the cost assessment.
 * If some information is missing this information should be provided by the user as input. 
-
-:::
-::::
 
 ### Present your work
 Present your work to a teacher at a lab session. Be prepared to explain how your solutions and implementations work, and be prepared to answer any question the teacher might have about your code. It is good to practice this in advance (alone or with a friend).
@@ -496,8 +490,7 @@ Have an empty list in the beginning that is used to store all memory values, and
 ### Problem 4.5: Verifying strings
 For this problem, students taking the programs *IT Infrastructure and Network Design* and *Sustainable Building Information Management* have a different problem to solve. If you don't take any of these program (e.g. being an exchange student), solve the problem for the program IT Infrastructure and Network Design.
 
-:::: code-group
-::: code-group-item IT Infrastructure and Network Design
+#### IT Infrastructure and Network Design
 
 Create a program that asks the user to enter a path to a directory on the file system. Your program should then check if that directory only contains files with the following names:
 
@@ -506,8 +499,7 @@ Create a program that asks the user to enter a path to a directory on the file s
 
 There may exists several files with the name `backup-config-YYYY-MM-DD.xml`, and `YYYY-MM-DD` should of course be a date for when the backup of the `config.xml` was created (e.g. `2018-11-12`). Your program should print text telling the user if all the files were named in one of these two formats, or if there exist files that doesn't follow these formats (in which case you should print the name of these files that don't follow the formats).
 
-:::
-::: code-group-item Sustainable Building Information Management
+#### Sustainable Building Information Management
 
 Develop a program that checks if the files in a directory have been named according to the description below. The path to the directory should be given as input.
 
@@ -583,9 +575,6 @@ The different allowed formats should be defined in the different IDS in the proj
 
 </Figure>
 
-:::
-::::
-
 ### Present your work
 Present your work to a teacher at a lab session. Be prepared to explain how your solutions and implementations work, and be prepared to answer any question the teacher might have about your code. It is good to practice this in advance (alone or with a friend).
 
@@ -650,9 +639,31 @@ It should not be possible to undo the store or load operation, i.e.:
 ### Problem 5.3: Doing things
 For this problem, students taking the programs *IT Infrastructure and Network Design* and *Sustainable Building Information Management* have a different problem to solve. If you don't take any of these program (e.g. being an exchange student), solve the problem for the program IT Infrastructure and Network Design.
 
-:::: code-group
-::: code-group-item IT Infrastructure and Network Design
+#### Sustainable Building Information Management
+Create a file named `house.xml` with the XML code shown in <FigureNumber /> below. The XML code contains information about a house with a set of rectangular rooms.
 
+<Figure caption="The XML code in house.xml.">
+
+```
+<house>
+  <room>
+    <name>Living Room</name>
+    <side-length-1>5</side-length-1>
+    <side-length-2>5</side-length-2>
+  </room>
+  <room>
+    <name>Kitchen</name>
+    <side-length-1>3</side-length-1>
+    <side-length-2>6</side-length-2>
+  </room>
+</house>
+```
+
+</Figure>
+
+Then write a program that computes and prints the total area of the house (the sum of the area of the rooms) in the XML file. Your program should still work if one add/remove rooms to the XML file.
+
+#### IT Infrastructure and Network Design
 Write a default configuration for a Cisco router in a file called `configuration-template.config`. In this file, you should be able to use placeholders that later will be replaced with the actual values that should be used. The file can look like the one shown in <FigureNumber /> below. In this case, placeholders are all words surrounded with curly brackets, `{like_this}`.
 
 <Figure caption="Sample of the configuration template file. The parts with curly brackets are placeholders.">
@@ -799,35 +810,6 @@ Then you loop 5 times (since each placeholder has five different values), and ea
 3. Store `template` in a new file.
 :::
 
-:::
-::: code-group-item Sustainable Building Information Management
-
-Create a file named `house.xml` with the XML code shown in <FigureNumber /> below. The XML code contains information about a house with a set of rectangular rooms.
-
-<Figure caption="The XML code in house.xml.">
-
-```
-<house>
-  <room>
-    <name>Living Room</name>
-    <side-length-1>5</side-length-1>
-    <side-length-2>5</side-length-2>
-  </room>
-  <room>
-    <name>Kitchen</name>
-    <side-length-1>3</side-length-1>
-    <side-length-2>6</side-length-2>
-  </room>
-</house>
-```
-
-</Figure>
-
-Then write a program that computes and prints the total area of the house (the sum of the area of the rooms) in the XML file. Your program should still work if one add/remove rooms to the XML file.
-
-:::
-::::
-
 ### Present your work
 Present your work to a teacher at a lab session. Be prepared to explain how your solutions and implementations work, and be prepared to answer any question the teacher might have about your code. It is good to practice this in advance (alone or with a friend).
 
@@ -908,14 +890,47 @@ To pass, you don't have to use the methods `is_column_full(column)` nor `does_co
 ### Problem 6.2: Implementing a class
 For this problem, students taking the programs *IT Infrastructure and Network Design* and *Sustainable Building Information Management* have a different problem to solve. If you don't take any of these program (e.g. being an exchange student), solve the problem for the program IT Infrastructure and Network Design.
 
-:::: code-group
-::: code-group-item IT Infrastructure and Network Design
+#### Sustainable Building Information Management
+Develop a software that includes the class `Construction_Entity`, see the UML schema below.
 
+As can be seen the data fields of the class are the same as the ones described in the IDS in lab problem 1.7.
+
+<img style="max-width: 300px;" src="./files/labs/lab-6-construction-entity.png">
+
+The software should be able to instantiate an unknown number of objects using the class by reading all XML-files from a folder, with the structure described by the example below.
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<Construction_Entity id="BIM3HUS13">
+    <CoClassCode>CBH</CoClassCode>
+    <PropertyName>Skrea 13:8</PropertyName>
+    <SpaceArea>400</SpaceArea>
+    <CostAssessment>1589457</CostAssessment>
+    <EnergyConsumption>32.74</EnergyConsumption>
+    <CarbonDioxideEquivalency>28626</CarbonDioxideEquivalency>
+</Construction_Entity>
+```
+
+You can use the following XML files to test your software:
+
+* [BIM3HUS12.xml](files/labs/BIM3HUS12.xml)
+* [BIM3HUS13.xml](files/labs/BIM3HUS13.xml)
+* [BIM3HUS14.xml](files/labs/BIM3HUS14.xml)
+* [BIM3HUS24.xml](files/labs/BIM3HUS24.xml)
+* [BIMHUS21.xml](files/labs/BIMHUS21.xml)
+
+The software should print the average `LCC`/`SpaceArea` for all objects that have the `CoClassCode` given as input. To implement this, the class `Construction_Entity`'s constructor should receive the name of an XML file it should read it values from, and the class should also have the method `getLCC()`, which should compute and return the LCC value for the construction entity (this should then be used by the main program).
+
+:::tip Getting the value for an attribute
+When you have an instance of an `Element` or a `SubElement` that have attributes, you can get the values for the attributes using the `attrib` property, which is a dict containing the name of all the element's attributes as keys, and the attribute values as the values in the dict. For example, if the element is `<my-element a="1" b="2">`, then the element's `attrib` property in Python would be `{"a": "1", "b": "2"}`.
+:::
+
+#### IT Infrastructure and Network Design
 This problem is about implementing a calculator program as described in problem 4.4, but this time using a class to represent the calculator. Write all your code in a file named `lab_06_calculator.py`. When you are done, running the code in `lab_06_calculator.py` should have the very same effect as running the code you wrote for problem 4.4 (the output/input should be the same).
 
 We recommend you to implement the class piece by piece by following the steps below. If you want to do it in another way, feel free to do so, but the class you create should have the same functionality (name/constructor/methods) as described in the steps below.
 
-#### 6.2.1 Adding a constructor
+##### 6.2.1 Adding a constructor
 Create a class named `Calculator` with a constructor that is called with no arguments. Inside the constructor you can, for now, simply write `pass` (a statement in Python doing nothing).
 
 Although your `Calculator` class is quite useless at the moment, you should still be able to create new instances of it using the code below:
@@ -924,7 +939,7 @@ Although your `Calculator` class is quite useless at the moment, you should stil
 my_calculator = Calculator()
 ```
 
-#### 6.2.2 Keeping track of memory values
+##### 6.2.2 Keeping track of memory values
 In the constructor, add a parameter (in addition to the `self` parameter) which contains the calculator's initial memory value. The constructor should store this initial memory value in a list in the `self` object.
 
 In the class, add a method called `get_memory_value()`, which should return the calculator's current memory value (i.e. the last value in the list stored in the `self` object).
@@ -936,7 +951,7 @@ my_calculator = Calculator(12)
 twelve = my_calculator.get_memory_value()
 ```
 
-#### 6.2.3 Adding mathematical operations
+##### 6.2.3 Adding mathematical operations
 In the class, add the method `add()`, which should be called with a single number as argument. When it is called, the calculator should store a new memory value which should be the sum of the previously stored memory value and the number in the parameter. You can simply store the new memory value at the end of the list in the `self` object.
 
 Then add the methods `subtract()`, `multiply()` and `divide()`, which should work in a similar way as the `add()` method, but instead carry out subtraction, multiplication and division respectively.
@@ -952,7 +967,7 @@ my_calculator.divide(2) # Divide the calculator's memory by 2.
 five = my_calculator.get_memory_value() # Give us the calculator's memmory.
 ```
 
-#### 6.2.4 Adding the undo operation
+##### 6.2.4 Adding the undo operation
 In the class, add the method `undo()`, which should restore the calculator's memory value to the memory value it had before the previous `add()`, `subtract()`, `multiply()` or `divide()` operation, i.e. remove the last value from the list in the `self` object.
 
 When you are done, your `Calculator` class should work with the following code:
@@ -967,7 +982,7 @@ my_calculator.undo()
 one = my_calculator.get_memory_value()
 ```
 
-#### 6.2.5 Checking if the `undo` operation can be used
+##### 6.2.5 Checking if the `undo` operation can be used
 In the class, add the method `can_undo()`, which should return `True` if the calculator can go back to a previous memory value, otherwise `False`, if there is nothing to undo. I.e., check whether the list in the `self` object only contains the initial memory value or not.
 
 When you are done, the class should work with the following code.
@@ -983,7 +998,7 @@ while my_calculator.can_undo():
 one = my_calculator.get_memory_value()
 ```
 
-#### 6.2.6 Using the `Calculator` class
+##### 6.2.6 Using the `Calculator` class
 If you have implemented your `Calculator` class correctly, it should work well with the code found in <FigureNumber /> below, which contains the main application loop for the calculator program.
 
 <Figure caption="The main application loop for the calculator program implemented with the Calculator class.">
@@ -1023,46 +1038,6 @@ print("The program finished with "+str(calculator.get_memory_value())+" in memor
 ```
 
 </Figure>
-
-:::
-::: code-group-item Sustainable Building Information Management
-
-Develop a software that includes the class `Construction_Entity`, see the UML schema below.
-
-As can be seen the data fields of the class are the same as the ones described in the IDS in lab problem 1.7.
-
-<img style="max-width: 300px;" src="./files/labs/lab-6-construction-entity.png">
-
-The software should be able to instantiate an unknown number of objects using the class by reading all XML-files from a folder, with the structure described by the example below.
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<Construction_Entity id="BIM3HUS13">
-    <CoClassCode>CBH</CoClassCode>
-    <PropertyName>Skrea 13:8</PropertyName>
-    <SpaceArea>400</SpaceArea>
-    <CostAssessment>1589457</CostAssessment>
-    <EnergyConsumption>32.74</EnergyConsumption>
-    <CarbonDioxideEquivalency>28626</CarbonDioxideEquivalency>
-</Construction_Entity>
-```
-
-You can use the following XML files to test your software:
-
-* [BIM3HUS12.xml](files/labs/BIM3HUS12.xml)
-* [BIM3HUS13.xml](files/labs/BIM3HUS13.xml)
-* [BIM3HUS14.xml](files/labs/BIM3HUS14.xml)
-* [BIM3HUS24.xml](files/labs/BIM3HUS24.xml)
-* [BIMHUS21.xml](files/labs/BIMHUS21.xml)
-
-The software should print the average `LCC`/`SpaceArea` for all objects that have the `CoClassCode` given as input. To implement this, the class `Construction_Entity`'s constructor should receive the name of an XML file it should read it values from, and the class should also have the method `getLCC()`, which should compute and return the LCC value for the construction entity (this should then be used by the main program).
-
-:::tip Getting the value for an attribute
-When you have an instance of an `Element` or a `SubElement` that have attributes, you can get the values for the attributes using the `attrib` property, which is a dict containing the name of all the element's attributes as keys, and the attribute values as the values in the dict. For example, if the element is `<my-element a="1" b="2">`, then the element's `attrib` property in Python would be `{"a": "1", "b": "2"}`.
-:::
-
-:::
-::::
 
 ### Present your work
 Present your work to a teacher at a lab session. Be prepared to explain how your solutions and implementations work, and be prepared to answer any question the teacher might have about your code. It is good to practice this in advance (alone or with a friend).
