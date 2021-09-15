@@ -14,33 +14,34 @@ The goal with the software you create is to get people to use it (no point in cr
 
 * Crossing the road is dangerous.
 * Waiting (in line, at a bus stop, at the traffic lights, etc.) is boring AND a waste of time (two problems in one).
-* Leaving the children home alone is dangerous (parents are worried both about the house and their children).
+* Leaving the children home alone is dangerous (parents are worried about both the house and their children).
 * Communicating with someone not speaking your language is hard.
 * Remembering when Arsenal plays their next game is hard, and it changes after each game.
 * Contacting all players in a hockey team (to notify them of cancelled matches, changed practice hours, etc.) is hard/time consuming.
 * Knowing what is cheap and what is expensive in a grocery store is hard.
 
-If you can't come up with a problem on your own, simply ask a friend or a company about problems they're having, and then you have a project to solve that problem.
+If you can't come up with a problem on your own, simply ask a friend or a company about problems they're having, and then you can try to solve that problem as your project.
 
-When you have identified a problem to solve, you need to analyze the problem in depth to get a better understanding of it, so you know things like:
+When you have identified the problem to solve, you need to analyze the problem in depth to get a better understanding of it, so you know things like:
 
 * Who are having the problem?
-* What is characteristic for those having the problem? E.g.:
+* What is characteristic of those having the problem? E.g.:
     * Are they rich?
     * Do they live in big cities?
     * Are they old?
     * Do they all have driver licenses?
+    * How much time are they willing to invest to solve the problem? (e.g. 15 minutes to learn how to use a new app?)
     * Etc.
 * When are they having the problem?
 * How does the problem impact the rest of their lives?
 * Etc.
 
-To analyse the problem in depth could be a big project itself taking many months, but let us keep things minimal here (you don't have time to do a proper analyze of the project in depth for the project works you do in school) and move on.
+Analyzing the problem in depth could be a big project itself taking many months, but let us keep things minimal here (you don't have time to do a proper analyze of the project in depth for the project you do in school) and move on.
 
 ### The solution
-When you have a good understanding of the problem, you need to come up with a solution to the problem. What the solution looks like do of course depends on what the problem is, but in our case the solution will always involve the creation of software. For example, if the problem is *My children has grown up and now I have a lot of small clothes no one in the family can use*, then maybe the solution could be to create a website where people can sell their clothes to others.
+When you have a good understanding of the problem, you need to come up with a solution to the problem. What the solution looks like do of course depends on what the problem is, but in our case the solution will always involve the creation of software. For example, if the problem is *My children has grown up and now I have a lot of small clothes no one in the family can use*, then maybe the solution could be to create a website where people can sell their clothes online to others.
 
-Often you don't only come up with one solution, but many different solutions (coming up with different solutions could be a project itself taking many months), and then you continue to work with the solution you think is the most promising one. When you do, you need to be sure that the people having the problem really think that the solution you pick is a good solution they are willing to use (optimally willing to pay money for it 🤑). You can compare your solution to existing solutions to see if your solution seems to be better. For example, parents might throw/give away their children clothes for free now, but with your solution they would get some money for the clothes, making them prefer your solution. Making a survey and asking the people having the problem is of course also a very good idea.
+Often you don't only come up with one solution, but many different solutions (coming up with different solutions could be a project itself taking many months), and then you continue to work with the solution you think is the most promising one. When you do, you need to be sure that the people having the problem really think that the solution you pick is a good solution they are willing to use (optimally willing to pay money for 🤑). You can compare your solution to existing solutions to see if your solution seems to be better. For example, parents might now throw/give away their children clothes for free now, but with your solution they would get some money for the clothes, making them prefer your solution. Making a survey and asking the people having the problem if they think your solution is a good idea is of course a very smart thing to do.
 
 When you have decided which solution to go with, you need to realize it (in the previous example implement the website). When you're done realizing the solution, we'll for simplicity consider the project to be over. Real projects could however continue after this. For example, the following could also be part of the project:
 
@@ -52,7 +53,9 @@ When you have decided which solution to go with, you need to realize it (in the 
 * ...
 
 ## Report structure
-Reports describing projects tends to be quite long. Therefore, we divide them into chapters, making them a bit more structured. But which chapters should we have? In which order should they be? There's no single correct answer to this, but let's go through an example of a good structure for a report.
+Now that you have a basic understanding of what a project is, let's take a look at how we can write a report about one.
+
+Reports describing projects tends to be quite long. Therefore we divide them into chapters, making them a bit more structured. But which chapters should we have? In which order should they be? There's no single correct answer to this, but let's go through an example of a good structure for a report.
 
 ### Chapter 1: Introduction
 The first chapter in the report should introduce the reader to the project. The reader does so far not know anything about your project, so the first thing you need to explain to the reader is which problem you try to solve and how you intend to solve it.
@@ -62,7 +65,7 @@ In this chapter you can think of the reader as an investor with a lot of money, 
 In our case the solution is a website, so we need to tell the reader what problem the users of the website are having and then explain how they solve that problem by using the website. A UML use-case diagram is an excellent tool to visualize what the user will be able to do on the website.
 
 ::: tip Keep it simple!
-Investors are not technical people (just rich and stupid bastards 😉), so avoid using technical terms. Anyone reading your report should be able to understand the text in the Introduction chapter, even your grandpa who doesn't even know how to turn off the radio.
+Investors are not technical people (just rich and stupid bastards 😉), so avoid using technical terms. Anyone reading your report should be able to understand all the text in the Introduction chapter, even your own grandpa who doesn't even know how to turn off the radio.
 :::
 
 ### Chapter 2: Solution
@@ -75,7 +78,7 @@ In our case the solution consists of two components we create ourselves:
 * The web application
 * The database
 
-We have a lot to say about these, but that will be implementation details, and those are probably better described in other chapters, so this chapter is just about the architecture of the solution (an overview of the solution). This way, readers who don't know much about programming should still be able to read and understand most parts of this chapters.
+We have a lot to say about these, but that will be implementation details, and those are probably better described in chapters dedicated to describe these in detail, so this chapter is just about the architecture of the solution (an overview of the solution). This way, readers who don't know much about programming should still be able to read and understand most parts of this chapters.
 
 ::: tip Tips!
 In our case we describe the architecture of our solution in this chapter, so maybe *Architecture* is a more accurate chapter name than *Solution*? It's your report, you decide!
@@ -95,7 +98,7 @@ We can use a separate chapter to describe the database component in our solution
 * ...
 
 ::: tip Tips!
-In this chapter you can expect the reader to know a lot about databases, so don't expect your grandpa to understand much of what you write here.
+In this chapter you can expect the reader to know a lot about databases, so don't expect your grandpa to understand much of what you write here. This chapter will primarily be read by other developers working on the project to learn how they should use the database, and by quality assurance people (your boss, your team's quality assurance member, your customer's quality assurance checker, etc.) to verify that your solution has been implemented in a good way.
 :::
 
 ::: warning Remember!
@@ -110,18 +113,19 @@ We can use a separate chapter to describe the web application component in our s
 * How is authentication and authorization handled?
 * How is information about the clients remembered? E.g. cookies, sessions, tokens, etc.
 * Which security vulnerabilities has been thought of and is protected against?
+* Which libraries is the web application using?
 * ...
 
 ::: tip Tips!
-In this chapter you can expect the reader to know a lot about how web applications work, so don't expect your grandpa to understand much of what you write here.
+In this chapter you can expect the reader to know a lot about how web applications work, so don't expect your grandpa to understand much of what you write here. This chapter will primarily be read by other developers working on the project to learn how they should add new features to the web application, and by quality assurance people (your boss, your team's quality assurance member, your customer's quality assurance checker, etc.) to verify that your solution has been implemented in a good way.
 :::
 
 ::: warning Remember!
-This chapter is about the web application only, so no need to describe implementation details of the database. The only thing you need to mention about the database in this chapter is how you communicate with it.
+This chapter is about the web application only, so no need to describe implementation details of the database. The only thing you need to mention about the database in this chapter is how you communicate with it/connect to it.
 :::
 
 ### Other chapters
-Add whichever other chapters you want that make sense to have. Maybe a chapter describing the website's graphical user interface is good to have? Or maybe designing the graphical user interface is an entire project on its own? Maybe the solution also includes a smartphone app? Then having a chapter explaining the implementation of that app maybe would be good? Or maybe the smartphone app should be described in a separate report? Maybe our solution also includes special days people can come to a house and leave the clothes they want to sell there, and then others can come to the house and buy them? Then a chapter explaining how this works would be good, etc.
+Add whichever other chapters you want that make sense to have. Maybe a chapter describing the website's graphical user interface is good to have? Or maybe designing the graphical user interface is an entire project on its own? Maybe the solution also includes a smartphone app? Then having a chapter explaining the implementation of that app would be good? Or maybe the smartphone app should be described in a separate report? Maybe our solution also includes special days people can come to a house and leave the clothes they want to sell there, and then others can come to the house and buy them? Then a chapter explaining how this works would be good, etc.
 
 ## Readers are stupid!
 When you write a report you must always remember that you write it for the readers. Each time you hesitate over something, such as:
@@ -349,7 +353,7 @@ Don't make the text stand out too much. Just using italic is enough in most case
 </template>
 </ReportMistake>
 
-### Abbreviations without explanations
+### Acronyms without explanations
 <ReportMistake>
 <template v-slot:example-1-bad>
 
@@ -364,17 +368,47 @@ The Graphical User Interface (GUI) has been...
 
 <template v-slot:mistake>
 
-The text uses abbreviations without explaining what they mean.
+The text uses acronyms without explaining what they mean.
 
 </template>
 <template v-slot:problem>
 
-The reader doesn't know what the abbreviation mean and doesn't understand the text.
+The reader doesn't know what the acronym stands for and doesn't understand the text.
 
 </template>
 <template v-slot:solution>
 
-Always explain what an abbreviation means the first time you use it in the report.
+Always explain what an acronym stands for the first time you use it in the report.
+
+</template>
+</ReportMistake>
+
+### Acronyms are introduced wrong
+<ReportMistake>
+<template v-slot:example-1-bad>
+
+The Graphical User Interface (from here on written as GUI) has been...
+
+</template>
+<template v-slot:example-1-good>
+
+The Graphical User Interface (GUI) has been...
+
+</template>
+
+<template v-slot:mistake>
+
+The standard notation for introducing acronyms has not been used.
+
+</template>
+<template v-slot:problem>
+
+The standard notation is very short, if you use another notation the reader needs to do more work to read it. The reader also needs to learn your specific way of introducing acronyms, which is an extra effort for the reader.
+
+</template>
+<template v-slot:solution>
+
+Stick to using the standard notation for introducing acronyms, or (second best) don't introduce them at all.
 
 </template>
 </ReportMistake>
