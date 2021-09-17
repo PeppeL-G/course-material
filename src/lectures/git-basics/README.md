@@ -38,20 +38,20 @@ By using a *distributed* version control system (such as Git) you automatically 
 ## How does Git work?
 [There exists many different version control systems](https://en.wikipedia.org/wiki/Comparison_of_version-control_software#General_information), but let us focus on Git alone. Many other version control systems work in a similiar way and often use the same terms, but each term might have a little bit different meaning.
 
-In the text below the term *project folder* will be used to refer to a folder on your computer in which you put all the files that belongs to a project you are working on. If the project for example is about creating a new website, then the project folder could be a folder named `the-project`, and in this folder you put all the source files (in this case all the HTML files, CSS files, images, etc.) the website consists of.
+In the text below the term *project folder* refers to a folder on your computer in which you put all the files that belongs to a project you are working on. If the project for example is about creating a new website, then the project folder could be a folder named `the-project`, and in this folder you put all the source files (in this case all the HTML files, CSS files, images, etc.) the website consists of.
 
 ### Repositories
 Version control systems make use of *repositories*. When you have a project you want to version control, you tell your version control system to create a new repository for you for that project. The repository is responsible for remembering all the different versions you have of your source files. So a single computer can contain multiple repositories: one for each project you version control.
 
 How a version control system internally represents a repository is not something we need to worry that much about, but it is good to know that Git uses a folder named `.git` in the project folder for this. The repository will contain all the different versions of the source files you want to remember. If you later delete the `.git` folder in your project folder, then you have deleted your entire repository for that project, and all the versions of your source files you have asked Git to remember for you will be gone. Be careful to not delete a `.git` folder by accident!
 
-To create a new Git repository for your project, go to the project folder and run the command `git init`. This will create the `.git` folder in your project folder for you. So far we haven't asked Git to remember any new version of the project for us, so the repository will at the moment be an empty repository (although the `.git` folder will already contain some files that are used by Git internally).
+To create a new Git repository for your project, go to the project folder and run the command `git init`. This will create the `.git` folder in your project folder for you. So far we haven't asked Git to remember any new version of the project for us, so the repository will at the moment be an empty repository (although the `.git` folder will already contain some files Git uses internally).
 
 ::: warning Note
 Since the name of the `.git` folder starts with a dot, most file explorers don't display this folder unless you change a setting telling it to display files and folders that starts with a dot. How you change that settings depends on which file explorer you use (Google it...).
 :::
 
-::: tip Example
+::::: tip Example
 :::: code-group
 ::: code-group-item Windows PowerShell
 
@@ -82,7 +82,7 @@ $ dir -Name -Force
 
 :::
 ::::
-:::
+:::::
 
 ### Commits (versions)
 To tell the repository to remember a specific version of your project, you send the repository a *commit*. A commit describes the changes made to project since the previous commit. This way, each commit can be seen as a snapshot of what the project look like at the moment the commit was created. By using these commits Git is able to restore the source files so they contain precisely the same content as they did at a specific commit/version of your project.
@@ -93,10 +93,10 @@ A commit in Git primarily contains:
 - The unique identifier of the previous commit.
 - Which changes that has been made to the project (files created/edited/deleted) since the previous commit.
 - A human readable message explaining the changes that has been made since the previous commit.
-- The name of the developer creating the commit.
+- The name of the developer who created the commit.
 - The time at which the commit was created. 
 
-Before you tell Git to create a new commit for you, you must first tell Git which changes you want to put into the commit (you can change files without putting those changes into the next commit you create, which might seem a bit weird, but it can be extremely useful). If you have created a new file or made changes to an existing file, you need to run the command `git add THE_FILE_NAME.EXT` to tell Git that the changes you have made to the file named `THE_FILE_NAME.EXT` should be part of the next commit you create. Run `git add THE_FILE_NAME.EXT` one time for each file you have created/changed and want to be part of the next commit.
+Before you tell Git to create a new commit for you, you must first tell Git which changes you want to put into the commit (you can change files without putting those changes into the next commit you create, which might seem a bit weird, but can be useful). If you have created a new file or made changes to an existing file, you need to run the command `git add THE_FILE_NAME.EXT` to tell Git that the changes you have made to the file named `THE_FILE_NAME.EXT` should be part of the next commit you create. Run `git add THE_FILE_NAME.EXT` one time for each file you have created/changed and want to be part of the next commit.
 
 Then use the command `git commit -m "A descriptive message..."` to tell Git to create a new commit with the added files and with the human readable message `A descriptive message...` (that you of course should change to a message describing the changes you have made since the previous commit). Git will figure out the other information (your name, previous commit unique identifier, current time, etc.) on its own or simply ask you to enter it.
 
@@ -110,10 +110,10 @@ Some useful `git` commands:
 - `git status` will show you which files you have added/removed/"changed and not added" to the next commit you will create.
 
 ::: warning Note
-When using the various `git` commands, it will often tell you that you are working on a branch called *master*. We'll get back to what branches are in the next lecture, but for now, just accept/ignore the fact that you are working on the master branch.
+When using the various `git` commands, it will often tell you that you are working on a branch called `master` or `main`. We'll get back to what branches are in the next lecture, but for now, just accept/ignore the fact that you are working on the `master` or `main` branch.
 :::
 
-::: tip Example (continuation of previous example)
+::::: tip Example (continuation of previous example)
 
 In the previous example we had just setup a new Git repository for an empty project folder. Now, let us create and change some files in our project folder.
 
@@ -260,19 +260,23 @@ nothing to commit, working tree clean
 :::
 ::::
 
-:::
+:::::
 
-For small projects with a single developer (as in the example above), the repository usually consists of a single chain of commits, as visualized here (*Commit 3* is the latest commit created):
+For small projects with a single developer (as in the example above), the repository usually consists of a single chain of commits, as visualized in <FigureNumber /> below (`Commit 4` is the latest commit):
+
+<Figure caption="Visualization of the commits in a repository with 4 commits.">
 
 ```
-Commit 1      <--      Commit 2      <--      Commit 3
+Commit 1      <--      Commit 2      <--      Commit 3      <--      Commit 4
 ```
 
-As long as we don't make use of branches, the repository will always consists of a sequence of commits like that (we will introduce branches in next lecture).
+</Figure>
 
-To view all the commits in the repository, you can use the command `git log`.
+As long as we don't make use of branches, the repository will always consist of a sequence of commits like that (we will introduce branches in next lecture).
 
-::: tip Example (continuation of previous example)
+To view all the commits in the repository (on the branch you are working on), you can use the command `git log` (it doesn't show how the files in each commit has been changed, but that info is stored in each commit too).
+
+::::: tip Example (continuation of previous example)
 
 :::: code-group
 ::: code-group-item Windows PowerShell
@@ -302,10 +306,10 @@ Date:   Wed Apr 24 11:21:50 2019 +0200
 
 :::
 ::::
-:::
+:::::
 
 ### Switching versions
-To view a specific version of the project, you simply tell Git *Show me the files as they looked like in commit XXX*, where XXX is the unique identifier for the commit. When you do this, Git will change the files and folders in the project folder so they look precisely the way they did in commit XXX. The command used for this is `git reset XXX`. It is easy as that to jump between different versions of your source code! However, you better first learn about the HEAD pointer in Git before you create new commits after you have run this command.
+To view a specific version of the project, you simply tell Git *Show me the files as they looked like in commit `XXX`*, where `XXX` is the unique identifier for the commit. When you do this, Git will change the files and folders in the project folder so they look precisely the way they did in commit `XXX`. The command used for this is `git reset XXX`. It is easy as that to jump between different versions of your source code! However, you better first learn about the HEAD pointer in Git before you create new commits after you have run this command.
 
 ::: warning Note
 You can't use the command `git reset XXX` if you have made changes to the source files you haven't committed yet (because then those changes would be lost).
@@ -332,7 +336,7 @@ If you then create a third commit, it will look like this:
 Commit 1      <--      Commit 2      <--      Commit 3
 ```
 
-When you use the command `git reset XXX`, Git will change the files in your project folder so they look the way they did in commit `XXX`, but it will not change the HEAD pointer to point to commit `XXX`. If you use the command `git reset XXX` to change the files so they look the way they did in Commit 2 above, and then make changes and create a new commit, then you would end up with this:
+When you use the command `git reset XXX`, Git will change the files in your project folder so they look the way they did in commit `XXX`, but it will not change the HEAD pointer to point to commit `XXX`. If you use the command `git reset XXX` to change the files so they look the way they did in `Commit 2` above, and then make changes and create a new commit, then you would end up with this:
 
 ```
                                                                       HEAD
@@ -373,7 +377,7 @@ Commit 1      <--      Commit 2      <--      Commit 3
 ```
 :::
 
-Using `git reset --hard XXX` creates a new branch (or rather: the first commit after this command creates a new branch). It is not recommended to create branches this way, because you can forget commits (`git log` only displays the chain of commits the HEAD pointer points to, so you need to remember the other commits not part of this chain yourself (Commit 3 in the example above)). So don't create branches this way; Git has better support for working with branches through various commands which we will cover in next lecture. But this serve as a good example of how you should think of commits and the HEAD pointer.
+Using `git reset --hard XXX` creates a new branch (or rather: the first commit after this command creates a new branch). It is not recommended to create branches this way, because you can forget commits (`git log` only displays the chain of commits the HEAD pointer points to, so you need to remember the other commits not part of this chain yourself (`Commit 3` in the example above)). So don't create branches this way; Git has better support for working with branches through various commands which we will cover in next lecture. But this serve as a good example of how you should think of commits and the HEAD pointer.
 
 ## When to commit
 A good question is *How do I know when it is time to create a new commit?* Is it good practice to create a new commit each day? Or should you create commits more often than that? Or less? Or is it the size of the commit (how many lines of you code you have removed/added/modified since the previous commit) that determines when to create a new commit? Are changes including 200 lines of code a good size of a commit? Well, it turns out that the best practice has nothing to do with these properties.
@@ -402,7 +406,7 @@ If the project is about completing some lab assignments, then it could be suitab
 :::
 
 ## Using Git through a GUI
-There exist applications with graphical user interfaces you can use to manage your Git repositories. This includes many IDE:s you can use to write source code. By using such an application, you don't need to remember all the details about the Git commands (arguments and flags), so this can be an easier way for you to get started with Git. However, these applications use the Git commands under the hood for you, so it is still good have a basic understanding of how the different Git commands work, because you use Git in the same way (creating commits, etc.) even if you use it through a graphical user interface instead of a command line interface.
+There exist applications with graphical user interfaces you can use to manage your Git repositories. This includes many IDE:s you can use to write source code. By using such an application, you don't need to remember all the details about the Git commands (arguments and flags), so this can be an easier way for you to get started with Git. However, these applications use the Git commands under the hood for you, so it is still good have a basic understanding of how the different Git commands work, because your workflow when using Git (creating commits, etc.) is the same no matter if you use it through a graphical user interface or a command line interface.
 
 ## Practising
 Play around with [Visualizing Git](http://git-school.github.io/visualizing-git/#free) to learn how commits work. With this tool, you never use `git add`; just use `git commit -m "Message"` directly to create a new commit, and imagine that the commit contains changed/new files. You can also try to use `git reset --hard XXX`.

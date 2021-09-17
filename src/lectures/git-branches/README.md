@@ -4,7 +4,11 @@ navbarTitle: Git Branches
 ---
 
 # Git Branches
-When you work alone on a project with a Git repository, you usually don't need to worry that much about branches in Git. This is especially true when the repository only exists locally on your own computer, because then the repository only have a single branch (a default branch) called *master*, and you can more or less ignore the fact that branches exist in Git, even though you do work on the master branch all the time. But most often, this is not the case, and you need to have a basic understanding of how branches work in Git for you to use Git in best way possible. Furthermore, Linus Torvalds designed Git around the usage of branches, so they play a very central role in Git.
+When you work alone on a project with a Git repository, you usually don't need to worry that much about branches in Git. This is especially true when the repository only exists locally on your own computer, because then the repository only have a single branch (a default branch) called `master`, and you can more or less ignore the fact that branches exist in Git, even though you do work on the `master` branch all the time. But most often, this is not the case, and you need to have a basic understanding of how branches work in Git for you to use Git in best way possible. Furthermore, Linus Torvalds designed Git around the usage of branches, so they play a very central role in Git.
+
+::: warning master VS main
+If you create your repository on your own computer using the `git init` command, then the default branch is called `master`. If you create your repository on a server, such as [GitHub](https://github.com), then your default branch will be named `main` instead. In these lecture we assume the default name is `master`.
+:::
 
 ## What is a branch?
 We usually use commits to remember earlier versions of the project, but we can also use commits to work on different versions of the project at the same time. This is the case when the repository does not consists of a single chain of commits. An example of that would be a repository consisting of the following commits:
@@ -15,16 +19,16 @@ We usually use commits to remember earlier versions of the project, but we can a
 Commit 1      <--      Commit 2      <--      Commit 3
 ```
 
-Here we can see that we have two different latest versions of the project represented by Commit 4 and Commit 3 respectively. They both contain features/functionalities the other version does not contain, and we say that we have two branches of the project at Commit 2. To know which version of the project we are working on, Git uses the HEAD pointer, so in this case we can see that we are currently working on the branch with Commit 3 (if we would create a new commit, that commit would point to Commit 3).
+Here we can see that we have two different latest versions of the project represented by `Commit 4` and `Commit 3` respectively. They both contain features/functionalities the other version does not contain, and we say that we have two branches of the project at `Commit 2`. To know which version of the project we are working on, Git uses the `HEAD` pointer, so in this case we can see that we are currently working on the branch with `Commit 3` (if we would create a new commit, that commit would point to `Commit 3`).
 
 So, a *branch* is simply a separate line of commits that takes the project in a different direction.
 
 By default, there exists a single branch called `master`, which usually is used for the "main version" of the project. As long as you don't create a new branch and switch to it, you always work on the `master` branch.
 
-In practice, a branch is just a pointer that points to the latest commit in that branch. The HEAD pointer in turn points to the branch you are currently working on.
+In practice, a branch is just a pointer that points to the latest commit in that branch. The `HEAD` pointer in turn points to the branch you are currently working on.
 
 ::: warning Note
-To simplify, we previous said that HEAD pointed to the latest commit. This is wrong; HEAD points to the branch you are currently working on.
+To simplify, we previous said that `HEAD` pointed to the latest commit. This is wrong; `HEAD` points to the branch you are currently working on.
 :::
 
 A repository with a single branch (the `master` branch only) and two commits would look like this:
@@ -79,7 +83,7 @@ Commit 1      <--      Commit 2
 :::
 
 ## Switching branches
-To change which branch you are working on, you use the command `git checkout BRANCH_NAME`. This will change the HEAD pointer to point to the branch `BRANCH_NAME`, and it will also change all the source files in the project to the way they looked like in the commit that branch pointer points to. Do not use this command if you have changes made to the source code in your project you haven't committed yet.
+To change which branch you are working on, you use the command `git checkout BRANCH_NAME`. This will change the `HEAD` pointer to point to the branch `BRANCH_NAME`, and it will also change all the source files in the project to the way they looked like in the commit that branch pointer points to. Do not use this command if you have changes made to the source code in your project you haven't committed yet.
 
 ::: tip Example
 Imagine our repository looks like this:
@@ -164,9 +168,9 @@ Commit 1      <--      Commit 2      <--      Commit 3
                                              TEST BRANCH
 ```
 
-Commit 5 will now contain the features/functionality from both Commit 4 and Commit 3, and can now be seen as the single latest version of the project. Creating merge commits can be a little bit complicated (you can have conflicts (contradictive changes to the source code in the two different branches)) that you need to handle, but let's go through how to merge branches later. For now, it's enough for you to know that you can do it.
+`Commit 5` will now contain the features/functionality from both `Commit 4` and `Commit 3`, and can now be seen as the single latest version of the project. Creating merge commits can be a little bit complicated (you can have conflicts (contradictive changes to the source code in the two different branches)) that you need to handle, but let's go through how to merge branches later. For now, it's enough for you to know that you can do it.
 
-But why use branches at all if we don't want to have them in the end? Turns out that branches are really useful during development. Especially when multiple programmers work on the same project at the same time, because a programmer don't want to be disturbed by commits from other programmers that might interfere with the programmer's own work before it is finished. So each programmer can create her own branch which the other programmers won't interfere with, and when the programmer is done with all of her work on that branch, she can share her work with the other programmers by merging it with the `master` branch. It can for example look like this (let's ignore the HEAD pointer, because it is not important in this example):
+But why use branches at all if we don't want to have them in the end? Turns out that branches are really useful during development. Especially when multiple programmers work on the same project at the same time, because a programmer don't want to be disturbed by commits from other programmers that might interfere with the programmer's own work before it is finished. So each programmer can create her own branch which the other programmers won't interfere with, and when the programmer is done with all of her work on that branch, she can share her work with the other programmers by merging it with the `master` branch. It can for example look like this (let's ignore the `HEAD` pointer, because it is not important in this example):
 
 ```
                        Commit 3      <--      Commit 6      <--      ALICE BRANCH
@@ -176,7 +180,7 @@ Commit 1      <--      Commit 2      <--      MASTER BRANCH
                        Commit 4      <--      Commit 5      <--      BOB BRANCH
 ```
 
-When Alice is done with her work, she merges her branch with the master branch:
+When Alice is done with her work, she merges her branch with the `master` branch:
 
 ```
                        Commit 3      <--      Commit 6
@@ -186,7 +190,7 @@ Commit 1      <--      Commit 2      <--      Commit 7      <--      MASTER BRAN
                        Commit 4      <--      Commit 5      <--      BOB BRANCH
 ```
 
-And when Bob is done with his work, he merges his work with the master branch:
+And when Bob is done with his work, he merges his work with the `master` branch:
 
 ```
                        Commit 3      <--      Commit 6
@@ -203,7 +207,7 @@ How multiple programmers sitting at different computers can work on the same rep
 There are more use-cases for branches than just "one branch per programmer". For example, if you create a library, then you might want to have one branch for each major version of the library you have, so you conveniently can switch between them. This way, it is easy to fix bugs/security vulnerabilities in older versions of the library, and to add new features in the latest version of the library. Or maybe you just want to test something new which you don't know if you'll have any use of. Then you can do that work in a new branch, and if you later discover that it didn't play out well, you go back and work as usual on the `master` branch or your own branch.
 
 ::: tip Example
-A designer was given the task to improve the layout on a website (change the placement of menus, change the colors used, etc.). It was a very big website containing hundreds of webpages, so it took her 2 weeks to change everything. She did all her work in her own branch, so during these two weeks, the other programmers working on the same project was not disturbed by her work: they did never see some pages with the old layout and some pages in the new layout, they saw all pages in the old layout until she after 2 weeks merged her branch with the master branch, at which point they saw all pages with the new layout.
+A designer was given the task to improve the layout on a website (change the placement of menus, change the colors used, etc.). It was a very big website containing hundreds of webpages, so it took her 2 weeks to change everything. She did all her work in her own branch, so during these two weeks, the other programmers working on the same project was not disturbed by her work: they did never see some pages with the old layout and some pages in the new layout, they saw all pages in the old layout until she after 2 weeks merged her branch with the `master` branch, at which point they saw all pages with the new layout.
 :::
 
 ::: tip Example
@@ -214,16 +218,16 @@ A web developer was given the task to add two major functionalities to an existi
 
 The web developer created a new branch and started to implement the first functionality (emailing feedback) in it. When she was half done with this (had created 5 commits on the new branch), the owner of the website contacted her and told her that he needed to have the comment and login functionality ASAP, so she needed to stop working on the first functionality, and instead start to implement the second functionality. To do that, she simply:
 
-1. Switched back to the master branch (with no traces of her half finished first functionality).
+1. Switched back to the `master` branch (with no traces of her half finished first functionality).
 2. Created a new branch.
 3. Implemented the comment and login functionality (12 commits) in the new branch.
-4. Merged the new branch with the master branch.
+4. Merged the new branch with the `master` branch.
 
-Then she reported back to the website owner that the comment and login functionality now was implemented in the master branch. Then she checked out the first branch she created and continued with the implementation of the first functionality. 
+Then she reported back to the website owner that the comment and login functionality now was implemented in the `master` branch. Then she checked out the first branch she created and continued with the implementation of the first functionality. 
 :::
 
 ## Viewing branches
-If you forget which branch you are currently working on, you can use the command `git branch`. Then Git will show you which branches that exist in the repository and which one of these you are currently working on (which branch HEAD points to).
+If you forget which branch you are currently working on, you can use the command `git branch`. Then Git will show you which branches that exist in the repository and which one of them you are currently working on (which branch `HEAD` points to).
 
 ## Merging branches
 So, let's take a closer look at how we can merge the commits in one branch into another branch. This can be really easy, or a bit complicated, depending on which commits the branches contain.
@@ -241,7 +245,7 @@ Commit 1      <--      Commit 2      <--      Commit 3      <--      Commit 4
                                                                       HEAD
 ```
 
-That, is we have created a new branch called `alice`, implemented a new feature on that branch in Commit 3 and Commit 4, and now we want to merge that into the `master` branch. To make that happen, we first need to be working on the branch we want to merge the work into, so we start by running the command `git checkout master`, so our repository looks like this:
+That, is we have created a new branch called `alice`, implemented a new feature on that branch in `Commit 3` and `Commit 4`, and now we want to merge those commits into the `master` branch. To make that happen, we first need to be working on the branch we want to merge the work into, so we start by running the command `git checkout master`, so our repository looks like this:
 
 ```
                         HEAD
@@ -285,7 +289,7 @@ Commit 1      <--      Commit 2      <--      Commit 3
                                              TEST BRANCH
 ```
 
-And that we in Commit 4 created a new file called `master-file.txt`, and in Commit 3 created a new file called `test-file.txt`. The only sensible outcome of merging the two branches is to end up with both of the files, and Git understands that.
+And that we in `Commit 4` created a new file called `master-file.txt`, and in `Commit 3` created a new file called `test-file.txt`. The only sensible outcome of merging the two branches is to end up with both of the files, and Git understands that.
 
 So, to merge the `test` branch into the `master` branch we run the command `git merge test`. When we do that, Git will create a new merge commit (Commit 5) that contains both `master-file.txt` and `test-file.txt`, and our repository will look like this:
 
@@ -370,7 +374,7 @@ y = 2
 print(x*y)
 ```
 
-Git won't be able to figure out what the outcome of the merge should be, so when you try to merge the two branches by running the command `git merge BRANCH_NAME`, the merge commit will not be created. Instead, Git will print an error message saying that the file contains a merge conflict, and it will change the content of the file to this (you can see the changes each branch want to make to the file):
+Git won't be able to figure out what the outcome of the merge should be, so when you try to merge the two branches by running the command `git merge BRANCH_NAME`, the merge commit will not be created. Instead, Git will print an error message saying that the file contains a merge conflict, and it will change the content of the file to this (you can see the changes each branch wants to make to the file):
 
 ```
 -----------------
@@ -403,7 +407,7 @@ When you merge two branches you might end up with multiple merge conflicts (in m
 :::
 
 ### Rebasing
-We will not cover it in this lecture, but instead of creating merge commits, you can do something called *rebasing*. Instead of creating a merge commit, this will rather copy the commits from one branch to other. The main benefit with this solution is that the history of a branch becomes much simpler: it will consist of a linear sequence of commits only, making it much easier to read. When you create merge commits, the history of a branch will not be a linear sequence, but rather a tree of commits, which can be a bit hard to interpret. 
+We will not cover it in this lecture, but instead of creating merge commits, you can do something called *rebasing*. Rebasing will rather copy the commits from one branch to another. The main benefit with this approach is that the history of a branch becomes much simpler: it will consist of a linear sequence of commits only (no merge commits!), making it much easier to read. When you create merge commits, the history of a branch will not be a linear sequence, but rather a tree of commits, which is harder to read. 
 
 ## Practising
 Play around with [Visualizing Git](http://git-school.github.io/visualizing-git/#free) to learn how branches work. With this tool, you never use `git add`; just use `git commit -m "Message"` directly to create a new commit, and then you can also use the commands `git branch BRANCH_NAME`, `git checkout BRANCH_NAME` and `git merge BRNACH_NAME` as expected (but you will never end up with merge conflicts, so you can't practice on resolving them using this tool).

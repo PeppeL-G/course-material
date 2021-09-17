@@ -14,13 +14,13 @@ A *public repository* is a repository anyone have read access to. The creator of
 
 A *private repository* is a repository that only the creator and invited members have read & write access to. This is usually used by companies working on projects they are selling to customers and don't want to give away for free.
 
-Instead of you setting up your own server to host your repositories, you can use one of the many websites that offer to host your repositories for you:
+Instead of you setting up your own server to host your repositories, you can use one of the many websites that offer to host your repositories for you, such as:
 
 - [GitHub](https://github.com/)
 - [GitLab](https://about.gitlab.com/)
 - [And some other...](https://www.git-tower.com/blog/git-hosting-services-compared/)
 
-In addition to hosting your repositories, these websites usually offers some other good-to-have features, such as:
+In addition to hosting your repositories, these websites usually have many other good-to-have features, such as:
 
 - Issue tracking (let users report errors they find).
 - Collaboration (give other users read/write access to your repositories).
@@ -30,9 +30,9 @@ In addition to hosting your repositories, these websites usually offers some oth
 Which of these websites you should use depends on which features you need and how much you are willing to pay for them, but GitHub is one of the most popular choices for open source projects. A benefit with GitLab is that GitLab itself is open source, so if you later discover that you need to host your repositories on your own server, then you can "easily" setup your own GitLab server and move your repositories over there, and then continue to work as usual.
 
 ## Connecting remote and local repositories
-So, often when you start to work on a new project, you start by creating a new remote repository on one of the previously mentioned websites. Each remote repository get's a URI (Uniform Resource Identifier) that uniquely identifies that repository. That URI is something you can use to *clone* (create a copy of) that repository to you own computer using the command `git clone THE_URI`. This will create a new folder locally on your own computer that contains a copy of the remote repository. The idea is that when you want to add features/fix bugs, then you change the code in the local repository on your own computer and create commits there. Then you can send these commits to the remote repository, where the rest of the world (or only invited users) can take part of them.
+So, often when you start to work on a new project, you start by creating a new remote repository on one of the previously mentioned websites. Each remote repository get's a Uniform Resource Identifier (URI) that uniquely identifies that repository. That URI is something you can use to *clone* (create a copy of) that repository to you own computer by using the command `git clone THE_URI`. This will create a new folder locally on your own computer that contains a copy of the remote repository. The idea is that when you want to add features/fix bugs, then you change the code in the local repository on your own computer and create commits there. Then you can send these commits to the remote repository, where the rest of the world (or only invited users) can take part of them.
 
-Most often, we have just one remote repository, but it is possible to have multiple remote repositories for the same project. We will not get into the details of that here, but a consequence of that is that each remote repository also gets a name we can use to refer to that specific remote repository. When you use `git clone THE_URI`, the remote repository will get the name *origin* (we say that the origin of our local repository is the remote repository we cloned it from), so in our local repository the name `origin` will refer to the remote repository (the name of the remote repository is something we will use later).
+Most often, we have just one remote repository, but it is possible to have multiple remote repositories for the same project. We will not get into the details of that here, but a consequence of that is that each remote repository also gets a name we can use to refer to that specific remote repository. When you use `git clone THE_URI`, the remote repository will get the name `origin` (we say that the origin of our local repository is the remote repository we cloned it from), so in our local repository the name `origin` will refer to the remote repository (the name of the remote repository is something we will use later).
 
 When a local repository is connected to a remote repository, it has extra pointers to keep track of the branches in the remote repository. For example, imagine that the remote repository looks like this:
 
@@ -56,7 +56,7 @@ Commit 1      <--      Commit 2
 
 That is, it has a pointer called `origin/master` that points to the latest commit on the `master` branch you have received from the remote (`origin`) repository, and a branch called `master` that keeps track of the latest commit you have on your own local `master` branch. The same is true for all other branches you have in the repository (if you had a branch called `test`, you would also have a pointer called `origin/test`, or whatever you call your remote repository).
 
-When you then create a new commit (Commit 3) in your local repository on the `master` branch, it looks like this:
+When you then create a new commit (`Commit 3`) in your local repository on the `master` branch, it looks like this:
 
 ```
                                                HEAD
@@ -71,7 +71,7 @@ Commit 1      <--      Commit 2      <--      Commit 3
 That is, creating a new commit on the `master` branch does not update the `origin/master` pointer, only your own `master` pointer. Git uses these extra pointers (one for each branch) to keep track of which commits you have in your local repository that you haven't uploaded to the remote repository yet, and which commits in the remote repository you haven't downloaded yet (that has been uploaded by other programmers). 
 
 ::: warning Note
-`git clone THE_URI` is not the only way to "connect" two repositories. If you already have a local repository that you want to share with the world, then you can create an empty remote repository and then "connect" to it from your local repository using the command `git remote add` instead of the command `git clone`, but we will not cover the details here, but do be aware of the possibility.
+`git clone THE_URI` is not the only way to "connect" two repositories. If you already have a local repository that you want to share with the world, then you can create an empty remote repository and then "connect" to it from your local repository using the command `git remote add` instead of the command `git clone`, but we will not cover those details here, but do be aware of the possibility.
 :::
 
 ## Synching commits
@@ -98,7 +98,7 @@ Commit 1      <--      Commit 2
                  ORIGIN/MASTER BRANCH
 ```
 
-Then someone uploads a new commit (Commit 3) to the `master` branch on the remote repository, so the remote repository looks like this:
+Then someone uploads a new commit (`Commit 3`) to the `master` branch on the remote repository, so the remote repository looks like this:
 
 ```
                                            MASTER BRANCH
@@ -106,7 +106,7 @@ Then someone uploads a new commit (Commit 3) to the `master` branch on the remot
 Commit 1      <--      Commit 2      <--      Commit 3
 ```
 
-If you want to download Commit 3 to your local repository, then you would run the command `git fetch origin master`. This command tells Git to download the commits from the `master` branch in the remote repository that you don't yet have in your local repository. Afterwards, your local repository would look this:
+If you want to download `Commit 3` to your local repository, then you would run the command `git fetch origin master`. This command tells Git to download the commits from the `master` branch in the remote repository that you don't yet have in your local repository. Afterwards, your local repository would look this:
 
 ```
                         HEAD
@@ -130,15 +130,15 @@ Commit 1      <--      Commit 2      <--      Commit 3
                                         ORIGIN/MASTER BRANCH
 ```
 
-In this case, the branch `origin/master` contained all the commits the branch `master` contained, so Git simply used the fast-forward merge strategy, but if you would have created your own local commits on the `master` branch, you could here have had a merge conflict that you now would need to resolve manually.
+In this case, the branch `origin/master` contained all the commits the branch `master` contained, so Git simply used the fast-forward merge strategy, but if you would have created your own local commits on the `master` branch, you could here have had a merge conflicts you would now need to resolve manually.
 
-Very often when you use `git fetch` you want to use `git merge` immediately afterwards. Therefore, Git provides another command for executing these two commands called `git pull`. So instead of first running `git fetch origin master` and then `git merge origin/master`, we could simply had run `git pull origin master`.
+Very often when you use `git fetch` you want to use `git merge` immediately afterwards. Therefore, Git provides another command for executing these two commands in sequence called `git pull`. So instead of first running `git fetch origin master` and then `git merge origin/master`, we could simply had run `git pull origin master`.
 
 ### Uploading commits (pushing)
 When you have created some commits in your own local repository and want to upload these to the remote repository you use the command `git push origin BRANCH_NAME`. This is known as *pushing*. `origin` is the name of the remote repository you want to push the commits to. This doesn't have to be `origin`, but if you only have one remote repository (which most often is the case), you should use `origin`. `BRANCH_NAME` if the name of the branch whose commits you want to push, for example `master`.
 
 ::: warning Note
-You can only push your own newly created commits to the remote repository if you have all the commits the remote repository contains. If you don't have that, Git will display an error message to you when you try to push. If that's the case, then you first need to download the commits from the remote repository you don't have, resolve any merge conflicts you might get, and then you can push to the remote repository.
+You can only push your own newly created commits to the remote repository if you have all the commits the remote repository contains. If you don't have that, Git will display an error message to you when you try to push. If that's the case, then you first need to download the commits from the remote repository you don't have using `git pull origin BRANCH_NAME`, resolve any merge conflicts you might get, and then you can push to the remote repository.
 :::
 
 ::: tip Example
@@ -162,7 +162,7 @@ Commit 1      <--      Commit 2
                  ORIGIN/MASTER BRANCH
 ```
 
-Then you create a new commit (Commit 3), so your local repository looks like this:
+Then you create a new commit (`Commit 3`), so your local repository looks like this:
 
 ```
                                                HEAD
@@ -174,7 +174,7 @@ Commit 1      <--      Commit 2      <--      Commit 3
                  ORIGIN/MASTER BRANCH
 ```
 
-To send Commit 3 to the remote repository, you run the command `git push origin master`. If no one else has push any new commits to the remote repository everything will be fine, and the remote repository will become:
+To send `Commit 3` to the remote repository, you run the command `git push origin master`. If no one else has pushed any new commits to the remote repository everything will be fine, and the remote repository will become:
 
 ```
                                            MASTER BRANCH
@@ -216,7 +216,7 @@ Commit 1      <--      Commit 2
                  ORIGIN/MASTER BRANCH
 ```
 
-Then you create a new commit (Commit 3), so your local repository looks like this:
+Then you create a new commit (`Commit 3`), so your local repository looks like this:
 
 ```
                                                HEAD
@@ -228,7 +228,7 @@ Commit 1      <--      Commit 2      <--      Commit 3
                  ORIGIN/MASTER BRANCH
 ```
 
-Before you push your Commit 3 to the remote repository, someone else has pushed a commit to it (Commit 4), so the remote repository is:
+Before you push your `Commit 3` to the remote repository, someone else has pushed a commit to it (`Commit 4`), so the remote repository is:
 
 ```
                                            MASTER BRANCH
@@ -236,7 +236,7 @@ Before you push your Commit 3 to the remote repository, someone else has pushed 
 Commit 1      <--      Commit 2      <--      Commit 4
 ```
 
-If you try to run `git push origin master` now, you will get an error, because the remote repository contains a commit (Commit 4) that your local repository does not contain. So before you can push, you need to run `git pull origin master`, but let's do this by manually running `git fetch origin master` followed by `git merge origin/master`, so you can see what happens.
+If you try to run `git push origin master` now, you will get an error, because the remote repository contains a commit (`Commit 4`) that your local repository does not contain. So before you can push, you need to run `git pull origin master`, but let's do this by manually running `git fetch origin master` followed by `git merge origin/master`, so you can see what happens.
 
 So first we run `git fetch origin master`, and our local repository becomes:
 
@@ -252,7 +252,7 @@ Commit 1      <--      Commit 2      <--      Commit 3
                  ORIGIN/MASTER BRANCH
 ```
 
-Then we run the command `git merge origin/master`, and a merge commit (Commit 5) is created (if there were conflicts, we needed to resolve those manually before the merge commit is created), and our local repository looks like:
+Then we run the command `git merge origin/master`, and a merge commit (`Commit 5`) is created (if there were conflicts, we would need to resolve those manually before the merge commit is created), and our local repository looks like:
 
 ```
 Commit 1      <--      Commit 2      <--      Commit 3                   HEAD
@@ -262,7 +262,7 @@ Commit 1      <--      Commit 2      <--      Commit 3                   HEAD
                  ORIGIN/MASTER BRANCH
 ```
 
-We can then run `git push origin master` to upload Commit 3 and Commit 5 to the remote repository, so the remote repository becomes:
+We can then run `git push origin master` to upload `Commit 3` and `Commit 5` to the remote repository, so the remote repository becomes:
 
 ```
 Commit 1      <--      Commit 2      <--      Commit 3
