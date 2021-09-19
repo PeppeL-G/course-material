@@ -33,7 +33,6 @@ export default {
 		graphDefinition: String
 	},
 	data(){
-		console.log(this.graphDefinition)
 		return {
 			graphSvgCode: ""
 		}
