@@ -38,8 +38,7 @@ So, using cookies, a server can remember information about a client. It works so
 This is visualized in <FigureNumber /> below.
 
 <Figure caption="Sequence Diagram visualizing how cookies work.">
-<Mermaid>
-{{`
+<Mermaid graph-definition="
 sequenceDiagram
 	participant Client
 	participant Server
@@ -50,8 +49,7 @@ sequenceDiagram
 	Client->>+Server: HTTP Request (with cookie)
 	Note right of Server: Reads info from cookie
 	Server->>-Client: HTTP Response
-`}}
-</Mermaid>
+" />
 </Figure>
 
 So simply put: the server can tell the client to create cookies, the cookies are stored on the client (how is up to the client to decide, but most web browsers simply store them in files), and the client sends the cookies to the server in the HTTP requests it sends to it.

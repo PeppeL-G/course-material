@@ -83,17 +83,16 @@ A computer usually contains many files, and instead of having them all in a sing
 <FigureNumber /> shows an example of some files and folders stored on a computer.
 
 <Figure caption="A visualization of how files can be structured in folders. ▭ are files, ♢ are folders. Arrows point to the files and sub-folders a folder contains.">
-<Mermaid>
-{{`
+<Mermaid graph-definition="
 graph TD
-    root{"/"}
-    d1{"school-work"}
-    d2{"2019"}
-    d3{"2020"}
-    selfie["selfie.jpeg"]
-    notes1["lecture-notes-programming.txt"]
-    notes2["lecture-notes-physics.txt"]
-    notes3["lecture-notes-math.txt"]
+    root{/}
+    d1{school-work}
+    d2{2019}
+    d3{2020}
+    selfie[selfie.jpeg]
+    notes1[lecture-notes-programming.txt]
+    notes2[lecture-notes-physics.txt]
+    notes3[lecture-notes-math.txt]
     root --> d1
     d1 --> d2
     d1 --> d3
@@ -101,8 +100,7 @@ graph TD
     d2 --> notes1
     d2 --> notes2
     d3 --> notes3
-`}}
-</Mermaid>
+" />
 </Figure>
 
 ::: tip Folder or Directory?

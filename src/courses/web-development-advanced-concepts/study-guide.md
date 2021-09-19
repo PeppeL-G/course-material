@@ -46,8 +46,7 @@ Today, good web applications are not straight forward to implement, but in this 
 At course start you are expected to already possess knowledge corresponding to the pre-requisite courses shown in <FigureNumber /> below.
 
 <Figure caption="Prerequisites for this course.">
-<Mermaid>
-{{`
+<Mermaid graph-definition="
 graph TD
 	introComp[Introduction to Computing 7.5 Credits]
 	introProg[Introduction to Programming 9 Credits]
@@ -68,8 +67,7 @@ graph TD
 	oop --> netProg
 	webDevFund --> wdac
 	netProg --> wdac
-`}}
-</Mermaid>
+" />
 </Figure>
 
 ## Intended Learning Outcomes

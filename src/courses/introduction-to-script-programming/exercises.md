@@ -187,14 +187,12 @@ print("The circumference of a circle with radius "+str(radius)+" is "+str(circum
 Even if the program created in Problem 0.1 works, it is not that useful because it computes and displays the same number each time you run the program. It is an example of a program that doesn't receive any input; it only produces output, as shown in <FigureNumber /> below.
 
 <Figure caption="Visualization of how the program from Problem 0.1 works.">
-<Mermaid>
-{{`
+<Mermaid graph-definition="
 graph LR
-	program["Program"]
-	output("Output")
+	program[Program]
+	output(Output)
 	program -- Produces --> output
-`}}
-</Mermaid>
+" />
 </Figure>
 
 This exercise is about improving the program from Problem 0.1 so it can compute circumferences for circles with other radiuses as well. When the program runs now, the first thing it should do is to ask the user to enter the radius of the circle whose circumference should be computed. After that, the program should function as before (i.e. compute the circumference and then display it to the user).
@@ -202,16 +200,14 @@ This exercise is about improving the program from Problem 0.1 so it can compute 
 When you're done, the program will not only produce output, but also receive input, as shown in <FigureNumber /> below.
 
 <Figure caption="Visualization of how the program works.">
-<Mermaid>
-{{`
+<Mermaid graph-definition="
 graph LR
-	input("Input")
-	program["Program"]
-	output("Output")
+	input(Input)
+	program[Program]
+	output(Output)
 	input -- Is entered by the user to . --> program
 	program -- Produces --> output
-`}}
-</Mermaid>
+" />
 </Figure>
 
 <FigureNumber /> below shows sample input/output when running the program.

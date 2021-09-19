@@ -155,8 +155,7 @@ The user selects the option to join a <u> VS Player as Host</u> game. The system
 A sequence diagram for <u>Play VS Player as Host</u> is found in <FigureNumber /> below.
 
 <Figure caption="Sequence diagram for Play VS Player as Host.">
-<Mermaid>
-{{`
+<Mermaid graph-definition="
 sequenceDiagram
 	participant User
 	participant Device
@@ -170,6 +169,5 @@ sequenceDiagram
 	User->>Device: Selected device
 	Device->>Device: Connect to selected device
 	Device->>User: Play!
-`}}
-</Mermaid>
+" />
 </Figure>

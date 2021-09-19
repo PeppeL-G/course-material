@@ -79,8 +79,7 @@ One problem with synchronous programming occurs when we want to carry out multip
 If we use synchronous programming, then we start carrying out the first task, which involves some waiting for the result (for example from the database). When we get back the result, we finish carrying out the first task, and then we start carrying out the second task, which shortly makes us wait again for another result (perhaps loading the content from a file), and then when we finally get back the result for that, we finish the second task, and so on. This is visualized in <FigureNumber /> below.
 
 <Figure caption="Sequence diagram where the app waits for three things at three different times (3 seconds in total).">
-<Mermaid>
-{{`
+<Mermaid graph-definition="
 sequenceDiagram
 	participant App
 	participant DB
@@ -103,8 +102,7 @@ sequenceDiagram
 	FileSystem-->>App: File
 	deactivate FileSystem
 	deactivate App
-`}}
-</Mermaid>
+" />
 </Figure>
 
 The problem here is that we spend most of our time on waiting, instead of doing useful work. While we wait for the database result from task 1, we want to start carrying out task 2, and wait for the result for task 2 at the same time as we wait for the result from task 1, but we can't do that with synchronous programming, since we can only do one thing at a time in synchronous programming.
@@ -140,8 +138,7 @@ In <FigureNumber previous /> above it takes ~2 seconds to load all data, but if 
 So, asynchronous programming is when we start a long running operation, and it will run *in the background*. The rest of our code will run as usual while the long running operation runs in the background, until it completes. Then sometime in the future the long running operation will complete, and then the long running operation notifies our ordinary code what the result of the long running operation was, and our ordinary code can handle the result. A visualization of this is shown in <FigureNumber /> below.
 
 <Figure caption="Sequence diagram where the app waits for three things at the same time (1 second in total).">
-<Mermaid>
-{{`
+<Mermaid graph-definition="
 sequenceDiagram
 	participant App
 	participant DB
@@ -162,8 +159,7 @@ sequenceDiagram
 	FileSystem-->>App: File
 	deactivate FileSystem
 	deactivate App
-`}}
-</Mermaid>
+" />
 </Figure>
 
 ::: tip Long running operations that aren't waiting
@@ -426,17 +422,15 @@ Initially, the promise will be in the `Pending` state, meaning that the long run
 
 
 <Figure caption="State diagram over promises.">
-<Mermaid>
-{{`
+<Mermaid graph-definition="
 stateDiagram-v2
-	state "Pending" as pending
-	state "Fulfilled" as fulfilled
-	state "Rejected" as rejected
-	[*] --> pending : Promise created, long running operation runs in background
-	pending --> fulfilled : Long running operation completed successfully
-	pending --> rejected : Error occurred in the long running operation
-`}}
-</Mermaid>
+	state Pending
+	state Fulfilled
+	state Rejected
+	[*] --> Pending : Promise created, long running operation runs in background
+	Pending --> Fulfilled : Long running operation completed successfully
+	Pending --> Rejected : Error occurred in the long running operation
+" />
 </Figure>
 
 When you have called an asynchronous function and received back a promise from it, you usually want to listen to when the promise goes from the `Pending` state to the `Fulfilled` state, or from the `Pending` state to the `Rejected` state. You do that by calling `.then()` on the promise and `.catch()` on the promise respectively and pass them callback functions.

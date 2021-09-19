@@ -1,18 +1,57 @@
 <template>
-	<div class="mermaid">
-		<slot></slot>
-	</div>
+	<div class="mermaid" ref="mermaidDiv" v-html="graphSvgCode"></div>
 </template>
 
 <script>
+
+const getMermaid = (function(){
+	
+	let loadMermaidPromise = null
+	
+	return async function loadMermaid(){
+		
+		if(loadMermaidPromise == null){
+			
+			loadMermaidPromise = import("mermaid/dist/mermaid")
+			
+			const mermaid = await loadMermaidPromise
+		
+			mermaid.mermaidAPI.initialize({
+				startOnLoad: false
+			})
+			
+		}
+		
+		return await loadMermaidPromise
+		
+	}
+	
+})()
+
 export default {
-	mounted() {
-		import("mermaid/dist/mermaid").then(m => {
-			m.initialize({
-				startOnLoad: true
-			});
-			m.init()
-		})
+	props: {
+		graphDefinition: String
+	},
+	data(){
+		console.log(this.graphDefinition)
+		return {
+			graphSvgCode: ""
+		}
+	},
+	async	mounted() {
+		
+		const mermaid = await getMermaid()
+		
+		const insertSvg = (svgCode, bindFunctions) => {
+			this.graphSvgCode = svgCode
+		}
+		
+		const graph = mermaid.mermaidAPI.render(
+			'graphDiv',
+			this.graphDefinition.trim(),
+			insertSvg
+		)
+		
 	}
 }
 </script>

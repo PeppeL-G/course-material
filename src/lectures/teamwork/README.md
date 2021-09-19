@@ -177,19 +177,16 @@ When you have a Teamwork Environment setup, you are ready to start implementing 
 So, don't view the project as one big thing, as shown in <FigureNumber /> below.
 
 <Figure caption="The entire project.">
-<Mermaid>
-{{`
+<Mermaid graph-definition="
 graph TB
     Project
-`}}
-</Mermaid>
+" />
 </Figure>
 
 Instead, view the project as a collection of tasks that needs to be completed, as shown in <FigureNumber /> below. When all tasks have been completed, the entire project has been completed. This way, each team member can then work on her own well-defined task, and contribute that way.
 
 <Figure caption="Dividing the project into multiple smaller tasks.">
-<Mermaid>
-{{`
+<Mermaid graph-definition="
 graph LR
     subgraph Project
         a[Task A]
@@ -197,8 +194,7 @@ graph LR
         c[Task C]
         d[Task D]
     end
-`}}
-</Mermaid>
+" />
 </Figure>
 
 How the work is divided into these tasks depends on what type of project it is, so it differs quite a lot from project to project. If you don't know how to do it, then an excellent first task that can be assigned to a team member is *Divide the project into multiple smaller tasks* :) When you implement an application, each feature the application needs to contain can usually be expressed as a task (i.e. *Implement feature X*, like *Implement the guestbook page, which lists all guestbook posts users have written*).
@@ -211,8 +207,7 @@ For some tasks it can make sense for all team members to individually work on th
 In best case you'll manage to divide the work into multiple tasks that can be completed in parallel. That's great, because then all team members have different tasks to work on at the same time. For example, on a website, Alice can implement the guestbook page and Bob can implement the contact page in parallel because these are independent of each other, as shown in <FigureNumber /> below.
 
 <Figure caption='Example of parallel tasks ("Implement the guestbook page" and "Implement the contact page").'>
-<Mermaid>
-{{`
+<Mermaid graph-definition="
 graph TB
     subgraph Website Project
         a[Setup the layout]
@@ -222,16 +217,14 @@ graph TB
         a-->b1-->c
         a-->b2-->c
     end
-`}}
-</Mermaid>
+" />
 </Figure>
 
 ### Sequential tasks
 Sometimes you have tasks that must be completed in order, i.e. Task 1 must be completed before Task 2 can be started, and Task 2 must be completed before Task 3 can be started, and so on. An example of that is a website with a blog users can write comments on. Alice is responsible for implementing the blog page, and Bob is responsible for implementing the comment functionality on the blog posts. Bob can't start working on his task until Alice has completed her task, as shown in <FigureNumber /> below.
 
 <Figure caption='Example of sequential tasks (all of them).'>
-<Mermaid>
-{{`
+<Mermaid graph-definition="
 graph TB
     subgraph Website Project
         a[Setup the layout]
@@ -240,15 +233,13 @@ graph TB
         d[Deliver website to customer]
         a-->b-->c-->d
     end
-`}}
-</Mermaid>
+" />
 </Figure>
 
 Now Alice and Bob can't work at the same time, but this is still manageable. When Alice and Bob work they probably don't spend 100% of their work time on the project (they have other things to do too, like other projects to work on, or, if you are a student, other courses to work on). For example, if Alice and Bob could work on their tasks in parallel, they might need 4 days to complete all tasks, but they complete them during 8 days anyway, because they work on other stuff during those 8 days too, as shown in <FigureNumber /> below.
 
 <Figure caption='Alice and Bob working on parallel tasks (and other projects) independently of each other.'>
-<Mermaid>
-{{`
+<Mermaid graph-definition="
 gantt
     title Alice's and Bob's work hours in the project
     dateFormat  YYYY-MM-DD
@@ -262,16 +253,14 @@ gantt
     Task B2      :2021-01-04, 1d
     Task B3      :2021-01-05, 1d
     Task B4      :2021-01-06, 1d
-`}}
-</Mermaid>
+" />
 </Figure>
 
 For sequential tasks that needs to be completed in order, such as Alice have to complete her tasks before Bob can start working on his tasks, Alice probably needs to work 100% on her tasks the first days, and then Bob needs to work 100% on his tasks after that, as shown in <FigureNumber /> below, and they will then have completed all their tasks within the same amount of time as when they could work on the tasks in parallel.
 
 
 <Figure caption='Alice and Bob working on sequential tasks in the project, so they need to coordinate when to work on this project, and when to work on other projects.'>
-<Mermaid>
-{{`
+<Mermaid graph-definition="
 gantt
     title Alice's and Bob's work hours in the project
     dateFormat  YYYY-MM-DD
@@ -285,8 +274,7 @@ gantt
     Task B2      :2021-01-06, 1d
     Task B3      :2021-01-07, 1d
     Task B4      :2021-01-08, 1d
-`}}
-</Mermaid>
+" />
 </Figure>
 
 So, with sequential tasks you will just be less flexible with when you can work on the task, but overall sequential tasks shouldn't take much longer time to complete than parallel tasks.
@@ -298,8 +286,7 @@ To encourage team members to complete their tasks it's a good idea to estimate h
 <FigureNumber /> below shows an example of tasks identified in a bigger project. At the start of the project it can be hard to identify all tasks, and the goal of the project will also sometimes change while you work on it, so it's not uncommon that tasks are added to/removed from the project as it progresses.
 
 <Figure caption='Example of tasks in a bigger project.'>
-<Mermaid>
-{{`
+<Mermaid graph-definition="
 graph LR
     subgraph Website Project
         start1[Create database]
@@ -334,8 +321,7 @@ graph LR
         b2a-->stop
         b2b-->stop
     end
-`}}
-</Mermaid>
+" />
 </Figure>
 
 ::: tip Document your tasks as issues in GitHub

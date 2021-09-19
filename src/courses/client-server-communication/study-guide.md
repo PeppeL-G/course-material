@@ -50,31 +50,28 @@ In this course you will learn in more detail how the communication between clien
 <FigureNumber /> below displays an overview of how it can work. 
 
 <Figure caption="Common web application architecture.">
-<Mermaid>
-{{`
+<Mermaid graph-definition="
 graph LR
-	users["Users"]
-	subgraph "Users' smartphone"
-		webBrowser["Android App"]
+	users[Users]
+	subgraph Users' smartphone
+		webBrowser[Android App]
 	end
-	subgraph "Web Server"
-	webApp["Web Application"]
+	subgraph Web Server
+	webApp[Web Application]
 	end
-	subgraph "Database Server"
-		db["Database"]
+	subgraph Database Server
+		db[Database]
 	end
 	users -- Use --> webBrowser
 	webBrowser -- HTTP/REST API --> webApp
 	webApp -- SQL --> db
-`}}
-</Mermaid>
+" />
 </Figure>
 
 At course start you are expected to possess knowledge corresponding to the pre-requisite courses shown in <FigureNumber /> below. 
 
 <Figure caption="Prerequisites for this course.">
-<Mermaid>
-{{`
+<Mermaid graph-definition="
 graph TD
 	wuid[Web and User Interface Design 7.5 Credits]
 	gdvc[Graphic Design and Visual Communication 15 Credits]
@@ -85,8 +82,7 @@ graph TD
 	gdvc --> csp
 	csp --> awa
 	awa --> csc
-`}}
-</Mermaid>
+" />
 </Figure>
 
 ## Intended Learning Outcomes
