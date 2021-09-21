@@ -3,8 +3,8 @@
 # Tutorials
 Here you'll find the source code written in the different tutorials. They will be published after respective tutorial.
 
-::: tip Future updates
-If the branches in the GitHub repository are updated in the future, you can browse source code by *tag* instead of branch name to see what they looked like in the past.
+::: tip Tags available!
+In the GitHub repository you can browse source code by *tag* instead of branch name to see what the code looked like after each tutorial.
 :::
 
 ## Tutorial 1
@@ -21,6 +21,10 @@ If the branches in the GitHub repository are updated in the future, you can brow
 * [tutorial-03.zip](./files/tutorial-03.zip)
 * [GitHub Repository](https://github.com/PeppeL-G/peter-ab-website/)
 
-::: tip Future updates
-If the branches in the GitHub repository are updated in the future, you can browse source code by *tag* instead of branch name to see what they looked like in the past.
+## Tutorial 4
+* [tutorial-04.zip](./files/tutorial-04.zip)
+* [GitHub Repository](https://github.com/PeppeL-G/peter-ab-website/)
+
+::: tip Tags available!
+In the GitHub repository you can browse source code by *tag* instead of branch name to see what the code looked like after each tutorial.
 :::
