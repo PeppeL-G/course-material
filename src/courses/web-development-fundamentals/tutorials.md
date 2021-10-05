@@ -29,6 +29,11 @@ In the GitHub repository you can browse source code by *tag* instead of branch n
 * [tutorial-05.zip](./files/tutorial-05.zip)
 * [GitHub Repository](https://github.com/PeppeL-G/peter-ab-website/)
 
+## Tutorial 6
+* [tutorial-06.zip](./files/tutorial-06.zip)
+* [GitHub Repository](https://github.com/PeppeL-G/peter-ab-website/)
+* [tutorial-06-vulnerabilities.zip](./files/tutorial-06-vulnerabilities.zip)
+
 ::: tip Tags available!
 In the GitHub repository you can browse source code by *tag* instead of branch name to see what the code looked like after each tutorial.
 :::
