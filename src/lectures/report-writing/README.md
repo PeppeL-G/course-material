@@ -1108,14 +1108,14 @@ Write headers the way headers are usually written; don't end chapter titles with
 <ReportMistake>
 <template v-slot:example-1-bad>
 
-<img src="screenshot.png" alt="Screenshot of the website.">
+<img src="./screenshot.png" alt="Screenshot of the website.">
 
 Is this text part of the figure? Where does the figure end?
 
 </template>
 <template v-slot:example-1-good>
 
-<img src="screenshot.png" alt="Screenshot of the website." style="border: 3px solid gray;">
+<img src="./screenshot.png" alt="Screenshot of the website." style="border: 3px solid gray;">
 
 Is this text part of the figure? Obviously not.
 
