@@ -47,10 +47,12 @@
 
 .dont{
 	background-color: #ff0000a8;
+	width: 50%;
 }
 
 .do{
 	background-color: #00ff00a1;
+	width: 50%;
 }
 
 legend{

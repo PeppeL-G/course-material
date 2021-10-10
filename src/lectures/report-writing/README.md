@@ -307,6 +307,16 @@ The solution consists of an Android application. The app is designed... The soft
 The solution consists of an Android application. The application is designed... The application securely comminutes with...
 
 </template>
+<template v-slot:example-2-bad>
+
+*BikeIT* is a website where you can buy a hi-tech bike. On the site you can also sell your old bike.
+
+</template>
+<template v-slot:example-2-good>
+
+*BikeIT* is a website where you can buy a hi-tech bike. On the website you can also sell your old bike.
+
+</template>
 <template v-slot:mistake>
 
 The text uses different terms to refer to the same thing.
@@ -969,6 +979,227 @@ The report should be about the solution you have created, not details about the 
 <template v-slot:solution>
 
 Only describe what's unique to your solution. You can describe the techniques you are using (HTTP, HTML, etc.) very short and briefly, but for more information about these, provide references to their specifications/documentations and let the reader read more about them there instead. No use in you writing a tutorial about how other techniques work.
+
+</template>
+</ReportMistake>
+
+## Mistakes Added 2021-10-10
+
+
+
+### Figures are referenced after the figure
+<ReportMistake>
+<template v-slot:example-1-bad>
+
+[...]
+
+🐵🐵\
+Figure 5: Picture of two twins (Bob to the left, David to the right).
+
+Figure 5 above shows an example of two twins.
+
+[...]
+
+</template>
+<template v-slot:example-1-good>
+
+[...]
+
+Figure 5 below shows an example of two twins.
+
+🐵🐵\
+Figure 5: Picture of two twins (Bob to the left, David to the right).
+
+[...]
+
+</template>
+<template v-slot:mistake>
+
+First a figure is shown to the reader, and then the reader is instructed to look at the figure.
+
+</template>
+<template v-slot:problem>
+
+Humans read text from top to bottom. If the text below the figure refers to the figure, the reader will look at the figure before she has been instructed to look at it, and she has no idea why she looks at the figure. Then when she gets to the text below the figure, she needs to go back up to the figure again, breaking the readers "from top to bottom" reading flow.
+
+</template>
+<template v-slot:solution>
+
+The text instructing the reader to look at the figure should always be placed above the figure.
+
+</template>
+</ReportMistake>
+
+
+
+### Chapter titles ending with colon
+<ReportMistake>
+<template v-slot:example-1-bad>
+
+<span style="font-weight: bold; font-size: 150%;">Web Application:</span>
+<p>The web application...</p>
+
+</template>
+<template v-slot:example-1-good>
+
+<span style="font-weight: bold; font-size: 150%;">Web Application</span>
+<p>The web application...</p>
+
+</template>
+<template v-slot:mistake>
+
+Colon is written at the end of chapter titles.
+
+</template>
+<template v-slot:problem>
+
+The standard way of writing headers is not followed, making it harder to read the text.
+
+</template>
+<template v-slot:solution>
+
+Write headers the way headers are usually written; don't end chapter titles with colon.
+
+</template>
+</ReportMistake>
+
+
+
+### Paragraphs consist of a single sentence
+<ReportMistake>
+<template v-slot:example-1-bad>
+
+Users can create accounts on the website.
+
+The primary color on the website is yellow.
+
+Admins can see things ordinary users can't see.
+
+</template>
+<template v-slot:example-1-good>
+
+Users can create accounts on the website. After a user has logged in to an account, the user can create blogposts belonging to that account. Newly created blogposts are not shown on the website by default, but must first be read and approved by an admin.
+
+For the graphical user interface the primary color is yellow. That color was chosen because it reminds the user of the sun and gives the user a warm and nice feeling.
+
+Admins can do some things ordinary users can't do on the website. They see and can use links and forms through which they get extra functionality, such as Delete button next to each blogpost they can click on to delete blogposts. 
+
+</template>
+<template v-slot:mistake>
+
+Many paragraphs consist of a single sentence.
+
+</template>
+<template v-slot:problem>
+
+Paragraphs consisting of a single sentence are usually no good paragraphs. Compare to a sentence consisting of a single word, or a list consisting of a single list item. Most paragraphs should consist of multiple (related) sentences, otherwise your report won't have a good structure.
+
+</template>
+<template v-slot:solution>
+
+Write headers the way headers are usually written; don't end chapter titles with colon.
+
+</template>
+</ReportMistake>
+
+
+
+### Images missing border
+<ReportMistake>
+<template v-slot:example-1-bad>
+
+<img src="screenshot.png" alt="Screenshot of the website.">
+
+Is this text part of the figure? Where does the figure end?
+
+</template>
+<template v-slot:example-1-good>
+
+<img src="screenshot.png" alt="Screenshot of the website." style="border: 3px solid gray;">
+
+Is this text part of the figure? Obviously not.
+
+</template>
+<template v-slot:mistake>
+
+Much of the image has the same color as the background of the report.
+
+</template>
+<template v-slot:problem>
+
+It's hard to see where the image starts and ends.
+
+</template>
+<template v-slot:solution>
+
+Give images consisting of the reports background color a border.
+
+</template>
+</ReportMistake>
+
+
+
+### Wall of text
+<ReportMistake>
+<template v-slot:example-1-bad>
+
+What happens when the user use the website is that the user first starts the web browsers, then the web browser sends an HTTP request to the server. When the server receives the HTTP request, it carries out the request and generates and send back an HTTP response to the web browser. The HTTP response contains a webpage the web browser then displays.
+
+</template>
+<template v-slot:example-1-good>
+
+What happens when the user use the website is that:
+
+1. The user starts the web browser.
+2. The web browser sends an HTTP request to the server.
+3. The server receives and carries out the HTTP request.
+4. The server generates and sends back an HTTP response to the web browser.
+5. The web browser displays the webpage in the HTTP response to the user.
+
+</template>
+<template v-slot:example-2-bad>
+
+What happens when the user use the website is that the user first starts the web browsers, then the web browser sends an HTTP request to the server. When the server receives the HTTP request, it carries out the request and generates and send back an HTTP response to the web browser. The HTTP response contains a webpage the web browser then displays.
+
+</template>
+<template v-slot:example-2-good>
+
+Figure 8 below shows what happens when the user uses the website.
+
+<Mermaid graph-definition="
+sequenceDiagram
+	participant User
+	participant Web Browser
+	participant Server
+	User->>Web Browser: Start
+	activate User
+	activate Web Browser
+	Web Browser->>Server: HTTP request
+	activate Server
+	Server->>Server: Carry out request
+	Server-->>Web Browser: HTTP response
+	deactivate Server
+	Web Browser-->>User: Display webpage
+	deactivate Web Browser
+	deactivate User
+" />
+
+Figure 8: What happens when the user uses the website.
+
+</template>
+<template v-slot:mistake>
+
+The student tries to explain everything using only text, often in a gigantic paragraph.
+
+</template>
+<template v-slot:problem>
+
+Of all the different ways one can describe how something works (text in paragraphs, lists, figures, tables, etc.), text in paragraphs is the hardest and slowest one to read.
+
+</template>
+<template v-slot:solution>
+
+Try to explain as much as possible using lists, tables, figures, etc. Use paragraphs as a last resort.
 
 </template>
 </ReportMistake>
