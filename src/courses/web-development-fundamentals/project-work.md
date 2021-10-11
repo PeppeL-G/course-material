@@ -673,7 +673,7 @@ You have a lot of freedom when it comes to this task, but too simple solutions w
 Before you start working on this part, you are recommended to:
 
 * View the following videos:
-    * [Running Node.js on Lightsail](../../lectures/running-node-js-on-lightsail/)
+    * [Amazon Lightsail](../../lectures/amazon-lightsail/)
 
 ---
 
@@ -694,7 +694,7 @@ To be allowed to demonstrate your website, you need to have implemented at least
 
 You may use at most 10 minutes for your demonstration. If you need more than this to show all features, then skip some of them. If your demonstration takes just 2 minutes, that could be OK as well. Don't start talking about irrelevant things just to make the demonstration last longer.
 
-At the demonstration we will have a laptop connected to the projector in the room you can use to show your website. For this to work, your website must have been deployed to a server on the Internet (Part 9 of the project work needs to have been completed). If you have not completed Part 9 yet, you can bring and use your own laptop and run your website locally on your own laptop.
+At the demonstration we will have a laptop connected to the projector in the room you can use to show your website. For this to work, your website must have been deployed to a server on the Internet (Part 10 of the project work needs to have been completed). If you have not completed Part 10 yet, you can bring and use your own laptop and run your website locally on your own laptop.
 
 Join one of the [Project Work Demonstration Groups](https://ju.instructure.com/courses/4558/groups) on Canvas to decide when you want to demonstrate. At most 6 students in each group, first come, first served.
 

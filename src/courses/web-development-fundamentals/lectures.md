@@ -25,3 +25,4 @@ The instructions on the [Project Work](./project-work/) page indicate when you'r
 * [Using cookies and Sessions in Express](../../lectures/using-cookies-and-sessions-in-express/)
 * [Designing Account Systems](../../lectures/designing-account-systems/)
 * [Web Security](../../lectures/web-security/)
+* [Amazon Lightsail](../../lectures/amazon-lightsail/)
