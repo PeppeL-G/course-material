@@ -1,4 +1,4 @@
-<SetTitle title="Introduction to Script Programming 2020" />
+<SetTitle title="Introduction to Script Programming 2021" />
 
 # Written Examination
 On this page you find information about the examination test `Examination`.
@@ -8,10 +8,6 @@ The `Examination` test is worth 3 credits. You will primarily prepare for it by 
 
 ## Digital Exam
 The `Examination` test is an Inspera exam; a digital exam you write on a school computer. More information about Inspera exams can be found on [the JU page *Digital Exam*](https://ju.se/student/en/digital-exam.html).
-
-::: warning Given at school
-The aim is that you will write the exam at school, but that might change depending on the corona situation at that time.
-:::
 
 ## Dates/Re-examinations
 The `Examination` test is offered in:
@@ -30,7 +26,7 @@ You need to register for each written examination you want to attend. For exampl
 :::
 
 ::: danger Important!
-**The registrations closes ~10 days before the exam starts**, so register for it as soon as possible, but also note that the registration will not open until ~1 month before the exam starts, so you can't register for it at course start.
+**The registrations closes ~10 days before the exam starts**, so register for it as soon as possible. Also note that the registration does not open until ~1 month before the exam starts, so you can't register for it at course start.
 :::
 
 ## Permitted aids
@@ -52,15 +48,7 @@ The exam consists of questions worth 30 points in total.
 The exam will be in English, but you may write your answers in either English or Swedish. If you write answers in Swedish, make sure to not introduce any translation confusement. Write proper sentences (spelling, upper/lower case characters, punctuation, etc.). Answers that do not do this good enough/are vague/are ununderstandable cannot receive full score on the questions.
 
 ## Sample exam
-You can look at [the exam from 2019-02-13](files/exam-2019-02-13.pdf) to get some idea about what the questions on your exam will be.
-
-::: warning Note!
-The exam from 2019-02-13 was a Ping Pong exam, your exam will be an Inspera exam. You will get similar type of questions, but it will look a bit different.
-:::
+You can look at [the exam from 2021-02-18](./exams/exam-2021-02-18/) to get some idea about what the questions on your exam will be.
 
 ## Sample answers
 After the exams, sample answers will be available here.
-
-* [Exam 2020-12-13](./exams/exam-2020-12-13-sample-answers/)
-* [Exam 2021-02-18](./exams/exam-2021-02-18-sample-answers/)
-* [Exam 2021-08-17](./exams/exam-2021-08-17-sample-answers/)

@@ -1,7 +1,7 @@
-<SetTitle title="Introduction to Script Programming 2020" />
+<SetTitle title="Introduction to Script Programming 2021" />
 
 # Lectures
-Each exercise on the [Exercises](exercises/) page contains a list of recorded lectures you are recommended to watch before attempting to solve the exercises and the labs.
+Each exercise on the [Exercises](exercises/) page contains a list of recorded lectures you are recommended to watch before attempting to solve the exercises and the labs. That will serve as a good hint for you when to watch which lectures, as well as the weekly announcements that will be posted on Canvas.
 
 Below is a list of all the recorded lectures in the course. That will give you a good overview what you will learn in this course and what you are expected to know at the written examination.
 

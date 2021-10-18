@@ -1,4 +1,4 @@
-<SetTitle title="Introduction to Script Programming 2020" />
+<SetTitle title="Introduction to Script Programming 2021" />
 
 # Laboratory Work
 On this page you find information about the examination test `Laboratory work`.
@@ -153,7 +153,7 @@ On top of this:
 ### Present your work
 Present your work to a teacher at a lab session. Be prepared to explain how your solutions and implementations work, and be prepared to answer any question the teacher might have about your code. It is good to practice this in advance (alone or with a friend).
 
-When the teacher is satisfied with your presentation, upload your Python files to [the assignment Lab 1 on Canvas](https://ju.instructure.com/courses/2129/assignments/5754). The teacher will then approve you on that assignment.
+When the teacher is satisfied with your presentation, upload your Python files to the assignment Lab 1 on Canvas ([TSPG17](https://ju.instructure.com/courses/4205/assignments/22877), [TSTG17](https://ju.instructure.com/courses/4199/assignments/22971)). The teacher will then approve you on that assignment.
 
 
 
@@ -276,7 +276,7 @@ Two for loops (one inside the other) can be used to implement this function. If 
 ### Present your work
 Present your work to a teacher at a lab session. Be prepared to explain how your solutions and implementations work, and be prepared to answer any question the teacher might have about your code. It is good to practice this in advance (alone or with a friend).
 
-When the teacher is satisfied with your presentation, upload your Python files to [the assignment Lab 2 on Canvas](https://ju.instructure.com/courses/2129/assignments/5755). The teacher will then approve you on that assignment.
+When the teacher is satisfied with your presentation, upload your Python files to the assignment Lab 2 on Canvas ([TSPG17](https://ju.instructure.com/courses/4205/assignments/22878), [TSTG17](https://ju.instructure.com/courses/4199/assignments/22972)). The teacher will then approve you on that assignment.
 
 
 
@@ -377,7 +377,7 @@ The program finished with 60 stored in memory.
 ### Present your work
 Present your work to a teacher at a lab session. Be prepared to explain how your solutions and implementations work, and be prepared to answer any question the teacher might have about your code. It is good to practice this in advance (alone or with a friend).
 
-When the teacher is satisfied with your presentation, upload your Python files to [the assignment Lab 3 on Canvas](https://ju.instructure.com/courses/2129/assignments/5756). The teacher will then approve you on that assignment.
+When the teacher is satisfied with your presentation, upload your Python files to the assignment Lab 3 on Canvas ([TSPG17](https://ju.instructure.com/courses/4205/assignments/22879), [TSTG17](https://ju.instructure.com/courses/4199/assignments/22973)). The teacher will then approve you on that assignment.
 
 
 
@@ -578,7 +578,7 @@ The different allowed formats should be defined in the different IDS in the proj
 ### Present your work
 Present your work to a teacher at a lab session. Be prepared to explain how your solutions and implementations work, and be prepared to answer any question the teacher might have about your code. It is good to practice this in advance (alone or with a friend).
 
-When the teacher is satisfied with your presentation, upload your Python files to [the assignment Lab 4 on Canvas](https://ju.instructure.com/courses/2129/assignments/5757). The teacher will then approve you on that assignment.
+When the teacher is satisfied with your presentation, upload your Python files to the assignment Lab 4 on Canvas ([TSPG17](https://ju.instructure.com/courses/4205/assignments/22880), [TSTG17](https://ju.instructure.com/courses/4199/assignments/22974)). The teacher will then approve you on that assignment.
 
 
 
@@ -813,7 +813,7 @@ Then you loop 5 times (since each placeholder has five different values), and ea
 ### Present your work
 Present your work to a teacher at a lab session. Be prepared to explain how your solutions and implementations work, and be prepared to answer any question the teacher might have about your code. It is good to practice this in advance (alone or with a friend).
 
-When the teacher is satisfied with your presentation, upload your Python files to [the assignment Lab 5 on Canvas](https://ju.instructure.com/courses/2129/assignments/5758). The teacher will then approve you on that assignment.
+When the teacher is satisfied with your presentation, upload your Python files to the assignment Lab 5 on Canvas ([TSPG17](https://ju.instructure.com/courses/4205/assignments/22881), [TSTG17](https://ju.instructure.com/courses/4199/assignments/22975)). The teacher will then approve you on that assignment.
 
 
 
@@ -1046,4 +1046,4 @@ Present your work to a teacher at a lab session. Be prepared to explain how your
 The difficulties in this lab is not to write much code (most of the code you've written has been given to you), but to understand what code to write, and how that code works. Your oral presentation should reflect that you really understand how the code you've written works.
 :::
 
-When the teacher is satisfied with your presentation, upload your Python files to [the assignment Lab 6 on Canvas](https://ju.instructure.com/courses/2129/assignments/5759). The teacher will then approve you on that assignment.
+When the teacher is satisfied with your presentation, upload your Python files to the assignment Lab 6 on Canvas ([TSPG17](https://ju.instructure.com/courses/4205/assignments/22882), [TSTG17](https://ju.instructure.com/courses/4199/assignments/22976)). The teacher will then approve you on that assignment.

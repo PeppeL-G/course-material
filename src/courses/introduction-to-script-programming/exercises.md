@@ -1,13 +1,13 @@
 ---
-exercise0ShowAfter: 2020-10-23T14:45
-exercise1ShowAfter: 2020-10-23T14:45
-exercise2ShowAfter: 2020-10-30T14:45
-exercise3ShowAfter: 2020-11-06T14:45
-exercise4ShowAfter: 2020-11-13T14:45
-exercise5ShowAfter: 2020-11-20T14:45
-exercise6ShowAfter: 2020-11-27T14:45
+exercise0ShowAfter: 2021-11-01T11:45
+exercise1ShowAfter: 2021-11-01T11:45
+exercise2ShowAfter: 2021-11-08T11:45
+exercise3ShowAfter: 2021-11-15T11:45
+exercise4ShowAfter: 2021-11-22T11:45
+exercise5ShowAfter: 2021-11-29T11:45
+exercise6ShowAfter: 2021-12-06T11:45
 ---
-<SetTitle title="Introduction to Script Programming 2020" />
+<SetTitle title="Introduction to Script Programming 2021" />
 
 # Exercises
 On this page you find information about the exercises in the course.
@@ -20,14 +20,14 @@ Solutions to the exercises will be shown on this page after the tutorial each we
 ## Getting started with Python
 This sub-chapter contains instructions to help you get started with writing and running Python code. All software we use in this course should already be installed on the school's computers (but versions might differ). If you use your own computer, you need to install the software on your own computer yourself, as described further down in this sub-chapter.
 
-To write Python code on your computer, you need a text editor. A text editor is a program through which you can:
+To write Python code on your computer, you need a *text editor*. A text editor is a program through which you can:
 
 1. Open any type of file on your hard drive.
 2. Display the raw content of a file.
 3. Change the content of a file in the text editor.
 4. Save changes made to a file in the text editor back to the hard drive.
 
-More or less all operating systems (Windows, Linux, Mac...) come with a text editor pre-installed. For example, Windows comes with a text editor called *Notepad* (*Anteckningar* in Swedish), as shown in <FigureNumber /> below.
+More or less all operating systems (Windows, Linux, Mac, etc.) come with a text editor pre-installed. For example, Windows comes with a text editor called *Notepad* (*Anteckningar* in Swedish), as shown in <FigureNumber /> below.
 
 <Figure caption='The Notepad program can be found in Windows by searching for "Notepad".'>
 
@@ -53,7 +53,7 @@ The `python` program can be installed by running the installation program you do
 
 </Figure>
 
-To run the Python program, you just need to write python in a shell/terminal/console and then press the enter key. In Windows, you can use Windows PowerShell for this. Windows PowerShell can easily be started by searching for it, as shown in <FigureNumber /> below. Just running the `python` command will start Python's read-eval-print-loop, where you can enter Python code and have it executed when you press the enter key, but the python command can also be used to execute Python code written in files. How to do that is not explained here, but you can read more about it in the slides from the first lecture.
+To run the Python program, you just need to type `python` in a shell/terminal/console and then press the enter key. In Windows, you can use *Windows PowerShell* for this. Windows PowerShell can easily be started by searching for it, as shown in <FigureNumber /> below. 
 
 <Figure caption="Running the Python program using Windows PowerShell.">
 
@@ -61,9 +61,11 @@ To run the Python program, you just need to write python in a shell/terminal/con
 
 </Figure>
 
+Just running the `python` command will start Python's read-eval-print-loop, where you can enter Python code and have it executed when you press the enter key, but the `python` command can also be used to execute Python code written in a file. How to do that is not explained here, but in the lecture [Python Introduction](../../lectures/python-introduction/).
+
 You do not need to do anything more than this to start writing and running Python code, so it is quite easy to get started. But back to that IDE we mentioned earlier.
 
-Visual Studio Code is an IDE you can use to write and run your Python code. Some of the benefits with this IDE compared to doing as described above:
+*Visual Studio Code* is an IDE you can use to write and run your Python code. Some of the benefits with this IDE compared to doing as described above are:
 
 * Syntax highlighting of code, making it easier to read the code and to discover mistakes.
 * Automatic indentation, so you do not need to enter spaces/tabs for indentation yourself.
@@ -155,13 +157,15 @@ The circumference of a circle with radius 7 is 43.96.
 </Figure>
 
 ::: tip Tips
-Here are some functions you might need to use to implement the program:
+Here are some code pieces hinting about what you need to use to implement the program:
 
-* `print("Hello")` to print the string `Hello` followed by a line break.
+* `str(123)` to convert the number `123` to the string `"123"`.
+* `"abc" + "def"` to create the string `"abcdef"`
+* `print("Hello")` to print the string `"Hello"` followed by a line break to the console.
 :::
 
 ::: danger Don't!
-A program producing the output in <FigureNumber previous /> above can be implemented as this:
+A program producing the output in <FigureNumber previous /> above can be implemented like this:
 
 ```python
 print("This program computes the circumference of a circle.")
@@ -184,7 +188,7 @@ print("The circumference of a circle with radius "+str(radius)+" is "+str(circum
 </SampleAnswer>
 
 ### Problem 0.2: Reading input
-Even if the program created in Problem 0.1 works, it is not that useful because it computes and displays the same number each time you run the program. It is an example of a program that doesn't receive any input; it only produces output, as shown in <FigureNumber /> below.
+Even if the program created in Problem 0.1 works, it is not that useful because it computes and displays the same output each time you run the program. It is an example of a program that doesn't receive any input; it only produces output, as shown in <FigureNumber /> below.
 
 <Figure caption="Visualization of how the program from Problem 0.1 works.">
 <Mermaid graph-definition="
@@ -205,7 +209,7 @@ graph LR
 	input(Input)
 	program[Program]
 	output(Output)
-	input -- Is entered by the user to . --> program
+	input -- Is entered by the user to --> program
 	program -- Produces --> output
 " />
 </Figure>
@@ -232,7 +236,6 @@ Here are some functions you might need to use to implement the program:
 * `input("Enter number: ")` to print `Enter number: ` and then read some input entered by the user.
 * `int("123")` to convert the string `123` to the integer `123`.
 * `float("12.3")` to convert the string `12.3` to the float `12.3`.
-* `str(123)` to convert the integer `123` to the string `123`.
 :::
 
 #### Sample answer

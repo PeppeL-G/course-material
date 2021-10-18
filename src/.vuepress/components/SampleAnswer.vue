@@ -66,6 +66,7 @@
 		padding: 0.4em;
 		border-radius: 0.5em;
 		background-color: silver;
+		color: black;
 	}
 	
 </style>

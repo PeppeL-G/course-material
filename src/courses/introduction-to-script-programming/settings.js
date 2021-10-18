@@ -1,5 +1,5 @@
 module.exports = {
-	name: "Introduction to Script Programming 2020",
+	name: "Introduction to Script Programming 2021",
 	showLink: true,
 	pages: [
 		"index.html",
