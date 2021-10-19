@@ -128,7 +128,7 @@ Each week you will also be encouraged to complete some optional exercises. This 
 ### Lab Sessions
 Each week you may attend a 4 hours long lab session. At the lab session you may ask the teacher there for help with your laboratory work and the exercises. When you have completed your laboratory work you should also present your solution to a teacher at a lab session where you explain to the teacher how the code you have written works.
 
-There are 3 different lab sessions each week, but you may only come to one. To distribute you, join one of the lab session groups on Canvas ([TSPG17](https://ju.instructure.com/courses/4205/groups), [TSTG17](https://ju.instructure.com/courses/4199)). First come, first served. It is OK to attend the sessions for the other groups too if there is room for it, but the students for those groups should of course be prioritized by the teacher.
+There are 3 different lab sessions each week, but you may only come to one. To distribute you, join one of the lab session groups on Canvas ([TSPG17](https://ju.instructure.com/courses/4205/groups), [TSTG17](https://ju.instructure.com/courses/4199/groups)). First come, first served. It is OK to attend the sessions for the other groups too if there is room for it, but the students for those groups should of course be prioritized by the teacher.
 
 
 ## Examination Tests
