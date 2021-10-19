@@ -41,9 +41,9 @@ This course does not have any special pre-requisites other than basic math and E
 ### Adyasha Swain
 <Teacher
     name="Adyasha Swain"
-    photo="missing.jpeg"
+    photo="adyasha-swain.jpeg"
     :roles='["Lab Assistant"]'
-    description="..."
+    description="Adyasha has received her Masters degree in Computer Science, specialization in Distributed Cloud Systems, at Luleå University of Technology in 2019. She is currently pursuing her Doctoral studies in the Department of Construction Engineering and Lighting Science with supervision under Karl Hammer, Geza Fischl and Peter Johansson on Digital Twin Solution for Lighting Evaluation in the Lighting Living Lab."
     email="adyasha.swain@ju.se"
     phone="036 - 55 02 447"
     website="https://ju.se/en/personinfo?sign=SWAADY"
