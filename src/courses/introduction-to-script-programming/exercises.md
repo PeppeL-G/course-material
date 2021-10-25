@@ -1,5 +1,5 @@
 ---
-exercise0ShowAfter: 2021-11-01T11:45
+exercise0ShowAfter: 2021-10-26T11:45
 exercise1ShowAfter: 2021-11-01T11:45
 exercise2ShowAfter: 2021-11-08T11:45
 exercise3ShowAfter: 2021-11-15T11:45
