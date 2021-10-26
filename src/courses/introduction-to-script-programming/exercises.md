@@ -104,7 +104,7 @@ Then create a new Python file in your project folder, as shown in <FigureNumber 
 
 </Figure>
 
-The first time Visual Studio Code encounters a Python file, it will suggest you install an extension to it containing features for working with Python files. Install that extension. You should then be able to run your Python code by clicking on the green DEBUG button shown in <FigureNumber /> below.
+The first time Visual Studio Code encounters a Python file, it will suggest you install an extension to it containing features for working with Python files. Install that extension. You should then be able to run your Python code by clicking on the ▶ button shown in <FigureNumber /> below.
 
 <Figure caption="Running Python files in Visual Studio Code.">
 
@@ -112,7 +112,7 @@ The first time Visual Studio Code encounters a Python file, it will suggest you 
 
 </Figure>
 
-That's it! Now you can write your Python code in files using Visual Studio Code and then click on the green DEBUG button to run it.
+That's it! Now you can write your Python code in files using Visual Studio Code and then click on the ▶ button to run it.
 
 ## Exercise 0: Input & output
 Before you start working on these exercises, you are recommended to watch the following recorded lectures:
