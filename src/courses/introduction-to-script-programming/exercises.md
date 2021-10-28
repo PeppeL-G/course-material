@@ -18,7 +18,7 @@ The exercises are not part of any examination test and therefore not mandatory t
 Solutions to the exercises will be shown on this page after the tutorial each week going through and discussing sample solutions. 
 
 ## Getting started with Python
-This sub-chapter contains instructions to help you get started with writing and running Python code. All software we use in this course should already be installed on the school's computers (but versions might differ). If you use your own computer, you need to install the software on your own computer yourself, as described further down in this sub-chapter.
+This sub-chapter contains instructions to help you get started with writing and running Python code. All software we use in this course should already be installed on the school's computers where we have lab sessions in this course (but versions might differ). If you use a school computer in another room you can install the software yourself on that computer through the application *Software Center*. If you use your own computer, you need to install the software on your own computer yourself, as described further down in this sub-chapter.
 
 To write Python code on your computer, you need a *text editor*. A text editor is a program through which you can:
 
