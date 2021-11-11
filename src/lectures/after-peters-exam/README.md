@@ -23,6 +23,7 @@ I think I should get some more points on my exam than what I got.
 Course Name: XXX
 My Name: XXX
 My National (Swedish) Identification Number: XXXXXXXX-XXXX
+My Anonymous ID on This Exam: XXX-XXX
 
 ---
 
