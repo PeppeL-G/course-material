@@ -83,7 +83,7 @@ A computer usually contains many files, and instead of having them all in a sing
 <FigureNumber /> shows an example of some files and folders stored on a computer.
 
 <Figure caption="A visualization of how files can be structured in folders. ▭ are files, ♢ are folders. Arrows point to the files and sub-folders a folder contains.">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 graph TD
     root{/}
     d1{school-work}

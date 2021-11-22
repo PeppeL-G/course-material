@@ -127,7 +127,7 @@ We recommend that your first sub-goal is to implement the graphical user interfa
 Implementing a prototype means it's OK to take various shortcuts. For example, if you have a blog on your website and you in the end want to have one page that displays all blog posts, and clicking on one of them takes you to a new page that displays all info about the blog post that was clicked, as shown in <figureNumber /> below.
 
 <Figure caption="Fully functional website.">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 flowchart LR
 	subgraph blogposts[Page /blogposts]
 		link1[Blogpost 1]
@@ -152,7 +152,7 @@ flowchart LR
 Then in the prototype, you can hardcode three resources, and no matter which one that is clicked, the user comes to a page showing all info about the second resource, as shown in <FigureNumber /> below.
 
 <Figure caption="Prototype of website.">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 flowchart LR
 	subgraph blogposts[Page blogposts.html]
 		link1[Blogpost 1]
@@ -338,7 +338,7 @@ Storing data in variables works, but it is usually a bad solution for several re
 Most web applications instead store data in a relational database, such as MySQL. Relational databases store the data in secondary storage (i.e. the hard drive), where it will persist even after the computer is shut down. Usually, the database runs on a server separate from the server the web application runs on, as shown in <FigureNumber/> below. 
 
 <Figure caption="Common web application architecture.">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 graph LR
 	subgraph Client
 		webBrowser[Web Browser]
@@ -362,7 +362,7 @@ Having the database running on a separate server from the web application (inste
 However, setting up a database on a separate server is not straightforward and takes time, so in this course we will instead run the database on the same server as the web application, as shown in <FigureNumber/> below.
 
 <Figure caption="Web application architecture with only one server.">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 graph LR
 	subgraph Client
 		webBrowser[Web Browser]

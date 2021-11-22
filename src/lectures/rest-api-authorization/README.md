@@ -50,7 +50,7 @@ This flow can be used when you are the owner of the both the server that impleme
 This flow does not require the Client to first register at the Authorization Server since no `client_id` or `client_secret` are used. 
 
 <Figure caption="The flow of the Resource Owner Password Credentials Grant.">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 sequenceDiagram
     participant ro as Resource Owner
     participant c as Client 
@@ -83,7 +83,7 @@ This flow has been deprecated. The reason is that this flow reveals the user's u
 This flow can be used when the Client is not from the same company as the Server implementing OAuth 2.0 (i.e. when the Client is a third-party application) and the source code for the Client is available to the user, such as for smartphone applications, desktop applications, single-page applications, etc., so the Client can't contain the `client_secret`.
 
 <Figure caption="The flow of the Resource Owner Password Credentials Grant.">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 sequenceDiagram
     participant ro as Resource Owner
     participant c as Client 
@@ -130,7 +130,7 @@ This flow can be used when the Client is not from the same company as the Server
 This flow is a bit more complicated (more steps), but the benefit is that the Access Token is never exposed to the Resource Owner (or more accurately: never exposed to the Resource Owner's web browser), so if the Resource Owners computer/web browser contains a vulnerability of some kind, that vulnerability can't be used to steal the Access Token.
 
 <Figure caption="The flow of the Implicit Grant.">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 sequenceDiagram
     participant ro as Resource Owner
     participant c as Client 
@@ -177,7 +177,7 @@ sequenceDiagram
 This flow can be used when the Client wants to obtain an Access Token it can use to access its own resources on the Resource Server (if you ever have a use-case like that). Since it uses `client_id` and `client_secret` you should only use this when the Client runs on a server, so your users won't have access to the source code and can read the `client_secret`.
 
 <Figure caption="The flow of the Client Credentials Grant.">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 sequenceDiagram
     participant ro as Resource Owner
     participant c as Client 

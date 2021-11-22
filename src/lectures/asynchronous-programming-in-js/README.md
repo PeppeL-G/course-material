@@ -79,7 +79,7 @@ One problem with synchronous programming occurs when we want to carry out multip
 If we use synchronous programming, then we start carrying out the first task, which involves some waiting for the result (for example from the database). When we get back the result, we finish carrying out the first task, and then we start carrying out the second task, which shortly makes us wait again for another result (perhaps loading the content from a file), and then when we finally get back the result for that, we finish the second task, and so on. This is visualized in <FigureNumber /> below.
 
 <Figure caption="Sequence diagram where the app waits for three things at three different times (3 seconds in total).">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 sequenceDiagram
 	participant App
 	participant DB
@@ -138,7 +138,7 @@ In <FigureNumber previous /> above it takes ~2 seconds to load all data, but if 
 So, asynchronous programming is when we start a long running operation, and it will run *in the background*. The rest of our code will run as usual while the long running operation runs in the background, until it completes. Then sometime in the future the long running operation will complete, and then the long running operation notifies our ordinary code what the result of the long running operation was, and our ordinary code can handle the result. A visualization of this is shown in <FigureNumber /> below.
 
 <Figure caption="Sequence diagram where the app waits for three things at the same time (1 second in total).">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 sequenceDiagram
 	participant App
 	participant DB
@@ -422,7 +422,7 @@ Initially, the promise will be in the `Pending` state, meaning that the long run
 
 
 <Figure caption="State diagram over promises.">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 stateDiagram-v2
 	state Pending
 	state Fulfilled

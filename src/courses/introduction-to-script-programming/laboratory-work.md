@@ -334,7 +334,7 @@ Sample usage:
 * `highest([42])` → `42`
 
 ::: danger Note!
-It is not allowed to use the built-in function `max()` in the solution to this problem.
+It is not allowed to use the built-in function `max()` in the solution to this problem. 
 :::
 
 ::: tip Tips!
@@ -349,6 +349,10 @@ Sample usage:
 * `count(["a", "b", "c"], "b")` → `1`
 * `count(["a", "b", "c"], "e")` → `0`
 * `count(["a", "a", "a"], "a")` → `3`
+
+::: danger Note!
+It is not allowed to use the method `List.count()` in the solution to this problem. 
+:::
 
 ### Problem 3.6: Summarizing even integers
 Create a program that asks the user to enter two integers. The first one should be lower than the second one. The program should then compute and display the sum of the even integers between those two integers. To check if `an_integer` is even you can use the expression `an_integer % 2 == 0`.

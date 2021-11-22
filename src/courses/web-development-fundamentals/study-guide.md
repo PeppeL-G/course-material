@@ -14,7 +14,7 @@
 In this course you will learn what the web is and how you can create web applications running on it. <FigureNumber /> below displays the architecture of a typical web application. 
 
 <Figure caption="Common web application architecture.">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 graph LR
 	users[Users]
 	subgraph Users' computers
@@ -38,7 +38,7 @@ More specifically you will learn how to create a web application to which a sing
 At course start you are expected to already possess knowledge corresponding to the prerequisite courses shown in <FigureNumber/> below. 
 
 <Figure caption="Prerequisites for this course.">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 graph TD
 	introComp[Introduction to Computing 7.5 Credits]
 	introProg[Introduction to Programming 9 Credits]

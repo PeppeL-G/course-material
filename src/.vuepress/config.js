@@ -1,5 +1,4 @@
 const path = require('path')
-const moment = require('moment')
 const settingsRetriever = require('./settings-retriever')
 const copyStaticFilesToPublic = require('./copy-static-files-to-public')
 
@@ -46,10 +45,7 @@ function getSideBarObject(){
 
 copyStaticFilesToPublic()
 
-const tags = []
-
 module.exports = {
-	bundler: '@vuepress/vite',
 	base: "/course-material/",
 	title: "Course Material",
 	themeConfig: {

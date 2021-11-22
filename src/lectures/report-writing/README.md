@@ -1166,7 +1166,7 @@ What happens when the user use the website is that the user first starts the web
 
 Figure 8 below shows what happens when the user uses the website.
 
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 sequenceDiagram
 	participant User
 	participant Web Browser

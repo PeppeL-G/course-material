@@ -38,7 +38,7 @@ So, using cookies, a server can remember information about a client. It works so
 This is visualized in <FigureNumber /> below.
 
 <Figure caption="Sequence Diagram visualizing how cookies work.">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 sequenceDiagram
 	participant Client
 	participant Server

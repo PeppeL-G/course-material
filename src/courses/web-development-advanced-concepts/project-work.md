@@ -344,7 +344,7 @@ Implement the website using a three-layered architecture:
 <FigureNumber /> below is a visualization of a three-layered architecture.
 
 <Figure caption="A three-layered architecture. The Presentation Layer is the one receiving HTTP requests from clients, to carry them out is uses the Business Logic Layer, and so on.">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 graph LR
 	wb[Web Browser]
 	subgraph Web Application
@@ -379,7 +379,7 @@ When the web application receives a successful sign in request from a client it 
 The most common used approach to scaling web applications is by running multiple instances of them and use a load balancer to distribute the load (the HTTP requests) between them, as seen in <FigureNumber /> below. Each instance can for example run in its own Docker container or on its own server. When the load increases, we just launch more instances to handle it, and when the load decreases, we just remove some of the instances (so we don't need to pay for having servers up and running that don't do any work).
 
 <Figure caption="A common used architecture for scaling. The Load Balancer receives HTTP requests from Clients and then forwards them to (one of) the Web Application Instances.">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 graph LR
 	clients[Clients]
 	lb[Load Balancer]
@@ -616,7 +616,7 @@ Use whichever ORM you want, but [Sequelize](https://sequelize.org/) is quite sim
 When you're done your architecture could look like the one shown in <FigureNumber /> below, but when running the application only one of the Data Access Layers will be used.
 
 <Figure caption="Current architecture.">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 graph LR
 	wb[Web Browser]
 	subgraph Web Application
@@ -649,7 +649,7 @@ Users can use the platform on their smartphones through the web browser on it, b
 However, unlike the web application, a native smartphone application can't communicate directly with our database. One need to know the username and password to the database to use it, and we can't put that in a native smartphone application, because then any hacker would be able to retrieve it from the smartphone application after they have downloaded it. Then they could login to the database and change it however they please. Instead we will add a REST API to our web application, and the native application should be able to store/retrieve/update/delete data in the database through it. The platform will be as shown in <FigureNumber /> below. 
 
 <Figure caption="Overview of the platform.">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 graph LR
 	wb[Web Browser]
 	nsa[Native Smartphone Application]
@@ -666,7 +666,7 @@ The difference between the way the web browser and the native smartphone applica
 The REST API can be implemented as an additional Presentation Layer in the web application, as shown in <FigureNumber /> below. Since the users who use the platform through the native smartphone application should be able to do the same thing as users who use the platform through the web browser, we should not need to make that much changes to the code in the business logic layer nor the data access layer (but we might need to add code). You should be able to re-use most of the functionalities from these layers.
 
 <Figure caption="Current architecture (with one Data Access Layer).">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 graph LR
 	wb[Web Browser]
 	nsa[Native Smartphone Application]

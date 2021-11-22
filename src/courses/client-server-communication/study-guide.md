@@ -50,7 +50,7 @@ In this course you will learn in more detail how the communication between clien
 <FigureNumber /> below displays an overview of how it can work. 
 
 <Figure caption="Common web application architecture.">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 graph LR
 	users[Users]
 	subgraph Users' smartphone
@@ -71,7 +71,7 @@ graph LR
 At course start you are expected to possess knowledge corresponding to the pre-requisite courses shown in <FigureNumber /> below. 
 
 <Figure caption="Prerequisites for this course.">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 graph TD
 	wuid[Web and User Interface Design 7.5 Credits]
 	gdvc[Graphic Design and Visual Communication 15 Credits]

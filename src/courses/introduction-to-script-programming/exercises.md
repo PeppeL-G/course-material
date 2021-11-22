@@ -191,7 +191,7 @@ print("The circumference of a circle with radius "+str(radius)+" is "+str(circum
 Even if the program created in Problem 0.1 works, it is not that useful because it computes and displays the same output each time you run the program. It is an example of a program that doesn't receive any input; it only produces output, as shown in <FigureNumber /> below.
 
 <Figure caption="Visualization of how the program from Problem 0.1 works.">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 graph LR
 	program[Program]
 	output(Output)
@@ -204,7 +204,7 @@ This exercise is about improving the program from Problem 0.1 so it can compute 
 When you're done, the program will not only produce output, but also receive input, as shown in <FigureNumber /> below.
 
 <Figure caption="Visualization of how the program works.">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 graph LR
 	input(Input)
 	program[Program]
@@ -1014,7 +1014,7 @@ def sum(numbers):
 total_sum = 0
 
 for i in range(1, 5):
-    total_sum = total_sum + sum(range(1, 11, i))
+    total_sum = total_sum + sum(range(4, 11, i))
 
 print(total_sum)
 ```
@@ -1682,9 +1682,11 @@ while entered_operation != "quit":
       print(friend["name"]+" - "+friend["email"])
   elif entered_operation == "remove":
     name = input("Enter name: ")
+    friend_to_remove = {}
     for friend in friends:
       if friend["name"] == name:
-        friends.remove(friend)
+        friend_to_remove = friend
+    friends.remove(friend_to_remove)
 ```
 </SampleAnswer>
 

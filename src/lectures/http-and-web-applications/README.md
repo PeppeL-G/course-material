@@ -27,7 +27,7 @@ The HTTP protocol is built on a *client-server* architecture. That means that so
 A client can send an HTTP request to a server, asking the server to do something for it. When a server receives the HTTP request, it should carry out the request, and then send back an HTTP response to the client. This is visualized in <FigureNumber /> below. Having a server on it own is useless; servers exist to serve clients (that's why we call them servers).
 
 <Figure caption="Example of Client-Server communication.">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 sequenceDiagram
     participant Client
     participant Server
@@ -319,7 +319,7 @@ A *website* is the collection of all webpages on one and the same server (i.e. a
 So, why is it called *the world wide web*? Webpages can contain links to other webpages, and if you try to visualize this structure, you end up with something looking like a web, as shown in <FigureNumber /> below (some imagination required!).
 
 <Figure caption="A visualization of some webpages and where their links lead.">
-<Mermaid graph-definition="
+<RenderMermaid graph-definition="
 graph TD
   a[Webpage A]
   b[Webpage B]
