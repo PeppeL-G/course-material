@@ -50,7 +50,8 @@ module.exports = {
 	title: "Course Material",
 	themeConfig: {
 		docsDir: "src",
-		repo: "https://github.com/PeppeL-G/course-material",
+		docsRepo: "https://github.com/PeppeL-G/course-material",
+		docsBranch: "master",
 		editLink: true,
 		editLinkText: 'Improve this page!',
 		lastUpdatedText: "Last Updated",
