@@ -355,7 +355,7 @@ It is not allowed to use the method `List.count()` in the solution to this probl
 :::
 
 ### Problem 3.6: Summarizing even integers
-Create a program that asks the user to enter two integers. The first one should be lower than the second one. The program should then compute and display the sum of the even integers between those two integers. To check if `an_integer` is even you can use the expression `an_integer % 2 == 0`.
+Create a program that asks the user to enter two integers. The first one should be lower than the second one. The program should then compute and display the sum of the even integers between (and including) those two integers. To check if `an_integer` is even you can use the expression `an_integer % 2 == 0`.
 
 ### Problem 3.7: A simple calculator
 Create a small program that functions as a simple calculator with a number stored in memory which you can add, subtract, multiply and divide other integers to/from.
@@ -404,7 +404,14 @@ Sample usage:
 * `are_equal([1, 2], [1, 2, 3])` → `False`
 
 ::: danger Don't!
-It is not allowed to use the `==` operator nor the `!=` operator to compare lists in the solution to this problem (but they may be used to compare numbers).
+It is not allowed to use built-in functionality to compare lists, such as:
+
+* `a_list == another_list`
+* `a_list != another_list`
+* `a_list <  another_list`
+* `a_list >  another_list`
+
+But feel free to use the operators to compare numbers, such as `a_number == another_number`.
 :::
 
 ::: tip Tips!
