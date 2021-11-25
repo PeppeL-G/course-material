@@ -16,11 +16,27 @@ You are expected to complete one lab each week. No deadlines exist (e.g. present
 ## Re-examination
 Re-examination of the `Laboratory work` will be offered at the re-examination periods in February and in August (the same re-examination periods as for the written examination). A special lab session will be booked for these re-examination periods. If you need to know when the lab session will take place in advance, email the course coordinator.
 
+## Individual work
+The laboratory work is individual work.
 
+**It is OK to help each other.** Examples of that:
 
+* Help your friend to debug his code
+* Explain to your friend why his code doesn't work the way he thinks it works
+* To some degree help your friend to solve the problem, such as with pen and paper show an algorithm that solves the problem
+* Compare and discuss different solutions to the lab problems with your friend to figure out which solution is the best one after both of you have completed a lab
 
+**It is NOT OK to cooperate in any way.** Examples of that:
 
+* Sit at the same computer and write code together with your friend
+* Sit at different computers and discuss and write the same code as your friend
+* Give code to/receive code from your friend
 
+You must write your own code! If you are unsure about what counts as *helping* and what counts as *cheating*, then simply work alone and ask only the teacher at the lab sessions for help.
+
+:::tip Too hard?
+If you think the Laboratory Work problems are too hard to solve, sit together with a friend and try to solve the Exercise problems together. The Exercises is a *learning activity*, so feel free to co-operate as much as you want on those to learn. The Laboratory Work is an *examination test*, so most of the work must be done by each individual so we can be sure that each individual have learned the intended learning outcomes.
+:::
 
 
 ## Lab 1 - Input, output & loops
@@ -655,7 +671,7 @@ Create a file named `house.xml` with the XML code shown in <FigureNumber /> belo
 
 <Figure caption="The XML code in house.xml.">
 
-```
+```xml
 <house>
   <room>
     <name>Living Room</name>
