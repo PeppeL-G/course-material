@@ -1,5 +1,3 @@
-<SetTitle title="Web Development Fundamentals 2021" />
-
 # Lectures
 The instructions on the [Project Work](./project-work/) page indicate when you're expected to view each lecture, but here's a list of all of them.
 

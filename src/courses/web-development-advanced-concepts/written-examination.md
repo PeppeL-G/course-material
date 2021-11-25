@@ -1,5 +1,3 @@
-<SetTitle title="Web Development - Advanced Concepts 2021" />
-
 # Written Examination
 On this page you find information about the examination test `Written Examination`.
 

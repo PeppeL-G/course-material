@@ -1,5 +1,3 @@
-<SetTitle title="Web Development Fundamentals 2021" />
-
 # Sample Exam
 You can look at [the exam from 2019-01-11](files/exam-2019-01-11.pdf) to get some idea about what the questions on your exam will be, but note:
 

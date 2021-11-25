@@ -1,5 +1,3 @@
-<SetTitle title="Web Development - Advanced Concepts 2021" />
-
 # Study Guide
 <StudyGuideInfo
     course-name="Web Development - Advanced Concepts"

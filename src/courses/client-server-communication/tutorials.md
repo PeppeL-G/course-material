@@ -1,5 +1,3 @@
-<SetTitle title="Client-Server Communication 2019" />
-
 # Tutorials
 Here is the source code from the tutorials available. To run them on your own computer:
 

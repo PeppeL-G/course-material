@@ -1,5 +1,3 @@
-<SetTitle title="Introduction to Script Programming 2021" />
-
 # Lectures
 Each exercise on the [Exercises](exercises/) page contains a list of recorded lectures you are recommended to watch before attempting to solve the exercises and the labs. That will serve as a good hint for you when to watch which lectures, as well as the weekly announcements that will be posted on Canvas.
 

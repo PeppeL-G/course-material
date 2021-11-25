@@ -1,5 +1,3 @@
-<SetTitle title="Client-Server Communication 2019" />
-
 # Project Grading Guidelines
 This page contains guidelines for how your work will be graded. For the guidelines where it make sense, a higher grade includes the guidelines for the lower grades (for example, to be able to get `Grade 5`, you also need to follow the guidelines for `Grade 3` and `Grade 4`).
 

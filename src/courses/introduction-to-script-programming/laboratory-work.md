@@ -1,5 +1,3 @@
-<SetTitle title="Introduction to Script Programming 2021" />
-
 # Laboratory Work
 On this page you find information about the examination test `Laboratory work`.
 

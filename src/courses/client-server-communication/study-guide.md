@@ -1,5 +1,3 @@
-<SetTitle title="Client-Server Communication 2019" />
-
 # Study Guide
 <StudyGuideInfo
     course-name="Client-Server Communication"

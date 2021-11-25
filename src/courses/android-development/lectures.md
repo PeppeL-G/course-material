@@ -1,5 +1,3 @@
-<SetTitle title="Android Development 2021" />
-
 # Lectures
 Material for the lectures will be uploaded here during the course.
 

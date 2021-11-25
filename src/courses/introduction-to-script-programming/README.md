@@ -1,5 +1,3 @@
-<SetTitle title="Introduction to Script Programming 2021" />
-
 # Welcome!
 Welcome to *Introduction to Script Programming*! In this course you'll learn how to create small programs in Python your computer can execute.
 

@@ -1,5 +1,3 @@
-<SetTitle title="Android Development 2021" />
-
 # Study Guide
 <StudyGuideInfo
     course-name="Android Development"

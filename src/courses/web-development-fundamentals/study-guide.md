@@ -1,5 +1,3 @@
-<SetTitle title="Web Development Fundamentals 2021" />
-
 # Study Guide
 <StudyGuideInfo
     course-name="Web Development Fundamentals"

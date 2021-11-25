@@ -1,5 +1,3 @@
-<SetTitle title="Web Development Fundamentals 2021" />
-
 # Project Work
 This page contains instructions for the project work.
 

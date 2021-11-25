@@ -1,5 +1,3 @@
-<SetTitle title="Web Development Fundamentals 2021" />
-
 # Exercises
 There is no laboratory work in this course, but here are some optional exercises you can try to complete before you start implementing the website in your project work. Completing the exercises will give you a gentler start compared to starting to work on the project directly, so you are strongly recommended to complete them  .
 

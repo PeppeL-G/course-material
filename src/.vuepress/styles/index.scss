@@ -6,8 +6,18 @@ pre code{
 	user-select: auto;
 }
 
-.site-name{
-	color: var(--c-text-accent) !important;
+.sidebar-links > .sidebar-heading:first-child{
+	font-size: 80%;
+	margin-left: -0.8rem;
+}
+
+.dropdown-wrapper .nav-dropdown .dropdown-item a{
+	line-height: 1rem;
+}
+
+.dropdown-wrapper .nav-dropdown .dropdown-item{
+	margin-top: 0.6rem;
+	margin-bottom: 0.6rem;
 }
 
 @media print{

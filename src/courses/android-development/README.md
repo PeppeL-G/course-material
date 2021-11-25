@@ -1,5 +1,3 @@
-<SetTitle title="Android Development 2021" />
-
 # Welcome!
 Welcome to the course *Android Development*! In this course you'll learn how to create Android applications. 
 

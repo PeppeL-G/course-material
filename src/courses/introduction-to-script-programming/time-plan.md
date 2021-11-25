@@ -1,5 +1,3 @@
-<SetTitle title="Introduction to Script Programming 2021" />
-
 # Time Plan
 The <span style="background-color: #00ffff75; display: inline-block; padding: 0 8px; font-weight: bold;">Exercise</span> and <span style="background-color: #ffff0070; display: inline-block; padding: 0 8px; font-weight: bold;">Lab</span> columns indicate what you are expected to work on each day. 
 

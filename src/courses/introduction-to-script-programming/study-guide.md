@@ -1,5 +1,3 @@
-<SetTitle title="Introduction to Script Programming 2021" />
-
 # Study Guide
 <StudyGuideInfo
     course-name="Introduction to Script Programming"

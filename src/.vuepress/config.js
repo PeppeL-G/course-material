@@ -31,7 +31,10 @@ function getSideBarObject(){
 		
 		const key = "/courses/"+course.folderName+"/"
 		
-		sidebarObject[key] = course.pages
+		sidebarObject[key] = [
+			{text: course.name},
+			...course.pages,
+		]
 		
 	}
 	

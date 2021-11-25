@@ -7,8 +7,6 @@ exercise4ShowAfter: 2021-11-22T11:45
 exercise5ShowAfter: 2021-11-29T11:45
 exercise6ShowAfter: 2021-12-06T11:45
 ---
-<SetTitle title="Introduction to Script Programming 2021" />
-
 # Exercises
 On this page you find information about the exercises in the course.
 
