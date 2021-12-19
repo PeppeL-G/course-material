@@ -85,5 +85,37 @@ module.exports = {
 				componentsDir: path.resolve(__dirname, './components'),
 			},
 		],
+		[
+			'@vuepress/container',
+			{
+				type: 'exam-question-container',
+				before: (info) => `<div class="exam-question-container">`,
+				after: () => `</div>`,
+			},
+		],
+		[
+			'@vuepress/container',
+			{
+				type: 'exam-question',
+				before: (info) => `<div class="exam-question"><h2>Question</h2>`,
+				after: () => `</div>`,
+			},
+		],
+		[
+			'@vuepress/container',
+			{
+				type: 'exam-sample-answer',
+				before: (info) => `<div class="exam-sample-answer"><h2>Sample answer</h2>`,
+				after: () => `</div>`,
+			},
+		],
+		[
+			'@vuepress/container',
+			{
+				type: 'exam-marking-guidelines',
+				before: (info) => `<div class="exam-marking-guidelines"><h2>Marking guidelines</h2>`,
+				after: () => `</div>`,
+			},
+		],
 	],
 }

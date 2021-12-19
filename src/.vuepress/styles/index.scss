@@ -6,11 +6,14 @@ pre code{
 	user-select: auto;
 }
 
+/* The sidebar */
 .sidebar-links > .sidebar-heading:first-child{
 	font-size: 80%;
 	margin-left: -0.8rem;
+	color: var(--c-text-accent);
 }
 
+/* The navbar */
 .dropdown-wrapper .nav-dropdown .dropdown-item a{
 	line-height: 1rem;
 }
@@ -20,6 +23,36 @@ pre code{
 	margin-bottom: 0.6rem;
 }
 
+/* For exam questions */
+.exam-question-container{
+	border: 3px solid black;
+}
+
+.exam-question-container h2{
+	margin: 0;
+	font-size: 1.1em;
+}
+
+.exam-question-container .exam-question,
+.exam-question-container .exam-sample-answer,
+.exam-question-container .exam-marking-guidelines{
+	border: 3px solid black;
+	padding: 0.5em;
+}
+
+.exam-question-container .exam-question{
+	background-color: rgba(255, 255, 0, 0.08)
+}
+
+.exam-question-container .exam-sample-answer{
+	background-color: rgba(0, 255, 0, 0.08)
+}
+
+.exam-question-container .exam-marking-guidelines{
+	background-color: rgba(255, 0, 0, 0.08)
+}
+
+/* For printing */
 @media print{
 	
 	iframe{

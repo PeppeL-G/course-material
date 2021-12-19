@@ -14,6 +14,9 @@
 			<dt>Credits</dt>
 			<dd>{{credits}}</dd>
 			
+			<dt v-if="year">Year</dt>
+			<dd v-if="year">{{year}}</dd>
+			
 			<dt>Course coordinator</dt>
 			<dd>{{courseCoordinator}}</dd>
 			
@@ -57,6 +60,7 @@
 			courseName: String,
 			ladokCode: String,
 			credits: String,
+			year: String,
 			courseCoordinator: String,
 			examiner: String,
 			pingPongEvent: String,
