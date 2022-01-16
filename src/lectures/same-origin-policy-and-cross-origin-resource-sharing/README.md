@@ -13,7 +13,10 @@ AJAX brings great potentials to websites, but having client-side JavaScript code
 * [sop-and-cors.pptx](sop-and-cors.pptx)
 
 ## Recommended reading
+* [How to win at CORS](https://jakearchibald.com/2021/cors/)
 * [Whitepaper: The Definitive Guide to Same-origin Policy](https://www.netsparker.com/whitepaper-same-origin-policy/)
+* [Authoritative guide to CORS (Cross-Origin Resource Sharing) for REST APIs ](https://www.moesif.com/blog/technical/cors/Authoritative-Guide-to-CORS-Cross-Origin-Resource-Sharing-for-REST-APIs/#)
+    * This is an easy to read introduction to CORS.
 * [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) by Mozilla
 * [CORS Specification](https://www.w3.org/TR/cors/)
     * (only if you want o learn all the details)

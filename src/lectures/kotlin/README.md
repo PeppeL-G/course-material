@@ -14,5 +14,5 @@ Kotlin is a pretty new programming language invented by JetBrains and initially 
 
 ## Recommended reading
 * The website [Kotlin vs Java](https://www.kotlinvsjava.com/index.html)
-* The course book [Elements of Kotlin](https://wares.commonsware.com/app/internal/book/Kotlin/page/chap-preface-001.html)
-* [The Kotlin documentation](https://kotlinlang.org/docs/reference/)
+* The course book [Elements of Kotlin](https://commonsware.com/Kotlin/)
+* [The Kotlin documentation](https://kotlinlang.org/docs/home.html)

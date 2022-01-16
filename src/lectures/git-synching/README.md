@@ -10,9 +10,9 @@ We call a repository hosted on a server on the Internet for a *remote repository
 
 There exists two different types of remote repositories: public and private repositories.
 
-A *public repository* is a repository anyone have read access to. The creator of the repository can give other members write access, so others can contribute to the project. Open Source projects usually use a public repository.
+A *public repository* is a repository anyone has read access to. The creator of the repository can give other users write access, so others can contribute to the project. Open source projects usually use a public repository.
 
-A *private repository* is a repository that only the creator and invited members have read & write access to. This is usually used by companies working on projects they are selling to customers and don't want to give away for free.
+A *private repository* is a repository that only the creator and invited users have read & write access to. This is usually used by companies working on projects they are selling to customers and don't want to give away for free.
 
 Instead of you setting up your own server to host your repositories, you can use one of the many websites that offer to host your repositories for you, such as:
 
@@ -22,8 +22,8 @@ Instead of you setting up your own server to host your repositories, you can use
 
 In addition to hosting your repositories, these websites usually have many other good-to-have features, such as:
 
-- Issue tracking (let users report errors they find).
-- Collaboration (give other users read/write access to your repositories).
+- Issue tracking (let users report errors they find)
+- Collaboration (give other users read/write access to your repositories)
 - Continuos Integration
 - ...
 
@@ -71,11 +71,11 @@ Commit 1      <--      Commit 2      <--      Commit 3
 That is, creating a new commit on the `master` branch does not update the `origin/master` pointer, only your own `master` pointer. Git uses these extra pointers (one for each branch) to keep track of which commits you have in your local repository that you haven't uploaded to the remote repository yet, and which commits in the remote repository you haven't downloaded yet (that has been uploaded by other programmers). 
 
 ::: warning Note
-`git clone THE_URI` is not the only way to "connect" two repositories. If you already have a local repository that you want to share with the world, then you can create an empty remote repository and then "connect" to it from your local repository using the command `git remote add` instead of the command `git clone`, but we will not cover those details here, but do be aware of the possibility.
+`git clone THE_URI` is not the only way to "connect" two repositories. If you already have a local repository that you want to share with the world, then you can create an empty remote repository and then "connect" to it from your local repository using the command `git remote add` instead of the command `git clone`. We will not cover those details here, but do be aware of the possibility.
 :::
 
 ## Synching commits
-So the idea is that we have one remote repository, and each programmer that wants to work on the project clones the remote repository to her own computer using the `git clone THE_URI` command, and then each programmer gets their own local repository where they can modify the source code on their own computers and create commits that only exists in their own local repository. When a programmer wants the other programmers that work on the project to take part of her commits, she uploads her local commits to the remote repository, and then the other programmers can download her commits from there.
+So the idea is that we have one remote repository, and each programmer that wants to work on the project clones the remote repository to her own computer using the `git clone THE_URI` command, so each programmer gets their own local repository where they can modify the source code on their own computers and create commits that only exists in their own local repository. When a programmer wants the other programmers that work on the project to take part of her commits, she uploads her new local commits to the remote repository, and then the other programmers can download her commits from there.
 
 ### Downloading commits (pulling)
 So imagine that you clone a remote repository looking like this:
@@ -238,7 +238,7 @@ Commit 1      <--      Commit 2      <--      Commit 4
 
 If you try to run `git push origin master` now, you will get an error, because the remote repository contains a commit (`Commit 4`) that your local repository does not contain. So before you can push, you need to run `git pull origin master`, but let's do this by manually running `git fetch origin master` followed by `git merge origin/master`, so you can see what happens.
 
-So first we run `git fetch origin master`, and our local repository becomes:
+So, first we run `git fetch origin master` to get `Commit 4`, and our local repository becomes:
 
 ```
                                                HEAD
@@ -287,7 +287,7 @@ Play around with [Visualizing Git (Free Explore with Remote)](http://git-school.
 If you want some more practice, you can also try [Learn Git Branching](https://learngitbranching.js.org/) (the parts about using a remote repository).
 
 ## Recommended reading
-[Pro Git](https://git-scm.com/book/en/v2) by *Scott Chacon* and *Ben Straub*. It is available for free online in multiple different formats.
+If you want to learn more about branches in Git, read the following chapters from [Pro Git](https://git-scm.com/book/en/v2) by *Scott Chacon* and *Ben Straub* (available for free online in multiple different formats):
 
 * [Chapter 2: Git Basics](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)
   * The parts about using a remote repository (`git clone`, `git pull`, `git push`, ...)

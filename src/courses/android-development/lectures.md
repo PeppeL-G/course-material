@@ -1,12 +1,19 @@
 # Lectures
 Material for the lectures will be uploaded here during the course.
 
+* [Java](../../lectures/java/) (even if most new Android applications are implemented din Kotlin, many old applications are still implemented in Java)
+* [Kotlin](../../lectures/kotlin/)
+* [Android Design Patterns](../../lectures/android-design-patterns/) (kind of repetition from your OOP courses)
 * [Android Introduction](../../lectures/android-introduction/)
-* [Java](../../lectures/java/)
-* [Android Design Patterns](../../lectures/android-design-patterns/)
+* [Android Fundamental Application Components](../../lectures/android-fundamental-application-components/)
 * [Android Activities](../../lectures/android-activities/)
 * [Android Views and Layouts](../../lectures/android-views-and-layouts/)
-* [Kotlin](../../lectures/kotlin/)
+* [Android Linear Layouts](../../lectures/android-linear-layout/)
+* [Android Constraint Layouts](../../lectures/android-constraint-layout/)
+* [Android ListView](../../lectures/android-list-view/)
+
+<!--
+* [Android Backward Compatible](../../lectures/android-backward-compatible/)
 
 Added Course Week 2:
 
@@ -61,3 +68,5 @@ Added Week 7:
 * [Android Menus](../../lectures/android-menus/)
 
 </div>
+
+-->

@@ -14,7 +14,12 @@ So what do you need to think about when a user can login on your website? Let's 
 
 ## Recommended reading
 * [Security Authentication vs. Authorization | What’s the Difference?](https://swoopnow.com/security-authentication-vs-authorization/)
+* [Symmetric vs. Asymmetric Encryption – What are differences?](https://www.ssl2buy.com/wiki/symmetric-vs-asymmetric-encryption-what-are-differences)
+* [How to spoil the fish with salt and pepper](https://www.martinstoeckli.ch/hash/en/index.php)
 * [About Secure Password Hashing](https://security.blogoverflow.com/2013/09/about-secure-password-hashing/)
+* [BCrypt Explained](https://dev.to/sylviapap/bcrypt-explained-4k5c)
+* [Attackers Don't Bother Brute-forcing Long Passwords, Microsoft Engineer Says](https://it.slashdot.org/story/21/11/22/2036243/attackers-dont-bother-brute-forcing-long-passwords-microsoft-engineer-says)
+* [FBI recommends passphrases over password complexity](https://www.zdnet.com/article/fbi-recommends-passphrases-over-password-complexity/)
 * xkcd.com:
     * [Security](https://xkcd.com/538/)
     * [Password Strength](https://xkcd.com/936/)

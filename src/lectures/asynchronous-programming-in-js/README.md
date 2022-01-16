@@ -8,7 +8,7 @@ In this lecture we'll take a look at how synchronous programming differs from as
 
 
 ## What is Synchronous Programming?
-When you first learned programming, *synchronous programming* is most likely what you learned. In synchronous programming, one thing is carried out at a time, and you don't start doing the next thing until the first thing is done. In JavaScript, that *thing* is a function, as shown in <FigureNumber /> below.
+When you first learned programming, *synchronous programming* is most likely what you learned. In synchronous programming, one thing is carried out at a time, and you don't start doing the next thing until the first thing is done. You can think of that *thing* as a function, as shown in <FigureNumber /> below.
 
 <Figure caption="Example of synchronous programming in JavaScript.">
 
@@ -28,15 +28,15 @@ console.log(sum1 + sum2)
 
 </Figure>
 
-In <FigureNumber previous /> above, `getSum()` is a synchronous function. What that means is that when `getSum(1, 2)` is called on line 8, `getSum()` will do all it's work, and then return back the result and store it in `sum1`. Then we continue with the call `getSum(3, 4)` on line 9, and `getSum()` will again do it's entire work, and then return back the result, which we then store in `sum2`.
+In <FigureNumber previous /> above, `getSum()` is a synchronous function. What that means is that when `getSum(1, 2)` is called, `getSum()` will do all it's work, and then return back the result and store it in `sum1`. Then we continue with the call `getSum(3, 4)` on next line, and `getSum()` will again do it's entire work, and then return back the result, which we then store in `sum2`.
 
 This sounds obvious, right? Well, that's because it works the way you're used to.
 
 ## What's the Problem with Synchronous Programming?
-The problem with synchronous programming occurs when we have *long running operations*. What counts as a long running operation depends on what type of application you create, but operations that takes more than a few milliseconds to complete usually count as long running. The problem with synchronous programming is that we can only run one long running operation at a time, and that can be problematic for our application. A few examples of this is given next.
+The problem with synchronous programming occurs when we have *long running operations* and want to be able to do multiple things at the same time. What counts as a long running operation depends on what type of application you create, but usually operations taking than a few milliseconds to complete count as long running. The problem with synchronous programming is that we can only run one long running operation at a time, and that is problematic from some type of applications. A few examples of these are given next.
 
-### Problem Example 1: Graphical User Interfaces
-One problem with synchronous programming occurs when we implement graphical user interfaces (GUI). Imagine the user clicks on a button, and we start to compute something that takes 3 seconds to compute. If we use synchronous programming, nothing else in our code during those 3 seconds would run, so the graphical user interface would freeze, so the user can't click on an abort button, nor do anything else. Want an example of this? Just click <SleepButton :sleepMs="3000">this button</SleepButton> and then try to select text on this page, click on a link, or something, within 3 seconds (requires JavaScript to be enabled in your web browser).
+### Example 1: Graphical User Interfaces
+One problem with synchronous programming occurs when we implement a graphical user interface (GUI). Imagine the user clicks on a button, and we start to compute something that takes 3 seconds to compute. If we use synchronous programming, nothing else in our code during those 3 seconds would run, so the graphical user interface would freeze, so the user can't click on an abort button, nor do anything else. Want an example of this? Just click <SleepButton :sleepMs="3000">this button</SleepButton> and then try to select text on this page, click on a link, or something, within 3 seconds (requires JavaScript to be enabled in your web browser).
 
 The code in <FigureNumber /> below explains the problem in detail.
 
@@ -67,7 +67,7 @@ function sleep(sleepMs){
 
 In this example, the long running operation was just a loop doing nothing for many iterations, but you can substitute it with any operation that takes long time to complete, for example to check if there's a human in the world named `Chipsope` (would in worst case require you to compare `Chipsope` with ~7 billion names, which would take a while).
 
-### Problem Example 2: Data Loading
+### Example 2: Data Loading
 One problem with synchronous programming occurs when we want to carry out multiple tasks in parallel, and each task involves a lot of waiting, such as:
 
 * Waiting for the result of a query sent to the database
@@ -132,10 +132,10 @@ const pets = getAllPets() // This line would take 1.001 seconds to complete (1 s
 
 </Figure>
 
-In <FigureNumber previous /> above it takes ~2 seconds to load all data, but if humans and pets could be loaded at the same time, it would only take ~1 second. You don't like applications that takes a long time to load all the data at startup, right? So you probably don't want to use synchronous programming to do load data at startup.
+In <FigureNumber previous /> above it takes ~2 seconds to load all data, but if humans and pets could be loaded in parallel, it would only take ~1 second. You don't like applications that takes a long time to load all the data at startup, right? So you probably don't want to use synchronous programming to load data at startup.
 
 ## What is Asynchronous Programming?
-So, asynchronous programming is when we start a long running operation, and it will run *in the background*. The rest of our code will run as usual while the long running operation runs in the background, until it completes. Then sometime in the future the long running operation will complete, and then the long running operation notifies our ordinary code what the result of the long running operation was, and our ordinary code can handle the result. A visualization of this is shown in <FigureNumber /> below.
+So, asynchronous programming is when we start a long running operation, and it will run *in the background*. The rest of our code will continue to run as usual until it has completed. Then, sometime in the future, the long running operation in the background will complete, and notify our ordinary code what the result of the long running operation was, and our ordinary code can handle the result of the long running operation. A visualization of this is shown in <FigureNumber /> below.
 
 <Figure caption="Sequence diagram where the app waits for three things at the same time (1 second in total).">
 <RenderMermaid graph-definition="
@@ -166,10 +166,10 @@ sequenceDiagram
 Here we say that long running operations usually involve a lot of waiting. Long running operations can instead/also do useful work, e.g. compute something really complex that takes a very long time to compute. These operations can still run in the background at the same time as our ordinary synchronous code thanks to threads and multiple cores (or in worst case time slicing of the CPU). These are details we don't worry about in this lecture, but just remember that asynchronous programming is not only useful when waiting is involved, but for all types of long running operations.
 :::
 
-The question is how the long running operation can tell our ordinary code when it's done doing it's work. That can be done in different ways, such as by using callback functions or promises.
+The question is how a long running operation can tell our ordinary code when it's done with it works in the background, and what the result is. That can be done in different ways, such as by using callback functions or promises.
 
 ## Asynchronous Programming with Callback Functions
-One way in asynchronous programming to indicate what should happen after the long running operation has completed is to pass a `callback` function to the asynchronous function, and when the asynchronous function has completed its long running operation, it will call the `callback` function, and pass the result of the long running operation as an argument to the `callback` function. In the `callback` function we write the code that should run when the long running operation has completed.
+In asynchronous programming, one way to indicate what should happen after a long running operation has completed is to pass a `callback` function to the asynchronous function, and when the asynchronous function has completed its long running operation, it will call the `callback` function, and pass the result of the long running operation as an argument to the `callback` function. In the `callback` function we write the code that should run when the long running operation has completed.
 
 For example, if we have the synchronous function in <FigureNumber /> below.
 
@@ -215,7 +215,7 @@ getSum(1, 2, function(sum){
 
 </Figure>
 
-Even though `getSum()` above has a `callback` function as a parameter, everything will run synchronously, as you're used to. That's because we don't do any work that runs *in the background*. To make `getSum()` asynchronous, we need to tell it to do it's work in the background. You do that by calling an asynchronous built-in function, like:
+Even though `getSum()` above has a `callback` function as a parameter, everything will run synchronously, as you're used to. That's because we don't do any work that runs *in the background*. To make `getSum()` asynchronous, we need to tell it to do it's work in the background somehow. In JavaScript, you can do that by calling an asynchronous built-in function, like:
 
 * [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) (to send an HTTP request)
 * [setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout) (to schedule a function to be called later)
@@ -261,15 +261,15 @@ console.log("Hello!")
 // 1 second later, the two callback functions we have passed to setTimeout()
 // will be called (one at a time), which in turn will compute their sums
 // and call the callback functions we passed to getSum(), in which we log
-// the computed sums (3 and 7).
+// the computed sums (first 3, then 7).
 ```
 
 </Figure>
 
 So, to summarize:
 
-1. To change a synchronous function so we can use it asynchronously, we need to add a `callback` parameter to it, and instead of returning back the computed value, we call the `callback` function and pass the `callback` function the computed value.
-2. To make a function with a `callback` function really run asynchronously, it needs to call another asynchronous function. 
+1. To make a function asynchronous, it must somehow do work in the background, for example by calling an existing asynchronous function.
+2. To listen for when an asynchronous function is done running in the background, we can pass a `callback` function to it, which the asynchronous function will call when it's done running in the background.
 
 ### Error Handling
 In synchronous programming, when you discover something is wrong, you usually throw an exception, which you later can catch, which you can see in <FigureNumber /> below.
@@ -277,7 +277,7 @@ In synchronous programming, when you discover something is wrong, you usually th
 <Figure caption="Example of error handling in synchronous programming using exceptions.">
 
 ```js
-// The synchronous function that might throw an exception.
+// A synchronous function that might throw an exception.
 function getQuotient(dividend, divisor){
 	if(divisor == 0){
 		throw "Can't divide by 0."
@@ -297,12 +297,12 @@ try{
 
 </Figure>
 
-If you try to do something similar in asynchronous programming with callback functions, it could look like as shown in <FigureNumber /> below.
+If you try to do something similar in asynchronous programming with `callback` functions, it could look as shown in <FigureNumber /> below.
 
 <Figure caption="Trying to catch exceptions when calling an asynchronous function.">
 
 ```js
-// The asynchronous function that might throw an exception.
+// An asynchronous function that might throw an exception.
 function getQuotient(dividend, divisor, callback){
 	setTimeout(function(){
 		if(divisor == 0){
@@ -325,9 +325,9 @@ try{
 
 </Figure>
 
-This does unfortunately not work. The reason is simple: when you call `getQuotient()`, you are inside the try block, but `getQuotient()` returns back almost immediately, and you will leave the try/catch block. Then 1 second later, the callback you passed to `setTimeout()` will be called, and if you now throw the exception from inside that callback, you will throw it to the one who called the callback function, which will be the JavaScript runtime environment, so that's where the exception will be thrown to, and there of course no one is listening for your specific exceptions.
+This does unfortunately not work. The reason is simple: when you call `getQuotient()`, you are inside the try block, but `getQuotient()` returns back almost immediately, and you will leave the try/catch block. Then 1 second later, the callback you passed to `setTimeout()` will be called, and if you now throw the exception from inside that callback, you will throw it to the one who called the callback function, which will be the JavaScript runtime environment, so that's where the exception will be thrown to, and there of course no one is trying to catch the specific exceptions your code throws.
 
-The workaround to this problem is usually to pass two values to the `callback` function. The first value is the exception (aka "the error"). If everything go well and you don't get an error, you simply use `null` as the error. The second value is the result of the long running operation. In your `callback` function you simply check if the first argument is `null` or not with an if statement to figure out if you got an error, as shown in <FigureNumber /> below.
+The workaround to this problem is usually to pass two values to the `callback` function. The first value is the exception (aka "the error"). If everything go well and you don't have an error, you simply use `null` as the error. The second value is the result of the long running operation. In your `callback` function you simply check if the first argument is `null` or not with an if statement to figure out if you got an error, as shown in <FigureNumber /> below.
 
 <Figure caption="Example of error handling in asynchronous programming with callback functions.">
 
@@ -413,7 +413,7 @@ function loadUserWithPetsAndStoreInFile(userId, filename){
 
 </Figure>
 
-Clearly, the synchronous code is much easier to read. So this is the trade off: synchronous code is easier to read, but asynchronous code can run more efficient, since we don't waste time on waiting. Wouldn't it be great if there was a way to get the best of both worlds? Introducing promises.
+Clearly, the synchronous code is much easier to read. So this is the trade off: synchronous code is easier to read, but asynchronous code can run more efficient, since we don't waste time on waiting, and we can do multiple things at the same time with asynchronous code. Wouldn't it be great if there was a way to get the best of both worlds? Introducing promises.
 
 ## What are Promises?
 *Promises* is an attempt to make asynchronous code more readable and to avoid callback hell (making the code look more like synchronous code), but that still runs asynchronously. Instead of passing a `callback` to an asynchronous function, the asynchronous function returns back a promise. The promise is an object that represent a long running operation that will be completed some time in the future.
@@ -433,7 +433,7 @@ stateDiagram-v2
 " />
 </Figure>
 
-When you have called an asynchronous function and received back a promise from it, you usually want to listen to when the promise goes from the `Pending` state to the `Fulfilled` state, or from the `Pending` state to the `Rejected` state. You do that by calling `.then()` on the promise and `.catch()` on the promise respectively and pass them callback functions.
+When you have called an asynchronous function and received back a promise from it, you usually want to listen for when the promise leaves the `Pending` state, and goes to either the `Pending` state or the `Fulfilled` state. You do that by calling `.then()` on the promise and `.catch()` on the promise respectively and pass them each a `callback` function.
 
 For example, if `getQuotient()` would be an asynchronous function with a `callback` function, you would use it as shown in <FigureNumber /> below.
 
@@ -474,7 +474,7 @@ promise.catch(function(error){
 
 </Figure>
 
-Since we still provide callback functions to `.then()` and `.catch()`, you might think this code will result in callback hell as well when we start calling multiple asynchronous functions returning back promises, but that is not the case, because promises are *chainable*. This is the hard part to understand with promises, but that's what makes them so nice, so let's go through how it works in detail.
+Since we still provide callback functions to `.then()` and `.catch()`, you might think this code will result in callback hell as well when we start calling multiple asynchronous functions returning back promises, but that is not the case, because promises are *chainable*. This is the hard part to understand with promises, but this is what makes them so nice, so let's go through how chaining works in detail.
 
 The callback function you pass to `.then()` can:
 
@@ -582,12 +582,20 @@ No, list item 1 above (*our callback function passed to `.then()` can return bac
 // Asynchronous version with promises.
 function loadUserWithPetsAndStoreInFile(userId, filename){
 	return getUserById(userId).then(function(user){
-		return getPetsByOwnerName(user.name)
-	}).then(function(pets){ // Note: Here we listen for when the promise from getPetsByOwnerName() is fulfilled, since that's the promise that is returned from the previous then() callback on the line above.
+		return getPetsByOwnerName(user.name) // We return back a new promise here...
+	}).then(function(pets){ // ...so here we call "then" on that new getPetsByOwnerName promise!
 		const data = {
 			pets
 		}
-		return fileSystem.storeInJsonFile(data, filename)
+		return fileSystem.storeInJsonFile(data, filename) // We return back a new promise here...
+	}).then(function(fileSize){ // ...so here we call "then" on that new fileSystem promise!
+		
+		// The value we return here is not a promise, so it will
+		// automatically be wrapped in a resolve promise.
+		return fileSize
+		// This last promise can be seen as the final promise we
+		// return back from loadUserWithPetsAndStoreInFile().
+		
 	})
 }
 
@@ -601,7 +609,7 @@ loadUserWithPetsAndStoreInFile(3, "data.json").then(function(fileSize){
 
 </Figure>
 
-An importing thing to know when using chained promises like we do here is that if one of the promises in the chain is rejected, the next promises in the chain will never be resolved, and the error will be passed to the callback functions passed to `.catch()` no matter which promise that was rejected. So in <FigureNumber previous /> above, even if it looks like we only call `.catch()` on the last promise in the chain, the callback function we pass to it will be called if any promise in the chain will be rejected.
+An importing thing to know when using chained promises like we do here is that if one of the promises in the chain is rejected, the next promises in the chain will never be resolved, and the error will be passed to the callback functions passed to `.catch()` no matter which promise that was rejected. So in <FigureNumber previous /> above, even if it looks like we only call `.catch()` on the last promise in the chain, the callback function we pass to it will be called when any promise in the chain is rejected.
 
 This way of writing asynchronous code (with promises) is really similar to synchronous code, as shown in <FigureNumber /> below.
 
@@ -668,7 +676,7 @@ try{
 
 This code is just as readable as synchronous code, the only different is that whenever we call a function that returns a promise, we must remember to use the `await` operator to wait for the promise to be resolved or rejected.
 
-Whenever you use the `await` operator in a function, you must mark that function with the `async` keyword. A function marked with the `async` keyword always returns back a promise that will resolve to the value you `return` back from the function. An example of that is shown in <FigureNumber /> below.
+Whenever you use the `await` operator in a function, you must mark that function with the `async` keyword. A function marked with the `async` keyword always returns back a promise that resolves to the value you `return` back from the function. An example of that is shown in <FigureNumber /> below.
 
 <Figure caption="Example of async functions.">
 
@@ -678,6 +686,8 @@ async function getTheSum(){
 	const quotient1 = await getQuotient(4, 2)
 	const quotient2 = await getQuotient(5, 3)
 	return quotient1 + quotient12
+	// The sum will be wrapped in a promise,
+	// since the `async` keyword is used on this function.
 }
 
 async function logTheSum(){
@@ -686,9 +696,12 @@ async function logTheSum(){
 	}catch(error){
 		console.log("Couldn't log the sum because division by 0.")
 	}
+	// Even though this function does not explicitly return a value,
+	// a promise will be returned implicitly.
 }
 
-logTheSum() // Use the await operator here if you want the sum to be logged before Hello!
+logTheSum() // Use the await operator here if you don't want the code
+// execution to continue until the promise has been fulfilled or rejects.
 // As it is now (without the await operator), Hello! will be logged first.
 
 console.log("Hello!")
@@ -697,13 +710,11 @@ console.log("Hello!")
 </Figure>
 
 ## How to Create Promises
-Often, promises are created automatically for you when you call one of the built-in function in the JavaScript runtime environment that run asynchronously and returns a promise, such as:
+Often, promises are created automatically for you when you call one of the built-in functions in the JavaScript runtime environment that run asynchronously and returns a promise, such as:
 
 * [fetch()](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 
-It's also possible to create your own promises using [the Promise constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). You need to pass a callback function to the Promise constructor. That callback function will be invoked immediately by the constructor, and in that function you should write the code for the long running operation. The constructor will also pass you two callback functions, one called `resolve()`, and one called `reject()`.
-
-When your long running operation has completed, you should call `resolve()` and pass it the value the long running operation resulted in. If something goes wrong you should instead call `reject()`, and pass it the error. An example of this is shown in <FigureNumber /> below.
+It's also possible to create your own promises using [the Promise constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), as shown in <FigureNumber /> below.
 
 <Figure caption="Template for creating your own promise.">
 
@@ -716,6 +727,10 @@ const myPromise = new Promise(function(resolve, reject){
 ```
 
 </Figure>
+
+You need to pass a callback function to the Promise constructor. That callback function will be invoked immediately by the constructor, and in that function you should write the code for the long running operation. The constructor will also pass you two callback functions, one called `resolve()`, and one called `reject()`.
+
+When your long running operation has completed, you should call `resolve()` and pass it the value the long running operation resulted in. If something goes wrong you should instead call `reject()`, and pass it the error.
 
 To implement `getQuotient()` as an asynchronous function using promises, it would look as shown in <FigureNumber /> below.
 
@@ -730,6 +745,14 @@ function getQuotient(dividend, divisor){
 			resolve(dividend / divisor)
 		}
 	})
+}
+// Or create the promise implicitly by using the async keyword:
+async function getQuotient(dividend, divisor){
+	if(divisor == 0){
+		throw "Can't divide by 0"
+	}else{
+		return dividend / divisor
+	}
 }
 
 try{
@@ -770,3 +793,7 @@ try{
 </Figure>
 
 Note that when you implement functions that makes use of promises from scratch, the implementation can have a few symptoms of callback hell, as `getQuotient()` above. The real benefit with promises is that the code is really easy to read when you call functions returning promises, as in the try/catch block above. 
+
+## Recommended Reading
+* The following chapters from the book [Eloquent JavaScript](https://eloquentjavascript.net/):
+    * 11. Asynchronous Programming

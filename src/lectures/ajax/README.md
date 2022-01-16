@@ -8,6 +8,21 @@ Traditionally, the only way to load new information on a webpage was by clicking
 
 <iframe width="560" height="314" src="https://www.youtube.com/embed/tVZitsQRB_o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+::: danger Use AJAX properly!
+AJAX can be used to improve the user experience, but most websites trying to use it actually end up providing a worse user experience. If you try to use it on a website, be sure to:
+
+* Show loading indicators
+    * (otherwise users won't know if their clicks are registered, if something crashed, or if the page is still loading, etc.)
+* Handle errors
+    * (must show error messages to the users when something goes wrong, otherwise they will just sit and wait)
+* Change the URI when showing new content
+    * (otherwise users can't bookmark the page with the newly loaded content, the refresh button won't work as expected, search engines can't take users directly to the new content, etc.)
+* Listen for changes in the web browser's history, and act accordingly
+    * (otherwise the the back and forward buttons in the web browser won't work as expected, etc.)
+
+Just sending an extra HTTP request and display the new content is not enough, all of these things needs to be handled to improve the experience! If you are not prepared to put down all of this extra work, then AJAX is probably not for you.
+:::
+
 ## Lecture material
 * [ajax.pdf](ajax.pdf)
 * [ajax.pptx](ajax.pptx)

@@ -21,4 +21,5 @@ How should applications with a large code base be structured so it's:
 
 ## Recommended reading
 * [The Wikipedia article Multitier architecture](https://en.wikipedia.org/wiki/Multitier_architecture)
+    * Note: The article is primarily about *tiers*, which is not the same as *layers* (difference explain in the article), but it's the same kind of thinking
 * [The Law of Leaky Abstractions](https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/) by Joel Spolsky

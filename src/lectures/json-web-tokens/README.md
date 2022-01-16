@@ -4,7 +4,7 @@ navbarTitle: JSON Web Tokens
 ---
 
 # JSON Web Tokens
-So how do we implement access tokens? Well, we could implement them as JSON Web tokens.
+So how do we implement access tokens? Well, we can implement them as JSON Web Tokens, let's take a look at how they work!
 
 <iframe width="560" height="314" src="https://www.youtube.com/embed/mj8Ol51cmgg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

@@ -4,7 +4,7 @@ navbarTitle: Third-Party Authentication
 ---
 
 # Third-Party Authentication
-So, users get an access token when they login to a REST API. But how do we get information about which account the user logged in to? ID tokens to the rescue! And these can be used to let users login to your application using their account in another application as well!
+So, users get an access token when they login to a REST API. But how do we get information about which account the user logged in to? ID tokens to the rescue! And these can also be used to let users login to your application using their account in another application (such as Facebook, Google, etc.).
 
 <iframe width="560" height="314" src="https://www.youtube.com/embed/LcRfHgvXIFI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

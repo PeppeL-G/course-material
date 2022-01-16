@@ -74,7 +74,7 @@ module.exports = {
 	},
 	markdown: {
 		code: {
-			lineNumbers: false,
+			lineNumbers: true,
 		}
 	},
 	plugins: [

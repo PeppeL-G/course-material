@@ -1,45 +1,60 @@
 # Project Work
 On this page you find information about the examination test `Project work`.
 
+
+
 ## General information
 <CompactInfo :infoPieces='{
     "Number of credits": "4",
     "Grades": ["Fail", "3", "4", "5"],
     "How to work": "In pairs",
     "Goal": "To learn how to implement a scalable platform built on Docker containers running a web application, a single-page application, a database to store sessions in and a database to store your resources in. You will also learn how to use a three-layered architecture, dependency injection and how to design and implement a REST API in your web application.",
-    "Instructions": "Complete the different parts the project work consists of described on this page. You will implement a platform, write a report describing your implementation and present your platform to the rest of the class at the end of the course.",
+    "Instructions": `Complete the different parts the project work consists of described on this page. You will implement a platform, write a report describing your implementation and present your platform to the "rest" of the class at the end of the course.`,
     "Grading guidelines": "Available on the Project Grading Guidelines page.",
     "Re-examination": "Special presentation sessions will be available at the re-exam periods in June and in August (contact the course coordinator for more details). Your work can also be graded at these re-exam period, but it will only be graded Fail/3.",
     "Help": "Ask the teacher for help at the lab sessions."
 }'>
 </CompactInfo>
 
+
+
+
 ## Introduction
-As project work, you should work in pairs to create a platform per the instructions in this document. The platform will consist of:
+As project work you should work in pairs to create a platform per the instructions on this page. The platform will consist of:
 
-* A relational database that stores the resources created on the platform.
-* A none-relational database to store temporary data (sessions) on the platform.
+* A relational database that stores the resources created on the platform
+* A none-relational database to store temporary data (e.g. sessions) on the platform
 * A web application that:
-    * Web browsers can use to fetch webpages from (i.e. function as a website).
-    * Exposes a REST API clients (e.g. smartphones) can use to work with the resources on the platform.
-* A Single-Page Application through which users can work with the resources on the platform.
+    * Web browsers can use to fetch webpages from (i.e. function as a website)
+    * Exposes a REST API clients (e.g. smartphones) can use to work with the resources on the platform
+* A Single-Page Application through which users can work with the resources on the platform
 
-You have a lot of freedom when it comes to the design and functionality of the platform, but the following requirement exists:
+You have a lot of freedom when it comes to the design and functionality of the platform, but the following requirements exist:
 
 * There should exist at least three different type of resources on the platform:
-    * One of the resource types must represent *accounts* users can create and login to.
-    * The other resource types should somehow have a relation to accounts (direct or indirect), i.e. a created resource should be owned by/belong to an account.
+    * One of the resource types must represent *accounts* users can create and login to
+    * The other two resource types should somehow have a relation to accounts (direct or indirect), i.e. a created resource should be owned by/belong to an account
 * Regarding CRUD (Create, Retrieve, Update, Delete) operations on the resources:
-    * All three type of resources should support Create and Retrieve operations.
-    * Implementing Update and Delete operations is an extra task you can do at the end of the project work to get a higher grade.
+    * All three type of resources should support Create and Retrieve operations
+    * Implementing Update and Delete operations for the website is an extra task you can do at the end of the project work to get a higher grade
 
-Use whichever type of resources you want in addition to accounts. Examples are:
+Use whichever type of resources you want in addition to accounts. Some typical (boring) examples are:
 
-* *Threads* logged in users can create and that other logged in users can write *posts* to.
-* *Blog posts* logged in users can create and that other logged in users can write *comments* on.
-* *Todo lists* logged in users can create and add *todo items* to.
+* *Threads* logged in users can create and that other logged in users can write *posts* to
+* *Blog posts* logged in users can create and that other logged in users can write *comments* on
+* *Todo lists* logged in users can create and add *todo items* to
 
-Implement the platform using the technologies taught in this course. In addition to implementing the web application, you should also write a report describing how the platform works and how it has been implemented. The file [project-report-template.docx](files/project-report-template.docx) contains a template with further instructions on this. Your report will be a living document throughout the course, meaning that you will continuously improve/add content to it. 
+Examples of more specific platforms are:
+
+* For a **Car Insurance Company**: *Insurance Plans* (price, info about what's included in the plan, etc.) users' *Cars* are connected to
+* For a **Rescue Service**: *Accidents* they have attended, and *Reported Work Hours* by the personnel
+* For a **Football Club**: *Teams* in the club, and *Players* in each team
+
+::: tip Finding a good problem to solve
+Most good problems obvious to programmers have already been solved by other programmers. To find a good problem to solve as project in this course, you usually need to explore domains you are unfamiliar with. Ask your friends and family if they have a need of a platform of some kind. Someone working within elderly care might have a problem you can solve with a platform implemented in this course? Or someone who likes to walk in the nature? Or someone helping homeless people? Etc.
+:::
+
+Implement the platform using the technologies taught in this course. In addition to implementing the web application, you should also write a report describing how the platform works and how it has been implemented. The file [project-report-template.docx](files/project-report-template.docx) contains a template with further instructions on this. Your report will be a living document throughout the course, meaning that you will continuously improve and add content to it. 
 
 On the [Project Grading Guidelines](./project-grading-guidelines/) page you find some guidelines for how your project work will be graded. You are recommended to read through it every now and then.
 
@@ -47,41 +62,46 @@ To help you, we have divided the project work into smaller parts that should be 
 
 Good luck!
 
-## Installing required software
-**If you work on the computers in E2404, E2432 or E2433**, all required software should already be installed for you, so you should not need to install anything yourself.
 
-**If you work on a school computer in any other room**, you need to manually install the required software through the *Software Center* application (unless someone else has already done that on the specific computer you sit at).
+
+
+## Installing required software
+**If you work on the computers in E1206, E2432, E2433 or E4205**, all required software should already be installed for you, so you should not need to install anything yourself.
+
+**If you work on a school computer in any other room**, you need to manually install the required software through the *Software Center* application (unless someone else has already done that on the specific computer you use).
 
 **If you work on your own private computer**, you need to download and install all required software yourself. In this course, we use only free software available for both Windows, Mac and Linux.
 
 The required software is:
 * [Docker](https://docs.docker.com/get-docker/) \
-    A program used for containerization, i.e. a program used for running other programs in an isolated and configured environment.
-  
-::: warning Docker has been updated
-Before, there was a legacy version of Docker called *Docker Toolbox*, and a newer version of Docker called *Docker Desktop for Windows*. There are some minor differences between, such as commands, bugs, etc. Of course, using the newer version is better, but you could not do that if you had *Windows 10 Home*, but instead needed to have *Windows 10 Pro*. Many users do of course not have Windows 10 Pro, so they had to use the old version of Docker instead.
+    A program used for containerization, i.e. a program used for running other programs in an isolated and configurable environment.
 
-In March 2020, [Docker released a new version of Docker Desktop for Windows](https://www.docker.com/blog/docker-desktop-for-windows-home-is-here/) that also works on Windows 10 Home using *Windows Subsystem for Linux*. So nowadays all Windows users can use Docker Desktop for Windows, and forget about Docker Toolbox. But keep in mind that there are still a lot resources out there that might have been written for Docker Toolbox instead of Docker Desktop for Windows.
+::: danger Docker Toolbox for Windows
+There existed an old version of Docker for Windows called *Docker Toolbox*. It shouldn't be used anymore, so Windows users, be sure to use *Docker Desktop for Windows*.
+:::
 
-The instructions for installing Docker Desktop for Windows differs depending on if you have Windows 10 Home or Windows 10 Pro. Make sure to follow the correct instructions for your operating system.
-
-If you also take the course [Android Development](../../android-development/), ETC. Docker has a setting called `Use the WSL 2 based engine`. For Windows 10 Home users, this option must be checked. For Windows 10 Pro users, this option can be unchecke
+::: warning About Docker Desktop for Windows
+Docker Desktop for Windows can be used with either *Windows Subsystems for Linux 2* (WSL2) or Hyper-v. If you have Windows 10 Home (as most users), you must use it with WSL2.
 :::
 
 * [Node.js](https://nodejs.org/en/) \
-    Use whichever version you want, but most likely the newer the better. If you don't want to gamble, go with the LTS version.
+    Use whichever version you want, but most likely the newer the better. If you don't want to gamble, go with the latest LTS version.
 * [npm](https://www.npmjs.com/) \
     This one is installed along with Node.js, so you do not need to install it separately. However, you might want to [update npm to the latest version](https://docs.npmjs.com/troubleshooting/try-the-latest-stable-version-of-npm).
 
-The following software tool is not required, but recommended:
+The following software tools are not required, but recommended:
 
 * [Visual Studio Code](https://code.visualstudio.com/) \
     IDE with good support for writing, running and debugging Node.js and JavaScript code, but use whichever IDE you want.
 * [Git](https://git-scm.com/) \
     Version Control System that makes it very convenient to work on the project from different computers.
- 
+
+
+
+
+
 ## Part 1: Joining a project group
-The project work should be carried out in pairs. Let the examiner know who you are working with by joining one of [the Project Groups on Canvas](https://ju.instructure.com/courses/3372/groups#tab-3280).
+The project work should be carried out in pairs. Let the examiner know who you are working with by joining one of [the Project Groups on Canvas](https://ju.instructure.com/courses/4775/groups).
 
 If you can't find someone to work with, send the course coordinator an email at [Peter.Larsson-Green@ju.se](mailto:Peter.Larsson-Green@ju.se) using the template in <FigureNumber /> below (you just need to replace `XXX` with your specific values).
 
@@ -90,14 +110,15 @@ If you can't find someone to work with, send the course coordinator an email at 
 ```
 Hi!
 
-I need you to match me with a student for the project work in the course Web Development - Advanced Concepts.
+I need you to match me with a student for the project work.
 
+Course: Web Development - Advanced Concepts
 My name: XXX
 My JU email: XXX@student.ju.se
 The grade I'm aiming for in this course: XXX
 I got the following grades in the following pre-requisite courses:
  - Introduction to Programming: XXX
- - Data Structures and Algorithms: XXX*
+ - Data Structures and Algorithms: XXX
  - Object-Oriented Programming: XXX
  - Network Programming: XXX
  - Web Development Fundamentals: XXX
@@ -109,40 +130,71 @@ Thanks!
 
 If you don't care about who you are matched with, you just need to enter your name and JU email in the template. The course coordinator will then try to match you with a student with similar ambitions and skills as you.
 
-## Part 2: Platform idea
+
+
+## Part 2: Project Environment
+Before you start working on this part, you are recommended to:
+
+* Read/View the following lectures:
+    * [Teamwork](../../lectures/teamwork/)
+* Read the following short course on Git:
+    * [Git](../git/)
+
+---
+
+The very first thing you should agree on is how you should work together. Especially, you need to some extent document who is doing what in the project, and write that in your report, so the examiner can verify that all group members have contributed ~equally much.
+
+We recommend you to work together per the basis described in the [Teamwork](../../lectures/teamwork/) lecture. That way you will automatically document who has contributed with what by using Git and GitHub issues. But if you want to work together in another way, that is OK too, as long as you can show who has contributed with what in the project.
+
+The *Worklog* chapter in [project-report-template.docx](files/project-report-template.docx) shows an example of how you can report who has contributed with what in the project.
+
+
+
+
+
+## Part 3: Platform idea
 Before you start working on this part, you are recommended to:
 
 * Read/View the following lectures:
     * [Report Writing](../../lectures/report-writing/)
-* Read the following short course on Git:
-    * [Git](../git/)
+
+---
 
 Your first task is to come up with what the platform you will create should do. Try to be creative and create a platform that solves a real-world problem ordinary people are having. Feel free to ask your family and friends for problems they have that could be solved using a platform. Examples of real-world problems could be:
 
-* I often forget meetings.
-* I often make bets with my friends, they remember the bets I lose so I have to pay them, but I often forget the bets I win, so they never pay me.
-* I like to keep track of which celebrities I've seen, but I rarely remember that.
-* I eat lunches alone, and that's so boring.
-* I need to find someone I can play padel with.
+* I often forget meetings
+* I often make bets with my friends, they remember the bets I lose so I have to pay them, but I often forget the bets I win, so they never pay me
+* I like to keep track of which celebrities I've seen, but I rarely remember that
+* I eat lunches alone, and that's so boring
+* I need to find someone I can play padel with
 
-The only important thing is that your platform can be implemented using at least 3 type of resources (accounts + at least two more), but the more useful it is the better. Optimally you have such a great idea that you will want to launch your platform after the course.
+The only important thing is that your platform can be implemented using at least 3 type of resources (accounts + at least two more connected to accounts), but the more useful it is the better. Optimally you have such a great idea that you will want to launch your platform after the course.
 
-Your platform should be described in the project report, so in this part of the project work, you will not do any programming, but only work on your report. You should be able to complete at least the *Introduction* chapter.
+Your platform should be described in the project report, so in this part of the project, you will not do any programming, but only work on your report. You should be able to complete at least the *Introduction* chapter.
 
-When you're done describing your idea in the report, discuss it with a teacher at one of the lab sessions, or some friends so you get some initial feedback on it and can improve it. Then recommended to upload the current version of your report to Canvas by submitting the assignment [Platform Idea](https://ju.instructure.com/courses/3372/assignments/12479?module_item_id=75146) to get some feedback on your idea from the examiner.
+When you're done describing your idea in the report, discuss it with a teacher at one of the lab sessions, or some friends to get some initial feedback on your idea and can improve it. Then you are recommended to upload the current version of your report to Canvas by submitting the assignment [Platform Idea](https://ju.instructure.com/courses/4775/assignments/25247) to get some feedback on your idea from the examiner.
 
-## Part 3: Setting up docker
+
+
+
+
+## Part 4: Setting up docker
 Before you start working on this part you must:
 
 * Complete and be approved on the [Laboratory Work](./laboratory-work/).
 
+---
 
 Before you start working on this part, you are recommended to:
 
 * Read/View the following lectures:
     * [Docker Basics](../../lectures/docker-basics/)
 
+---
+
 The web application should be implemented in Node.js using the Express framework (feel free to use [Koa](https://koajs.com/) instead of Express if you are willing to learn it (not officially part of this course, so you can't expect to get any help with it from the lab assistants)), and the resources on the platform should be stored in a MySQL database. We could create a Docker container that contains both, but when it comes to containerization it is better that a container just has a single responsibility, e.g. to just run the web application or to just run the database. Among other things, it is much easier to scale a container that has a single responsibility. Therefore, the web application should run in one container, and the database should run in another container.
+
+
 
 ### The Web Application image
 Start by creating a new folder to store all the source code for the entire platform. In this document we will refer to this folder as `/platform` (you should of course use a more unique/descriptive name than `platform`). This is the folder you want to version control, so here you also want to initialize your Git repository. Then create a sub-folder inside this one to store the source code for the web application. In this document we will refer to that sub-folder as `/platform/web-application`.
@@ -204,7 +256,7 @@ Before you use any docker command you must start the Docker Desktop for Windows 
 
 Docker can then use the information in `Dockerfile` to build a new image that contains your source code and Node.js to run it. To do that, run the command `docker build --tag=my-web-app:latest .` in `/platform/web-application`. This tells Docker to build the image and to add it to its own collection of images on your computer. At the same time, it will also download the `node:13.5.0` image from Docker Hub (unless it has already done that).
 
-To run the image in a new container, run the command `docker run -p 3000:8080 my-web-app:latest`. When the container is running you should be able to send HTTP requests to your web application by opening [http://localhost:3000](http://localhost:3000) in a web browser on your computer (that is, if you use Docker for Windows, if you use Docker Toolbox instead, see the red box below). The command used to start the container told Docker that all incoming traffic to port 3000 on your computer should be forwarded to the container's port 8080.
+To run the image in a new container, run the command `docker run -p 3000:8080 my-web-app:latest`. When the container is running you should be able to send HTTP requests to your web application by opening [http://localhost:3000](http://localhost:3000) in a web browser on your computer. The command used to start the container told Docker that all incoming traffic to port 3000 on your computer should be forwarded to the container's port 8080.
 
 On Mac and Linux you can stop the container from running by pressing `[CTRL]` + `[C]`. On Windows you also need to run the command `docker container ls` to retrieve the name of the container and then run the command `docker container stop theContainerName`.
 
@@ -267,6 +319,8 @@ If you want to be able to debug your Node.js application from Visual Studio Code
 
 You have now successfully setup a project suitable for implementing a web application in Node.js with Docker containers. Good job!
 
+
+
 ### The Database image
 Since the MySQL database should run in a separate container, let us do something similar for the database as we did for the web application.
 
@@ -285,6 +339,8 @@ COPY initialize-database.sql /docker-entrypoint-initdb.d/
 Then create a new file in `/platform/database` called `initialize-database.sql`. The SQL code you write in that file will be executed by the MySQL server when it starts, so in this file you can write SQL code that creates the tables in the database your platform needs.
 
 The database image can be started and stopped in the same way as your web application image. After you have started it you should be able to connect to it from your host computer using [http://localhost:3306](http://localhost:3306) (or the Docker Machine's IP address). If you have a MySQL Database Management Tool (such as [MySQL Workbench](https://www.mysql.com/products/workbench/) or one of the [MySQL extensions to Visual Studio Code](https://marketplace.visualstudio.com/search?term=mysql&target=VSCode)), try it out!
+
+
 
 ### Using Docker Compose
 Docker has a tool called [Docker Compose](https://docs.docker.com/compose/) that greatly simplifies for us to start and stop multiple containers at the same time, as well as handle the connection between them (which we need, since the web application needs to communicate with the database). To use it, simply create a file in `/platform` called `docker-compose.yml` with the content shown in <FigureNumber /> below. 
@@ -325,13 +381,20 @@ The MySQL image uses an anonymous volume to store it's data, and by default it's
 
 For more information, see [Issue #2127 in the Docker Compose repository](https://github.com/docker/compose/issues/2127).
 :::
- 
-## Part 4: Implementing the Web Application
+
+
+
+
+
+
+## Part 5: Implementing the Web Application
 Before you start working on this part, you are recommended to:
 
 * Read/View the following lectures:
     * [Layered Architecture in Node.js](../../lectures/layered-architecture-in-node-js/)
     * [Asynchronous Programming in JavaScript](../../lectures/asynchronous-programming-in-js/)
+
+---
 
 Implement the website using a three-layered architecture:
 
@@ -364,13 +427,19 @@ To help you get started you can use the skeleton code available in the ZIP file 
 
 On your platform, users should at least be able to create new resources and to browse and view existing resources. You do not need to implement update and delete functionality; that is an extra task you can complete at the end of the course if you have time for it. You neither need to implement authorization/login functionality now. That is the next part of the project work. 
 
-## Part 5: Adding Authorization
+
+
+
+
+## Part 6: Adding Authorization
 Before you start working on this part, you are recommended to:
 
 * Read/View the following lectures:
     * [Handling Concurrent HTTP Requests](../../lectures/handling-concurrent-http-requests/)
     * [Scaling Web Applications](../../lectures/scaling-web-applications/)
     * [Scaling Databases](../../lectures/scaling-databases/)
+
+---
 
 When the web application receives a successful sign in request from a client it needs to remember to which account that client signed in to, so it knows that when it receives requests from that client in the future. To do that one usually uses sessions. A session contains information about a client stored on the server-side. Where the sessions are stored on the server-side has a major impact on how the web application can be scaled.
 
@@ -403,11 +472,18 @@ Add another container to your solution that runs a Redis database, which is a ke
 
 Then add the login feature to your web application and add authorization. Remember that sessions are something we use to make HTTP stateful (hence we only use them in the presentation layer) and authorization is something we should implement in the business logic layer (which users that are authorized to do what should be independent of how they use our application).
 
-## Part 6: Using Dependency Injection
+
+
+
+
+
+## Part 7: Using Dependency Injection
 Before you start working on this part, you are recommended to:
 
 * Read/View the following lectures:
     * [Dependency Injection in Node.js](../../lectures/dependency-injection-in-node-js/)
+
+---
 
 The three layers the web application consists of have some dependencies:
 
@@ -601,11 +677,13 @@ Note: Awilix also supports dependency injection using classes, so feel free to u
 
 If you want, feel free to use any other dependency injection method you prefer, but you can't expect to get any help from a teacher using it.
 
-## Part 7: Multiple Data Access Layers/ORM
+## Part 8: Multiple Data Access Layers/ORM
 Before you start working on this part, you are recommended to:
 
 * Read/View the following lectures:
     * [Using Sequelize in Node.js](../../lectures/using-sequelize-in-node-js/)
+
+---
 
 Now that your web application makes use of dependency injection, let us see if it works by implementing another data access layer. The new data access layer should have the same interface as the old one (must implement the same exposed functions, must send back identical errors, etc.) but should be implemented differently. Let us implement it using an Object-Relational Mapping framework, so you get some practice on using that.
 
@@ -632,7 +710,13 @@ graph LR
 " />
 </Figure>
 
-## Part 8: Adding a REST API
+
+
+
+
+
+
+## Part 9: Adding a REST API
 Before you start working on this part, you are recommended to:
 
 * Read/View the following lectures:
@@ -641,6 +725,8 @@ Before you start working on this part, you are recommended to:
     * [REST API Authorization](../../lectures/rest-api-authorization/)
     * [JSON Web Tokens](../../lectures/json-web-tokens/)
     * [Third-Party Authentication](../../lectures/third-party-authentication/)
+
+---
 
 Users can use the platform on their smartphones through the web browser on it, but the user experience can often be improved my implementing and let the users use a native smartphone application instead. This way, the GUI would consist of GUI components native applications use, which appear much more appealing to the user compared to the GUI components webpages consists of. Furthermore, a native application would also be able to make use of native features on the smartphone which aren't accessible through client-side JavaScript code.
 
@@ -695,12 +781,20 @@ Tokens can be implemented in different ways, but the simplest way is by using JS
 
 Implement Access Tokens as described by the [OAuth 2.0 Framework](https://oauth.net/2/) and implement ID Tokens as described by the [OpenID Connect](https://openid.net/connect/) specification. Use the `Resource Owner Password Credentials Grant`, and make sure to get all the details right (status code, bodies, headers, tokens, etc. should be as described in the specifications). 
 
-## Part 9: Implementing a Single-Page Application
+
+
+
+
+
+## Part 10: Implementing a Single-Page Application
 Before you start working on this part, you are recommended to:
 
 * Read/View the following lectures:
+    * [Content Delivery Networks](../../lectures/content-delivery-networks/)
     * [AJAX](../../lectures/ajax/)
     * [Same-Origin Policy and Cross-Origin Resource Sharing](../../lectures/sop-and-cors/)
+
+---
 
 Since implementing a native smartphone application is not part of this course, you will instead implement a Single-Page Application (SPA). A SPA is a website that only consists of a single webpage and a lot of client-side JavaScript code to make it appear to work as an ordinary application. When users click on links or submit forms, the web browser doesn't submit these and load a new web page. Instead, client-side JavaScript codes listens for these events and handles them itself. This way, we can add loading indicators while fetching a new "page"/submitting a form and add transition animations when going from one "page" to another, etc. to improve the user experience.
 
@@ -718,23 +812,35 @@ Since web browsers follow the same-origin policy, your REST API needs to support
 Since there are no indented learning outcomes in the course about learning a frontend framework like Vue, Svelte, Angular or React, you must implement the SPA yourself from scratch. Feel free to use minor client-side JavaScript libraries you need, such as Moment.js to format dates, and CSS frameworks, such as Bootstrap.
 :::
 
-## Part 10: Optional Tasks
+
+
+
+
+## Part 11: Optional Tasks
 Here are some optional tasks you must complete if you want to get a grade higher than 3. Remember that completing these extra tasks does not necessarily give you a higher grade, but you have to complete them to have a chance to get a higher grade. Also, do not forget to look through the page [Project Grading Guidelines](project-grading-guidelines/).
+
 
 ### A fancy website (required for grade 4 and 5)
 Do also implement update and delete operations for your resources on the website (this extra task is only relevant your website, and not your REST API).
+
 
 ### A fancy SPA (required for grade 4 and 5)
 In your single-page application, when you have sent an HTTP request to the REST API and wait for an HTTP response, show a loading indicator of some kind. When forms are submitted, users should not be able to submit the form again while you are waiting for the response.
 
 To verify that it works as it should, you need simulate latency, so it takes a couple of seconds before you get back an HTTP response. This can be done using the [setTimeout()](https://www.w3schools.com/jsref/met_win_settimeout.asp) function in your JavaScript code, or (even better) by telling the web browser to simulate it for you. The blogpost [Simulate slow connections with the network throttling tool](https://blog.nightly.mozilla.org/2016/11/07/simulate-slow-connections-with-the-network-throttling-tool/) shows how to do it in Firefox.
 
+
 ### Supporting third-party authentication (required for grade 5)
 Let users create a new account on your platform by using their existing account on another platform supporting OpenID Connect instead creating yet another username and password. You can for example use Google.
 
 This does only have to work either through the website or through the REST API. You choose which one if you don't want to implement both, and that should of course be described in your report.
 
-## Part 11: Presentation
+
+
+
+
+
+## Part 12: Presentation
 Present how your platform works to the rest of your class. The reason for the presentation is two-folded:
 
 * You get some practice in presenting your work, which is a very important skill in your future professional career.
@@ -742,7 +848,7 @@ Present how your platform works to the rest of your class. The reason for the pr
 
 Your presentation will not be graded; consider it as (mandatory) practice.
 
-Join one of the [Project Presentation Sessions](https://ju.instructure.com/courses/3372/groups#tab-3279) on Canvas (first come, first served). Only one in each project work pair should join the Project Presentation Session you want to join. Which session you join determines when you should present your work. You will only present to the rest of the project groups in the same presentation session as you.
+Join one of the [Project Presentation Sessions](https://ju.instructure.com/courses/4775/groups) on Canvas (first come, first served). Only one in each project work pair should join the Project Presentation Session you want to join. Which session you join determines when you should present your work. You will only present to the rest of the project groups in the same presentation session as you.
 
 At the presentation, you should:
 
@@ -757,9 +863,9 @@ At the presentation, you should:
 
 You may use at most 15 minutes, so come prepared. You will not have time for *Oh, what more can I show you?* or *Wait, let me try to remember/look up how we did that*, so rehearse the presentation in advance. Be prepared to answer any question about your solution the audience might have. 
 
-Due to the corona-situation, the presentations will be given online in [Peter's Zoom room](https://ju.instructure.com/courses/3372/pages/zoom-links?module_item_id=76183).
+The examiner will approve you on the Canvas assignment [Presentation](https://ju.instructure.com/courses/4775/assignments/25248) after your presentation.
 
-The examiner will approve you on the Canvas assignment [Presentation](https://ju.instructure.com/courses/3372/assignments/12480?module_item_id=75148) after your presentation.
 
-## Part 12: Final Submission
-When you're done with your work, upload it to Canvas by submitting the assignment [Final Submission](https://ju.instructure.com/courses/3372/assignments/12481?module_item_id=75147). Be sure to follow the submission instructions described on that page.
+
+## Part 13: Final Submission
+When you're done with your work, upload it to Canvas by submitting the assignment [Final Submission](https://ju.instructure.com/courses/4775/assignments/25249). Be sure to follow the submission instructions described on that page.
