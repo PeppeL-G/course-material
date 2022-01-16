@@ -46,13 +46,7 @@ The exam consists of questions worth 30 points in total.
 The exam will be in English, but you may write your answers in either English or Swedish. If you write your answers in Swedish, make sure to not introduce any translation confusement. Write proper sentences (spelling, upper/lower case characters, punctuation, etc.). Answers that do not do this good enough/are vague/are partly incomprehensible cannot receive full score on the questions.
 
 ## Sample exam
-You can look at [the exam from 2019-06-04](files/exam-2019-06-04.pdf) to get some idea about what the questions on your exam will be.
-
-::: warning Note!
-The exam from 2019-06-04 was a Ping Pong exam, your exam will be an Inspera exam. You will get similar type of questions, but it will look a bit different.
-:::
+You can look at [the exam from 2021-08-22](./exams/exam-2021-08-22/) to get some idea about what the questions on your exam will be.
 
 ## Sample answers
-* [Exam 2021-03-21](./exams/exam-2021-03-21/)
-* [Exam 2021-06-09](./exams/exam-2021-06-09/)
-* [Exam 2021-08-22](./exams/exam-2021-08-22/)
+After each exam, sample answers with some grading guidelines will be published here.
