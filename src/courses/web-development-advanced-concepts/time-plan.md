@@ -19,7 +19,7 @@ The <span style="background-color: #00ffff75; display: inline-block; padding: 0 
 		{},
 		{},
 		// 2
-		{w: "LW, PW Part 3", l: "Git Tutorial?"},
+		{w: "LW, PW Part 3", l: "Tutorial: Git"},
 		{w: "PW Part 4", l: "Tutorial: Layered Web App in Docker"},
 		{w: "PW Part 4", s: "L1"},
 		{w: "PW Part 4", s: "L2"},

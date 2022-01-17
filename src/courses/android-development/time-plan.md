@@ -19,7 +19,7 @@ The <span style="background-color: #00ffff75; display: inline-block; padding: 0 
 		{},
 		{},
 		// 4
-		{w: "LW, PW: Part 3", l: "Git Tutorial?", s: "L1"},
+		{w: "LW, PW: Part 3", l: "Tutorial: Git", s: "L1"},
 		{w: "LW, PW: Part 3"},
 		{w: "LW, PW: Part 3", s: "L2"},
 		{w: "LW, PW: Part 4", l: "GUI Design & Prototyping by Martin"},

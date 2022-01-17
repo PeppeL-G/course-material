@@ -24,7 +24,7 @@
 ### Fredrik Sjölander
 <Teacher
     name="Fredrik Sjölander"
-    photo="missing.jpeg"
+    photo="fredrik-sjolander.jpeg"
     :roles='["Lab assistant"]'
     description="Third year student in the bachelor program Software Engineering and Mobile Platforms."
 />
