@@ -125,18 +125,30 @@ Do not forget to write an entry in your diary each day you have done some work o
 
 
 ## Part 4: Creating Mockups
-Start with this part of the Project Work when Martin Lindh has had his first lecture with you about graphical user interface design and prototyping.
+Start with this part of the Project Work when Martin Lindh has had his lecture with you about graphical user interface design and prototyping.
 
 Create mockups of the graphical user interface. Then present these to "the rest of the class" (in smaller groups) at one of the following sessions:
 
-* Monday 2 February 15:00-15:45
-* Monday 2 February 16:00-16:45
-* Tuesday 3 February 10:00-10:45
-* Tuesday 3 February 11:00-11:45
+* 2 February Monday 15:00-15:45
+* 2 February Monday 16:00-16:45
+* 3 February Tuesday 10:00-10:45
+* 3 February Tuesday 11:00-11:45
 
-To distribute you, one from each project group should join the corresponding Mockup Presentation Session on Canvas. At least one from each group need to attend your presentation. At the presentation, you will also receive feedback on your mockups from Martin and the other groups attending.
+To distribute you, one from each project group should join the corresponding [Mockup Presentation Session](https://ju.instructure.com/courses/4825/groups) group on Canvas. At the presentation, you will receive feedback on your mockups from Martin and the audience.
 
-After the presentation session, go to [the examiner's Bookable Doodle Calendar](https://doodle.com/mm/peterlarssongreen719/android-development) and choose a meeting slot you can meet him. At the meeting, present what you have written in the report so far, and what your mockups look like. You only have 15 minutes to do this, so be sure to come prepared and present it in an efficient way. Before the meeting, submit the assignment [Application Idea](https://ju.instructure.com/courses/4825/assignments/25232) on Canvas with the current version of your report and your mockups.
+After having viewed your presentation, the audience should have a very good understanding of:
+
+1. The problem you try to solve
+2. How you intend to solve the problem
+3. How users will use the app to solve the problem (i.e. show your mockups)
+
+Your presentation (including feedback from the audience and Martin) may take at most 9 minutes. Using 3-4 minutes for the presentation and 5-6 minutes for feedback and discussions is probably a good balance.
+
+::: tip Not examination!
+The mockup presentation sessions are not part of any examination test, they are just learning activities to help you get better at designing graphical user interfaces, so attendance is not mandatory, but we strongly recommend all groups to attend one session so you can get some feedback on your graphical user interface from Martin.
+:::
+
+After the presentation session, go to [the examiner's Bookable Doodle Calendar (TO BE FIXED)](https://doodle.com/mm/peterlarssongreen719/android-development) and choose a meeting slot you can meet him. At the meeting, present what you have written in the report so far, and what your mockups look like. You only have 15 minutes to do this, so be sure to come prepared and present it in an efficient way. Before the meeting, submit the assignment [Application Idea](https://ju.instructure.com/courses/4825/assignments/25232) on Canvas with the current version of your report and your mockups.
 
 The examiner will either approve or disapprove your application idea. If he approves it, he will approve you on the assignment [Application Idea](https://ju.instructure.com/courses/4825/assignments/25232) on Canvas. If he disapproves it, you need to come back another time (use the examiner's Bookable Doodle Calendar again) after you have changed it according to the examiner's feedback. If you haven't been approved on it after the second meeting, you can still pass the project work, but the examiner won't have any more time trying to estimate if the application you create will be advanced enough for this course until you submit the final version of it at the end of the course.
 
