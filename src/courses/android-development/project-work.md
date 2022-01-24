@@ -127,9 +127,16 @@ Do not forget to write an entry in your diary each day you have done some work o
 ## Part 4: Creating Mockups
 Start with this part of the Project Work when Martin Lindh has had his first lecture with you about graphical user interface design and prototyping.
 
-Create mockups of the graphical user interface. When you are done, show your mockups to a lab assistant at one of the lab sessions. If the lab assistant can't understand how your application will work in the end on his own jut by looking at your mockups, they or the graphical user interface is not good enough and needs to be improved.
+Create mockups of the graphical user interface. Then present these to "the rest of the class" (in smaller groups) at one of the following sessions:
 
-When your mockups are good enough for the lab assistant to understand how the application will work in the end, go to [the examiner's Bookable Doodle Calendar](https://doodle.com/mm/peterlarssongreen719/android-development) and choose a meeting slot you can meet him. At the meeting, present what you have written in the report so far, and what your mockups look like. You only have 15 minutes to do this, so be sure to come prepared and present it in an efficient way. Before the meeting, submit the assignment [Application Idea](https://ju.instructure.com/courses/4825/assignments/25232) on Canvas with the current version of your report and your mockups.
+* Monday 2 February 15:00-15:45
+* Monday 2 February 16:00-16:45
+* Tuesday 3 February 10:00-10:45
+* Tuesday 3 February 11:00-11:45
+
+To distribute you, one from each project group should join the corresponding Mockup Presentation Session on Canvas. At least one from each group need to attend your presentation. At the presentation, you will also receive feedback on your mockups from Martin and the other groups attending.
+
+After the presentation session, go to [the examiner's Bookable Doodle Calendar](https://doodle.com/mm/peterlarssongreen719/android-development) and choose a meeting slot you can meet him. At the meeting, present what you have written in the report so far, and what your mockups look like. You only have 15 minutes to do this, so be sure to come prepared and present it in an efficient way. Before the meeting, submit the assignment [Application Idea](https://ju.instructure.com/courses/4825/assignments/25232) on Canvas with the current version of your report and your mockups.
 
 The examiner will either approve or disapprove your application idea. If he approves it, he will approve you on the assignment [Application Idea](https://ju.instructure.com/courses/4825/assignments/25232) on Canvas. If he disapproves it, you need to come back another time (use the examiner's Bookable Doodle Calendar again) after you have changed it according to the examiner's feedback. If you haven't been approved on it after the second meeting, you can still pass the project work, but the examiner won't have any more time trying to estimate if the application you create will be advanced enough for this course until you submit the final version of it at the end of the course.
 
