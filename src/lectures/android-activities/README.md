@@ -208,7 +208,7 @@ Example showing how to create an activity with a GUI.
 ```
 :::
 ::: code-group-item res/layout/activity_my.xml
-```xml{9}
+```xml{1-12}
 <LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
@@ -224,7 +224,7 @@ Example showing how to create an activity with a GUI.
 ```
 :::
 ::: code-group-item MyActivity.kt
-```kotlin{5-10}
+```kotlin{6-11}
 import android.app.Activity
 import android.os.Bundle
 
@@ -266,7 +266,7 @@ Example showing how to create an activity with a GUI.
 
 :::: code-group
 ::: code-group-item AndroidManifest.xml
-```xml{8,19}
+```xml{8-9,19-20}
 <manifest
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	package="se.ju.larpet.myapp">
@@ -286,7 +286,7 @@ Example showing how to create an activity with a GUI.
 		
 		<activity
 			android:name=".SecondActivity"
-			android:exported="true" />
+			android:exported="false" />
 		
 	</application>
 	
@@ -294,7 +294,7 @@ Example showing how to create an activity with a GUI.
 ```
 :::
 ::: code-group-item res/layout/activity_main.xml
-```xml{9-10}
+```xml{7-11}
 <LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
@@ -311,7 +311,7 @@ Example showing how to create an activity with a GUI.
 ```
 :::
 ::: code-group-item MainActivity.kt
-```kotlin{10-28}
+```kotlin{11-29}
 import android.app.Activity
 import android.os.Bundle
 import android.widget.Button
@@ -348,7 +348,7 @@ class MainActivity : Activity(){
 ```
 :::
 ::: code-group-item res/layout/activity_second.xml
-```xml{9}
+```xml{7-10}
 <LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
@@ -365,7 +365,7 @@ class MainActivity : Activity(){
 :::
 
 ::: code-group-item SecondActivity.kt
-```kotlin{8}
+```kotlin{9}
 import android.app.Activity
 import android.os.Bundle
 
@@ -451,7 +451,7 @@ Example showing how to create an activity with a GUI.
 		
 		<activity
 			android:name=".ShowSumActivity"
-			android:exported="true" />
+			android:exported="false" />
 		
 	</application>
 	
@@ -645,7 +645,7 @@ Example showing how to create an activity with a GUI.
 		
 		<activity
 			android:name=".SelectColorActivity"
-			android:exported="true" />
+			android:exported="false" />
 		
 	</application>
 	
