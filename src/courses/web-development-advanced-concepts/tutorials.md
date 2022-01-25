@@ -12,3 +12,7 @@ Here is the code written in tutorial 1. I don't upload the code for the last exa
 ## Tutorial 2: Git and GitHub
 * [Recording](https://ju.instructure.com/courses/4775/pages/recordings?module_item_id=167367)
 * [GitHub Repository](https://github.com/PeppeL-G/friendos)
+
+## Tutorial 3: Docker and Three-Layered Architecture
+* [Recording](https://ju.instructure.com/courses/4775/pages/recordings?module_item_id=167367)
+* (sample code of a layered architecture is available on the Project Work page (the-community.zip))
