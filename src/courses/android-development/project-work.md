@@ -129,10 +129,10 @@ Start with this part of the Project Work when Martin Lindh has had his lecture w
 
 Create mockups of the graphical user interface. Then present these to "the rest of the class" (in smaller groups) at one of the following sessions:
 
-* 2 February Monday 15:00-15:45
-* 2 February Monday 16:00-16:45
-* 3 February Tuesday 10:00-10:45
-* 3 February Tuesday 11:00-11:45
+* 7 February Monday 15:00-15:45
+* 7 February Monday 16:00-16:45
+* 8 February Tuesday 10:00-10:45
+* 8 February Tuesday 11:00-11:45
 
 To distribute you, one from each project group should join the corresponding [Mockup Presentation Session](https://ju.instructure.com/courses/4825/groups) group on Canvas. At the presentation, you will receive feedback on your mockups from Martin and the audience.
 
