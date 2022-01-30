@@ -12,24 +12,26 @@ Material for the lectures will be uploaded here during the course.
 * [Android Constraint Layouts](../../lectures/android-constraint-layout/)
 * [Android ListView](../../lectures/android-list-view/)
 
+Added at start of Course Week 3:
+
+* [Report Writing](../../lectures/report-writing/)
+* [Android Runtime Configuration Changes](../../lectures/android-runtime-configuration-changes/)
+* [Android Fragment](../../lectures/android-fragments/)
+* [Android ViewModel](../../lectures/android-view-model/)
+* [Android Bottom Navigation View and Drawer Layout](../../lectures/android-bottom-navigation-view-and-drawer-layout/)
+* [Android Dialogs](../../lectures/android-dialogs/)
+* [Android RecyclerView](../../lectures/android-recycler-view/)
+
 <!--
 * [Android Backward Compatible](../../lectures/android-backward-compatible/)
 
 Added Course Week 2:
 
 * [Android Backward Compatible](../../lectures/android-backward-compatible/)
-* [Android ListView](../../lectures/android-list-view/)
 * [Android Permissions](../../lectures/android-permissions/)
-* [Report Writing](../../lectures/report-writing/)
 * [Martin's Design Lecture #1](https://ju.instructure.com/courses/3421/pages/tutorial-recordings?module_item_id=78645)
 
 Added Course Week 3:
-
-* [Android Runtime Configuration Changes](../../lectures/android-runtime-configuration-changes/)
-* [Android Fragment](../../lectures/android-fragments/)
-* [Android Dialogs](../../lectures/android-dialogs/)
-* [Android ViewModel](../../lectures/android-view-model/)
-* [Android RecyclerView](../../lectures/android-recycler-view/)
 * [Martin's Design Lecture #2](https://ju.instructure.com/courses/3421/pages/tutorial-recordings?module_item_id=78645)
 
 Added Course Week 4:
@@ -37,7 +39,6 @@ Added Course Week 4:
 * [Android Asynchronous Operations](../../lectures/android-asynchronous-operations/)
 * [Kotlin Asynchronous Operations](../../lectures/kotlin-asynchronous-operations/)
 * [Android CoordinatorLayout](../../lectures/android-coordinator-layout/)
-* [Android Bottom Navigation View and Drawer Layout](../../lectures/android-bottom-navigation-view-and-drawer-layout/)
 
 Added Re-exam Period:
 

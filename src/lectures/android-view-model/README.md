@@ -16,4 +16,4 @@ To help our data survive runtime configuration changes, Google gave us a few cla
 * The Android Developer's Guide:
   * [ViewModel Overview ](https://developer.android.com/topic/libraries/architecture/viewmodel)
 * In the course book *Elements of Android Jetpack*:
-  * [Integrating ViewModel](https://wares.commonsware.com/app/internal/book/Jetpack/page/chap-viewmodel-001.html)
+  * [Integrating ViewModel](https://commonsware.com/Jetpack/pages/chap-viewmodel-001.html)
