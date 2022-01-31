@@ -8,3 +8,6 @@ Here you will find material from the different tutorials.
 ## Tutorial 2: Git and GitHub
 * [Recording](https://ju.instructure.com/courses/4825/pages/recordings?module_item_id=166072)
 * [GitHub Repository](https://github.com/PeppeL-G/friendos)
+
+## Martins Design and Prototype Lecture
+Martins Design and Prototype Lecture is available on the [Lectures](./lectures/) page.

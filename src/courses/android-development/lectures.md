@@ -21,6 +21,13 @@ Added at start of Course Week 3:
 * [Android Bottom Navigation View and Drawer Layout](../../lectures/android-bottom-navigation-view-and-drawer-layout/)
 * [Android Dialogs](../../lectures/android-dialogs/)
 * [Android RecyclerView](../../lectures/android-recycler-view/)
+* Martins Design Lecture:
+	* [Recording](https://ju.instructure.com/courses/4825/pages/recordings?module_item_id=166072)
+	* [Slides](https://ju.instructure.com/files/726278/download?download_frd=1)
+	* [Marvel App](https://marvelapp.com/) (don't forget to checkout their [templates](https://marvelapp.com/sketchpad))
+	* [Design Patterns at UI Patterns](https://ui-patterns.com/patterns)
+	* [Material Design 3](https://m3.material.io/)
+	* [Adobe Color](https://color.adobe.com)
 
 <!--
 * [Android Backward Compatible](../../lectures/android-backward-compatible/)
