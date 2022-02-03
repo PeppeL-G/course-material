@@ -11,3 +11,7 @@ Here you will find material from the different tutorials.
 
 ## Martins Design and Prototype Lecture
 Martins Design and Prototype Lecture is available on the [Lectures](./lectures/) page.
+
+## Tutorial 3: Fragments (and runtime configuration changes)
+* [Recording](https://ju.instructure.com/courses/4825/pages/recordings?module_item_id=166072)
+* [Android Studio Project](./files/tutorial-03.zip)
