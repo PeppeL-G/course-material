@@ -52,11 +52,11 @@ The <span style="background-color: #00ffff75; display: inline-block; padding: 0 
 		{i: "Re-exam period."},
 		// 6
 		{w: "PW Part 7"},
-		{w: "PW Part 7"},
+		{w: "PW Part 7", l: "Guest Lecture: GDPR, E-directive, etc."},
 		{w: "PW Part 7", s: "L1"},
 		{w: "PW Part 8", s: "L2"},
 		{w: "PW Part 8"},
-		{},
+		{i: "Registration for written exam opens"},
 		{},
 		// 7
 		{w: "PW Part 8"},
@@ -77,7 +77,7 @@ The <span style="background-color: #00ffff75; display: inline-block; padding: 0 
 		// 9
 		{w: "PW Part 10"},
 		{w: "PW Part 10", l: "Repetition/Sample exam"},
-		{w: "PW Part 10", s: "L1"},
+		{w: "PW Part 10", s: "L1", i: "Registration for written exam closes around now"},
 		{w: "PW Part 10", s: "L2"},
 		{w: "PW Part 10"},
 		{},
@@ -88,7 +88,7 @@ The <span style="background-color: #00ffff75; display: inline-block; padding: 0 
 		{w: "PW Part 11&12"},
 		{w: "PW Part 11&12"},
 		{w: "PW Part 11&12"},
-		{},
+		{i: "Written Examination"},
 		{w: "PW Part 13", i: "Deadline Project Work"},
 	]'
 />
