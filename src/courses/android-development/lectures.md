@@ -29,23 +29,21 @@ Added at start of Course Week 3:
 	* [Material Design 3](https://m3.material.io/)
 	* [Adobe Color](https://color.adobe.com)
 
+Added at start of Course Week 4:
+
+* [Android Asynchronous Operations](../../lectures/android-asynchronous-operations/)
+* [Kotlin Asynchronous Operations](../../lectures/kotlin-asynchronous-operations/)
+* [Android CoordinatorLayout](../../lectures/android-coordinator-layout/)
+* [Android Conditional Resources](../../lectures/android-conditional-resources/)
+* [Android Permissions](../../lectures/android-permissions/)
+
 <!--
 * [Android Backward Compatible](../../lectures/android-backward-compatible/)
 
 Added Course Week 2:
 
 * [Android Backward Compatible](../../lectures/android-backward-compatible/)
-* [Android Permissions](../../lectures/android-permissions/)
 * [Martin's Design Lecture #1](https://ju.instructure.com/courses/3421/pages/tutorial-recordings?module_item_id=78645)
-
-Added Course Week 3:
-* [Martin's Design Lecture #2](https://ju.instructure.com/courses/3421/pages/tutorial-recordings?module_item_id=78645)
-
-Added Course Week 4:
-
-* [Android Asynchronous Operations](../../lectures/android-asynchronous-operations/)
-* [Kotlin Asynchronous Operations](../../lectures/kotlin-asynchronous-operations/)
-* [Android CoordinatorLayout](../../lectures/android-coordinator-layout/)
 
 Added Re-exam Period:
 
@@ -57,7 +55,6 @@ Added Re-exam Period:
 * [Android Notifications](../../lectures/android-notifications/)
 * [Android Broadcast Receivers](../../lectures/android-broadcast-receivers/)
 * [Android Bluetooth Classic](../../lectures/android-bluetooth-classic/)
-* [Android Conditional Resources](../../lectures/android-conditional-resources/)
 
 Added Week 7:
 

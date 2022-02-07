@@ -13,7 +13,7 @@ Resources (strings, layouts, etc.) are loaded dynamically in Android, and when y
 * [android-conditional-resources.pptx](android-conditional-resources.pptx)
 
 ## Recommended reading
-* The following chapters from the course book [The Busy Coder's Guide to Android Development](https://wares.commonsware.com/app/internal/book/Android/page/chap-preface-001.html):
+* The following chapters from the course book [The Busy Coder's Guide to Android Development](https://commonsware.com/Android/):
     * Resource Sets and Configurations
-
-The Android Developers Guide' topic on [Providing alternative resources](https://developer.android.com/guide/topics/resources/providing-resources#AlternativeResources).
+* The following pages from Android Developers Guide:
+    * [App resources](https://developer.android.com/guide/topics/resources/providing-resources#AlternativeResources)
