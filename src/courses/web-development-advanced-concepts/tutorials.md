@@ -16,3 +16,7 @@ Here is the code written in tutorial 1. I don't upload the code for the last exa
 ## Tutorial 3: Docker and Three-Layered Architecture
 * [Recording](https://ju.instructure.com/courses/4775/pages/recordings?module_item_id=167367)
 * (sample code of a layered architecture is available on the Project Work page (the-community.zip))
+
+## Tutorial 4: Dependency Injection and Object-Relational-Mapping
+* [Recording](https://ju.instructure.com/courses/4775/pages/recordings?module_item_id=167367)
+* [three-layered-app.zip](./files/tutorial-04/three-layered-app.zip)
