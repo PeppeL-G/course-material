@@ -15,3 +15,7 @@ Martins Design and Prototype Lecture is available on the [Lectures](./lectures/)
 ## Tutorial 3: Fragments (and runtime configuration changes)
 * [Recording](https://ju.instructure.com/courses/4825/pages/recordings?module_item_id=166072)
 * [Android Studio Project](./files/tutorial-03.zip)
+
+## Tutorial 4: Long running operations
+* [Recording](https://ju.instructure.com/courses/4825/pages/recordings?module_item_id=166072)
+* [Android Studio Project](./files/tutorial-04.zip)
