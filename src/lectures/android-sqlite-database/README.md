@@ -19,4 +19,4 @@ The lecture shows the old way we communicated with SQLite databases in Android. 
 ## Recommended reading
 * The Android Developers Guide [App data & files](https://developer.android.com/training/data-storage).
 * The Android Developers Guide [Save data in a local database using Room](https://developer.android.com/training/data-storage/room).
-* The course book [Elements of Android Room](https://wares.commonsware.com/app/internal/book/Room/page/chap-preface-001.html).
+* The course book [Elements of Android Room](https://commonsware.com/Room/).

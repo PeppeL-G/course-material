@@ -14,7 +14,7 @@ Services have no graphical user interface, so what if you have code running in t
 
 ## Recommended reading
 The following chapters from the course book *The Busy Coder's Guide to Android Development*:
-* [Notifications](https://wares.commonsware.com/app/internal/book/Android/page/chap-notify-001.html)
-* [Advanced Notifications](https://wares.commonsware.com/app/internal/book/Android/page/chap-advnotify-001.html)
+* [Notifications](https://commonsware.com/Android/)
+* [Advanced Notifications](https://commonsware.com/Android/)
 
 The [Android Developers Guide's page about Notifications](https://developer.android.com/guide/topics/ui/notifiers/notifications).

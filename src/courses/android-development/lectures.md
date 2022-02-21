@@ -37,6 +37,20 @@ Added at start of Course Week 4:
 * [Android Conditional Resources](../../lectures/android-conditional-resources/)
 * [Android Permissions](../../lectures/android-permissions/)
 
+Added after the re-exam period:
+
+* [Android Broadcast Receivers](../../lectures/android-broadcast-receivers/)
+* [Android Services](../../lectures/android-services/)
+* [Android Notifications](../../lectures/android-notifications/)
+* [Android Bluetooth Classic](../../lectures/android-bluetooth-classic/)
+* [Android App Bar](../../lectures/android-app-bar/)
+* [Cloud Firestore](../../lectures/cloud-firestore/)
+* [Android Cloud Firestore](../../lectures/android-cloud-firestore/)
+* [SQLite](../../lectures/sqlite/)
+* [Android SQLite Database](../../lectures/android-sqlite-database/)
+* [Android Content Providers](../../lectures/android-content-providers/)
+* [Android File Storage](../../lectures/android-file-storage/)
+
 <!--
 * [Android Backward Compatible](../../lectures/android-backward-compatible/)
 
@@ -45,22 +59,6 @@ Added Course Week 2:
 * [Android Backward Compatible](../../lectures/android-backward-compatible/)
 * [Martin's Design Lecture #1](https://ju.instructure.com/courses/3421/pages/tutorial-recordings?module_item_id=78645)
 
-Added Re-exam Period:
-
-* [Cloud Firestore](../../lectures/cloud-firestore/)
-* [Android Cloud Firestore](../../lectures/android-cloud-firestore/)
-* [SQLite](../../lectures/sqlite/)
-* [Android SQLite Database](../../lectures/android-sqlite-database/)
-* [Android Services](../../lectures/android-services/)
-* [Android Notifications](../../lectures/android-notifications/)
-* [Android Broadcast Receivers](../../lectures/android-broadcast-receivers/)
-* [Android Bluetooth Classic](../../lectures/android-bluetooth-classic/)
-
-Added Week 7:
-
-* [Android Content Providers](../../lectures/android-content-providers/)
-* [Android File Storage](../../lectures/android-file-storage/)
-
 <div v-if="false">
 
 * [Android GPS](../../lectures/android-gps/)
@@ -68,7 +66,6 @@ Added Week 7:
 * [Android Content Providers](../../lectures/android-content-providers/)
 * [Android File System](../../lectures/android-file-system/)
 * [Android Sensors](../../lectures/android-sensors/)
-* [Android App Bar](../../lectures/android-app-bar/)
 * Android 
 * [Android Menus](../../lectures/android-menus/)
 
