@@ -19,3 +19,6 @@ Martins Design and Prototype Lecture is available on the [Lectures](./lectures/)
 ## Tutorial 4: Long running operations
 * [Recording](https://ju.instructure.com/courses/4825/pages/recordings?module_item_id=166072)
 * [Android Studio Project](./files/tutorial-04.zip)
+
+## Tutorial 5: Bluetooth app with Services and Broadcast Receivers
+The source code for the app from this tutorial last year is available in the lecture [Android Bluetooth Classic](../../lectures/android-bluetooth-classic/).
