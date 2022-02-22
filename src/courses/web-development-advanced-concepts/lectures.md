@@ -21,3 +21,4 @@ The instructions on the [Laboratory Work](laboratory-work/) page and the [Projec
 * [Content Delivery Networks](../../lectures/content-delivery-networks/)
 * [AJAX](../../lectures/ajax/)
 * [Same-Origin Policy & Cross-Origin Resource Sharing](../../lectures/sop-and-cors/)
+* [GDPR](../../lectures/gdpr/)
