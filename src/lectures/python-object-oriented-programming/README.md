@@ -13,6 +13,6 @@ So far in the course we have primarily used *imperative programming* (a program 
 * [python-object-oriented-programming.pptx](python-object-oriented-programming.pptx)
 
 ## Recommended reading
-* The following chapters in the book [How to Think Like a Computer Scientist: Interactive Edition](http://interactivepython.org/courselib/static/thinkcspy/index.html):
+* The following chapters in the book [How to Think Like a Computer Scientist: Interactive Edition](https://runestone.academy/ns/books/published//thinkcspy/index.html):
     * [17. Classes and Objects - the Basics](https://runestone.academy/runestone/books/published/thinkcspy/ClassesBasics/toctree.html)
     * [18. Classes and Objects - Digging a Little Deeper](https://runestone.academy/runestone/books/published/thinkcspy/ClassesDiggingDeeper/toctree.html)
