@@ -745,9 +745,9 @@ graph LR
 " />
 </Figure>
 
-The difference between the way the web browser and the native smartphone application communicates with the web application will primarily be the data format they use. Both will communicate with the web application using HTTP, but the web application will send data (submitted forms) in the data format `application/x-www-form-urlencoded` and receive back HTML code, while the native smartphone application will send and receive in the data format `application/json` (JSON), which is a much simpler data format.
+The difference between the way the web browser and the native smartphone application communicates with the web application will primarily be the data format they use. Both will communicate with the web application using HTTP, but the web browser will send data (submitted forms) in the format `application/x-www-form-urlencoded` and receive back HTML code, while the native smartphone application will send and receive in the format `application/json` (JSON), which is a much simpler data format. How to remember which account the user has logged in to will also differ.
 
-The REST API can be implemented as an additional Presentation Layer in the web application, as shown in <FigureNumber /> below. Since the users who use the platform through the native smartphone application should be able to do the same thing as users who use the platform through the web browser, we should not need to make that much changes to the code in the business logic layer nor the data access layer (but we might need to add code). You should be able to re-use most of the functionalities from these layers.
+The REST API can be implemented as an additional Presentation Layer in the web application, as shown in <FigureNumber /> below. Since the users who use the platform through the native smartphone application should (theoretically) be able to do the same thing as users who use the platform through the web browser, we should not need to make that much changes to the code in the Business Logic Layer nor the Data Access Layer (but we might need to add code). You should be able to re-use most of the functionalities from these layers.
 
 <Figure caption="Current architecture (with one Data Access Layer).">
 <RenderMermaid graph-definition="
@@ -771,9 +771,9 @@ Now the REST API can run as its own Express application in one container, and th
 
 The REST API needs to support the following operations:
 
-* Create a new account.
-* Login to an existing account.
-* When logged in, apply CRUD (Create, Read, Update, Delete) operations on at least one of the other two type of resources that belongs to the account the user logged in to.
+* Create a new account
+* Login to an existing account
+* When logged in, apply CRUD (Create, Read, Update, Delete) operations on at least one of the other two type of resources that belongs to the account the user logged in to
 
 One usually doesn't use sessions in REST APIs to remember that a user has logged in. Sessions relies on cookies and supporting all features of cookies is hard for clients. Instead, one usually uses tokens instead, which are much simpler.
 

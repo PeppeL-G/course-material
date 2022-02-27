@@ -41,8 +41,8 @@ Before you start working on the lab, you are recommended to view/read at least t
 * [Android Fundamental Application Components](../../lectures/android-fundamental-application-components/)
 * [Android Activities](../../lectures/android-activities/)
 * [Android Views and Layouts](../../lectures/android-views-and-layouts/)
-* [Android Linear Layouts](../../lectures/android-linear-layout/)
-* [Android Constraint Layouts](../../lectures/android-constraint-layout/)
+* [Android Linear Layout](../../lectures/android-linear-layout/)
+* [Android Constraint Layout](../../lectures/android-constraint-layout/)
 * [Android ListView](../../lectures/android-list-view/)
 
 These recorded lectures, together with the first lecture and the first tutorial, should teach you most of what you need to use to complete the lab. Feel free to use more advanced views to implement a better graphical user interface.
@@ -318,7 +318,7 @@ Before you present your work to a teacher, make sure that:
 * You understand how all code in your application works
 
 ## Present your work
-Present your work to a teacher at one of the lab sessions. You should be able to explain how all code in your application works, and the teacher will ask you some questions about it to verify this. If the teacher is satisfied with your presentation he will approve you on the Canvas assignment [The Lab](https://ju.instructure.com/courses/4825/assignments/25231).
+Present your work to a teacher at one of the lab sessions. You should be able to explain how all code in your application works, and the teacher will ask you some questions about it to verify this. If the teacher is satisfied with your presentation he will approve you on the Canvas assignment [The Lab](https://ju.instructure.com/courses/4825/assignments/25231) **after** you have uploaded your Android Studio project there.
 
 ## Optional exercises
 These exercises are not part of the laboratory work. Feel free to complete them to practice on using various techniques/concepts used in Android applications before you apply them in your project work. If you get stuck you can always ask the teacher at a lab session for help. When you're done, feel free to discuss your solution with a teacher at a lab session to get some feedback on your work.

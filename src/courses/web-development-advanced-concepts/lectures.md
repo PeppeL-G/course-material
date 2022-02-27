@@ -15,7 +15,7 @@ The instructions on the [Laboratory Work](laboratory-work/) page and the [Projec
 * [Using Sequelize in Node.js](../../lectures/using-sequelize-in-node-js/)
 * [REST API Basics](../../lectures/rest-api-basics/)
 * [REST API in Express](../../lectures/rest-api-in-express/)
-* [(will be updated) REST API Authorization](../../lectures/rest-api-authorization/)
+* [REST API Authorization](../../lectures/rest-api-authorization/)
 * [JSON Web Tokens](../../lectures/json-web-tokens/)
 * [Third-Party Authentication](../../lectures/third-party-authentication/)
 * [Content Delivery Networks](../../lectures/content-delivery-networks/)
