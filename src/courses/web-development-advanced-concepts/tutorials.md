@@ -20,3 +20,7 @@ Here is the code written in tutorial 1. I don't upload the code for the last exa
 ## Tutorial 4: Dependency Injection and Object-Relational-Mapping
 * [Recording](https://ju.instructure.com/courses/4775/pages/recordings?module_item_id=167367)
 * [three-layered-app.zip](./files/tutorial-04/three-layered-app.zip)
+
+## Tutorial 5: Implementing REST API
+The recording is of this tutorial when I gave it last year.
+* [Recording](https://ju.instructure.com/courses/4775/pages/recordings?module_item_id=167367)
