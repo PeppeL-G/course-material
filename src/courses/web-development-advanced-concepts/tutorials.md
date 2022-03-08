@@ -24,3 +24,11 @@ Here is the code written in tutorial 1. I don't upload the code for the last exa
 ## Tutorial 5: Implementing REST API
 The recording is of this tutorial when I gave it last year.
 * [Recording](https://ju.instructure.com/courses/4775/pages/recordings?module_item_id=167367)
+
+## Tutorial 6: Implementing SPA
+To test the platform:
+1. Unzip [humans-platform.zip](./files/tutorial-06/humans-platform.zip)
+2. In each of the application folders, run:
+	1. `npm install`
+	2. `node app.js`
+3. Open [localhost:8080](http://localhost:8080) in a web browser
