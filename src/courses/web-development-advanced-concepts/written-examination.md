@@ -50,3 +50,5 @@ You can look at [the exam from 2021-08-22](./exams/exam-2021-08-22/) to get some
 
 ## Sample answers
 After each exam, sample answers with some grading guidelines will be published here.
+
+* [2022-03-26](./exams/exam-2022-03-26/)
