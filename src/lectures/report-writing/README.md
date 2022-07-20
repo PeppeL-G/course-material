@@ -1164,7 +1164,7 @@ Paragraphs consisting of a single sentence are usually no good paragraphs. Compa
 </template>
 <template v-slot:solution>
 
-Write headers the way headers are usually written; don't end chapter titles with colon.
+Plan a good structure and consist of multiple sentences in one paragraph.
 
 </template>
 </ReportMistake>
