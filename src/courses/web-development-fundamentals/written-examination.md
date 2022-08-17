@@ -40,9 +40,9 @@ The computer you write the exam on may only be used to enter your answers on the
 ## Grades/Marking
 The exam consists of questions worth 30 points in total.
 
-* For grade 3, 40% of max score (12 points) is required.
-* For grade 4, 60% of max score (18 points) is required.
-* For grade 5, 80% of max score (24 points) is required.
+* For grade 3, 40% of max score (12 points) is required
+* For grade 4, 60% of max score (18 points) is required
+* For grade 5, 80% of max score (24 points) is required
 
 The exam will be in English, but you may write your answers in either English or Swedish. If you write answers in Swedish, make sure to not introduce any translation confusement. Write proper sentences (spelling, upper/lower case characters, punctuation, etc.). Answers that do not do this good enough/are vague/are partly incomprehensible cannot receive full score on the questions.
 
@@ -54,3 +54,4 @@ After your exams, sample answers and grading guidelines will be published here.
 
 * [2021-10-18](./exams/exam-2021-10-18/)
 * [2022-01-11](./exams/exam-2022-01-11/)
+* [2022-08-13](./exams/exam-2022-08-13/)

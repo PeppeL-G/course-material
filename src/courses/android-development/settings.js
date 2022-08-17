@@ -11,5 +11,6 @@ module.exports = {
 		"project-work",
 		"project-grading-guidelines",
 		"time-plan",
+		"feedback",
 	],
 }
