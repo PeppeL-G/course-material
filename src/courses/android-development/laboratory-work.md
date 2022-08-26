@@ -11,11 +11,50 @@ On this page you find information about the examination test `Laboratory Work`.
 }'>
 </CompactInfo>
 
+::: warning Help, don't cheat!
+The laboratory work is individual work.
+
+**It is OK to help each other**. Examples of that:
+
+* help your friend to debug his code
+* explain to your friend why his code doesn't work the way he thinks it works
+* compare and discuss different solutions to a lab problem with your friend after both of you have solved the lab to figure out which solution is the best one
+
+**It is NOT OK to cooperate in any way**. Examples of that:
+
+* sit at the same computer and write code together with your friend
+* sit at different computers and discuss and write the same code as your friend
+* give code to/receive code from your friend
+
+**You must write your own code! If you are unsure about what counts as *helping* and what counts as *cheating*, then simply work alone and ask only the teacher at the lab sessions for help.**
+:::
+
+
+
+## What you need to know
+Before you start working on the lab, you are recommended to view/read at least the following lectures:
+
+* [Java](../../lectures/java/) (even if most new Android applications are implemented din Kotlin, many old applications are still implemented in Java)
+* [Kotlin](../../lectures/kotlin/)
+* [Android Design Patterns](../../lectures/android-design-patterns/) (kind of repetition from your OOP courses)
+* [Android Introduction](../../lectures/android-introduction/)
+* [Android Fundamental Application Components](../../lectures/android-fundamental-application-components/)
+* [Android Activities](../../lectures/android-activities/)
+* [Android Views and Layouts](../../lectures/android-views-and-layouts/)
+* [Android Linear Layout](../../lectures/android-linear-layout/)
+* [Android Constraint Layout](../../lectures/android-constraint-layout/)
+* [Android ListView](../../lectures/android-list-view/)
+
+These recorded lectures, together with the first lecture and the first tutorial, should teach you most of what you need to use to complete the lab. Feel free to use more advanced views to implement a better graphical user interface.
+
+
+
+
 ## Installing Required Software
 In this course, we will only use Android Studio and the tools that come with it to create Android applications. 
 
 ### On the school's computers
-**If you work on a computer in E2404, E2432 or E2433**, all required software should already be installed for you, so no need to install anything yourself.
+**If you work on a computer in E1206, E2432 or E2433**, all required software should already be installed for you, so no need to install anything yourself.
 
 **If you work on a school computer in any other room**, you need to manually install the required software through the *Software Center* application (unless someone already has done that on the specific computer you are using).
 
@@ -34,13 +73,6 @@ To more easily debug applications when they run on your own Android device, you 
 
 If you don't have your own Android device to run your Android applications on, you can use an Android emulator that comes with Android Studio. If the emulator has not automatically been configured to take advantage of VM acceleration when Android Studio was installed, we highly recommend you to configure it to take advantage of the speed improvements (so the emulator lag less) by [Configuring VM acceleration](https://developer.android.com/studio/run/emulator-acceleration#accel-vm). This is a good idea even if you have a physical Android device to test on, because you probably want to test run your Android applications on different versions of Android, different screen sizes, etc., which is easy to do on an emulator, but impossible to do on a physical device.
 
-::: tip For Windows users
-Those of you taking the course [Web Development - Advanced Concepts](../web-development-advanced-concepts/) will be using VM acceleration to run your Docker containers. If you do that in Windows Subsystem for Linux, then you can't use VM acceleration for your Android device in this course. If your computer runs Windows 10 Pro (and not Windows 10 Home), then you can use Hyper-V to enable VM acceleration for both Docker and Android. Read more about that on the following pages:
-
-* Android: [Configure VM acceleration using Windows Hypervisor Platform](https://developer.android.com/studio/run/emulator-acceleration#vm-windows-whpx)
-* Docker: [Virtualization](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization)
-:::
-
 ::: warning Note!
 Getting VM acceleration to work is sometimes hard. If the emulator for some reason can't use it, it's hard to debug the reason. For example, you might get the error message `This computer meets requirements for HAXM, but VT-x is not turned on`, and the problem could be that [an antivirus program doesn't allow it to be used](https://stackoverflow.com/questions/21635504/error-during-installing-haxm-vt-x-not-working). Your development experience will be much better if you manage to enable VM acceleration, but it's probably not worth spending 20 hours on trying to get it to work.
 :::
@@ -57,16 +89,16 @@ Nowadays Android Studio might install exceptions to these programs, improving th
 You can often find out what's slowing down Android Studio by using the [Task Manager](https://www.howtogeek.com/108742/how-to-use-the-new-task-manager-in-windows-8/) to find the process that allocates much of your computer resources when Android Studio is slow, and then try to configure it to ignore Android Studio's folders. For example, see [configure Windows Defender and Windows File Indexing to ignore Android Studio folders](https://stackoverflow.com/a/49336163/2104665).
 :::
 
-A fast CPU and an SDD instead of an HDD will of course also make Android Studio run faster as well; running Android Studio on a weak laptop usually gives you a very bad development experience. 
+A fast CPU and an SSD instead of an HDD will of course also make Android Studio run faster as well; running Android Studio on a weak laptop usually gives you a very bad development experience. 
 
 ## The Assignment
 The Graphical User Interface (GUI) for an Android application is to a large extent structured the same way as for a website (which you probably are acquaintance with).
 
 |Website|Android application|
 |---|---|
-| Consists of multiple webpages. | Consists of multiple activities. |
-| One webpage is shown at a time. | One activity is shown at a time. |
-| URIs are used to identify webpages. | Intents are used to identify activities. |
+| Consists of multiple webpages | Consists of multiple activities |
+| One webpage is shown at a time | One activity is shown at a time |
+| URIs are used to identify webpages | Intents are used to identify activities |
 
 When designing the GUI for an Android application it is hence important to think of which activities it should consist of. Traditionally, websites have been designed to be used by desktop computers with a large screen, and it's not uncommon to see a webpage you can do multiple things on, such as a webpage with both a "sign in" form, a "sign up" form and a "I forgot my password" form.
 
@@ -278,15 +310,15 @@ You should be able to figure out how to implement the `UpdateToDoActivity` on yo
 ## Checklist
 Before you present your work to a teacher, make sure that:
 
-* At least two different languages are supported throughout the entire application.
-* You validate the user input when creating and updating a ToDo item and display descriptive error messages if something is invalid.
-* The back navigation always makes sense (especially after you have created, deleted or updated a ToDo item.
-* The data shown on the screen always is up to date (especially after you have created, deleted or updated a ToDo item).
-* The user always can properly use the GUI no matter how small screen the user has or how long texts the ToDo items contain.
-* You understand how all code in your application works.
+* At least two different languages are supported throughout the entire application
+* You validate the user input when creating and updating a ToDo item and display descriptive error messages if something is invalid
+* The back navigation always makes sense (especially after you have created, deleted or updated a ToDo item)
+* The data shown on the screen always is up to date (especially after you have created, deleted or updated a ToDo item)
+* The user always can properly use the GUI no matter how small screen the user has or how long texts the ToDo items contain
+* You understand how all code in your application works
 
 ## Present your work
-Present your work to a teacher at one of the lab sessions. You should be able to explain how all code in your application works, and the teacher will ask you some questions about it to verify this. If the teacher is satisfied with your presentation he will approve you on the Canvas assignment [The Lab](https://ju.instructure.com/courses/3421/assignments/12889?module_item_id=75652).
+Present your work to a teacher at one of the lab sessions. You should be able to explain how all code in your application works, and the teacher will ask you some questions about it to verify this. If the teacher is satisfied with your presentation he will approve you on the Canvas assignment [The Lab](https://ju.instructure.com/courses/4825/assignments/25231) **after** you have uploaded your Android Studio project there.
 
 ## Optional exercises
 These exercises are not part of the laboratory work. Feel free to complete them to practice on using various techniques/concepts used in Android applications before you apply them in your project work. If you get stuck you can always ask the teacher at a lab session for help. When you're done, feel free to discuss your solution with a teacher at a lab session to get some feedback on your work.

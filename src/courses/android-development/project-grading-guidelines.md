@@ -189,6 +189,16 @@ You may not get all the points for the functionality you implement. You need to 
             <td>Support different type of accounts, such as guest accounts, ordinary accounts, admin accounts, etc. Users should be able to do different things in the app depending on what type of account they are signed in to. For example, an ordinary user might only be able to create data belonging to her own account, while an admin can create data belonging to another account (acting as if she is signed in to another account).<br><br><b>Note:</b> Simply hiding/showing a few GUI components depending on the account type (such as admin accounts have a link to an admin activity ordinary users can't access) is not enough.</td>
         </tr>
         <tr>
+            <td>0.5</td>
+            <td>Creating QR Codes</td>
+            <td>The app can create different QR codes that can be used by the app itself or another app.</td>
+        </tr>
+        <tr>
+            <td>0.5</td>
+            <td>Reading QR Codes</td>
+            <td>The app uses the camera on the Android device (either directly or indirectly) to read and react to QR codes.</td>
+        </tr>
+        <tr>
             <td>?</td>
             <td>Own suggestions</td>
             <td>Come up with your own suggestions of extra functionality. Describe the functionality and email the examiner for approval at <a href="mailto:Peter.Larsson-Green@ju.se">Peter.Larsson-Green@ju.se</a>).</td>

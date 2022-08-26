@@ -14,4 +14,4 @@ You want to work with files in Android? Let's take a look at how.
 
 ## Recommended reading
 * The [Android Developers Guide's page on App data & files](https://developer.android.com/training/data-storage).
-* In the course book Elements of Android: [Handling Files](https://wares.commonsware.com/app/internal/book/Jetpack/page/chap-files-001.html)
+* In the course book Elements of Android Jetpack: [Handling Files](https://commonsware.com/Jetpack/pages/chap-files-001.html)

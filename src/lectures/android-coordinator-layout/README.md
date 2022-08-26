@@ -14,50 +14,15 @@ Android documentation:
 When we got Material Design components in Android, some views needed to be coordinated to appear and behave correct. By placing views in a `CoordinatorLayout`, each view can have a *behavior* attached to it that can tell the `CoordinatorLayout` which other views in the layout that view is dependent on. The `CoordinatorLayout` will then inform the behavior when any of the dependent views change in size or position, at which point the behavior should update its own view to behave correctly, such as to move it.
 
 ::: tip Coordinating, not positioning
-The `CoordinatorLayout` is primarily for coordinating views through behaviors added to them, it does not have much functionality for positioning the views in it. Therefor, we usually put another `Layout` in the `CoordinatorLayout` (such as a `ConstraintLayout`) to position the views. But we have some tools to position the views in a `CoordinatorLayout`, such as the tools we have to position views in a `FrameLayout`, such as `layout_gravity` and margins.
+The `CoordinatorLayout` is primarily for coordinating views through behaviors added to them; it does not have much functionality for positioning the views in it. Therefor, we usually put another `Layout` in the `CoordinatorLayout` (such as a `ConstraintLayout`) to position the views. But we have some tools to position the views in a `CoordinatorLayout`, such as the tools we have to position views in a `FrameLayout`, such as `layout_gravity` and margins.
 :::
 
 ### Behavior
-In the `Activity` below, each click on the `Button` moves the first `TextView` to the right a little bit.
+The example below contains code that moves a `TextView` to the right when a `Button` is clicked the "traditional" way.
 
+::::: tip Example
 :::: code-group
-::: code-group-item Result
-
-<Smartphone>
-  <div>Some text</div>
-  <div>Some other text</div>
-  <button onclick="this.previousElementSibling.previousElementSibling.innerHTML = '&nbsp;'+this.previousElementSibling.previousElementSibling.innerHTML">Move first text</button>
-</Smartphone>
-
-:::
-::: code-group-item MainActivity.kt
-
-```kt
-class MainActivity : AppCompatActivity() {
-  
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    
-    setContentView(R.layout.activity_main)
-    
-    val firstTextView = findViewById<TextView>(R.id.first_text_view)
-    val moveButton = findViewById<Button>(R.id.move_button)
-    
-    // Move the first TextView when the button is clicked.
-    moveButton.setOnClickListener {
-      val layoutParams = firstTextView.layoutParams as ViewGroup.MarginLayoutParams
-      layoutParams.leftMargin = layoutParams.leftMargin + 5
-      firstTextView.requestLayout() // Tell the framework to repaint this view.
-    }
-    
-  }
-  
-}
-```
-
-:::
-::: code-group-item activity_layout.xml
-
+::: code-group-item res/layout/activity_main.xml
 ```xml
 <androidx.coordinatorlayout.widget.CoordinatorLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
@@ -87,25 +52,79 @@ class MainActivity : AppCompatActivity() {
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 ```
-
+:::
+::: code-group-item MainActivity.kt
+```kotlin
+class MainActivity : AppCompatActivity() {
+  
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    
+    setContentView(R.layout.activity_main)
+    
+    val firstTextView = findViewById<TextView>(R.id.first_text_view)
+    val moveButton = findViewById<Button>(R.id.move_button)
+    
+    // Move the first TextView when the button is clicked.
+    moveButton.setOnClickListener {
+      val layoutParams = firstTextView.layoutParams as ViewGroup.MarginLayoutParams
+      layoutParams.leftMargin = layoutParams.leftMargin + 5
+      firstTextView.requestLayout() // Tell the framework to repaint this view.
+    }
+    
+  }
+  
+}
+```
 :::
 ::::
-
-If we want the second `TextView` to be moved the same way as the first `TextView`, we can add a `Behavior` to it that tells the `CoordinatorLayout` that it depends on the first `TextView`. Then the `CoordinatorLayout` will notify the `Behavior` each time the first `TextView` is moved, and the `Behavior` can in turn change the position of the second `TextView` it has been added to, as in the `Activity` below.
-
-:::: code-group
-::: code-group-item Result
 
 <Smartphone>
   <div>Some text</div>
   <div>Some other text</div>
-  <button onclick="this.previousElementSibling.previousElementSibling.innerHTML = '&nbsp;'+this.previousElementSibling.previousElementSibling.innerHTML; this.previousElementSibling.innerHTML = '&nbsp;'+this.previousElementSibling.innerHTML">Move first text</button>
+  <button onclick="this.previousElementSibling.previousElementSibling.innerHTML = '&nbsp;'+this.previousElementSibling.previousElementSibling.innerHTML">Move first text</button>
 </Smartphone>
 
+:::::
+
+If we want the second `TextView` to be moved the same way as the first `TextView`, we can add a `Behavior` to it that tells the `CoordinatorLayout` that it depends on the first `TextView`. Then the `CoordinatorLayout` will notify the `Behavior` each time the first `TextView` is moved, and the `Behavior` can in turn change the position of the second `TextView` it has been added to, as in the example below.
+
+::::: tip Example
+:::: code-group
+::: code-group-item res/layout/activity_main.xml
+```xml{19}
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+    
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/first_text_view"
+      android:text="Some text." />
+
+    <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/second_text_view"
+      android:layout_marginTop="30dp"
+      android:text="Some other text."
+      app:layout_behavior=".MyBehavior" /> <!-- Only change from before. -->
+
+    <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/move_button"
+      android:layout_marginTop="60dp"
+      android:text="Move first text" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+```
 :::
 ::: code-group-item MainActivity.kt
-
-```kt
+```kotlin{1}
 // Same as before.
 class MainActivity : AppCompatActivity() {
   
@@ -127,48 +146,12 @@ class MainActivity : AppCompatActivity() {
   
 }
 ```
-
-:::
-::: code-group-item activity_layout.xml
-
-```xml
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  android:layout_width="match_parent"
-  android:layout_height="match_parent">
-    
-    <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:id="@+id/first_text_view"
-      android:text="Some text." />
-
-    <TextView
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:id="@+id/second_text_view"
-      android:layout_marginTop="30dp"
-      android:text="Some other text."
-      app:layout_behavior=".MyBehavior" /> <!-- Only change from before: Behavior added! -->
-
-    <Button
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:id="@+id/move_button"
-      android:layout_marginTop="60dp"
-      android:text="Move first text" />
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
-```
-
 :::
 ::: code-group-item MyBehavior.kt
-
-```kt
+```kotlin
 // The type of view we specify in the super class should match the type of view the behavior can be added to.
 // Currently it's <TextView>, but it could just as well be <View> in this case, since this behavior is
-// not dependent on any TextView specific functionality (it would work equally well on a Button)
+// not dependent on any TextView specific functionality (for example, it would work equally well on an ImageView).
 class MyBehavior(context: Context, attrs: AttributeSet) :
     CoordinatorLayout.Behavior<TextView>(context, attrs) {
   
@@ -200,63 +183,35 @@ class MyBehavior(context: Context, attrs: AttributeSet) :
     // Tell the framework to repaint the view.
     child.requestLayout()
     
-    // Return true to tell the CoordinatorLayout that you have changed this view.
+    // Return true to tell the CoordinatorLayout that we have changed this view.
     return true
     
   }
   
 }
 ```
-
 :::
 ::::
 
-Often we don't create our own behaviors (the code for behaviors usually get quite complicated), but instead use some behaviors others have created for us. The Android support library has some for different type of views.
+<Smartphone>
+  <div>Some text</div>
+  <div>Some other text</div>
+  <button onclick="this.previousElementSibling.previousElementSibling.innerHTML = '&nbsp;'+this.previousElementSibling.previousElementSibling.innerHTML; this.previousElementSibling.innerHTML = '&nbsp;'+this.previousElementSibling.innerHTML">Move first text</button>
+</Smartphone>
+
+:::::
+
+Often we don't create our own behaviors (the code for behaviors usually get quite complicated), but instead use some behaviors others have created for us. The Android support library has some for different type of behaviors we can use.
 
 ### Anchors
 The `CoordinatorLayout` has one new way to position its views: using anchors. You can "anchor" a view to another view, and then that view will stick to that other view, even when that other view is moved. 
 
-Before we created our own `Behavior` to make one `TextView` follow another `TextView` as it moved. This is more or less what anchors are used for, so we could achieve similar functionality using the `layout_anchor*` attributes, as shown in the `Activity` below.
+Before we created our own `Behavior` to make one `TextView` follow another `TextView` as it moved. This is more or less what anchors are used for (implemented as a `Behavior`), so we could achieve similar functionality using the `layout_anchor*` attributes, as shown in the example below.
 
+::::: Example
 :::: code-group
-::: code-group-item Result
-
-<Smartphone>
-  <div>Some text</div>
-  <div>&nbsp;&nbsp;&nbsp;&nbsp;Some other text</div>
-  <button onclick="this.previousElementSibling.previousElementSibling.innerHTML = '&nbsp;'+this.previousElementSibling.previousElementSibling.innerHTML; this.previousElementSibling.innerHTML = '&nbsp;'+this.previousElementSibling.innerHTML">Move first text</button>
-</Smartphone>
-
-:::
-::: code-group-item MainActivity.kt
-
-```kt
-// Same as before.
-class MainActivity : AppCompatActivity() {
-  
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    
-    setContentView(R.layout.activity_main)
-    
-    val firstTextView = findViewById<TextView>(R.id.first_text_view)
-    val moveButton = findViewById<Button>(R.id.move_button)
-    
-    moveButton.setOnClickListener {
-      val layoutParams = firstTextView.layoutParams as ViewGroup.MarginLayoutParams
-      layoutParams.leftMargin = layoutParams.leftMargin + 5
-      firstTextView.requestLayout()
-    }
-    
-  }
-  
-}
-```
-
-:::
-::: code-group-item activity_layout.xml
-
-```xml
+::: code-group-item res/layout/activity_main.xml
+```xml{18-23}
 <androidx.coordinatorlayout.widget.CoordinatorLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -290,6 +245,37 @@ class MainActivity : AppCompatActivity() {
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 ```
-
+:::
+::: code-group-item MainActivity.kt
+```kotlin{1}
+// Same as before.
+class MainActivity : AppCompatActivity() {
+  
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    
+    setContentView(R.layout.activity_main)
+    
+    val firstTextView = findViewById<TextView>(R.id.first_text_view)
+    val moveButton = findViewById<Button>(R.id.move_button)
+    
+    moveButton.setOnClickListener {
+      val layoutParams = firstTextView.layoutParams as ViewGroup.MarginLayoutParams
+      layoutParams.leftMargin = layoutParams.leftMargin + 5
+      firstTextView.requestLayout()
+    }
+    
+  }
+  
+}
+```
 :::
 ::::
+
+<Smartphone>
+  <div>Some text</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;Some other text</div>
+  <button onclick="this.previousElementSibling.previousElementSibling.innerHTML = '&nbsp;'+this.previousElementSibling.previousElementSibling.innerHTML; this.previousElementSibling.innerHTML = '&nbsp;'+this.previousElementSibling.innerHTML">Move first text</button>
+</Smartphone>
+
+:::::

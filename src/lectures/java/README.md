@@ -14,3 +14,4 @@ Java is a programming language designed from scratch to support Object-Oriented 
 
 ## Recommended reading
 * [Java Platform, Standard Edition Documentation](https://docs.oracle.com/en/java/javase/index.html)
+    * You are of course not expected to read all of the documentation, but when using Java it's good to have a basic understanding of how the documentation is structured, so it's easy to look up details later when needed

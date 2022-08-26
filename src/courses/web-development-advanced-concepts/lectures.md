@@ -3,6 +3,8 @@ The instructions on the [Laboratory Work](laboratory-work/) page and the [Projec
 
 * [Client-Side JavaScript & BOM](../../lectures/client-side-javascript-and-bom/)
 * [Document Object Model](../../lectures/document-object-model/)
+* [Teamwork](../../lectures/teamwork/)
+* [Report Writing](../../lectures/report-writing/)
 * [Docker Basics](../../lectures/docker-basics/)
 * [Layered Architecture in Node.js](../../lectures/layered-architecture-in-node-js/)
 * [Asynchronous Programming in JavaScript](../../lectures/asynchronous-programming-in-js/)
@@ -16,6 +18,7 @@ The instructions on the [Laboratory Work](laboratory-work/) page and the [Projec
 * [REST API Authorization](../../lectures/rest-api-authorization/)
 * [JSON Web Tokens](../../lectures/json-web-tokens/)
 * [Third-Party Authentication](../../lectures/third-party-authentication/)
+* [Content Delivery Networks](../../lectures/content-delivery-networks/)
 * [AJAX](../../lectures/ajax/)
 * [Same-Origin Policy & Cross-Origin Resource Sharing](../../lectures/sop-and-cors/)
-* [Report Writing](../../lectures/report-writing/)
+* [GDPR](../../lectures/gdpr/)

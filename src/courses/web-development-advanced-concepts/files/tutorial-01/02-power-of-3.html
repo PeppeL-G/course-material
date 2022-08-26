@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2 Power of 3</title>
+	<script>
+		
+		document.addEventListener('DOMContentLoaded', function(){
+			
+			const form = document.querySelector('body form')
+			const input = document.querySelector('body form input')
+			const span = document.querySelector('span')
+			
+			form.addEventListener('submit', function(event){
+				event.preventDefault()
+			})
+			
+			input.addEventListener('input', function(event){
+				
+				const base = input.valueAsNumber
+			
+				if(isNaN(base)){
+					span.innerText = "That's not a number!"
+				}else{
+					const result = base*base*base
+					span.innerText = result
+				}
+				
+			})
+			
+		})
+		
+	</script>
+</head>
+<body>
+	
+	<form>
+		<input type="number"> ^3 <input type="submit" value="="> <span>?</span>
+	</form>
+	
+</body>
+</html>

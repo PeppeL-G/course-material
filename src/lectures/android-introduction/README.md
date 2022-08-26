@@ -14,10 +14,4 @@ Android is an operating system initially released for smartphones, but these day
 
 ## Recommended reading
 * [ANDROID FRAGMENTATION VISUALIZED (AUGUST 2015)](https://www.opensignal.com/sites/opensignal-com/files/data/reports/global/data-2015-08/2015_08_fragmentation_report.pdf)
-* In the Android docs (just read the overviews):
-    * [Device compatibility overview](https://developer.android.com/guide/practices/compatibility)
-    * [Wear OS overview](https://developer.android.com/training/wearables)
-    * [Android TV overview](https://developer.android.com/training/tv)
-    * [Android for Cars overview](https://developer.android.com/training/cars)
-    * [Android Things overview](https://developer.android.com/things/get-started)
-    * [Apps for Chrome OS overview](https://developer.android.com/chrome-os/intro)
+* The Wikipedia page [Google LLC v. Oracle America, Inc.](https://en.wikipedia.org/wiki/Google_LLC_v._Oracle_America,_Inc.)

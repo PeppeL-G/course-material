@@ -10,5 +10,6 @@ module.exports = {
 		"laboratory-work",
 		"written-examination",
 		"time-plan",
+		"feedback-2021",
 	],
 }

@@ -14,6 +14,6 @@ Every now and then Android broadcasts different type of intents with information
 
 ## Recommended reading
 The following chapters from the course book *The Busy Coder's Guide to Android Development*:
-* [Broadcasts and Broadcast Receivers](https://wares.commonsware.com/app/internal/book/Android/page/chap-broadcast-001.html)
+* [Broadcasts and Broadcast Receivers](https://commonsware.com/Android/)
 
 The [Android Developers Guide's page about Broadcasts](https://developer.android.com/guide/components/broadcasts).

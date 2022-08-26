@@ -2,7 +2,7 @@
 On this page you find information about the examination test `Written Examination`.
 
 ## Number of credits
-The `Written Examination` test is worth 2.5 credits. You will primarily prepare for it by completing the [Laboratory Work](laboratory-work/) and the [Project Work](project-work/), so don't expect to use 2.5 credits of time studying for the `Written Examination` alone.
+The `Written Examination` test is worth 2.5 credits. You will primarily prepare for it by completing the [Laboratory Work](laboratory-work/) and the [Project Work](project-work/), so don't expect to use 2.5 credits of time studying for the `Written Examination` only.
 
 ## Digital Exam
 The `Written Examination` test is an Inspera exam; a digital exam you write on a school computer. More information about Inspera exams can be found on [the JU page *Digital Exam*](https://ju.se/student/en/digital-exam.html).
@@ -46,13 +46,10 @@ The exam consists of questions worth 30 points in total.
 The exam will be in English, but you may write your answers in either English or Swedish. If you write your answers in Swedish, make sure to not introduce any translation confusement. Write proper sentences (spelling, upper/lower case characters, punctuation, etc.). Answers that do not do this good enough/are vague/are partly incomprehensible cannot receive full score on the questions.
 
 ## Sample exam
-You can look at [the exam from 2019-06-04](files/exam-2019-06-04.pdf) to get some idea about what the questions on your exam will be.
-
-::: warning Note!
-The exam from 2019-06-04 was a Ping Pong exam, your exam will be an Inspera exam. You will get similar type of questions, but it will look a bit different.
-:::
+You can look at [the exam from 2021-08-22](./exams/exam-2021-08-22/) to get some idea about what the questions on your exam will be.
 
 ## Sample answers
-* [Exam 2021-03-21](./exams/exam-2021-03-21/)
-* [Exam 2021-06-09](./exams/exam-2021-06-09/)
-* [Exam 2021-08-22](./exams/exam-2021-08-22/)
+After each exam, sample answers with some grading guidelines will be published here.
+
+* [2022-03-26](./exams/exam-2022-03-26/)
+* [2022-06-13](./exams/exam-2022-06-13/)

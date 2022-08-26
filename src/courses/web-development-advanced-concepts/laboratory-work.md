@@ -13,14 +13,14 @@ On this page you find information about the examination test `Laboratory Work`.
 }'>
 </CompactInfo>
 
-::: warning Note!
+::: warning Help, don't cheat!
 The laboratory work is individual work.
 
 **It is OK** to help each other. Examples of that:
 
 * help your friend to debug his code.
 * explain to your friend why his code doesn't work the way he thinks it works.
-* compare and discuss different solutions to the lab problems with your friend to figure out which solution is the best one.
+* compare and discuss different solutions to a lab problem with your friend after both of you have solved the lab to figure out which solution is the best one.
 
 **It is NOT OK** to cooperate in any way. Examples of that:
 
@@ -44,23 +44,26 @@ Before you start working on the labs you are recommended to:
     * [Document Object Model](../../lectures/document-object-model/)
 
 ::: tip Debugging
-When the web browser executes the JavaScript statement `debugger` it enters a debug mode in which you can inspect the values variables have, use step-by-step execution, etc.. Use that to debug your code when it doesn't work the way you want.
+When the web browser executes the JavaScript statement `debugger` (you might need to have the console open in the web browser) it enters a debug mode in which you can inspect the values variables have, use step-by-step execution, etc.. Use that to debug your code when it doesn't work the way you want.
 :::
 
 ## Lab 1: Generating a table of contents
-The file <a :href="$withBase('courses/web-development-advanced-concepts/files/lab-01-table-of-contents.html')" target="_blank">lab-01-table-of-contents.html</a> contains some of the information on [Wikipedia's Jönköping University article](https://en.wikipedia.org/wiki/J%C3%B6nk%C3%B6ping_University). Your task is to write JavaScript code that generates a table of content for the document (i.e. a list with the title of all the headers).
+The file <a :href="$withBase('courses/web-development-advanced-concepts/files/lab-01-table-of-contents.html')" target="_blank">lab-01-table-of-contents.html</a> contains some of the information on [Wikipedia's Jönköping University article](https://en.wikipedia.org/wiki/J%C3%B6nk%C3%B6ping_University). Your task is to write JavaScript code that generates a table of content for the document (i.e. a list with the title of all the headers). Download the HTML file and write your own JavaScript code directly in it.
 
 Some DOM functionalities you might find helpful:
 
 * `document.addEventListener("DOMContentLoaded", aCallbackFunction)` to tell the web browser to call `aCallbackFunction` when it is done parsing the HTML code.
 * Calling `querySelector("aCSSSelector")` on `document` or `anHTMLElement` to find the HTML element matching `aCSSSelector`.
 * Calling `querySelectorAll("aCSSSelector")` on `document` or `anHTMLElement` to find the HTML elements matching `aCSSSelector`.
-* `anHTMLElement.innerText` to read out/change what is written between the start and stop tag of `anHTMLElement`.
+* `anHTMLElement.innerText` to read out/change what is written between the start and end tag of `anHTMLElement`.
 * `document.createElement("tagName")` to create a new HTML element of type `tagName` (e.g. `ul`).
 * `anHTMLElement.appendChild(aChildElement)` to add `aChildElement` to `anHTMLElement`.
 
+### Presenting
+Present your work to a teacher at one of the lab sessions. Be prepared to explain how your code works and to answer any question the teacher might have about it. When the teacher is satisfied with your presentation, upload your HTML file to the assignment [Lab 1](https://ju.instructure.com/courses/4775/assignments/25242) on Canvas, after which the teacher will approve you on the assignment.
+
 ## Lab 2: A calculator
-The file <a :href="$withBase('courses/web-development-advanced-concepts/files/lab-02-calculator.html')" target="_blank">lab-02-calculator.html</a> contains a form through which users should be able to enter two operands and one operation. Your task is to write JavaScript code that displays the result of the selected operation applied on the two entered operands.
+The file <a :href="$withBase('courses/web-development-advanced-concepts/files/lab-02-calculator.html')" target="_blank">lab-02-calculator.html</a> contains a form through which users should be able to enter two operands and one operation. Your task is to write JavaScript code that displays the result of the selected operation applied on the two entered operands. 
 
 Some DOM functionalities you might find helpful:
 
@@ -69,8 +72,13 @@ Some DOM functionalities you might find helpful:
 * `aSelectElement.value` to read out/change the value of the selected `<option>` in `aSelectElement`.
 
 ::: warning Note!
+If the user has client-side JavaScript disabled the form should be submitted to the server (if you opened the file with the `file` protocol, the web browser will just display the same page again).
+
 If the address bar in the web browser changes (a query string is added to the end of it) when you click on the submit button, then you have failed to properly call the `event.preventDefault()` method.
 :::
+
+### Presenting
+Present your work to a teacher at one of the lab sessions. Be prepared to explain how your code works and to answer any question the teacher might have about it. When the teacher is satisfied with your presentation, upload your HTML file to the assignment [Lab 2](https://ju.instructure.com/courses/4775/assignments/25243) on Canvas, after which the teacher will approve you on the assignment.
 
 ## Lab 3: Validating input to forms
 The file <a :href="$withBase('courses/web-development-advanced-concepts/files/lab-03-form-validation.html')" target="_blank">lab-03-form-validation.html</a> contains a form users can use to enter information about a new account to be created. Your task is to write JavaScript code validating the data entered in the form when the user submits it according to the following validation rules:
@@ -90,6 +98,9 @@ Some DOM functionalities you might find helpful:
 The form should be submitted if there are no validation errors. If you open the webpage using the `file` protocol, the web browser will simply reload the webpage when the form is submitted.
 :::
 
+### Presenting
+Present your work to a teacher at one of the lab sessions. Be prepared to explain how your code works and to answer any question the teacher might have about it. When the teacher is satisfied with your presentation, upload your HTML file to the assignment [Lab 3](https://ju.instructure.com/courses/4775/assignments/25244) on Canvas, after which the teacher will approve you on the assignment.
+
 ## Lab 4: Tabs
 The file <a :href="$withBase('courses/web-development-advanced-concepts/files/lab-04-tabs.html')" target="_blank">lab-04-tabs.html</a> contains three forms:
 
@@ -97,7 +108,7 @@ The file <a :href="$withBase('courses/web-development-advanced-concepts/files/la
 * One form to sign in to an existing account.
 * One form to subscribe to updates.
 
-Although all three forms are useful, displaying all of them at the same time does not make sense since the user is only interested in using one of them at a time. Your task is to write JavaScript code that only displays one form at a time, and by clicking on links the user should be able to switch which form that is shown.
+Although all three forms are useful, displaying all of them at the same time makes no sense since the user is only interested in using one of them at a time. Your task is to write JavaScript code that displays only one form at a time, and by clicking on links the user should be able to switch which form that is shown.
 
 Some DOM functionalities you might find helpful:
 
@@ -107,10 +118,5 @@ Some DOM functionalities you might find helpful:
 If the user has disabled client-side JavaScript in the web browser, all three forms should of course be displayed.
 :::
 
-## Present your work
-Present your work to a teacher at one of the lab sessions. Be prepared to explain how your code works and to answer any question the teacher might have about it. When the teacher is satisfied with your presentation, he will pass you on respective assignment on Canvas:
-
-* [Lab 1](https://ju.instructure.com/courses/3372/assignments/12475)
-* [Lab 2](https://ju.instructure.com/courses/3372/assignments/12476)
-* [Lab 3](https://ju.instructure.com/courses/3372/assignments/12477)
-* [Lab 4](https://ju.instructure.com/courses/3372/assignments/12478)
+### Presenting
+Present your work to a teacher at one of the lab sessions. Be prepared to explain how your code works and to answer any question the teacher might have about it. When the teacher is satisfied with your presentation, upload your HTML file to the assignment [Lab 4 ](https://ju.instructure.com/courses/4775/assignments/25245) on Canvas, after which the teacher will approve you on the assignment.

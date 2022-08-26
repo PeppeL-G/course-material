@@ -141,6 +141,74 @@ Always think of the reader. Pretend you are a very stupid reader of the report, 
 It doesn't matter whether you think the report is good or bad, what's important is what the readers think of your report, since they are the ones who will read it. To make them think the report is good, you often need to do more work on it than you initially think is necessary, because you know YOUR project work by heart, but the reader doesn't know anything about it, so you need to explain more things than you think.
 :::
 
+
+
+## Be explicit
+If you write something that can be interpreted in different ways, readers have no idea which way that is the correct interpretation, since they don't have anyone to ask for clarification. So, when it comes to written text, it's very important to be explicit about what you mean, so there's no way for readers to interpret the text in different ways.
+
+::: tip Example
+
+Let's take a look at an example from a report describing how a blog on an Android app works:
+
+>It doesn't work to create empty blogposts.
+
+The problems with that wording are:
+
+1. There's no explanation of what *doesn't work* means. The app doesn't contain that functionality at all? Or the app crashes when that functionality is used? Or does nothing happen when one click on the create-button? Or is an error message shown to the user?
+2. There's no explanation of what *empty* means. Missing all of title, content and date? Or just missing title? Or what?
+
+As you see, sentences in a report that are that vague are more confusing than helpful to the reader!
+
+Let's take a look at a better worded sentence:
+
+>When creating a new blogpost with an empty content, an error message is shown to the user indicating that new blogposts must have some content.
+
+This is much better! Everyone reading this sentence will get the very same understanding of how the app works. But most likely, you will have more validation rules than just that one, and you need to describe all of them. Then you should not describe each of them in separate sentences like that, but rather show them in a list, or a table, as in the example below.
+
+>When creating a new blogposts, the following validation rules are applied:
+>
+>- The content of the blogpost must not be empty
+>- The content of the blogpost must at most consist of 1000 characters
+>- The title of the blogpost must consist of at least 5 characters
+>- The title of the blogpost must at most consist of 75 characters
+>- The publication date can not be set to a date in the past
+>
+>If some of the rules are not followed, they will be shown as error messages to the user.
+
+This is a very good way of describing how it works;
+
+* Lists are used, so it's easy to see where all the validation rules are specified, and to count how many they are, etc.
+* It's very easy to add more validation rules in the future: just add a rule to the list
+
+Even if your app only has a single validation rule, displaying that one in a list is still a very good idea, because it gives the report a very good structure, and it's very easy to add more validation rules to the report in the future.
+
+:::
+
+::: tip Example
+
+Another example from a report on a website:
+
+>The client communicates with the server, and then it crashes.
+
+What crashes? The client? The server? The network? Or everything? Students love overusing the word *it*, but readers hate, because they often don't know what *it* refers to. It is much better to be explicit:
+
+>The client communicates with the server, and then the client crashes.
+
+This is much better, now all readers gets the understanding that it's the client that crashes. But *then* in the sentence is still ambiguous. WHEN is *then*?
+
+* then = Directly after the request has been sent?
+* then = While waiting for the response?
+* then = When the response is being received?
+* then = After the response has been received?
+
+Different readers will make different guesses here, and get different understandings. It's much better to be explicit than vague, for example:
+
+>The client sends an HTTP request to the server, and when the client receives the HTTP response from the server the client crashes.
+
+This sentence is explicit all the way, so it's very easy to read and understand, and everybody gets the same understanding from it.
+:::
+
+
 ## Common student mistakes
 So, which are the common mistakes students do in their reports and that you should avoid? Here are some of them.
 
@@ -251,7 +319,7 @@ The reader has no idea about what you refer to (which database *The database* in
 </template>
 <template v-slot:solution>
 
-Introduce components before you use them.
+Introduce components before you refer to them.
 
 </template>
 </ReportMistake>
@@ -324,7 +392,7 @@ The text uses different terms to refer to the same thing.
 </template>
 <template v-slot:problem>
 
-It's hard for the reader to read the text, and the reader gets unsure about if you refer to the same thing or two different things when you refer to it by different terms.
+It's hard for the reader to read the text, and the reader gets unsure if you refer to the same thing or two different things when you refer to it using different terms.
 
 </template>
 <template v-slot:solution>
@@ -353,12 +421,12 @@ Some of the text stands out too much.
 </template>
 <template v-slot:problem>
 
-The text is harder to read when a word stands out too much from the rest of the text. For example, when you read this paragraph chances are you looked at this smiley 😃 before you were supposed to, stealing your focus from the text. It can even steal your focus when you read this text, which appears after it.
+The text is harder to read when a word stands out too much from the rest of the text. For example, when you read this paragraph chances are you noticed this smiley 😃 before you were supposed to, stealing your focus from the text. It can even steal your focus when you read this text, which appears after it.
 
 </template>
 <template v-slot:solution>
 
-Don't make the text stand out too much. Just using italic is enough in most cases.
+Don't make the text standout too much. Just using italic is enough in most cases. When showing inline code, making it standout like `this` is very common.
 
 </template>
 </ReportMistake>
@@ -418,7 +486,7 @@ The standard notation is very short, if you use another notation the reader need
 </template>
 <template v-slot:solution>
 
-Stick to using the standard notation for introducing acronyms, or (second best) don't introduce them at all.
+Stick to using the standard notation for introducing acronyms, or (second best) don't introduce them at all (if you do introduce an acronym, you have to use the acronym somewhere later in the text).
 
 </template>
 </ReportMistake>
@@ -983,7 +1051,6 @@ Only describe what's unique to your solution. You can describe the techniques yo
 </template>
 </ReportMistake>
 
-## Mistakes Added 2021-10-10
 
 
 
@@ -1097,7 +1164,7 @@ Paragraphs consisting of a single sentence are usually no good paragraphs. Compa
 </template>
 <template v-slot:solution>
 
-Write headers the way headers are usually written; don't end chapter titles with colon.
+Plan a good structure and consist of multiple sentences in one paragraph.
 
 </template>
 </ReportMistake>
@@ -1143,7 +1210,7 @@ Give images consisting of the reports background color a border.
 <ReportMistake>
 <template v-slot:example-1-bad>
 
-What happens when the user use the website is that the user first starts the web browsers, then the web browser sends an HTTP request to the server. When the server receives the HTTP request, it carries out the request and generates and send back an HTTP response to the web browser. The HTTP response contains a webpage the web browser then displays.
+What happens when the user use the website is that the user first starts the web browser, then the web browser sends an HTTP request to the server. When the server receives the HTTP request, it carries out the request and generates and send back an HTTP response to the web browser. The HTTP response contains a webpage the web browser then displays.
 
 </template>
 <template v-slot:example-1-good>
@@ -1159,7 +1226,7 @@ What happens when the user use the website is that:
 </template>
 <template v-slot:example-2-bad>
 
-What happens when the user use the website is that the user first starts the web browsers, then the web browser sends an HTTP request to the server. When the server receives the HTTP request, it carries out the request and generates and send back an HTTP response to the web browser. The HTTP response contains a webpage the web browser then displays.
+What happens when the user use the website is that the user first starts the web browser, then the web browser sends an HTTP request to the server. When the server receives the HTTP request, it carries out the request and generates and send back an HTTP response to the web browser. The HTTP response contains a webpage the web browser then displays.
 
 </template>
 <template v-slot:example-2-good>

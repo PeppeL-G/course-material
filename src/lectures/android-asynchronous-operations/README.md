@@ -13,5 +13,6 @@ Handling long running operations is a bit complicated in Android because the Mai
 * [android-asynchronous-operations.pptx](android-asynchronous-operations.pptx)
 
 ## Recommended reading
-* The [Android Developers Guide's page Sending operations to multiple threads](https://developer.android.com/training/multiple-threads).
-* The [Android Developers Guide's page Keeping your app responsive](https://developer.android.com/training/articles/perf-anr).
+* The following Android Developers Guide pages:
+	* [Keeping your app responsive](https://developer.android.com/training/articles/perf-anr)
+	* [Guide to background work](https://developer.android.com/training/multiple-threads)

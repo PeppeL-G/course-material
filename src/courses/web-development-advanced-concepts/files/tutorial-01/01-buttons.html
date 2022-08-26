@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1 Buttons</title>
+	<script>
+		
+		document.addEventListener('DOMContentLoaded', function(){
+		
+			const buttons = document.querySelectorAll('.counter')
+			
+			for(const button of buttons){
+				
+				button.addEventListener('click', function(){
+					const oldNumber = parseInt(button.innerText, 10)
+					const newNumber = oldNumber + 1
+					button.innerText = newNumber
+				})
+				
+			}
+			
+			
+		})
+		
+	</script>
+</head>
+<body>
+	
+	<button class="counter">0</button>
+	
+	<br>
+	<br>
+	
+	<button class="counter">0</button>
+	
+	<br>
+	<br>
+	
+	<button id="add">Add</button>
+	
+	<br>
+	<br>
+	
+	<button class="counter">0</button>
+	
+</body>
+</html>

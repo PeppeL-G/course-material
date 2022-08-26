@@ -3,9 +3,10 @@
     course-name="Web Development - Advanced Concepts"
     ladok-code="TFWN19"
     credits="7.5"
+    year="2022"
     course-coordinator="Peter Larsson-Green"
     examiner="Peter Larsson-Green"
-    canvas-course-id="3372"
+    canvas-course-id="4775"
 />
 
 ## Teachers
@@ -20,13 +21,12 @@
     website="https://ju.se/en/personinfo.html?sign=LarPet"
 />
 
-### Linus Rudbeck
+### Fredrik Sjölander
 <Teacher
-    name="Linus Rudbeck"
-    photo="linus-rudbeck.jpeg"
+    name="Fredrik Sjölander"
+    photo="fredrik-sjolander.jpeg"
     :roles='["Lab assistant"]'
-    description="Former JTH student that studied the program Software Engineering and Mobile Platforms. Started the company Red Capes IT together with Daniel Fransén after he graduated. "
-    website="https://redcapesit.se/author/linus/"
+    description="Third year student in the bachelor program Software Engineering and Mobile Platforms."
 />
 
 ## Introduction
@@ -37,10 +37,11 @@ Then websites got more dynamic. Users could create accounts on the websites and 
 
 Then some websites got so popular that running them on a single computer was not enough; web browsers sent more HTTP requests to the web application than the web application had time to handle. We needed to start worrying about the performance of our web application; how good it could scale, how fast it could send back an HTTP response, etc. Web applications now needed to be built with an architecture in mind.
 
-Then we got Android and iOS devices, and users wanted to be able to use an app to access the content on our websites. But apps don't render HTML code, only web browsers do that. The apps needed a way to just fetch the data from our web applications, so we added APIs to the web applications. 
+Then we got Android and iOS devices, and users wanted to be able to use smartphone apps to access the content on our websites instead of using web browsers. But apps don't render HTML code, only web browsers do that. The apps needed a way to just fetch the data from our web applications, so we added Application Programming Interfaces (API) to our web applications. 
 
-Today, good web applications are not straight forward to implement, but in this course you will learn and get hands-on experience of using some of the technologies you can use to do that by implementing your own web application.
+Today, good web applications are no longer straight forward to implement, but in this course you will learn and get hands-on experience of implementing your own scalable and good web application.
 
+## Pre-requisites
 At course start you are expected to already possess knowledge corresponding to the pre-requisite courses shown in <FigureNumber /> below.
 
 <Figure caption="Prerequisites for this course.">
@@ -74,63 +75,71 @@ The intended learning outcomes of the course are found in the [Course Syllabus](
 <ILOsActivitiesMapping description="
 Display knowledge of the need for, and the use of, Content Delivery Networks
 -Written Examination
-+Tutorial
++Lecture: Content Delivery Networks
 ---
 Display knowledge of the challenges inherent in and technologies used for the construction of scalable web applications (NOSQL databases, horizontal scaling with session management, data partitioning and sharding, etc.)
 -Project Work
 -Written Examination
-+Recorded lecture: Scaling Web Applications
-+Recorded lecture: Scaling Databases
++Lecture: Scaling Web Applications
++Lecture: Scaling Databases
++Tutorial
 ---
 Display the ability to use JavaScript to manipulate a web page's Document Object Model
 -Laboratory Work
 -Project Work
 -Written Examination
-+Recorded lecture: Client-side JavaScript
-+Recorded lecture: Document Object Model
++Lecture: Client-side JavaScript
++Lecture: Document Object Model
++Tutorial
 ---
 Display the ability to program against commonly used JavaScript libraries
 -Project Work
-+Various npm packages introduced in the course.
++Various npm packages introduced in the course
 ---
 Display the ability to construct web pages that interact with other web systems using REST/JSON, OAuth, etc.
 -Project Work
 -Written Examination
-+Recorded lecture: REST API Basics
-+Recorded lecture: REST API in Express
-+Recorded lecture: REST API Authorization
-+Recorded lecture: JSON Web Tokens
-+Recorded lecture: Third-Party Authentication
-+Recorded lecture: AJAX
++Lecture: REST API Basics
++Lecture: REST API in Express
++Lecture: REST API Authorization
++Lecture: JSON Web Tokens
++Lecture: Third-Party Authentication
++Lecture: AJAX
++Lecture: Same-Origin Policy & Cross-Origin Resource Sharing
++Tutorial
 ---
 Display the ability to use advanced web client APIs such as web storage, web workers, web components, WebAssembly, etc.
 -Project Work
-+Recorded lecture: AJAX
++Lecture: AJAX
++Tutorial
 ---
 Display the ability to configure and use containers for development, testing, and deployment environments
 -Project Work
 -Written Examination
-+Recorded lecture: Docker Basics
++Lecture: Docker Basics
++Tutorial
 ---
 Demonstrate the ability to evaluate the security of web applications
 -Project Work
 -Written Examination
-+Recorded lecture: Same-origin Policy & Cross-origin Resource Sharing
++Lecture: REST API Authorization
++Lecture: JSON Web Tokens
++Lecture: Same-origin Policy & Cross-origin Resource Sharing
 "/>
 
 ## Learning Activities
 Here are short introduction to the learning activities offered in the course.
 
 ### Recorded Lectures
-In the beginning of some weeks you will be encouraged to view some recorded lectures. These will be quite theoretical and will teach you new things you can use when building a website.
+In the beginning of some weeks you will be encouraged to view some pre-recorded lectures (or read some text). These will be quite theoretical and will teach you new things you can use when building a website.
 
 ### Tutorials
-Some weeks there will be a tutorial session where the teacher will show you how to use what has been taught in the recorded lectures in practice. This year the tutorials will be given online using Zoom.
+Some weeks there will be a tutorial session where the teacher will show you how to use what has been taught in the pre-recorded lectures in practice.
 
 ### Lab Sessions
-Each week you may attend a 4 hours lab session. At the lab session you may ask the teacher there for help with your laboratory work and your project work. When you have completed your laboratory work you should also present your solution to a teacher at a lab session.
+Each week you may attend a four hours long lab session. Some of the lab sessions have been scheduled in ordinary classrooms, and for those sessions you have to bring your own laptop to work on. If you can't do that, make sure to come to a lab session scheduled in a computer room.
 
-There are 2 different lab sessions each week, but you may only attend to one of them. To distribute you, join one of the [Lab Session Groups](https://ju.instructure.com/courses/3372/groups#tab-3284) on Canvas. First come, first served. Feel free to attend the other lab sessions as well, but students that have signed up for a specific lab session should of course be prioritized by the teacher.
+Select which lab session you want to attend by joining the corresponding [Lab Session Group](https://ju.instructure.com/courses/4775/groups). Feel free to show up at and attend other lab sessions too **if there's room for it**, but you may only join one Lab Session Group on Canvas.
 
 ## Examination Tests
 The course contains three examination tests.

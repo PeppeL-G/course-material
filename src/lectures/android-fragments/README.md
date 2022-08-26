@@ -16,32 +16,16 @@ With fragments we can re-use a part of the GUI in different activities or swap o
 * The documentation for the [Fragment](https://developer.android.com/reference/androidx/fragment/app/Fragment.html) class.
 * Android Developers Guide's page [Fragments](https://developer.android.com/guide/components/fragments).
 * In the course book Elements of Android Jetpack:
-    * [Adopting Fragments](https://wares.commonsware.com/app/internal/book/Jetpack/page/chap-fragments-001.html)
+    * [Adopting Fragments](https://commonsware.com/Jetpack/pages/chap-fragments-001.html)
 
 ## Examples
 
 ### Static counter fragment
-The `CounterFragment` contains a counter button starting on 0. Its state is retained across runtime configuration changes. Three instances of it are statically inserted into the `MainActivity` using the `<fragment>` tag.
+The `CounterFragment` contains a counter `Button` starting on 0. Its state is retained across runtime configuration changes. Three instances of it are statically inserted into the `MainActivity` using the `<fragment>` tag.
 
 :::: code-group
-::: code-group-item MainActivity.kt
-
-```kotlin
-class MainActivity : AppCompatActivity() {
-    
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
-    
-}
-```
-
-:::
 ::: code-group-item res/layout/activity_main.xml
-
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -69,16 +53,41 @@ class MainActivity : AppCompatActivity() {
     
 </LinearLayout>
 ```
-
+:::
+::: code-group-item MainActivity.kt
+```kotlin
+class MainActivity : AppCompatActivity() {
+    
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+    
+}
+```
+:::
+::: code-group-item res/layout/fragment_counter.xml
+```xml
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"/>
+    
+</LinearLayout>
+```
 :::
 ::: code-group-item CounterFragment.kt
-
 ```kotlin
+const val KEY_COUNTER = "COUNTER"
+
 class CounterFragment : Fragment() {
-    
-    companion object {
-        const val KEY_COUNTER = "COUNTER"
-    }
     
     private var counter = 0
     
@@ -122,59 +131,14 @@ class CounterFragment : Fragment() {
     
 }
 ```
-
-:::
-::: code-group-item res/layout/fragment_counter.xml
-
-```xml
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center"
-    android:orientation="horizontal">
-    
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button"/>
-    
-</LinearLayout>
-```
-
 :::
 ::::
 
 ### Dynamic countdown fragment
-The `CounterFragment` functions as a countdown. The start value is configurable and retained across runtime configuration changes using the arguments Bundle. Its state is retained across runtime configuration changes using the savedInstanceState Bundle. Three instances of it are dynamically inserted into the `MainActivity`.
+The `CounterFragment` functions as a countdown. The start value is configurable and retained across runtime configuration changes using the arguments `Bundle`. Its state is retained across runtime configuration changes using the `savedInstanceState` `Bundle`. Three instances of it are dynamically inserted into the `MainActivity`.
 
 :::: code-group
-::: code-group-item MainActivity.kt
-
-```kotlin
-class MainActivity : AppCompatActivity() {
-    
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        
-        if(savedInstanceState == null){
-            supportFragmentManager
-                .beginTransaction()
-                .add(R.id.frameLayout1, CounterFragment.newInstance(5))
-                .add(R.id.frameLayout2, CounterFragment.newInstance(6))
-                .add(R.id.frameLayout3, CounterFragment.newInstance(3))
-                .commit()
-        }
-        
-    }
-    
-}
-```
-
-:::
 ::: code-group-item res/layout/activity_main.xml
-
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
@@ -201,17 +165,68 @@ class MainActivity : AppCompatActivity() {
     
 </LinearLayout>
 ```
+:::
+::: code-group-item MainActivity.kt
+```kotlin
+class MainActivity : AppCompatActivity() {
+    
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+        
+        if(savedInstanceState == null){
+            supportFragmentManager
+                .beginTransaction()
+                .add(R.id.frameLayout1, CounterFragment.newInstance(5))
+                .add(R.id.frameLayout2, CounterFragment.newInstance(6))
+                .add(R.id.frameLayout3, CounterFragment.newInstance(3))
+                .commit()
+        }
+        
+    }
+    
+}
+```
+:::
+::: code-group-item res/layout/fragment_counter.xml
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    tools:context=".CounterFragment">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/decrementButton"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:id="@+id/resetButton"/>
+
+</LinearLayout>
+```
 :::
 ::: code-group-item CounterFragment.kt
-
 ```kotlin
 class CounterFragment : Fragment() {
 
     companion object {
 
         const val KEY_COUNTER = "COUNTER"
-
         const val ARG_START_VALUE = "START_VALUE"
 
         fun newInstance(startValue: Int) = CounterFragment().apply {
@@ -270,40 +285,5 @@ class CounterFragment : Fragment() {
 
 }
 ```
-
-:::
-::: code-group-item res/layout/fragment_counter.xml
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center"
-    android:orientation="horizontal"
-    tools:context=".CounterFragment">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="-"
-        android:id="@+id/decrementButton"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Reset"
-        android:id="@+id/resetButton"/>
-
-</LinearLayout>
-```
-
 :::
 ::::

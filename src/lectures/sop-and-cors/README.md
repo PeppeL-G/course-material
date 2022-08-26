@@ -13,9 +13,8 @@ So, in your client-side JavaScript code you want to send HTTP requests to anothe
 * [sop-and-cors.pptx](sop-and-cors.pptx)
 
 ## Recommended reading
-* [Authoritative guide to CORS (Cross-Origin Resource Sharing) for REST APIs ](https://www.moesif.com/blog/technical/cors/Authoritative-Guide-to-CORS-Cross-Origin-Resource-Sharing-for-REST-APIs/#)
-    * This is an easy to read introduction to CORS.
+* [How to win at CORS](https://jakearchibald.com/2021/cors/)
 * [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
     * This is a bit more technical to read, but it explains all the details.
-* [https://www.w3.org/TR/cors/](CORS Specification)
+* [CORS Specification](https://www.w3.org/TR/cors/)
     * This is very technical but it describes how every little detail works (probably not that interesting to you, but do be aware of its existence).

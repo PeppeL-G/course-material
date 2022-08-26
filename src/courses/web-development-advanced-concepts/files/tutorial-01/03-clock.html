@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>3 Clock</title>
+	<script>
+		
+		document.addEventListener('DOMContentLoaded', function(){
+			
+			const span = document.querySelector('.clock')
+			
+			function updateTime(){
+				
+				const now = new Date()
+				
+				// NOTE: Risky to use String.padStart() (is not supported in som older web browser).
+				const hh = now.getHours().toString().padStart(2, '0')
+				const mm = now.getMinutes().toString().padStart(2, '0')
+				const ss = now.getSeconds().toString().padStart(2, '0')
+				
+				span.innerText = `${hh}:${mm}:${ss}`
+				
+			}
+			
+			setInterval(updateTime, 1000)
+			updateTime()
+			
+		})
+		
+	</script>
+</head>
+<body>
+	
+	<span class="clock"></span>
+	
+</body>
+</html>

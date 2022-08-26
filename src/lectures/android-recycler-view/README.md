@@ -16,4 +16,4 @@ In Android, we have been able to use the `ListView` from day 1 to display a list
 * The Android Developer's Guide:
   * [Create dynamic lists with RecyclerView](https://developer.android.com/guide/topics/ui/layout/recyclerview)
 * In the course book *Elements of Android Jetpack*:
-  * [Employing RecyclerView](https://wares.commonsware.com/app/internal/book/Jetpack/page/chap-rv-001.html)
+  * [Employing RecyclerView](https://commonsware.com/Jetpack/pages/chap-rv-001.html)

@@ -14,3 +14,6 @@ Use npm to install libraries/packages you can use in your Node.js application.
 
 ## Recommended reading
 * [Getting packages from the registry](https://docs.npmjs.com/packages-and-modules/getting-packages-from-the-registry) on npm's website
+* In many cases it is better to write your own code instead of using many small npm packages. The following two pages gives an example of why:
+    * [How one programmer broke the internet by deleting a tiny piece of code](https://qz.com/646467/how-one-programmer-broke-the-internet-by-deleting-a-tiny-piece-of-code/)
+    * [left-pad.io](http://left-pad.io/)

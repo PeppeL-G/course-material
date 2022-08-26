@@ -21,8 +21,12 @@ The [Project Grading Guidelines](project-grading-guidelines/) page contains some
 
 In your work you should also write a report explaining how your application is implemented. The report will be a living document throughout the course, meaning that you will continuously improve and add content to it as the course proceeds. The Word file [project-report-template.docx](files/project-report-template.docx) contains more information about what the report should cover.
 
+
+
+
+
 ## Part 1: Joining a project group
-The project work should be carried out in groups of 3 students each. Let the examiner know who you are working with by joining one of the [Project Groups](https://ju.instructure.com/courses/3421/groups#tab-3281) on Canvas.
+The project work should be carried out in groups of 3 students each. Let the examiner know who you are working with by joining one of the [Project Groups](https://ju.instructure.com/courses/4825/groups) on Canvas.
 
 If you can't find someone to work with, send the course coordinator an email at [Peter.Larsson-Green@ju.se](mailto:Peter.Larsson-Green@ju.se) using the template shown in <FigureNumber /> below (you just need to replace `XXX` with your specific values).
 
@@ -42,6 +46,8 @@ I got the following grades in the following pre-requisite courses (or similar):
  - Data Structures and Algorithms: XXX
  - Object-Oriented Programming: XXX
  - Object-Oriented Software Development (with Design Patterns): XXX
+
+Thanks!
 ```
 
 </Figure>
@@ -52,7 +58,30 @@ If you don't care about who you are matched with, you just need to enter your na
 After you have joined a Project Group you should each day you work with the project write an entry in your diary. Do not only write about what you have done, but also write about what discussions you had, which disagreement you had, how the work was divided, how you felt about your project partners, what you think is fair/not fair etc.
 :::
 
-## Part 2: Specifying the application idea
+
+
+
+## Part 2: Project Environment
+Before you start working on this part, you are recommended to:
+
+* Read/View the following lectures:
+    * [Teamwork](../../lectures/teamwork/)
+* Read the following short course on Git:
+    * [Git](../git/)
+
+---
+
+The very first thing you should agree on is how you should work together. Especially, you need to some extent document who is doing what in the project, and write that in your report, so the examiner can verify that all group members have contributed ~equally much.
+
+We recommend you to work together per the basis described in the [Teamwork](../../lectures/teamwork/) lecture. That way you will automatically document who has contributed with what by using Git and GitHub issues. But if you want to work together in another way, that is OK too, as long as you can show who has contributed with what in the project.
+
+The *Worklog* chapter in [project-report-template.docx](files/project-report-template.docx) shows an example of how you can report who has contributed with what in the project.
+
+
+
+
+
+## Part 3: Specifying the application idea
 The next thing you should do is to decide what the application you want to create should do. Try to be creative and come up with an application someone wants to use, i.e. an application that solves a real-world problem of some kind. You could for example create an application for an organization you are member of (e.g. a football organization that needs to keep track of members, leaders, teams, training sessions, etc.), or simply an application you would like to use yourself. You can also try asking your family and friends if they need an Android application with some functionality that doesn't exist today.
 
 Another way to come up with an application is to think of something you find boring/dangerous/time consuming, and then try to make it fun/safe/avoid it completely by using an Android application. For example, most people find it boring to wait in line. Maybe you can create an application that makes it fun to wait in line? Or an application that entirely eliminates the need to wait in line?
@@ -75,11 +104,11 @@ If you need some special equipment (such as Beacons, modules for an embedded sys
 ### Requirements
 The application you create must make use of at least one other device in addition to the Android device your application is running on. This could be:
 
-* Any other device you can communicate with using Bluetooth. 
-* Bluetooth beacons.
-* Another Android device running the same application, e.g. using Bluetooth to sync data.
+* Any other device you can communicate with using Bluetooth
+* Bluetooth beacons
+* Another Android device running the same application, e.g. using Bluetooth to sync data
 * A server on the Internet, such as:
-    * A [Cloud Firestore](https://firebase.google.com/docs/firestore/) database (or any Backend-as-a-Service you want).
+    * A [Cloud Firestore](https://firebase.google.com/docs/firestore/) database (or any Backend-as-a-Service you want)
 
 The application may also not be too simple. For example, creating the simplest possible all-to-all chat application synchronizing chat messages using Firestore will not be accepted. But often ideas like this one can quite easily be made more complex by adding functionalities to it. For example, in this case one could also add support for one-to-one chats, group chats, friends chat, etc.
 
@@ -91,37 +120,60 @@ Note that your report is a living document throughout the course. What you write
 Do not forget to write an entry in your diary each day you have done some work on your project. Do not only write about what you have done, but also write about what discussions you had, which disagreement you had, how the work was divided, how you felt about your project partners, what you think is fair/not fair etc.
 :::
 
-## Part 3: Creating Mockups
-Start with this part of the Project Work when Martin Lindh has had his first lecture with you about Material Design and prototyping in Adobe XD.
 
-Create mockups of the graphical user interface. When you are done, show your mockups to a lab assistant at one of the lab sessions. If the lab assistant can't understand how your application will work in the end on his own jut by looking at your mockups, they or the graphical user interface is not good enough and needs to be improved.
 
-When your mockups are good enough for the lab assistant to understand how the application will work in the end, go to [the examiner's Bookable Doodle Calendar](https://doodle.com/mm/peterlarssongreen719/android-development) and choose a meeting slot you can meet him. At the meeting, present what you have written in the report so far, and what your mockups look like. You only have 15 minutes to do this, so be sure to come prepared and present it in an efficient way. Before the meeting, submit the assignment [Application Idea](https://ju.instructure.com/courses/3421/assignments/12890?module_item_id=75653) on Canvas with the current version of your report and your mockups.
 
-The examiner will either approve or disapprove your application idea. If he approves it, he will approve you on the assignment [Application Idea](https://ju.instructure.com/courses/3421/assignments/12890?module_item_id=75653) on Canvas. If he disapproves it, you need to come back another time (use the examiner's Bookable Doodle Calendar again) after you have changed it according to the examiner's feedback. If you haven't been approved on it after the second meeting, you can still pass the project work, but the examiner won't have any more time trying to estimate if the application you create will be advanced enough for this course until you submit the final version of it at the end of the course.
 
-::: tip Note!
-It may take some time before you manage to get a meeting with the examiner. If you want, you can start implementing the application (continue on next part of the project work) before the examiner has approved your application idea. If he disapproves it, it is most likely because your application is a bit too simple to implement, so the changes you need to do will most likely be to add (and not change existing) functionality.
+## Part 4: Creating Mockups
+Start with this part of the Project Work when Martin Lindh has had his lecture with you about graphical user interface design and prototyping.
+
+Create mockups of the graphical user interface. Then present these to "the rest of the class" (in smaller groups) at one of the following sessions:
+
+* 7 February Monday 15:00-15:45
+* 7 February Monday 16:00-16:45
+* 8 February Tuesday 10:00-10:45
+* 8 February Tuesday 11:00-11:45
+
+To distribute you, one from each project group should join the corresponding [Mockup Presentation Session](https://ju.instructure.com/courses/4825/groups) group on Canvas. At the presentation, you will receive feedback on your mockups from Martin and the audience.
+
+After having viewed your presentation, the audience should have a very good understanding of:
+
+1. The problem you try to solve
+2. How you intend to solve the problem
+3. How users will use the app to solve the problem (i.e. show your mockups)
+
+Your presentation (including feedback from the audience and Martin) may take at most 9 minutes. Using 3-4 minutes for the presentation and 5-6 minutes for feedback and discussions is probably a good balance.
+
+::: tip Not examination!
+The mockup presentation sessions are not part of any examination test, they are just learning activities to help you get better at designing graphical user interfaces, so attendance is not mandatory, but we strongly recommend all groups to attend one session so you can get some feedback on your graphical user interface from Martin.
 :::
 
-## Part 4: Implementing the Application
+After the presentation session, go to [the examiner's Bookable Doodle Calendar](https://doodle.com/mm/peterlarssongreen719/android-project-meeting) and choose a meeting slot you can meet him. At the meeting, present what you have written in the report so far, and what your mockups look like. You only have 15 minutes to do this, so be sure to come prepared and present it in an efficient way. Before the meeting, submit the assignment [Application Idea](https://ju.instructure.com/courses/4825/assignments/25232) on Canvas with the current version of your report and your mockups.
+
+The examiner will either approve or disapprove your application idea. If he approves it, he will approve you on the assignment [Application Idea](https://ju.instructure.com/courses/4825/assignments/25232) on Canvas. If he disapproves it, you need to come back another time (use the examiner's Bookable Doodle Calendar again) after you have changed it according to the examiner's feedback. If you haven't been approved on it after the second meeting, you can still pass the Project Work, but the examiner won't have any more time trying to estimate if the application you create will be advanced enough for this course until you submit the final version of it at the end of the course.
+
+::: tip Note!
+It may take some time before you manage to get a meeting with the examiner. If you want, you can start implementing the application (continue on next part of the Project Work) before the examiner has approved your application idea. If he disapproves it, it is most likely because your application is a bit too simple to implement, so the changes you need to do will most likely be to just add functionality.
+:::
+
+
+
+
+
+
+
+## Part 5: Implementing the Application
 ::: danger Note!
 **Before you start implementing the application you must complete and present the [Laboratory Work](laboratory-work/) to a teacher!**
 
-If a student hasn't passed the `Laboratory Work` when you submit your project work for grading at the end of the course, that student will be taken out of the group and forced to do her own project work from scratch.
+If a student hasn't passed the `Laboratory Work` when you submit your project work for grading at the end of the course, that student will be taken out of the group and forced to do her own project from scratch.
 
 If a student presents her laboratory work at the end of the course, she will not get any credits for her contribution to the project work up until that point in time, which most likely means she won't pass the project work.
 
-PLEASE make this easy for all of us: complete and present your `Laboratory Work` before continuing past this point. **The examiner has no problem failing students that can't follow this simple instruction.**
+PLEASE, make this easy for all of us: complete and present your `Laboratory Work` before continuing past this point. **The examiner has no problem failing students that can't follow this simple instruction.**
 :::
 
-Start implementing your application using Android Studio. We recommend you to version control your code using a version control system, such as Git. Using a version control system is not a requirement for the project work, but it will make it much easier for you to share the code with each other. Use private repositories if possible. Both [GitHub](https://github.com) and [GitLab](https://gitlab.com) offers free private repositories.
-
-::: tip Learn Git
-There's a small [Git course](../git/) available on this website teaching you the basics you need to know about Git to use it. The book [Pro Git](https://git-scm.com/book/en/v2) is excellent reading for those who want to learn more about Git.
-:::
-
-The first Android lectures will primarily focus on how to implement the graphical user interface in Android applications, so you are recommended to start by implementing that part of your application. Learning how to properly implement the graphical user interface (properly handling runtime configuration changes) is also the most difficult part of learning Android development.
+Start implementing your application using Android Studio. The first Android lectures will primarily focus on how to implement the graphical user interface in Android applications, so you are recommended to start by implementing that part of your application. Learning how to properly implement the graphical user interface (properly handling runtime configuration changes) is also the most difficult part of learning Android development.
 
 Initially, see it as you are creating a prototype of your application,  where you only bother to implement the GUI. This is quite common to do for bigger applications, where the GUI/user experience needs to be evaluated before the actual application is implemented. 
 
@@ -151,13 +203,18 @@ Sitting three students at one computer and only one writing the code is not effi
 
 We recommend you to not start too advanced. To pass the course, it is more important that the functionality you implement works properly than that the graphical user interface looks beautiful. Therefore, it is probably better to start with a simple graphical user interface and then improve it at the end of the course if you have time for it.
 
-If you want to get grade 4 or 5, you must come and see the examiner for another meeting to discuss your progress. Your work will not be graded, but this is an extra chance for you to get some feedback on your work before the final submission at the end of the course. If you are aiming for grade 3 you are welcome to book one of these meetings as well, but it is only mandatory for grade 4 and 5. The meeting should take place week 9 or 10. Use [the examiner's Bookable Doodle Calendar](https://doodle.com/mm/peterlarssongreen719/android-development) again the same way as before. After the meeting, the examiner will approve you on the assignment [Halfway Meeting](https://ju.instructure.com/courses/3421/assignments/12893?module_item_id=75672) on Canvas.
+If you want to get grade 4 or 5, you must come and see the examiner for another meeting to discuss your progress. Your work will not be graded, but this is an extra chance for you to get some feedback on your work before the final submission at the end of the course. If you are aiming for grade 3 you are welcome to book one of these meetings as well, but it is only mandatory for grade 4 and 5. The meeting should take place year week 9, 10 or beginning of 11. Use [the examiner's Bookable Doodle Calendar](https://doodle.com/mm/peterlarssongreen719/android-project-meeting) again the same way as before. After the meeting, the examiner will approve you on the assignment [Halfway Meeting](https://ju.instructure.com/courses/4825/assignments/25233) on Canvas.
 
 ::: danger Remember!
 Just implementing your application idea is not good enough to pass the project work. As you can read on the [Project Grading Guidelines](./project-grading-guidelines) page, you must also gather some points by implementing "extra functionalities" to pass.
 :::
 
-## Part 5: Presentation
+
+
+
+
+
+## Part 6: Presentation
 Your work should be presented to "the rest" of the class (in smaller groups) at the end of course. All members in the group need to be present at the presentation. At the presentation, you should:
 
 * Explain the problem you have tried to solve with your application.
@@ -175,14 +232,21 @@ The reasons you should present your application to the rest of the class are two
 * To learn what type of Android applications you can create (you have all taken the same course, so you should all be able to create the applications the other students have created).
 * To practice your presentation technique. This is not limited to improving your speaking skills, but also includes improving your skills to explain how something works to others, and to prepare and carry out presentations (your future customers will appreciate such skills).
 
-Join one of the [Project Presentation Sessions](https://ju.instructure.com/courses/3421/groups#tab-3283) on Canvas to let the examiner know which project presentation session you want to attend to. Only one in your Project Group should do this.
+Join one of the [Project Presentation Sessions](https://ju.instructure.com/courses/4825/groups#) on Canvas to let the examiner know which project presentation session you want to attend to. Only one in your Project Group should do this.
 
-Due to the corona-situation, the presentations will be given online in [Peter's Zoom room](https://ju.instructure.com/courses/3421/pages/zoom-links?module_item_id=76266). Those that need to run your application on a real Android device (such as those of you using Bluetooth) can use [Vysor](https://www.vysor.io/) (or similar software) to mirror the screen on the Android to your computer. The free version should suffice.
+After you have presented your work the teacher will mark you as approved on the assignment [Presentation](https://ju.instructure.com/courses/4825/assignments/25234) on Canvas.
 
-After you have presented your work the teacher will mark you as approved on the assignment [Presentation](https://ju.instructure.com/courses/3421/assignments/12891) on Canvas.
 
-## Part 6: Final Submission
-When you are done with your project work, upload it to Canvas for grading by submitting the assignment [Final Submission](https://ju.instructure.com/courses/3421/assignments/12892). Submit your work per the instructions on that page (read them in advance!).
+
+
+
+
+## Part 7: Final Submission
+When you are done with your project work, upload it to Canvas for grading by submitting the assignment [Final Submission](https://ju.instructure.com/courses/4825/assignments/25235). Submit your work per the instructions on that page (read them in advance!).
+
+
+
+
 
 ## Project idea: Flee Market Manager
 A Flee Market is a marketplace where people can sell things. These exists in different variations, but things that usually are sold at a flea market includes:

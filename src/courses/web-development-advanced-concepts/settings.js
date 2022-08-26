@@ -1,5 +1,5 @@
 module.exports = {
-	name: "Web Development - Advanced Concepts 2021",
+	name: "Web Development - Advanced Concepts 2022",
 	showLink: true,
 	pages: [
 		"index.html",

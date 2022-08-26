@@ -5,7 +5,7 @@
     credits="7.5"
     course-coordinator="Peter Larsson-Green"
     examiner="Peter Larsson-Green"
-    canvas-course-id="3421"
+    canvas-course-id="4825"
 />
 
 ## Introduction
@@ -58,7 +58,7 @@ graph TD
     name="Martin Lindh"
     photo="martin-lindh.jpeg"
     :roles='["Lecturer"]'
-    description="Experienced designer."
+    description="Experienced graphical designer."
     email="martin.lindh@ju.se"
     phone="036 - 10 19 23"
     website="https://ju.se/en/personinfo.html?sign=lindma"
@@ -80,7 +80,7 @@ graph TD
     name="Rigmor Skoglund"
     photo="rigmor-skoglund.jpeg"
     :roles='["Teacher in Gruppdynamic"]'
-    description="Not directly involved in this course, but course coordinator for the course Gruppdynamic. Only the Swedish students will meet her."
+    description="Not directly involved in this course, but course coordinator for the course Gruppdynamik. Only the Swedish students will meet her."
     email="rigmor.skoglund@ju.se"
     phone="036 - 10 19 10"
     website="https://ju.se/en/personinfo.html?sign=SKORIG"
@@ -136,18 +136,22 @@ Display an ability to evaluate the Android system architecture
 Here are short introduction to the learning activities offered in the course.
 
 ### Recorded Lectures
-Most lectures will be pre-recorded and available online and teach you most of what you need to learn to pass the examination tests. Some lectures will be available at course start, but most will be published as the course proceed. 
+The lectures will be pre-recorded and teach you most of what you need to learn to pass the examination tests. Some lectures will be available at course start, but most will be published as the course proceed. 
 
 ### Tutorials
-The recorded lectures will be quite theoretical and focus on specific techniques. The tutorials will be given on Zoom and show you how you can combine different techniques taught in the recorded lectures to build Android apps. 
+The recorded lectures will be quite theoretical and focus on specific techniques. The tutorials will be given on Campus and show you how you can combine different techniques taught in the recorded lectures to build Android apps. 
 
 ### Lectures
-Martin Lindh will give you two online lectures focused on Material Design and prototyping in Adobe XD.
+Martin Lindh will give you one lecture on Campus focused on designing graphical user interfaces and creating prototype applications for smartphones.
 
 ### Lab Sessions
-Each week you may attend a 4 hours lab session. At the lab session you may ask the teacher there for help with your laboratory work and your project work. When you have completed your laboratory work you should also present your solution to a teacher at a lab sessions. This year the lab sessions will be given online due to the corona restrictions.
+Each week you may attend a 4 hours lab session. At the lab session you may ask the teacher there for help with your laboratory work and your project work. When you have completed your laboratory work you should also present your solution to a teacher at a lab sessions.
 
-There are 4 different lab sessions each week, but you may only come to one of them. To distribute you, join one of the [Lab Session Groups](https://ju.instructure.com/courses/3421/groups#tab-3282) on Canvas. First come, first served. Feel free to attend the other lab sessions as well, but students that have signed up for a specific lab session should of course be prioritized by the teacher.
+There are 4 different lab sessions each week, but you may only come to one of them. To distribute you, join one of the [Lab Session Groups](https://ju.instructure.com/courses/4825/groups) on Canvas. First come, first served. Feel free to attend the other lab sessions as well, but students that have signed up for a specific lab session should of course be prioritized by the teacher.
+
+::: warning One lab group is online using Zoom!
+One of the lab groups have their sessions online using Zoom. Students that don't want to come to school should join this lab session group, and other students that show Covid symptoms can use this session the weeks they can't come to school.
+:::
 
 ## Examination Tests
 The course contains two examination tests.
@@ -182,7 +186,6 @@ The following [CommonsWare’s Books](https://commonsware.com/catalog):
 * [Exploring Android](https://commonsware.com/AndExplore)
 * [Elements of Android Q](https://commonsware.com/Q)
 
-They are all available online for $20 through [the Warescription program](https://commonsware.com/warescription).
 
 ## Time Plan
 A time plan is available on the page [Time Plan](time-plan/).

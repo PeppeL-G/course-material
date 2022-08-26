@@ -19,5 +19,5 @@ The following pages from Android Developers Guide:
 * [Take photos](https://developer.android.com/training/camera/photobasics)
 
 The following chapters from the course book The Busy Coder's Guide to Android Development:
-* [Content Provider Theory](https://wares.commonsware.com/app/internal/book/Android/page/chap-cptheory-001.html)
-* [Using the Camera via 3rd-Party Apps](https://wares.commonsware.com/app/internal/book/Android/page/chap-camera-001.html)
+* [Content Provider Theory](https://commonsware.com/Android/)
+* [Using the Camera via 3rd-Party Apps](https://commonsware.com/Android/)

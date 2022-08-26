@@ -14,6 +14,6 @@ So, you want your application to keep on running even if the user leaves your ac
 
 ## Recommended reading
 The following chapters from the course book *The Busy Coder's Guide to Android Development*:
-* [Services and the Command Pattern](https://wares.commonsware.com/app/internal/book/Android/page/chap-services-001.html)
+* [Services and the Command Pattern](https://commonsware.com/Android/)
 
 The [Android Developers Guide's page about Services](https://developer.android.com/guide/components/services).

@@ -1,5 +1,5 @@
 module.exports = {
-	name: "Android Development 2021",
+	name: "Android Development 2022",
 	showLink: true,
 	pages: [
 		"index.html",
@@ -11,5 +11,6 @@ module.exports = {
 		"project-work",
 		"project-grading-guidelines",
 		"time-plan",
+		"feedback",
 	],
 }

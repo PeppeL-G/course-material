@@ -10,6 +10,6 @@ Let's go through how the two main views for top level destinations works in Andr
 
 ## Recommended reading
 The following chapters from the course book *Elements of Android Jetpack*:
-* [Navigating Your App](https://wares.commonsware.com/app/internal/book/Jetpack/page/chap-nav-001.html)
+* [Navigating Your App](https://commonsware.com/Jetpack/pages/chap-nav-001.html)
 
 The [Android Developers Guide's page about Navigation Components](https://developer.android.com/guide/navigation).
