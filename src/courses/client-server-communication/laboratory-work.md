@@ -1,275 +1,277 @@
-# Lab Instructions
+# Laboratory Work
 This page contains instructions for the examination test *Laboratory Work*. It consists of two parts, and both of them need to be completed and presented orally to a teacher at a lab session before you pass the examination test.
 
 ## Installing Required Software
-__If you work on the computers in E2404, E2432 or E2433__, all required software should already be installed for you, so no need to install anything yourself.
+__If you work on the computers in E2432 or E2433__, all required software should already be installed for you, so no need to install anything yourself.
 
-__If you work on a school computer in any other room__, you need to manually install the required software through the Software Center application (unless someone already has done that on the specific computer you sit at).
+__If you work on a school computer in any other room__, you need to manually install the required software through the *Software Center* application (unless someone already has done that on the specific computer you sit at).
 
-__If you work on your own private computer__, you need to download and install all required software yourself. In this course, we only use free software available for both Windows, Mac and Linux.
+__If you work on your own private computer__, you need to download and install all required software yourself. In this course, we use only free software available for both Windows, Mac and Linux.
 
 The required software is:
 
 * [Node.js](https://nodejs.org/)
-    1. Use the Current version.
+    1. Use the newest LTS version
     2. In the installation process, make sure the following features are installed (they are checked by default, so simply don't uncheck them!):
         * Node.js runtime
         * npm package manager
         * Add to PATH
-    3. To verify that Node.js has been successfully installed, run the command `node -v` in a shell (you might need to restart your computer first). If it has been installed successfully, you should see the version of Node.js that was installed, something like `v11.6.0`.
+    3. To verify that Node.js has been successfully installed, run the command `node -v` in a shell (you might need to restart your computer first). If it has been installed successfully, you should see the version of Node.js that was installed, something like `v16.17.0`
 * [npm](https://www.npmjs.com/)
     * This one is installed along with Node.js, so you don't need to install it separately. However, you might want to update it to the latest version (not required):
         * [Update npm instructions](https://docs.npmjs.com/troubleshooting/try-the-latest-stable-version-of-npm)
-    * To verify that npm has been successfully installed, run the command `npm -v` in a shell (you might need to restart your computer first). If it has been installed successfully, you should see the version of npm that was installed, something like `6.9.0`.
-* [Vue CLI](https://cli.vuejs.org/guide/installation.html#installation)
-    * After you have installed Node.js and npm, simply run the command `npm install -g @vue/cli` in a shell to install Vue CLI.
-    * To verify that Vue CLI has been successfully installed, run the command `vue -V` in a shell. If it has been installed successfully, you should see the version of Vue CLI that was installed, something like `3.7.0`.
+    * To verify that npm has been successfully installed, run the command `npm -v` in a shell (you might need to restart your computer first). If it has been installed successfully, you should see the version of npm that was installed, something like `8.18.0`
 
 The following software tools are not required (use whichever tools you want), but recommended:
 
 * [Visual Studio Code](https://code.visualstudio.com/)
-    * IDE with good support for writing, running and debugging Node.js and JavaScript code.
+    * IDE with good support for writing, running and debugging Node.js and JavaScript code
+    * [On Mac you need to manually add the `code` command](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
 * [DB Browser for SQLite](https://sqlitebrowser.org/)
-    * Database management tool you can use to visualize/debug the database. An alternative is to install and use [the SQLite extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite).
+    * Database management tool you can use to visualize/debug the database. An alternative is to install and use [the SQLite extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite)
 * [Postman](https://www.getpostman.com/)
-    * App you can use to send custom HTTP requests to a web application.
+    * App you can use to send custom HTTP requests to a web application
 
-## Part 1 - The Tool App
-The goal with this part of the laboratory work is to teach you how to use Vue to build a Single-Page Application. Vue is a quite big framework (it would be possible to have a single 7.5 credit course just to teach all there is to know about Vue), so you are only expected to learn and use the basics (what has been taught in this course), which will be enough to create quite advanced and good Single-Page Applications.
-
-The Single-Page Application you should create will consist of different pages, each containing a useful tool of some kind such as a simple calculator, a clock, a counter, etc.
-
-### Pre-requisites
-Before you start working on this part you are expected to view the following lectures:
+## Lab 1: The Tool App
+Before you start working on this part, you are recommended to:Before you start working on this part you are expected to view the following lectures:
 
 * [Using Shells](../../lectures/using-shells/)
 * [Vue](../../lectures/vue/)
 
 The tutorial about Vue will also help you learn the basics.
 
+---
+
+The goal with this part of the laboratory work is to teach you how to use Vue to build a Single-Page Application. Vue is a quite big framework (it would be possible to have a single 7.5 credit course just to teach you all there is to know about Vue), so you are only expected to learn and use the basics (what is taught in this course), which will be enough to create quite advanced and good Single-Page Applications.
+
+The Single-Page Application you should create will consist of different pages, each containing a useful tool of some kind such as a simple calculator, a clock, a counter, etc.
+
 ### Creating a new Vue application
-Start by using the Vue CLI program to create a new folder containing the initial source files for the Vue application you should create:
+Vue applications are preferably implemented in [Single-File Components](https://vuejs.org/guide/scaling-up/sfc.html) files (`.vue` files), so you have all the HTML, CSS and JS code a Vue component consists of in one and the same file. However, web browsers don't understand these type of files, so the `.vue` files needs to be transpiled into JS code. For that you can use a module bundler, and in this course we will use the module bundler called [Vite](https://vitejs.dev/).
 
-1. Open a shell, for example _Windows PowerShell_ in Windows.
-2. Navigate to the folder where you want to create a new folder containing the source code for the Vue application. The following commands might be helpful:
-    * `pwd` - Show which folder you are currently standing in.
-    * `mkdir projects` - Create a new sub-folder named `projects` in the folder you are currently standing in.
-    * `cd projects` - Go into the sub-folder named `projects`
-    * `cd ../` - Go back to the parent folder
-3. Create the root folder for your project's source files by running the following command:
-    * `vue create project-name` - Create a new sub-folder named `project-name` containing the source files for your Vue application (change `project-name` to something else (avoid using spaces))
-    * In the configuration process, make the following choices:
-        1. Please pick a preset: __Manually select features__
-        2. Check the features needed for your project: __Only select _Router___.
-            * Selecting more is OK, but it will produce more code making it harder to understand the initial source code.
-        3. Use history mode for router: __no__
-        4. Where do you prefer placing config for Babel, PostCSS, ESLint, etc.: __In package.json__
-4. Go into the root folder of your Vue application by running the following command:
-    * `cd project-name` - Go into the sub-folder named `project-name` (use the same name as before)
-5. Open the application's root folder in a code editor of your choice, e.g.:
-    * `code .` - Start Visual Studio Code with the application's root folder opened in the Explorer panel
-6. Start the Vue development server which will immediately build your Vue application and each time you change the source code in your Vue application by running the following command:
-    * `npm run serve` - Start the Vue development server
-7. Visit [http://localhost:8080](http://localhost:8080) in a web browser to see how your Vue application works.
-8. Try changing some code in one of the `*.vue` files. When you save your changes, the server will immediately re-build the Vue application and push it to the web browser, so when you go back to your web browser you should be able to see the changes almost immediately.
+If you are an experienced developer and want to try to setup a Vue 3 project from scratch on your own, feel free to do that. [Here](https://vuejs.org/guide/quick-start.html#with-build-tools) are some guiding instructions for your. But we recommend most students to instead simply copy and continue working on the code available in the starter project [Vue 3 Option API Starter](https://github.com/PeppeL-G/vue-3-options-api-starter). Copy/Clone that code to your computer, and then in the project folder, run the following commands:
 
-Let's quickly go through the most important files and folders your Vue application consists of:
+1. `code .` - Start Visual Studio Code with the application's root folder opened in the Explorer panel
+    * In Visual Studio Code, install the recommended extensions you might be prompted to do (will make it easier to write Vue code)
+2. `npm install` - Installs all npm packages required to run the app
+3. `npm run dev` - Starts Vite
+4. Open the URL shown in the shell (something like http://127.0.0.1:5173/) in a web browser to see how your Vue application works
+5. Try changing some of the HTML/CSS code in one of the `.vue` files. When you save your changes, Vite will immediately transpile the code in the `.vue` file and push the new JS code to the web browser, which will immediately apply the changes, so you can see the result directly
+6. When you are done and want to stop Vite form running, hold down `[CTRL]` and press `[C]` (works on Windows, Mac might have other combination)
 
-:::: code-group
-::: /public/*
+Let's quickly go through the most important files and folders the Vue 3 Option API Starter project consists of:
 
-In this folder you can place static files (such as images) and then refer to them in the other source files using absolute paths. Often better to use the `/src/assets/` folder instead.
-
-:::
-::: code-group-item /public/index.html
-
-Contains the fundamental HTML code for your Single-Page Application. This is the only HTML file you will have in your entire application.
-
-The most important part is `<div id="app"></div>`. This is the element Vue will use to render its dynamic content. Often you don't need to change anything in this file, but it can be useful to make changes to the `<head>` element (change `<title>`, load files from CSS framework using more `<link>` elements or from JavaScript libraries using `<script>` elements, etc.).
+#### `index.html`
+`index.html` acts as the entry point to the Vue app. The web web browser will start by requesting this file, which mostly will just tell the web browser to request other files required to display the app.
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>My Website</title>
-  </head>
-  <body>
-    <noscript>
-      <strong>This website only works if you have JavaScript enabled.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" href="/favicon.ico">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Vite App</title>
+	</head>
+	<body>
+		<div id="app"></div>
+		<script type="module" src="/src/main.js"></script>
+	</body>
 </html>
 ```
 
+`<div id="app"></div>` is where the Vue app will mount/attach itself on the webpage later when it starts. The rest of the code here is ordinary HTML.
+
+
+
+#### `public` folder
+The `public` folder contains static files (typically images) that will be left as they are (never processed by Vite in any way, and never renamed by Vite) in the root folder of the app. Currently it only contains the `favicon.ico` file, but you can put other files here too if you want. It's usually better to put files in the `src/assets` folder. Those files Vite is allowed to process and can optimize (such as giving them shorter names).
+
+
+
+#### `src/assets` folder
+Put static files here (such as images) Vite is allowed to process and rename.
+
+For example, if you put the file `my.css` in the `public` folder and add `<link rel="stylesheet" href="my.css">` to your HTML code, the web browser will fetch the CSS file as it is. But if you instead put the file `my.css` in the `src/assets` folder and add `<link rel="stylesheet" href="/src/assets/my.css">` to your HTML code, the when the web browser requests the file Vite will send back an optimized version of the file (such as removing unnecessary white-space characters), which is much better.
+
+::: warning Optimization only in production builds
+If actually try out what is written above, the CSS file might not be optimized, but serve as it is. That is because Vite runs in development mode, and while developing, it is easer to debug code if it hasn't been optimized. However, if you would build the app in production mode, then Vite would apply optimization techniques, and your code would be optimized.
 :::
-::: code-group-item /src/main.js
 
-This is the file that first run when your Vue application starts. It is primarily used to configure the Vue application. Currently it:
 
-1. Adds routing capabilities to the application (as they are defined in `/src/router.js`).
-2. Tells Vue that `/src/App.vue` is the main Vue component that should be shown.
-3.  Tells Vue that the dynamic parts should be inserted into the HTML element in `/public/index.html` with the id `app`.
+
+#### `src/main.js`
+This is the main entry point for your JavaScript code. It's responsible to initialize your Vue app and mount/attach it to the webpage. Currently it tells Vue that the `App.vue` component should be mounted/attached to the element on the webpage with id `app`. It also add routing capabilities to the Vue app (the router is defined in `src/router.js`).
 
 ```js
-import Vue from 'vue'
+// Vite supports importing CSS files like this (will be pushed to the web browser).
+import './assets/main.css'
+
+import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router'
+import router from './router.js'
 
-Vue.config.productionTip = false
+const app = createApp(App)
 
-new Vue({
-  router,
-  render: function (h) { return h(App) }
-}).$mount('#app')
+app.use(router)
+
+app.mount('#app')
 ```
 
-:::
-::: code-group-item /src/router.js
 
-This file tells Vue what main content to show (which Vue component to use) on the page depending on which URI the user navigates to. Initially it says:
-
-* The URI `/` should show the Vue component `/src/views/Home.vue` as the main content.
-* The URI `/about` should show the Vue component `/src/views/About.vue` as the main content.
-
-```js
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from './views/Home.vue'
-import About from './views/About.vue'
-
-Vue.use(Router)
-
-export default new Router({
-  routes: [{
-    path: '/',
-    name: 'home',
-    component: Home
-  }, {
-    path: '/about',
-    name: 'about',
-    component: About
-  }]
-})
-```
-
-:::
-::: code-group-item /src/App.vue
-
-This is the main Vue component that is shown. It acts as the layout and will insert the main content on the page where you use the special Vue component `<router-view/>`. To insert links that changes the main content when clicked on use the special Vue component `<router-link to="/THE-URI">LINK TEXT</router-link>`
+#### `src/App.vue`
+This is the root component the Vue app consists of. Currently it shows how to import and use the `Footer` component from the `src/components` folder. It also add links leading to different pages using the `RouterLink` component, and it displays the main content on the current page using the `RouterView` component (these two components are pre-registered as global components, so we don't need to import them). To learn which main content that is shown on which page, take a look at the `src/router.js` file.
 
 ```html
-<template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
-</template>
-```
-
-:::
-::: code-group-item /src/views/*.vue
-
-The Vue components in this folder (`Home.vue` and `About.vue`) represent the main content on the various pages. They are also called *views*.
-
-Sample code of `/src/views/Home.vue` (which in turn makes use of the Vue component `HelloWorld.vue` from the folder `/src/components/`):
-
-```html
-<template>
-  <div class="home">
-    <h1>This is home</h1>
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
-</template>
-
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import Footer from './components/Footer.vue'
 export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-```
-
-:::
-::: code-group-item /src/components/*.vue
-
-The Vue components in this folder represent Vue components that can be re-used in other Vue components. As example, if you want to have a login form at multiple different places in your application you could create a Vue component in this folder (e.g. `Login.vue`) containing that login form/functionality, and then refer to this component in any other Vue component where you want the login form to appear.
-
-Sample code of `/src/components/HelloWorld.vue`:
-
-```html
-<template>
-  <div class="hello">
-    <h1>{{msg}}</h1>
-    <p>How are you?</p>
-  </div>
-</template>
-
-<script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+	
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<template>
+	
+	<header>
+		My app!
+	</header>
+	
+	<nav>
+		<RouterLink to="/">Home</RouterLink>
+		<RouterLink to="/about">About</RouterLink>
+	</nav>
+	
+	<main>
+		<RouterView></RouterView>
+	</main>
+	
+	<Footer :copyrightYear="2022"></Footer>
+	
+</template>
+
+<!-- The "scoped" attribute here will make the CSS selectors only
+     match HTML elements in this Vue component, and never any HTML
+     elements in other Vue components. -->
 <style scoped>
-* {
-  color: red;
+nav{
+	background-color: yellow;
 }
 </style>
 ```
 
-:::
-::: code-group-item /src/assets/*
 
-In this folder you can place static files (such as images) and then refer to them in the other source files using relative paths.
 
-:::
-::::
+#### `src/router.js`
+This file tells Vue which Vue Component to show as the main content on the page depending on which URL the user navigates to. Currently it says:
+
+* The URL `/` should show the Vue component `/src/views/Home.vue` as the main content
+* The URL `/about` should show the Vue component `/src/views/About.vue` as the main content
+
+The Vue components used as the main content for different URLs this way are called *Views*, and put in the `src/views` folder.
+
+```js
+import { createRouter, createWebHistory } from 'vue-router'
+import HomeView from './views/HomeView.vue'
+import AboutView from './views/AboutView.vue'
+
+const router = createRouter({
+	history: createWebHistory(),
+	routes: [
+		{path: '/',      component: HomeView},
+		{path: '/about', component: AboutView},
+	],
+})
+
+export default router
+```
+
+
+
+#### The `src/views` folder
+The Vue components in the `src/views` folder (currently `Home.vue` and `About.vue`) represent the main content on the various pages. They are also called *views*.
+
+Sample code of `src/views/Home.vue` is shown below:
+
+```html
+<script>
+export default {
+	
+}
+</script>
+
+<template>
+	<div class="page">
+		<h1>Home</h1>
+		<p>This is the home page!</p>
+	</div>
+</template>
+
+<style scoped>
+.page{
+	background-color: lime;
+}
+</style>
+```
+
+
+
+#### `src/components` folder
+The Vue components in the `src/components` folder represent Vue components that can be re-used in other Vue components. As an example, if you want to have a login form at multiple different places in your application you could create a Vue component in this folder (e.g. `Login.vue`) containing that login form/functionality, and then refer to this component in any other Vue component where you want the login form to appear.
+
+In addition to containing re-usable Vue components, some Vue components are simply very big (many lines of code), and you can break it down into multiple smaller Vue components to get code that is easer to read. An example of this is demonstrated through the `src/components/Footer.vue` component, which is used by `src/App.vue`:
+
+```html
+<script>
+export default {
+	props: {
+		copyrightYear: Number,
+	},
+}
+</script>
+
+<template>
+	<footer>
+		Copyright {{copyrightYear}}
+	</footer>
+</template>
+
+<style scoped>
+</style>
+```
+
+In this example there is not big gain with having `copyrightYear` as a prop (could just as well hardcode it to `2022` in the HTML code instead), but it is used just to show you an example of how you can use a prop in a component.
+
 
 ### Application (layout)
-So `/src/App.vue` is a Vue component that act as the layout for the application. In this component you can use the special Vue component `<router-view/>` to insert the main content at one place, and you can use the special Vue component `<router-link to="/THE-URI">LINK TEXT</router-link>` to insert links to the other "pages"/views (`/src/views/Home.Vue` and `/src/views/About.Vue`).
+So `src/App.vue` is the Vue component that act as the layout for the application. You can use the special Vue component `<RouterView>` to insert the main content at one place, and you can use the special Vue component `<RouterLink to="/THE-URL">LINK TEXT</RouterLink>` to insert links to the other "pages"/views.
 
-Change the layout (change the code in `/src/App.vue`) to contain at least:
+Improve the layout (i.e. the code in `/src/App.vue`) to contain at least:
 
-* A header
-* A navigation menu
+* A proper header
+* A proper navigation menu
 * The main content
-* A footer
+* A proper footer
 
-Design your layout however you want. It's not that important that it's beautiful, the most important thing is that you learn how this component works and should be used. See the rest of the sub-chapters in Part 1 to see which links you need to have in the navigation menu (or the header/footer).
+Design your layout however you want. It's not that important that it's beautiful, the most important thing is that you learn how this component works and should be used. See the rest of the sub-chapters in Lab 1 to see which links you need to have in the navigation menu (or the header/footer).
+
+Also note that some CSS code already exists in `src/assets/main.css`. Feel free to change that code too.
+
+Feel free to structure your code however you want. You may delete `src/components/Footer.vue` if you think that component just makes it more complicated, and you may equally well also add and use other components, such as `src/components/Header.vue` and `src/components/Navigation.vue`, if you want.
 
 ::: tip Be smart/lazy
-Feel free to use a CSS framework such as Bootstrap to design your application. Most CSS frameworks are distributed as npm packages, so often you can just run `npm install ...` to download the source files for the framework and then load them into your application by importing the required CSS and JS files from the npm package you downloaded, but loading them from a Content Delivery Network by adding `<link>` and `<script>` elements in `/public/index.html` works as well.
+Feel free to use a CSS framework such as Bootstrap to design your application. Most CSS frameworks are distributed as npm packages, so often you can just run `npm install XXX` to download the source files for the framework and then load them into your application by importing the required CSS and JS files from the npm package you downloaded in the `src/main.js` file. Loading them from a Content Delivery Network by adding `<link>` and `<script>` elements in `index.html` works as well.
 :::
 
 ### Home & About (static)
 Change `/src/views/Home.Vue` and `/src/views/About.Vue` to be more relevant to your application. It's not that important what they contain, but they should feel like they're part of the application. The goal is simply to practice on using HTML and CSS in your Vue component. 
 
-Feel free to delete `/src/components/HelloWorld.vue`. 
 
 ### Dice (state, conditionals, events)
-Add a new Vue component representing the main content on a "page" that displays a random value between 1 and 6:
+Add a new View component representing the main content on a "page" that displays a random value between 1 and 6:
 
-1. Create a new file called `Dice.vue` in `/src/views/`. To start you can simply copy the content of `Home.vue` and paste it in `Dice.vue`.
-2. Register a route to this new component in `/src/router.js`.
-3. If you haven't already done it, provide a link to the new route by adding `<router-link to="/THE-URI">LINK TEXT</router-link>` to the navigation menu/header/footer in your layout (`/src/App.vue`).
+1. Create a new file called `Dice.vue` in `/src/views/`. To start you can simply copy the content of `Home.vue` and paste it in `Dice.vue`
+2. Register a route to this new component in `/src/router.js`
+3. If you haven't already done it, provide a link to the new route by adding `<RouterLink to="/THE-URL">LINK TEXT</RouterLink>` to the navigation menu/header/footer in your layout (`/src/App.vue`)
 
 Then add the `data` function to `Dice.vue`:
 
@@ -286,15 +288,17 @@ export default {
 </script>
 ```
 
-Then change the HTML code in `Dice.vue` to display `diceValue`. In the HTML code you should also display the text:
+Then change the HTML code in `Dice.vue` to display `diceValue`. Start by simply showing the number as text. If you want, you can have one image for each dice value, and show the corresponding image instead.
 
-* `That was low.` if `diceValue` is 1 or 2.
-* `That was average.` if `diceValue` is 3 or 4.
-* `That was high.` if `diceValue` is 5 or 6.
+In the HTML code you should also display the text:
+
+* `That was low.` if `diceValue` is 1 or 2
+* `That was average.` if `diceValue` is 3 or 4
+* `That was high.` if `diceValue` is 5 or 6
 
 To conditionally display HTML code you can use [the `v-if`, `v-else-if` and `v-else` directives](https://vuejs.org/v2/guide/conditional.html). 
 
-To generate a new random dice value shown on the screen the user needs to go to another "page" and then back again (so the current instance of `Dice.vue` is deleted and then a new instance of it is created and displayed when the user gets back). This is not that convenient for the user. Instead, add an HTML button in `Dice.vue` the user can click on to "throw" the dice again (generate a new random integer between 1 and 6). You need to add a method to your component to handle the click like this:
+To generate a new random dice value shown on the screen, the user currently needs to go to another "page" and then back again (so the current instance of `Dice.vue` is deleted and then a new instance of it is created and displayed when the user gets back). This is not that convenient for the user. Instead, add an HTML button in `Dice.vue` the user can click on to "throw" the dice again (generate a new random integer between 1 and 6). You need to add a method to your component to handle the click like this:
 
 ```html
 <script>
@@ -317,7 +321,7 @@ Inside a method in a Vue component (such as `throwDice` above) we can use the sp
 :::
 
 ### FAQ (loops)
-Add a new Vue component representing the main content on a FAQ "page". The procedure is similar to what you did before.
+Add a new View component representing the main content on a FAQ "page". The procedure is similar to what you did before.
 
 Don't hard code the FAQs in the HTML code in your component. Instead, use the `data()` method and put the FAQs in an array like this:
 
@@ -355,15 +359,15 @@ const minutes = now.getMinutes() // E.g. 4
 const seconds = now.getSeconds() // E.g. 45
 ```
 
-To regularly execute some code, web browsers gives us [the function `setInterval()`](https://www.w3schools.com/jsref/met_win_setinterval.asp), which we can pass a callback function and an interval to. The web browser will then repeatedly call our callback function with that interval. However, if one Vue component calls `setInterval()` to regularly update itself, and then that component is deleted, then we need to tell the web browser to stop calling our callback function, because we don't need that anymore. To do that, web browsers also gives us [the function `clearInterval()`](https://www.w3schools.com/jsref/met_win_clearinterval.asp). To call `setInterval()` when a Vue component is created we can use the `created()` method, and to call `clearInterval()` when a Vue component is destroyed we can use the `destroyed()` method:
+To regularly execute some code, web browsers gives us [the function `setInterval()`](https://www.w3schools.com/jsref/met_win_setinterval.asp), which we can pass a callback function and an interval to. The web browser will then repeatedly call our callback function with that interval. However, if one Vue component calls `setInterval()` to regularly update itself, and then that component is deleted (for example the user clicks on a link leading to another View component), then we need to tell the web browser to stop calling our callback function, because we don't need that anymore. To do that, web browsers also gives us [the function `clearInterval()`](https://www.w3schools.com/jsref/met_win_clearinterval.asp). To call `setInterval()` when a Vue component is created we can use the `mounted()` method, and to call `clearInterval()` when a Vue component is destroyed we can use the `unmounted()` method:
 
 ```html
 <script>
 export default {
-  created(){
+  mounted(){
     // Call setInterval() here...
   },
-  destroyed(){
+  unmounted(){
     // Call clearInterval() here...
   },
   // ...
@@ -414,31 +418,31 @@ created(){
 ```
 :::
 
-Use `setInterval()`, `clearInterval()` and `Date` to implement a `Clock.vue` component that displays the current time in the format HH:mm:ss (each unit should always be displayed with two digits). Be sure to properly use `created()` and `destroyed()`.
+Use `setInterval()`, `clearInterval()` and `Date` to implement a `Clock.vue` component that displays the current time in the format HH:mm:ss (each unit should always be displayed with two digits). Be sure to properly use `mounted()` and `unmounted()`.
 
 ### Counters (props)
 Create a new page that have three buttons functioning as counters (each button contains a number, and clicking on the button should increment the number):
 
-* The first button should start on 0, and clicking it should increment it by 1.
-* The second button should start on 45, and clicking it should increment it by 5.
-* The third button should start on 33, and clicking it should increment it by 10.
+* The first button should start on 0, and clicking it should increment it by 1
+* The second button should start on 45, and clicking it should increment it by 5
+* The third button should start on 33, and clicking it should increment it by 10
 
-Instead of implementing three separate counters, create a Vue component in the `/src/components/` folder representing a single counter, and then use three instances of it on your counters "page". Since the timers should function differently (different start values and different increment steps) you can't hard code that in the counter component. Instead, the one using the counter component should be able to specify this through props, e.g. (`<Counter start-value="33" inc-steps="10"/>`).
+Instead of implementing three separate counters, create a Vue component in the `/src/components/` folder representing a single counter, and then use three instances of it on your counters "page". Since the counters should function differently (different start values and different increment steps) you can't hard code that in the counter component. Instead, the one using the counter component should be able to specify this through props, e.g. (`<Counter :start-value="33" :inc-steps="10" />`).
 
 Read more about [props in Vue's docs](https://vuejs.org/v2/guide/components-props.html).
 
 ### Oral presentation
-When you're done with Part 1, present your work orally to a teacher at one of the lab sessions. Be prepared to:
+When you're done with Lab 1, present your work orally to a teacher at one of the lab sessions. Be prepared to:
 
-* Show that your application works as it should.
-* Explain how the code you've written works.
-* Answer any question the teacher might have about the code (the teacher will ask question to verify that you understand how it works).
+* Show that your application works as it should
+* Explain how the code you've written works
+* Answer any question the teacher might have about the code (the teacher will ask questions to verify that you understand how it works)
 
-Afterwards you will be approved on the objective _Lab Part 1_ on Ping Pong by the teacher.
+Afterwards you will be approved on the Canvas assignment [Lab 1 Presentation](https://ju.instructure.com/courses/6797/assignments/35470) by the teacher. After that you should create a ZIP file of the app's root folder (delete the `node_modules` folder first!), and upload it to the Canvas assignment [Lab 1 Code](https://ju.instructure.com/courses/6797/assignments/35471).
 
 
-## Part 2 - Using a REST API in Vue
-The goal with this part of the project is to teach you how to use a backend in your Single-Page Application to fetch and store some data.
+## Lab 2: Using a REST API in Vue
+The goal with this part of the project is to teach you how to communicate with a backend application from your Single-Page Application using a using a REST API in.
 
 In this lab you will implement a Single-Page Application as the frontend application for a platform called _Activity Finder_. On this platform users can create new accounts and then register activities they are going to do that others may come to as well. Example of activities are:
 
@@ -446,27 +450,27 @@ In this lab you will implement a Single-Page Application as the frontend applica
 * Learn how to play guitar
 * Watch the movie Lord of the Rings
 
-The backend for the platform has already been implemented. The backend exposes a REST API one can use to communicate with it. A client side SDK for the REST API is also available, making it very easy to communicate with the backend. Your task is simply to implement the frontend as a Single-Page Application using Vue and the SDK.
+The backend for the platform has already been implemented. The backend exposes a REST API one can use to communicate with it. A client side SDK for the REST API is also available, making it very easy for the frontend to communicate with the backend. Your task is simply to implement the frontend as a Single-Page Application using Vue and the SDK.
 
 ### Starting the backend
-The backend is implemented in Node.js, and its source code is available in the ZIP file [activity-finder-backend.zip](files/activity-finder-backend.zip). When you develop/test your frontend application, you need to have the backend application up and running on the same computer as your frontend application. To get the backend application up and running you need to:
+The backend is implemented in Node.js, and its source code is available in the ZIP file [activity-finder-backend.zip](files/activity-finder-backend.zip). When you develop/test your frontend application you need to have the backend application up and running on the same computer as your frontend application. To get the backend application up and running you need to:
 
-1. Download and unzip the source code for the backend application.
-2. Open the root folder of the backend application in a shell.
-3. Run the command `npm install` to install all the npm packages it is using.
-4. Run the command `npm run start` to start it.
+1. Download and unzip the source code for the backend application
+2. Open the root folder of the backend application in a shell
+3. Run the command `npm install` to install all the npm packages it is using
+4. Run the command `npm run start` to start it
 
 When you have started the backend application it will listen for incoming HTTP requests through the REST API on port 8000. If you want to change the port number, just change that at the bottom of the file `/src/app.js` in the backend application. To test if the backend application is properly running, open [localhost:8000/accounts](http://localhost:8000/accounts) in a web browser. If it's up and running you should see an empty JSON array (`[]`) on the screen. You can also try to use Postman to send your own HTTP requests to it.
 
 ### Getting started with the frontend
-Create a new Vue application as your frontend application the same way you did in Part 1. Add the file [activity-finder-client.js](files/activity-finder-client.js) to the `/src` folder of your Vue application. This file is the SDK you can use to communicate with the backend application through its REST API. For example, this file exports a function called `getAllAccounts()`, and when you call this function the SDK will in turn send an HTTP GET request for `/accounts` to the backend application, which then in turn sends back all accounts to the SDK, which then delivers all these accounts to you as an array containing objects where each object contains information about an account. But more on this later.
+Create a new Vue application as your frontend application the same way you did in Lab 1. Add the file [activity-finder-client.js](files/activity-finder-client.js) to the `/src` folder of your Vue application. This file is the SDK you can use to communicate with the backend application through its REST API. For example, this file exports a function called `getAllAccounts()`, and when you call this function the SDK will in turn send an HTTP GET request for `/accounts` to the backend application, which then in turn sends back all accounts to the SDK, which then delivers all these accounts to you as an array containing objects where each object contains information about an account. But more on this later.
 
 If you changed the port number the backend is listening for incoming HTTP requests on, you need to change that at the top of the file `activity-finder-client.js` as well (the constant `rootPath`).
 
 The SDK makes use of the npm package `jwt-decode`, so in the root folder of your Vue application you also need to run the command `npm install jwt-decode`.
 
 ### Implementing the layout
-Just as in Part 1, change the code in `/src/App.vue` to contain a layout of your choice. Feel free to use any CSS framework you want. Look through the rest of the sub-chapters in Part 2 to understand what functionality the application will contain in the end/which links you need to have in the layout.
+Just as in Lab 1, change the code in `/src/App.vue` to contain a layout of your choice. Feel free to use any CSS framework you want. Look through the rest of the sub-chapters in Lab 2 to understand what functionality the application will contain in the end/which links you need to have in the layout.
 
 In your application you need to keep track of whether the user is signed in or not, and most likely you want this to be reactive, so the GUI updates on its own as soon as the user signs in/out. An easy way to implement this is by having a `data()` method in `/src/App.vue` looking like this:
 
@@ -499,7 +503,7 @@ As soon as the user signs in, you simply change `user.isSignedIn` to `true`, and
 
 If you want you can also add more properties to `user`, such as `user.username` if you want to be able to display the signed in user's username.
 
-But what if you want to be able to figure out if the user is signed in or out in another Vue component? One way is to pass the `user` object as a props to those components: in `/src/App.vue`, use `<router-view :user="user"/>` instead of only `<router-view/>`.
+But what if you want to be able to figure out if the user is signed in or out in another Vue component? One way is to pass the `user` object as a props to those components, i.e. use use `<RouterView :user="user"/>` instead of only `<RouterView>` in `/src/App.vue`.
 
 ::: warning Note
 You might wonder why `/src/App.vue` uses:
@@ -531,13 +535,17 @@ The reason is because we want the other Vue components to be able to change `use
 (it's OK if you don't understand this, but the key thing to remember is that if a Vue component wants to change a value it has received as a props and that change should be reactive, that props needs to be an object)
 :::
 
+::: warning Note Note
+It is bad practice for a child component to change a props it receives. Optimally one would use a global store, such as [Pinia](https://pinia.vuejs.org/) for values all Vue components should have access to. But to keep things as simple as possible, we will ignore that best practice. But feel free to learn and use Pinia if you want.
+:::
+
 ### View all accounts
 Add a "page" that displays all accounts that exists. To fetch all accounts from the backend, you can call the SDK function `getAllAccounts()`:
 
 ```js
-const client = require('../activity-finder-client')
+import { getAllAccounts } from '../activity-finder-client.js'
 
-client.getAllAccounts((errors, accounts) => {
+getAllAccounts((errors, accounts) => {
   // errors = array with error codes (empty if everything went OK).
   // accounts = array with all accounts if everything went OK.
   if(errors.length == 0){
@@ -565,10 +573,9 @@ Add a "page" that displays one account with a specific id. On the previous page,
 To fetch an account with a specific id from the backend, you can call the SDK function `getAccountById()`:
 
 ```js
-const client = require('../activity-finder-client')
+import { getAccountById } from '../activity-finder-client.js'
 
-
-client.getAccountById(37, (errors, account) => {
+getAccountById(37, (errors, account) => {
   // errors = array with error codes (empty if everything went OK).
   // account = object with info about the account if everything went OK.
   if(errors.length == 0){
@@ -589,14 +596,14 @@ Add a "page" where the user can sign up (create a new account).
 To tell the backend to create a new account, call the SDK function `createAccount()`:
 
 ```js
-const client = require('../activity-finder-client')
+import { createAccount } from '../activity-finder-client.js'
 
 const account = {
   username: "Greta",
   password: "rrrrrr"
 }
 
-client.createAccount(account, (errors, id) => {
+createAccount(account, (errors, id) => {
   // errors = array with error codes (empty if everything went OK).
   // id = the id the newly created account got if everything went OK.
   if(errors.length == 0){
@@ -619,12 +626,12 @@ client.createAccount(account, (errors, id) => {
 Add a "page" where the user can sign in. To tell the backend to sign in, call the SDK function `signIn()`:
 
 ```js
-const client = require('../activity-finder-client')
+import { signIn } from '../activity-finder-client.js'
 
 const username = "Greta"
 const password = "rrrrrr"
 
-client.signIn(username, password, (errors, account) => {
+signIn(username, password, (errors, account) => {
   // errors = array with error codes (empty if everything went OK).
   // account = object with info about the account you signed into if everything went OK.
   if(errors.length == 0){
@@ -647,9 +654,9 @@ Remember, when the user has successfully signed in, change `user.isSignedIn` in 
 Add a "page" where the user can sign out. To tell the backend to sign out, call the SDK function `signOut()`:
 
 ```js
-const client = require('../activity-finder-client')
+import { signOut } from '../activity-finder-client.js'
 
-client.signOut(() => {
+signOut(() => {
   // The SDK has now forgot which account you previously signed in to.
 })
 ```
@@ -662,7 +669,7 @@ Remember, when the user has successfully signed in, change `user.isSignedIn` in 
 Add a "page" where signed in users can create new activities. To tell the backend to create a new activity, call the SDK function `createActivity()`:
 
 ```js
-const client = require('../activity-finder-client')
+import { createActivity } from '../activity-finder-client.js'
 
 const activity = {
   accountId: 28, // The id of the account creating the activity (i.e. the signed in user's account id).
@@ -674,7 +681,7 @@ const activity = {
   longitude: 14.16189193725586
 }
 
-client.createActivity(activity, (errors, id) => {
+createActivity(activity, (errors, id) => {
   // errors = array with error codes (empty if everything went OK).
   // id = the id the newly created activity got if everything went OK.
   if(errors.length == 0){
@@ -711,9 +718,9 @@ You can use `<input type="number" step="any">` to let the user enter values for 
 Add a "page" that displays all activities. To fetch all activities from the backend, you can call the SDK function `getAllActivities()`:
 
 ```js
-const client = require('../activity-finder-client')
+import { getAllActivities } from '../activity-finder-client.js'
 
-client.getAllActivities((errors, activities) => {
+getAllActivities((errors, activities) => {
   // errors = array with error codes (empty if everything went OK).
   // activities = array with all activities if everything went OK.
   if(errors.length == 0){
@@ -731,10 +738,9 @@ client.getAllActivities((errors, activities) => {
 Add a "page" that displays one activity with a specific id. To fetch an activity with a specific id from the backend, call the SDK function `getActivityById()`:
 
 ```js
-const client = require('../activity-finder-client')
+import { getActivityById } from '../activity-finder-client.js'
 
-
-client.getActivityById(5, (errors, activity) => {
+getActivityById(5, (errors, activity) => {
   // errors = array with error codes (empty if everything went OK).
   // activity = object with info about the activity if everything went OK.
   if(errors.length == 0){
@@ -753,9 +759,9 @@ client.getActivityById(5, (errors, activity) => {
 Add a "page" that displays all activities created by the signed in user. To fetch all activities belonging to a specific user, call the SDK function `getActivitiesByAccountId()`:
 
 ```js
-const client = require('../activity-finder-client')
+import { getActivitiesByAccountId } from '../activity-finder-client.js'
 
-client.getActivitiesByAccountId(3, (errors, activities) => {
+getActivitiesByAccountId(3, (errors, activities) => {
   // errors = array with error codes (empty if everything went OK).
   // activities = array with all activities if everything went OK.
   if(errors.length == 0){
@@ -775,12 +781,12 @@ Somehow signed in users should be able to delete activities they have created. I
 To tell the backend to delete an activity with a specific id, call the SDK function `deleteActivityById()`:
 
 ```js
-const client = require('../activity-finder-client')
+import { deleteActivityById } from '../activity-finder-client.js'
 
-client.deleteActivityById(33, (errors) => {
+deleteActivityById(33, (errors) => {
   // errors = array with error codes (empty if everything went OK).
   if(errors.length == 0){
-    // activityExisted = true or false
+    // The activity was successfully deleted.
   }else{
     // errors = ["errorCode1", "errorCode2", ...]
     // Possible errors codes:
@@ -800,7 +806,7 @@ Somehow signed in users should be able to update activities they have created. I
 To tell the backend to update an activity with a specific id, call the SDK function `updateActivityById()`:
 
 ```js
-const client = require('../activity-finder-client')
+import { updateActivityById } from '../activity-finder-client.js'
 
 const updatedActivity = {
   id: 33,
@@ -813,7 +819,7 @@ const updatedActivity = {
   longitude: 14.16189193725586
 }
 
-client.updateActivityById(33, updatedActivity, (errors) => {
+updateActivityById(33, updatedActivity, (errors) => {
   // errors = array with error codes (empty if everything went OK).
   if(errors.length == 0){
     // Activity was updated.
@@ -840,13 +846,13 @@ client.updateActivityById(33, updatedActivity, (errors) => {
 When an activity has started, it can no longer be updated, and users can only update activities belonging to their own accounts.
 
 ### Oral presentation
-When you're done with Part 2, present your work orally to a teacher at one of the lab sessions. Be prepared to:
+When you're done with Lab 2, present your work orally to a teacher at one of the lab sessions. Be prepared to:
 
-* Show that your application works as it should.
-* Explain how the code you've written works.
-* Answer any question the teacher might have about the code (the teacher will ask question to verify that you understand how it works).
+* Show that your application works as it should
+* Explain how the code you've written works
+* Answer any question the teacher might have about the code (the teacher will ask questions to verify that you understand how it works)
 
-Afterwards you will be approved on the objective _Lab Part 2_ on Ping Pong by the teacher.
+Afterwards you will be approved on the Canvas assignment [Lab 2 Presentation](https://ju.instructure.com/courses/6797/assignments/35472) by the teacher. After that you should create a ZIP file of the app's root folder (delete the `node_modules` folder first!), and upload it to the Canvas assignment [Lab 2 Code](https://ju.instructure.com/courses/6797/assignments/35473).
 
 If you have time to spare, try complete the extra tasks below.
 
@@ -862,7 +868,7 @@ It can take some time for the frontend before it receives the response from the 
 The SDK can simulate network communication delay. In the source code, simply change the variable `networkDelayInMs` to the amount of milliseconds you want to add as delay to each HTTP request it sends.
 
 #### Empty states
-When listening all accounts or all activities and there are non, don't simply display an empty page. Instead, display the text "None have been created yet", or do something even better. For the curious one, [search for "empty state ux"](https://duckduckgo.com/?q=empty+state+ux).
+When listening all accounts or all activities and there are non, don't simply display an empty page. Instead, display the text "None have been created yet", or do something even better. For the cURLous one, [search for "empty state ux"](https://duckduckgo.com/?q=empty+state+ux).
 
 #### Pagination
 Although the REST API/the SDK does not provide pagination functionality, nothing prevents you from implementing one in the frontend application.

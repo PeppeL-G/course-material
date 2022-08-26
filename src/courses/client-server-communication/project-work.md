@@ -1,4 +1,4 @@
-# Project Instructions
+# Project Work
 As project you should work in pairs and create a platform (a solution consisting of both a backend application handling the data on the platform and a frontend application containing the graphical user interface through which users will use the platform). The backend should expose a REST API which the frontend can use to work with the data on the platform. The platform should be implemented with the technologies taught in the course, i.e. Node.js/Express for the backend and Vue.js for the frontend.
 
 You should not only implement the platform, you should also write a report describing the platform and its implementation, including what it can be used for and how it has been implemented. The file [project-report-template.docx](files/project-report-template.docx) contains a template for the report. Your report will be a living document throughout the course, meaning that you will write on it from the start and continually improve it until the end of the course. 
@@ -9,15 +9,15 @@ Start by finding a classmate to work with. Then [join a project group on Ping Po
 ## Part 2: Platform idea
 Come up with the platform you want to implement. The platform may be about whatever you want, but the following requirements exist:
 
-* Users should be able to create accounts.
-* Users should be able to login to accounts.
-* Users should be able to create at least one other type of resource (in addition to accounts) that belongs to an account.
+* Users should be able to create accounts
+* Users should be able to login to accounts
+* Users should be able to create at least one other type of resource (in addition to accounts) that belongs to an account
 
-Example of the additional resource type could be:
+Example of what the additional resource type could be:
 
-* Blogposts for a platform hosting blogs.
-* Diary entries for platforms hosting diaries.
-* Movies for a platform where users can register movies they've watched.
+* Blogposts for a platform hosting blogs
+* Diary entries for a platform hosting diaries
+* Movies for a platform where users can register which movies they've watched
 
 If you want to have a more fun platform to implement, you probably need to have accounts + 2-3 additional resource types, but it is OK to just have one additional resource type.
 
@@ -78,8 +78,7 @@ Start by creating a new folder to store the source code for your backend applica
 Then open the root folder of your project in your code editor:
 
 7. Use the following command to open the root folder in Visual Studio Code:
-    * `code .` - Open the root folder in Visual Studio Code.
-    **Note**: [On Mac you need to add the code command](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line).
+    * `code .` - Open the root folder in Visual Studio Code
 
 Then create the file `app.js` with the content shown below. That code is a web application sending back the text `Hello, World` when you visit [localhost:3000/](http://localhost:3000/).
 
