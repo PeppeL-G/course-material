@@ -33,7 +33,7 @@ The following software tools are not required (use whichever tools you want), bu
     * App you can use to send custom HTTP requests to a web application
 
 ## Lab 1: The Tool App
-Before you start working on this part, you are recommended to:Before you start working on this part you are expected to view the following lectures:
+Before you start working on this part you are expected to read/view the following lectures:
 
 * [Using Shells](../../lectures/using-shells/)
 * [Vue](../../lectures/vue/)
@@ -45,6 +45,24 @@ The tutorial about Vue will also help you learn the basics.
 The goal with this part of the laboratory work is to teach you how to use Vue to build a Single-Page Application. Vue is a quite big framework (it would be possible to have a single 7.5 credit course just to teach you all there is to know about Vue), so you are only expected to learn and use the basics (what is taught in this course), which will be enough to create quite advanced and good Single-Page Applications.
 
 The Single-Page Application you should create will consist of different pages, each containing a useful tool of some kind such as a simple calculator, a clock, a counter, etc.
+
+::: warning Help, don't cheat!
+The laboratory work is individual work.
+
+**It is OK** to help each other. Examples of that:
+
+* help your friend to debug his code
+* explain to your friend why his code doesn't work the way he thinks it works
+* compare and discuss different solutions to a lab problem with your friend after both of you have solved the lab to figure out which solution is the best one
+
+**It is NOT OK** to cooperate in any way. Examples of that:
+
+* sit at the same computer and write code together with your friend
+* sit at different computers and discuss and write the same code as your friend
+* give code to/receive code from your friend
+
+**You must write your own code! If you are unsure about what counts as *helping* and what counts as *cheating*, then simply work alone and ask only the teacher at the lab sessions for help.**
+:::
 
 ### Creating a new Vue application
 Vue applications are preferably implemented in [Single-File Components](https://vuejs.org/guide/scaling-up/sfc.html) files (`.vue` files), so you have all the HTML, CSS and JS code a Vue component consists of in one and the same file. However, web browsers don't understand these type of files, so the `.vue` files needs to be transpiled into JS code. For that you can use a module bundler, and in this course we will use the module bundler called [Vite](https://vitejs.dev/).

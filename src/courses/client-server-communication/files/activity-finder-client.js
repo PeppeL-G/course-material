@@ -1,5 +1,5 @@
 // Install dependency by running: npm install jwt-decode
-const jwtDecode = require('jwt-decode')
+import jwtDecode from 'jwt-decode'
 
 const networkDelayInMs = 10
 const rootPath = "http://localhost:8000"
@@ -161,7 +161,6 @@ export async function createAccount(account, callback){
 		case 201:
 			const locationHeader = response.headers.get("Location")
 			id = parseInt(locationHeader.substring(
-				0,
 				"/accounts/".length,
 			))
 			break

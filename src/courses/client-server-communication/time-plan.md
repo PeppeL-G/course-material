@@ -36,7 +36,7 @@ The <span style="background-color: lime; display: inline-block; padding: 0 8px; 
 		{},
 		{},
 		// 38
-		{p: "Part 4"},
+		{p: "Part 4", i: "Registration for the Written Examination opens"},
 		{t: "Tutorial 4: SPA Requests", p: "Part 4"},
 		{s: "Group 1", p: "Part 4"},
 		{s: "Group 2", p: "Part 4"},
@@ -57,7 +57,7 @@ The <span style="background-color: lime; display: inline-block; padding: 0 8px; 
 		{s: "Group 1", p: "Part 7"},
 		{s: "Group 2", p: "Part 7"},
 		{p: "Part 7"},
-		{},
+		{i: "Registration for the Written Examination closes around now"},
 		{},
 		// 41
 		{p: "Part 8"},
@@ -70,10 +70,10 @@ The <span style="background-color: lime; display: inline-block; padding: 0 8px; 
 		// 42
 		{p: "Part 9, 10"},
 		{p: "Part 9, 10"},
-		{p: "Part 9, 10"},
+		{p: "Part 9, 10", i: "Written Exam"},
 		{p: "Part 9, 10"},
 		{p: "Part 9, 10"},
 		{},
-		{p: "Part 11"},
+		{p: "Part 11", i: "Deadline to submit project for grading"},
 	]'
 />
