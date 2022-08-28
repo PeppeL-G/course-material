@@ -29,7 +29,7 @@
 			<dt v-if="pingPongPassword">Ping Pong password</dt>
 			<dd v-if="pingPongPassword">{{pingPongPassword}}</dd>
 			
-			<dt v-if="canvasCourseId">Canvas Course Room</dt>
+			<dt v-if="canvasCourseId">Canvas Room</dt>
 			<dd v-if="canvasCourseId">
 				<a :href="'https://ju.instructure.com/courses/'+canvasCourseId" target="_blank">
 					{{courseName}}
@@ -37,7 +37,7 @@
 			</dd>
 			
 			<template v-if="canvasCourses">
-				<dt>Canvas Course</dt>
+				<dt>Canvas Rooms</dt>
 				<dd>
 					<ul>
 						<li v-for="course in canvasCourses" :key="course.id">

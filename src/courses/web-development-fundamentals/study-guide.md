@@ -34,25 +34,9 @@ graph LR
 More specifically you will learn how to create a web application to which a single user can login to modify the resources on it, such as blog posts and guestbook posts. To accomplish this your web application will use an SQLite database to store the resources and the web framework Express to handle incoming HTTP requests. To avoid spending too much time on the graphical design of the web application you will also learn how to use a CSS framework with pre-styled graphical user interface components you can use. Your web application must of course also be secure, so you will also learn about common vulnerabilities in web applications and how you can prevent them.
 
 ## Prerequisites
-At course start you are expected to already possess knowledge corresponding to the prerequisite courses shown in <FigureNumber/> below. 
+At course start you are expected to already possess knowledge corresponding to the prerequisite courses mentioned in the [Course Syllabus](./course-syllabus/). These are either those shown in <FigureNumber/> below. 
 
-<Figure caption="Prerequisites for this course.">
-<RenderMermaid graph-definition="
-graph TD
-	ihci[Introduction to Human-Computer Interaction 7.5 Credits]
-	fop[Foundations of Programming 7.5 Credits]
-	wuid[Web and User Interface Design 15 Credits]
-	webDevFund[Web Development Fundamentals 7.5 Credits]
-	ihci --> wuid
-	fop --> webDevFund
-	wuid --> fop
-	wuid --> webDevFund
-" />
-</Figure>
-
-sdfsdf
-
-<Figure caption="Prerequisites for this course.">
+<Figure caption="Prerequisites for Development for Mobile Platforms students taking this course.">
 <RenderMermaid graph-definition="
 graph TD
 	introComp[Introduction to Computing 7.5 Credits]
@@ -72,6 +56,22 @@ graph TD
 " />
 </Figure>
 
+Or those shown in <FigureNumber/> below. 
+
+<Figure caption="Prerequisites for New Media Design students taking this course.">
+<RenderMermaid graph-definition="
+graph TD
+	ihci[Introduction to Human-Computer Interaction 7.5 Credits]
+	fop[Foundations of Programming 7.5 Credits]
+	wuid[Web and User Interface Design 15 Credits]
+	webDevFund[Web Development Fundamentals 7.5 Credits]
+	ihci --> wuid
+	fop --> webDevFund
+	wuid --> fop
+	wuid --> webDevFund
+" />
+</Figure>
+
 ## Teachers
 Here are short presentations of the teachers involved in the course.
 
@@ -79,29 +79,77 @@ Here are short presentations of the teachers involved in the course.
 <Teacher
     name="Peter Larsson-Green"
     photo="peter-larsson-green.jpeg"
-    :roles='["Course coordinator", "examiner", "lecturer", "lab assistant"]'
+    :roles='["Course coordinator", "lecturer"]'
     description="Has studied and followed the development of the web since 2004 and received his Master of Science in Computer Science at Linköping University in 2014. He has been working as programming teacher (part time) since 2010 at both Linköping University and Jönköping University."
     email="Peter.Larsson-Green@ju.se"
     phone="036 - 10 17 35"
     website="https://ju.se/en/personinfo.html?sign=LarPet"
 />
 
-### Joshua De Matas
+### Jérôme Landré
 <Teacher
-    name="Joshua De Matas"
-    photo="joshua-de-matas.jpeg"
+    name="Jérôme Landré"
+    photo="jerome-landre.jpeg"
     :roles='["Lab assistant"]'
-    description="Third year student of the bachelor program Software Development and Mobile Platforms."
-    email="dejo19kb@student.ju.se"
+    description="Assistant Professor in Computer Science and Informatics."
+    email="jerome.landre@ju.se"
+    phone=""
+    website="https://ju.se/en/personinfo.html?sign=LanJer"
 />
 
-### William Sjökvist
+### Eveline Ingesson
 <Teacher
-    name="William Sjökvist"
-    photo="william-sjokvist.jpeg"
+    name="Eveline Ingesson"
+    photo="eveline-ingesson.jpeg"
     :roles='["Lab assistant"]'
-    description="Third year student of the bachelor program Software Development and Mobile Platforms."
-    email="sjwi19io@student.ju.se"
+    description="Graduated User Experience Design student now working as teacher at JU."
+    email="eveline.ingesson@ju.se"
+    phone=""
+    website="https://ju.se/en/personinfo.html?sign=ingeve"
+/>
+
+### Hasan Khalaf
+<Teacher
+    name="Hasan Khalaf"
+    photo="missing.jpeg"
+    :roles='["Lab assistant"]'
+    description="Third year student studying the bachelor program Software Engineering and Mobile Platforms."
+    email="khha20qz@student.ju.se"
+    phone=""
+    website="https://ju.se/en/personinfo.html?sign=ingeve"
+/>
+
+### Garrit Schaap
+<Teacher
+    name="Garrit Schaap"
+    photo="garrit-schaap.jpeg"
+    :roles='["Lecturer", "lab assistant"]'
+    description="Experienced web developer currently working as teacher at JU."
+    email="garrit.schaap@ju.se"
+    phone=""
+    website="https://ju.se/en/personinfo.html?sign=SCHGAR"
+/>
+
+### Jasmin Jakupovic
+<Teacher
+    name="Jasmin Jakupovic"
+    photo="jasmin-jakupovic.jpeg"
+    :roles='["Lecturer"]'
+    description="Program manager for the bachelor program Software Engineering and Mobile Platforms."
+    email="jasmin.jakupovic@ju.se"
+    phone="036 - 10 12 16"
+    website="https://ju.se/en/personinfo.html?sign=jakjas"
+/>
+
+### Susanne Smithberger
+<Teacher
+    name="Susanne Smithberger"
+    photo="susanne-smithberger.jpeg"
+    :roles='["Lecturer", "Seminar leader"]'
+    description="Lecturer at the Department of Language, Aesthetic Learning and Literature at JU."
+    email="susanne.smithberger @ju.se"
+    phone="073 - 910 16 90"
+    website="https://ju.se/en/personinfo.html?sign=smisus"
 />
 
 ## Intended Learning Outcomes
@@ -131,8 +179,7 @@ Display an ability to construct web pages using HTML5, CSS, and CSS frameworks.
 -Project work
 -Written examination
 +Recorded lecture: HTML
-+Recorded lecture: CSS
-+Recorded lecture: HTML & CSS Frameworks
++Lecture: CSS
 +Tutorials
 +Lab sessions
 ---
@@ -159,7 +206,7 @@ Display an ability to construct web pages using Node.js.
 Display an ability to construct database-backed web applications.
 -Project work
 -Written examination
-+Recorded lecture: Using SQLite
++Lecture: Database
 +Recorded lecture: Using SQLite in Node.js
 +Tutorials
 +Lab sessions
@@ -172,12 +219,18 @@ Here are short introduction to the learning activities offered in the course.
 In the beginning of most weeks you will be encouraged to view some recorded lectures. These will be quite theoretical and will teach new you things you can use when building a website.
 
 ### Tutorials
-Some weeks there will be a tutorial session where the teacher will show you how to use what has been taught in the recorded lectures in practice.
+Some weeks there will be a tutorial session where the teacher will show you how to use what has been taught in the recorded lectures in practice. you can think of these as traditional lectures given on campus, but with no lecture slides and mostly coding.
+
+### Lectures
+In the course there will be a few traditional lectures given in a lecture hall on campus.
+
+### Seminars
+To help you write a proper project report, there will be a 1 hour lecture on academic writing, and then a 1 hour seminar you can attend to become even better at academic writing. All students can't attend the seminar at the same time, so it is given at two different times, and you may attend one of them. To distribute you, join the [Seminar Group](https://ju.instructure.com/courses/6738/groups) on Canvas corresponding to the time you want to attend.
 
 ### Lab Sessions
 Each week you may attend a 4 hours lab session. At the lab session you may ask the teacher there for help with your exercises and project work.
 
-There are 3 different lab sessions each week, but you may only sign up for one of them. To distribute you, join one of [the lab groups on Canvas](https://ju.instructure.com/courses/4558/groups). First come, first served.
+There are 5 different lab sessions each week, but you may only sign up for one of them. To distribute you, join one of the [Lab Groups](https://ju.instructure.com/courses/4558/groups) on Canvas. First come, first served.
 
 ::: tip Attending more lab sessions
 You may attend the other lab sessions if there is room for it, but the teacher there must of course prioritize helping the students that have signed up for that lab session.
@@ -195,8 +248,8 @@ The course contains two examination tests.
 ### Final Grade
 To receive a final grade on the course you need to pass both examination tests (`Written Examination` and `Project Work`). The final grade will be based on the lowest grade of the `Written Examination` and the `Project Work`, but these grades will also be marked as `weak` or `strong`. If one of the grades is lower than the other and has been marked as `strong`, the final grade will be the lower grade + 1. Examples:
 
-* A `strong 3` and a `weak 4` gives you `4` as the final grade.
-* A `weak 3` and a `strong 5` gives you `3` as the final grade.
+* A `strong 3` and a `weak 4` gives you `4` as the final grade
+* A `weak 3` and a `strong 5` gives you `3` as the final grade
 
 For the `Written Examination`, 50% of max score is a strong 3, and 70% of max score is a strong 4.
 

@@ -3,16 +3,10 @@ The <span style="background-color: #80008082; display: inline-block; padding: 0 
 
 `Lecture (NMD)` means that all students from the program *New Media Design* (and those with similar pre-requisites) should attend the lecture.
 
-`Lecture (DMP)` means that all students from the program *Development for Mobile Platforms* (and those with similar pre-requisites) should attend the lecture.
-
-
+`Lecture (DMP)` means that all students from the program *Software Engineering and Mobile Platforms* (and those with similar pre-requisites) should attend the lecture.
 
 ::: tip Weekly Announcements
-In the beginning of each week a new announcement message will be posted on the course's Canvas page to let you know what you are expected to work on that week, but it's also indicated in the Time Plan below.
-:::
-
-::: tip Re-exam periods not included
-The two re-exam periods that are also part of the course are not shown in the Time Plan below, but those basically gives you 2 additional weeks to finish the course in.
+In the beginning of each week a new announcement message will be posted on the course's Canvas Room to let you know what you are expected to work on that week, but it's also indicated in the Time Plan below.
 :::
 
 <TimePlan
@@ -42,7 +36,7 @@ The two re-exam periods that are also part of the course are not shown in the Ti
 		{},
 		{},
 		// 37
-		{s: "Group 5, 6", p:"Part 3: Prototype"},
+		{s: "Group 5, 6", e: "JS"},
 		{s: "Group 3, 4", p:"Part 3: Prototype"},
 		{ p:"Part 3: Prototype"},
 		{l: "Lecture: Academic Writing", p: "Part 3: Prototype"},
@@ -51,16 +45,16 @@ The two re-exam periods that are also part of the course are not shown in the Ti
 		{},
 		// 38
 		{s: "Group 5, 6", p: "Part 4: DB"},
-		{s: "Group 3, 4", p: "Part 4: DB"},
-		{l: "TODO", p: "Part 4: DB"},
+		{s: "Group 3, 4", p: "Part 4: DB", i: "Registration for the Written Examination opens"},
+		{p: "Part 4: DB"},
 		{l: "Seminar: Academic Writing 1 & 2", p: "Part 5: Forms"},
 		{l: "Tutorial: Auth", s: "Group 1", p: "Part 5: Forms"},
 		{},
 		{},
 		// 39
 		{s: "Group 5, 6", p: "Part 5: Forms"},
-		{s: "Group 3, 4", p: "Part 6: Errors"},
-		{l: "TODO", p: "Part 6: Errors"},
+		{s: "Group 3, 4", p: "Part 6: Errors", i: "Deadline submit Project Report for feedback"},
+		{p: "Part 6: Errors"},
 		{p: "Part 6: Errors"},
 		{l: "Tutorial: Security", s: "Group 1", p: "Part 7: Auth"},
 		{},
@@ -68,10 +62,10 @@ The two re-exam periods that are also part of the course are not shown in the Ti
 		// 40
 		{s: "Group 5, 6", p: "Part 7: Auth"},
 		{s: "Group 3, 4", p: "Part 7: Auth"},
-		{l: "TODO", p: "Part 8: Security"},
+		{p: "Part 8: Security"},
 		{p: "Part 8: Security"},
 		{l: "Tutorial: Repetition", s: "Group 1", p: "Part 8: Security"},
-		{},
+		{i: "Registration for the Written Examination closes around now"},
 		{},
 		// 41
 		{s: "Group 5, 6", p: "Part 9: Optional"},
@@ -84,10 +78,14 @@ The two re-exam periods that are also part of the course are not shown in the Ti
 		// 42
 		{p: "Part 11: Demonstration"},
 		{p: "Part 11: Demonstration"},
-		{p: "Part 11: Demonstration"},
+		{p: "Part 11: Demonstration", i: "Written Examination"},
 		{p: "Part 11: Demonstration"},
 		{p: "Part 11: Demonstration"},
 		{},
 		{p: "Part 12: Submission", i: "Deadline submit Project Work for grading"},
 	]'
 />
+
+::: tip Re-exam periods not included
+The two re-exam periods that are also part of the course are not shown in the Time Plan above, but those basically gives you 40 additional hours to finish the course in.
+:::

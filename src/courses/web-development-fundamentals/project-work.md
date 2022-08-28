@@ -7,29 +7,29 @@ As project work you should (individually) create a website __one__ user can logi
 You have a lot of freedom when it comes to the design and functionality of the website, but the following three requirements exist:
 
 * There should exist basic pages with trivial information, including:
-  * A home/start page.
-  * An about page.
-  * A contact page.
-* There should exist at least three different type of resources on the website (stored in a relational database).
-* Depending on what makes most sense, *only you* or *anyone* should be able to apply <abbr title="Create/Retrieve/Update/Delete">CRUD</abbr> operations on the resources through the website.
+  * A home/start page
+  * An about page
+  * A contact page
+* There should exist at least three different type of resources on the website (stored in a relational database)
+* Depending on what makes most sense, *only you* or *anyone* should be able to apply <abbr title="Create/Retrieve/Update/Delete">CRUD</abbr> operations on the resources through the website
 
 To be able to distinguish *only you* from *anyone*, you also need to have login-functionality for a single account (i.e. a hard-coded username & password).
 
 Use whichever type of resources you want. Some suggestions are:
 
-* Blogposts (only you can create/update/delete entries, anyone can retrieve entries).
-* Software projects for a portfolio (only you can create/update/delete entries, anyone can retrieve entries).
-* Guestbook posts (only you can update/delete entries, anyone can retrieve/create entries).
-* FAQ entries (only you can update/delete entries, anyone can retrieve/create entries).
+* Blogposts (only you can create/update/delete entries, anyone can retrieve entries)
+* Software projects for a portfolio (only you can create/update/delete entries, anyone can retrieve entries)
+* Guestbook posts (only you can update/delete entries, anyone can retrieve/create entries)
+* FAQ entries (only you can update/delete entries, anyone can retrieve/create entries)
 
 Implement the website using technologies taught in this course. It is OK to use similar technologies and not the specific ones taught in the course. For example, instead of using the web framework *Express* (taught in this course), you can use the web framework [Koa](https://koajs.com/). It's probably a good idea to email the course coordinator and ask if the technologies you want to use is OK or not if you don't stick to using the ones taught in the course.
 
 ::: danger Don't use client-side JavaScript!
 Avoid using client-side JavaScript. If you insist on using client-side JavaScript, it is OK, but:
 
-* Good client-side JavaScript code will not improve your grade (this course is not about learning client-side JavaScript).
-* Bad client-side JavaScript code will lower your grade (this course is about implementing good websites).
-* Your __entire__ website must work for users who have JavaScript disabled in their web browser (use client-side JavaScript only to enhance the browsing experience for the users who have JavaScript enabled in their web browsers).
+* Good client-side JavaScript code will not improve your grade (this course is not about learning client-side JavaScript)
+* Bad client-side JavaScript code will lower your grade (this course is about implementing good websites)
+* Your __entire__ website must work for users who have JavaScript disabled in their web browser (use client-side JavaScript only to enhance the browsing experience for the users who have JavaScript enabled in their web browsers)
 :::
 
 In addition to implementing the website, you should also write a report describing the implementation of the website. The file [project-report-template.docx](files/project-report-template.docx) contains a template with further instructions on this. Your report will be a living document throughout the course (meaning that you will write it as the course run and continuously improve it). 
@@ -50,23 +50,23 @@ Good luck!
 The required software is:
 
 * [Node.js](https://nodejs.org/)
-    1. Use the <abbr title="Long-Term Support">LTS</abbr> version.
+    1. Use the <abbr title="Long-Term Support">LTS</abbr> version
     2. In the installation process, make sure the following features are installed (they are checked by default, so simply don't uncheck them!):
         * Node.js runtime
         * npm package manager
         * Add to PATH
-    3. To verify that Node.js has been successfully installed, run the command `node -v` in a shell (e.g. Windows PowerShell on Windows (you might need to restart your computer first)). If it has been installed successfully, you should see the version of Node.js that was installed, something like `v11.6.0`.
+    3. To verify that Node.js has been successfully installed, run the command `node -v` in a shell (e.g. Windows PowerShell on Windows (you might need to restart your computer first)). If it has been installed successfully, you should see the version of Node.js that was installed, something like `v11.6.0`
 * [npm](https://www.npmjs.com/)
     * This one is installed along with Node.js, so you don't need to install it separately. However, you might want to update it to the latest version (not required in this course):
         * [Update npm instructions](https://docs.npmjs.com/troubleshooting/try-the-latest-stable-version-of-npm)
-    * To verify that npm has been successfully installed, run the command `npm -v` in a shell (you might need to restart your computer first). If it has been installed successfully, you should see the version of npm that is installed, something like `6.9.0`.
+    * To verify that npm has been successfully installed, run the command `npm -v` in a shell (you might need to restart your computer first). If it has been installed successfully, you should see the version of npm that is installed, something like `6.9.0`
 
 The following software tools are not required (use whichever tools you want), but recommended:
 
 * [Visual Studio Code](https://code.visualstudio.com/)
-    * IDE with good support for writing, running and debugging Node.js and JavaScript code.
+    * IDE with good support for writing, running and debugging Node.js and JavaScript code
 * [DB Browser for SQLite](https://sqlitebrowser.org/)
-    * Database management tool you can use to visualize/debug the database. An alternative is to install and use [the SQLite extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite).
+    * Database management tool you can use to visualize/debug the database. An alternative is to install and use [the SQLite extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite)
 
 ## Part 1: Specifying the functionality
 Before you start working on this part, you are recommended to:
@@ -74,16 +74,17 @@ Before you start working on this part, you are recommended to:
 * View the following videos:
     * [Internet Basics](../../lectures/internet-basics/)
     * [HTTP and Web Applications](../../lectures/http-and-web-applications/)
-    * [Report Writing](../../lectures/report-writing/)
-* Take [the mini-course in Git](../git/).
-    * You don't have to use Git in this course, but you are strongly recommended to make it a habit to use it for all your programming related tasks (you will use it a lot as a professional programmer, and you will have very good use of it in other courses, so the sooner you learn it, the better).
+    * [Character Encodings](../../lectures/character-encodings/)
+    * [HTML](../../lectures/html/)
+* Take [the mini-course in Git](../git/)
+    * You don't have to use Git in this course, but you are strongly recommended to make it a habit to use it for all your projects (you will use it a lot as a professional programmer, and you will have very good use of it in other courses too, so the sooner you learn it, the better)
 
 ---
 
 Your first task is to specify:
 
-* The functionality of the website (which different type of resources it consists of and what you/anyone can do with them).
-* What the graphical user interface (GUI) should look like.
+* The functionality of the website (which different type of resources it consists of and what you/anyone can do with them)
+* What the graphical user interface (GUI) should look like
 
 Your decisions should be described in the project report, so in this part of the project work, you will not do any programming, but only work on your report. A good way to describe the functionalities is by sketching what the GUI will look like in the end. Then the reader can easily see all the functionality just by looking at pictures. An example of that is shown in [project-report-template.docx](files/project-report-template.docx).
 
@@ -95,99 +96,46 @@ Feel free to show your report to one of the teachers at the lab sessions to get 
 Before you start working on this part, you are recommended to:
 
 * Complete the following optional exercises:
-    * [Exercise 1: HTML](exercises/#exercise-1-html)
-    * [Exercise 2: CSS](exercises/#exercise-2-css)
-* View the following videos:
-    * [Character Encodings](../../lectures/character-encodings/)
-    * [HTML](../../lectures/html/)
-    * [CSS](../../lectures/css/)
-    * [HTML & CSS Frameworks](../../lectures/html-and-css-frameworks/)
+    * Not NMD students: [The CSS Exercise](exercises/#the-css-exercise)
+    * Not DMP students: [The DB Exercise](exercises/#the-db-exercise)
+* View the following videos/lectures:
+    * Not NMD students: [CSS](../../lectures/garrit-css/)
+    * Not DMP students: [Database](../../lectures/jasmine-database/)
 
 ---
-
-
-
 
 Designing a website with a user-friendly GUI is no simple task. Therefore, designers have created CSS frameworks that makes it easy for people who are not good at design to create GUIs that are user-friendly. These frameworks primarily consist of components one can use to implement the GUI (such as one component representing a form, another one representing a menu, a third one representing an article, etc.). Since you have to use a CSS framework in your project work, you are recommended to now select which CSS framework you are going to use, and then design your website using the available components in that framework.
 
 Use whichever CSS framework you want, but we recommend you to use [Spectre.css](https://picturepan2.github.io/spectre/index.html). It is a small and simple framework, which makes it easy to learn and use. It comes with components such as:
 
-* [Navbar](https://picturepan2.github.io/spectre/layout/navbar.html) - A horizontal menu suitable to have at the top of the page as the main menu.
-* [Nav](https://picturepan2.github.io/spectre/components/nav.html) - A vertical menu suitable to have on one of the sides of the page as the main/sub menu.
-* [Pagination](https://picturepan2.github.io/spectre/components/pagination.html) - A collection of links suitable to use when listing resources spread over multiple pages.
-* [Empty states](https://picturepan2.github.io/spectre/components/empty.html) - A component suitable to use on a page that should display a collection of resources but none exist yet.
-* [Modals](https://picturepan2.github.io/spectre/components/modals.html) - A dialog appearing in front of the page.
-    * **Note**: You can make modals appear without using client-side JavaScript. When clicking on a "Show modal" button (a link), send back HTML code containing and showing the modal.
-* [Tabs](https://picturepan2.github.io/spectre/components/tabs.html) - A collection of views the user easily can switch between.
+* [Navbar](https://picturepan2.github.io/spectre/layout/navbar.html) - A horizontal menu suitable to have at the top of the page as the main menu
+* [Nav](https://picturepan2.github.io/spectre/components/nav.html) - A vertical menu suitable to have on one of the sides of the page as the main/sub menu
+* [Pagination](https://picturepan2.github.io/spectre/components/pagination.html) - A collection of links suitable to use when listing resources spread over multiple pages
+* [Empty states](https://picturepan2.github.io/spectre/components/empty.html) - A component suitable to use on a page that should display a collection of resources but none exist yet
+* [Modals](https://picturepan2.github.io/spectre/components/modals.html) - A dialog appearing in front of the page
+    * **Note**: You can make modals appear without using client-side JavaScript. When clicking on a "Show modal" button (a link), send back HTML code containing and showing the modal
+* [Tabs](https://picturepan2.github.io/spectre/components/tabs.html) - A collection of views the user easily can switch between
 
-We recommend you to use a simple layout. This is no design course, so do not waste too much time on the design. If you turn out to have time left at the end of the course, you can use that time to improve the design of the website.
+We recommend you to use a simple layout. It is more important that the functionality on the website works than that it has a beautiful design. If you have time over at the end of the course you can try to make your website as beautiful as possible, but for now we recommend you to prioritize making it functional.
 
-
-
-
-
-
-
-Instead of having *implement the web application* as the goal you immediately try to achieve, we recommend you to break it down into multiple smaller goals, and then try to achieve all these sub-goals, one at a time, and when all these sub-goals have been achieved, your main goal (*implement the web application*) has been achieved too ([Divide and Conquer](https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm)!).
-
-We recommend that your first sub-goal is to implement the graphical user interface in static HTML and CSS files, i.e. a prototype. The prototype will be a static website that will look like your final website, but submitting forms won't work; only viewing resources by clicking on links will work.
-
-::: tip Prototype means shortcuts 😃
-Implementing a prototype means it's OK to take various shortcuts. For example, if you have a blog on your website and you in the end want to have one page that displays all blog posts, and clicking on one of them takes you to a new page that displays all info about the blog post that was clicked, as shown in <figureNumber /> below.
-
-<Figure caption="Fully functional website.">
-<RenderMermaid graph-definition="
-flowchart LR
-	subgraph blogposts[Page /blogposts]
-		link1[Blogpost 1]
-		link2[Blogpost 2]
-		link3[Blogpost 3]
-	end
-	subgraph blogpost1[Page /blogposts/1]
-		content1[Vacation...]
-	end
-	subgraph blogpost2[Page /blogposts/2]
-		content2[Christmas...]
-	end
-	subgraph blogpost3[Page /blogposts/3]
-		content3[Birthday...]
-	end
-	link1 -- Click --> blogpost1
-	link2 -- Click --> blogpost2
-	link3 -- Click --> blogpost3
-" />
-</Figure>
-
-Then in the prototype, you can hardcode three resources, and no matter which one that is clicked, the user comes to a page showing all info about the second resource, as shown in <FigureNumber /> below.
-
-<Figure caption="Prototype of website.">
-<RenderMermaid graph-definition="
-flowchart LR
-	subgraph blogposts[Page blogposts.html]
-		link1[Blogpost 1]
-		link2[Blogpost 2]
-		link3[Blogpost 3]
-	end
-	subgraph blogpost2[Page blogpost.html]
-		content2[Christmas...]
-	end
-	link1 -- Click --> blogpost2
-	link2 -- Click --> blogpost2
-	link3 -- Click --> blogpost2
-" />
-</Figure>
-
-And in the end you might want some links only to be shown when the user is logged in, but for the prototype it's OK to always display all links.
-
+::: danger Remember...
+The user must be able to use your website even if the user disable client-side JS in her web browser, so don't use an HTML and CSS framework that also contains client-side JS code the framework is dependent on to function!
 :::
 
-When you are done with your prototype, feel free to show it to one of the teachers at the lab sessions to get some feedback on your work. 
+In the report, draw sketches (e.g. wire-frames) showing what you intend the GUI to look like. In the end, you don't have to implement the GUI as you specify it now in the report, but remember to update your report if you change it later. Implementing the GUI is next part of the Project Work.
+
+Feel free to show these sketches to a teacher at a lab session to get some feedback. 
+
+
+
+
+
 
 ## Part 3: Starting to implement the web application
 Before you start working on this part, you are recommended to:
 
 * Complete the following optional exercises:
-    * [Exercise 3: JS](exercises/#exercise-3-js)
+    * [The JS Exercise](exercises/#the-js-exercise)
 * View the following videos:
     * [Using Shells](../../lectures/using-shells/)
     * [JavaScript Basics](../../lectures/javascript-basics/)
@@ -201,14 +149,14 @@ Before you start working on this part, you are recommended to:
 
 ---
 
-The next sub-goal we recommend you to have is to implement the graphical user interface of the website in Node.js. Ideally, the website's recourses are stored in a database, but to get a gentler start, you can instead store the resources in a file (i.e. use "dummy data") for now. 
+Implement the graphical user interface of the website in Node.js. Ideally, the website's recourses are stored in a database, but to get a gentler start, you can instead store the resources in a file (i.e. use "dummy data") for now. 
 To start, run the following commands in a shell/console/terminal (such as Windows PowerShell in Windows):
 
-1. `mkdir my-website` - Creates a new folder named `my-website` (do not call the folder `my-website`; use a proper name).
-2. `cd my-website` - Changes the current working directory to `my-website`.
-3. `npm init --yes` - Creates the `package.json` file, which keep tracks of which npm packages you have installed.
-4. `npm install express` - Installs the npm package `express`.
-5. `npm install express-handlebars` - Installs the npm package `express-handlebars`.
+1. `mkdir my-website` - Creates a new folder named `my-website` (do not call the folder `my-website`; use a proper name)
+2. `cd my-website` - Changes the current working directory to `my-website`
+3. `npm init --yes` - Creates the `package.json` file, which keep tracks of which npm packages you have installed
+4. `npm install express` - Installs the npm package `express`
+5. `npm install express-handlebars` - Installs the npm package `express-handlebars`
 
 ::: tip Tips
 When you version control a project, do not store the source code for the dependencies in your own repository. For Node.js applications, the `node_modules` folder should not be committed to your repository; it's enough to commit `package.json` and `package-lock.json` to your repository. These files contain a list of all your dependencies (and the specific versions of them), and others that clones your project can run the command `npm install` to install these dependencies in their own `node_modules` folder.
@@ -308,11 +256,11 @@ and then visit [http://localhost:8080/](http://localhost:8080/) in a web browser
 
 Continue by changing and adding code so it instead looks like your own personal website, as you specified in your report. Here is a suggestion on in which order to implement the features:
 
-1. Add references to your CSS framework in the layout file.
-    * For many CSS frameworks, you can just add a `<link>` element to the CSS file containing the framework's code on a Content Delivery Network (CDN).
-    * Many CSS frameworks are distributed as npm packages. For these, you can download the source code for the framework using the `npm install ***` command, and then add a `<link>` element to the CSS file in the `node_modules` folder.
-2. Implement most of the layout of your website by changing the code in `views/layouts/main.hbs`.
-3. Create new views (new `.hbs` files in the `views` folder) representing your basic pages (about page, contact page, etc.). Then change your JavaScript code so web browsers can request these pages.
+1. Add references to your CSS framework in the layout file
+    * For many CSS frameworks, you can just add a `<link>` element to the CSS file containing the framework's code on a Content Delivery Network (CDN)
+    * Many CSS frameworks are distributed as npm packages. For these, you can download the source code for the framework using the `npm install ***` command, and then add a `<link>` element to the CSS file in the `node_modules` folder
+2. Implement most of the layout of your website by changing the code in `views/layouts/main.hbs`
+3. Create new views (new `.hbs` files in the `views` folder) representing your basic pages (about page, contact page, etc.). Then change your JavaScript code so web browsers can request these pages
 
 ::: warning Remember!
 Each time you change your JavaScript code, you need to restart the application for the changes to take effect. In most shells, you can stop the application from running by pressing `[CTRL]` + `[C]` twice, and then to start it again, simply run the command `node app.js` again. In most shells, you can press the up arrow on the keyboard to get the previously executed command.
@@ -333,16 +281,15 @@ Feel free to show your work so far to a teacher at a lab session to get some fee
 Before you start working on this part, you are recommended to:
 
 * View the following videos:
-    * [SQLite](../../lectures/sqlite/)
     * [Using SQLite in Node.js](../../lectures/using-sqlite-in-node-js/)
 
 ---
 
 Storing data in variables works, but it is usually a bad solution for several reasons:
 
-* When the web application stops running, the data will be lost.
-* Computers' main memory (where variables are stored) is quite limited, so storing a big amount of data here is not appropriate.
-* It makes it hard to scale the web application (having it running on multiple servers at the same time), which is needed when your website becomes really popular and have a lot of visitors (will happen sooner or later, right? 😉).
+* When the web application stops running, the data will be lost
+* Computers' main memory (where variables are stored) is quite limited, so storing a big amount of data here is not appropriate
+* It makes it hard to scale the web application (having it running on multiple servers at the same time), which is needed when your website becomes really popular and have a lot of visitors (will happen sooner or later, right? 😉)
 
 Most web applications instead store data in a relational database, such as MySQL. Relational databases store the data in secondary storage (i.e. the hard drive), where it will persist even after the computer is shut down. Usually, the database runs on a server separate from the server the web application runs on, as shown in <FigureNumber/> below. 
 
@@ -365,8 +312,8 @@ graph LR
 
 Having the database running on a separate server from the web application (instead of on the same server) has a couple of advantages:
 
-* Web applications and databases have different hardware needs. Databases read/write a lot from/to secondary storage, so they need to do this fast to operate efficiently. But good/fast secondary storage (i.e. SDDs) is expensive. Web applications on the other hand process a lot of data (incoming HTTP requests), and instead need fast (expensive) CPUs, and possibly much primary storage to utilize caching. By using two different servers, you can better match the software with its hardware needs. 
-* If the web application and the database run on the same server, the maximum number of HTTP requests the web application can handle will be much lower, since the web application only have access to the hardware "half of the time" (the hardware is shared with the database).
+* Web applications and databases have different hardware needs. Databases read/write a lot from/to secondary storage, so they need to do this fast to operate efficiently. But good/fast secondary storage (i.e. SDDs) is expensive. Web applications on the other hand process a lot of data (incoming HTTP requests), and instead need fast (expensive) CPUs, and possibly much primary storage to utilize caching. By using two different servers, you can better match the software with its hardware needs
+* If the web application and the database run on the same server, the maximum number of HTTP requests the web application can handle will be much lower, since the web application only have access to the hardware "half of the time" (the hardware is shared with the database)
 
 However, setting up a database on a separate server is not straightforward and takes time, so in this course we will instead run the database on the same server as the web application, as shown in <FigureNumber/> below.
 
@@ -403,6 +350,11 @@ The database is not part of the source code for a web application and should the
 When you are done, your web application should work precisely the same way as when you had completed Part 3 but the resources should now be stored in the database instead of variables. Then update your report with a description of your implementation so far, and if you want feedback on your report and your code, show them to a teacher at one of the lab sessions.
  
 ## Part 5: Handling forms
+
+::: danger Deadline
+Just a reminder that you should not forget to [submit your report for feedback on Canvas](https://ju.instructure.com/courses/6738/assignments/35306). The deadline might have already been (depending on how slow/fast you work), but if you follow the time plan, you should submit it around now.
+:::
+
 When a user submits an HTML form (`<form>`), the web browser will send a new HTTP request to the server. If the GET method is used (`<form method="get">`), the data entered in the form will be added to the query string in the URI (the part after the `?` in the URI). In an express callback function receiving the request, that data can be accessed using the `query` property, i.e. `request.query`. This will be an object whose keys corresponds to the value given to the `name` attribute in the `<input>` fields in the form and the values will be the text the user entered in those `<input>` fields. It works similar for the other input elements you can use in forms (dropdown lists, checkboxes, radio buttons, etc.).
 
 ::::: tip Example
@@ -494,10 +446,6 @@ Your route parameters (such as `bookId` in `/books/:booksId`) needs to be valida
 It is not only data that comes from your clients that can result in errors. External systems your web application depends on (such as the database) can fail as well. For example, if the database is full, you cannot insert a new resource into it. In these cases, there is no need to show a descriptive error message like *The database is full*, because the user cannot fix the problem anyway. Instead, it is better to show a general error message like *Server error, we are working on fixing it*, and then log the error details, so you then can debug and fix the error.
 
 Deal with the various errors that can happen in your web application, and then update your report with a description of your implementation so far.
-
-::: danger Deadline
-Just a reminder that you should not forget to [submit your report for feedback on Canvas](https://ju.instructure.com/courses/4558/assignments/19357). The deadline might have already been (depending on how slow/fast you work), but if you follow the time plan, now should be a good time to submit it.
-:::
 
 ## Part 7: Adding authentication & authorization
 Before you start working on this part, you are recommended to:
@@ -653,8 +601,8 @@ The synchronizer token pattern takes advantage of the fact that if a user wants 
 HTML/HTTP does not come with built-in support to check that, but the synchronizer token pattern describes a way for us to do it manually. It basically works like this:
 
 1. When a user sends a GET requests for the form, we generate a unique token (a long random string), remember this token (in the session, in a cookie, or whatever) and add it as a hidden input field to the form, e.g.
-`<input type="hidden" name="token" value="the-long-random-string">`, so we also receives it back when the form is submitted.
-2. When we receive the submission of the form (i.e. the POST request), we check if the token in the form is the same token as we generated before. If they are, we can be sure the POST request has been intentionally sent by the user through the form on our website, and not through a CSRF-attack.
+`<input type="hidden" name="token" value="the-long-random-string">`, so we also receives it back when the form is submitted
+2. When we receive the submission of the form (i.e. the POST request), we check if the token in the form is the same token as we generated before. If they are, we can be sure the POST request has been intentionally sent by the user through the form on our website, and not through a CSRF-attack
 
 Use the npm package `csurf` to protect your website from CSRF-attacks.
 
@@ -686,28 +634,59 @@ Before you start working on this part, you are recommended to:
 
 ---
 
-Deploy your web application on a server. Use whichever you want, but it should be publicly accessible for other computers on the Internet. 
- 
-## Part 11: Demonstration
-Demonstrate how your application works to "the rest of your class". The reason for the demonstration is two-folded:
+Deploy your web application on a server. Use whichever you want, but it should be publicly accessible for other computers on the Internet. It is fine to do it as shown in the video above (using a domain name and HTTPS is not required, but please remember that all websites should use HTTPS).
 
-* You get some practice in presenting your work, which is a very important skill in your future professional career.
-* You get to see other ways to implement similar functionality (hopefully not all websites will look the same).
+If you in `Part 11: Demonstration` demonstrates your website when it's online, the teacher will approve you on the Canvas assignment [Project Server](https://ju.instructure.com/courses/6738/assignments/35581). Otherwise you need to have it up and running on a server when you complete `Part 12: Submitting your work`.
+
+## Part 11: Demonstration
+Demonstrate how your application works to the rest of your class in smaller groups. The reason for the demonstration is two-folded:
+
+* You get some practice in presenting your work, which is a very important skill in your future professional career
+* You get to see other ways to implement similar functionality (hopefully not all websites will look the same)
 
 At the demonstration you will simply show how users (you as the admin, and the rest of the world as visitors) can use the website. You should not show any code nor explain any implementation details; just demonstrate the website through a web browser. Show that you have CRUD operations for all of your resources, that you have validation, that you display descriptive error messages when something goes wrong, etc.
 
 To be allowed to demonstrate your website, you need to have implemented at least:
 
-* A functional login system.
-* All 4 CRUD operations for at least 2 type of resources with appropriate validation and authorization.
+* A functional login system
+* All 4 CRUD operations for at least 2 type of resources with appropriate validation and authorization checks
 
 You may use at most 10 minutes for your demonstration. If you need more than this to show all features, then skip some of them. If your demonstration takes just 2 minutes, that could be OK as well. Don't start talking about irrelevant things just to make the demonstration last longer.
 
-At the demonstration we will have a laptop connected to the projector in the room you can use to show your website. For this to work, your website must have been deployed to a server on the Internet (Part 10 of the project work needs to have been completed). If you have not completed Part 10 yet, you can bring and use your own laptop and run your website locally on your own laptop.
+Preferably bring your own laptop to the demonstration, and demonstrate your website using that one. If you can't do that, ask if you can borrow a laptop from a friend. If that's not possible neither, you can use the teacher's laptop for the demonstration, but then you have to have completed `Part 10: Deploying` first.
 
-Join one of the [Project Work Demonstration Groups](https://ju.instructure.com/courses/4558/groups) on Canvas to decide when you want to demonstrate. At most 6 students in each group, first come, first served.
+Join one of the [Project Demonstration Groups](https://ju.instructure.com/courses/6738/groups) on Canvas to decide when you want to demonstrate. At most 6 students in each group, first come, first served.
 
 Your demonstration will not be graded; consider it as (mandatory) practice (you must do it to pass the project work).
 
 ## Part 12: Submitting your work
-Submit your work for grading by uploading it to the assignment [Project Work Final Submission](https://ju.instructure.com/courses/4558/assignments/19360) on Canvas. **Be sure to follow the submission instructions there to 100%!**
+When you are done with your project, submit it for grading by submitting the assignment [Project Final Submission](https://ju.instructure.com/courses/6738/assignments/35580) on Canvas. Upload:
+
+* Your project report as a PDF file
+* The source code of your website as a ZIP file:
+  * Zip the root folder of your website (the project folder), and not a collection individual files/sub-folder
+  * Do not include the `node_modules` folder (e.g. delete it before you create the ZIP file)
+
+Do not put the PDF file in the ZIP file; upload them as two separate files in one and the same submission.
+
+When that ZIP file has been unzipped on the teacher's own computer, it is very important that the website can be started by running the following commands:
+
+1. `npm install`
+2. `npm run start` or `node app.js` (or whichever the name of your main file is)
+
+If this does not work and your report doesn't contain any instructions on how to start your web application you need to submit your work again at the next examination occasion, so double check that this works yourself before you submit your work!
+
+Write also the following information as a comment in the submission:
+
+* The URI to the login page
+* The correct username for logging in
+* The correct password for logging in
+* The IP address of the server your web application is running on (not required if you have already been approved on the assignment [Project Server](https://ju.instructure.com/courses/6738/assignments/35581))
+
+The examiner will login to your website and test all the CRUD operations.
+
+The examiner will only look at your latest submission on this page, so make sure that your latest submission includes both files (report + source code) and the comment with the requested information.
+
+Your submitted work will be checked for plagiarism using [Ouriginal](https://www.ouriginal.com/).
+
+Students failing to follow the submission instructions on this page will simply be asked to submit it again at the next submission occasion without any further comments, so double check that you've followed the instructions before you submit you work!

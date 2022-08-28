@@ -5,11 +5,9 @@ The instructions on the [Project Work](./project-work/) page indicate when you'r
 * [HTTP and Web Applications](../../lectures/http-and-web-applications/)
 * [Character Encodings](../../lectures/character-encodings/)
 * [Using Shells](../../lectures/using-shells/)
-* [Report Writing](../../lectures/report-writing/)
 * [HTML](../../lectures/html/)
-* [CSS](../../lectures/css/)
-* [HTML & CSS Frameworks](../../lectures/html-and-css-frameworks/)
-* [JavaScript Basics](../../lectures/javascript-basics/)
+* [CSS](../../garrit-css/)
+* [Database](../../jasmine/databas/)
 * [Asynchronous Programming in JavaScript](../../lectures/asynchronous-programming-in-js/)
 * [Node.js](../../lectures/node-js/)
 * [Web Applications in Node.js](../../lectures/web-applications-in-node-js/)
@@ -17,10 +15,24 @@ The instructions on the [Project Work](./project-work/) page indicate when you'r
 * [Express Basics](../../lectures/express-basics/)
 * [Handlebars](../../lectures/handlebars/)
 * [Web Applications in Express](../../lectures/web-applications-in-express/)
-* [SQLite](../../lectures/sqlite/)
 * [Using SQLite in Node.js](../../lectures/using-sqlite-in-node-js/)
 * [Cookies and Sessions](../../lectures/cookies-and-sessions/)
 * [Using cookies and Sessions in Express](../../lectures/using-cookies-and-sessions-in-express/)
 * [Designing Account Systems](../../lectures/designing-account-systems/)
 * [Web Security](../../lectures/web-security/)
 * [Amazon Lightsail](../../lectures/amazon-lightsail/)
+
+<!--
+* [Report Writing](../../lectures/report-writing/)
+HTML
+* [CSS](../../lectures/css/)
+* [HTML & CSS Frameworks](../../lectures/html-and-css-frameworks/)
+* [JavaScript Basics](../../lectures/javascript-basics/)
+Asynchronous Programming in JavaScript
+-->
+
+<!--
+Web Applications in Express
+* [SQLite](../../lectures/sqlite/)
+Using SQLite in Node.js
+-->
