@@ -1,4 +1,4 @@
-const child_process = require('child_process')
+import child_process from 'node:child_process'
 
 const commands = [
 	

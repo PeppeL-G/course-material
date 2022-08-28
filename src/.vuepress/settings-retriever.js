@@ -1,7 +1,7 @@
-const fs = require('fs')
-const path = require('path')
+import fs from 'node:fs'
+import path from 'node:path'
 
-exports.getAllCourseSettings = function(){
+export async function getAllCourseSettings(){
 	
 	const pathToCourseFolders = path.resolve(__dirname, "../courses")
 	
@@ -9,27 +9,27 @@ exports.getAllCourseSettings = function(){
 		pathToCourseFolders
 	)
 	
-	const courseSettings = courseFolderNames.map(courseFolderName => {
+	const courseSettings = await Promise.all(courseFolderNames.map(async courseFolderName => {
 		
 		const pathToCourseFolder = path.resolve(pathToCourseFolders, courseFolderName)
 		
-		const courseSettings = require(path.resolve(
+		const courseSettings = (await import(path.resolve(
 			pathToCourseFolder,
 			"settings.js"
-		))
+		))).default
 		courseSettings.folderName = courseFolderName
 		
 		return courseSettings
 		
-	})
+	}))
 	
 	return courseSettings
 	
 }
 
-exports.getCourseSettingsByFolderName = function(folderName){
+export async function getCourseSettingsByFolderName(folderName){
 	
-	return exports.getAllCourseSettings().find(
+	return (await getAllCourseSettings()).find(
 		c => c.folderName == folderName
 	)
 	

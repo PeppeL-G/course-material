@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 	name: "Introduction to Script Programming 2021",
 	showLink: true,
 	pages: [

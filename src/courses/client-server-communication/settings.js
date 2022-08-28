@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 	name: "Client-Server Communication 2022",
 	showLink: true,
 	pages: [

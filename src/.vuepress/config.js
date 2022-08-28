@@ -1,10 +1,15 @@
-const path = require('path')
-const settingsRetriever = require('./settings-retriever')
-const copyStaticFilesToPublic = require('./copy-static-files-to-public')
+import { defineUserConfig } from 'vuepress'
+import path from 'node:path'
+import { getAllCourseSettings } from './settings-retriever'
+import { copyStaticFilesToPublic } from './copy-static-files-to-public'
+import { defaultTheme } from 'vuepress'
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
+import { titleMakerPlugin } from './plugins/title-maker-plugin.js'
+import { containerPlugin } from '@vuepress/plugin-container'
 
-function getNavItems(){
+async function getNavItems(){
 	
-	const courseSettings = settingsRetriever.getAllCourseSettings()
+	const courseSettings = await getAllCourseSettings()
 	
 	courseSettings.sort((a, b) => a.name - b.name)
 	
@@ -21,9 +26,9 @@ function getNavItems(){
 	
 }
 
-function getSideBarObject(){
+async function getSideBarObject(){
 	
-	const courseSettings = settingsRetriever.getAllCourseSettings()
+	const courseSettings = await getAllCourseSettings()
 	
 	const sidebarObject = {}
 	
@@ -48,10 +53,10 @@ function getSideBarObject(){
 
 copyStaticFilesToPublic()
 
-module.exports = {
+export default defineUserConfig({
 	base: "/course-material/",
 	title: "Course Material",
-	themeConfig: {
+	theme: defaultTheme({
 		docsDir: "src",
 		docsRepo: "https://github.com/PeppeL-G/course-material",
 		docsBranch: "master",
@@ -63,59 +68,44 @@ module.exports = {
 			link: "/"
 		}, {
 			text: "Courses",
-			children: getNavItems(),
+			children: await getNavItems(),
 		}, {
 			text: "Get Help",
 			link: "https://github.com/PeppeL-G/course-material/issues"
 		}],
 		contributors: false,
 		sidebarDepth: 2,
-		sidebar: getSideBarObject()
-	},
+		sidebar: await getSideBarObject()
+	}),
 	markdown: {
 		code: {
 			lineNumbers: true,
 		}
 	},
 	plugins: [
-		path.resolve(__dirname, './plugins/plugin-title-maker.js'),
-		[
-			'@vuepress/register-components',
-			{
-				componentsDir: path.resolve(__dirname, './components'),
-			},
-		],
-		[
-			'@vuepress/container',
-			{
-				type: 'exam-question-container',
-				before: (info) => `<div class="exam-question-container">`,
-				after: () => `</div>`,
-			},
-		],
-		[
-			'@vuepress/container',
-			{
-				type: 'exam-question',
-				before: (info) => `<div class="exam-question"><h2>Question</h2>`,
-				after: () => `</div>`,
-			},
-		],
-		[
-			'@vuepress/container',
-			{
-				type: 'exam-sample-answer',
-				before: (info) => `<div class="exam-sample-answer"><h2>Sample answer</h2>`,
-				after: () => `</div>`,
-			},
-		],
-		[
-			'@vuepress/container',
-			{
-				type: 'exam-marking-guidelines',
-				before: (info) => `<div class="exam-marking-guidelines"><h2>Marking guidelines</h2>`,
-				after: () => `</div>`,
-			},
-		],
+		titleMakerPlugin(),
+		registerComponentsPlugin({
+			componentsDir: path.resolve(__dirname, './components'),
+		}),
+		containerPlugin({
+			type: 'exam-question-container',
+			before: (info) => `<div class="exam-question-container">`,
+			after: () => `</div>`,
+		}),
+		containerPlugin({
+			type: 'exam-question',
+			before: (info) => `<div class="exam-question"><h2>Question</h2>`,
+			after: () => `</div>`,
+		}),
+		containerPlugin({
+			type: 'exam-sample-answer',
+			before: (info) => `<div class="exam-sample-answer"><h2>Sample answer</h2>`,
+			after: () => `</div>`,
+		}),
+		containerPlugin({
+			type: 'exam-marking-guidelines',
+			before: (info) => `<div class="exam-marking-guidelines"><h2>Marking guidelines</h2>`,
+			after: () => `</div>`,
+		}),
 	],
-}
+})

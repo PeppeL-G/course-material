@@ -1,7 +1,7 @@
-const fs = require('fs')
-const path = require('path')
+import fs from 'node:fs'
+import path from 'node:path'
 
-function copyStaticFilesToPublic(){
+export function copyStaticFilesToPublic(){
 	
 	const doNotCopyFilenames = [
 		new RegExp("^.*\\.md$"),
@@ -65,5 +65,3 @@ function copyStaticFilesToPublic(){
 	}
 	
 }
-
-module.exports = copyStaticFilesToPublic

@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 	name: "Android Development 2022",
 	showLink: true,
 	pages: [

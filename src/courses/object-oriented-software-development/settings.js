@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 	name: "Object-oriented Software Development 2020",
 	showLink: false,
 	pages: [

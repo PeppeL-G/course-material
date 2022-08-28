@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 	name: "Web Development - Advanced Concepts 2022",
 	showLink: true,
 	pages: [

@@ -1,6 +1,6 @@
-const settingsRetriever = require('../settings-retriever')
+import { getCourseSettingsByFolderName } from '../settings-retriever'
 
-module.exports = function(options={}, context){
+export function titleMakerPlugin(options={}, context){
 	
 	return {
 		
@@ -14,7 +14,7 @@ module.exports = function(options={}, context){
 					"/courses/".length
 				).split("/")[0]
 				
-				const courseSettings = settingsRetriever.getCourseSettingsByFolderName(
+				const courseSettings = getCourseSettingsByFolderName(
 					courseFolderName
 				)
 				
