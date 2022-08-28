@@ -147,7 +147,7 @@ Here are short presentations of the teachers involved in the course.
     photo="susanne-smithberger.jpeg"
     :roles='["Lecturer", "Seminar leader"]'
     description="Lecturer at the Department of Language, Aesthetic Learning and Literature at JU."
-    email="susanne.smithberger @ju.se"
+    email="susanne.smithberger@ju.se"
     phone="073 - 910 16 90"
     website="https://ju.se/en/personinfo.html?sign=smisus"
 />

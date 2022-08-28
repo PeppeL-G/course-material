@@ -664,7 +664,7 @@ When you are done with your project, submit it for grading by submitting the ass
 
 * Your project report as a PDF file
 * The source code of your website as a ZIP file:
-  * Zip the root folder of your website (the project folder), and not a collection individual files/sub-folder
+  * Zip the root folder of your website (the project folder), and not a collection of individual files/sub-folder
   * Do not include the `node_modules` folder (e.g. delete it before you create the ZIP file)
 
 Do not put the PDF file in the ZIP file; upload them as two separate files in one and the same submission.
