@@ -53,3 +53,4 @@ After each exam, sample answers with some grading guidelines will be published h
 
 * [2022-03-26](./exams/exam-2022-03-26/)
 * [2022-06-13](./exams/exam-2022-06-13/)
+* [2022-08-20](./exams/exam-2022-08-20/)

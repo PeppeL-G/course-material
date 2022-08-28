@@ -11,7 +11,7 @@
 				<tr v-for="day of week.days" :key="day.date" :class="{hasPassed: day.hasPassed}">
 					<td>{{day.weekday}}</td>
 					<td>{{day.date}}</td>
-					<td v-for="task of day.tasks" :key="task">{{task}}</td>
+					<td v-for="task of day.tasks" :key="task" v-html="task"></td>
 				</tr>
 			</template>
 		</table>

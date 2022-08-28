@@ -1,11 +1,12 @@
 # Study Guide
 <StudyGuideInfo
     course-name="Web Development Fundamentals"
-    ladok-code="TGWK18"
+    ladok-code="TGWK12"
     credits="7.5"
+    year="2022"
     course-coordinator="Peter Larsson-Green"
-    examiner="Peter Larsson-Green"
-    canvas-course-id="4558"
+    examiner="Jérôme Landré"
+    canvas-course-id="6738"
 />
 
 ## Introduction
@@ -34,6 +35,22 @@ More specifically you will learn how to create a web application to which a sing
 
 ## Prerequisites
 At course start you are expected to already possess knowledge corresponding to the prerequisite courses shown in <FigureNumber/> below. 
+
+<Figure caption="Prerequisites for this course.">
+<RenderMermaid graph-definition="
+graph TD
+	ihci[Introduction to Human-Computer Interaction 7.5 Credits]
+	fop[Foundations of Programming 7.5 Credits]
+	wuid[Web and User Interface Design 15 Credits]
+	webDevFund[Web Development Fundamentals 7.5 Credits]
+	ihci --> wuid
+	fop --> webDevFund
+	wuid --> fop
+	wuid --> webDevFund
+" />
+</Figure>
+
+sdfsdf
 
 <Figure caption="Prerequisites for this course.">
 <RenderMermaid graph-definition="

@@ -68,7 +68,7 @@ The following software tools are not required (use whichever tools you want), bu
 * [DB Browser for SQLite](https://sqlitebrowser.org/)
     * Database management tool you can use to visualize/debug the database. An alternative is to install and use [the SQLite extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite).
 
-## Part 1: Specifying functionality & graphical user interface
+## Part 1: Specifying the functionality
 Before you start working on this part, you are recommended to:
 
 * View the following videos:
@@ -87,6 +87,27 @@ Your first task is to specify:
 
 Your decisions should be described in the project report, so in this part of the project work, you will not do any programming, but only work on your report. A good way to describe the functionalities is by sketching what the GUI will look like in the end. Then the reader can easily see all the functionality just by looking at pictures. An example of that is shown in [project-report-template.docx](files/project-report-template.docx).
 
+Feel free to show your report to one of the teachers at the lab sessions to get some feedback on your work. Don't expect the teacher to read all of your report, but primarily to look at the figures in it, but that should be enough to give you valuable feedback.
+ 
+
+
+## Part 2: Specifying the graphical user interface
+Before you start working on this part, you are recommended to:
+
+* Complete the following optional exercises:
+    * [Exercise 1: HTML](exercises/#exercise-1-html)
+    * [Exercise 2: CSS](exercises/#exercise-2-css)
+* View the following videos:
+    * [Character Encodings](../../lectures/character-encodings/)
+    * [HTML](../../lectures/html/)
+    * [CSS](../../lectures/css/)
+    * [HTML & CSS Frameworks](../../lectures/html-and-css-frameworks/)
+
+---
+
+
+
+
 Designing a website with a user-friendly GUI is no simple task. Therefore, designers have created CSS frameworks that makes it easy for people who are not good at design to create GUIs that are user-friendly. These frameworks primarily consist of components one can use to implement the GUI (such as one component representing a form, another one representing a menu, a third one representing an article, etc.). Since you have to use a CSS framework in your project work, you are recommended to now select which CSS framework you are going to use, and then design your website using the available components in that framework.
 
 Use whichever CSS framework you want, but we recommend you to use [Spectre.css](https://picturepan2.github.io/spectre/index.html). It is a small and simple framework, which makes it easy to learn and use. It comes with components such as:
@@ -101,21 +122,11 @@ Use whichever CSS framework you want, but we recommend you to use [Spectre.css](
 
 We recommend you to use a simple layout. This is no design course, so do not waste too much time on the design. If you turn out to have time left at the end of the course, you can use that time to improve the design of the website.
 
-Feel free to show your report to one of the teachers at the lab sessions to get some feedback on your work. Don't expect the teacher to read your report, only to look at the figures in the report, but that should be enough to give you valuable feedback.
- 
-## Part 2: Prototyping the graphical user interface
-Before you start working on this part, you are recommended to:
 
-* Complete the following optional exercises:
-    * [Exercise 1: HTML](exercises/#exercise-1-html)
-    * [Exercise 2: CSS](exercises/#exercise-2-css)
-* View the following videos:
-    * [Character Encodings](../../lectures/character-encodings/)
-    * [HTML](../../lectures/html/)
-    * [CSS](../../lectures/css/)
-    * [HTML & CSS Frameworks](../../lectures/html-and-css-frameworks/)
 
----
+
+
+
 
 Instead of having *implement the web application* as the goal you immediately try to achieve, we recommend you to break it down into multiple smaller goals, and then try to achieve all these sub-goals, one at a time, and when all these sub-goals have been achieved, your main goal (*implement the web application*) has been achieved too ([Divide and Conquer](https://en.wikipedia.org/wiki/Divide-and-conquer_algorithm)!).
 
