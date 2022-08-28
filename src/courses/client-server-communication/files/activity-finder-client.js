@@ -1,5 +1,5 @@
 // Install dependency by running: npm install jwt-decode
-const jwtDecode = require('jwt-decode')
+import jwtDecode from 'jwt-decode'
 
 const networkDelayInMs = 10
 const rootPath = "http://localhost:8000"
@@ -72,7 +72,7 @@ function displayError(response){
 	
 }
 
-module.exports.getAllAccounts = async function(callback){
+export async function getAllAccounts(callback){
 	
 	let response
 	
@@ -105,7 +105,7 @@ module.exports.getAllAccounts = async function(callback){
 	
 }
 
-module.exports.getAccountById = async function(id, callback){
+export async function getAccountById(id, callback){
 	
 	let response
 	
@@ -142,7 +142,7 @@ module.exports.getAccountById = async function(id, callback){
 	
 }
 
-module.exports.createAccount = async function(account, callback){
+export async function createAccount(account, callback){
 	
 	let response
 	
@@ -160,7 +160,9 @@ module.exports.createAccount = async function(account, callback){
 		
 		case 201:
 			const locationHeader = response.headers.get("Location")
-			id = parseInt(locationHeader.substr("/accounts/".length))
+			id = parseInt(locationHeader.substring(
+				"/accounts/".length,
+			))
 			break
 		
 		case 400:
@@ -186,7 +188,7 @@ module.exports.createAccount = async function(account, callback){
 
 
 
-module.exports.signIn = async function(username, password, callback){
+export async function signIn(username, password, callback){
 	
 	const bodyToSend = {
 		username,
@@ -255,14 +257,14 @@ module.exports.signIn = async function(username, password, callback){
 	
 }
 
-module.exports.signOut = async function(callback){
+export async function signOut(callback){
 	accessToken = null
 	callback()
 }
 
 
 
-module.exports.getAllActivities = async function(callback){
+export async function getAllActivities(callback){
 	
 	let response
 	
@@ -295,7 +297,7 @@ module.exports.getAllActivities = async function(callback){
 	
 }
 
-module.exports.getActivitiesByAccountId = async function(accountId, callback){
+export async function getActivitiesByAccountId(accountId, callback){
 	
 	let response
 	
@@ -328,7 +330,7 @@ module.exports.getActivitiesByAccountId = async function(accountId, callback){
 	
 }
 
-module.exports.getActivityById = async function(id, callback){
+export async function getActivityById(id, callback){
 	
 	let response
 	
@@ -365,7 +367,7 @@ module.exports.getActivityById = async function(id, callback){
 	
 }
 
-module.exports.createActivity = async function(activity, callback){
+export async function createActivity(activity, callback){
 	
 	let response
 	
@@ -411,7 +413,7 @@ module.exports.createActivity = async function(activity, callback){
 	
 }
 
-module.exports.updateActivityById = async function(id, activity, callback){
+export async function updateActivityById(id, activity, callback){
 	
 	let response
 	
@@ -458,7 +460,7 @@ module.exports.updateActivityById = async function(id, activity, callback){
 	
 }
 
-module.exports.deleteActivityById = async function(id, callback){
+export async function deleteActivityById(id, callback){
 	
 	let response
 	

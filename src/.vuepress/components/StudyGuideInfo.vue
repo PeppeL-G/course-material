@@ -29,7 +29,7 @@
 			<dt v-if="pingPongPassword">Ping Pong password</dt>
 			<dd v-if="pingPongPassword">{{pingPongPassword}}</dd>
 			
-			<dt v-if="canvasCourseId">Canvas Course</dt>
+			<dt v-if="canvasCourseId">Canvas Course Room</dt>
 			<dd v-if="canvasCourseId">
 				<a :href="'https://ju.instructure.com/courses/'+canvasCourseId" target="_blank">
 					{{courseName}}

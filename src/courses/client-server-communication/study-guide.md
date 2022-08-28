@@ -3,10 +3,10 @@
     course-name="Client-Server Communication"
     ladok-code="TSPK18"
     credits="7.5"
+    year="2022"
     course-coordinator="Peter Larsson-Green"
-    examiner="Johan Kohlin"
-    ping-pong-event="Client-Server Communication - TSPK18 - A19"
-    ping-pong-password="TSPK18A1934"
+    examiner="Peter Larsson-Green"
+    canvasCourseId="6797"
 />
 
 ## Teachers
@@ -14,36 +14,26 @@
 <Teacher
     name="Peter Larsson-Green"
     photo="peter-larsson-green.jpeg"
-    :roles='["Course coordinator", "lecturer", "lab assistant"]'
+    :roles='["Examiner", "course coordinator", "lecturer", "lab assistant"]'
     description="Has studied and followed the development of the web since 2004 and received his Master of Science in Computer Science at Linköping University in 2014. He has been working as programming teacher (part time) since 2010 at both Linköping University and Jönköping University."
     email="Peter.Larsson-Green@ju.se"
     phone="036 - 10 17 35"
     website="https://ju.se/en/personinfo.html?sign=LarPet"
 />
 
-### Johan Kohlin
+### Jérôme Landré
 <Teacher
-    name="Johan Kohlin"
-    photo="johan-kohlin.jpeg"
-    :roles='["Examiner"]'
-    description="Has been teaching web development and web design since 2006 for communication students at HLK and since 2016 he teaches JavaScript and misc. web technologies at JTH, primarily to New Media Design students."
-    email="Johan.Kohlin@ju.se"
-    phone="036 - 10 15 09"
-    website="https://ju.se/en/personinfo.html?sign=KoJo"
-/>
-
-### Linus Rudbeck
-<Teacher
-    name="Linus Rudbeck"
-    photo="linus-rudbeck.jpeg"
+    name="Jérôme Landré"
+    photo="jerome-landre.jpeg"
     :roles='["Lab assistant"]'
-    description="Former JTH student that studied the program Software Engineering and Mobile Platforms. Started the company Red Capes IT together with Daniel Fransén after he graduated."
-    phone="036 - 10 17 35"
-    website="https://redcapesit.se/author/linus/"
+    description="Assistant Professor in Computer Science and Informatics."
+    email="jerome.landre@ju.se"
+    phone=""
+    website="https://ju.se/en/personinfo.html?sign=LanJer"
 />
 
 ## Introduction
-In this course you will learn in more detail how the communication between clients and servers on the web works, i.e. learn the HTTP protocol. This will then be used to create a "web application" not only web browsers can communicate with, but any type of application connected to the Internet, using a REST API. This is convenient for smartphone applications and similar when they need to be able to store data from the users in the cloud instead of locally on the smartphone device.
+In this course you will learn in more detail how the communication between clients and servers on the web works, i.e. learn the HTTP protocol. This will then be used to create a "web application" not only web browsers can communicate with, but any type of application connected to the Internet can communicate with using a REST API. This is convenient for smartphone applications and similar when they need to be able to store data from the users in the cloud instead of locally on the smartphone device.
 
 <FigureNumber /> below displays an overview of how it can work. 
 
@@ -74,21 +64,16 @@ graph TD
 	wuid[Web and User Interface Design 7.5 Credits]
 	gdvc[Graphic Design and Visual Communication 15 Credits]
 	csp[Client-side Programming 15 Credits]
-	awa[Applied Web Architecture 15 Credits]
 	csc[Client-Server Communication 7.5 Credits]
 	wuid --> csp
 	gdvc --> csp
-	csp --> awa
-	awa --> csc
+	csp --> csc
 " />
 </Figure>
 
 ## Intended Learning Outcomes
-The intended learning outcomes of the course are found in [the course syllabus](course-syllabus/) in force and are described under the next heading.
+The intended learning outcomes of the course are found in the [Course Syllabus](./course-syllabus/). Below is a table showing how the examination tests cover the intended learning outcomes and which teaching activity help you learn which intended learning outcome.
 
-## Examination, ILOs and Learning Activities
-
-### Description of the elements that examine the course ILOs, and the corresponding learning activities
 <ILOsActivitiesMapping description="
 Display knowledge of the HTTP protocol.
 -Laboratory work
@@ -144,44 +129,62 @@ Demonstrate skills of implementing SPAs using front-end frameworks.
 +Recorded lecture: Vue
 "/>
 
-### Information to students
-Information about the **Laboratory Work** can be found on the page [Lab Instructions](lab-instructions/). It will teach you how to build a Single-Page Application in Vue.js communicating with a backend using a Software Development Kit.
+## Learning Activities
+Here are short introduction to the learning activities offered in the course.
 
-Information about the **Project Work** can be found on the page [Project Instructions](project-instructions/). It's about creating a platform consisting of a frontend application and a backend application communicating using a REST API.
+### Recorded Lectures
+In the beginning of most weeks you will be encouraged to view some recorded lectures. These will be quite theoretical and will teach new you things you can use when building a platform.
 
-**Written Examination** is a [Digital Exam](https://ju.se/student/en/digital-exam.html) in Inspera at the end of the course. You need to register for it in advance per the instructions at [https://ju.se/student/en/studies/examination.html](https://ju.se/student/en/studies/examination.html). Sample answers are only published for the ordinary exam, not the re-exams. For the re-exams, come and talk with the course coordinator if there are any answers you are unsure of.
+### Tutorials
+Most weeks there will be a tutorial session where the teacher will show you how to use what has been taught in the recorded lectures in practice.
 
-* [Sample answers to the exam 2019-10-15](files/exam-2019-10-15-sample-answers.txt)
-* [Sample answers to the exam 2020-08-13](files/exam-2020-08-13-sample-answers.txt)
+### Lab Sessions
+Each week you may attend a 4 hours long lab session. At the lab session you may ask the teacher there for help with your lab and project work.
 
-### Conditions for the examined elements
-Conditions for the **Laboratory Work** can be found on the page [Lab Instructions](lab-instructions/).
+There are 2 different lab sessions each week, but you may only sign up for one of them. To distribute you, join one of [the Lab Groups on Canvas](https://ju.instructure.com/courses/6797/groups). First come, first served.
 
-Conditions for the **Project Work** can be found on the page [Project Instructions](project-instructions/).
+::: tip Attending more lab sessions
+You may attend the other lab session if there is room for it, but the teacher there must of course prioritize helping the students that have signed up for that lab session.
+:::
 
-No aids allowed are allowed for the **Written Examination**. The computer you write the exam on may only be used to answer the questions on the exam, nothing else.
+## Examination Tests
+The course contains two examination tests.
 
-### Re-examination of this course
-Re-examination for the **Laboratory Work** is offered in the re-exam periods in January and August. If you need to know a precise date and time in advance, contact the course coordinator.
+### 1. Laboratory Work
+1 credits, graded pass/fail. More information is available on the [Laboratory Work](./laboratory-work/) page.
 
-Re-examination for the **Project Work** is offered in the re-exam periods in January and August. If you need to know a precise date and time in advance, contact the course coordinator. The project work will only be graded 3/U (U=fail) at re-examination.
+### 2. Project Work
+4.5 credits, graded U, 3, 4 and 5. More information is available on the [Project Work](./project-work/) page.
 
-Re-examination for the **Written Examination** is offered in the re-exam periods in January and August.
+### 3. Written Examination
+2 credits, graded U, 3, 4, and 5. More information is available on the [Written Examination](./written-examination/) page.
 
-If you haven't passed some examination tests after the three examination opportunities (ordinary + 2 re-exam) you need to re-take those tests the next time the course run. Note that the instructions for those tests might have changed the next time the course run.
+### Final Grade
+To receive a final grade on the course you need to pass all examination tests (`Laboratory Work`, `Project Work` and `Written Examination`). The final grade will be based on the lowest grade of the `Project Work` and `Written Examination` , but these grades will also be marked as `weak` or `strong`. If one of the grades is lower than the other and has been marked as `strong`, the final grade will be the lower grade + 1. Examples:
 
-## Grading criteria
-To receive a final grade on the course you need to pass all examination tests (Laboratory Work + Project Work + Written Examination). The final grade will be based on the lowest grade on the Project work and the Written Examination, but these grades will also be marked as "weak" or "strong". If one of the grades is lower than the other and has been marked as "strong", the final grade will be the lower grade + 1. For example, a strong 3 and a weak 4 gives you 4 as the final grade, while a weak 3 and a strong 5 gives you 3 as the final grade. For the Written Examination, 50% is a strong 3, and 70% is a strong 4.
+* A `strong 3` and a `weak 4` gives you `4` as the final grade
+* A `weak 3` and a `strong 5` gives you `3` as the final grade
 
-| Examination test | Grading criteria grade 3 | Grading criteria grade 4 | Grading criteria grade 5 |
-|---|---|---|---|
-| Written Examination | 40% or max score | 60% of max score | 80% of max score |
+For `Written Examination`, 50% of max score is a strong 3, and 70% of max score is a strong 4.
 
-The grading criteria for the project work can be found on the page [Project Grading Guidelines](project-grading-guidelines/).
+### Re-examination
+<FigureNumber /> below shows the study and exam periods during a year. The small blue circle sectors shows when the (re-)examinations are offered in this course.
+
+<AcademicYearFigure />
+
+Re-examination for all examination tests will be offered at the re-exam periods in January and August. To learn precise dates before they have been announced, email the course coordinator at `peter.larsson-green@ju.se`. The project work will only be graded U/3 at re-examination.
+
+::: danger Last time the course run!
+This course is this year running for the last time. Therefor, you will have 2 more re-examination opportunities in addition to the ones described above. More information about these will be announced later. To learn more, email the course coordinator at `peter.larsson-green@ju.se`.
+
+If you haven't passed the course after the ordinary examination opportunity + the 4 re-examination opportunities, you can't pass the course. If this happen to you, contact your student councilor or program manager to learn your alternatives.
+:::
+
+
 
 ## Course Literature and Other Teaching Aids
-* [Express in Action: Writing, building, and testing Node.js applications](http://proquestcombo.safaribooksonline.com.proxy.library.ju.se/book/programming/javascript/9781617292422) by Evan M. Hahn
-* [Working with Web APIs](https://launchschool.com/books/working_with_apis) by Launch School
+* *Express in Action: Writing, building, and testing Node.js applications* by *Evan M. Hahn*
+* [Working with Web APIs](https://launchschool.com/books/working_with_apis) by *Launch School*
 * [Web API Design: Crafting Interfaces that Developers Love](https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf)
 
 ## Time Plan

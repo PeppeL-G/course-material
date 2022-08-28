@@ -1,16 +1,16 @@
 module.exports = {
-	name: "Client-Server Communication 2019",
+	name: "Client-Server Communication 2022",
 	showLink: true,
 	pages: [
 		"index.html",
 		"course-syllabus",
 		"study-guide",
-		"lab-instructions",
-		"tutorials",
 		"lectures",
-		"sample-exam",
-		"project-instructions",
+		"tutorials",
+		"laboratory-work",
+		"project-work",
 		"project-grading-guidelines",
+		"written-examination",
 		"time-plan",
 	],
 }

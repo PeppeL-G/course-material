@@ -3,3 +3,4 @@ src/.vuepress/dist
 src/.vuepress/.cache
 src/.vuepress/.temp
 src/.vuepress/public
+package-lock.json

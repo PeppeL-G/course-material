@@ -1,23 +1,29 @@
-# Project Instructions
+# Project Work
 As project you should work in pairs and create a platform (a solution consisting of both a backend application handling the data on the platform and a frontend application containing the graphical user interface through which users will use the platform). The backend should expose a REST API which the frontend can use to work with the data on the platform. The platform should be implemented with the technologies taught in the course, i.e. Node.js/Express for the backend and Vue.js for the frontend.
 
 You should not only implement the platform, you should also write a report describing the platform and its implementation, including what it can be used for and how it has been implemented. The file [project-report-template.docx](files/project-report-template.docx) contains a template for the report. Your report will be a living document throughout the course, meaning that you will write on it from the start and continually improve it until the end of the course. 
 
 ## Part 1: Find a partner
-Start by finding a classmate to work with. Then [join a project group on Ping Pong](https://pingpong.hj.se/courseId/21410/projectGroupsList.do#&tab=allGroups) to let the examiner know who you're working with. If you can't find a classmate to work with, email the course coordinator at [Peter.Larsson-Green@ju.se](mailto:Peter.Larsson-Green@ju.se) and he will pair you with another student in the same situation.
+Start by finding a classmate to work with. Then [join a Project Group on Canvas](https://ju.instructure.com/courses/6797/groups) to let the examiner know who you're working with. If you can't find a classmate to work with, email the course coordinator at [Peter.Larsson-Green@ju.se](mailto:Peter.Larsson-Green@ju.se) and he will pair you with another student in the same situation.
 
 ## Part 2: Platform idea
+Before you start working on this part you are expected to read/view the following lectures:
+
+* [Report Writing](../../lectures/report-writing/)
+* [UML Use-Case Diagrams](../../lectures/uml-use-case-diagrams/)
+
+---
 Come up with the platform you want to implement. The platform may be about whatever you want, but the following requirements exist:
 
-* Users should be able to create accounts.
-* Users should be able to login to accounts.
-* Users should be able to create at least one other type of resource (in addition to accounts) that belongs to an account.
+* Users should be able to create accounts
+* Users should be able to login to accounts
+* Users should be able to create at least one other type of resource (in addition to accounts) that belongs to an account
 
-Example of the additional resource type could be:
+Example of what the additional resource type could be:
 
-* Blogposts for a platform hosting blogs.
-* Diary entries for platforms hosting diaries.
-* Movies for a platform where users can register movies they've watched.
+* Blogposts for a platform hosting blogs
+* Diary entries for a platform hosting diaries
+* Movies for a platform where users can register which movies they've watched
 
 If you want to have a more fun platform to implement, you probably need to have accounts + 2-3 additional resource types, but it is OK to just have one additional resource type.
 
@@ -25,10 +31,10 @@ Try to be creative and come up with an idea that solves a real world problem. Fo
 
 Users should be able to apply <abbr title="Create, Read, Update, Delete">CRUD</abbr> operations on at least accounts + 1 additional resource type on the platform, but how they do that through the frontend is up to you to decide. For example, to delete an account you may have a delete button either on the *View account* "page" or you may have a dedicated *Delete account* "page" that only contains the delete button. Users should also be able to login to the account they have created using a username and a password.
 
-Describe your platform as detailed as possible in your project report. To a large extent you should be able to finish the chapters *Introduction*, *Database* and *Frontend Application* (describe the GUI, not implementation details for now).
+Describe your platform as detailed as possible in your project report. You should at least be able to complete most of the chapters *Introduction* and *Graphical User Interface* now.
 
 ## Part 3: Designing the REST API
-Before you start working on this part you are expected to view the following lectures:
+Before you start working on this part you are expected to read/view the following lectures:
 
 * [Internet Basics](../../lectures/internet-basics/)
 * [HTTP and Web Applications](../../lectures/http-and-web-applications/)
@@ -45,7 +51,7 @@ You do not need to worry about login functionality (authentication and authoriza
 Describe the REST API in your project report. Be as detailed as possible. Other programmers should understand how to use your REST API just by reading the specification for it in your report. This means that you must mention details such as which methods, URI:s, status codes, headers etc. that are used in your REST API for each type of request it can handle.
 
 ## Part 4: Implementing the REST API in Express
-Before you start working on this part you are expected to view the following lectures:
+Before you start working on this part you are expected to read/view the following lectures:
 
 * [Node.js](../../lectures/node-js/)
 * [Web Applications in Node.js](../../lectures/web-applications-in-node-js/)
@@ -62,24 +68,23 @@ Implement the REST API you've specified in your project report so far as an Expr
 ### Getting started with Express
 Start by creating a new folder to store the source code for your backend application:
 
-1. Open a terminal/shell/console, for example *Windows PowerShell* in Windows.
+1. Open a terminal/shell/console, for example *Windows PowerShell* in Windows
 2. Navigate to the folder where you want to create the root folder of your source code. Use the following commands:
     * `cd /projects` - Go into the sub-folder named `projects`
-    * `cd ../`- Go back to the parent folder (you probably will not need to use this one)
+    * `cd ../`- Go back to the parent folder (you will probably not need to use this one)
 3. Create the root folder for your project's source code files by running the following command:
     * `mkdir my-backend` - Create a new folder named `my-backend` (use a better name)
 4. Go into the root folder by running the following command:
     * `cd my-backend` - Go into the sub-folder named `my-backend`
 5. Create the `package.json` file (which keep tracks of which npm packages the project is using) by running the following command:
-    * `npm init --yes` - Creates the `package.json`file.
+    * `npm init --yes`
 6. Install the `express` package by running the following command:
-    * `npm install express` - Installs the `express` package for this project
+    * `npm install express`
 
 Then open the root folder of your project in your code editor:
 
 7. Use the following command to open the root folder in Visual Studio Code:
-    * `code .` - Open the root folder in Visual Studio Code.
-    **Note**: [On Mac you need to add the code command](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line).
+    * `code .`
 
 Then create the file `app.js` with the content shown below. That code is a web application sending back the text `Hello, World` when you visit [localhost:3000/](http://localhost:3000/).
 
@@ -111,26 +116,26 @@ Play around a little bit to learn the basics:
 * What happens when a client sends a GET request for a URI that does not exist?
 
 ### Getting started with SQLite
-The resources on the platform should be stored in a database. In this course we will use the relational database SQLite as our database. SQLite is most often not the best choice for big platforms with a lot of users, but it is easy to use and to get started with, and you can later replace it with a more powerful database when needed.
+The resources on the platform should be stored in a database. In this course we will use the relational database SQLite as our database. SQLite is most often not the best choice for big platforms with a lot of users, but it is easy to use and get started with, and you can later replace it with a more powerful database when needed.
 
 SQLite stores the entire database in a single file and does not require any installation in addition to an npm package exposing an API you can use to communicate with it.
 
 Start by installing the `sqlite3` package (feel free to use `sqlite` instead if you want to use promises (and optionally `async`/`await`) to avoid [callback hell](http://callbackhell.com/), although that's not something you will learn in this course):
 
-1. Open a terminal/shell/console and navigate to your project folder.
+1. Open a terminal/shell/console and navigate to your project folder
 2. Install the npm package `sqlite3` by running the following command:
-    * `npm install sqlite3` - Installs the npm package `sqlite3`
+    * `npm install sqlite3`
 
 Then use `sqlite3` in your backend to create a new database to store your resources in. Here are some guiding steps helping you with the accounts resources:
 
-3. Add the line `const sqlite3 = require('sqlite3')`.
-4. Add the line `const db = new sqlite3.Database("my-database.db")`.
-5. Use `db.run("Your SQL query")`to send a query to the database creating a table that can be used to store the accounts on the platform.
-6. Start the backend again. When you do this, the web application will send the query above to the database, which in turn will create the table to store the accounts in.
-7. Open your database file in DB Browser for SQLite and verify that the table has been created.
+3. Add the line `const sqlite3 = require('sqlite3')`
+4. Add the line `const db = new sqlite3.Database("my-database.db")`
+5. Use `db.run("Your SQL query")`to send a query to the database creating a table that can be used to store the accounts on the platform
+6. Start the backend again. When you do this, the web application will send the query above to the database, which in turn will create the table to store the accounts in
+7. Open your database file in DB Browser for SQLite and verify that the table has been created
 
 ::: warning Note
-If you send a query like `CREATE TABLE accounts (...)`to the database, you will get an error the second time you start your backend, because the table `accounts` already exists in the database. Instead, you can send a query like `CREATE TABLE IF NOT EXISTS accounts (...)`, which will attempt to create the `accounts` table only if it does not already exist.
+If you send a query like `CREATE TABLE accounts (...)`to the database, you will get an error when you later start your backend again and this query is sent to the database again, because the table `accounts` already exists in the database. Instead, you can send a query like `CREATE TABLE IF NOT EXISTS accounts (...)`, which will attempt to create the `accounts` table only if it does not already exist.
 :::
 
 ::: warning Note
@@ -138,6 +143,10 @@ In the end the passwords should not be stored in plain text in the database, onl
 :::
 
 Use DB Browser for SQLite to manually insert some accounts (remember to click on the `Write Changes` button in the GUI!). Then let's write the code letting clients fetch accounts (this might not be in line with what you've written in your report, so you might need to modify the code below a little bit).
+
+::: warning The DB file might be locked!
+When an app, such as DB Browser to SQLite and your Express app, opens a file, they might keep having the file open (i.e. they do not all read all the file content and then immediately close the file) for as long as they run. If so, no other app can write to the file. So, you might have problem if you try to open and work with the DB file in DB Browser for SQLite if your web app is running at the same time.
+:::
 
 ### Fetching all accounts
 To let clients fetch all accounts, they can send a GET request to `/accounts`. When the backend receives this request, it needs to fetch all accounts from the database and send them back in JSON format. To make that happen, you can use the code below:
@@ -193,16 +202,9 @@ Try sending a GET request to `/accounts/1` and `/accounts/6876868` in Postman to
 ### Creating accounts
 To let clients create new accounts, they can send a POST request to `/accounts`, and in the body pass information about the account to be created in JSON format, e.g. `{"username": "Alice", "password": "abc123"}`. They also need to use the `Content-Type` header with the value `application/json`. When the backend receives this request, it needs to read the information from the body of the request and then insert that information as a new account in the database, and then send back a response to the client.
 
-To be able to read bodies written in JSON format, you need to add a middleware function from the npm package `body-parser`:
+To be able to read bodies written in JSON format, you need to add the middleware function `express.json()`:
 
-1. Open a terminal/shell/console and navigate to your project folder.
-2. Install the npm package `body-parser` by running the following command:
-    * `npm install body-parser` - Installs the npm package `body-parser`
-
-Then use `body-parser` in your backend to add a middleware function parsing JSON bodies:
-
-3. Add the line `const bodyParser = require('body-parser')`.
-4. Add the line `app.use(bodyParser.json())`.
+1. Add the line `app.use(express.json())`
 
 Then you can let clients create new accounts using the following code:
 
@@ -226,15 +228,15 @@ app.post("/accounts", function(request, response){
 
 Try adding Update and Delete operations for accounts on your own:
 
-* To update a resource, clients should send a PUT request, the URI should identify which resource that should be updated, and the body should contain the updated resource. Use `app.put("...", function(...){ ... })` to listen for PUT requests.
-* To delete a resource, clients should send a DELETE request, and the URI should identify which resource that should be deleted. Use `app.delete("...", function(...){ ... })` to listen for DELETE requests.
+* To update a resource, clients should send a PUT request, the URI should identify which resource that should be updated, and the body should contain the updated resource. Use `app.put("...", function(...){ ... })` to listen for PUT requests
+* To delete a resource, clients should send a DELETE request, and the URI should identify which resource that should be deleted. Use `app.delete("...", function(...){ ... })` to listen for DELETE requests
 
 Then add the other operations for the other type of resources you have. Note that we yet don't bother about authentication and authorization, so all clients should for now be allowed to whatever they want.
 
 Don't forget to describe in your project report how the backend has been implemented.
 
 ## Part 5: Implementing the Frontend
-Before you start working on this part you are expected to view the following lectures:
+Before you start working on this part you are expected to read/view the following lectures:
 
 * [SOP and CORS](../../lectures/sop-and-cors/)
 
@@ -249,7 +251,7 @@ The frontend does not yet contain login functionality, so you can't implement th
 Don't forget to describe in your project report how the frontend has been implemented.
 
 ### Enabling CORS on the backend
-To start with, web browsers will forbid the frontend to communicate with the backend due to the [Same-Origin Policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy). To allow it, you need to add support for [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) to your backend application. In Express it's as easy as this (using the `*` value in the CORS headers to allow any clients to do anything):
+To start with, web browsers will forbid the frontend to communicate with the backend due to the [Same-Origin Policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) (at least forbid many of the requests it needs to send). To allow it, you need to add support for [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) to your backend application. In Express it's as easy as this (using the `*` value in the CORS headers to allow any clients to do anything):
 
 ```js
 const express = require('express')
@@ -290,9 +292,7 @@ FireFox did before support the `*` value only in the `Access-Control-Allow-Origi
 ### Sending HTTP requests from the frontend
 To send HTTP requests from your Vue.js application you can either use [the old XMLHttpRequest object](https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX/Getting_Started) or [the new `fetch()` function](https://davidwalsh.name/fetch). Below you find example of how to use each of them.
 
-:::: code-group
-::: code-group-item XMLHttpRequest
-
+#### `XMLHttpRequest`
 ```js
 const request = new XMLHttpRequest()
 
@@ -328,14 +328,10 @@ const bodyAsString = JSON.stringify(accountToBeCreated)
 request.send(bodyAsString)
 ```
 
-:::
-::: code-group-item fetch()
+#### `fetch()`
+`XMLHttpRequest` is built on callback functions. The newer `fetch()` function is instead built on promises. A major benefit with using promises instead of callback functions is that you can chain them, which will make the code much more readable (you avoid callback hell). You can learn about how to chain promises by reading the article [Promises chaining](https://javascript.info/promise-chaining). 
 
-You're not expected to learn how promises works in this course, but if you're curios you can learn the basics about promises on your own by reading the article [Understanding promises in JavaScript](https://hackernoon.com/understanding-promises-in-javascript-13d99df067c1).
-
-The benefits with using promises instead of callback function is that you can chain them. You can learn about how to chain promises by reading the article [Promises chaining](https://javascript.info/promise-chaining). 
-
-And of course you also need to learn how to use the `fetch()` function works. You can do that in the article [Introduction to fetch()](https://developers.google.com/web/updates/2015/03/introduction-to-fetch).
+To learn how the `fetch()` function works, read the article [Introduction to fetch()](https://developers.google.com/web/updates/2015/03/introduction-to-fetch).
 
 ```javascript
 const accountToBeCreated = {
@@ -360,10 +356,9 @@ fetch("https://localhost:3000/accounts", {
     // Called when something goes wrong :(
 })
 ```
-:::
-::: code-group-item fetch() with async and await
 
-The main benefit with promises is that we can use the `async` and `await` keywords in JavaScript instead of chaining them. This way, we end up writing code that looks to run synchronously (and hence very easy to read ☺), but it will run asynchronously (hence not blocking ☺).
+#### `fetch()` with async and await
+The biggest benefit with promises is that we can use the `async` and `await` keywords in JavaScript instead of chaining them. This way, we end up writing code that looks to run synchronously (and hence very easy to read ☺), but it will run asynchronously (hence not blocking ☺).
 
 To learn how to use `async`/`await` you can read the article [How to use Async Await in JavaScript.](https://medium.com/javascript-in-plain-english/async-await-javascript-5038668ec6eb). Using promises with `async`/`await` is probably easier than learning how to chain promises, so don't be afraid of trying.
 
@@ -388,8 +383,6 @@ async function createAccount(accountToBeCreated){
     
 }
 
-// Use this in an async function.
-// (the async keyword cna only be used in async functions)
 try{
     const bodyAsObject = await createAccount({
         username: "Alice",
@@ -401,11 +394,11 @@ try{
 }
 
 ```
-:::
-::::
+
+
 
 ## Part 6: Adding Login to the REST API
-Before you start working on this part you are expected to view the following lectures:
+Before you start working on this part you are expected to read/view the following lectures:
 
 * [REST API Authorization](../../lectures/rest-api-authorization/)
 * [JSON Web Tokens](../../lectures/json-web-tokens/)
@@ -415,27 +408,27 @@ Before you start working on this part you are expected to view the following lec
 
 Add authentication and authorization to the REST API in your project report as described by the [OAuth 2.0 Framework](https://oauth.net/2/) and [OpenID Connect](https://openid.net/connect/). You basically need to:
 
-* Add one request clients can use to "login" to an account (to obtain an access token and an id token).
-    * Clients also need to know which claims the id token contains.
-* Describe how clients can pass the access token to the backend in requests.
-* Describe which clients that are allowed to perform which operations in the API.
+* Add one request clients can use to "login" to an account (to obtain an Access Token and an ID Token)
+    * Clients also need to know which claims the ID Token contains
+* Describe how clients can pass the Access Token to the backend in requests
+* Describe which clients that are allowed to perform which operations in the API
 
 You only need to support the *Authorization Grant* called *Resource Owner Password Credentials*. Follow the details in the specification as much as possible.
 
-::: danger Report Feedback
-You may [submit your report on Ping Pong and get some feedback on it](https://pingpong.hj.se/courseId/21410/content.do?id=16690466) once before you submit your project work for grading at the end of the course. When you have come this far in your project work it is probably a good idea to do that. Note that you only have until 2019-10-04 to submit your report for feedback.
+::: warning Report Feedback
+The quality of your report will affect the grade on your project quite much. From one point of view, your grade should only be based on what is written in the report, and your source code will only be used to verify that you actually have implemented it as it is described in the report. So it's important that your report is of good quality.
+
+During the lab sessions, we encourage you to discuss your report with the teacher. You can't expect the teacher to read all your text, but we strongly advice you to have higher level of discussions about the report (such as structure and discussions around figures).
 :::
 
 ## Part 7: Implementing Login in Express
 Implement authentication and authorization in the Express application the way you describe it in the previous part. You should also change the code to store hash values of the users passwords, instead of storing them as plain text. Here we give you some hints about how to accomplish this.
 
 ### Adding login/Creating tokens
-According to the OAuth 2.0 specification, when a user logs in with a username and password, they should send it to the server in the body of the request in the data format `application/x-www-form-urlencoded`. This is the same data format that is used in the querystring, e.g. `variable1=value1&variable2=value2&...`. When the backend receives such a request, it needs to parse the body written in that data format. This can be added to Express using a middleware from the npm package `body-parser`:
+According to the OAuth 2.0 specification, when a user logs in with a username and password, they should send it to the server in the body of the request in the data format `application/x-www-form-urlencoded`. This is the same data format that is used in the querystring, e.g. `variable1=value1&variable2=value2&...`. When the backend receives such a request, it needs to parse the body written in that data format. This can be added to Express using the middleware function `express.urlencoded()`:
 
 ```js
-const bodyParser = require('body-parser')
-
-app.use(bodyParser.urlencoded({
+app.use(express.urlencoded({
     extended: false
 }))
 ```
@@ -457,7 +450,7 @@ If `grant_type` has the value `password`, then the body should also contain the 
 
 If `grant_type` has the value `password` and the body also contains the variables `username` and `password`, then we need to fetch the account from the database with the given `username` and see if the `password` matches. If  no account with that username exists, or if the password is wrong, we should send back an error response (see the specification for the details).
 
-Otherwise, if everything is OK and the user should be signed in, we need to create an access token the user can send to the backend in the future as a proof of being signed in to a specific account. We can implement these access tokens as [JSON Web Tokens](https://jwt.io/) (JWT). To create a new JWT, we can use the npm package [`jsonwebtoken`](https://www.npmjs.com/package/jsonwebtoken). To install it, run the command `npm install jsonwebtoken` in the root folder of your backend application. Then you can use it like this:
+Otherwise, if everything is OK and the user should be signed in, we need to create an Access Token the user can send to the backend in the future as a proof of being signed in to a specific account. We can implement these Access Tokens as [JSON Web Tokens](https://jwt.io/) (JWT). To create a new JWT, we can use the npm package [`jsonwebtoken`](https://www.npmjs.com/package/jsonwebtoken). To install it, run the command `npm install jsonwebtoken` in the root folder of your backend application. Then you can use it like this:
 
 ```js
 const jwt = require('jsonwebtoken')
@@ -471,12 +464,18 @@ const dataToPutInTheToken = { // AKA "claims" and "payload".
 const accessToken = jwt.sign(dataToPutInTheToken, jwtSecret) // "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3VudHJ5IjoiU3dlZGVuIn0.k6rz1VHMIg3YvFpm4JMy78RUnFBUCPQPRoRXa2HlRjs"
 ```
 
-In the access token you probably want to put something that identifies the user, such as the user's account id, and then send it back to the client (see the specification for the details).
+In the Access Token you probably want to put something that identifies the user, such as the user's account id, and then send it back to the client (see the specification for the details).
 
-When you're done you can use Postman to test if you can login and get back an access token. If you do, you can then use [the debugger at jwt.io](https://jwt.io/#debugger-io) to verify that the token contains expected data.
+When you're done you can use Postman to test if you can login and get back an Access Token. If you do, you can then use [the debugger at jwt.io](https://jwt.io/#debugger-io) to verify that the token contains expected data.
 
 ### Receiving and extracting tokens
-When a client in the future sends requests to the backend and need to prove that she's the owner of a specific account, she can pass the access token in the `Authorization` header, e.g. `Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3VudHJ5IjoiU3dlZGVuIn0.k6rz1VHMIg3YvFpm4JMy78RUnFBUCPQPRoRXa2HlRjs`. When the backend receives that request it needs to extract the access token from this header and then extract the data from the token that you put inside of it before. You can do that like this:
+When a client in the future sends requests to the backend and need to prove that she's the owner of a specific account, she can pass the Access Token in the `Authorization` header, e.g.:
+
+```
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3VudHJ5IjoiU3dlZGVuIn0.k6rz1VHMIg3YvFpm4JMy78RUnFBUCPQPRoRXa2HlRjs
+```
+
+When the backend receives that request it needs to extract the Access Token from this header and then extract the data from the token that you put inside of it before. You can do that like this:
 
 ```js
 const jwt = require('jsonwebtoken')
@@ -489,16 +488,16 @@ app.get("/some-protected-resource", function(request, response){
     
     try{
         const authorizationHeader = request.get("Authorization") // E.g. "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3VudHJ5IjoiU3dlZGVuIn0.k6rz1VHMIg3YvFpm4JMy78RUnFBUCPQPRoRXa2HlRjs"
-        const accessToken = authorizationHeader.substr("Bearer ".length) // E.g. "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3VudHJ5IjoiU3dlZGVuIn0.k6rz1VHMIg3YvFpm4JMy78RUnFBUCPQPRoRXa2HlRjs"
+        const accessToken = authorizationHeader.substring("Bearer ".length) // E.g. "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3VudHJ5IjoiU3dlZGVuIn0.k6rz1VHMIg3YvFpm4JMy78RUnFBUCPQPRoRXa2HlRjs"
         dataInToken = jwt.verify(accessToken, jwtSecret) // E.g. {country: "Sweden"}
     }catch(error){
         // Access token not present or invalid.
     }
     
     if(dataInToken){
-        // We received a valid access token :D
+        // We received a valid Access Token :D
     }else{
-        // We didn't receive an access token or the received access token was invalid :(
+        // We didn't receive an Access Token or the received Access Token was invalid :(
     }
     
 })
@@ -506,22 +505,24 @@ app.get("/some-protected-resource", function(request, response){
 
 After we have extracted the data from the token we can figure out to which account the user logged in to before, and then figure out if the user is authorized to make the request or not.
 
-When you have added authorization checks to your code you can use Postman to send requests with the Authorization header containing the access token and see if it works as it should. You can also use [the debugger at jwt.io](https://jwt.io/#debugger-io) to create invalid access tokens and see if your backend properly detects them as invalid.
+When you have added authorization checks to your code you can use Postman to send requests with the Authorization header containing the Access Token and see if it works as it should. You can also use [the debugger at jwt.io](https://jwt.io/#debugger-io) to create invalid Access Tokens and see if your backend properly detects them as invalid.
 
 ::: tip Avoiding copy-pasting code
-Extracting the access token from the `Authorization` header like that and then extract the data from the access token is something you want to do in many of the requests your backend receives, so instead of copy-pasting all of this code it is better to put it in a function and then call the function when you need to extract it (or even better: use a middleware function).
+Extracting the Access Token from the `Authorization` header like that and then extract the data from the Access Token is something you want to do in many of the requests your backend receives, so instead of copy-pasting all of this code it is better to put it in a function and then call the function when you need to extract it (or even better: use a middleware function).
 :::
 
 ::: warning Note!
 One should rather use `jwt.sign()` and `jwt.verify()` asynchronously by providing a callback function, but to simplify we used them synchronously instead (they send back a return value). By using them synchronously they are blocking, so concurrent incoming HTTP requests are queued instead of handled immediately (the calls to `jwt.sign()` and `jwt.verify()` takes many milliseconds to execute). The call to these functions with a callback function are not blocking (the long running operations are executed in the background/another thread), and therefor better to use.
+
+You can probably also find another JWT package that are built on promises instead of callback functions. That would be even better to use.
 :::
 
 ### Adding OpenID Connect
-When a client logs in and receives back an access token, the client does probably also want to know to which account the user logged into, so the client knows the username of the account, the id of the account, etc. For that we can use [OpenID Connect](https://openid.net/connect/). It specifies that when the client logs in, we do not only send back an access token, but also an id token that contains information about who the user is. Unlike access tokens, id tokens have to be implemented as JWT.
+When a client logs in and receives back an Access Token, the client does probably also want to know to which account the user logged into, so the client knows the username of the account, the id of the account, etc. For that we can use [OpenID Connect](https://openid.net/connect/). It specifies that when the client logs in, we do not only send back an Access Token, but also an ID Token that contains information about who the user is. Unlike Access Tokens, ID Tokens have to be implemented as JWT.
 
-You get to decide what you want to put in your id token, but follow the specification as much as possible.
+You get to decide what you want to put in your ID Token, but follow the specification as much as possible.
 
-When you're done you can use Postman and see if you also get back an id token when you login. If you do you can use [the debugger at jwt.io](https://jwt.io/#debugger-io) to verify that the token contains expected information.
+When you're done you can use Postman and see if you also get back an ID Token when you login. If you do you can use [the debugger at jwt.io](https://jwt.io/#debugger-io) to verify that the token contains expected information.
 
 ### Hashing passwords
 Storing passwords in plain text is a bad idea. Users often use the same password on different platforms, and if their passwords on our platform are leaked (by accident or by a hacker that has manage to hack our platform), anyone can login on their accounts on the other platforms they are using. Quite bad!
@@ -531,7 +532,7 @@ Instead, passwords should be hashed, and we should only store the hash value of 
 To use bcrypt in Node.js you can use the npm package [bcryptjs](https://www.npmjs.com/package/bcryptjs):
 
 1. Download the npm package to your backend application:
-    * In the root folder of your backend application, run the command `npm install bcryptjs`.
+    * In the root folder of your backend application, run the command `npm install bcryptjs`
 2. When creating a new account, hash the user's password using:
 
 ```js
@@ -564,7 +565,7 @@ if(bcrypt.compareSync(usersEnteredPassword, storedHashValue)){
 When you're done, use Postman to create some new accounts and then try to login to these.
 
 ::: warning Remember
-The old accounts in your database contains tha password in plain text, so you should not be able to login to them anymore. Feel free to delete these.
+The old accounts in your database contains the password in plain text, so you should not be able to login to them anymore. Feel free to delete these.
 :::
 
 ::: warning Note!
@@ -574,18 +575,20 @@ One should rather use the npm package `bcrypt` instead of `bcryptjs`. The JavaSc
 
 One should rather use the asynchronous functions `hash()` and `compare()` instead of the synchronous `hashSync()` and `compareSync()`. The synchronous functions are easier to use (return values instead of callback functions), but they are blocking, so concurrent incoming HTTP requests are queued instead of handled immediately. The asynchronous functions compute the hash values in the background/in another thread, so they don't have this shortage. 
 
+Both `bcrypt` and `bcryptjs` supports using promises, so rather use these instead of using callbacks.
+
 You should most likely not use `8` as the number of hashing rounds (too low), but [it is a bit complicated to find out the optimal number of rounds to use](https://security.stackexchange.com/a/3993/70743), and to do that you also need to know which server your backend will be running on in the end, and since deploying a backend on a server is not part of this course, we don't have all the details to compute it. 
 :::
 
 ## Part 8: Adding Login to the Frontend
-Now that the backend have login functionality through access tokens and id tokens, use this login functionality in the frontend application. When you're done, users should only be able to do what they should be able to. For example, a user should not be able to delete another user's account, or similar. 
+Now that the backend have login functionality through Access Tokens and ID Tokens, use this login functionality in the frontend application. When you're done, users should only be able to do what they should be able to. For example, a user should not be able to delete another user's account, or similar. 
 
-You are recommended to keep track of wether the user is logged in or not the same way as you did in the lab, i.e. in add a `user` object to `App.vue` and pass this as a props to your other Vue components.
+You are recommended to keep track of whether the user is logged in or not the same way as you did in the lab, i.e. in add a `user` object to `App.vue` and pass this as a props to your other Vue components.
 
-When the user successfully logs in you get back an id token with information about the user (it's id, username, etc.). You need to open up this JWT and read out the information from it. You can't do that with the npm package `jsonwebtoken` (that you used in your backend), because it only works in Node.js, and not in web browsers. Instead, you can use the npm package `jwt-decode`:
+When the user successfully logs in you get back an ID Token with information about the user (it's id, username, etc.). You need to open up this JWT and read out the information from it. You can't do that with the npm package `jsonwebtoken` (that you used in your backend), because it only works in Node.js, and not in web browsers. Instead, you can use the npm package `jwt-decode`:
 
 1. In the root folder of your frontend application, run the command `npm install jwt-decode`.
-2. To read out the data from the id token, use the function this npm package consists of:
+2. To read out the data from the ID Token, use the function this npm package consists of:
 
 ```js
 const jwtDecode = require('jwt-decode')
@@ -596,12 +599,16 @@ const dataInIdToken = jwtDecode(idToken) // E.g. {sub: 4, preferred_username: "A
 ```
 
 ## Part 9: Presentation
-Present your platform to the rest of your class using a projector. The reason for the presentation is two-folded:
+Present your platform to the rest of the class in smaller groups. To distribute you, **ONE** in your Project Group should join the corresponding [Project Presentation Group](https://ju.instructure.com/courses/6797/groups) on Canvas.
 
-* You get some practice in presenting your work, which is a very important skill in your future professional career.
-* You get to see other platforms that you should be able to implement yourself.
+The reason for the presentation is two-folded:
 
-At the presentation you will simply tell the audience what users can do on your platform and why someone would like to do that, and then show how users can use the platform through the frontend application. You should not show any code nor explain any implementation details; just give a practical demonstration of how users will use the platform. The best way to do that is by having one of you speaking and telling the other one what to do (e.g. *Create a new account*), and then the other shows how to do that.
+* You get some practice in presenting your work, which is a very important skill in your future professional career
+* You get to see other platforms that you should be able to implement yourself
+
+At the presentation you should simply tell the audience what problem you try to solve by letting users use your platform, and then show how users would solve their problem by using the platform (i.e. demonstrate how the platform can be used). You should not show any code nor explain any implementation details, but feel free to show slides if you want.
+
+The best way to show what a user can do on the platform is by having one of you speaking and telling the other one what to do (e.g. *Create a new account for me*), and then the other shows how to do that.
 
 To be allowed to present your work your you must at least be done with Part 5.
 
@@ -609,17 +616,13 @@ You may use at most 10 minutes for your presentation. If you need more than this
 
 If you can't present your work on your own laptop, email the course coordinator and he will help you.
 
-There are 3 different sessions for the demonstration, and you need to present your platform one of them. Select which one by [joining the corresponding project group on Ping Pong](https://pingpong.hj.se/courseId/21410/projectGroupsList.do) (first come, first served).
-
 Your presentation will not be graded; consider it as (mandatory) practice.
 
 ## Part 10: Grade 4 and 5
 Be sure to read through [Project Grading Guidelines](project-grading-guidelines/) to see that you follow the guidelines for grade you're aiming for. To be able get grade 4 and 5 you also need to implement the extra functionality described next.
 
 ### SDK (required for grade 4)
-Create an SDK other programmers can use to communicate with your backend from their client-side JavaScript code. Then also use it in your own frontend.
-
-Also update the report to reflect this.
+Create an SDK other programmers can use to communicate with your backend from their client-side JavaScript code. Then also use it in your own frontend. Also update the report to reflect this.
 
 ### Supporting Multiple Data Formats (required for grade 4)
 Add support for another data format in addition to JSON (+ www-form-urlencoded for logging in). This should work in both requests and responses, so when you receive a request you need to look at the `Content-Type` header to figure out which format the body in the request is written in, and you also need to look at the `Accept` header to figure out in which format you should send back the body in the response in.
@@ -638,13 +641,15 @@ Each time you receive an HTTP request with a body, check the `Content-Type` of t
 
 ::: tip Tips!
 You need to do this for all incoming HTTP requests with a body, so the best way to implement it is as a middleware function. In your middleware function, after you have obtained the resource from the body as a JavaScript object, assign it to `request.body` so your ordinary request handler functions in `app.post(...)` and `app.put(...)` can obtain the resource through `request.body`.
+
+Or, maybe you can find an npm package that exports a middleware function doing all of this for you already?
 :::
 
 #### Sending back responses in correct data format
-You can't always call `response.json(theResource)` to send back the resource. You should only use `response.json(...)` if the `Accept` header in the request is `application/json`. If the `Accept` header instead is `application/yaml`, you should send it back in YAML format. To convert the resource to a string with YAML code, use a suitable npm package. To send back the string with the YAML code, use `response.end("THE YAML CODE")`.
+You can't always call `response.json(theResource)` to send back the resource. You should only use `response.json(...)` if the `Accept` header in the request is `application/json`. If the `Accept` header instead is `application/yaml`, you should send it back in YAML format. To convert the resource to a string with YAML code, use a suitable npm package. To send back the string with the YAML code, you can use `response.end("THE YAML CODE")`.
 
 ::: tip Tips!
-You need to do this for all outgoing HTTP responses with a body, so the best way to implement it is as a function doing something like this:
+You need to do this for all outgoing HTTP responses with a body, so one way to implement it is as a function doing something like this:
 ```js
 if(/* Accept header in request is application/json */){
     // Send back the resource in JSON format.
@@ -662,9 +667,23 @@ Add third-party authentication to your application so users can login on your pl
 Also update your report to reflect this.
 
 ## Part 11: Final submission
-Submit your project work for grading by submitting [the Ping Pong assignment Project Work - Final Submission](https://pingpong.hj.se/courseId/21410/content.do?id=16690476). The source code for your backend and frontend should be submitted as two separate ZIP files, and they should not contain the `node_modules` folder (you need to manually delete it). When those ZIP files have been unzipped on the examiner's own computer, it is very important that the applications can be started and are fully functional just by running the following two commands (for each of the applications):
+When you are done with your project, upload it for grading by submitting the Canvas assignment [Project Final Submission](https://ju.instructure.com/courses/6797/assignments/35559). Upload:
 
-1. `npm install`
-2. `node app.js` or `npm run serve` (or whatever)
+* Your report as a PDF file
+* The source code for the frontend app as a ZIP file:
+    1. Delete the `node_modules` folder in the app's root folder
+    2. Create a ZIP file of the app's root folder
+* The source code for the backend app as a ZIP file:
+    1. Delete the `node_modules` folder in the app's root folder
+    2. Create a ZIP file of the app's root folder
 
-If this does not work you need to submit your work again at the next examination occasion, so double check that this work yourself before you submit your work!
+The examiner will only look at your latest submission here, so be sure to upload all files in one and the same submission, and not as three separate submissions.
+
+It is very important that your two apps can be started by:
+
+1. Unzipping the ZIP files
+2. In respective app's root folder running the following two commands:
+    1. `npm install`
+    2. `node app.js` or `npm run dev` (or whatever)
+
+If this does not work, the teacher will grade your work *Revision required*, and you need to submit your work again at the next examination occasion, so double check that this work yourself before you submit your work!

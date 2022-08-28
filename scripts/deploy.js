@@ -2,6 +2,9 @@ const child_process = require('child_process')
 
 const commands = [
 	
+	// Install all dependencies.
+	'npm install',
+	
 	// Build it.
 	'npm run build',
 	
