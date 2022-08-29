@@ -75,32 +75,32 @@ graph TD
 The intended learning outcomes of the course are found in the [Course Syllabus](./course-syllabus/). Below is a table showing how the examination tests cover the intended learning outcomes and which teaching activity help you learn which intended learning outcome.
 
 <ILOsActivitiesMapping description="
-Display knowledge of the HTTP protocol.
+Display knowledge of the HTTP protocol
 -Laboratory work
 -Project work
 -Written examination
 +Recorded lecture: Internet
 +Recorded lecture: Web Applications & HTTP
 ---
-Display knowledge of the REST architectural style.
+Display knowledge of the REST architectural style
 -Laboratory work
 -Project work
 -Written examination
 +Recorded lecture: REST API Basics
 ---
-Demonstrate comprehension of architectures consisting of multiple systems communicating through APIs.
+Demonstrate comprehension of architectures consisting of multiple systems communicating through APIs
 -Laboratory work
 -Project work
 -Written examination
 +Recorded lecture: REST API Basics
 ---
-Demonstrate the ability to design and document user-friendly APIs.
+Demonstrate the ability to design and document user-friendly APIs
 -Project work
 -Written examination
 +Recorded lecture: REST Basics
 +Recorded lecture: REST API in Express
 ---
-Demonstrate skills of implementing APIs.
+Demonstrate skills of implementing APIs
 -Project work
 -Written examination
 +Recorded lecture: Node.js
@@ -109,23 +109,24 @@ Demonstrate skills of implementing APIs.
 +Recorded lecture: SQLite in Node.js
 +Recorded lecture: JWT
 ---
-Demonstrate skills of consuming APIs.
+Demonstrate skills of consuming APIs
 -Project work
 -Written examination
 +Recorded lecture: SPA Requests
 +Recorded lecture: SOP & CORS
 +Recorded lecture: JWT
 ---
-Demonstrate skills of implementing SDKs for APIs.
+Demonstrate skills of implementing SDKs for APIs
 -Project work
 -Written examination
 +Recorded lecture: SPA Requests
 +Recorded lecture: SOP & CORS
 +Recorded lecture: JWT
 ---
-Demonstrate skills of implementing SPAs using front-end frameworks.
+Demonstrate skills of implementing SPAs using front-end frameworks
 -Laboratory work
 -Project work
+-Written examination
 +Recorded lecture: Vue
 "/>
 
@@ -151,7 +152,7 @@ You may attend the other lab session if there is room for it, but the teacher th
 The course contains two examination tests.
 
 ### 1. Laboratory Work
-1 credits, graded pass/fail. More information is available on the [Laboratory Work](./laboratory-work/) page.
+1 credit, graded fail/pass. More information is available on the [Laboratory Work](./laboratory-work/) page.
 
 ### 2. Project Work
 4.5 credits, graded U, 3, 4 and 5. More information is available on the [Project Work](./project-work/) page.

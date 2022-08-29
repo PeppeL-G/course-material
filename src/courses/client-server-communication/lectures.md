@@ -1,5 +1,5 @@
 # Lectures
-The pages [Lab Work](./laboratory-work/) and [Project Work](./project-work/) indicate when you're expected to view each lecture, but here's a list of all of them.
+The pages [Laboratory Work](./laboratory-work/) and [Project Work](./project-work/) indicate when you're expected to view each lecture, but here's a list of all of them.
 
 * [Using Shells](../../lectures/using-shells/)
 * [Vue](../../lectures/vue/)

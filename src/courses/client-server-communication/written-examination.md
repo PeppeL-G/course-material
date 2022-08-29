@@ -2,7 +2,7 @@
 On this page you find information about the examination test `Written Examination`.
 
 ## Number of credits
-The `Written Examination` test is worth 2 credits. You will primarily prepare for it by completing the [Project Work](project-work/), so don't expect to use 2 credits of time studying for the `Written Examination` only.
+The `Written Examination` test is worth 2 credits. You will primarily prepare for it by completing the [Laboratory Work](laboratory-work/) and the [Project Work](project-work/), so don't expect to use 2 credits of time studying for the `Written Examination` only.
 
 ## Digital Exam
 The `Written Examination` test is an Inspera exam; a digital exam you write on a school computer. More information about Inspera exams can be found on [the JU page *Digital Exam*](https://ju.se/student/en/digital-exam.html).
