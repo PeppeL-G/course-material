@@ -2,7 +2,41 @@
 There is no laboratory work in this course, but here are some optional exercises you can try to complete before you start implementing the website in your project work. Completing the exercises will give you a gentler start compared to starting to work on the project directly, so you are strongly recommended to complete them  .
 
 ## The CSS Exercise
-Instructions for the CSS exercise will be available here.
+The goal with this exercise is to practice on the basics in HTML and CSS. Before you start working on it, you are recommended to:
+
+* View the following lectures:
+    * [Garrits on campus lecture about CSS 1 & 2](../../lectures/garrit-css/)
+
+---
+
+Your task is to create a portfolio website for yourself featuring your work from the study program.
+
+### 1. Sketch a wireframe
+The first task is to draw a wireframe, a rough sketch, how your site should look.
+
+Take a picture of your wireframe and save it as a PDF.
+
+### 2. Set up a GitHub Repository
+Create a repository on GitHub that you use for your portfolio.
+
+### 3. Code the HTML structure
+Next, you use the wireframe to define the content areas you will need in your HTML code. Use semantic tags.
+
+When you are done, commit, and push your results to your GitHub repository.
+
+### 4. Create a simple CSS
+To make your portfolio a bit more impressive, create a CSS-file, link it to your HTML-file, and style the text and color attributes.
+
+When you are done, commit, and push your results to your GitHub repository.
+
+### 5. Layout with more advanced CSS
+Use grid and flexbox to generate the layout of your portfolio. Make sure that you plan it responsively.
+
+When you are done, commit, and push your results to your GitHub repository.
+
+### 6. Publish your result with GitHub Pages
+
+When you are satisfied with your portfolio, go to the setting tab on your GitHub repository in the browser, select pages and publish your portfolio. If you like, you can share your link with your classmates.
 
 ## The DB Exercise
 Instructions for the DB exercise will be available here.

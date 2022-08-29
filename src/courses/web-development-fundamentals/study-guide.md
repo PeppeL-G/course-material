@@ -111,7 +111,7 @@ Here are short presentations of the teachers involved in the course.
 ### Hasan Khalaf
 <Teacher
     name="Hasan Khalaf"
-    photo="missing.jpeg"
+    photo="hasan-khalaf.jpeg"
     :roles='["Lab assistant"]'
     description="Third year student studying the bachelor program Software Engineering and Mobile Platforms."
     email="khha20qz@student.ju.se"
