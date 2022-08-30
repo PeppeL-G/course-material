@@ -26,7 +26,7 @@
     name="Jérôme Landré"
     photo="jerome-landre.jpeg"
     :roles='["Lab assistant"]'
-    description="Assistant Professor in Computer Science and Informatics."
+    description="Assistant Professor."
     email="jerome.landre@ju.se"
     phone=""
     website="https://ju.se/en/personinfo.html?sign=LanJer"
