@@ -192,7 +192,7 @@ const expressHandlebars = require('express-handlebars')
 
 const app = express()
 
-app.engine("hbs", expressHandlebars({
+app.engine("hbs", expressHandlebars.engine({
   defaultLayout: 'main.hbs'
 }))
 
