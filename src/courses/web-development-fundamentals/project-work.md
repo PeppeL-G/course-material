@@ -81,12 +81,7 @@ Before you start working on this part, you are recommended to:
 
 ---
 
-Your first task is to specify:
-
-* The functionality of the website (which different type of resources it consists of and what you/anyone can do with them)
-* What the graphical user interface (GUI) should look like
-
-Your decisions should be described in the project report, so in this part of the project work, you will not do any programming, but only work on your report. A good way to describe the functionalities is by sketching what the GUI will look like in the end. Then the reader can easily see all the functionality just by looking at pictures. An example of that is shown in [project-report-template.docx](files/project-report-template.docx).
+Your first task is to specify the functionality of the website (which different type of resources it consists of and what you/anyone can do with them). Your decisions should be described in the project report, so in this part of the project work, you will not do any programming, but only work on your report. A good way to describe the functionalities is by sketching what the GUI will look like in the end. Then the reader can easily see all the functionality just by looking at pictures. An example of that is shown in [project-report-template.docx](files/project-report-template.docx).
 
 Feel free to show your report to one of the teachers at the lab sessions to get some feedback on your work. Don't expect the teacher to read all of your report, but primarily to look at the figures in it, but that should be enough to give you valuable feedback.
  

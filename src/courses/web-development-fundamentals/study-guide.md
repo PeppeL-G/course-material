@@ -230,7 +230,7 @@ To help you write a proper project report, there will be a 1 hour lecture on aca
 ### Lab Sessions
 Each week you may attend a 4 hours lab session. At the lab session you may ask the teacher there for help with your exercises and project work.
 
-There are 5 different lab sessions each week, but you may only sign up for one of them. To distribute you, join one of the [Lab Groups](https://ju.instructure.com/courses/4558/groups) on Canvas. First come, first served.
+There are 5 different lab sessions each week, but you may only sign up for one of them. To distribute you, join one of the [Lab Groups](https://ju.instructure.com/courses/6738/groups) on Canvas. First come, first served.
 
 ::: tip Attending more lab sessions
 You may attend the other lab sessions if there is room for it, but the teacher there must of course prioritize helping the students that have signed up for that lab session.
