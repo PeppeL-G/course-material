@@ -39,6 +39,13 @@ When you are done, commit, and push your results to your GitHub repository.
 When you are satisfied with your portfolio, go to the setting tab on your GitHub repository in the browser, select pages and publish your portfolio. If you like, you can share your link with your classmates.
 
 ## The DB Exercise
+The goal with this exercise is to practice on basic usage of databases. Before you start working on it, you are recommended to:
+
+* View the following lectures:
+    * [Jasmins on campus lecture about DB 1 & 2](../../lectures/jasmine-database/)
+
+---
+
 Instructions for the DB exercise will be available here.
 
 ## The JS Exercise
