@@ -52,7 +52,12 @@
 	
 	h2{
 		margin: 0;
+		padding: 0.5em 0;
 		font-size: 1.1em;
+	}
+	
+	.exam-question :deep(p){
+		margin-top: 0 !important;
 	}
 	
 </style>
