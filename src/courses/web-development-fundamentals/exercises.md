@@ -46,7 +46,107 @@ The goal with this exercise is to practice on basic usage of databases. Before y
 
 ---
 
-Instructions for the DB exercise will be available here.
+The DB exercise is about designing the database you will use in your project, and to practice on writing queries you will need to send to it from your web application later.
+
+### Designing the database
+The resources you will have on your website should in the end be stored in a relational database. Before storing them in the database, you must design the structure of the database. Start by visualizing the structure of your resources in an ER diagram of your choice. The Database chapter in your report should contain at least one such diagram.
+
+### Creating the database
+In the project, the database should be implemented in SQLite 3. To work with an SQLite 3 database, you can use the app [DB Browser for SQLite](https://sqlitebrowser.org/).
+
+In SQLite 3, the entire database is stored in a single file. To create that file in DB Browser for SQLite, click on the `New Database` button, as shown in the <FigureNumber /> below.
+
+<Figure caption="Click on the New Database button in DB Browser for SQLite to create a new SQLite 3 database file.">
+
+![Click on the New Database button in DB Browser for SQLite to create a new SQLite 3 database file.](./files/db-exercise/db-browser-create-button.png)
+
+</Figure>
+
+After the database file has been created, DB Browser for SQLite prompts you to create a new table in the database. For each resource type your website contains, create a table to store resources of that type in (one at a time). Use the Graphical User Interface to do this (DB Browser will also show you what query to send to the database to create such a table), as shown in <FigureNumber /> below.
+
+<Figure caption="Example of a database table storing information about humans (name and age).">
+
+![Example of a database table storing information about humans (name and age).](./files/db-exercise/db-browser-create-table.png)
+
+</Figure>
+
+Here are some guidelines on how to think when choosing what `Type` to select for a field:
+
+* If the field should store only integers (like `123`, `0`, `-45` and `57`), use the type `INTEGER`
+* If the field should store numbers that can also be decimals (like `12.34` and `-4.0007`), use the type `REAL`
+* If the field should store a sequence of characters (like a string in JavaScript, such as `Alice`, `Sweden` and `Universe`), use the type `TEXT`
+* If the field should store only booleans (`true` and `false`), use the type `INTEGER`, and let `0` represent `false`, and `1` represent `true`
+* If the field should store only dates/datetimes (like `2010-02-21` and `2022-12-24 15:00:00`), use the type `INTEGER`, and store the [Unix Timestamp](https://www.unixtimestamp.com/) for the dates/datetimes
+
+If you need, use unique constraints and foreign key constraints. 
+
+::: tip Save your changes!
+Note that the changes you make to your database (such as creating tables in it) are only stored in-memory in DB Browser for SQLite's. To save the new state of your database back to the file, you have to click on the button `Write Changes`, as shown in <FigureNumber /> below.
+
+<Figure caption="Click on the Write Changes button to store the changes made to the database back to the file.">
+
+![Click on the Write Changes button to store the changes made to the database back to the file.](./files/db-exercise/db-browser-save-button.png)
+
+</Figure>
+
+:::
+
+### Adding data to the database
+In DB Browser for SQLite, go to the `Execute SQL` tab, and write and execute an SQL `INSERT` query to add a post to a table, as shown in <FigureNumber /> below.
+
+<Figure caption="Click on the Execute SQL tab, and then execute an INSERT INTO query to add a post to a table.">
+
+![Click on the Execute SQL tab, and then execute an INSERT INTO query to add a post to a table.](./files/db-exercise/db-browser-insert.png)
+
+</Figure>
+
+Replace the table name, the column names and the values in the query with your own. Insert a few posts in each table. Then go to the `Browse Data` tab and verify that the tables contains some data, as shown in <FigureNumber /> below.
+
+<Figure caption="Click on the Browser Data tab to view the data in the database.">
+
+![Click on the Browser Data tab to view the data in the database.](./files/db-exercise/db-browser-browse-data.png)
+
+</Figure>
+
+### Retrieving data from the database
+Go back to the `Execute SQL` tab and try running a few `SELECT` queries to retrieve specific data from the database, as shown in <FigureNumber /> below.
+
+<Figure caption="Run a SELECT query to retrieve data from the database.">
+
+![Run a SELECT query to retrieve data from the database.](./files/db-exercise/db-browser-select.png)
+
+</Figure>
+
+You can try to:
+
+* entirely remove the `WHERE...` part of the query to retrieve all posts from the table
+* use a condition like `id < 3` to retrieve multiple posts from the table
+
+## Updating data in the database
+To update data in the database, you can send an `UPDATE` query to the database, like the one shown in <FigureNumber /> below.
+
+<Figure caption="Example of an UPDATE query that changes the name to 'Axel' and the age to 30 on all posts in the humans table that have id 1.">
+
+```sql
+UPDATE humans SET name = "Axel", age = 30 WHERE id == 1
+```
+
+</Figure>
+
+Try sending some `UPDATE` queries to the database to change some posts, and then send some `SELECT` queries to verify that the posts have been updated (or you can cheat and use the `Browse Data` tab).
+
+## Deleting data from the database
+To delete data from the database, you can send a `DELETE` query to the database, like the one shown in <FigureNumber /> below.
+
+<Figure caption="Example of a DELETE query that deletes all posts with the name 'Bob' in the humans table.">
+
+```sql
+DELETE FROM humans WHERE name == "Bob"
+```
+
+</Figure>
+
+Try sending some `DELETE` queries to the database to delete some posts, and then send some `SELECT` queries to verify that the posts have been deleted (or you can cheat and use the `Browse Data` tab).
 
 ## The JS Exercise
 The goal with this exercise is to practice on the basics in JavaScript. Before you start working on it, you are recommended to:
