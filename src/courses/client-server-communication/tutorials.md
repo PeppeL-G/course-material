@@ -13,6 +13,14 @@ Here the source code written in the tutorials will be available after respective
 * [GUI image](./files/tutorial-02/gui.png)
 * App:
 	1. Unzip the file [tutorial-02.zip](files/tutorial-02/tutorial-02.zip) on your computer
-	2. Open a shell/terminal and navigate to the root folder of the project you unzipped.
+	2. Open a shell/terminal and navigate to the root folder of the project you unzipped
 	3. Run the command `npm install` to install all dependencies (Vite, Vue, etc.)
 	4. Run the command `npm run dev` to start Vite
+
+## Tutorial 3: Implement REST API
+* App:
+	1. Unzip the file [tutorial-03-villfish-backend.zip](files/tutorial-03-villfish-backend.zip) on your computer
+	2. Open a shell/terminal and navigate to the root folder of the project you unzipped
+	3. Run the command `npm install` to install all dependencies (`express` and `sqlite3`)
+	4. Run the command `node app.js` to start the web application
+	5. Use the web browser or Postman to send HTTP requests yo the web application to test it (e.g `GET` `/adds`)
