@@ -341,7 +341,7 @@ Inside a method in a Vue component (such as `throwDice` above) we can use the sp
 ### FAQ (loops)
 Add a new View component representing the main content on a FAQ "page". The procedure is similar to what you did before.
 
-Don't hard code the FAQs in the HTML code in your component. Instead, use the `data()` method and put the FAQs in an array like this:
+Don't hard code the FAQs in the HTML code in your component. Instead, use the `data()` method and put the FAQ objects in an array like this:
 
 ```js
 [{
@@ -353,9 +353,9 @@ Don't hard code the FAQs in the HTML code in your component. Instead, use the `d
 }, ...]
 ```
 
-In your HTML code you can then use the [`v-for` directive](https://vuejs.org/v2/guide/list.html#Mapping-an-Array-to-Elements-with-v-for) to loop through all the FAQs and produce similar looking HTML code for all of them.
+In your HTML code you can then use the [`v-for` directive](https://vuejs.org/v2/guide/list.html#Mapping-an-Array-to-Elements-with-v-for) to loop through all the FAQ objects and produce similar looking HTML code for all of them.
 
-Then add a `showAnswer` property to all your FAQ objects in the array with the initial value `false`. The answer to a FAQ should only be shown if its `showAnswer` property has the value `true`. The user should be able to show/hide the answer to each FAQ by clicking on the FAQ's question shown on the screen. So in the HTML code you need to listen for click on the question, and then invert that FAQ object's `showAnswer` value.
+Then add a `showAnswer` property to each of your FAQ objects in the array with the initial value `false`. The answer to a FAQ should only be shown if its `showAnswer` property has the value `true`. The user should be able to show/hide the answer to each FAQ by clicking on the FAQ's question shown on the screen. So in the HTML code you need to listen for click on the question, and then invert that FAQ object's `showAnswer` value.
 
 Somewhere on the "page" you should also display how many FAQs there are in total.
 
@@ -493,7 +493,7 @@ Just as in Lab 1, change the code in `/src/App.vue` to contain a layout of your 
 In your application you need to keep track of whether the user is signed in or not, and most likely you want this to be reactive, so the GUI updates on its own as soon as the user signs in/out. An easy way to implement this is by having a `data()` method in `/src/App.vue` looking like this:
 
 ```js
-module.exports = {
+export default {
   // ...
   data(){
     return {
