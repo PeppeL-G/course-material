@@ -10,3 +10,11 @@ Here the source code written in the tutorials will be available after respective
 	2. `cd pegrade`
 	3. `npm install`
 	4. `node app.js`
+
+## Tutorial 2
+* [Old Recording of this tutorial](https://play.ju.se/media/Web%20Development%20Fundamentals%202020%20Tutorial%204/0_hfnrs183)
+* [Git repository](https://github.com/PeppeL-G/pegrade/tree/tutorial-02):
+	1. `git clone https://github.com/PeppeL-G/pegrade.git`
+	2. `cd pegrade`
+	3. `npm install`
+	4. `node app.js`
