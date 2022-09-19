@@ -16,11 +16,13 @@ The instructions on the [Project Work](./project-work/) page indicate when you'r
 * [Handlebars](../../lectures/handlebars/)
 * [Web Applications in Express](../../lectures/web-applications-in-express/)
 * [Using SQLite in Node.js](../../lectures/using-sqlite-in-node-js/)
+* [Report Writing](https://ju.instructure.com/courses/6738/discussion_topics/99710)
 * [Cookies and Sessions](../../lectures/cookies-and-sessions/)
 * [Using cookies and Sessions in Express](../../lectures/using-cookies-and-sessions-in-express/)
 * [Designing Account Systems](../../lectures/designing-account-systems/)
 * [Web Security](../../lectures/web-security/)
 * [Amazon Lightsail](../../lectures/amazon-lightsail/)
+
 
 <!--
 * [Report Writing](../../lectures/report-writing/)
