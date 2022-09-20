@@ -18,3 +18,7 @@ Here the source code written in the tutorials will be available after respective
 	2. `cd pegrade`
 	3. `npm install`
 	4. `node app.js`
+
+## Tutorial 2.5
+* [Recording](https://www.youtube.com/watch?v=O2BtVqU8nL4) (the audio is bad, you might prefer the old recording of Tutorial 2)
+* [Git repository](https://github.com/PeppeL-G/pegrade/)
