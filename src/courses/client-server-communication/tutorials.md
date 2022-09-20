@@ -17,10 +17,24 @@ Here the source code written in the tutorials will be available after respective
 	3. Run the command `npm install` to install all dependencies (Vite, Vue, etc.)
 	4. Run the command `npm run dev` to start Vite
 
-## Tutorial 3: Implement REST API
+## Tutorial 3: Implement REST API (GET + arrays)
 * App:
 	1. Unzip the file [tutorial-03-villfish-backend.zip](files/tutorial-03-villfish-backend.zip) on your computer
 	2. Open a shell/terminal and navigate to the root folder of the project you unzipped
+	3. Run the command `npm install` to install all dependencies (`express`)
+	4. Run the command `node app.js` to start the web application
+	5. Use the web browser or Postman to send HTTP requests to the web application to test it (e.g `GET` `/adds`)
+
+## Tutorial 4: Implement REST API (POST + DB) and fetch()
+* Backend App (Web app, Express):
+	1. Unzip the file [villfish-backend.zip](files/tutorial-04/villfish-backend.zip) on your computer
+	2. Open a shell/terminal and navigate to the root folder of the project you unzipped
 	3. Run the command `npm install` to install all dependencies (`express` and `sqlite3`)
 	4. Run the command `node app.js` to start the web application
-	5. Use the web browser or Postman to send HTTP requests yo the web application to test it (e.g `GET` `/adds`)
+	5. Use the web browser or Postman to send HTTP requests to the web application to test it (e.g `GET` `/adds`)
+* Frontend App (Vite, Vue.js):
+	1. Unzip the file [villfish-frontend.zip](files/tutorial-04/villfish-frontend.zip) on your computer
+	2. Open a shell/terminal and navigate to the root folder of the project you unzipped
+	3. Run the command `npm install` to install all dependencies (`vite`, `vue`, etc.)
+	4. Run the command `npm run dev` to start the Vue app
+	5. Open the URL printed in the shell/terminal in a web browser, and navigate to `/ads` to fetch and show the ads stored on the server
