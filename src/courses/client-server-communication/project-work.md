@@ -333,6 +333,39 @@ request.send(bodyAsString)
 
 To learn how the `fetch()` function works, read the article [Introduction to fetch()](https://developers.google.com/web/updates/2015/03/introduction-to-fetch).
 
+Below is an example of how to use `fetch()` without chaining promises.
+
+```javascript
+const accountToBeCreated = {
+    username: "Alice",
+    password: "abc123"
+}
+const bodyAsString = JSON.stringify(accountToBeCreated)
+
+fetch("https://localhost:3000/accounts", {
+    method: 'POST',
+    headers: new Headers({
+        'Content-Type': 'application/json'
+    }),
+    body: bodyAsString
+}).then(function(response){
+    
+    const statusCode = response.status
+    const locationHeader = response.headers.get("Location")
+    
+    response.json().then(function(bodyAsJsObject){
+        // Handle the body in the response here ...
+    }).catch(function(error){
+        // Handle errors with the body of the response here...
+    })
+    
+}).catch(function(error){
+    // Handle errors with sending the request/receiving the response here...
+})
+```
+
+Below is an example of how to use `fetch()` with chaining promises.
+
 ```javascript
 const accountToBeCreated = {
     username: "Alice",
@@ -351,9 +384,9 @@ fetch("https://localhost:3000/accounts", {
     const locationHeader = response.headers.get("Location")
     return response.json()
 ).then(function(bodyAsJsObject){
-    // ...
+    // Handle the body in the response here ...
 }).catch(function(error){
-    // Called when something goes wrong :(
+    // Handle all different type of errors here...
 })
 ```
 
@@ -524,7 +557,11 @@ You get to decide what you want to put in your ID Token, but follow the specific
 
 When you're done you can use Postman and see if you also get back an ID Token when you login. If you do you can use [the debugger at jwt.io](https://jwt.io/#debugger-io) to verify that the token contains expected information.
 
-### Hashing passwords
+### ~~Hashing passwords~~
+::: tip Not required!
+Storing passwords in plain text in the database is not good practice. If a hacker comes over the database, she can find all out users' passwords in plain text. To avoid that, one should hash the passwords, and only store the hash value of them. BUT, to facilitate for you who take this course this year, you don't have to do this part of the project. So what's written in this sub-chapter (`Hashing passwords`) is optional to implement.
+:::
+
 Storing passwords in plain text is a bad idea. Users often use the same password on different platforms, and if their passwords on our platform are leaked (by accident or by a hacker that has manage to hack our platform), anyone can login on their accounts on the other platforms they are using. Quite bad!
 
 Instead, passwords should be hashed, and we should only store the hash value of their passwords. There exists many different hashing algorithms, but one of the best ones to use for hashing passwords is [bcrypt](https://en.wikipedia.org/wiki/Bcrypt). Many hashing algorithms are designed to be fast, so the hash value quickly can be computed, but that is not suitable for passwords, because then hackers can use [brute-force](https://en.wikipedia.org/wiki/Brute-force_attack) to figure out what the original password was. bcrypt on the other hand has intentionally been designed to be slow to prevent this, and you can control how slow it should be (so you can make it even slower in the future when computers have become faster).
@@ -624,7 +661,11 @@ Be sure to read through [Project Grading Guidelines](project-grading-guidelines/
 ### SDK (required for grade 4)
 Create an SDK other programmers can use to communicate with your backend from their client-side JavaScript code. Then also use it in your own frontend. Also update the report to reflect this.
 
-### Supporting Multiple Data Formats (required for grade 4)
+### ~~Supporting Multiple Data Formats (required for grade 4)~~
+::: tip Not required!
+To facilitate for you who take this course this year, you don't have to do this part of the project to be able to get grade 4 and 5. So what's written in this sub-chapter (`Supporting Multiple Data Formats (required for grade 4)`) is optional to implement.
+:::
+
 Add support for another data format in addition to JSON (+ www-form-urlencoded for logging in). This should work in both requests and responses, so when you receive a request you need to look at the `Content-Type` header to figure out which format the body in the request is written in, and you also need to look at the `Accept` header to figure out in which format you should send back the body in the response in.
 
 Example of data formats you can support:

@@ -385,7 +385,11 @@ app.listen(8080)
 ::::
 :::::
 
-If the POST method is used to submit the form (`<form method="post">`), the data in the form will be added to the body of the request, expressed in the data format `application/x-www-form-urlencoded` (the header `Content-Type: application/x-www-form-urlencoded` is added to the HTTP request). Express does not provide a convenient way to read this data, but the npm package `body-parser` can be used to do that. Once you have installed it (`npm install body-parser`) and added it as a middleware function using its `urlencoded()` function, you can access the data entered in the form using `request.body`.
+If the POST method is used to submit the form (`<form method="post">`), the data in the form will be added to the body of the request, expressed in the data format `application/x-www-form-urlencoded` (the header `Content-Type: application/x-www-form-urlencoded` is added to the HTTP request). An Express app does by default not contain functionality to read this data, but the middleware `express.urlencoded()` can be used to add it. Once you have added it, you can access the data entered in the form using `request.body`.
+
+::: warning Updated instructions
+Before it said you needed to add `bodyParser.urlencoded()`. These days it's part of the `express` package, so these days one can use `express.urlencoded()` instead. The instructions have been updated to reflect this.
+:::
  
 ::::: tip Example
 
@@ -404,10 +408,9 @@ If the POST method is used to submit the form (`<form method="post">`), the data
 
 ```js
 const express = require('express')
-const bodyParser = require('body-parser')
 
 const app = express()
-app.use(bodyParser.urlencoded({
+app.use(express.urlencoded({
   extended: false
 }))
 
