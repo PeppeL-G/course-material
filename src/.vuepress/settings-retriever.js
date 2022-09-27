@@ -1,5 +1,6 @@
 import fs from 'node:fs'
 import path from 'node:path'
+import { pathToFileURL } from 'node:url'
 
 export async function getAllCourseSettings(){
 	
@@ -13,10 +14,14 @@ export async function getAllCourseSettings(){
 		
 		const pathToCourseFolder = path.resolve(pathToCourseFolders, courseFolderName)
 		
-		const courseSettings = (await import(path.resolve(
-			pathToCourseFolder,
-			"settings.js"
-		))).default
+		const courseSettings = (await import(
+			pathToFileURL(
+				path.resolve(
+					pathToCourseFolder,
+					"settings.js"
+				)
+			).href
+		)).default
 		courseSettings.folderName = courseFolderName
 		
 		return courseSettings
