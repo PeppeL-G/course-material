@@ -576,7 +576,11 @@ There exist hashing algorithms specifically designed to hash passwords (they are
 The npm package `bcrypt` might need a Python installation on your computer to work. If you can't get it to work, you can use `bcryptjs` instead, but that one is slower since it's implemented in pure JavaScript.
 :::
 
-When you are done, you should have a hard-coded hash value of your password in your source code instead of a hard-coded password in plain text.
+When you are done, you should have a hard-coded hash value of your password in your source code instead of a hard-coded password in plain text. To obtain the hash value of the password you want to use, you can simply create a temporary JS file that will:
+
+1. Import the `bcrypt` package
+2. Use a function from the `bcrypt` package to compute the hash value of the password you want to use
+3. Log the 
 
 ### Cross-Site Scripting
 The danger with SQL injections is that data coming from one user is injected and modifies the query sent to the database. Cross-Site Scripting (XSS) is something similar, but it modifies the HTML code sent to other users. For example, a hacker might write a new guestbook message and send it to your web application, and when other users read your guestbook, they receive the hacker's guestbook message. If the guestbook message contains HTML code, it will be sent to the users' web browsers and displayed as part of the website. With just HTML code, a hacker cannot do that dangerous things, but the HTML code can in turn contain client-side JavaScript code which can do much more damage when it is executed in the users' web browsers.
@@ -584,10 +588,19 @@ The danger with SQL injections is that data coming from one user is injected and
 Make sure all data you receive from your users is escaped before it is sent to your users.
 
 ::: warning Note!
-Most template engines automatically escape HTML code unless you use a special syntax. If you use Handlebars as your template engine, you can read more about it under [the guide at handlebarsjs.com](https://handlebarsjs.com/guide/#html-escaping).
+
+<p v-pre>
+Most template engines automatically escape HTML code unless you use a special syntax. If you use Handlebars as your template engine, you can read more about it under [the guide at handlebarsjs.com](https://handlebarsjs.com/guide/#html-escaping). In short, if you use <code>{{...}}</code> instead of <code>{{{...}}}</code>, you have no XSS vulnerabilities.
+</p>
 :::
 
-### Cross-Site Request Forgery
+### ~~Cross-Site Request Forgery~~
+::: tip Not this year!
+[csurf](https://www.npmjs.com/package/csurf), Express' official npm package to add protection against CSRF attacks, was deprecated Sep 13 2022. Therefore we skip this part of the project this year. Those who still want to practice on adding protection against CSRF attacks can still do that using that very package (it should still work equally good as before, but one shouldn't use deprecated packages (they won't be maintained in the future), so I can't recommend using it), or you can use the npm package [simple-csrf](https://github.com/veeti/simple-csrf) (that package is not an official package from Express, and the author of the package is no longer that active on GitHub, and very few uses that package, so at the moment I can't really recommend using it either).
+
+The instructions in this sub-chapter is left as they are for those who want to learn how to add protection against CSRF attacks.
+:::
+
 Cross-Site Request Forgery (CSRF) is a type of an attack where hackers successfully trick our users into sending HTTP request to our website which they did not intent to send. For example, if our website contains a guestbook and is vulnerable to CSRF-attacks, a hacker might trick a user to send 1000 "create new guestbook message" requests. Our website just sees the requests coming from the user, and not from the hacker, so we think the user is the bad guy spamming our guestbook, but she is just the tool.
 
 A spammed guestbook is no danger and can easily be fixed, but CSRF-attacks in general can be quite dangerous. Imagine you sign in on your bank's website, then you visit another website controlled by the hacker (the hacker does not need to own this other website; it is enough for the website to contain a XSS-vulnerability the hacker can exploit to inject bad client-side JavaScript code into it) and tricks your web browser to send HTTP requests to your bank's website. One request can for example be to transfer money from your account to the hackers account. The bank's website thinks the request intentionally is sent by you and carries it out. Quite bad!
@@ -608,17 +621,17 @@ Use the npm package `csurf` to protect your website from CSRF-attacks.
 Here are some optional tasks you must complete if you want to get a grade higher than 3. Remember that completing these extra tasks does not necessarily give you a higher grade, but you have to complete them to be able to get a higher grade. Also, do not forget to read the [Project Grading Guidelines](project-grading-guidelines/) every now and then.
 
 ### Search (required for grade 4)
-Add search/filter functionality for at least one of your resources.
+Add search/filter functionality for at least one of your resource types.
 
 You have a lot of freedom when it comes to this task, but too simple solutions will not be accepted. Just searching for a title is not enough, maybe the user also can specify a date range or similar?
 
 ### Pagination (required for grade 4)
-Add pagination to at least one of your resources, so not all of them are listed on the same page but spread out across multiple pages. You can use a query string parameter to keep track of the page number.
+Add pagination to at least one of your resource types, so not all of them are listed on the same page but spread out across multiple pages. You can use a query string parameter to keep track of the page number.
 
-You have a lot of freedom when it comes to this task, but too simple solutions will not be accepted. 1 resource/page does not count as pagination.
+You have a lot of freedom when it comes to this task, but too simple solutions will not be accepted. 1 resource per page does not count as pagination.
 
 ### Uploading files (required for grade 5)
-Make it possible to upload a file to at least one of your resources. This could for example be a screenshot of a software application you have in your portfolio. How to do this is something you need to learn on your own (grade 5...).
+Make it possible to upload a file to at least one of your resource types. This could for example be a screenshot of a software application you have in your portfolio. How to do this is something you need to learn on your own (grade 5...).
 
 Note that files should not be stored in a database (but on the file system), and does not count as one of the three type of resources you should have on your website.
 

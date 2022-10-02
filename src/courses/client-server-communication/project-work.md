@@ -458,6 +458,17 @@ During the lab sessions, we encourage you to discuss your report with the teache
 Implement authentication and authorization in the Express application the way you describe it in the previous part. You should also change the code to store hash values of the users passwords, instead of storing them as plain text. Here we give you some hints about how to accomplish this.
 
 ### Adding login/Creating tokens
+::: tip OAuth 2.0 implementation not required!
+It is good to implement authorization per a specification, such as OAuth 2.0. But to simplify for the students that take this course this year, following the OAuth 2.0 specification is not a must. For example:
+
+* OAuth 2.0 specifies that the login request should use the data format `application/x-www-form-urlencoded`, but using `application/json`, as you do for all other POST request, is OK
+* You don't need to worry about `grant_type` in the login request (let the client just send a username and a password)
+* You don't need to worry about sending back responses that conform to the OAuth 2.0 specification (use whichever status codes and response bodies you think make most sense, but you must send back an access token and an ID token on a successful login)
+* When the client sends the Access Token to the server, the client can pass it directly in the Authorization header (skip `Bearer `)
+
+The instructions in the rest of this sub-chapter is for implementing authorization per the OAuth 2.0 specification, and they are left as they are for the students who want implement it that way. But those who prefer to do it with the simplifications mentioned above, that is OK too.
+:::
+
 According to the OAuth 2.0 specification, when a user logs in with a username and password, they should send it to the server in the body of the request in the data format `application/x-www-form-urlencoded`. This is the same data format that is used in the querystring, e.g. `variable1=value1&variable2=value2&...`. When the backend receives such a request, it needs to parse the body written in that data format. This can be added to Express using the middleware function `express.urlencoded()`:
 
 ```js

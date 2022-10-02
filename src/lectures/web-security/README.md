@@ -155,20 +155,14 @@ With proper protection, the search form in the previous example would work like 
 <p id="rrrr"></p>
 :::
 
-:::: code-group
-::: code-group-item Node.js/Express
-
+#### Express
 <p v-pre>
-When you use `request.send("Input from a client.")` you are responsible for escaping the input yourself. When you pass input to a view, the view engine usually escapes the data for you. For example, when using Handlebars as your view engine, data you insert into the view using `{{expression}}` will escape the HTML code in `expression`. This is usually what you want to happen, but if you for some reason don't want that, you can use `{{{expression}}}`, which won't escape the HTML code in `expression`, but then you are responsible to make sure that no XSS vulnerability exists.
+When you use <code>request.send("Input from a client.")</code> you are responsible for escaping the input yourself. When you pass input to a view, the view engine usually escapes the data for you. For example, when using Handlebars as your view engine, data you insert into the view using <code>{{expression}}</code> will escape the HTML code in `expression`. This is usually what you want to happen, but if you for some reason don't want that, you can use <code>{{{expression}}}</code>, which won't escape the HTML code in `expression`, but then you are responsible to make sure that no XSS vulnerability exists.
 </p>
 
-:::
-::: code-group-item PHP
-
+#### PHP
 PHP has a function called [htmlspecialchars()](https://www.php.net/manual/en/function.htmlspecialchars.php) you can use to escape HTML code.
 
-:::
-::::
 
 ## Cross-Site Request Forgery (CSRF)
 ### Vulnerability
@@ -211,8 +205,7 @@ Below you can change the URI and see how the query to the database changes (requ
 ### Protection
 Don't use input from the client (a query string parameter, a cookie, the body of the request, a dynamic URI parameter, etc.) to dynamically generate SQL queries sent to the database. Instead, use placeholders for dynamic values in the query, and pass the values separately to the database.
 
-:::: code-group
-::: code-group-item Node.js/Express/SQLite 3
+#### Express and SQLite 3
 
 ```js
 app.get("/accounts/:ACCOUNT_ID", function(request, response){
@@ -222,15 +215,15 @@ app.get("/accounts/:ACCOUNT_ID", function(request, response){
     const query = "SELECT * FROM accounts WHERE id = ?"
     const values = [ACCOUNT_ID]
     
-    // Send query and values to DB.
+    db.get(query, values, function(error, account){
+        // ...
+    })
     
 })
 ```
 
-:::
-::: code-group-item PHP
-
-Using the old (now deprecated) `mysql_***()` functions, you needed to escape untrusted values yourself by calling the function [mysql_real_escape_string()](https://www.php.net/manual/en/function.mysql-real-escape-string.php):
+#### PHP
+When using the old (now deprecated) `mysql_***()` functions, you needed to escape untrusted values yourself by calling the function [mysql_real_escape_string()](https://www.php.net/manual/en/function.mysql-real-escape-string.php):
 
 ```php
 mysql_connect(/* Connection settings... */);
@@ -247,16 +240,10 @@ $connection = mysqli_connect(/* Connection settings... */);
 
 $ACCOUNT_ID = $_GET['ACCOUNT_ID'];
 
-$statement = mysqli_prepare($connection, "SELECT * FROM accounts WHERE id = ?")
+$statement = mysqli_prepare($connection, "SELECT * FROM accounts WHERE id = ?");
 
 mysqli_stmt_bind_param($statement, "i", $ACCOUNT_ID);
 
 mysqli_stmt_execute($statement);
-
-mysqli_stmt_bind_result($statement, $result);
-
-mysqli_stmt_fetch($statement);
+// ...
 ```
-
-:::
-::::
