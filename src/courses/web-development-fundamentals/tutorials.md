@@ -30,3 +30,16 @@ Here the source code written in the tutorials will be available after respective
 	2. `cd pegrade`
 	3. `npm install`
 	4. `node app.js`
+
+
+## Tutorial 4 (authorization & repetition)
+* [Git repository](https://github.com/PeppeL-G/pegrade/tree/tutorial-04):
+	1. `git clone https://github.com/PeppeL-G/pegrade.git`
+	2. `cd pegrade`
+	3. `npm install`
+	4. `node app.js`
+* [Code for repetition website in ZIP file](./files/repetition-website.zip):
+	1. Unzip the ZIP file
+	2. Go into the project folder
+	3. `npm install`
+	4. `node app.js`
