@@ -580,7 +580,9 @@ When you are done, you should have a hard-coded hash value of your password in y
 
 1. Import the `bcrypt` package
 2. Use a function from the `bcrypt` package to compute the hash value of the password you want to use
-3. Log the 
+3. Log the hash value
+4. Use the `node` program to run the file and obtain the hash value
+5. Use the hash value in your `app.js` file
 
 ### Cross-Site Scripting
 The danger with SQL injections is that data coming from one user is injected and modifies the query sent to the database. Cross-Site Scripting (XSS) is something similar, but it modifies the HTML code sent to other users. For example, a hacker might write a new guestbook message and send it to your web application, and when other users read your guestbook, they receive the hacker's guestbook message. If the guestbook message contains HTML code, it will be sent to the users' web browsers and displayed as part of the website. With just HTML code, a hacker cannot do that dangerous things, but the HTML code can in turn contain client-side JavaScript code which can do much more damage when it is executed in the users' web browsers.

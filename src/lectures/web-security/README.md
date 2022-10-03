@@ -135,10 +135,10 @@ In the search form below users should be able to enter search terms, and then ge
 ### Protection
 When data comes from an untrusted source (for example a user or a third-party application you are using) you must escape the HTML code before sending it to the web browser as part of the webpage in the HTTP response. You can escape the data by replacing the following characters in it (the characters that have special meaning in HTML syntax) with their corresponding entity names:
 
-* `<` can be replaced with `&lt;`.
-* `>` can be replaced with `&gt;`.
-* `"` can be replaced with `&quot;`.
-* `'` can be replaced with `&apos;`.
+* `<` can be replaced with `&lt;`
+* `>` can be replaced with `&gt;`
+* `"` can be replaced with `&quot;`
+* `'` can be replaced with `&apos;`
 
 When the web browser for example sees `&lt;`, it will display the `<` character.
 
@@ -160,8 +160,10 @@ With proper protection, the search form in the previous example would work like 
 When you use <code>request.send("Input from a client.")</code> you are responsible for escaping the input yourself. When you pass input to a view, the view engine usually escapes the data for you. For example, when using Handlebars as your view engine, data you insert into the view using <code>{{expression}}</code> will escape the HTML code in `expression`. This is usually what you want to happen, but if you for some reason don't want that, you can use <code>{{{expression}}}</code>, which won't escape the HTML code in `expression`, but then you are responsible to make sure that no XSS vulnerability exists.
 </p>
 
+<!--
 #### PHP
 PHP has a function called [htmlspecialchars()](https://www.php.net/manual/en/function.htmlspecialchars.php) you can use to escape HTML code.
+-->
 
 
 ## Cross-Site Request Forgery (CSRF)
@@ -206,7 +208,6 @@ Below you can change the URI and see how the query to the database changes (requ
 Don't use input from the client (a query string parameter, a cookie, the body of the request, a dynamic URI parameter, etc.) to dynamically generate SQL queries sent to the database. Instead, use placeholders for dynamic values in the query, and pass the values separately to the database.
 
 #### Express and SQLite 3
-
 ```js
 app.get("/accounts/:ACCOUNT_ID", function(request, response){
     
@@ -221,7 +222,7 @@ app.get("/accounts/:ACCOUNT_ID", function(request, response){
     
 })
 ```
-
+<!--
 #### PHP
 When using the old (now deprecated) `mysql_***()` functions, you needed to escape untrusted values yourself by calling the function [mysql_real_escape_string()](https://www.php.net/manual/en/function.mysql-real-escape-string.php):
 
@@ -247,3 +248,4 @@ mysqli_stmt_bind_param($statement, "i", $ACCOUNT_ID);
 mysqli_stmt_execute($statement);
 // ...
 ```
+-->
