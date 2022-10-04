@@ -576,13 +576,17 @@ There exist hashing algorithms specifically designed to hash passwords (they are
 The npm package `bcrypt` might need a Python installation on your computer to work. If you can't get it to work, you can use `bcryptjs` instead, but that one is slower since it's implemented in pure JavaScript.
 :::
 
-When you are done, you should have a hard-coded hash value of your password in your source code instead of a hard-coded password in plain text. To obtain the hash value of the password you want to use, you can simply create a temporary JS file that will:
+When you are done, you should have a hard-coded hash value of your password in your source code instead of a hard-coded password in plain text. To obtain the hash value of the password you want to use:
 
-1. Import the `bcrypt` package
-2. Use a function from the `bcrypt` package to compute the hash value of the password you want to use
-3. Log the hash value
-4. Use the `node` program to run the file and obtain the hash value
-5. Use the hash value in your `app.js` file
+1. Install [bcrypt](https://www.npmjs.com/package/bcrypt)
+2. Create a new temporary JS file
+3. In that file, import the `bcrypt` package
+4. Use a function from the `bcrypt` package (for example `hashSync()` (read the documentation for the npm package to see example of usage)) to compute the hash value of the password you want to use
+5. Log the hash value
+6. Use the `node` program to run the file and obtain the hash value
+7. Store the hash value in your `app.js` file (instead of the admin password)
+8. When you receive the login request from the user, use a function from `bcrypt` (for example `compareSync()` (read the documentation for the npm package to see example of usage)) to check if the received password is the correct one
+9. Be sure to not store the correct password in plain text anywhere in your source code (you can for example delete the temporary JS file you created after you have obtained the hash value of your password)
 
 ### Cross-Site Scripting
 The danger with SQL injections is that data coming from one user is injected and modifies the query sent to the database. Cross-Site Scripting (XSS) is something similar, but it modifies the HTML code sent to other users. For example, a hacker might write a new guestbook message and send it to your web application, and when other users read your guestbook, they receive the hacker's guestbook message. If the guestbook message contains HTML code, it will be sent to the users' web browsers and displayed as part of the website. With just HTML code, a hacker cannot do that dangerous things, but the HTML code can in turn contain client-side JavaScript code which can do much more damage when it is executed in the users' web browsers.
