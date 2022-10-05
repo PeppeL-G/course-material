@@ -624,7 +624,7 @@ HTML/HTTP does not come with built-in support to check that, but the synchronize
 Use the npm package `csurf` to protect your website from CSRF-attacks.
 
 ## Part 9: Optional tasks
-Here are some optional tasks you most likely must complete if you want to get a grade higher than 3. Remember that completing these extra tasks does not necessarily give you a higher grade, but you have to complete them to be able to get a higher grade. Also, do not forget to read the [Project Grading Guidelines](project-grading-guidelines/) every now and then.
+Here are some optional tasks you most likely must complete if you want to get a grade higher than 3. Remember that completing these extra tasks does not necessarily give you a higher grade; also read the [Project Grading Guidelines](project-grading-guidelines/).
 
 ### Search or Pagination (required for grade 4)
 Implement search or pagination for at least one of your resource types.
