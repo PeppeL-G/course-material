@@ -161,11 +161,11 @@ The quality of the report.
 />
 
 ## Optional Tasks
-Complete [the optional tasks described in the Project Instructions](project-instructions.html#part-8-optional-tasks).
+Complete [the optional tasks described in the Project Instructions](project-work.html#part-9-optional-tasks).
 
 <GradingGuideline
 	gradeU="Not applicable."
 	grade3="No extra tasks need to be completed."
-	grade4="The extra tasks Search and Pagination has been completed."
+	grade4="The extra task Search or Pagination has been completed."
 	grade5="The extra task Uploading Files has been completed."
 />

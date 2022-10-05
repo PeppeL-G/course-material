@@ -624,24 +624,35 @@ HTML/HTTP does not come with built-in support to check that, but the synchronize
 Use the npm package `csurf` to protect your website from CSRF-attacks.
 
 ## Part 9: Optional tasks
-Here are some optional tasks you must complete if you want to get a grade higher than 3. Remember that completing these extra tasks does not necessarily give you a higher grade, but you have to complete them to be able to get a higher grade. Also, do not forget to read the [Project Grading Guidelines](project-grading-guidelines/) every now and then.
+Here are some optional tasks you most likely must complete if you want to get a grade higher than 3. Remember that completing these extra tasks does not necessarily give you a higher grade, but you have to complete them to be able to get a higher grade. Also, do not forget to read the [Project Grading Guidelines](project-grading-guidelines/) every now and then.
 
-### Search (required for grade 4)
-Add search/filter functionality for at least one of your resource types.
+### Search or Pagination (required for grade 4)
+Implement search or pagination for at least one of your resource types.
 
-You have a lot of freedom when it comes to this task, but too simple solutions will not be accepted. Just searching for a title is not enough, maybe the user also can specify a date range or similar?
+#### Search
+Add search functionality for at least one of your resource types. The user should be able to enter some search criteria in a form, and then the resources of that type that matches the search criteria should be shown. Some tips:
 
-### Pagination (required for grade 4)
-Add pagination to at least one of your resource types, so not all of them are listed on the same page but spread out across multiple pages. You can use a query string parameter to keep track of the page number.
+* Searching is about retrieving resources, so the method in the form should be...?
+* When sending the query to the database you need to have a `WHERE` clause that takes the user's search criteria into account. You probably have much use of the [LIKE](https://www.sqlitetutorial.net/sqlite-like/) operator in SQL
 
-You have a lot of freedom when it comes to this task, but too simple solutions will not be accepted. 1 resource per page does not count as pagination.
+You have a lot of freedom when it comes to this task, but avoid using too simply solutions, such as just searching for one field in the database. Maybe the user also can specify a date range or similar?
+
+#### Pagination
+Add pagination to at least one of your resource types, so not all of them are listed on the same page but spread out across multiple pages. Some tip:
+
+* Start by selecting how many resources that should be shown on each page
+* You can use a query string parameter to keep track of the page number, e.g. `/movies?page=3`
+* To count how many resources you have in a table, use the SQL function [COUNT()](https://www.sqlitetutorial.net/sqlite-count-function/) (needed to compute how many pages you need)
+* When sending the query to the database to obtain the resources, use the [LIMIT](https://www.sqlitetutorial.net/sqlite-limit/) clause to only get back the resources on the page the user is on
+
+1 resource per page does not count as pagination.
 
 ### Uploading files (required for grade 5)
 Make it possible to upload a file to at least one of your resource types. This could for example be a screenshot of a software application you have in your portfolio. How to do this is something you need to learn on your own (grade 5...).
 
 Note that files should not be stored in a database (but on the file system), and does not count as one of the three type of resources you should have on your website.
 
-You have a lot of freedom when it comes to this task, but too simple solutions will not be accepted (error handling needed). 
+You have a lot of freedom when it comes to this task, but try to at least properly handle errors. 
 
 ## Part 10: Deploying
 Before you start working on this part, you are recommended to:
