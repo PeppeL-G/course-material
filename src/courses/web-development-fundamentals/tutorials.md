@@ -43,3 +43,21 @@ Here the source code written in the tutorials will be available after respective
 	2. Go into the project folder
 	3. `npm install`
 	4. `node app.js`
+
+
+## Tutorial 5 (security & code structure)
+* [Website with vulnerabilities](./files/tutorial-05/vulnerabilities.zip):
+	1. Unzip the ZIP file
+	2. Go into the project folder
+	3. `npm install`
+	4. `node app.js`
+* [Website with routers](./files/tutorial-05/pegrade-with-routers.zip):
+	1. Unzip the ZIP file
+	2. Go into the project folder
+	3. `npm install`
+	4. `node app.js`
+* [Website with request handlers](./files/tutorial-05/pegrade-request-handlers.zip):
+	1. Unzip the ZIP file
+	2. Go into the project folder
+	3. `npm install`
+	4. `node app.js`
