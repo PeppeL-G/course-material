@@ -46,6 +46,7 @@ Here the source code written in the tutorials will be available after respective
 
 
 ## Tutorial 5 (security & code structure)
+* [Old Recording of this tutorial](https://play.ju.se/media/Web%20Development%20Fundamentals%202020%20Tutorial%206/0_wlazjzcf)
 * [Website with vulnerabilities](./files/tutorial-05/vulnerabilities.zip):
 	1. Unzip the ZIP file
 	2. Go into the project folder
