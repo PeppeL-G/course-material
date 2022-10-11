@@ -135,7 +135,7 @@ Example of a use-case diagram containing the boundaries, actors and use-cases of
 :::
 
 ### Premium features
-To make the use-case diagram even more useful you can use relations, like *includes* and *extends*. Below are descriptions of what these are, and examples of how they can be used and implemented in pseudocode.
+To make the use-case diagram even more useful you can use relations, like *includes* and *extends*. Below are descriptions of what these are, and examples of how they can be used.
 
 ::: danger Don't overuse relations!
 The goal with use-case diagram is to visualize who needs to use which functionality of the system in a way that's very easy to interpret. The more relations you add to the diagram, the harder it will be to interpret it, so don't add relations just because you can. Especially, don't try to add relations just to have some.
