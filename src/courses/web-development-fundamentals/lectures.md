@@ -1,6 +1,7 @@
 # Lectures
 The instructions on the [Project Work](./project-work/) page indicate when you're expected to view each lecture, but here's a list of all of them.
 
+* [UML Use-Case Diagram](../../lectures/uml-use-case-diagrams/)
 * [Internet Basics](../../lectures/internet-basics/)
 * [HTTP and Web Applications](../../lectures/http-and-web-applications/)
 * [Character Encodings](../../lectures/character-encodings/)

@@ -72,6 +72,7 @@ The following software tools are not required (use whichever tools you want), bu
 Before you start working on this part, you are recommended to:
 
 * View the following videos:
+    * [UML Use-Case Diagram](../../lectures/uml-use-case-diagrams/)
     * [Internet Basics](../../lectures/internet-basics/)
     * [HTTP and Web Applications](../../lectures/http-and-web-applications/)
     * [Character Encodings](../../lectures/character-encodings/)
