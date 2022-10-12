@@ -297,7 +297,7 @@ To send HTTP requests from your Vue.js application you can either use [the old X
 const request = new XMLHttpRequest()
 
 // Specify method and URI.
-request.open("POST", "https://localhost:3000/accounts")
+request.open("POST", "http://localhost:3000/accounts")
 
 // Add headers to the request.
 request.setRequestHeader("Content-Type", "application/json")
@@ -342,7 +342,7 @@ const accountToBeCreated = {
 }
 const bodyAsString = JSON.stringify(accountToBeCreated)
 
-fetch("https://localhost:3000/accounts", {
+fetch("http://localhost:3000/accounts", {
     method: 'POST',
     headers: new Headers({
         'Content-Type': 'application/json'
@@ -373,7 +373,7 @@ const accountToBeCreated = {
 }
 const bodyAsString = JSON.stringify(accountToBeCreated)
 
-fetch("https://localhost:3000/accounts", {
+fetch("http://localhost:3000/accounts", {
     method: 'POST',
     headers: new Headers({
         'Content-Type': 'application/json'
@@ -400,7 +400,7 @@ async function createAccount(accountToBeCreated){
     
     const bodyAsString = JSON.stringify(accountToBeCreated)
     
-    const response = await fetch("https://localhost:3000/accounts", {
+    const response = await fetch("http://localhost:3000/accounts", {
         method: 'POST',
         headers: new Headers({
             'Content-Type': 'application/json'
