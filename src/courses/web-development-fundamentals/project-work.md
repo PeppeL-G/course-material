@@ -663,7 +663,11 @@ Before you start working on this part, you are recommended to:
 
 ---
 
-Deploy your web application on a server. Use whichever you want, but it should be publicly accessible for other computers on the Internet. It is fine to do it as shown in the video above (using a domain name and HTTPS is not required, but please remember that all websites should use HTTPS).
+Deploy your web application on a server. Use whichever you want, but it needs to be publicly accessible for other computers on the Internet. It is fine to do it as shown in the video above (using a domain name and HTTPS is not required, but please remember that all websites should use HTTPS). 
+
+::: tip Heroku
+One student in the course suggested that one could just as well use Heuroko (should also be free with the [GitHub Student Pack](https://blog.heroku.com/github-student-developer-program)) instead of Amazon Lightsail. Feel free to use whichever service you want to run your web app on the Internet. I'm guessing the page [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs?singlepage=true) covers what you need to know to deploy your web application in this course to Heuroko.
+:::
 
 If you in `Part 11: Demonstration` demonstrates your website when it's online, the teacher will approve you on the Canvas assignment [Project Server](https://ju.instructure.com/courses/6738/assignments/35581). Otherwise you need to have it up and running on a server when you complete `Part 12: Submitting your work`.
 
