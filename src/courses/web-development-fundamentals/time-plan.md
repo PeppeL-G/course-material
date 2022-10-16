@@ -78,8 +78,8 @@ In the beginning of each week a new announcement message will be posted on the c
 		// 42
 		{p: "Part 11: Demonstration"},
 		{p: "Part 11: Demonstration"},
-		{p: "Part 11: Demonstration", i: "Written Examination"},
 		{p: "Part 11: Demonstration"},
+		{p: "Part 11: Demonstration", i: "Written Examination"},
 		{p: "Part 11: Demonstration"},
 		{},
 		{p: "Part 12: Submission", i: "Deadline submit Project Work for grading"},
