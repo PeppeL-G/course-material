@@ -1,11 +1,11 @@
 ---
-exercise0ShowAfter: 2021-10-26T11:45
-exercise1ShowAfter: 2021-11-01T11:45
-exercise2ShowAfter: 2021-11-08T11:45
-exercise3ShowAfter: 2021-11-15T11:45
-exercise4ShowAfter: 2021-11-22T11:45
-exercise5ShowAfter: 2021-11-29T11:45
-exercise6ShowAfter: 2021-12-06T11:45
+exercise0ShowAfter: 2022-10-25T09:45
+exercise1ShowAfter: 2022-10-31T11:45
+exercise2ShowAfter: 2022-11-07T11:45
+exercise3ShowAfter: 2022-11-14T11:45
+exercise4ShowAfter: 2022-11-21T11:45
+exercise5ShowAfter: 2022-11-28T11:45
+exercise6ShowAfter: 2022-12-05T11:45
 ---
 # Exercises
 On this page you find information about the exercises in the course.

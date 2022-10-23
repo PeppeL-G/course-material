@@ -10,9 +10,9 @@ The `Examination` test is an Inspera exam; a digital exam you write on a school 
 ## Dates/Re-examinations
 The `Examination` test is offered in:
 
-* The exam period in December.
-* The re-exam period in February.
-* The re-exam period in August.
+* The exam period in December
+* The re-exam period in February
+* The re-exam period in August
 
 When the date for these periods is approaching you can find more information about location and date on [the JU page *Exam Schedule JTH*](https://ju.se/student/en/studies/examination/exam-schedule-jth.html).
 
@@ -28,20 +28,18 @@ You need to register for each written examination you want to attend. For exampl
 :::
 
 ## Permitted aids
-The only permitted aids to bring to the `Examination` test are:
+During the test, you are only allowed to use:
 
-* A dictionary to translate to/from English from/to your native language.
-
-::: danger About the computer
-The computer you write the exam on may only be used to enter your answers on the exam. You may not use it to run other applications, search the web, or anything else.
-:::
+* The computer you sit at to only answer the questions on this exam (you may not run any other program)
+* A dictionary to translate to/from English from/to your native language
+* Pen and paper to sketch with (does not need to be submitted)
 
 ## Grades/Marking
-The exam consists of questions worth 30 points in total.
+The exam consists of questions worth 25 points in total.
 
-* For grade 3, 40% of max score (12 points) is required.
-* For grade 4, 60% of max score (18 points) is required.
-* For grade 5, 80% of max score (24 points) is required.
+* For grade 3, 40% of max score (10 points) is required
+* For grade 4, 60% of max score (15 points) is required
+* For grade 5, 80% of max score (20 points) is required
 
 The exam will be in English, but you may write your answers in either English or Swedish. If you write answers in Swedish, make sure to not introduce any translation confusement. Write proper sentences (spelling, upper/lower case characters, punctuation, etc.). Answers that do not do this good enough/are vague/are ununderstandable cannot receive full score on the questions.
 
@@ -50,7 +48,3 @@ You can look at [the exam from 2021-02-18](./exams/exam-2021-02-18/) to get some
 
 ## Sample answers
 After the exams, sample answers will be available here.
-
-* [Exam 2021-12-15](./exams/exam-2021-12-15/)
-* [Exam 2022-02-13](./exams/exam-2022-02-13/)
-* [Exam 2022-08-17](./exams/exam-2022-08-17/)
