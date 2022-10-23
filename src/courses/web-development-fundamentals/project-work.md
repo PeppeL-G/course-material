@@ -707,7 +707,7 @@ When that ZIP file has been unzipped on the teacher's own computer, it is very i
 1. `npm install`
 2. `npm run start` or `node app.js` (or whichever the name of your main file is)
 
-If this does not work and your report doesn't contain any instructions on how to start your web application you need to submit your work again at the next examination occasion, so double check that this works yourself before you submit your work!
+If this does not work and your report doesn't contain any instructions on how to start your web application you need to submit your work again at the next examination occasion, so double check that this works yourself before you submit your work.
 
 Write also the following information as a comment in the submission:
 
@@ -718,8 +718,8 @@ Write also the following information as a comment in the submission:
 
 The examiner will login to your website and test all the CRUD operations.
 
-The examiner will only look at your latest submission on this page, so make sure that your latest submission includes both files (report + source code) and the comment with the requested information.
+The examiner will only look at your latest submission, so make sure that your latest submission includes both files (report + source code) and the comment with the requested information.
 
 Your submitted work will be checked for plagiarism using [Ouriginal](https://www.ouriginal.com/).
 
-Students failing to follow the submission instructions on this page will simply be asked to submit it again at the next submission occasion without any further comments, so double check that you've followed the instructions before you submit you work!
+If not all requested files and information is submitted, we will not be able to grade your work. 
