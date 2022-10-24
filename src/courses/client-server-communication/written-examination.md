@@ -51,3 +51,5 @@ You can look at [the exam from 2020-08-13](./exams/exam-2020-08-13/) to get some
  
 ## Sample answers
 After your exams, sample answers and grading guidelines will be published here.
+
+* [2022-10-19](./exams/exam-2022-10-19/)
