@@ -55,8 +55,8 @@ The <span style="background-color: #00ffff75; display: inline-block; padding: 0 
 		{l: "Lab 5", t: "Tutorial 5", g: "Group 1"},
 		{l: "Lab 5", t: "Repetition"},
 		{l: "Lab 5", g: "Group 2"},
-		{e: "Exercise 6"},
 		{e: "Exercise 6", g: "Group 3"},
+		{e: "Exercise 6"},
 		{i: "Exam Registration closes around now"},
 		{},
 		// 7
