@@ -52,6 +52,11 @@ pre code{
 	background-color: rgba(255, 0, 0, 0.08)
 }
 
+/* For Sample answer */
+.theme-default-content .answer div[class*="language-"]{
+	margin: 0;
+}
+
 /* For printing */
 @media print{
 	

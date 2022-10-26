@@ -5,13 +5,7 @@
     credits="7.5"
     course-coordinator="Peter Larsson-Green"
     examiner="Peter Larsson-Green"
-    :canvas-courses="[{
-        id: '4205',
-        name: 'Introduction to Script Programming (TSPG17)'
-    }, {
-        id: '4199',
-        name: 'Introduction to Script Programming (TSTG17)'
-    }]"
+    canvasCourseId="6982"
 />
 
 ## Introduction
@@ -36,77 +30,85 @@ This course does not have any special pre-requisites other than basic math and E
     website="https://ju.se/en/personinfo.html?sign=LarPet"
 />
 
-### Adyasha Swain
+### Eveline Ingesson
 <Teacher
-    name="Adyasha Swain"
-    photo="adyasha-swain.jpeg"
-    :roles='["Lab Assistant"]'
-    description="Adyasha has received her Masters degree in Computer Science, specialization in Distributed Cloud Systems, at Luleå University of Technology in 2019. She is currently pursuing her Doctoral studies in the Department of Construction Engineering and Lighting Science with supervision under Karl Hammer, Geza Fischl and Peter Johansson on Digital Twin Solution for Lighting Evaluation in the Lighting Living Lab."
-    email="adyasha.swain@ju.se"
-    phone="036 - 55 02 447"
-    website="https://ju.se/en/personinfo?sign=SWAADY"
+    name="Eveline Ingesson"
+    photo="eveline-ingesson.jpeg"
+    :roles='["Lab assistant"]'
+    description="Graduated User Experience Design student now working as teacher at JU."
+    email="eveline.ingesson@ju.se"
+    phone=""
+    website="https://ju.se/en/personinfo.html?sign=ingeve"
+/>
+
+### Kyrollos Ceriacous
+<Teacher
+    name="Kyrollos Ceriacous"
+    photo="kyrollos-ceriacous.jpeg"
+    :roles='["Lab assistant"]'
+    description="Third year student at the Software Engineering and Mobile Platforms Program studying his bachelor degree."
 />
 
 ## Intended Learning Outcomes
 The intended learning outcomes of the course are found in [the course syllabus](course-syllabus/) in force. Below is a table showing how the examination tests cover the intended learning outcomes and which teaching activity helping you learn which intended learning outcome. 
 
 <ILOsActivitiesMapping description="
-Display knowledge of how a programming language interacts with the operating system and the underlying hardware.
+Display knowledge of how a programming language interacts with the operating system and the underlying hardware
 -Laboratory work
 -Written examination
 +Recorded lectures
 +Tutorials
 +Lab sessions
 ---
-Display knowledge about integrated development environments and their usage area.
+Display knowledge about integrated development environments and their usage area
 -Laboratory work
 +Recorded lectures
 +Tutorials
 +Lab sessions
 ---
-Display knowledge of common terms and concepts in script programming.
--Laboratory work
--Written examination
-+Recorded lectures
-+Tutorials
-+Lab sessions
----
-Display knowledge of common terms and concepts used in object-oriented programming.
+Display knowledge of common terms and concepts in script programming
 -Laboratory work
 -Written examination
 +Recorded lectures
 +Tutorials
 +Lab sessions
 ---
-Demonstrate the ability to use common data types and controls structures in a high-level programming language.
+Display knowledge of common terms and concepts used in object-oriented programming
 -Laboratory work
 -Written examination
 +Recorded lectures
 +Tutorials
 +Lab sessions
 ---
-Demonstrate the ability to create interactive console programs in a high-level programming language.
+Demonstrate the ability to use common data types and controls structures in a high-level programming language
 -Laboratory work
 -Written examination
 +Recorded lectures
 +Tutorials
 +Lab sessions
 ---
-Demonstrate the ability to develop and implement simple programs and algorithms in a high-level programming language.
+Demonstrate the ability to create interactive console programs in a high-level programming language
 -Laboratory work
 -Written examination
 +Recorded lectures
 +Tutorials
 +Lab sessions
 ---
-Demonstrate the ability to use object-oriented programming in a high-level programming language.
+Demonstrate the ability to develop and implement simple programs and algorithms in a high-level programming language
 -Laboratory work
 -Written examination
 +Recorded lectures
 +Tutorials
 +Lab sessions
 ---
-Demonstrate the ability to use script programming to create, read and modify files of different types in a high-level programming language.
+Demonstrate the ability to use object-oriented programming in a high-level programming language
+-Laboratory work
+-Written examination
++Recorded lectures
++Tutorials
++Lab sessions
+---
+Demonstrate the ability to use script programming to create, read and modify files of different types in a high-level programming language
 -Laboratory work
 -Written examination
 +Recorded lectures
@@ -124,9 +126,14 @@ In the beginning of each week you will be encouraged to view some recorded lectu
 Each week you will also be encouraged to complete some optional exercises. This is for you to practice on using the theory you learned in the recorded lectures. In the beginning of each week there will be a tutorial where the teacher will show you and discuss sample answers to the exercises from the previous week.
 
 ### Lab Sessions
-Each week you may attend a 4 hours long lab session. At the lab session you may ask the teacher there for help with your laboratory work and the exercises. When you have completed your laboratory work you should also present your solution to a teacher at a lab session where you explain to the teacher how the code you have written works.
+Each week you may attend a 4 hours long lab session. At the lab session you may ask the teacher there for help with the exercises and the laboratory work. When you have completed your laboratory work you should also present your solution to a teacher at a lab session where you explain to the teacher how the code you have written works.
 
-There are 3 different lab sessions each week, but you may only come to one. To distribute you, join one of the lab session groups on Canvas ([TSPG17](https://ju.instructure.com/courses/4205/groups), [TSTG17](https://ju.instructure.com/courses/4199/groups)). First come, first served. It is OK to attend the sessions for the other groups too if there is room for it, but the students for those groups should of course be prioritized by the teacher.
+There are 3 different lab sessions each week, but you may only come to one of them:
+
+* The students from the master program *Sustainable Building Information Management* should attend the lab sessions that are in your schedule (for the course TSTG17; Lab group 2)
+* The rest of you may come to one of the two remaining lab sessions (Lab group 1 and Lab group 3). To distribute you, join the corresponding [Lab Session Groups](https://ju.instructure.com/courses/6982/groups) on Canvas. First come, first served.
+
+It is OK to attend the sessions for the other groups too if there is room for it, but the students for those groups should of course be prioritized by the teacher.
 
 
 ## Examination Tests
