@@ -7,6 +7,7 @@ export default {
 		"study-guide",
 		"lectures",
 		"exercises",
+		"repetition-exercises",
 		"laboratory-work",
 		"written-examination",
 		"time-plan",
