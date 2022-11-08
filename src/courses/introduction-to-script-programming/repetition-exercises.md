@@ -75,3 +75,66 @@ for i in range(number_of_areas):
 
     print("The area of the rectangle is " + str(area) + " cm squared.")
 ```
+
+
+
+
+
+## 2022-11-08
+```python
+### CALCULATE AVERAGE OF TWO RANDOM NUMBERS ###
+
+import random
+
+print("This program calculates the average of two random numbers.\n")
+
+number_1 = random.randint(0, 100)
+number_2 = random.randint(0, 100)
+
+average = (number_1 + number_2) / 2
+
+print("The average of " + str(number_1) + " and " + str(number_2) + " is " + str(average))
+```
+
+```python
+### CALCULATE THE AVERAGE OF THE NUMBERS IN A LIST ###
+
+print("This program calculates the average of the numbers in a list.\n")
+
+list = [2, 5, 7, 8]
+sum = 0
+
+for number in list:
+    sum += number
+
+average = sum / len(list)
+
+print("The average of " + str(list) + " is " + str(average))
+```
+
+```python
+### CALCULATE THE PRODUCT OF NUMBERS IN A LIST USING A FUNCTION ###
+
+print("This program calculates the product \nof numbers using a function.\n")
+
+def product_of_numbers(numbers):
+    product = 1
+    for number in numbers:
+        product *= number
+    return product
+
+result = product_of_numbers(range(1, 4))
+print(result)
+```
+
+```python
+### CALCULATE THE AREA OF A RECTANGLE USING A FUNCTION ###
+
+print("This program calculates the area \nof a rectangle using a function.\n")
+
+def area_of_rectangle(width, length):
+    area = width * length
+    return area
+
+print(area_of_rectangle(10, 5))
+```
