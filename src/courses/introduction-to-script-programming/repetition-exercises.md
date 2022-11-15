@@ -138,3 +138,105 @@ def area_of_rectangle(width, length):
 
 print(area_of_rectangle(10, 5))
 ```
+
+
+
+
+
+
+
+## 2022-11-15
+```python
+### CHECKING IF TWO NUMBERS ARE THE SAME ###
+
+print("This program checks if two numbers are \nthe same and returns true or false.\n")
+
+def same_numbers(num1, num2):
+  if num1 == num2:
+    return True
+  else:
+    return False
+
+print(same_numbers(4, 4))
+```
+
+```python
+### CHECKING IF A NUMBER IS NEGATIVE ###
+
+print("This program checks if a number is\nnegative and prints true or false.\n")
+
+def is_negative(number):
+  if number < 0:
+    return True
+  return False
+
+print(is_negative(-8))
+```
+
+```python
+### COUNTING EVEN NUMBERS ###
+
+print("This program counts even numbers in a list.\n")
+
+def even_numbers(numbers):
+  result = 0
+  for number in numbers:
+    if number % 2 == 0:
+      result += 1
+  return result
+
+print(even_numbers([1, 2, 3, 4, 5]))
+```
+
+```python
+### RETURNING THE SMALLEST NUMBER IN A LIST ###
+
+print("This program returns the \nsmallest number in a list.\n")
+
+def smallest_number(numbers):
+  smallest_number = numbers[0]
+  for number in numbers:
+    if number < smallest_number:
+      smallest_number = number
+  return smallest_number
+
+print(smallest_number([3, 1, -4, 5, 10]))
+```
+
+```python
+### WHILE LOOP WITH RANDOM NUMBERS ###
+
+import random
+
+print("This program prints random \nnumbers until the user enters stop.\n")
+
+entered_text = ""
+
+while entered_text != "stop":
+  entered_text = input("Type continue or stop to exit the program: ")
+  if entered_text == "stop":
+    break # Takes us out of the loop
+  elif entered_text == "continue":
+    print(random.randint(1, 100))
+  else:
+    continue # Takes us back to the beginning of the loop
+
+print("The program has ended.")
+
+
+
+### Alternative solution ###
+
+import random
+
+print("This program prints random \nnumbers until the user enters stop.\n")
+
+entered_text = ""
+
+while entered_text != "stop":
+  entered_text = input("Type continue or stop to exit the program: ")
+  if entered_text != "stop":
+    print(random.randint(1, 100))
+
+print("The program has ended.")
+```
