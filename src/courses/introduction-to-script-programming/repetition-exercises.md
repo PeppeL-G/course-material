@@ -240,3 +240,65 @@ while entered_text != "stop":
 
 print("The program has ended.")
 ```
+
+
+
+
+
+
+## 2022-11-23
+```python
+### ADDING THE NUMBERS 1-5 TO A LIST ###
+
+print("This program adds the numbers \n1, 2, 3, 4, 5 to a list.\n")
+
+list = []
+
+for i in range(1, 6):
+  list.append(i)
+
+print(list)
+```
+
+```python
+### REMOVING ALL STRINGS IN A LIST ###
+
+print("This program removes all strings consisting of letters in a list.\n")
+
+list = [1, "two", 4, "five", 6, 7, "eight"]
+
+for value in list:
+  if not str(value).isdigit():
+    list.remove(value)
+
+print(list)
+```
+
+```python
+### CREATING A LIST WITH REVERSED ORDER OF VALUES ###
+
+print("This program creates a list with \nthe reversed values of another list.\n")
+
+list = [1, 2, 3, 4, 5]
+reversed_list = [] # 5, 4, 3, 2, 1
+
+for i in range(len(list)):
+  last_value = list.pop(-1)
+  reversed_list.append(last_value)
+
+print(reversed_list)
+```
+
+```python
+### ADDING VALUES FROM A DICT TO A LIST ###
+
+print("This program adds values from a dict to a list.\n")
+
+dict = {"one": 1, "two": 2, "three": 3, "four": 4}
+list = []
+
+for key in dict:
+  list.append(dict[key])
+
+print(list)
+```
