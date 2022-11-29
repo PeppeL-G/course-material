@@ -302,3 +302,110 @@ for key in dict:
 
 print(list)
 ```
+
+
+
+
+## 2022-11-29
+```python
+### STORING DATA IN A JSON, CSV AND XML FILE ###
+
+import json
+import csv
+import xml.etree.ElementTree as ET
+
+print("This program stores data in JSON, CSV and XML files.\n")
+
+games = [
+    {"name": "Zelda", "rating": "5/5"},
+    {"name": "Super Mario", "rating": "4/5"},
+    {"name": "Need for Speed", "rating": "4/5"},
+    {"name": "Rayman", "rating": "3/5"}
+]
+
+def write_to_json_file(games):
+    json_code = json.dumps(games)
+
+    with open("games.json", "w") as json_file:
+        json_file.write(json_code)
+
+# write_to_json_file(games)
+
+
+def write_to_csv_file(games):
+    with open("games.csv", "w", newline="\n") as csv_file:
+        writer = csv.writer(csv_file, delimiter=",", quotechar='"')
+
+        for game in games:
+            writer.writerow([game["name"], game["rating"]])
+
+# write_to_csv_file(games)
+
+
+def write_to_xml_file(games):
+    games_element = ET.Element("games")
+
+    for game in games:
+        game_element = ET.SubElement(games_element, "game")
+
+        name_element = ET.SubElement(game_element, "name")
+        name_element.text = game["name"]
+
+        rating_element = ET.SubElement(game_element, "rating")
+        rating_element.text = game["rating"]
+
+    xml_code = ET.tostring(games_element, encoding="unicode")
+
+    with open("games.xml", "w") as xml_file:
+        xml_file.write(xml_code)
+
+# write_to_xml_file(games)
+```
+
+```python
+### READING DATA FROM A JSON, CSV AND XML FILE ###
+
+import json
+import csv
+import xml.etree.ElementTree as ET
+
+print("This program reads data from JSON, CSV and XML files.\n")
+
+def read_from_json_file():
+  with open("games.json", "r") as json_file:
+    return json.loads(json_file.read())
+
+# print(read_from_json_file())
+
+
+def read_from_csv_file():
+  games = []
+  with open("games.csv", "r") as csv_file:
+    reader = csv.reader(csv_file, delimiter=",", quotechar='"')
+    for row in reader:
+      games.append({
+        "name": row[0],
+        "rating": row[1]
+      })
+
+  return games
+
+# print(read_from_csv_file())
+
+
+def read_from_xml_file():
+  games = []
+
+  with open("games.xml", "r") as xml_file:
+    xml_code = xml_file.read()
+    games_element = ET.fromstring(xml_code)
+    for game_element in games_element:
+      games.append({
+        "name": game_element.find("name").text,
+        "rating": game_element.find("rating").text
+      })
+
+  return games
+
+# print(read_from_xml_file())
+```
