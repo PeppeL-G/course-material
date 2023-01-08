@@ -29,8 +29,12 @@ pre code{
 }
 
 .exam-question-container h2{
-	margin: 0;
+	margin: 0 !important;
 	font-size: 1.1em;
+	padding-top: 0;
+}
+.exam-question-container p{
+	margin-top: 0.5em !important;
 }
 
 .exam-question-container .exam-question,
