@@ -6,6 +6,9 @@ navbarTitle: TeamWork
 # Teamwork
 The first time you do a project together with others it can be hard to know how you should work together to be efficient. This lecture contains some recommendations for you to avoid disaster 😃
 
+## Recording
+For those who want to see how Git, GitHub and the workflow described in this lecture can be used in practice in an Android project can look at [this video](https://play.ju.se/media/2022%20Git%20and%20GitHub/0_x0vp7lmi) from previous year.
+
 ## Summary
 For the lazy ones who don't want to read all text on this page, here is a short `README.md` file you can put in your **private** GitHub repository with instructions on how you can work. Feel free to make changes to it to fit your own team better.
 

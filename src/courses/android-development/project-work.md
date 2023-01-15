@@ -26,7 +26,7 @@ In your work you should also write a report explaining how your application is i
 
 
 ## Part 1: Joining a project group
-The project work should be carried out in groups of 3 students each. Let the examiner know who you are working with by joining one of the [Project Groups](https://ju.instructure.com/courses/4825/groups) on Canvas.
+The project work should be carried out in groups of 3 students each. Let the examiner know who you are working with by joining one of the [Project Groups](https://ju.instructure.com/courses/6658/groups) on Canvas.
 
 If you can't find someone to work with, send the course coordinator an email at [Peter.Larsson-Green@ju.se](mailto:Peter.Larsson-Green@ju.se) using the template shown in <FigureNumber /> below (you just need to replace `XXX` with your specific values).
 
@@ -54,9 +54,6 @@ Thanks!
 
 If you don't care about who you are matched with, you just need to enter your name and JU email in the template. The course coordinator will then try to match you with a student with similar ambitions and skills as you.
 
-::: danger To the Swedish students
-After you have joined a Project Group you should each day you work with the project write an entry in your diary. Do not only write about what you have done, but also write about what discussions you had, which disagreement you had, how the work was divided, how you felt about your project partners, what you think is fair/not fair etc.
-:::
 
 
 
@@ -89,17 +86,17 @@ Another way to come up with an application is to think of something you find bor
 ### Suggestions
 At the bottom of this page you find the chapter *Project idea: Flee Market Manager* that describes a real-world problem you can try to solve by creating an Android application. It can also be used as a guideline for how "complicated"/"complex" the application you create needs to be.
 
-Another idea is to create an application that can control an embedded system of some kind (dish washer, microwave, robot vacuum cleaner, etc.), for example using Bluetooth. Feel free to create your own embedded system. It can for example be a simple prototype used as a proof of concept. For example, your application might be about controlling a smart lock on a door (a lock that can be locked/unlocked with a smartphone using Bluetooth), but you don't have any smart lock, so then you create your own embedded system that simulates one, e.g. one that consists of a Bluetooth module and a LED lamp that is turned on/off to indicate if the door is locked or not. The embedded system can also be simulated as another Android application running on another Android device, e.g. an application showing a red/green circle indicating if the smart lock is locked or not.
+Another idea is to create an application that can control an embedded system of some kind (dish washer, microwave, robot vacuum cleaner, etc.), for example using Bluetooth. Feel free to create your own embedded system. It can for example be a simple prototype used as a proof of concept. For example, your application might be about controlling a smart lock on a door (a lock that can be locked/unlocked with a smartphone using Bluetooth), but you don't have any smart lock, so then you create your own embedded system that simulates one, e.g. one that consists of a Bluetooth module and a LED lamp that is turned on/off to indicate if the door is locked or not. **The embedded system can also be simulated as another Android application running on another Android device, e.g. an application showing a red/green circle indicating if the smart lock is locked or not, and this enables you to create a Android application that communicates with any type of embedded system you can think of!**
 
 ::: warning Note
 You will not get any credits for doing things not related to the intended learning outcomes in this course. To build an embedded system is out of scope for this course, so only do that if you are willing to spend your own spare time on it.
 :::
 
-::: tip Robots
-The course coordinator has 6 [Robot Car Starter Kit](http://osoyoo.com/2017/08/06/osoyoo-robot-car-diy-introduction/)s he can borrow to the Project Groups who want to build an Android application they can use to control a robot with. Note that just controlling the robot using Bluetooth is not enough, but some additional functionality is required, such as recording how the robot has been driving, re-play how the robot has been driving, manage logs, etc.
+::: warning Emulators can't emulate Bluetooth
+To test Bluetooth in your app, you need to use a physical Android device, since the Android emulator can't emulate Bluetooth. The course coordinator has a few Android devices in his office, you can borrow one if you want.
 :::
 
-If you need some special equipment (such as Beacons, modules for an embedded system, some smart devices, etc.), the school might be able to provide you with it (must be returned to the school at the end of the course). Email your needs to the course coordinator at [Peter.Larsson-Green@ju.se](Peter.Larsson-Green@ju.se) and he will look into it and get back to you.
+If you need some special equipment (such as Beacons, modules for an embedded system, some smart devices, etc.), the school might be able to provide you with it (must be returned to the school at the end of the course). Email your needs to the course coordinator at [Peter.Larsson-Green@ju.se](Peter.Larsson-Green@ju.se) and he will look into it and get back to you. 
 
 ### Requirements
 The application you create must make use of at least one other device in addition to the Android device your application is running on. This could be:
@@ -109,16 +106,15 @@ The application you create must make use of at least one other device in additio
 * Another Android device running the same application, e.g. using Bluetooth to sync data
 * A server on the Internet, such as:
     * A [Cloud Firestore](https://firebase.google.com/docs/firestore/) database (or any Backend-as-a-Service you want)
+    * The backend those of you who take the course [Web Development - Advanced Concepts](../web-development-advanced-concepts/) creates in that course (use the REST API)
 
-The application may also not be too simple. For example, creating the simplest possible all-to-all chat application synchronizing chat messages using Firestore will not be accepted. But often ideas like this one can quite easily be made more complex by adding functionalities to it. For example, in this case one could also add support for one-to-one chats, group chats, friends chat, etc.
+The application may also not be too simple. For example, creating the simplest possible all-to-all chat application synchronizing chat messages using Cloud Firestore will not be accepted. But often ideas like this one can quite easily be made more complex by adding functionalities to it. For example, in this case one could also add support for one-to-one chats, group chats, friends chat, etc.
 
 Describe your application by starting to write on [the project report](files/project-report-template.docx). Especially, visualize which components your solution consists of (android device running your application + at least one other device) and how they make use of each other. You should especially write as much as possible for now in the Introduction chapter and the Overview chapter. 
 
 Note that your report is a living document throughout the course. What you write now will most likely be changed later when you come up with ideas for improvements, so do not spend too much time on details now. Just write it detailed enough so the reader gets a rough understanding of everything, e.g. start out simple. But write it properly (sentences, upper/lower case characters, etc.), of course!
 
-::: danger To the Swedish students
-Do not forget to write an entry in your diary each day you have done some work on your project. Do not only write about what you have done, but also write about what discussions you had, which disagreement you had, how the work was divided, how you felt about your project partners, what you think is fair/not fair etc.
-:::
+We recommend you to show what you have written so far in the report to a teacher at one of the lab sessions. Do not expect the teacher there to read all of your report, but most likely you have used many figures, tables and lists, and the discussion can be about those.
 
 
 
@@ -127,14 +123,27 @@ Do not forget to write an entry in your diary each day you have done some work o
 ## Part 4: Creating Mockups
 Start with this part of the Project Work when Martin Lindh has had his lecture with you about graphical user interface design and prototyping.
 
-Create mockups of the graphical user interface. Then present these to "the rest of the class" (in smaller groups) at one of the following sessions:
+Create mockups of the graphical user interface. Create the mockups using whichever tool you prefer (pen and paper, or "Microsoft Paint", or a software designed for creating prototypes, etc.). Any user looking at your mockups should be able to understand how your application is intended to work in the end.
 
-* 7 February Monday 15:00-15:45
-* 7 February Monday 16:00-16:45
-* 8 February Tuesday 10:00-10:45
-* 8 February Tuesday 11:00-11:45
+Try to use [GUI components from Material Design 3](https://m3.material.io/components) in your mockups, instead of designing your own GUI from scratch. [Most Material Design 3 components have implementations in Jetpack Compose](https://developer.android.com/jetpack/compose/layouts/material), so it will be easy for you to later implement your Android app if you base your GUI on existing GUI components.
 
-To distribute you, one from each project group should join the corresponding [Mockup Presentation Session](https://ju.instructure.com/courses/4825/groups) group on Canvas. At the presentation, you will receive feedback on your mockups from Martin and the audience.
+
+
+
+
+## Part 5: Presenting Mockups
+Present your application idea and mockups to "the rest of the class" (in smaller groups) at one of the following sessions:
+
+::: danger Preliminary dates!
+The dates below has not been confirmed by Martin yet, and might change.
+:::
+
+* 6 February Monday 08:15-09:00
+* 6 February Monday 09:15-10:00
+* 9 February Thursday 10:15-11:00
+* 9 February Thursday 11:15-12:00
+
+To distribute you, one from each Project Group should join the corresponding [Mockup Presentation Group](https://ju.instructure.com/courses/6658/groups) group on Canvas that you want to attend. At the presentation, you will receive feedback on your mockups from Martin and the audience.
 
 After having viewed your presentation, the audience should have a very good understanding of:
 
@@ -142,19 +151,9 @@ After having viewed your presentation, the audience should have a very good unde
 2. How you intend to solve the problem
 3. How users will use the app to solve the problem (i.e. show your mockups)
 
-Your presentation (including feedback from the audience and Martin) may take at most 9 minutes. Using 3-4 minutes for the presentation and 5-6 minutes for feedback and discussions is probably a good balance.
+Your presentation (including feedback from the audience and Martin) may take at most 9 minutes. Using 3-4 minutes for the presentation and 5-6 minutes for feedback and discussions is probably a good balance. 
 
-::: tip Not examination!
-The mockup presentation sessions are not part of any examination test, they are just learning activities to help you get better at designing graphical user interfaces, so attendance is not mandatory, but we strongly recommend all groups to attend one session so you can get some feedback on your graphical user interface from Martin.
-:::
-
-After the presentation session, go to [the examiner's Bookable Doodle Calendar](https://doodle.com/mm/peterlarssongreen719/android-project-meeting) and choose a meeting slot you can meet him. At the meeting, present what you have written in the report so far, and what your mockups look like. You only have 15 minutes to do this, so be sure to come prepared and present it in an efficient way. Before the meeting, submit the assignment [Application Idea](https://ju.instructure.com/courses/4825/assignments/25232) on Canvas with the current version of your report and your mockups.
-
-The examiner will either approve or disapprove your application idea. If he approves it, he will approve you on the assignment [Application Idea](https://ju.instructure.com/courses/4825/assignments/25232) on Canvas. If he disapproves it, you need to come back another time (use the examiner's Bookable Doodle Calendar again) after you have changed it according to the examiner's feedback. If you haven't been approved on it after the second meeting, you can still pass the Project Work, but the examiner won't have any more time trying to estimate if the application you create will be advanced enough for this course until you submit the final version of it at the end of the course.
-
-::: tip Note!
-It may take some time before you manage to get a meeting with the examiner. If you want, you can start implementing the application (continue on next part of the Project Work) before the examiner has approved your application idea. If he disapproves it, it is most likely because your application is a bit too simple to implement, so the changes you need to do will most likely be to just add functionality.
-:::
+After your presentation, the teacher will approve your Project Group on the assignment [Project Mockups Presentation](https://ju.instructure.com/courses/6658/assignments/43125) on Canvas.
 
 
 
@@ -162,48 +161,39 @@ It may take some time before you manage to get a meeting with the examiner. If y
 
 
 
-## Part 5: Implementing the Application
+
+## Part 6: Implementing the Application
 ::: danger Note!
 **Before you start implementing the application you must complete and present the [Laboratory Work](laboratory-work/) to a teacher!**
 
-If a student hasn't passed the `Laboratory Work` when you submit your project work for grading at the end of the course, that student will be taken out of the group and forced to do her own project from scratch.
+If a student hasn't passed the `Laboratory Work` when you submit your project work for grading at the end of the course, that student will be taken out of the group and forced to do his own project from scratch.
 
-If a student presents her laboratory work at the end of the course, she will not get any credits for her contribution to the project work up until that point in time, which most likely means she won't pass the project work.
+If a student presents his laboratory work at the end of the course, he will not get any credits for his contribution to the project work up until that point in time, which most likely means he won't pass the project work.
 
 PLEASE, make this easy for all of us: complete and present your `Laboratory Work` before continuing past this point. **The examiner has no problem failing students that can't follow this simple instruction.**
 :::
 
-Start implementing your application using Android Studio. The first Android lectures will primarily focus on how to implement the graphical user interface in Android applications, so you are recommended to start by implementing that part of your application. Learning how to properly implement the graphical user interface (properly handling runtime configuration changes) is also the most difficult part of learning Android development.
+Implement your application in Android Studio. It is up to you to figure out in which order to implement the different parts your applications consists of, but if you find that hard, ask a teacher at the lab sessions for help.
 
-Initially, see it as you are creating a prototype of your application,  where you only bother to implement the GUI. This is quite common to do for bigger applications, where the GUI/user experience needs to be evaluated before the actual application is implemented. 
+We recommend you to start by storing all data in your application, and implement a prototype of it. Even if your application in the end should store its data on a server of some kind, the prototype version of your a Android app can store its data in lists in the application (similar to how you did it in the Laboratory Work). That way, you can quickly finish implementing the graphical user interface, and other can test your prototype and come with suggestions on improvements, which you easily can implement since the app doesn't contain any complicated code for storing data on a server. Then when you're done with this, you can look into how to store the data on the server, and make changes to the code in your Android app so it stores its data on the server instead.
 
 ::: tip Example
 If a user should be able to login to your application (which could be the case if you use Cloud Firestore), you need to have text boxes where the user can enter her credentials (i.e. her username and password) and a Login-button, but for the prototype you do not have to actually login the user when she presses the Login-button (you don't need to use Firebase at all). Instead, hardcode the correct credentials for a specific user in the prototype, and verify the entered credentials directly in your application.
 :::
 
 ::: tip Example
-If you need to fetch data from a REST API, hardcode the data directly in the Android application.
-:::
-
-::: tip Example
 If you need to communicate with an embedded system using Bluetooth, emulate the communication with the embedded system without using Bluetooth at all.
 :::
 
-As more Android features are covered at the lectures in the course, start to use them in your Android application, so your prototype application slowly turns into the final version of your application. For example, the first version of your prototype might note care about runtime configuration changes at all, but when those have been covered in the course, improve your activities by starting to handle them. Or maybe some of you code should run in a service instead of an activity? Then you can initially put that code in an activity, and then refactor it to a service when those have been covered in the course.
-
-::: warning Lectures won't cover everything
-The lectures in the course about Android will not necessarily cover everything you need to know to implement your specific Android application; you might need to learn some things on your own. Skipping the Android lectures in the course and learn everything on your own (e.g. form the course book or from the Google's Android developers guides/documentation) is OK too. The Android lectures aim at teaching you the most common parts of Android most applications have use of.
+::: warning Lectures/Tutorials won't cover everything
+Most likely you need to learn a few things (and in some cases many things) on your own, so don't wait for the teacher to introduce something in the course before you try to learn it on your own.
 :::
 
 ::: tip Divide and Conquer!
-You are three students in the group. To be efficient you somehow need to distribute the work among you. You all need to learn the basics of Android development, and you should all have an excellent understanding of how your entire application works at the end of the course (including the parts of the application the other two have done), but you are recommended to specialize in different parts of Android, and then combine your skills to create an excellent application. For example, one of you might choose to become an expert in how to handle runtime configuration changes, another one might choose to become an expert in how to handle Bluetooth communication, and the third one might choose to become an expert in how to store your data in a database, or how to properly use fragments, etc..
+You are three students in the group. To be efficient you somehow need to distribute the work among you. You all need to learn the basics of Android development, and you should all have an excellent understanding of how your entire application works at the end of the course (including the parts of the application the other two have done), but you are recommended to specialize in different parts of Android, and then combine your skills to create an excellent application. For example, one of you might choose to become an expert in how to handle runtime configuration changes, another one might choose to become an expert in how to handle Bluetooth communication, and the third one might choose to become an expert in how to store your data in a database, etc..
 
 Sitting three students at one computer and only one writing the code is not efficient and will most likely prevent you from finishing your work on time.
 :::
-
-We recommend you to not start too advanced. To pass the course, it is more important that the functionality you implement works properly than that the graphical user interface looks beautiful. Therefore, it is probably better to start with a simple graphical user interface and then improve it at the end of the course if you have time for it.
-
-If you want to get grade 4 or 5, you must come and see the examiner for another meeting to discuss your progress. Your work will not be graded, but this is an extra chance for you to get some feedback on your work before the final submission at the end of the course. If you are aiming for grade 3 you are welcome to book one of these meetings as well, but it is only mandatory for grade 4 and 5. The meeting should take place year week 9, 10 or beginning of 11. Use [the examiner's Bookable Doodle Calendar](https://doodle.com/mm/peterlarssongreen719/android-project-meeting) again the same way as before. After the meeting, the examiner will approve you on the assignment [Halfway Meeting](https://ju.instructure.com/courses/4825/assignments/25233) on Canvas.
 
 ::: danger Remember!
 Just implementing your application idea is not good enough to pass the project work. As you can read on the [Project Grading Guidelines](./project-grading-guidelines) page, you must also gather some points by implementing "extra functionalities" to pass.
@@ -214,7 +204,7 @@ Just implementing your application idea is not good enough to pass the project w
 
 
 
-## Part 6: Presentation
+## Part 7: Presenting
 Your work should be presented to "the rest" of the class (in smaller groups) at the end of course. All members in the group need to be present at the presentation. At the presentation, you should:
 
 * Explain the problem you have tried to solve with your application.
@@ -232,17 +222,17 @@ The reasons you should present your application to the rest of the class are two
 * To learn what type of Android applications you can create (you have all taken the same course, so you should all be able to create the applications the other students have created).
 * To practice your presentation technique. This is not limited to improving your speaking skills, but also includes improving your skills to explain how something works to others, and to prepare and carry out presentations (your future customers will appreciate such skills).
 
-Join one of the [Project Presentation Sessions](https://ju.instructure.com/courses/4825/groups#) on Canvas to let the examiner know which project presentation session you want to attend to. Only one in your Project Group should do this.
+Join one of the [Project Presentation Groups](https://ju.instructure.com/courses/6658/groups) on Canvas to let the examiner know which project presentation session you want to attend to. Only one in your Project Group should do this.
 
-After you have presented your work the teacher will mark you as approved on the assignment [Presentation](https://ju.instructure.com/courses/4825/assignments/25234) on Canvas.
-
-
+After you have presented your work the teacher will mark you as approved on the assignment [Project Presentation](https://ju.instructure.com/courses/6658/assignments/43126) on Canvas.
 
 
 
 
-## Part 7: Final Submission
-When you are done with your project work, upload it to Canvas for grading by submitting the assignment [Final Submission](https://ju.instructure.com/courses/4825/assignments/25235). Submit your work per the instructions on that page (read them in advance!).
+
+
+## Part 8: Final Submission
+When you are done with your project work, upload it to Canvas for grading by submitting the assignment [Project Final Submission](https://ju.instructure.com/courses/6658/assignments/43127). Submit your work per the instructions on that page (read them in advance!).
 
 
 

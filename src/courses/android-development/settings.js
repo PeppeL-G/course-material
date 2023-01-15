@@ -1,5 +1,5 @@
 export default {
-	name: "Android Development 2022",
+	name: "Android Development 2023",
 	showLink: true,
 	pages: [
 		"index.html",
@@ -11,6 +11,5 @@ export default {
 		"project-work",
 		"project-grading-guidelines",
 		"time-plan",
-		"feedback",
 	],
 }

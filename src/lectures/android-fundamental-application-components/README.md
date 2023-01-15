@@ -92,5 +92,3 @@ class LoginActivity : Activity(){
 ```
 :::
 :::::
-
-To learn more about the different fundamental application components, see each lecture about them.

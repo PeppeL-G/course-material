@@ -3,8 +3,9 @@
     course-name="Android Development"
     ladok-code="TAGK19"
     credits="7.5"
+    year="2023"
     course-coordinator="Peter Larsson-Green"
-    examiner="Peter Larsson-Green"
+    examiner="Jérôme Landré"
     canvas-course-id="4825"
 />
 
@@ -46,7 +47,7 @@ graph TD
 <Teacher
     name="Peter Larsson-Green"
     photo="peter-larsson-green.jpeg"
-    :roles='["Course coordinator", "examiner", "lecturer", "lab assistant"]'
+    :roles='["Course coordinator", "lecturer", "lab assistant"]'
     description="Has studied and followed the development of the web since 2004 and received his Master of Science in Computer Science at Linköping University in 2014. He has been working as programming teacher (part time) since 2010 at both Linköping University and Jönköping University."
     email="Peter.Larsson-Green@ju.se"
     phone="036 - 10 17 35"
@@ -65,25 +66,15 @@ graph TD
     zoomLink="https://ju.instructure.com/courses/3421/pages/zoom-links?module_item_id=76266"
 />
 
-### Linus Rudbeck
+### Jérôme Landré
 <Teacher
-    name="Linus Rudbeck"
-    photo="linus-rudbeck.jpeg"
-    :roles='["Lab assistant"]'
-    description="Former JTH student that studied the program Software Engineering and Mobile Platforms. Started the company Red Capes IT together with Daniel Fransén after he graduated."
-    website="https://redcapesit.se/"
-    zoomLink= "https://ju.instructure.com/courses/3421/pages/zoom-links?module_item_id=76266"
-/>
-
-### Rigmor Skoglund
-<Teacher
-    name="Rigmor Skoglund"
-    photo="rigmor-skoglund.jpeg"
-    :roles='["Teacher in Gruppdynamic"]'
-    description="Not directly involved in this course, but course coordinator for the course Gruppdynamik. Only the Swedish students will meet her."
-    email="rigmor.skoglund@ju.se"
-    phone="036 - 10 19 10"
-    website="https://ju.se/en/personinfo.html?sign=SKORIG"
+    name="Jérôme Landré"
+    photo="jerome-landre.jpeg"
+    :roles='["Examiner"]'
+    description="Assistant Professor."
+    email="jerome.landre@ju.se"
+    phone=""
+    website="https://ju.se/en/personinfo.html?sign=LanJer"
 />
 
 ## Intended Learning Outcomes
@@ -136,22 +127,18 @@ Display an ability to evaluate the Android system architecture
 Here are short introduction to the learning activities offered in the course.
 
 ### Recorded Lectures
-The lectures will be pre-recorded and teach you most of what you need to learn to pass the examination tests. Some lectures will be available at course start, but most will be published as the course proceed. 
+There exists some pre-recorded lectures that will help you learn the basics of Android Development.
 
 ### Tutorials
-The recorded lectures will be quite theoretical and focus on specific techniques. The tutorials will be given on Campus and show you how you can combine different techniques taught in the recorded lectures to build Android apps. 
+At the lectures on campus, the teacher won't have power point presentations. Instead, these sessions are called "tutorials" to reflect that the teacher instead will show you how to implement different things in an Android app.
 
 ### Lectures
-Martin Lindh will give you one lecture on Campus focused on designing graphical user interfaces and creating prototype applications for smartphones.
+Martin Lindh will give you one lecture on Campus focused on designing graphical user interfaces and creating mockup applications for smartphones.
 
 ### Lab Sessions
 Each week you may attend a 4 hours lab session. At the lab session you may ask the teacher there for help with your laboratory work and your project work. When you have completed your laboratory work you should also present your solution to a teacher at a lab sessions.
 
-There are 4 different lab sessions each week, but you may only come to one of them. To distribute you, join one of the [Lab Session Groups](https://ju.instructure.com/courses/4825/groups) on Canvas. First come, first served. Feel free to attend the other lab sessions as well, but students that have signed up for a specific lab session should of course be prioritized by the teacher.
-
-::: warning One lab group is online using Zoom!
-One of the lab groups have their sessions online using Zoom. Students that don't want to come to school should join this lab session group, and other students that show Covid symptoms can use this session the weeks they can't come to school.
-:::
+There are 3 different lab sessions each week, but you may only come to one of them. To distribute you, join one of the [Lab Session Groups](https://ju.instructure.com/courses/6658/groups) on Canvas. First come, first served. Feel free to attend the other lab sessions as well, but students that have signed up for a specific lab session should of course be prioritized by the teacher.
 
 ## Examination Tests
 The course contains two examination tests.
@@ -179,12 +166,12 @@ To receive a final grade in the course you need to pass all examination tests. T
 ## Course Literature and Other Teaching Aids
 The following [CommonsWare’s Books](https://commonsware.com/catalog):
 
+* [Elements of Kotlin](https://commonsware.com/Kotlin)
+* [Elements of Kotlin Coroutines](https://commonsware.com/Coroutines)
 * [Elements of Android Room](https://commonsware.com/Room)
 * [Elements of Android Jetpack](https://commonsware.com/Jetpack)
-* [Elements of Kotlin Coroutines](https://commonsware.com/Coroutines)
-* [Elements of Kotlin](https://commonsware.com/Kotlin)
 * [Exploring Android](https://commonsware.com/AndExplore)
-* [Elements of Android Q](https://commonsware.com/Q)
+* [Elements of Android R](https://commonsware.com/R/)
 
 
 ## Time Plan
