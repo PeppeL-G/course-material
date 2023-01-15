@@ -47,6 +47,10 @@ Before you start working on the labs you are recommended to:
 When the web browser executes the JavaScript statement `debugger` (you might need to have the console open in the web browser) it enters a debug mode in which you can inspect the values variables have, use step-by-step execution, etc.. Use that to debug your code when it doesn't work the way you want.
 :::
 
+::: tip Practice on using Git!
+You don't have to use Git in the `Laboratory Work`, but we recommend you to use it to practice on using it. So head over to [GitHub](https://github.com/) and create a repository for the labs in this course, and create one commit after each lab you have completed.
+:::
+
 ## Lab 1: Generating a table of contents
 The file <a :href="$withBase('courses/web-development-advanced-concepts/files/lab-01-table-of-contents.html')" target="_blank">lab-01-table-of-contents.html</a> contains some of the information on [Wikipedia's Jönköping University article](https://en.wikipedia.org/wiki/J%C3%B6nk%C3%B6ping_University). Your task is to write JavaScript code that generates a table of content for the document (i.e. a list with the title of all the headers). Download the HTML file and write your own JavaScript code directly in it.
 
@@ -60,7 +64,7 @@ Some DOM functionalities you might find helpful:
 * `anHTMLElement.appendChild(aChildElement)` to add `aChildElement` to `anHTMLElement`.
 
 ### Presenting
-Present your work to a teacher at one of the lab sessions. Be prepared to explain how your code works and to answer any question the teacher might have about it. When the teacher is satisfied with your presentation, upload your HTML file to the assignment [Lab 1](https://ju.instructure.com/courses/4775/assignments/25242) on Canvas, after which the teacher will approve you on the assignment.
+Present your work to a teacher at one of the lab sessions. Be prepared to explain how your code works and to answer any question the teacher might have about it. When the teacher is satisfied with your presentation, he will approve you on the assignment [Lab 1 Presentation](https://ju.instructure.com/courses/6820/modules/items/241264) on Canvas, and you can upload your solution to the assignment [Lab 1 Code](https://ju.instructure.com/courses/6820/modules/items/254128).
 
 ## Lab 2: A calculator
 The file <a :href="$withBase('courses/web-development-advanced-concepts/files/lab-02-calculator.html')" target="_blank">lab-02-calculator.html</a> contains a form through which users should be able to enter two operands and one operation. Your task is to write JavaScript code that displays the result of the selected operation applied on the two entered operands. 
@@ -78,7 +82,7 @@ If the address bar in the web browser changes (a query string is added to the en
 :::
 
 ### Presenting
-Present your work to a teacher at one of the lab sessions. Be prepared to explain how your code works and to answer any question the teacher might have about it. When the teacher is satisfied with your presentation, upload your HTML file to the assignment [Lab 2](https://ju.instructure.com/courses/4775/assignments/25243) on Canvas, after which the teacher will approve you on the assignment.
+Present your work to a teacher at one of the lab sessions. Be prepared to explain how your code works and to answer any question the teacher might have about it. When the teacher is satisfied with your presentation, he will approve you on the assignment [Lab 2 Presentation](https://ju.instructure.com/courses/6820/modules/items/241265) on Canvas, and you can upload your solution to the assignment [Lab 2 Code](https://ju.instructure.com/courses/6820/modules/items/254129).
 
 ## Lab 3: Validating input to forms
 The file <a :href="$withBase('courses/web-development-advanced-concepts/files/lab-03-form-validation.html')" target="_blank">lab-03-form-validation.html</a> contains a form users can use to enter information about a new account to be created. Your task is to write JavaScript code validating the data entered in the form when the user submits it according to the following validation rules:
@@ -99,7 +103,7 @@ The form should be submitted if there are no validation errors. If you open the 
 :::
 
 ### Presenting
-Present your work to a teacher at one of the lab sessions. Be prepared to explain how your code works and to answer any question the teacher might have about it. When the teacher is satisfied with your presentation, upload your HTML file to the assignment [Lab 3](https://ju.instructure.com/courses/4775/assignments/25244) on Canvas, after which the teacher will approve you on the assignment.
+Present your work to a teacher at one of the lab sessions. Be prepared to explain how your code works and to answer any question the teacher might have about it. When the teacher is satisfied with your presentation, he will approve you on the assignment [Lab 3 Presentation](https://ju.instructure.com/courses/6820/modules/items/241266) on Canvas, and you can upload your solution to the assignment [Lab 3 Code](https://ju.instructure.com/courses/6820/modules/items/254127).
 
 ## Lab 4: Tabs
 The file <a :href="$withBase('courses/web-development-advanced-concepts/files/lab-04-tabs.html')" target="_blank">lab-04-tabs.html</a> contains three forms:
@@ -119,4 +123,4 @@ If the user has disabled client-side JavaScript in the web browser, all three fo
 :::
 
 ### Presenting
-Present your work to a teacher at one of the lab sessions. Be prepared to explain how your code works and to answer any question the teacher might have about it. When the teacher is satisfied with your presentation, upload your HTML file to the assignment [Lab 4 ](https://ju.instructure.com/courses/4775/assignments/25245) on Canvas, after which the teacher will approve you on the assignment.
+Present your work to a teacher at one of the lab sessions. Be prepared to explain how your code works and to answer any question the teacher might have about it. When the teacher is satisfied with your presentation, he will approve you on the assignment [Lab 3 Presentation](https://ju.instructure.com/courses/6820/modules/items/241267) on Canvas, and you can upload your solution to the assignment [Lab 3 Code](https://ju.instructure.com/courses/6820/modules/items/254130).

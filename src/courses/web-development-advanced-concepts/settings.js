@@ -1,5 +1,5 @@
 export default {
-	name: "Web Development - Advanced Concepts 2022",
+	name: "Web Development - Advanced Concepts 2023",
 	showLink: true,
 	pages: [
 		"index.html",

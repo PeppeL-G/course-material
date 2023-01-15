@@ -8,13 +8,15 @@ On this page you find information about the examination test `Project work`.
     "Number of credits": "4",
     "Grades": ["Fail", "3", "4", "5"],
     "How to work": "In pairs",
-    "Goal": "To learn how to implement a scalable platform built on Docker containers running a web application, a single-page application, a database to store sessions in and a database to store your resources in. You will also learn how to use a three-layered architecture, dependency injection and how to design and implement a REST API in your web application.",
-    "Instructions": `Complete the different parts the project work consists of described on this page. You will implement a platform, write a report describing your implementation and present your platform to the "rest" of the class at the end of the course.`,
-    "Grading guidelines": "Available on the Project Grading Guidelines page.",
-    "Re-examination": "Special presentation sessions will be available at the re-exam periods in June and in August (contact the course coordinator for more details). Your work can also be graded at these re-exam period, but it will only be graded Fail/3.",
-    "Help": "Ask the teacher for help at the lab sessions."
+    "Goal": "To learn how to implement a platform using a Single-Page Application framework, a backend framework exposing a REST API, a database to store the data on the platform, and how to use Docker to run all of these",
+    "Instructions": `Complete the different parts the project work consists of described on this page. You will implement a platform, write a report describing your implementation and present your platform to the "rest" of the class (in smaller groups) at the end of the course`,
+    "Grading guidelines": "Available on the Project Grading Guidelines page",
+    "Re-examination": "A special presentation session will be available at each re-exam periods in June and in August (contact the course coordinator for more details). Your work can also be graded at these re-exam period, but it will only be graded Fail/3",
+    "Help": "Come to the lab sessions and ask the teacher there for help"
 }'>
 </CompactInfo>
+
+
 
 
 
@@ -23,50 +25,57 @@ On this page you find information about the examination test `Project work`.
 As project work you should work in pairs to create a platform per the instructions on this page. The platform will consist of:
 
 * A relational database that stores the resources created on the platform
-* A none-relational database to store temporary data (e.g. sessions) on the platform
-* A web application that:
-    * Web browsers can use to fetch webpages from (i.e. function as a website)
-    * Exposes a REST API clients (e.g. smartphones) can use to work with the resources on the platform
-* A Single-Page Application through which users can work with the resources on the platform
+* A web application that exposes a REST API clients (i.e. other applications) can use to access the data on the platform (known as the *backend*)
+* A Single-Page Application with a graphical user interface (GUI) users can use to use to work with the data on the platform (known as the *frontend*)
 
 You have a lot of freedom when it comes to the design and functionality of the platform, but the following requirements exist:
 
 * There should exist at least three different type of resources on the platform:
     * One of the resource types must represent *accounts* users can create and login to
-    * The other two resource types should somehow have a relation to accounts (direct or indirect), i.e. a created resource should be owned by/belong to an account
-* Regarding CRUD (Create, Retrieve, Update, Delete) operations on the resources:
-    * All three type of resources should support Create and Retrieve operations
-    * Implementing Update and Delete operations for the website is an extra task you can do at the end of the project work to get a higher grade
+    * The other two resource types must somehow have a relation to accounts (direct or indirect)
+* All three type of resources need to support all four Create, Retrieve, Update and Delete (CRUD) operations
 
-Use whichever type of resources you want in addition to accounts. Some typical (boring) examples are:
+Use whichever type of resources you want in addition to accounts. Some general examples are:
 
-* *Threads* logged in users can create and that other logged in users can write *posts* to
-* *Blog posts* logged in users can create and that other logged in users can write *comments* on
-* *Todo lists* logged in users can create and add *todo items* to
+* *Threads* logged in users can create and that other logged in users can write *posts* in
+* *Blogposts* logged in users can create and that other logged in users can write *comments* on
+* *Todo lists* logged in users can create and then add *todo items* to
 
-Examples of more specific platforms are:
+There already exists many websites with the resource types mentioned above, and creating a smaller copy of one of them is OK, but usually not that fun. Instead, try to come up with a more specific problem you can solve. Some examples are:
 
-* For a **Car Insurance Company**: *Insurance Plans* (price, info about what's included in the plan, etc.) users' *Cars* are connected to
-* For a **Rescue Service**: *Accidents* they have attended, and *Reported Work Hours* by the personnel
-* For a **Football Club**: *Teams* in the club, and *Players* in each team
+* For a *Car Insurance Company*:
+	* *Insurance Plans* (price, info about what's included in the plan, which admin account that is responsible for the plan, etc.)
+	* *Subscriptions* (which account that subscribed, which plan to subscribe to, car registration number, etc.)
+* For a *Rescue Service*:
+	* *Accidents* that has happened (place, time, type of accident, which admin account that is responsible for taking care of the accident, etc.)
+	* *Work Hours* reported by the personnel (which account, which accident, how many work hours, etc.)
+* For a *Football Club*:
+	* *Teams* in the club (boys/girls, age of players, who the coach is (responsible admin account), etc.)
+	* *Players* in each team (which account, which team, which number the player has, which position the player has, etc.)
 
 ::: tip Finding a good problem to solve
-Most good problems obvious to programmers have already been solved by other programmers. To find a good problem to solve as project in this course, you usually need to explore domains you are unfamiliar with. Ask your friends and family if they have a need of a platform of some kind. Someone working within elderly care might have a problem you can solve with a platform implemented in this course? Or someone who likes to walk in the nature? Or someone helping homeless people? Etc.
+Most good problems that are obvious to programmers have already been solved by other programmers. To find a good problem to solve as project in this course, you usually need to explore domains you are unfamiliar with. Ask your friends and family if they have a need of a platform of some kind. Someone working within elderly care might have a problem you can solve with a platform you can implement in this course? Without you asking someone who works within elderly care about what problems they have, you will never now. Or ask someone who likes to walk in the nature? Or maybe ask someone helping homeless people? Etc.
 :::
 
-Implement the platform using the technologies taught in this course. In addition to implementing the web application, you should also write a report describing how the platform works and how it has been implemented. The file [project-report-template.docx](files/project-report-template.docx) contains a template with further instructions on this. Your report will be a living document throughout the course, meaning that you will continuously improve and add content to it. 
+Implement the platform per the instructions on this page. In addition to implementing the platform, you should also write a report describing how the platform works and how it has been implemented. The file [project-report-template.docx](files/project-report-template.docx) contains a template with further instructions on this. **Your report will be a living document throughout the course, meaning that you will start writing on it in the beginning of the course, and then continuously improve and add content to it throughout the course.**
 
-On the [Project Grading Guidelines](./project-grading-guidelines/) page you find some guidelines for how your project work will be graded. You are recommended to read through it every now and then.
+Since the project is carried out in pairs, you also need to some degree document who has done what in the project, so the examiner can verify that you both have contributed approximately equally much. If you use a version control system properly (i.e. you have good descriptive commit messages, each commit implements a single new feature on the platform, etc.), then you can simply use your commit history as documentation for who has done what. Otherwise you need to keep track of and present this in some other way. See the *Worklog* chapter in the report template for more information.
 
-To help you, we have divided the project work into smaller parts that should be completed in order. The rest of this page contains descriptions of these smaller parts. Before you start working on the first part you are recommended to read through all the parts, which will give you a good overview of the work that lies ahead.
+On the [Project Grading Guidelines](./project-grading-guidelines/) page you find some guidelines for how your project will be graded. You are recommended to read through it every now and then.
+
+To help you, we have divided the project work into smaller parts that we recommend you to complete in order. The rest of this page contains descriptions of these smaller parts. Before you start working on the first part you are recommended to read through all the parts, which will give you a good overview of the work that lies ahead.
 
 Good luck!
 
 
 
 
+
+
+
+
 ## Installing required software
-**If you work on the computers in E1206, E2432, E2433 or E4205**, all required software should already be installed for you, so you should not need to install anything yourself.
+**If you work on the computers in E2205, E2432 or E2433**, all required software should already be installed for you, so you should not need to install anything yourself.
 
 **If you work on a school computer in any other room**, you need to manually install the required software through the *Software Center* application (unless someone else has already done that on the specific computer you use).
 
@@ -74,36 +83,41 @@ Good luck!
 
 The required software is:
 * [Docker](https://docs.docker.com/get-docker/) \
-    A program used for containerization, i.e. a program used for running other programs in an isolated and configurable environment.
+    A program used for containerization, i.e. a program used for running other programs in an isolated and configurable environment
 
 ::: danger Docker Toolbox for Windows
-There existed an old version of Docker for Windows called *Docker Toolbox*. It shouldn't be used anymore, so Windows users, be sure to use *Docker Desktop for Windows*.
+There existed an old version of Docker for Windows called *Docker Toolbox*. It shouldn't be used anymore, so Windows users, be sure to use *Docker Desktop for Windows*. 
 :::
 
 ::: warning About Docker Desktop for Windows
-Docker Desktop for Windows can be used with either *Windows Subsystems for Linux 2* (WSL2) or Hyper-v. If you have Windows 10 Home (as most users), you must use it with WSL2.
+Docker Desktop for Windows can be used with either *Windows Subsystems for Linux 2* (WSL2) or Hyper-v. If you have Windows 10 Home (as most users), you must use it with WSL2. For more details, see the installation instructions on Docker's website.
 :::
 
 * [Node.js](https://nodejs.org/en/) \
-    Use whichever version you want, but most likely the newer the better. If you don't want to gamble, go with the latest LTS version.
+    Use whichever version you want, but most likely the newer the better. If you don't want to gamble, go with the latest LTS version
 * [npm](https://www.npmjs.com/) \
-    This one is installed along with Node.js, so you do not need to install it separately. However, you might want to [update npm to the latest version](https://docs.npmjs.com/troubleshooting/try-the-latest-stable-version-of-npm).
+    This one is installed along with Node.js, so you do not need to install it separately. However, you might want to [update npm to the latest version](https://docs.npmjs.com/troubleshooting/try-the-latest-stable-version-of-npm)
+* [Postman](https://www.postman.com/) \
+    An application one can use to send custom HTTP requests
 
 The following software tools are not required, but recommended:
 
 * [Visual Studio Code](https://code.visualstudio.com/) \
-    IDE with good support for writing, running and debugging Node.js and JavaScript code, but use whichever IDE you want.
+    IDE with good support for writing, running and debugging Node.js and JavaScript code, but feel free to use whichever IDE you want
 * [Git](https://git-scm.com/) \
-    Version Control System that makes it very convenient to work on the project from different computers.
+    Version Control System that makes it very convenient to work on the project from different computers
 
 
 
 
 
-## Part 1: Joining a project group
-The project work should be carried out in pairs. Let the examiner know who you are working with by joining one of [the Project Groups on Canvas](https://ju.instructure.com/courses/4775/groups).
 
-If you can't find someone to work with, send the course coordinator an email at [Peter.Larsson-Green@ju.se](mailto:Peter.Larsson-Green@ju.se) using the template in <FigureNumber /> below (you just need to replace `XXX` with your specific values).
+
+
+## Part 1: Project group
+The project work should be carried out in pairs. Let the examiner know who you are working with by joining one of the [Project Groups](https://ju.instructure.com/courses/6820/groups) on Canvas.
+
+If you can't find someone to work with, send the course coordinator an email at [Peter.Larsson-Green@ju.se](mailto:Peter.Larsson-Green@ju.se) using the template in <FigureNumber /> below (you just need to replace `XXX` with your own specific values).
 
 <Figure caption="Template of message to be sent to the course coordinator if you can't find a partner to work with on your own.">
 
@@ -132,7 +146,12 @@ If you don't care about who you are matched with, you just need to enter your na
 
 
 
-## Part 2: Project Environment
+
+
+
+
+
+## Part 2: Project environment
 Before you start working on this part, you are recommended to:
 
 * Read/View the following lectures:
@@ -142,11 +161,13 @@ Before you start working on this part, you are recommended to:
 
 ---
 
-The very first thing you should agree on is how you should work together. Especially, you need to some extent document who is doing what in the project, and write that in your report, so the examiner can verify that all group members have contributed ~equally much.
+The very first thing you and your partner should agree on is how you should work together with your partner. Especially, you need to some extent document who is doing what in the project, and write that in your report, so the examiner can verify that all group members have contributed approximately equally much.
 
-We recommend you to work together per the basis described in the [Teamwork](../../lectures/teamwork/) lecture. That way you will automatically document who has contributed with what by using Git and GitHub issues. But if you want to work together in another way, that is OK too, as long as you can show who has contributed with what in the project.
+We recommend you to work together per the basis described in the [Teamwork](../../lectures/teamwork/) lecture. That way you will automatically document who has contributed with what by using Git and GitHub issues. But if you want to work together in another way, that is OK too as long as you can show who has contributed with what in the project. The *Worklog* chapter in [project-report-template.docx](files/project-report-template.docx) shows an example of how you can report who has contributed with what in the project.
 
-The *Worklog* chapter in [project-report-template.docx](files/project-report-template.docx) shows an example of how you can report who has contributed with what in the project.
+If you agree on using a version control system, try to use it for as much as possible. For example, you can also put your report in your repository, and not only your source code. If you agree on using a version control system, create the remote repository for it now, for example using [GitHub](https://github.com/), and then clone it to your own computers
+
+
 
 
 
@@ -157,715 +178,845 @@ Before you start working on this part, you are recommended to:
 
 * Read/View the following lectures:
     * [Report Writing](../../lectures/report-writing/)
+    * [UML Use-Case Diagrams](../../lectures/uml-use-case-diagrams/)
 
 ---
 
-Your first task is to come up with what the platform you will create should do. Try to be creative and create a platform that solves a real-world problem ordinary people are having. Feel free to ask your family and friends for problems they have that could be solved using a platform. Examples of real-world problems could be:
+Your first task is to come up with what the platform you will create should be about. Try to be creative and create a platform that solves a real-world problem ordinary people are having. Feel free to ask your family and friends for problems they have that can be solved using a platform. Examples of real-world problems could be:
 
 * I often forget meetings
 * I often make bets with my friends, they remember the bets I lose so I have to pay them, but I often forget the bets I win, so they never pay me
 * I like to keep track of which celebrities I've seen, but I rarely remember that
-* I eat lunches alone, and that's so boring
+* I often eat lunch alone, and that's so boring
 * I need to find someone I can play padel with
 
-The only important thing is that your platform can be implemented using at least 3 type of resources (accounts + at least two more connected to accounts), but the more useful it is the better. Optimally you have such a great idea that you will want to launch your platform after the course.
+The only important thing is that your platform can be implemented using at least 3 type of resources (accounts user can login + at least two more resource types connected to accounts + all four CRUD operations on all three resource types), but the more useful your platform can be, the more fun it will be to implement it. Optimally, you have such a great idea that you will want to launch your platform online after the course.
 
 Your platform should be described in the project report, so in this part of the project, you will not do any programming, but only work on your report. You should be able to complete at least the *Introduction* chapter.
 
-When you're done describing your idea in the report, discuss it with a teacher at one of the lab sessions, or some friends to get some initial feedback on your idea and can improve it. Then you are recommended to upload the current version of your report to Canvas by submitting the assignment [Platform Idea](https://ju.instructure.com/courses/4775/assignments/25247) to get some feedback on your idea from the examiner.
+::: tip Role-playing!
+Usually, the *customer* has the problem, and she will come to you and explain the problem to you. Then you, as the *developer*, will come up with and suggest the solution (an app) to the customer. To make sure that both of you have the same understanding of what functionality the solution should contain, you should visualize the functionalities in a use-case diagram in your report.
+
+In the project in this course, most of you will most likely not have a customer with a problem, but you have instead come up with a problem on your own that you try to solve. In that case you must do role-playing:
+
+1. Pretend you are the customer, and specify the problem you have
+2. Change role and become the developer, and suggest a solution (the platform) to the problem
+3. As the developer, draw a use-case diagram showing what functionality you think the application should contain
+4. Switch role to the customer, and either accept the suggested functionality in the use-case diagram, or explain to the developer what functionality you are missing, and then as the developer add the missing functionality
+:::
+
+When you are done describing your platform idea in the report, discuss it with a teacher at one of the lab sessions or some friends to get some initial feedback on your idea, and then improve it.
 
 
 
 
 
-## Part 4: Setting up docker
-Before you start working on this part you must:
+## Part 4: Graphical user interface
+Before implementing an application, it is crucial to first specify how the application should work. This is especially true when you are multiple developers working on the same application; without a specification to lean on, all in the group will have their own idea of how the application should work in the end.
 
-* Complete and be approved on the [Laboratory Work](./laboratory-work/).
+A good way to quickly visualize how the application should work in the end is by drawing a wireflow showing how the user can navigate between the different pages the application consists of, and to some degree show what the user can do on each page, as shown in <FigureNumber /> below.
+
+<Figure caption="Example of parts of a wireflow showing the graphical user interface of an application with accounts and blogposts.">
+
+![Example of parts of a wireflow showing the graphical user interface of an application with accounts and blogposts.](./files/wireflow-example.jpeg)
+
+</Figure>
+
+By drawing a wireflow, all in the group can look at it and get the same understanding of how the application should work in the end. Further more, and more importantly, the customer can also look at the wireflow and then confirm that the application you intend to build really works the way the customer wants it to work, or suggest how it should change. In projects, it is all too common that the customer is not involved in the project from the start, and the developers then end up building an application that doesn't work the way the customer wants it to work, so they deliver an application no on wants to use. That's a big waste and must be avoided by including the customer in the development process!
+
+Finish the Graphical User Interface chapter in the report. You can draw the wireflow using pen and paper, and then take a picture of it with a camera, and then add the picture to the report to show what you intend the graphical user interface to look like. If you want to draw the wireflow using a software tool instead, that is of course OK too.
+
+::: tip Use an HTML and CSS framework if you want!
+Later, you will implement the GUI in HTML and CSS. If you want, you can write all the HTML and CSS code for the GUI yourself, but to avoid spending too much time on that, we recommend you to use an HTML and CSS framework that contains pre-made GUI components you can use. That way, you need to write much less code, and can instead spend more time on the other parts of the project.
+
+If you want to use an HTML and CSS framework, we recommend you to choose which one you want to use now, so you can design your GUI based on the GUI components that are available in the HTML and CSS framework you use.
+
+Since you later will implement the GUI in a Single-Page Application that requires client-side JavaScript to be enabled to work, there is no problem with using an HTML and CSS framework that also makes use of client-side JavaScript, so feel free to use that if you want.
+:::
+
+When you are done, show the current version of your report to a teacher at a lab session to get some feedback on your work.
+
+
+
+
+
+
+
+
+
+## Part 5: Frontend GUI
+Before you start working on this part, you are recommended to:
+
+* Read/View the following lectures:
+    * [Svelte](../../lectures/svelte/) (use another frontend framework if you want)
+    * [ Content Delivery Networks](../../lectures/content-delivery-networks/)
 
 ---
 
+In the end, your solution will consist of multiple components:
+
+1. A database that stores the data on the platform
+2. A backend application (the web application) that gives other applications access to the data in the database through a REST API
+3. A frontend application (the Single-Page Application) users can use to work with the data through a GUI, and that access the data through the REST API
+
+What feels most natural is to implement the components in the order mentioned in the list above. After all:
+
+* The backend is dependent on the database, and can't function without it
+* The frontend is dependent on the backend, and can't function without it
+
+However, that way of implementing the solution have often turned out to be bad, because very often when the solution has been implemented and the customer can test it, the customer realizes that she wants some things to work in another way, and changing that after it has been implemented is very expensive (time consuming).
+
+So, instead, one usually starts by building a prototype of the frontend application (an application that will look the way it's supposed to look in the end, but whose functionality mostly don't work), which the customer then can test and evaluate, and if the customer wants to change something in it, that can easily be done without taking too much time, since it's only a simple prototype. Then, when the customer is happy with how the prototype works, the entire solution can be implemented.
+
+A prototype application can be implemented using a software tool designed to quickly create a prototype application, but in this course you will instead implement the prototype application directly as the Single-Page Application that will be used in the end, but instead of storing the data in a database and access it through the backend's REST API, you will hardcode the data directly in the Single-Page Application.
+
+When you're done with that, the customer can test the prototype, and if the customer is happy with how it works, you can continue by implementing the database and the backend, and then change the frontend to access the data through the REST API instead of hardcoding it in the frontend.
+
+In this course, you will use a frontend framework to implement your Single-Page Application in. There exists many of them, such as:
+
+* [Angular](https://angular.io/)
+* [React](https://reactjs.org/)
+* [Vue](https://vuejs.org/)
+* [Svelte](https://svelte.dev/)
+
+Use whichever frontend framework you want, but in this course we will teach you and recommend you to use Svelte. Svelte is not used much in the industry yet, but in our opinion it's the easiest framework to learn and get started with. If you use another framework, we also can't guarantee that you can get help from a teacher at the lab sessions, since not all teachers know all of these frameworks, so only use another framework in you feel confident that you can learn and use it on your own.
+
+### Getting started
+In this subchapter we provide some instructions helping you to get started with using Svelte. If you choose to use another frontend framework, read the documentation for that framework to learn how to use it.
+
+1. If you use a version control system, open your local repository folder in a shell. If you don't use a version control system, simply create a new folder for your project on your computer, and open that in a shell
+2. In the shell, run the command `npm create vite@latest`, and choose the following options:
+	* `Project name`: `frontend`
+	* `Select a framework`: `Svelte`
+	* `Select a variant`: `JavaScript`
+3. Run the following commands in the shell:
+	1. `code .`
+	2. `cd frontend`
+	3. `npm install`
+	4. `npm run dev`
+4. Open [127.0.0.1:5173](http://127.0.0.1:5173/) (or whichever port number you end up using) in a web browser to run the frontend application
+5. As you make changes to the code and save them in Visual Studio Code, Vite will push the new version of the code to the wb browser, which shows the new version instantly. Try it out!
+
+Implement the layout of your frontend application in the `App.svelte` file. The main content on the different pages can be implemented in their own `.svelte` files. To connect each page to its own URL, you can use the npm package [svelte-routing](https://github.com/EmilTholin/svelte-routing). 
+
+Create a file called `data.js`, in which you hardcode and export some data that is available on your platform, for example (if your platform is about blogposts and comments):
+
+```js
+export const accounts = [
+	{id: 1, "name": "Alice"},
+	{id: 2, "name": "Bob"},
+	{id: 3, "name": "Claire"},
+]
+
+export const blogposts = [
+	{id: 1, authorId: 1, "title": "Alice's adventure Part 1"},
+	{id: 2, authorId: 2, "title": "My birthday!"},
+	{id: 3, authorId: 1, "title": "Alice's adventure Part 2"},
+]
+
+export const comments = [
+	{id: 1, blogpostId: 1, commenterId: 2, content: "Exciting, can't wait for Part 2!"},
+	{id: 2, blogpostId: 2, commenterId: 1, content: "Happy birthday Bob!"},
+	{id: 3, blogpostId: 2, commenterId: 3, content: "🎉🎂"},
+]
+```
+
+Try to structure your data the same way you would structure it in a relational database, and you will need to make less changes to the code later when you start using the database and the backend application. So, explaining how you structure your data in the *Database* chapter in your report now is a good idea.
+
+In the `.svelte` component for the different pages, import the data from the `data.js` file the page should show, and then show that data in that component. The `<form>` elements you have on the different pages don't need to do anything now; this part of the project is just about showing the GUI, so the customer can try out the navigation by clicking on different links in the application.
+
+When you're done, if you have a customer, then show the prototype to the customer, and ask for feedback. I you don't have a customer, you can show your prototype to a teacher at a lab session or some of your friends, and ask what they think about your GUI. Also, don't forget explain how you have implemented the frontend in your report.
+
+
+
+
+
+
+
+
+## Part 6: REST API
+Before you start working on this part you are expected to read/view the following lectures:
+
+* [REST API Basics](../../lectures/rest-api-basics/)
+
+---
+
+Design the REST API you will implement on the backend application and through which the frontend application will communicate with it. By looking at the graphical user interface in your report you should be able to figure out which requests the frontend needs to be able to send to the backend to be able to function properly. For example, if the frontend  have a "page" showing a list of all accounts, then your REST API should send back all accounts when it receives a `GET` request for `/accounts` (or similar), and if the frontend has a "page" showing all information about an account with a specific id, then your REST API should send back all information about an account with a `SPECIFIC_ID` when it receives a `GET` request for `/accounts/SPECIFIC_ID` (or similar; replace `SPECIFIC_ID` with an actual id).
+
+::: warning Note
+You do not need to worry about login functionality (authentication and authorization) yet, that comes in Part 10. For now, it's OK if any user can carry out any operation.
+:::
+
+Describe the REST API in your project report. Be as detailed as possible; other programmers should understand how to use your REST API just by reading the specification for it in your report. This means that you must mention details such as which methods, URI:s, status codes (all of them, including the ones used when the request is not carried out), headers etc. that are used in your REST API for each request it supports.
+
+An example of a good REST API specification is [Stripe's REST API specification](https://stripe.com/docs/api/accounts). Feel free to take inspiration from that.
+
+When you are done, show your REST API specification to a teacher at a lab session to get some feedback on it.
+
+
+
+
+
+## Part 7: Database
 Before you start working on this part, you are recommended to:
 
 * Read/View the following lectures:
     * [Docker Basics](../../lectures/docker-basics/)
-
----
-
-The web application should be implemented in Node.js using the Express framework (feel free to use [Koa](https://koajs.com/) instead of Express if you are willing to learn it (not officially part of this course, so you can't expect to get any help with it from the lab assistants)), and the resources on the platform should be stored in a MySQL database. We could create a Docker container that contains both, but when it comes to containerization it is better that a container just has a single responsibility, e.g. to just run the web application or to just run the database. Among other things, it is much easier to scale a container that has a single responsibility. Therefore, the web application should run in one container, and the database should run in another container.
-
-
-
-### The Web Application image
-Start by creating a new folder to store all the source code for the entire platform. In this document we will refer to this folder as `/platform` (you should of course use a more unique/descriptive name than `platform`). This is the folder you want to version control, so here you also want to initialize your Git repository. Then create a sub-folder inside this one to store the source code for the web application. In this document we will refer to that sub-folder as `/platform/web-application`.
-
-In `/platform/web-application`, run the following commands:
-
-1. `npm init --yes` - Creates `packages.json`.
-2. `npm install express` - Registers a dependency on the npm package `express`.
-
-Then create the file `/platform/web-application/app.js` with the content shown in <FigureNumber /> below.
-
-<Figure caption="The content of the file app.js (Hello World with Express).">
-
-```js
-const express = require('express')
-
-const app = express()
-
-app.get('/', function(request, response){
-  response.send("Hello, World")
-})
-
-app.listen(8080, function(){
-  console.log("Web application listening on port 8080.")
-})
-```
-
-</Figure>
-
-Verify that the code you have written so far works by starting the web application using the command `node app.js` in `/platform/web-application` and then visit [http://localhost:8080](http://localhost:8080) in a web browser and verify that you see the text *Hello, World*. If you do, then it works as it should, and you can stop running the web application.
-
-You just ran the web application as an ordinary program on your own computer. Let's try to run it in a container using Docker instead. To do that we need to tell Docker which environment our code needs to run, and how it should be started. To do that we need to put our code in a Docker image that contains all this information, and then ask Docker to start running that image in a new Docker container.
-
-To specify the environment in the image one usually inherit the environment from an existing image. The [Docker Hub](https://hub.docker.com) contains a collection of images we can use, and in our case we need an image with Node.js pre-installed. Node.js provides *official images* that comes with Node.js pre-installed, so try searching for `node` there and find a suitable image (e.g. `node:13.5.0`). Then create a file called `Dockerfile` in `/platform/web-application` that looks something like what shown in <FigureNumber /> below.
-
-<Figure caption="The content of the Dockerfile in the web application folder.">
-
-```
-FROM node:13.5.0
-
-EXPOSE 8080
-
-WORKDIR /web-application
-
-COPY package*.json ./
-
-RUN npm install
-
-COPY app.js ./
-
-CMD ["node", "app.js"]
-```
-
-</Figure>
-
-::: warning Start Docker Desktop for Windows
-Before you use any docker command you must start the Docker Desktop for Windows application. 
-:::
-
-Docker can then use the information in `Dockerfile` to build a new image that contains your source code and Node.js to run it. To do that, run the command `docker build --tag=my-web-app:latest .` in `/platform/web-application`. This tells Docker to build the image and to add it to its own collection of images on your computer. At the same time, it will also download the `node:13.5.0` image from Docker Hub (unless it has already done that).
-
-To run the image in a new container, run the command `docker run -p 3000:8080 my-web-app:latest`. When the container is running you should be able to send HTTP requests to your web application by opening [http://localhost:3000](http://localhost:3000) in a web browser on your computer. The command used to start the container told Docker that all incoming traffic to port 3000 on your computer should be forwarded to the container's port 8080.
-
-On Mac and Linux you can stop the container from running by pressing `[CTRL]` + `[C]`. On Windows you also need to run the command `docker container ls` to retrieve the name of the container and then run the command `docker container stop theContainerName`.
-
-Now you know the basics about creating, running and stopping Docker containers. You probably also want to create a `.dockerignore` file as described at [https://nodejs.org/en/docs/guides/nodejs-docker-webapp/](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/), so you more conveniently can build an image with multiple source files. That page is good reading even if you don't want to create a `.dockerignore` file, so read it!
-
-Your workflow will kind of be:
-
-1. Make changes to the source code files on your computer.
-2. Build a new image.
-3. Run the new image in a new container.
-4. Test your web application in a web browser.
-5. Stop the container from running.
-6. Restart on #1.
-
-To manually carry out these steps each time you want to test changes you make to the source code is quite time consuming and boring. Docker has a solution to this problem: volumes. With volumes you can make a container read files stored on your computer. This can be used to always give the container access to the latest version of your files in a specific folder.
-
-::: tip Volumes on Windows
-When using volumes on Windows, the recommendation is to put the volumes (in your case all your source code) directly in the filesystem on the Linux distribution you are running in Windows Subsystem for Linux, instead of in the file system for Windows. Read more about it in [Docker's best practices](https://docs.docker.com/docker-for-windows/wsl/#best-practices).
-:::
-
-::: danger Volumes on Windows
-If you don't put your source code on the filesystem for your Linux instance, it's is a bit uncleared how to specify paths to folders in Windows. [One comment on GitHub](https://github.com/docker/for-win/issues/6628#issuecomment-635906394) suggests several different ways to do it, but not all of them have worked for me (Peter) in Docker 3. `/host_mnt/c/path/to/folder` did work, so that's the one used in the instructions below.
-:::
-
-Using a volume is quite easy. When you start a container with the `docker run` command you also specify which folders that should be synched using the `-v` option, like (on Windows)
-`docker run -v /host_mnt/c/folder/on/host/computer:/folder/in/container` (plus the `-p` for port forwarding as before). You don't want to use the entire `/platform/web-application` folder as your volume (the `node_modules` folder in it and some other files/folder should not be synched, only the code you've written), so it might be a good idea to put your source code files in a new folder, for example called `/platform/web-application/src`, and use volumes to synch only this subfolder instead.
-
-However, synching files is not enough to keep your web application in the container up to date. Each time a JavaScript file changes the web application running in the container needs to be restarted. To make that happen we can use an npm package called [nodemon](https://nodemon.io/). Simply:
-
-1. Install `nodemon` by running the command `npm install nodemon` in `/platform/web-application`.
-
-::: warning Note
-Since `nodemon` is only needed during development, and not when the application runs for real on a server, you should really add this package in the `devDependencies` list in `package.json`, instead of the ordinary `dependencies` section.
-
-Read mor about this in the docs [Specifying dependencies and devDependencies in a package.json file](https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file).
-:::
-
-2. Change `package.json` to contain a script called `start` that executes
-`nodemon src/app.js -L`.
-::: warning Volumes on Windows
-If you have put your source code on the file system for the Linux distribution in Windows Subsystem for Linux, then you can skip the `-L` flag. That flag activates a workaround causing the computer to do more work than it should need to, but the flag is required if you put your source code on the Windows file system. To learn why, read [Docker's best practices](https://docs.docker.com/docker-for-windows/wsl/#best-practices) and [nodemon's docs](https://github.com/remy/nodemon#application-isnt-restarting).
-
-Docker has a setting called `Use the WSL 2 based engine`. For Windows 10 Home users, this option must be checked. For Windows 10 Pro users, this option can be unchecked, in which case volumes will work a little bit different, and you don't don't need to use `-L` flag if your source code is placed on Windows file system. However, you will still get overall better performance by leaving this option checked and place your source code on the file system for the Linux distribution you are running on Windows Subsystem for Linux (according to Docker).
-:::
-3. Change your `Dockerfile` to start the web application with the command `npm run start`.
-
-When you have built and run this new image and used volumes to synch folders the web application in the container should restart as soon as you change any JavaScript file the web application is dependent on. Your new workflow will simply be:
-
-1. Build and run the image using volumes.
-2. Make changes to JavaScript code on your computer
-(Docker will automatically synch the files to the container, and `nodemon` in the container will restart the web application when this happens).
-3. See the changes in your web browser.
-4. Restart on #2.
-
-::: warning Installing new npm packages
-When you install a new npm package you need to restart on #1 above. The container will only read the `dependencies` list in `package.json` and download the npm packages to the `node_modules` folder when you build the image.
-:::
-
-If you want to be able to debug your Node.js application from Visual Studio Code, you need to tell Visual Studio Code how to connect to the Node.js application running in the container. The tutorial [Setting up Debugger for Node.js in Docker with VS code](https://blog.theodo.com/2018/10/setting-debugger-node-js-docker-vs-code/) shows you how you can do that. That tutorial makes use of Docker Compose, which you will start using after you have created a database image to run your database.
-
-You have now successfully setup a project suitable for implementing a web application in Node.js with Docker containers. Good job!
-
-
-
-### The Database image
-Since the MySQL database should run in a separate container, let us do something similar for the database as we did for the web application.
-
-Start by creating a new folder inside `/platform` to store information about the database image. In this document we will refer to that sub-folder as `/platform/database`. Create a new file in this sub-folder called `Dockerfile` with the content similar to the one in <FigureNumber /> below. That Dockerfile describes an image inheriting from `mysql:5.7.24`, which is an image that runs a MySQL server. Read more about [the MySQL image](https://hub.docker.com/_/mysql) on Docker Hub.
-
-<Figure caption="The content of Dockerfile in the database folder.">
-
-```
-FROM mysql:5.7.24
-
-COPY initialize-database.sql /docker-entrypoint-initdb.d/
-```
-
-</Figure>
-
-Then create a new file in `/platform/database` called `initialize-database.sql`. The SQL code you write in that file will be executed by the MySQL server when it starts, so in this file you can write SQL code that creates the tables in the database your platform needs.
-
-The database image can be started and stopped in the same way as your web application image. After you have started it you should be able to connect to it from your host computer using [http://localhost:3306](http://localhost:3306) (or the Docker Machine's IP address). If you have a MySQL Database Management Tool (such as [MySQL Workbench](https://www.mysql.com/products/workbench/) or one of the [MySQL extensions to Visual Studio Code](https://marketplace.visualstudio.com/search?term=mysql&target=VSCode)), try it out!
-
-
-
-### Using Docker Compose
-Docker has a tool called [Docker Compose](https://docs.docker.com/compose/) that greatly simplifies for us to start and stop multiple containers at the same time, as well as handle the connection between them (which we need, since the web application needs to communicate with the database). To use it, simply create a file in `/platform` called `docker-compose.yml` with the content shown in <FigureNumber /> below. 
-
-<Figure caption="The content of docker-compose.yml in /platform.">
-
-```
-version: '3'
-services:
-  "web-application":
-    build: "./web-application"
-    ports:
-      - "3000:8080"
-      - "9229:9229"
-    volumes:
-      - "./web-application/src:/web-application/src"
-    depends_on:
-      - database
-  database:
-    build: ./database
-    ports:
-      - "3306:3306"
-    environment:
-      - MYSQL_ROOT_PASSWORD=theRootPassword
-      - MYSQL_DATABASE=webAppDatabase
-```
-
-</Figure>
-
-Your images can now be built and started in containers using the `docker-compose up` command in `/platform`, and the web application can now use the domain name `database` to connect to the MySQL database that runs in another container.
-
-::: tip Rebuilding images
-`docker-compose up` will run the latest build of your images. If you make changes to an image, you need to rebuild it before using `docker-compose up`, or simply use the command `docker-compose up --build`.
-:::
-
-::: warning Handling anonymous volumes
-The MySQL image uses an anonymous volume to store it's data, and by default it's only created the first time you start it using `docker-compose up`. A result of this is that your SQL code in the `/docker-entrypoint-initdb.d/` in the image will only be executed the first time you start it with `docker-compose up`. The next time you run `docker-compose up` it will resume using the tables from before and not execute your SQL code in `/docker-entrypoint-initdb.d/`. This is usually NOT what you want. You can get around this by using the command `docker-compose down` before you run `docker-compose up`, or you can add the flag `--renew-anon-volumes` (short form is `-V`) to `docker-compose up`.
-
-For more information, see [Issue #2127 in the Docker Compose repository](https://github.com/docker/compose/issues/2127).
-:::
-
-
-
-
-
-
-## Part 5: Implementing the Web Application
-Before you start working on this part, you are recommended to:
-
-* Read/View the following lectures:
-    * [Layered Architecture in Node.js](../../lectures/layered-architecture-in-node-js/)
-    * [Asynchronous Programming in JavaScript](../../lectures/asynchronous-programming-in-js/)
-
----
-
-Implement the website using a three-layered architecture:
-
-* **The Presentation Layer** should only receive HTTP requests and generate and send back HTTP responses. This is the only layer that should use HTTP, Sessions, Cookies, HTML and CSS (and client-side JavaScript, if you want), so it is only in this layer we will be using Express. It will carry out the HTTP request by telling the Business Logic Layer what to do.
-* **The Business Logic Layer** should only do computations. This includes applying business logic rules such as validation as authorization. If the Business Logic Layer needs to store/retrieve/update/delete any resource, it will simply ask the Data Access Layer to do that for it.
-* **The Data Access Layer** should only be responsible for persistence of the resources, in this case stored in a MySQL database. It should provide operations one can use to store/retrieve/update/delete resources in the database. This is the only layer where you should use SQL.
-
-<FigureNumber /> below is a visualization of a three-layered architecture.
-
-<Figure caption="A three-layered architecture. The Presentation Layer is the one receiving HTTP requests from clients, to carry them out is uses the Business Logic Layer, and so on.">
-<RenderMermaid graph-definition="
-graph LR
-	wb[Web Browser]
-	subgraph Web Application
-		pl(Presentation Layer)
-		bll(Business Logic Layer)
-		dal(Data Access Layer)
-	end
-	db[Database]
-	wb --HTTP--> pl
-	pl --> bll
-	bll --> dal
-	dal --SQL--> db
-" />
-</Figure>
-
-There exists different ways one can separate the code into these three layers. The simplest way is probably to just create three different folders, one for each layer, and then put all code belonging to a layer in the corresponding folder.
-
-To help you get started you can use the skeleton code available in the ZIP file [the-community.zip](files/the-community.zip).
-
-On your platform, users should at least be able to create new resources and to browse and view existing resources. You do not need to implement update and delete functionality; that is an extra task you can complete at the end of the course if you have time for it. You neither need to implement authorization/login functionality now. That is the next part of the project work. 
-
-
-
-
-
-## Part 6: Adding Authorization
-Before you start working on this part, you are recommended to:
-
-* Read/View the following lectures:
-    * [Handling Concurrent HTTP Requests](../../lectures/handling-concurrent-http-requests/)
-    * [Scaling Web Applications](../../lectures/scaling-web-applications/)
     * [Scaling Databases](../../lectures/scaling-databases/)
 
 ---
 
-When the web application receives a successful sign in request from a client it needs to remember to which account that client signed in to, so it knows that when it receives requests from that client in the future. To do that one usually uses sessions. A session contains information about a client stored on the server-side. Where the sessions are stored on the server-side has a major impact on how the web application can be scaled.
+In this part, the goal is to use Docker and Docker Compose to get your database up and running in a container you can connect to from your own computer, as shown in <FigureNumber /> below.
 
-The most common used approach to scaling web applications is by running multiple instances of them and use a load balancer to distribute the load (the HTTP requests) between them, as seen in <FigureNumber /> below. Each instance can for example run in its own Docker container or on its own server. When the load increases, we just launch more instances to handle it, and when the load decreases, we just remove some of the instances (so we don't need to pay for having servers up and running that don't do any work).
-
-<Figure caption="A common used architecture for scaling. The Load Balancer receives HTTP requests from Clients and then forwards them to (one of) the Web Application Instances.">
+<Figure caption="Architecture on Windows/Mac.">
 <RenderMermaid graph-definition="
-graph LR
-	clients[Clients]
-	lb[Load Balancer]
-	wai1[Web Application Instance 1]
-	wai2[Web Application Instance 2]
-	wain[Web Application Instance n]
-	db[Database]
-	clients --HTTP--> lb
-	lb --HTTP--> wai1 --SQL-->db
-	lb --HTTP--> wai2 --SQL-->db
-	lb --HTTP--> wain --SQL-->db
+flowchart
+	db[DB]
+	dbClient[DB Client]
+	subgraph Your Computer
+		subgraph Your OS
+			dbClient
+		end
+		subgraph Linux
+			subgraph Container 1
+				db
+			end
+		end
+	end
+	dbClient--SQL-->db
 " />
 </Figure>
 
-With this architecture, if the sessions are stored locally in the web application instances, then each clients' HTTP request must be forwarded to the same instance all the time, because it is only that instance that have access to the client's session. This can be achieved with a technique called sticky sessions (the load balancer tells the client to create a cookie specifying which web application instance it should forward the requests from that particular client to), but a solution that is easier to implement is to simply store the sessions in the database. This works since all web application instances are connected to the same database, so they store the sessions at the same place. However, fetching the session from the database for each request will make it take a little bit longer to carry out the requests, so this solution is not necessarily the best one.
+::: warning For Linux users
+If you use Linux as the operating system on your computer, then you will only have one Linux installation on your computer, as shown in <FigureNumber /> below instead.
 
-The sessions could be stored in the MySQL database we already have, but sessions are just temporary data. They don't really have anything to do with the data we store in our MySQL database, so why use the same database? According to the single responsibility principle it is much better to store it in another database, ones whose only responsibility it to store sessions. Since sessions don't consist of any relational data, it is better to use a NoSQL database instead of a relational database since NoSQL databases often are faster and easier to scale than relational databases. The type of NoSQL database that makes most sense for this use-case is a key-value database (the session id is used as the key, and the session itself as the value).
+<Figure caption="Architecture on Linux.">
+<RenderMermaid graph-definition="
+flowchart LR
+	db[DB]
+	dbClient[DB Client]
+	subgraph Your Computer
+		subgraph Linux
+			dbClient
+			subgraph Container 1
+				db
+			end
+		end
+	end
+	dbClient--SQL-->db
+" />
+</Figure>
 
-Add another container to your solution that runs a Redis database, which is a key-value database. Then connect to it from your web application and store your sessions in it. In your web application you will:
+:::
 
-* Use the npm package [express-session](https://github.com/expressjs/session) to add session support to Express.
-* Use the npm package [connect-redis](https://github.com/tj/connect-redis) to store the sessions in a Redis database.
+### Creating Docker image
+In your project folder, create a new folder that will store the code required to run all the applications your solution consists of (database, backend and frontend). We will refer to this folder as the `applications` folder.
 
-Then add the login feature to your web application and add authorization. Remember that sessions are something we use to make HTTP stateful (hence we only use them in the presentation layer) and authorization is something we should implement in the business logic layer (which users that are authorized to do what should be independent of how they use our application).
+::: tip Docker on Windows
+When using Docker on Windows, the recommendation is to use Windows Subsystem for Linux 2, and place your project folder on the file system for the Linux distribution you are using. If you work on your private computer (i.e. uses Window 10 Home), do that, as shown in <FigureNumber /> below. Otherwise automatic restart of applications when you save code changes made to files might not work (learn more about that later).
+
+<Figure caption="Architecture on Windows 10 Home.">
+<RenderMermaid graph-definition="
+flowchart
+	db[DB]
+	dbClient[DB Client]
+	pf[Project Folder]
+	subgraph Your Computer
+		subgraph Windows 10 Home
+			dbClient
+		end
+		subgraph Linux
+			subgraph Container 1
+				db
+			end
+			pf
+		end
+	end
+	dbClient--SQL-->db
+" />
+</Figure>
+
+On the school's computers (that uses Windows 10 Education), Docker runs on Hyper-V instead of Windows Subsystem for Linux 2, so on the school's computers you should place your project folder directly on the file system on Windows instead, as shown in <FigureNumber /> below.
+
+<Figure caption="Architecture on Windows using Hyper-V (the school's computers).">
+<RenderMermaid graph-definition="
+flowchart
+	db[DB]
+	dbClient[DB Client]
+	pf[Project Folder]
+	subgraph School Computer
+		subgraph Windows 10 Education
+			dbClient
+			pf
+		end
+		subgraph Linux
+			subgraph Container 1
+				db
+			end
+		end
+	end
+	dbClient--SQL-->db
+" />
+</Figure>
+
+For detailed information, read [Docker Best Practices](https://docs.docker.com/desktop/windows/wsl/#best-practices).
+
+The rest of the instructions on this page assumes the project folder has been placed on the file system for the Linux distribution you are running. Mac users will simply place the projects folder on the file system for Mac.
+:::
+
+In the `applications` folder, create a folder that will store all the code required to run the database. We will refer to this folder as the `database` folder.
+
+In the `database` folder, create a new file named `Dockerfile` that specifies which database to run. Use whichever type of *relational database* you want (MariaDB, MySQL, MariaDB, etc.). On [Docker Hub](https://hub.docker.com/), find an image that contains the database you want to use, and then inherit from that one in your own `Dockerfile` using the [FROM](https://docs.docker.com/engine/reference/builder/#from) instruction.
+
+Read the documentation for the image on Docker Hub you inherit from to learn how to use it. For example, many images for relational databases there come with a default username you can use to connect to it, and you can learn which that is, and how to change it, from the documentation.
+
+To test your database, you first need to tell Docker to build an image based on the instructions in your `Dockerfile`. To do that, go to your `database` folder (that contains the `Dockerfile`) in a shell, and then run the following command:
+
+```
+docker build --tag=db .
+```
+
+That command creates a new Docker image named `db` that is based on the instructions you wrote in the `Dockerfile`, and that only exists on your computer.
+
+### Running Docker image
+To run your `db` image in a new container, run the following command:
+
+```
+docker run db
+```
+
+However, when running that command, you might need to pass along environment variables that configures the database, such as an environment variable that specifies which the password for the root user on the database should be, or the name of a database that is automatically created when the relational database starts. For example, if you use MariaDB, you would need to run the following command:
+
+```
+docker run -e MARIADB_ROOT_PASSWORD=abc123 db
+```
+
+That command would start the database with the root user's password set to `abc123`. In a similar way, one can often also pass along an environment variable that specifies the name of a database that should be created in the relational database you are using when it starts (see the documentation for the database image you are inheriting from).
+
+Try to get your database up an running (when running the command in the shell, nothing should crash). Often, you can stop the container from running by pressing `[CTRL]` + `[C]` (pressing it twice might be needed), or you can stop it from the Docker Desktop application that is running.
+
+### Connecting from the host computer
+By default, a container runs in an isolated environment. So even if you get your database up and running in the container, you can't connect to it from outside the container, so you can't connect to it from your own computer. To be allowed to connect to it from your own computer, you need to use [Docker port mapping](https://docs.docker.com/config/containers/container-networking/#published-ports), as shown in <FigureNumber /> below.
+
+<Figure caption="Port mapping.">
+<RenderMermaid graph-definition="
+flowchart
+	db[DB Container]
+	dbClient[DB Client]
+	pf[Project Folder]
+	subgraph Your Computer
+		subgraph Your OS
+			dbClient
+		end
+		subgraph Linux
+			pf
+			subgraph Container 1
+				db
+			end
+		end
+	end
+	dbClient--Port 5555 : Port 3306-->db
+" />
+</Figure>
+
+For example, MariaDB accepts connections on port `3306`, and to be allowed to connect to that port in your container from your own computer, you need to map a port on your own computer (use whichever you want that is available on your computer) to port `3306` in the container. You can for example (most likely) map it to the port `5555` on your computer by starting it with the following command:
+
+```
+docker run -p 5555:3306 -e MARIADB_ROOT_PASSWORD=abc123 db
+```
+
+::: warning Be consistent
+It's probably a god idea to map port `3306` on your own computer to port `3306` in the container. Then it's only one port number you need to remember. Here we use different port numbers to show the difference.
+:::
+
+After that, you should be able to connect to the database from your own computer. To do that, you need a database client that can connect to the type of database you are using. Visual Studio Code does most likely have an extension you can install and use for that (search for that yourself in the *Extensions* panel in Visual Studio Code), but there also exist many  desktop applications one can install and use (search for that yourself on the web). Use whichever you prefer. Read in the documentation for the database image you inherit from on Docker Hub to learn the connection details (username, password, port, database name, etc.).
+
+After you have connected to the database in the container from your own computer, try sending a query to it to verify that the connection works (for example, a query that creates a new table in the database) from your database client.
+
+### Using Docker Compose
+Starting the database using a very long command like the following:
+
+```
+docker run -p 5555:3306 -e MARIADB_ROOT_PASSWORD=abc123 db
+```
+
+is not that convenient. Especially not when we later also will need to start our backend application and frontend application with similar commands. Instead of doing that, we can use Docker Compose to start all of those containers using a single command.
+
+To use Docker Compose, you first need to create the `compose.yaml` file in the `applications` folder. In it, you can specify which images to start, which environment variables to pass to them, how ports should be mapped, etc. To start running our own database image in a new container with the environment variable and port mapping we had before, we could put the following content in the `compose.yaml` file:
+
+```yaml
+services:
+	db:
+		build: ./database/
+		ports:
+			- "5555:3306"
+		environment:
+			MARIADB_ROOT_PASSWORD: abc123
+```
+
+After that, you can go to your `applications` folder in a shell and run the following command:
+
+```
+docker compose up
+```
+
+to run the images specified in the `compose.yaml` file in new containers (currently only the `db` image). Press `[CTRL]` + `[C]` (possibly twice) to stop the started containers from running.
+
+::: warning Rebuilding images
+By default, the command `docker compose up` will not rebuild your images, not even when you have made changes to the `Dockerfile`. Usually, we want it to be rebuild the images when we have made changes to them, so usually we add the `--build` flag to the command, so we instead run the command:
+
+```
+docker compose up --build
+```
+:::
+
+### Initializing the database
+When our database starts running in a new Docker container, we usually also want to create the tables it should contain. Most database images you find on the Docker Hub has way of running some SQL code when the database starts for the first time. For example, for the MariaDB database image, any SQL code you write in an `.sql` file you put in the folder `/docker-entrypoint-initdb.d/` in the image will be executed the first time the database starts.
+
+In the `database` folder in your project, you can create a file named, for example, `create-tables.sql`, and then in the `Dockerfile` add the following instruction:
+
+```
+COPY ./create-tables.sql /docker-entrypoint-initdb.d/
+```
+
+Then the SQL code you write in the `create-tables.sql` file will be executed when the database starts, so there you can put your `CREATE TABLE` queries.
+
+::: danger An anonymous volume might be used!
+A container does by default only have access to the files and folders in the container itself. By using a volume, you can grant a container access to a folder on the host computer. That way, the application running in the container can store files on the host computer that will continue to exist even after the container has been deleted.
+
+Some database images automatically use such a volume to store information about the database (which tables that are in it, what data they contain, etc.). Each time you start the database image in a new container, a new anonymous volume is created for that container, so the database in the container can store its data there, and that volume continues to exist even after the database container stops running and is deleted.
+
+When using Docker Compose, the first time you run the command `docker compose up` it will create a new container your database will run in, and give it access to a new volume. However, Docker Compose will continue to use the same volume the next time you run `docker compose up`, even if you use `docker compose up --build` and rebuilds the image. And, the way many of these database images work is that they will only run the SQL code in the `.sql` files in the `/docker-entrypoint-initdb.d/` folder if the volume is empty. So the database will not pickup the changes you have made to the SQL code the next time you run the command `docker compose up --build`.
+
+When we use Docker Compose, this is usually **not** the behavior we want, but we instead want the database to get a new volume, so the queries in the `.sql` files in the `/docker-entrypoint-initdb.d/` folder are executed each time we use the `docker compose up` command and have made a change to the database image. To make that happen, we also need to use the `--renew-anon-volumes` flag:
+
+```
+docker compose up --build --renew-anon-volumes
+```
+
+For more information about this annoying behavior, see the GitHub issue [Why is there volume for data in the first place?](https://github.com/docker-library/mysql/issues/255).
+
+Another solution is to run the following command before you run the `docker compose up` command:
+
+```
+docker compose down
+```
+:::
+
+It can also be a good idea to, in a similar way, create an `insert-data.sql` file that populates the tables with some initial data when the database starts (used during development; does not make sense to do when the platform runs for real).
+
+When you are done with this part of the project, you should be able to finish the Database chapter in the report.
 
 
 
 
 
-
-## Part 7: Using Dependency Injection
+## Part 8: Backend
 Before you start working on this part, you are recommended to:
 
 * Read/View the following lectures:
-    * [Dependency Injection in Node.js](../../lectures/dependency-injection-in-node-js/)
+    * [REST API in Express](../../lectures/rest-api-in-express/)
+    * [Asynchronous Programming in JavaScript](../../lectures/asynchronous-programming-in-js/)
+    * [Handling Concurrent HTTP Requests](../../lectures/handling-concurrent-http-requests/)
+    * [Scaling Web Applications](../../lectures/scaling-web-applications/)
 
 ---
 
-The three layers the web application consists of have some dependencies:
+In this part, the goal is to use Docker and Docker Compose to get your backend up and running in a container, and to connect it to the database, as shown in <FigureNumber /> below.
 
-* The `Presentation Layer` has some dependencies on the `Business Logic Layer`.
-* The `Business Logic Layer` has some dependencies on the `Data Access Layer`.
+<Figure caption="Architecture.">
+<RenderMermaid graph-definition="
+flowchart
+	db[DB]
+	backend[Backend]
+	pm[Postman]
+	pf[Project Folder]
+	subgraph Your Computer
+		subgraph Your OS
+			pm
+		end
+		subgraph Linux
+			subgraph Container 2
+				backend
+			end
+			subgraph Container 1
+				db
+			end
+			pf
+		end
+	end
+	pm--HTTP-->backend
+	backend--SQL-->db
+" />
+</Figure>
 
-These dependencies are hardcoded at multiple places, as shown in the tabs below.
+But to get a gentler start, we will first get the backend running on the computer without Docker, as shown in <FigureNumber /> below.
 
-:::: code-group
-::: code-group-item Presentation Layer
+<Figure caption="Architecture.">
+<RenderMermaid graph-definition="
+flowchart
+	db[DB]
+	backend[Backend]
+	pm[Postman]
+	pf[Project Folder]
+	subgraph Your Computer
+		subgraph Your OS
+			pm
+			backend
+		end
+		subgraph Linux
+			subgraph Container 1
+				db
+			end
+		pf
+		end
+	end
+	pm--HTTP-->backend
+	backend--SQL-->db
+" />
+</Figure>
+
+### A basic implementation
+Create a new folder where you can store the source code for your backend application. To start with, you can store it on the file system for your ordinary operating system. We will refer to this folder as the `backend` folder.
+
+Open the `backend` folder in a shell, and then run the following commands (you don't have to use Express, but if you use another framework, the teacher at the lab sessions might not be able to help you):
+
+1. `npm init --yes`
+2. `npm install express`
+3. `npm install A_DATABASE_CLIENT_PACKAGE` (find one in the [npm Registry](https://www.npmjs.com/) you can use for the type of database you are using (preferably a package using promises instead of callback functions))
+4. `mkdir src`
+
+It is in the `src` (short for *source*) folder you should put your own source files. The reason we use a special folder for this is because we later, when using Docker, want to mount the folder to the container running the backend application as a volume (learn more about this later).
+
+Put a file called `app.js` (or whatever you prefer) in the `src` folder with the content looking something like what's shown below:
+
 ```js
-// account-router.js
-
 const express = require('express')
-// Here we have hardcoded a dependency on the account manager.
-const accountManager = require('../business-logic-layer/account-manager')
+const DatabaseClient = require('A_DATABASE_CLIENT_PACKAGE') // Change to your db client
 
-const router = express.Router()
-
-router.get("/", function(request, response){
-  accountManager.getAllAccount(function(errors, accounts){
-    const model = {
-      errors: errors,
-      accounts: accounts
-    }
-    response.render("accounts-list-all.hbs", model)
-  })
+// See the documentation for the db client package you are using
+// to learn how to use it, but it will be something like this:
+const db = new DatabaseClient({
+	username: "root",   // See the documentation for the database you are
+	password: "abc123", // using to learn which connection settings you
+	host: "localhost",  // should use, but it usually includes these 5
+	port: 5555,         // options.
+	database: "my-db",
 })
 
-module.exports = router
-```
-:::
-::: code-group-item Business Logic Layer
-```js
-// account-manager.js
+const app = express()
 
-// Here we have hardcoded a dependency on the account repository.
-const accountRepository = require('../data-access-layer/account-repository')
+app.get('/accounts', async function(request, response){
+	
+	// See the documentation for the db client package you are using
+	// to learn how to use it, but it will most likely be something
+	// like this:
+	
+	try{
+		
+		const query = `SELECT * FROM accounts`
+		
+		const accounts = await db.query(query)
+		
+		response.status(200).json(accounts)
+		
+	}catch(error){
+		
+		console.log(error)
+		response.status(500).end()
+		
+	}
+	
+})
 
-exports.getAllAccounts = function(callback){
-  accountRepository.getAllAccounts(function(errors, accounts){
-    callback(errors, accounts)
-  })
-}
-```
-:::
-::: code-group-item Data Access Layer
-```js
-// account-repository.js
-
-// No dependency on another layer, but shown for completeness.
-const mysql = require('mysql')
-const connection = mysql.connect(...)
-
-exports.getAllAccounts = function(callback){
-  const query = "SELECT * FROM accounts ORDER BY username"
-  connection.query(query, function(error, accounts){
-    if(error){
-      callback(["Database error"], null)
-    }else{
-      callback([], accounts)
-    }
-  })
-}
-```
-:::
-::::
-
-Hardcoding dependencies like this makes our web application less flexible. For example, each time we use the account manager, the account manager will always use the account repository that works with the data in the MySQL databases. You might think this is not such a big deal, because that's what we want to happen when our web application runs, right? Yes, if we want to use the code to run the web application, then yes, that is what we want to happen. But what if we write tests and just want to run the code inside the account manager to test if that works? Then we don't necessarily want the account manager to make use of the account repository that communicates with the MySQL database, because if the test fails when we run it, then the problem could just as well be in the account repository (e.g. broken connection to the database).
-
-When we test the code in the account manager using tests we have written, we don't necessarily want it to use the account repository that makes use of the MySQL database. Instead, we can provide a mockup of the account repository, as the one shown in <FigureNumber /> below.
-
-<Figure caption="Mockup of the account repository in the Data Access Layer.">
-
-```js
-const allAccounts = [] // All accounts are stored in this array.
-
-exports.getAllAccounts = function(callback){
-  callback([], allAccounts)
-}
+app.listen(8080)
 ```
 
-</Figure>
+::: tip Using ECMAScript modules instead of CommonJS
+Those who want to try to use ECMAScript modules instead of CommonJS are free to do so. Then you need to either:
 
-For our tests, we want the account manager to make use of the mockup version of the account repository, and when we run the web application for real we want the account manager to make use of the account repository that makes use of the MySQL database. Because of this, we can't hardcode the dependencies we have.
-
-::: tip Mockups not only for testing
-Mockups are not necessarily only created for our own code when doing testing. Another example is making use of third-party services through APIs that costs money. When our web application runs in production for real, we want to make use of the real third-party API and are willing to pay for using it, but when we run it locally on our own computers for development/testing, we don't want to pay for using it, so we use a mockup version instead.
+* Name your JavaScript files with the `.mjs` extension instead of `.js`, or
+* In your `package.json`, add the `"type"` property, and give it the value `"module"`
 :::
 
-So, in our account manager, we can't hardcode which version of the account repository we should use. Instead, the account repository that should be used should be injected to the account manager. The account manager itself doesn't care about which account repository it uses as long as it has access to the one it should be using. We say that the account manager is dependent on the interface of the account repository, which means that all different account repositories we implement must expose the same set of functions/same interface the account manager can use.
+Open the `backend` folder in a shell, and then run the following command to start your backend application:
 
-When we start the program, we specify which account repository to use, and then when we use the account manager it will use the account repository we specified. How we make all this happen depends on which dependency injection framework/container we use. The npm package [awilix](https://github.com/jeffijoe/awilix) gives us this functionality. The figures below shows one way to use it.
-
-:::: code-group
-::: code-group-item Data Access Layer
-```js
-// account-repository.js
-
-module.exports = function({}){
-  // Name all the dependencies in the curly brackets above (none in this case). 
-  
-  const allAccounts = []
-  
-  return {
-    getAllAccounts: function(callback){
-      callback([], allAccounts)
-    }
-    // Continue to list all other functions in account repository here.
-  }
-  
-}
 ```
-:::
-::: code-group-item Business Logic Layer
-```js
-// account-manager.js
-
-module.exports = function({accountRepository}){
-  // Name all the dependencies in the curly brackets above.
-  
-  return {
-    getAllAccounts: function(callback){
-      accountRepository.getAllAccounts(function(errors, accounts){
-        callback(errors, accounts)
-      })
-    }
-    // Continue to list all other functions in account manager here.
-  }
-}
-```
-:::
-::: code-group-item Presentation Layer
-```js
-// account-router.js
-
-const express = require('express')
-
-module.exports = function({accountManager}){
-  // Name all the dependencies in the curly brackets above.
-  
-  const router = express.Router()
-  
-  router.get("/", function(request, response){
-    accountManager.getAllAccount(function(errors, accounts){
-      const model = {
-        errors: errors,
-        accounts: accounts
-      }
-      response.render("accounts-list-all.hbs", model)
-    })
-  })
-  
-  return router
-  
-}
-```
-:::
-::::
-
-With Awilix we can then in the main file specify which dependencies we want to use, as shown in <FigureNumber /> below.  If we want to change which account repository to use, we just need to change that at line 4 in that file.
-
-<Figure caption="Creating an using an awilix container to resolve dependencies.">
-
-```js
-const awilix = require('awilix')
-
-// Import the ones we want to use (real or mockup), real in this case.
-const accountRepository = require('data-access-layer/account-repository')
-const accountManager = require('business-logic-layer/account-manager')
-const accountRouter = require('presentation-layer/account-router')
-
-// Create a container and add the dependencies we want to use.
-const container = awilix.createContainer()
-container.register("accountRepository", awilix.asFunction(accountRepository))
-container.register("accountManager", awilix.asFunction(accountManager))
-container.register("accountRouter", awilix.asFunction(accountRouter))
-
-// Retrieve the router, which resolves all other dependencies.
-const theAccountRouter = container.resolve("accountRouter")
+node src/app.js
 ```
 
-</Figure>
+Use Postman to send a GET request to `localhost:8080/accounts`, and verify that you get back all the accounts stored in the database (the database image must be running in container for this to work, and you must have created a table named `accounts` in it). If you haven't inserted any entries to the `accounts` table yet, you should get back an empty JSON array.
 
-So, to use dependency injection with Awilix like this you need to:
+### Building and running a Docker image
+Great, now you have a basic backend application that can communicate with the database. Let's try to run it in a container instead.
 
-1. Change your JavaScript files to export a single function that receives an object (the container) containing all the dependencies that should be used. \
-Note: Awilix also supports dependency injection using classes, so feel free to use the if you prefer.
-2. In your main file, create a new Awilix container and add all these functions to it.
-3. Retrieve the values you need from the container (most likely only the Express `app` value).
+Move the `backend` folder to the `applications` folder. Then, in the `backend` folder, create the `Dockerfile`, and inherit from an image on Docker Hub that contains the things you need to run your code. To learn which instructions you need to write in the `Dockerfile`, read the webpage [Dockerizing a Node.js web app](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/). You simply need to write instructions that:
 
-If you want, feel free to use any other dependency injection method you prefer, but you can't expect to get any help from a teacher using it.
+1. Specify which image to inherit from
+2. Specify which the working directory should be in the image
+3. Copy over the `package.json` file
+4. Copy over the `package-lock.json` file
+5. Run the command `npm install`
+6. Copy over the `src` folder
+7. Tell the image that `node src/app.js` is the command that should be executed to start the application in the image
 
-## Part 8: Multiple Data Access Layers/ORM
-Before you start working on this part, you are recommended to:
+Instead of using `docker build` and `docker run` to test if it works, let's directly continue with using Docker Compose, and test it that way.
 
-* Read/View the following lectures:
-    * [Using Sequelize in Node.js](../../lectures/using-sequelize-in-node-js/)
+### Using Docker Compose
+Change the `compose.yaml` file in the `applications` folder to also build and run the backend.
 
----
+When the backend and the database is started using Docker Compose, they will be put in containers that belongs to the same *virtual network*, and they can connect to each other directly, without using port mapping. Each container will get its own domain name based on the name of the service you have used in the `compose.yaml` file. For example, if you used:
 
-Now that your web application makes use of dependency injection, let us see if it works by implementing another data access layer. The new data access layer should have the same interface as the old one (must implement the same exposed functions, must send back identical errors, etc.) but should be implemented differently. Let us implement it using an Object-Relational Mapping framework, so you get some practice on using that.
+```yaml
+services:
+	db:
+		# And the rest...
+```
 
-Use whichever ORM you want, but [Sequelize](https://sequelize.org/) is quite simple and straight forward to use. Feel free to use any database you want. Using your existing MySQL database is OK, but to practice on using Docker we recommend you add another container running another database, e.g. PostgreSQL.
+Then the backend can use `db` as the `host` connection parameter to the database to indicate that it should connect to the database container. To be able to connect to the backend from your web browser you still need to use port mapping, for example map port `3000` on your computer to port `8080` in the backend container, as shown in <FigureNumber /> below, since the computer running your OS is not part of the virtual network.
 
-When you're done your architecture could look like the one shown in <FigureNumber /> below, but when running the application only one of the Data Access Layers will be used.
-
-<Figure caption="Current architecture.">
+<Figure caption="Architecture.">
 <RenderMermaid graph-definition="
-graph LR
-	wb[Web Browser]
-	subgraph Web Application
-		pl(Presentation Layer)
-		bll(Business Logic Layer)
-		dalMy(Data Access Layer MySQL)
-		dalPost(Data Access Layer PostgreSQL)
+flowchart
+	db[DB Container]
+	backend[Backend]
+	pm[Postman]
+	subgraph Your Computer
+		subgraph Your OS
+			pm
+		end
+		subgraph Linux
+			subgraph Container 2
+				backend
+			end
+			subgraph Container 1
+				db
+			end
+		end
 	end
-	dbMy[Database MySQL]
-	dbPost[Database PostgreSQL]
-	wb --HTTP--> pl
-	pl --> bll
-	bll --> dalMy --SQL--> dbMy
-	bll --> dalPost --SQL--> dbPost
+	pm--Port 3000 : Port 8080-->backend
+	backend--db-->db
 " />
 </Figure>
 
+You should then be able to start the database and the backend at the same time in Docker by simply running the following command in a shell in the `applications` folder:
+
+```
+docker compose up --build --renew-anon-volumes
+```
+
+::: warning The database takes time to start!
+Most often, the backend will start running before the database (the database takes longer time to start). If the backend tries to connect to the database when the backend starts, that will most likely fail, because the database is not up and running yet, so the backend can't connect to it at that point in time.
+
+Some npm database client packages tries to connect to the database as soon as the client is created, and they will crash your application if they fail to do so. If that's the case, you need to find a workaround of some kind, for example:
+
+* Use a connection pool instead of establishing just a single connection (a good idea even if you don't have this problem). Read the documentation for the npm package you use to learn if it supports connection pooling or not
+* Use another npm package to communicate with your database
+* Ask a teacher for help at one of the lab sessions
+:::
+
+### Using a volume
+The way it works now is that each time you have made changes to the JavaScript code in your backend and want to run the backend with those changes, you need to stop Docker Compose from running, and then run the command `docker compose up ...` again to build a new image for you backend and start it in a new container. That's not a very convenient way of working.
+
+To resolve this, we can instead use a volume. The idea is that we will mount the `src/` folder as a volume to the container running the backend, and whenever the backend tries to access a file in the `src/` folder, it will read it from the `src/` folder on your operating system, instead of the `src/` folder in the container. That way, the backend can always read the latest version of your JS code through the volume!
+
+To make that happen, change the `backend` service (or whatever you have called it) in your `compose.yaml` file to also make use of a volume:
+
+```yaml
+services:
+	backend:
+		build: ./backend
+		volumes:
+		 - "./backend/src/:/path/to/the/src/folder/in/the/image/"
+# And all the other stuff...
+```
+
+The syntax for specifying a volume is `./path/to/a/folder/on/host/the/computer/relative/the/compose.yaml-file/`:`/path/to/a/folder/in/the/image/`. Whenever an application in the container tries to access something in the folder `/path/to/a/folder/in/the/image/`, Docker will instead give it access to the folder `./path/to/a/folder/on/the/host/computer/relative/the/compose.yaml-file/` on your computer instead.
+
+For more information on writing paths for volumes, see [Compose file version 3 reference --> Volumes --> Short syntax](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3).
+
+However, each time you have made a change to a JavaScript file in the `src/` folder, Node.js in the container needs to restart your application to pick up the changes. To make that happen, we can use the [Watch mode](https://nodejs.org/en/blog/release/v18.11.0/) feature that was added to Node.js in version `18.11.0`. In your `Dockerfile`, add the `--watch` flag to the command used to start your backend application (i.e. use `node src/app.js --watch`).
+
+::: warning Older versions of Node.js
+If you use an older version of Node.js that doesn't support the Watch mode, you can use the npm package [nodemon](https://www.npmjs.com/package/nodemon) to get the same functionality. But better to use Watch mode these days.
+:::
+
+::: danger Windows file system events not propagated to Linux containers!
+The way Watch mode and nodemon work is that they rely on the operating system to notify them when a file has changed. On Windows, these events are not forwarded to the Linux containers if:
+
+* You use Windows 10 Home with Windows Subsystem for Linux, and
+* Have placed your project folder on the file system for Windows
+
+So, make sure that you have placed your project folder as we described in Part 7: Database. Then file system events should be propagated correctly.
+:::
+
+After you have started your container, try adding `console.log("Hello")` in the beginning of your `app.js` file, and in the shell verify that your backend has automatically restarted and logged the text `Hello`.
+
+### Implementing
+In the backend, implement all operations your REST API needs to support per the specification you wrote in your report. Use Postman (or whichever application you prefer) to test that it has been implemented correct. You don't need to worry about authentication and authorization yet, that comes in a later part.
+
+When you are done, update your report to describe how the backend has been implemented. Feel free to show your report to a teacher at one of the lab sessions to get some feedback on it.
 
 
 
 
 
 
-## Part 9: Adding a REST API
+## Part 9: Frontend-Backend
 Before you start working on this part, you are recommended to:
 
 * Read/View the following lectures:
-    * [REST API Basics](../../lectures/rest-api-basics/)
-    * [REST API in Express](../../lectures/rest-api-in-express/)
+    * [Same-Origin Policy and Cross-Origin Resource Sharing](../../lectures/sop-and-cors/)
+    * [AJAX](../../lectures/ajax/)
+
+---
+
+In this part, the goal is to use Docker and Docker Compose to get your frontend up and running in a container, and then allow the Web Browser to retrieve your SPA from it, and then allow the SPA in the Web Browser to connect to the backend, as shown in <FigureNumber /> below.
+
+<Figure caption="Architecture.">
+<RenderMermaid graph-definition="
+flowchart LR
+	wb[Web Browser]
+	db[DB]
+	backend[Backend]
+	frontend[Frontend]
+	pf[Project Folder]
+	subgraph Your Computer
+		subgraph Your OS
+			wb
+		end
+		subgraph Linux
+			subgraph Container 3
+				frontend
+			end
+			subgraph Container 2
+				backend
+			end
+			subgraph Container 1
+				db
+			end
+			pf
+		end
+	end
+	wb--HTTP get SPA-->frontend
+	wb--HTTP from SPA-->backend
+	backend--SQL-->db
+" />
+</Figure>
+
+### Building and running a Docker image
+Place your `frontend` folder in your `applications` folder.
+
+Just as for the backend, we want to use a volume, so we can give the container access to the latest versions of the files on our computer. So, in the `frontend` folder, create a folder named `code` (or whatever you prefer), and move the following to it:
+
+* The folder `pulic`
+* The folder `src`
+* The file `index.html`
+* The file `jsconfig.json`
+* The file `vite.config.js`
+
+In the `package.json` file, change the `dev` script from `vite` to `cd code && vite`.
+
+Then create the `Dockerfile` (try to figure out on your own how to write it), and add the frontend to your `compose.yaml` file (try to figure out on your own what you need to write).
+
+::: tip Opening Vite to the network
+By default, Vite accepts HTTP requests only from the "computer" it runs on (in this case the docker container). So even if you set up port mapping correct, Vite will not send back your SPA when you request it in the web browser. To make that happen, you need to configure Vite to allow such requests. That can be done using the Vite option [server.host](https://vitejs.dev/config/server-options.html#server-host). For example, in your `vite.config.js` file, use:
+
+```js
+// ...
+
+export default defineConfig({
+	server: {
+		host: true,
+	},
+	// ...
+})
+```
+:::
+
+When you are done, you should be able to start also your frontend application using the `docker compose up ...` command.
+
+
+### Communicating with the backend
+Since your frontend comes from a different origin than your backend, the web browser's Same-Origin Policy will not allow your frontend to communicate with your backend. That is, unless you use CORS in your backend to allow your frontend to communicate with it. Add CORS to your backend, so your frontend is allowed to communicate with it from the web browser.
+
+When you are done, update the report so it also explains how the frontend communicates with the backend. If you want, show your report to the teacher at the lab session to get some feedback on it.
+
+
+
+
+## Part 10: Auth
+Before you start working on this part, you are recommended to:
+
+* Read/View the following lectures:
     * [REST API Authorization](../../lectures/rest-api-authorization/)
     * [JSON Web Tokens](../../lectures/json-web-tokens/)
-    * [Third-Party Authentication](../../lectures/third-party-authentication/)
+    * [Third Party Authentication](../../lectures/third-party-authentication/)
 
 ---
 
-Users can use the platform on their smartphones through the web browser on it, but the user experience can often be improved my implementing and let the users use a native smartphone application instead. This way, the GUI would consist of GUI components native applications use, which appear much more appealing to the user compared to the GUI components webpages consists of. Furthermore, a native application would also be able to make use of native features on the smartphone which aren't accessible through client-side JavaScript code.
+Add authentication and authorization to your backend through the use of Access Tokens (implemented as JWT) and ID Tokens per the OAuth 2.0 and OpenID Connect specifications. You only need to support the *Resource Owner Password Credentials Grant*.
 
-However, unlike the web application, a native smartphone application can't communicate directly with our database. One need to know the username and password to the database to use it, and we can't put that in a native smartphone application, because then any hacker would be able to retrieve it from the smartphone application after they have downloaded it. Then they could login to the database and change it however they please. Instead we will add a REST API to our web application, and the native application should be able to store/retrieve/update/delete data in the database through it. The platform will be as shown in <FigureNumber /> below. 
+Use Postman to verify that you have implemented authentication and authorization correct in the backend. Then change your frontend to make use of the tokens too.
 
-<Figure caption="Overview of the platform.">
-<RenderMermaid graph-definition="
-graph LR
-	wb[Web Browser]
-	nsa[Native Smartphone Application]
-	wa[Web Application]
-	db[Database]
-	wb --HTTP HTML/x-www-form-urlencoded--> wa
-	nsa --HTTP REST API JSON-->wa
-	wa --SQL-->db
-" />
-</Figure>
-
-The difference between the way the web browser and the native smartphone application communicates with the web application will primarily be the data format they use. Both will communicate with the web application using HTTP, but the web browser will send data (submitted forms) in the format `application/x-www-form-urlencoded` and receive back HTML code, while the native smartphone application will send and receive in the format `application/json` (JSON), which is a much simpler data format. How to remember which account the user has logged in to will also differ.
-
-The REST API can be implemented as an additional Presentation Layer in the web application, as shown in <FigureNumber /> below. Since the users who use the platform through the native smartphone application should (theoretically) be able to do the same thing as users who use the platform through the web browser, we should not need to make that much changes to the code in the Business Logic Layer nor the Data Access Layer (but we might need to add code). You should be able to re-use most of the functionalities from these layers.
-
-<Figure caption="Current architecture (with one Data Access Layer).">
-<RenderMermaid graph-definition="
-graph LR
-	wb[Web Browser]
-	nsa[Native Smartphone Application]
-	subgraph Web Application
-		plw(Presentation Layer Website)
-		plr(Presentation Layer REST API)
-		bll(Business Logic Layer)
-		dal(Data Access Layer)
-	end
-	db[Database]
-	wb --HTTP HTML/x-www-form-urlencoded--> plw --> bll
-	nsa --HTTP REST API JSON--> plr --> bll
-	bll --> dal --SQL--> db
-" />
-</Figure>
-
-Now the REST API can run as its own Express application in one container, and the Website runs as an Express application in its own container, and these can scale independently of each other. If you prefer, you can run both Presentation Layers in the same container. Then each Presentation Layer can export it's own Express Application object which then is used by a fourth layer (which also is an Express application). See the documentation for [app.use()](https://expressjs.com/en/4x/api.html#app.use) to learn how one Express Application object can make use of other Express Application objects.
-
-The REST API needs to support the following operations:
-
-* Create a new account
-* Login to an existing account
-* When logged in, apply CRUD (Create, Read, Update, Delete) operations on at least one of the other two type of resources that belongs to the account the user logged in to
-
-One usually doesn't use sessions in REST APIs to remember that a user has logged in. Sessions relies on cookies and supporting all features of cookies is hard for clients. Instead, one usually uses tokens instead, which are much simpler.
-
-Tokens can be implemented in different ways, but the simplest way is by using JSON Web Tokens. These can easily be created and verified in Node.js using the npm package [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken).
-
-Implement Access Tokens as described by the [OAuth 2.0 Framework](https://oauth.net/2/) and implement ID Tokens as described by the [OpenID Connect](https://openid.net/connect/) specification. Use the `Resource Owner Password Credentials Grant`, and make sure to get all the details right (status code, bodies, headers, tokens, etc. should be as described in the specifications). 
+When you are done, update the report so it also explains how authentication and authorization works. If you want, show your report to the teacher at the lab session to get some feedback on it.
 
 
 
 
 
+## Part 11: Grade 4 and 5
+Be sure to read through [Project Grading Guidelines](project-grading-guidelines/) to see that you follow the guidelines for the grade you're aiming for. To be able get grade 4 and 5 you also need to implement the extra functionality described next. Make sure to also describe in the report how you have implemented them.
 
-## Part 10: Implementing a Single-Page Application
-Before you start working on this part, you are recommended to:
+### SDK (required for grade 4 and 5)
+Create an SDK other programmers can use to communicate with your backend from their client-side JavaScript code. Then also use it in your own frontend to communicate with the backend (for all requests you send to the backend). Also update the report to reflect this.
 
-* Read/View the following lectures:
-    * [Content Delivery Networks](../../lectures/content-delivery-networks/)
-    * [AJAX](../../lectures/ajax/)
-    * [Same-Origin Policy and Cross-Origin Resource Sharing](../../lectures/sop-and-cors/)
+### Supporting Multiple Data Formats (required for grade 4 and 5)
+Add support for another data format in addition to JSON in your REST API and backend. This should work in both requests and responses, so when you receive a request you need to look at the `Content-Type` header to figure out which format the body in the request is written in, and you also need to look at the `Accept` header to figure out in which format you should send back the body in the response in (this is known as [Content Negotiation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Content_negotiation)).
 
----
+Example of data formats you can add support for (use whichever you prefer):
 
-Since implementing a native smartphone application is not part of this course, you will instead implement a Single-Page Application (SPA). A SPA is a website that only consists of a single webpage and a lot of client-side JavaScript code to make it appear to work as an ordinary application. When users click on links or submit forms, the web browser doesn't submit these and load a new web page. Instead, client-side JavaScript codes listens for these events and handles them itself. This way, we can add loading indicators while fetching a new "page"/submitting a form and add transition animations when going from one "page" to another, etc. to improve the user experience.
+* XML
+* YAML
 
-So, your next task is to implement a SPA that makes use of the REST API on the platform. In the SPA users should be able to:
+Try to [find a suitable npm package](https://www.npmjs.com/) doing most of the work for you.
 
-* Create a new account.
-* Login to an existing account, and then:
-    * Apply CRUD operation for at least one of the other two type of resources.
+Your frontend does not need to make use of your new data format, but using Postman one should be able to specify which one to use.
 
-Since the SPA only consists of static HTML, CSS and JS files (and possibly images), we don't need to implement a fancy web application to serve these files to clients requesting them. Instead, we can use a program that serves files, such as [nginx](https://nginx.org/). Run nginx (or whichever similar program you prefer) in a new container to serve the static files for your SPA.
 
-Since web browsers follow the same-origin policy, your REST API needs to support cross-origin resource sharing, so if you haven't added that to it yet, do it now.
-
-::: danger Do not use frontend frameworks
-Since there are no indented learning outcomes in the course about learning a frontend framework like Vue, Svelte, Angular or React, you must implement the SPA yourself from scratch. Feel free to use minor client-side JavaScript libraries you need, such as Moment.js to format dates, and CSS frameworks, such as Bootstrap.
-:::
+### Third-Party Authentication (required for grade 5)
+Add third-party authentication to your application so users can login on your platform with their Google account (or whichever third-party you choose to use) instead of using a username and password. You need to implement this in your backend application and then use it in your frontend application as well. Note that you still need to support username+password for the users who prefer to use that.
 
 
 
 
 
-## Part 11: Optional Tasks
-Here are some optional tasks you must complete if you want to get a grade higher than 3. Remember that completing these extra tasks does not necessarily give you a higher grade, but you have to complete them to have a chance to get a higher grade. Also, do not forget to look through the page [Project Grading Guidelines](project-grading-guidelines/).
+## Part 12: Demonstration
+Demonstrate how your platform works to the rest of your class(in smaller groups). The reason for the demonstration is two-folded:
 
+* You get some practice on demonstrating your work, which is a very important skill in your future professional career
+* You get to see a variety of different platforms you should be able to implement yourself
 
-### A fancy website (required for grade 4 and 5)
-Do also implement update and delete operations for your resources on the website (this extra task is only relevant your website, and not your REST API).
+Your demonstration will not be graded; consider it as (mandatory) practice.
 
+Join one of the [Project Demonstration Groups](https://ju.instructure.com/courses/6820/groups) on Canvas (first come, first served). Only one in each Project Group should join the Project Demonstration Group you want to join. Which group you join determines when you should demonstrate your work. You will only demonstrate your solution to the other within the same group.
 
-### A fancy SPA (required for grade 4 and 5)
-In your single-page application, when you have sent an HTTP request to the REST API and wait for an HTTP response, show a loading indicator of some kind. When forms are submitted, users should not be able to submit the form again while you are waiting for the response.
-
-To verify that it works as it should, you need simulate latency, so it takes a couple of seconds before you get back an HTTP response. This can be done using the [setTimeout()](https://www.w3schools.com/jsref/met_win_settimeout.asp) function in your JavaScript code, or (even better) by telling the web browser to simulate it for you. The blogpost [Simulate slow connections with the network throttling tool](https://blog.nightly.mozilla.org/2016/11/07/simulate-slow-connections-with-the-network-throttling-tool/) shows how to do it in Firefox.
-
-
-### Supporting third-party authentication (required for grade 5)
-Let users create a new account on your platform by using their existing account on another platform supporting OpenID Connect instead creating yet another username and password. You can for example use Google.
-
-This does only have to work either through the website or through the REST API. You choose which one if you don't want to implement both, and that should of course be described in your report.
-
-
-
-
-
-
-## Part 12: Presentation
-Present how your platform works to the rest of your class. The reason for the presentation is two-folded:
-
-* You get some practice in presenting your work, which is a very important skill in your future professional career.
-* You get to see a variety of different platforms implemented in a very similar same (hopefully not all platforms is about solving the same problem).
-
-Your presentation will not be graded; consider it as (mandatory) practice.
-
-Join one of the [Project Presentation Sessions](https://ju.instructure.com/courses/4775/groups) on Canvas (first come, first served). Only one in each project work pair should join the Project Presentation Session you want to join. Which session you join determines when you should present your work. You will only present to the rest of the project groups in the same presentation session as you.
-
-At the presentation, you should:
+At the demonstration, you should:
 
 * Explain what the platform you have created is about, including (basically the Introduction chapter in the report):
     * Why would someone use it?
     * What can the platform be used for?
     * How have you made the platform as good as possible (so users won't use any other solution)?
-    * Explain the architecture of the platform, including (basically the Architecture chapter in the report, show figures!).
-    * How the solution/platform is implemented. Give an overview.
-* Give an overview of the implementation of each component the architecture consists of (basically an overview of the rest of the chapters in the report). Use figures!
 * Give a demonstration of how your solution works. A good idea is that one of you tell the other one what do to (e.g. *Go ahead and create a new account for me.*), and then the other one shows how to do that.
 
-You may use at most 15 minutes, so come prepared. You will not have time for *Oh, what more can I show you?* or *Wait, let me try to remember/look up how we did that*, so rehearse the presentation in advance. Be prepared to answer any question about your solution the audience might have. 
+You may use at most 15 minutes, so come prepared. You will not have time for *Oh, what more can I show you?* or *Wait, let me try to remember/look up how we did that*, so rehearse the demonstration in advance. Be prepared to answer any question about your solution the audience might have. 
 
-The examiner will approve you on the Canvas assignment [Presentation](https://ju.instructure.com/courses/4775/assignments/25248) after your presentation.
+After your demonstration, the teacher there will approve you on the Canvas assignment [Project Demonstration](https://ju.instructure.com/courses/6820/assignments/43113).
 
 
 
-## Part 13: Final Submission
-When you're done with your work, upload it to Canvas by submitting the assignment [Final Submission](https://ju.instructure.com/courses/4775/assignments/25249). Be sure to follow the submission instructions described on that page.
+
+
+
+## Part 13: Final submission
+When you're done with your work, upload it to Canvas by submitting the assignment [Project Submission](https://ju.instructure.com/courses/6820/assignments/43114). Be sure to follow the submission instructions described on that page.

@@ -2,18 +2,12 @@
 Welcome to the course *Web Development - Advanced Concepts*!
 
 ## Introduction
-This is a follow up course to [Web Development Fundamentals](../web-development-fundamentals/), so you are expected to already know how to create web applications storing resources in a database and all the other things you learned in that course. In this course you will learn how to create web applications as well, but they will be bigger and better by using technologies such as:
-
-* Three-layered Architecture
-* Dependency Injection
-* Client-side JavaScript
-* Docker
-* etc.
+This is a follow up course to [Web Development Fundamentals](../web-development-fundamentals/), so you are expected to already know how to create web applications storing resources in a database and all the other things you learned in that course. In this course we will focus more on web applications exposing a REST API Single-Page Applications can use to store the data they need to store.
 
 This website will be used to host the course material only. Canvas will primarily be used to:
 
 * Send info to you through announcements (be sure to have your global notification settings or your course notification settings enabled)
-* Organize you into lab groups (see the People page)
+* Organize you into lab groups and project groups (see the People page)
 * Keep track of your progress in the course (passed lab assignments) (see the Modules page and the Grades page)
 
 Read the [Study Guide](./study-guide/) for the details.
@@ -32,9 +26,11 @@ My JU email:
 XXX@student.ju.se
 
 The course:
-TFWN19 Web Development - Advanced Concepts https://ju.instructure.com/courses/4775
+TFWN19 Web Development - Advanced Concepts https://ju.instructure.com/courses/6820
 
 Thanks!
 ```
 
 </Figure>
+
+If you're almost done with the project work you have started a previous year, it might be OK to finish that this year, instead of completing the project per the description this year. Contact the course coordinator **within 1 week** after the course has started for a discussion if you want to continue on your old project.

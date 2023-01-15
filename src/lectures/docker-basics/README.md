@@ -14,6 +14,10 @@ In March 2020, [Docker released a new version of Docker Desktop for Windows](htt
 When using Docker through Windows Subsystem for Linux, it's better to place your docker projects on the file system for the Linux distribution you are running (e.g. Ubuntu), and run docker through the Linux distribution, instead of using the PowerShell in Windows (for details, see [Docker Desktop WSL 2 backend Best practices](https://docs.docker.com/desktop/windows/wsl/#best-practices)).
 :::
 
+::: danger A bit outdated...
+This recorded lecture is a little bit outdated. It can still be used as an introduction to Docker, but you will probably learn more up-to-date about Docker by attending the tutorial covering Docker.
+:::
+
 <iframe width="560" height="314" src="https://www.youtube.com/embed/1JwJnqUf-kU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Lecture material

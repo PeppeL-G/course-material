@@ -5,28 +5,8 @@
     credits="7.5"
     year="2022"
     course-coordinator="Peter Larsson-Green"
-    examiner="Peter Larsson-Green"
-    canvas-course-id="4775"
-/>
-
-## Teachers
-### Peter Larsson-Green
-<Teacher
-    name="Peter Larsson-Green"
-    photo="peter-larsson-green.jpeg"
-    :roles='["Course coordinator", "examiner", "lecturer", "lab assistant"]'
-    description="Has studied and followed the development of the web since 2004 and received his Master of Science in Computer Science at Linköping University in 2014. He has been working as programming teacher (part time) since 2010 at both Linköping University and Jönköping University."
-    email="Peter.Larsson-Green@ju.se"
-    phone="036 - 10 17 35"
-    website="https://ju.se/en/personinfo.html?sign=LarPet"
-/>
-
-### Fredrik Sjölander
-<Teacher
-    name="Fredrik Sjölander"
-    photo="fredrik-sjolander.jpeg"
-    :roles='["Lab assistant"]'
-    description="Third year student in the bachelor program Software Engineering and Mobile Platforms."
+    examiner="Jérôme Landré"
+    canvas-course-id="6820"
 />
 
 ## Introduction
@@ -37,7 +17,7 @@ Then websites got more dynamic. Users could create accounts on the websites and 
 
 Then some websites got so popular that running them on a single computer was not enough; web browsers sent more HTTP requests to the web application than the web application had time to handle. We needed to start worrying about the performance of our web application; how good it could scale, how fast it could send back an HTTP response, etc. Web applications now needed to be built with an architecture in mind.
 
-Then we got Android and iOS devices, and users wanted to be able to use smartphone apps to access the content on our websites instead of using web browsers. But apps don't render HTML code, only web browsers do that. The apps needed a way to just fetch the data from our web applications, so we added Application Programming Interfaces (API) to our web applications. 
+Then we got Android and iOS devices, and users wanted to be able to use smartphone apps to access the content on our websites instead of using web browsers. But apps don't render HTML code, only web browsers do that. The apps needed a way to just fetch the data from our web applications, so we added Application Programming Interfaces (APIs) to our web applications. 
 
 Today, good web applications are no longer straight forward to implement, but in this course you will learn and get hands-on experience of implementing your own scalable and good web application.
 
@@ -69,6 +49,29 @@ graph TD
 " />
 </Figure>
 
+## Teachers
+### Peter Larsson-Green
+<Teacher
+    name="Peter Larsson-Green"
+    photo="peter-larsson-green.jpeg"
+    :roles='["Course coordinator", "lecturer", "lab assistant"]'
+    description="Has studied and followed the development of the web since 2004 and received his Master of Science in Computer Science at Linköping University in 2014. He has been working as programming teacher (part time) since 2010 at both Linköping University and Jönköping University."
+    email="Peter.Larsson-Green@ju.se"
+    phone="036 - 10 17 35"
+    website="https://ju.se/en/personinfo.html?sign=LarPet"
+/>
+
+### Jérôme Landré
+<Teacher
+    name="Jérôme Landré"
+    photo="jerome-landre.jpeg"
+    :roles='["Examiner, lab assistant"]'
+    description="Assistant Professor."
+    email="jerome.landre@ju.se"
+    phone=""
+    website="https://ju.se/en/personinfo.html?sign=LanJer"
+/>
+
 ## Intended Learning Outcomes
 The intended learning outcomes of the course are found in the [Course Syllabus](course-syllabus/). Below is a table showing how the examination tests cover the intended learning outcomes and which teaching activity helping you learn which intended learning outcome.
 
@@ -78,7 +81,6 @@ Display knowledge of the need for, and the use of, Content Delivery Networks
 +Lecture: Content Delivery Networks
 ---
 Display knowledge of the challenges inherent in and technologies used for the construction of scalable web applications (NOSQL databases, horizontal scaling with session management, data partitioning and sharding, etc.)
--Project Work
 -Written Examination
 +Lecture: Scaling Web Applications
 +Lecture: Scaling Databases
@@ -86,7 +88,6 @@ Display knowledge of the challenges inherent in and technologies used for the co
 ---
 Display the ability to use JavaScript to manipulate a web page's Document Object Model
 -Laboratory Work
--Project Work
 -Written Examination
 +Lecture: Client-side JavaScript
 +Lecture: Document Object Model
@@ -139,7 +140,7 @@ Some weeks there will be a tutorial session where the teacher will show you how 
 ### Lab Sessions
 Each week you may attend a four hours long lab session. Some of the lab sessions have been scheduled in ordinary classrooms, and for those sessions you have to bring your own laptop to work on. If you can't do that, make sure to come to a lab session scheduled in a computer room.
 
-Select which lab session you want to attend by joining the corresponding [Lab Session Group](https://ju.instructure.com/courses/4775/groups). Feel free to show up at and attend other lab sessions too **if there's room for it**, but you may only join one Lab Session Group on Canvas.
+Select which lab session you want to attend by joining the corresponding [Lab Group](https://ju.instructure.com/courses/6820/groups) on Canvas. Feel free to show up at and attend other lab sessions too **if there's room for it**, but you may only join one Lab Group on Canvas.
 
 ## Examination Tests
 The course contains three examination tests.
@@ -170,6 +171,7 @@ To receive a final grade in the course you need to pass all examination tests. T
 ## Course Literature and Other Teaching Aids
 * [Eloquent JavaScript 3rd edition](https://eloquentjavascript.net/) by Marijn Haverbeke
 * [The Twelve-Factor App](https://12factor.net/)
+* [Web API Design: Crafting Interfaces that Developers Love](https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf)
 
 ## Time Plan
 A time plan is available on the [Time Plan](time-plan/) page.
