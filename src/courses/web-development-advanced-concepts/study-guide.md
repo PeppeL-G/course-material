@@ -3,7 +3,7 @@
     course-name="Web Development - Advanced Concepts"
     ladok-code="TFWN19"
     credits="7.5"
-    year="2022"
+    year="2023"
     course-coordinator="Peter Larsson-Green"
     examiner="Jérôme Landré"
     canvas-course-id="6820"
