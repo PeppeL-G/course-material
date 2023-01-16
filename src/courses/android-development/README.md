@@ -4,8 +4,8 @@ Welcome to the course *Android Development*! In this course you'll learn how to 
 This website will be used to host the course material only. Canvas will primarily be used to:
 
 * Send info to you through announcements (be sure to have your global notification settings or your course notification settings enabled)
-* Organize you into lab groups (see the People page)
-* Keep track of your progress in the course (passed lab assignments) (see the Modules page and the Grades page)
+* Organize you into lab groups (see the People page on Canvas)
+* Keep track of your progress in the course (passed lab assignments) (see the Assignments page and the Grades page on Canvas)
 
 Read the [Study Guide](./study-guide/) for the details.
 
