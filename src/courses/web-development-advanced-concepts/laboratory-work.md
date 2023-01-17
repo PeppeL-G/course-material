@@ -123,4 +123,4 @@ If the user has disabled client-side JavaScript in the web browser, all three fo
 :::
 
 ### Presenting
-Present your work to a teacher at one of the lab sessions. Be prepared to explain how your code works and to answer any question the teacher might have about it. When the teacher is satisfied with your presentation, he will approve you on the assignment [Lab 3 Presentation](https://ju.instructure.com/courses/6820/modules/items/241267) on Canvas, and you can upload your solution to the assignment [Lab 3 Code](https://ju.instructure.com/courses/6820/modules/items/254130).
+Present your work to a teacher at one of the lab sessions. Be prepared to explain how your code works and to answer any question the teacher might have about it. When the teacher is satisfied with your presentation, he will approve you on the assignment [Lab 4 Presentation](https://ju.instructure.com/courses/6820/modules/items/241267) on Canvas, and you can upload your solution to the assignment [Lab 4 Code](https://ju.instructure.com/courses/6820/modules/items/254130).
