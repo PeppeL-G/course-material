@@ -135,15 +135,16 @@ Try to use [GUI components from Material Design 3](https://m3.material.io/compon
 Present your application idea and mockups to "the rest of the class" (in smaller groups) at one of the following sessions:
 
 ::: danger Preliminary dates!
-The dates below has not been confirmed by Martin yet, and might change.
+~~The dates below has not been confirmed by Martin yet, and might change.~~
+The dates below has been changed to dates that work for Martin. So they have now been set, and will no longer change.
 :::
 
-* 6 February Monday 08:15-09:00
-* 6 February Monday 09:15-10:00
-* 9 February Thursday 10:15-11:00
-* 9 February Thursday 11:15-12:00
+* Thursday February 9 13:15-14:00
+* Thursday February 9 14:15-15:00
+* Friday February 10 10:15-11:00
+* Friday February 10 11:15-12:00
 
-To distribute you, one from each Project Group should join the corresponding [Mockup Presentation Group](https://ju.instructure.com/courses/6658/groups) group on Canvas that you want to attend. At the presentation, you will receive feedback on your mockups from Martin and the audience.
+To distribute you, one from each Project Group should join the corresponding [Mockup Presentation Group](https://ju.instructure.com/courses/6658/groups) on Canvas that you want to attend. At the presentation, you will receive feedback on your mockups from Martin and the audience.
 
 After having viewed your presentation, the audience should have a very good understanding of:
 
