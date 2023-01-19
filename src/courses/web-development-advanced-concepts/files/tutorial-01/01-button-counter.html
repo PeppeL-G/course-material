@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>1 Button Counter</title>
+	<script>
+		
+		document.addEventListener('DOMContentLoaded', function(){
+			
+			const buttons = document.querySelectorAll("button.counter")
+			
+			for(const button of buttons){
+				
+				button.addEventListener('click', function(){
+					
+					const currentNumber = parseInt(button.innerText)
+					const newNumber = currentNumber + 1
+					button.innerText = newNumber
+					
+				})
+				
+			}
+			
+		})
+		
+	</script>
+</head>
+<body>
+	
+	<button class="counter">0</button>
+	<button class="counter">5</button>
+	<button>Add</button>
+	<button class="counter">10</button>
+	
+</body>
+</html>

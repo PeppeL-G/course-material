@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>4 Friends List</title>
+	<script>
+		
+		document.addEventListener('DOMContentLoaded', function(){
+			
+			const form = document.querySelector('form')
+			const input = document.querySelector('input')
+			const ul = document.querySelector('ul')
+			
+			form.addEventListener('submit', function(event){
+				
+				event.preventDefault()
+				
+				const name = input.value
+				
+				const li = document.createElement('li')
+				
+				const span = document.createElement('span')
+				span.innerText = name
+				
+				const button = document.createElement('button')
+				button.innerText = "Delete"
+				button.addEventListener('click', function(){
+					ul.removeChild(li)
+				})
+				
+				li.appendChild(span)
+				li.appendChild(button)
+				
+				ul.appendChild(li)
+				
+				input.value = ""
+				input.focus()
+				
+			})
+			
+		})
+		
+	</script>
+</head>
+<body>
+	
+	<form>
+		New friend name:
+		<input type="text">
+		<input type="submit" value="Add">
+	</form>
+	
+	<ul></ul>
+	
+</body>
+</html>
