@@ -265,7 +265,7 @@ At the checkout, an Android app could be used to keep track of which clothes (an
 
 ### Challenges / "Opportunities"
 #### Synchronizing data
-Their usually exists multiple checkouts at the market place, and each checkout will have one device running the Android application. At the end of the day, when computing how much each parent has sold, all data about the selling needs to be accessible from a single device. This means that the data either:
+There usually exists multiple checkouts at the market place, and each checkout will have one device running the Android application. At the end of the day, when computing how much each parent has sold, all data about the selling needs to be accessible from a single device. This means that the data either:
 
 * Needs to be stored at a centralized place, such as a Firestore database. As you understand, it is important that the Android application still can function and register which clothes that has been sold without an Internet connection.
 * Needs to be synchronized across multiple devices running the application at the end of the day (Bluetooth?).
