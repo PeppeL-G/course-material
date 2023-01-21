@@ -35,11 +35,11 @@ The <span style="background-color: #00ffff75; display: inline-block; padding: 0 
 		{},
 		{},
 		// 6
-		{w: "PW 5 Present Mockups", i: "Prototype Presentations"},
 		{w: "PW 4 Mockups"},
 		{w: "PW 4 Mockups"},
-		{w: "PW 5 Present Mockups", i: "Prototype Presentations"},
-		{w: "PW 6 Implement "},
+		{w: "PW 4 Mockups"},
+		{w: "PW 5 Present Mockups", i: "Present Mockups"},
+		{w: "PW 5 Present Mockups", i: "Present Mockups"},
 		{i: "Re-exam period"},
 		{i: "Re-exam period"},
 		// 7

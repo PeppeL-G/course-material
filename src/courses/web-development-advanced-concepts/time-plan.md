@@ -70,7 +70,7 @@ The <span style="background-color: #00ffff75; display: inline-block; padding: 0 
 		{w: "PW Part 9 Front-Back", l: "AJAX & Auth"},
 		{w: "PW Part 9 Front-Back"},
 		{w: "PW Part 9 Front-Back", s: "L1, L2"},
-		{w: "PW Part 10 Auth"},
+		{w: "PW Part 10 Auth", l: "Guest Lecture: Website in Vue.js"},
 		{w: "PW Part 10 Auth"},
 		{},
 		{},
