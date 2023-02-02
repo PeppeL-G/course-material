@@ -8,6 +8,8 @@ Here you find the lectures in the course.
 	* [Kotlin](../../lectures/kotlin/)
 	* [Android Introduction](../../lectures/android-introduction/)
 	* [Android Fundamental Application Components](../../lectures/android-fundamental-application-components/)
+* Martins lecture on GUI:
+	* [The slides UI Prototyping for Android](https://ju.instructure.com/files/1121481/download?download_frd=1)
 
 Most other things you need to learn for the application you create in your Project Work you can most likely learn from Android's [Developer Guides](https://developer.android.com/guide).
 

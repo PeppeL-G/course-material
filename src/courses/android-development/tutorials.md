@@ -255,3 +255,7 @@ fun ViewOneScreen(id: Int) {
 
 }
 ```
+
+
+## Martin's GUI Lecture
+[The slides](https://ju.instructure.com/files/1121481/download?download_frd=1).
