@@ -140,3 +140,36 @@ export const blogposts = [
 	// ...
 ]
 ```
+
+
+
+
+## Tutorial 3: REST API & Docker
+```sql
+/* projects/database/init.sql */
+CREATE TABLE humans (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	name VARCHAR(50)
+);
+
+INSERT INTO humans (name) VALUES ('Alice');
+```
+
+```Dockerfile
+# projects/database/Dockerfile
+FROM mariadb:10.9.4
+
+COPY ./init.sql /docker-entrypoint-initdb.d/
+```
+
+```yaml
+# projects/compose.yaml
+services:
+  db:
+    build: ./database/
+    ports:
+      - "5555:3306"
+    environment:
+      MARIADB_ROOT_PASSWORD: abc123
+      MARIADB_DATABASE: abc
+```
