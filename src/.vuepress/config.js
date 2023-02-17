@@ -56,6 +56,7 @@ copyStaticFilesToPublic()
 export default defineUserConfig({
 	base: "/course-material/",
 	title: "Course Material",
+	host: false,
 	theme: defaultTheme({
 		docsDir: "src",
 		docsRepo: "https://github.com/PeppeL-G/course-material",

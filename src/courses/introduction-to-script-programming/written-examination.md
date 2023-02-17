@@ -50,3 +50,4 @@ You can look at [the exam from 2021-02-18](./exams/exam-2021-02-18/) to get some
 After the exams, sample answers will be available here.
 
 * [Exam 2022-12-15](./exams/exam-2022-12-15/)
+* [Exam 2023-02-15](./exams/exam-2023-02-15/)
