@@ -144,9 +144,9 @@ export const blogposts = [
 
 
 
-## Tutorial 3: REST API & Docker
+## Tutorial 3: REST API & Docker (DB)
 ```sql
-/* projects/database/init.sql */
+/* project/database/init.sql */
 CREATE TABLE humans (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	name VARCHAR(50)
@@ -156,14 +156,14 @@ INSERT INTO humans (name) VALUES ('Alice');
 ```
 
 ```Dockerfile
-# projects/database/Dockerfile
+# project/database/Dockerfile
 FROM mariadb:10.9.4
 
 COPY ./init.sql /docker-entrypoint-initdb.d/
 ```
 
 ```yaml
-# projects/compose.yaml
+# project/compose.yaml
 services:
   db:
     build: ./database/
@@ -172,4 +172,100 @@ services:
     environment:
       MARIADB_ROOT_PASSWORD: abc123
       MARIADB_DATABASE: abc
+```
+
+## Tutorial 4: REST API & Docker (Backend)
+Use the same database files as in Tutorial 3.
+
+project/backend/package.json
+```json
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mariadb": "^3.1.0"
+  }
+}
+```
+
+```js
+// project/backend/src/app.js
+import express from 'express'
+import { createPool } from 'mariadb'
+
+const pool = createPool({
+	host: "db",
+	port: 3306,
+	user: "root",
+	password: "abc123",
+	database: "abc",
+})
+
+pool.on('error', function(error){
+	console.log("Error from pool", error)
+})
+
+const app = express()
+
+app.get("/humans", async function(request, response){
+	
+	console.log("Hello there hi")
+	
+	try{
+		
+		const connection = await pool.getConnection()
+		
+		const query = "SELECT * FROM humans ORDER BY name"
+		
+		const humans = await connection.query(query)
+		
+		response.status(200).json(humans)
+		
+	}catch(error){
+		console.log(error)
+		response.status(500).end()
+	}
+	
+})
+
+app.get("/", function(request, response){
+	response.send("It works")
+})
+
+app.listen(8080)
+```
+
+```Dockerfile
+# project/backend/Dockerfile
+FROM node:18.14.1
+
+WORKDIR /backend
+
+COPY ./package*.json ./
+
+RUN npm install
+
+COPY ./src/ ./
+
+CMD node --watch ./src/app.js
+```
+
+```yaml
+# project/compose.yaml
+services:
+  db:
+    build: ./database/
+    ports:
+      - "5555:3306"
+    environment:
+      MARIADB_ROOT_PASSWORD: abc123
+      MARIADB_DATABASE: abc
+  backend:
+    build: ./backend/
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./backend/src/:/backend/src/
 ```
