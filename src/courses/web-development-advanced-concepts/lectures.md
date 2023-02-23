@@ -16,6 +16,7 @@ The instructions on the [Laboratory Work](laboratory-work/) page and the [Projec
 * [Asynchronous Programming in JavaScript](../../lectures/asynchronous-programming-in-js/)
 * [Handling Concurrent HTTP Requests](../../lectures/handling-concurrent-http-requests/)
 * [Scaling Web Applications](../../lectures/scaling-web-applications/)
+* [GDPR](../../lectures/gdpr/)
 * [Same-Origin Policy and Cross-Origin Resource Sharing](../../lectures/sop-and-cors/)
 * [AJAX](../../lectures/ajax/)
 * [REST API Authorization](../../lectures/rest-api-authorization/)
