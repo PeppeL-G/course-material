@@ -269,3 +269,474 @@ services:
     volumes:
       - ./backend/src/:/backend/src/
 ```
+
+
+
+
+
+## Tutorial 5: AJAX & OAuth 2.0
+Shows how to use the backend from the frontend using the REST API, and how to add authorization to the REST API using access tokens.
+
+* [Recording](https://www.youtube.com/watch?v=Rr5kQZvNOn4)
+
+### Backend
+app.js
+```js
+const express = require('express')
+const jwt = require('jsonwebtoken')
+
+const MIN_NAME_LENGTH = 3
+const MAX_NAME_LENGTH = 10
+const MAX_AGE = 150
+
+const ACCESS_TOKEN_SECRET = "ablkdjflksjdflsdjf"
+
+const humans = [{
+	id: 1,
+	name: "Alice",
+	age: 15,
+}, {
+	id: 2,
+	name: "Bob",
+	age: 20,
+}]
+
+const app = express()
+
+app.use(express.json())
+app.use(express.urlencoded())
+
+app.use(function(request, response, next){
+	
+	response.set("Access-Control-Allow-Origin", "*")
+	response.set("Access-Control-Allow-Methods", "*")
+	response.set("Access-Control-Allow-Headers", "*")
+	response.set("Access-Control-Expose-Headers", "*")
+	
+	next()
+	
+})
+
+app.get('/humans', function(request, response){
+	setTimeout(function(){
+		response.status(200).json(humans)
+	}, 1000)
+})
+
+app.get('/humans/:id', function(request, response){
+	
+	const id = request.params.id
+	
+	const human = humans.find(h => h.id == id)
+	
+	if(human){
+		response.status(200).json(human)
+	}else{
+		response.status(404).end()
+	}
+	
+})
+
+app.post('/humans', function(request, response){
+	
+	// TODO: This code will crash if no Authorization header value is provided.
+	const authorizationHeaderValue = request.get("Authorization")
+	const accessToken = authorizationHeaderValue.substring(7)
+	
+	jwt.verify(accessToken, ACCESS_TOKEN_SECRET, function(error, payload){
+		if(error){
+			response.status(401).end()
+		}else{
+			
+			const human = request.body
+			
+			const errorCodes = []
+			
+			if(typeof human?.name != "string"){
+				errorCodes.push("nameIsMissing")
+			}else if(human.name.length < MIN_NAME_LENGTH){
+				errorCodes.push("nameIsTooShort")
+			}else if(MAX_NAME_LENGTH < human.name.length){
+				errorCodes.push("nameIsTooLong")
+			}
+			
+			if(typeof human?.age != "number"){
+				errorCodes.push("ageIsMissing")
+			}else if(human.age < 0){
+				errorCodes.push("ageIsNegative")
+			}else if(MAX_AGE < human.age){
+				errorCodes.push("ageIsTooHigh")
+			}
+			
+			if(0 < errorCodes.length){
+				response.status(400).json(errorCodes)
+				return
+			}
+			
+			human.id = humans.at(-1).id + 1
+			
+			humans.push(human)
+			
+			response.set('Location', `/humans/${human.id}`)
+			response.status(201).end()
+			
+		}
+		
+	})
+	
+})
+
+app.post('/tokens', function(request, response){
+	
+	const grantType = request.body.grant_type
+	const username = request.body.username
+	const password = request.body.password
+	
+	if(grantType != "password"){
+		response.status(400).json({error: "unsupported_grant_type"})
+		return
+	}
+	
+	if(username == "abc" && password == "abc123"){
+		
+		const payload = {
+			isLoggedIn: true,
+		}
+		
+		jwt.sign(payload, ACCESS_TOKEN_SECRET, function(error, accessToken){
+			
+			if(error){
+				response.status(500).end()
+			}else{
+				response.status(200).json({
+					access_token: accessToken,
+					type: "bearer",
+				})
+			}
+			
+		})
+		
+	}else{
+		
+		response.status(400).json({error: "invalid_grant"})
+		
+	}
+	
+})
+
+app.listen(8080)
+```
+
+### Frontend
+user-store.js
+```js
+import { writable } from "svelte/store"
+
+export const user = writable({
+	isLoggedIn: false,
+	accessToken: "",
+})
+```
+
+App.svelte
+```html
+<script>
+	
+	import { Router, Link, Route } from "svelte-routing"
+	
+	import Home from './lib/Home.svelte'
+	import Humans from "./lib/Humans.svelte"
+	import Human from "./lib/Human.svelte"
+	import CreateHuman from "./lib/CreateHuman.svelte"
+	import Login from "./lib/Login.svelte"
+	
+	import { user } from "./user-store.js"
+	
+</script>
+
+<div id="layout">
+	
+	<Router>
+		
+		<header>
+			Human Site
+		</header>
+		
+		<nav>
+			<Link to="/">Home</Link>
+			<Link to="/humans">Humans</Link>
+			{#if $user.isLoggedIn}
+				<Link to="/humans/create">Create Human</Link>
+			{:else}
+				<Link to="/login">Login</Link>
+			{/if}
+		</nav>
+		
+		<main>
+			<Route path="/humans" component={Humans} />
+			<Route path="/humans/create" component={CreateHuman} />
+			<Route path="/humans/:id" component={Human} />
+			<Route path="/login" component={Login} />
+			<Route path="/" component={Home} />
+		</main>
+		
+		<footer>
+			Copyright Peter L-G 2023
+		</footer>
+		
+	</Router>
+	
+</div>
+
+<style>
+	
+	#layout{
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	
+	header{
+		font-size: 2em;
+		text-align: center;
+	}
+	
+	nav{
+		text-align: center;
+	}
+	
+	footer{
+		margin-top: 1em;
+		text-align: center;
+	}
+	
+</style>
+```
+
+Login.svelte
+```html
+<script>
+	
+	import { user } from "../user-store.js"
+	
+	// TODO: Add loading indicator.
+	let username = ""
+	let password = ""
+	
+	async function login(){
+		
+		const response = await fetch("http://localhost:8080/tokens", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/x-www-form-urlencoded"
+			},
+			body: `grant_type=password&username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`
+		})
+		
+		// TODO: Need to check status code, etc.
+		const body = await response.json()
+		
+		const accessToken = body.access_token
+		
+		$user = {
+			isLoggedIn: true,
+			accessToken,
+		}
+		
+	}
+	
+</script>
+
+<h1>Login</h1>
+<form on:submit|preventDefault={login}>
+	
+	<div>
+		Username:
+		<input type="text" bind:value={username}>
+	</div>
+	
+	<div>
+		Password:
+		<input type="password" bind:value={password}>
+	</div>
+	
+	<input type="submit" value="Login">
+	
+</form>
+```
+
+Humans.svelte
+```html
+<script>
+	
+	import { Link } from 'svelte-routing'
+	
+	const fetchHumansPromise = fetch("http://localhost:8080/humans")
+	
+</script>
+
+<h1>Humans</h1>
+
+{#await fetchHumansPromise}
+	
+	<p>Wait, I'm loading...</p>
+	
+{:then response}
+	
+	{#await response.json() then humans}
+		
+		<ul>
+			{#each humans as human (human.id)}
+				<li>
+					<Link to="/humans/{human.id}">{human.name}</Link>
+				</li>
+			{/each}
+		</ul>
+		
+	{/await}
+	
+{:catch error}
+	
+	<p>Something went wrong, try again later.</p>
+	
+{/await}
+```
+
+Human.svelte
+```html
+<script>
+	
+	export let id
+	
+	let isFetchingHuman = true
+	let failedToFetchHuman = false
+	let human = null
+	
+	async function loadHuman(){
+		
+		try{
+			
+			const response = await fetch("http://localhost:8080/humans/"+id)
+			
+			switch(response.status){
+				
+				case 200:
+					human = await response.json()
+					isFetchingHuman = false
+					break
+				
+			}
+			
+		}catch(error){
+			
+			isFetchingHuman = false
+			failedToFetchHuman = true
+			
+		}
+		
+	}
+	
+	loadHuman()
+	
+</script>
+
+<h1>Human</h1>
+{#if isFetchingHuman}
+	<p>Wait, I'm fetching data...</p>
+{:else if failedToFetchHuman}
+	<p>Couldn't fetch the human. Check your Internet connection.</p>
+{:else if human}
+	<div>Id: {human.id}</div>
+	<div>Name: {human.name}</div>
+	<div>Age: {human.age}</div>
+{:else}
+	<p>No human with the given id {id}.</p>
+{/if}
+```
+
+CreateHuman.svelte
+```html
+<script>
+	
+	import { user } from "../user-store.js"
+	
+	// TODO: Add loading indicator.
+	let name = ""
+	let age = 0
+	let errorCodes = []
+	let humanWasCreated = false
+	
+	async function createAccount(){
+		
+		const human = {
+			name,
+			age,
+		}
+		
+		try{
+			
+			const response = await fetch("http://localhost:8080/humans", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					"Authorization": "Bearer "+$user.accessToken,
+				},
+				body: JSON.stringify(human),
+			})
+			
+			switch(response.status){
+				
+				case 201:
+					humanWasCreated = true
+				break
+				
+				case 400:
+					errorCodes = await response.json()
+				break;
+				
+				// TODO: Handle 401.
+				
+			}
+			
+		}catch(error){
+			errorCodes.push("COMMUNICATION_ERROR")
+			errorCodes = errorCodes
+		}
+		
+	}
+	
+</script>
+
+<h1>Create Human</h1>
+
+{#if humanWasCreated}
+	<p>Human created!</p>
+{:else}
+	
+	<form on:submit|preventDefault={createAccount}>
+		
+		<div>
+			Name:
+			<input type="text" bind:value={name}>
+		</div>
+		
+		<div>
+			Age:
+			<input type="number" bind:value={age}>
+		</div>
+		
+		<input type="submit" value="Create Human">
+		
+	</form>
+	
+	<!-- TODO: Show error messages instead of error codes. -->
+	{#if 0 < errorCodes.length}
+		<p>We have errors!</p>
+		<ul>
+			{#each errorCodes as errorCode}
+				<li>{errorCode}</li>
+			{/each}
+		</ul>
+	{/if}
+	
+{/if}
+```
