@@ -10,7 +10,7 @@ const commands = [
 	
 	// Commit it.
 	'cd src/.vuepress/dist',
-	'git init',
+	'git init -b master',
 	'git add -A',
 	'git commit -m "New deploy."',
 	
