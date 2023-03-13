@@ -22,3 +22,4 @@ The instructions on the [Laboratory Work](laboratory-work/) page and the [Projec
 * [REST API Authorization](../../lectures/rest-api-authorization/)
 * [JSON Web Tokens](../../lectures/json-web-tokens/)
 * [Third Party Authentication](../../lectures/third-party-authentication/)
+* [Frontend Frameworks](../../lectures/frontend-frameworks/)
