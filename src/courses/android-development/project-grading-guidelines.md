@@ -133,7 +133,7 @@ You may not get all the points for the functionality you implement. You need to 
         <tr>
             <td>1</td>
             <td>Runtime permissions</td>
-            <td>On newer versions of Android, ask for the permissions you need at runtime (when you need them). If you don't get them, deal with it in a good way.</td>
+            <td>On newer versions of Android, ask for the permissions you need at runtime (when you need them). If you don't get them, deal with it in a good way (for example, if you don't get the accurate location permission, you can ask the user to enter the city name or latitude and longitude manually).</td>
         </tr>
         <tr>
             <td>4</td>
@@ -145,7 +145,7 @@ You may not get all the points for the functionality you implement. You need to 
                     <li>Bluetooth connections are maintained.</li>
                     <li>Results of long running operations are cached.</li>
                 </ul>
-                Use model fragments, ViewModels, or whatever you prefer.
+                I.e. use ViewModels.
             </td>
         </tr>
         <tr>
@@ -197,6 +197,16 @@ You may not get all the points for the functionality you implement. You need to 
             <td>0.5</td>
             <td>Reading QR Codes</td>
             <td>The app uses the camera on the Android device (either directly or indirectly) to read and react to QR codes.</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Uploading and downloading images (or any type of files)</td>
+            <td>The user can select an existing image or create a new one (for example through the Camera app), which then is uploaded to a server of some kind (for example <a target="_blank" href="https://firebase.google.com/docs/storage">Cloud Storage for Firebase</a>. The images can also be downloaded and shown in the app. (just using the server to store files like this does not fulfill the base requirement <em>the application you create must make use of at least one other device</em>).</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Using 2 other type of devices</td>
+            <td>The base requirement <em>the application you create must make use of at least one other device</em> is fulfilled twice, for example the app uses Bluetooth to communicate with one type of device (for example another Android device), and a REST API or FireStore to communicate with a server. For full score, it's very important that the communication with both device types are implemented in a good way, including dealing with errors (showing error messages to the user and give users the ability to recover from errors), and that the communication is not "minimal" (for example all 4 <a target="_blank" href="https://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a> operations are implemented when using the server).</td>
         </tr>
         <tr>
             <td>?</td>
