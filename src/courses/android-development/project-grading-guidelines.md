@@ -209,6 +209,11 @@ You may not get all the points for the functionality you implement. You need to 
             <td>The base requirement <em>the application you create must make use of at least one other device</em> is fulfilled twice, for example the app uses Bluetooth to communicate with one type of device (for example another Android device), and a REST API or FireStore to communicate with a server. For full score, it's very important that the communication with both device types are implemented in a good way, including dealing with errors (showing error messages to the user and give users the ability to recover from errors), and that the communication is not "minimal" (for example all 4 <a target="_blank" href="https://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a> operations are implemented when using the server).</td>
         </tr>
         <tr>
+            <td>1</td>
+            <td>Periodical updates</td>
+            <td>Periodically update something in the background, such as fetching new data from a server each night, and also enable the user to trigger updates manually through the GUI in the app. Structure the code good, so the logic performing the update isn't duplicated.</td>
+        </tr>
+        <tr>
             <td>?</td>
             <td>Own suggestions</td>
             <td>Come up with your own suggestions of extra functionality. Describe the functionality and email the examiner for approval at <a href="mailto:Peter.Larsson-Green@ju.se">Peter.Larsson-Green@ju.se</a>).</td>
