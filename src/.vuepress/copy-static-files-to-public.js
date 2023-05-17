@@ -16,7 +16,7 @@ export function copyStaticFilesToPublic(){
 	const pathToSrcFolder = path.resolve(__dirname, "../")
 	
 	if(fs.existsSync(pathToPublicFolder)){
-		fs.rmdirSync(pathToPublicFolder, {recursive: true}) // Requires latest version of node.
+		fs.rmSync(pathToPublicFolder, {recursive: true}) // Requires latest version of node.
 	}
 	
 	copyAllStaticFiles(pathToSrcFolder, pathToPublicFolder)

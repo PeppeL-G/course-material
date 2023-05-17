@@ -1,5 +1,5 @@
 <template>
-	<div class="mermaid" ref="mermaidDiv" v-html="graphSvgCode"></div>
+	<div class="mermaid" v-html="graphSvgCode"></div>
 </template>
 
 <script>
