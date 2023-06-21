@@ -53,3 +53,4 @@ You can look at [the exam from 2021-08-22](./exams/exam-2021-08-22/) to get some
 After each exam, sample answers with some grading guidelines will be published here.
 
 * [Exam 2023-03-23](./exams/exam-2023-03-23/)
+* [Exam 2023-06-12](./exams/exam-2023-06-12/)
