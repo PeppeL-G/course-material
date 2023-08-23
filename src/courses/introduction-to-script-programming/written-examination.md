@@ -51,3 +51,4 @@ After the exams, sample answers will be available here.
 
 * [Exam 2022-12-15](./exams/exam-2022-12-15/)
 * [Exam 2023-02-15](./exams/exam-2023-02-15/)
+* [Exam 2023-08-14](./exams/exam-2023-08-14/)
