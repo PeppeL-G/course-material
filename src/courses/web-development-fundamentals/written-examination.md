@@ -54,3 +54,4 @@ After your exams, sample answers and grading guidelines will be published here.
 
 * [Exam 2022-10-20](./exams/exam-2022-10-20/)
 * [Exam 2023-01-14](./exams/exam-2023-01-14/)
+* [Exam 2023-08-16](./exams/exam-2023-08-16/)
