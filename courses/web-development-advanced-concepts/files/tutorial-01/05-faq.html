@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>5 Frequently Asked Questions</title>
+	<script>
+		
+		document.addEventListener('DOMContentLoaded', function(){
+			
+			// Note: There exists many different ways to implement this one.
+			// Most likely, starting by finding all references to the
+			// .faq-item divs is probably best, and then from each such div
+			// find it's .faq-question and .faq-answer div.
+			const answerDivs = document.querySelectorAll('.faq-answer')
+			
+			for(const answerDiv of answerDivs){
+				answerDiv.classList.add('hide')
+			}
+			
+			const questionDivs = document.querySelectorAll('.faq-question')
+			
+			for(const questionDiv of questionDivs){
+				
+				const showHideButton = document.createElement('button')
+				showHideButton.innerText = "Show / Hide"
+				showHideButton.addEventListener('click', function(){
+					
+					const itemDiv = questionDiv.parentNode
+					const answerDiv = itemDiv.querySelector('.faq-answer')
+					
+					answerDiv.classList.toggle("hide")
+					
+				})
+				
+				questionDiv.appendChild(showHideButton)
+				
+			}
+			
+		})
+		
+	</script>
+	<style>
+		.hide{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="faq-item">
+		<div class="faq-question">What is your name?</div>
+		<div class="faq-answer">Bond. James Bond.</div>
+	</div>
+	
+	<div class="faq-item">
+		<div class="faq-question">How old are you?</div>
+		<div class="faq-answer">5 years old.</div>
+	</div>
+	
+	<div class="faq-item">
+		<div class="faq-question">Where do you live?</div>
+		<div class="faq-answer">classified</div>
+	</div>
+	
+</body>
+</html>

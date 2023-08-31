@@ -1,0 +1,4 @@
+const data = JSON.parse('{"key":"v-0fa30a06","path":"/lectures/content-delivery-networks/","title":"Content Delivery Networks","lang":"en-US","frontmatter":{"sidebar":"auto","navbarTitle":"Content Delivery Networks"},"headers":[{"level":2,"title":"A CDN do not run your web application","slug":"a-cdn-do-not-run-your-web-application","link":"#a-cdn-do-not-run-your-web-application","children":[]},{"level":2,"title":"CSS frameworks and client-side JavaScript libraries","slug":"css-frameworks-and-client-side-javascript-libraries","link":"#css-frameworks-and-client-side-javascript-libraries","children":[]},{"level":2,"title":"Subresource Integrity","slug":"subresource-integrity","link":"#subresource-integrity","children":[]}],"git":{"updatedTime":1610277692000},"filePathRelative":"lectures/content-delivery-networks/README.md"}');
+export {
+  data
+};

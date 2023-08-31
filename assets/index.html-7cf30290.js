@@ -1,0 +1,4 @@
+const data = JSON.parse('{"key":"v-2e9a2415","path":"/lectures/android-fundamental-application-components/","title":"Android Fundamental Application Components","lang":"en-US","frontmatter":{"sidebar":"auto","navbarTitle":"Android Fundamental Application Components"},"headers":[{"level":2,"title":"Recommended reading","slug":"recommended-reading","link":"#recommended-reading","children":[]},{"level":2,"title":"Fundamental Application Components","slug":"fundamental-application-components","link":"#fundamental-application-components","children":[{"level":3,"title":"Intents","slug":"intents","link":"#intents","children":[]},{"level":3,"title":"Creating a fundamental application component","slug":"creating-a-fundamental-application-component","link":"#creating-a-fundamental-application-component","children":[]}]}],"git":{"updatedTime":1673797380000},"filePathRelative":"lectures/android-fundamental-application-components/README.md"}');
+export {
+  data
+};

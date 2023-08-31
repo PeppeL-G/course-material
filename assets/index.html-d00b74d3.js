@@ -1,0 +1,4 @@
+const data = JSON.parse('{"key":"v-0cbcc1e4","path":"/lectures/thesis-proposals/","title":"Thesis Proposals","lang":"en-US","frontmatter":{"sidebar":"auto","navbarTitle":"Thesis Proposals"},"headers":[{"level":2,"title":"Laser Pointer Snake","slug":"laser-pointer-snake","link":"#laser-pointer-snake","children":[]},{"level":2,"title":"Real ~Space Invaders","slug":"real-space-invaders","link":"#real-space-invaders","children":[]},{"level":2,"title":"Predict Chanterelles Location","slug":"predict-chanterelles-location","link":"#predict-chanterelles-location","children":[]},{"level":2,"title":"Navigating Roads without GPS Receivers","slug":"navigating-roads-without-gps-receivers","link":"#navigating-roads-without-gps-receivers","children":[]}],"git":{"updatedTime":1613553146000},"filePathRelative":"lectures/thesis-proposals/README.md"}');
+export {
+  data
+};

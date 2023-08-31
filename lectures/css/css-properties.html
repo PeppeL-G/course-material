@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>This is the title</title>
+
+		<style type="text/css">
+
+			div{
+				box-sizing: border-box;
+			}
+
+			body > div > h1{
+				text-align: center;
+			}
+
+			div div{
+				background-color: silver;
+				padding: 20px 10px;
+				border-radius: 20px;
+				margin-bottom: 10px;
+				overflow: auto;
+			}
+
+			#slaveDiv div{
+				white-space: pre;
+				font-family: monospace;
+			}
+
+		</style>
+
+		<script type="text/javascript">
+
+			document.addEventListener('DOMContentLoaded', function(){
+
+				var masterDiv = document.getElementById('masterDiv')
+				var slaveDiv = document.getElementById('slaveDiv')
+
+				var subMasterDivs = masterDiv.getElementsByTagName('div')
+
+				for(var i=0; i<subMasterDivs.length; i++){
+
+					var subMasterDiv = subMasterDivs[i]
+					var subSlaveDiv = document.createElement('div')
+
+					subSlaveDiv.innerText = subMasterDiv.innerHTML.trim().replace(/\t/g, "  ")
+					slaveDiv.appendChild(subSlaveDiv)
+
+					var height = Math.max(subMasterDiv.offsetHeight, subSlaveDiv.offsetHeight) + 5
+					subMasterDiv.style.height = height+"px"
+					subSlaveDiv.style.height = height+"px"
+
+				}
+
+			})
+
+		</script>
+	</head>
+	<body>
+		<div id="slaveDiv" style="float: left; width: 49%">
+			<h1>HTML source code</h1>
+		</div>
+		<div id="masterDiv" style="float: right; width: 49%">
+			<h1>HTML code rendered</h1>
+<div>
+<p style="color: red">Some text.</p>
+</div>
+<div>
+<p style="background-color: lime">Some text.</p>
+<strong style="background-color: gold">Some text.</strong>
+</div>
+<div>
+<p style="text-align: left">Some text.</p>
+<p style="text-align: center">Some text.</p>
+<p style="text-align: right">Some text.</p>
+<p style="text-align: justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan maximus mi, quis venenatis quam placerat id. Pellentesque erat libero, blandit quis neque ac, elementum imperdiet quam.</p>
+</div>
+<div>
+<p style="
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-top-color: blue
+">Some text.</p>
+
+<p style="border-top: 3px solid blue">Some text.</p>
+
+border-left-*<br>
+border-right-*<br>
+border-bottom-*<br>
+border-*<br>
+border<br>
+
+<p style="border: 3px solid blue">Some text.</p>
+</div>
+<div>
+<p style="border: 5px red dotted">Some text.</p>
+
+
+<p style="border: 5px red dashed">Some text.</p>
+
+
+<p style="border: 5px red solid">Some text.</p>
+
+
+<p style="border: 5px red double">Some text.</p>
+
+
+<p style="border: 5px red groove">Some text.</p>
+
+
+<p style="border: 5px red ridge">Some text.</p>
+
+
+<p style="border: 5px red inset">Some text.</p>
+
+
+<p style="border: 5px red outset">Some text.</p>
+
+
+<p style="border: 5px red none">Some text.</p>
+</div>
+<div>
+<p style="border-radius: 10px; border: 5px red solid">Some text.</p>
+
+<p style="border-radius: 10px; background-color: red">Some text.</p>
+
+<p style="
+  border-top-left-radius: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius:15px;
+  border-bottom-left-radius: 20px;
+  border: 3px solid aqua
+">Some text.</p>
+</div>
+<div>
+<p style="visibility: hidden">Some text 1.</p>
+
+<p style="visibility: visible">Some text 2.</p>
+</div>
+<div>
+<p style="display: none">Some text 1.</p>
+
+<p style="display: block">Some text 2.</p>
+
+<p style="display: inline">Some text 3.</p>
+
+<p style="display: inline-block">Some text 4.</p>
+</div>
+<div>
+<p style="width: 100px; background-color: blue">Some text.</p>
+
+<p style="width: 100px; background-color: blue">Some text.</p>
+</div>
+<div>
+<p style="display: inline-block; width: 100px; background-color: blue">Some text.</p>
+
+<p style="display: inline-block; width: 100px; background-color: blue">Some text.</p>
+</div>
+<div>
+<p style="margin: 50px; background-color: blue">Some text.</p>
+
+
+
+<p style="margin: 50px 40px 30px 20px; background-color: blue">Some text.</p>
+
+
+
+<p style="margin: 50px 20px; background-color: blue">Some text.</p>
+
+
+
+<p style="margin: 50px auto; width: 100px; background-color: blue">Some text.</p>
+
+margin-left, margin-right, margin-top, margin-bottom
+</div>
+<div>
+<p style="padding: 50px; background-color: blue">Some text.</p>
+Can be used like margin and margin-*
+</div>
+<div>
+<p style="
+  background-color: blue;
+  width: 20vw;
+  min-width: 80px;
+  max-width: 120px;">Some text.</p>
+height, min-height and max-height
+can be used in similar way.
+</div>
+<div>
+<p style="text-decoration: overline">Some text.</p>
+
+<p style="text-decoration: line-through">Some text.</p>
+
+<p style="text-decoration: underline">Some text.</p>
+
+<a style="text-decoration: none" href="http://ju.se">Visit JU.</a>
+</div>
+<div>
+<p style="font-family: 'Courier New'">Some text.</p>
+
+<p style="font-weight: bold">Some text.</p>
+
+<p style="font-style: italic">Some text.</p>
+
+<p style="font-size: 1.5em">Some text.</p>
+
+More font-* exist.
+
+</div>
+<div>
+<p style="text-transform: uppercase">Some text.</p>
+
+<p style="text-transform: lowercase">Some text.</p>
+
+<p style="text-transform: capitalize">Some text.</p>
+</div>
+<div>
+<ul style="list-style-type: disc">
+  <li>Item A</li>
+  <li>Item B</li>
+</ul>
+<ul style="list-style-type: circle">
+  <li>Item A</li>
+  <li>Item B</li>
+</ul>
+<ul style="list-style-type: square">
+  <li>Item A</li>
+  <li>Item B</li>
+</ul>
+<ul style="list-style-type: decimal">
+  <li>Item A</li>
+  <li>Item B</li>
+</ul>
+<ul style="list-style-type: decimal-leading-zero">
+  <li>Item A</li>
+  <li>Item B</li>
+</ul>
+<ul style="list-style-type: lower-roman">
+  <li>Item A</li>
+  <li>Item B</li>
+</ul>
+<ul style="list-style-type: upper-roman">
+  <li>Item A</li>
+  <li>Item B</li>
+</ul>
+<ul style="list-style-type: lower-alpha">
+  <li>Item A</li>
+  <li>Item B</li>
+</ul>
+<ul style="list-style-type: upper-alpha">
+  <li>Item A</li>
+  <li>Item B</li>
+</ul>
+</div>
+		</div>
+		</div>
+	</body>
+</html>

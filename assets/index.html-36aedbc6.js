@@ -1,0 +1,4 @@
+const data = JSON.parse('{"key":"v-77a5618b","path":"/lectures/android-fragments/","title":"Android Fragments","lang":"en-US","frontmatter":{"sidebar":"auto","navbarTitle":"Android Fragments"},"headers":[{"level":2,"title":"Lecture material","slug":"lecture-material","link":"#lecture-material","children":[]},{"level":2,"title":"Recommended reading","slug":"recommended-reading","link":"#recommended-reading","children":[]},{"level":2,"title":"Examples","slug":"examples","link":"#examples","children":[{"level":3,"title":"Static counter fragment","slug":"static-counter-fragment","link":"#static-counter-fragment","children":[]},{"level":3,"title":"Dynamic countdown fragment","slug":"dynamic-countdown-fragment","link":"#dynamic-countdown-fragment","children":[]}]}],"git":{"updatedTime":1643553137000},"filePathRelative":"lectures/android-fragments/README.md"}');
+export {
+  data
+};

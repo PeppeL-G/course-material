@@ -1,0 +1,4 @@
+const data = JSON.parse('{"key":"v-234b2462","path":"/lectures/using-shells/","title":"Using Shells","lang":"en-US","frontmatter":{"sidebar":"auto","navbarTitle":"Using Shells"},"headers":[{"level":2,"title":"Lecture material","slug":"lecture-material","link":"#lecture-material","children":[]},{"level":2,"title":"Recommended reading","slug":"recommended-reading","link":"#recommended-reading","children":[]},{"level":2,"title":"Shells","slug":"shells","link":"#shells","children":[{"level":3,"title":"Files","slug":"files","link":"#files","children":[]},{"level":3,"title":"Folders","slug":"folders","link":"#folders","children":[]},{"level":3,"title":"Paths","slug":"paths","link":"#paths","children":[]},{"level":3,"title":"Commands","slug":"commands","link":"#commands","children":[]}]}],"git":{"updatedTime":1637582377000},"filePathRelative":"lectures/using-shells/README.md"}');
+export {
+  data
+};

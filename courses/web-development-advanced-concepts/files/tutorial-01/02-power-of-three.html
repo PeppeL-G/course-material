@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>2 Power of Three</title>
+	<script>
+		
+		document.addEventListener('DOMContentLoaded', function(){
+			
+			const form = document.querySelector('form')
+			const input = document.querySelector('input')
+			const resultSpan = document.querySelector('span')
+			
+			form.addEventListener('submit', function(event){
+				
+				event.preventDefault()
+				
+				if(input.value == ""){
+					resultSpan.innerText = "Enter a number!"
+					return
+				}
+				
+				const base = input.valueAsNumber
+				const result = base * base * base
+				
+				resultSpan.innerText = result
+				
+			})
+			
+		})
+		
+	</script>
+</head>
+<body>
+	
+	<form>
+		<input type="number">
+		^ 3
+		<input type="submit" value="=">
+		<span>?</span>
+	</form>
+	
+</body>
+</html>

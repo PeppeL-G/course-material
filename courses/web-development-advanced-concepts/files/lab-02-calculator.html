@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lab 2 - Calculator</title>
+	<script>
+		
+		// Write your JavaScript code here.
+		// The result of the computation should be shown in the span element.
+		// Want a harder challenge? Also show a list with previously carried
+		// out operations and what the result was. Clicking on one of them,
+		// auto fills the form with that operation.
+		
+	</script>
+</head>
+<body>
+	
+	<h1>Calculator</h1>
+	
+	<form id="calculatorForm" method="GET">
+		
+		<input type="number" id="operand1" name="operand1">
+		
+		<select id="operation" name="operation">
+			<option value="add">+</option>
+			<option value="sub">-</option>
+			<option value="mul">*</option>
+			<option value="div">/</option>
+		</select>
+		
+		<input type="number" id="operand2" name="operand2">
+		
+		<input type="submit" value="=">
+		
+		<span id="result">?</span>
+		
+	</form>
+	
+</body>
+</html>
